@@ -1,1 +1,12 @@
 -session*
+-/.python-enviroments
+-/auto-save-list
+-/elpa
+-/eshell
+-/idlwave
+-/lisp
+-/plugins
+-/semanticsdb
+-/themes
+-/tmp
+-/url

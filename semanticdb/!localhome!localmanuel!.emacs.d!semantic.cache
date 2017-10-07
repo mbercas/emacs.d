@@ -1,0 +1,38 @@
+;; Object .emacs.d/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file ".emacs.d/"
+  :tables
+  (list
+    (semanticdb-table "ede-projects.el"
+      :major-mode 'emacs-lisp-mode
+      :tags nil
+      :file "ede-projects.el"
+      :pointmax 86
+      :fsize 85
+      :lastmodtime '(21309 1406 443729 945000)
+      :unmatched-syntax nil)
+    (semanticdb-table "taskjuggler-mode.el"
+      :file "taskjuggler-mode.el"
+      :fsize 21369
+      :lastmodtime '(20101 25700 41005 325000))
+    (semanticdb-table "flymake-cursor.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("cl" include nil nil [2521 2534])
+            ("flyc--e-at-point" variable nil nil [2536 2604])
+            ("flyc--e-display-timer" variable nil nil [2606 2706])
+            ("flyc/maybe-fixup-message" function (:arguments ("errore")) nil [2708 3170])
+            ("flyc/show-stored-error-now" function (:user-visible-flag t) nil [3172 3487])
+            ("flyc/-get-error-at-point" function nil nil [3490 3763])
+            ("flyc/show-fly-error-at-point-now" function (:user-visible-flag t) nil [3781 4246])
+            ("flyc/show-fly-error-at-point-pretty-soon" function nil nil [4264 5119])
+            ("eval-after-load" code nil nil [5137 5959])
+            ("flymake-cursor" package nil nil [5962 5987]))          
+      :file "flymake-cursor.el"
+      :pointmax 6021
+      :fsize 6020
+      :lastmodtime '(21704 63271 946577 575000)
+      :unmatched-syntax nil))
+  :file "!localhome!localmanuel!.emacs.d!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

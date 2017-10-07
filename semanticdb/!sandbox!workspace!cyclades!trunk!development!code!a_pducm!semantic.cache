@@ -1,0 +1,224 @@
+;; Object a_pducm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_pducm/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_pducm_enum_flashsection.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_PDUCM_ENUM_FLASHSECTION_HPP" variable (:constant-flag t) nil [767 800])
+            ("string" include (:system-flag t) nil [876 893])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("pducm" type
+                               (:members 
+                                  ( ("FlashSection" type (:type "class") (reparse-symbol namespacesubparts) [1482 1881])
+                                    ("ToString" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("obj" variable
+                                               (:constant-flag t
+                                                :type ("FlashSection" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1979 2003]))                                          
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1957 2004]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1008 2007]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [989 2029]))                  
+                :type "namespace")
+                nil [970 2051]))          
+      :file "ccapp_pducm_enum_flashsection.hpp"
+      :pointmax 2167
+      :fsize 2166
+      :lastmodtime '(20908 20956 606167 133000)
+      :unmatched-syntax '((number 1844 . 1845) (punctuation 1842 . 1843) (symbol 1840 . 1841) (punctuation 1798 . 1799) (number 1797 . 1798) (punctuation 1795 . 1796) (symbol 1793 . 1794) (punctuation 1751 . 1752) (number 1750 . 1751) (punctuation 1748 . 1749) (symbol 1746 . 1747) (punctuation 1704 . 1705) (number 1703 . 1704) (punctuation 1701 . 1702) (symbol 1699 . 1700) (punctuation 1657 . 1658) (number 1656 . 1657) (punctuation 1654 . 1655) (symbol 1652 . 1653) (punctuation 1610 . 1611) (number 1609 . 1610) (punctuation 1607 . 1608) (symbol 1605 . 1606) (punctuation 1563 . 1564) (number 1562 . 1563) (punctuation 1560 . 1561) (symbol 1558 . 1559) (punctuation 1516 . 1517) (number 1515 . 1516) (punctuation 1513 . 1514) (symbol 1511 . 1512) (ENUM 1477 . 1481))
+      :lexical-table 
+        '(("CCAPP_PDUCM_ENUM_FLASHSECTION_HPP")
+          )
+)
+    (semanticdb-table "ccapp_pducm_constants.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_PDUCM_CONSTANTS_HPP" variable (:constant-flag t) nil [727 752])
+            ("ccapp_pducm_commontypes.hpp" include nil nil [828 866])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("pducm" type
+                               (:members 
+                                  ( ("TK_FPGA_ERROR" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("TranslationKey" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1299 1350])
+                                    ("TK_NO_BLOADER_ERROR" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("TranslationKey" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1351 1414])
+                                    ("TK_PREP_ERROR" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("TranslationKey" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1416 1474])
+                                    ("TK_PARSE_ERROR" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("TranslationKey" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1475 1532])
+                                    ("TK_ERASE_FLASH_ERROR" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("TranslationKey" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1533 1598])
+                                    ("TK_WRITE_FLASH_ERROR" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("TranslationKey" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1599 1664])
+                                    ("TK_SENSOR_TESTS_ERROR" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("TranslationKey" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1666 1732])
+                                    ("TK_RECORD_ERROR" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("TranslationKey" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1734 1794])
+                                    ("TK_CHARACTERIZE_ERROR" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("TranslationKey" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1796 1872])
+                                    ("TK_WRITE_OTP_ERROR" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("TranslationKey" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1874 1935])
+                                    ("TK_WRITE_EEPROM_ERROR" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("TranslationKey" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1937 2004])
+                                    ("NUMBER_OF_ND_SENSORS" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol namespacesubparts) [2006 2048])
+                                    ("NUMBER_OF_ND_MEASUREMENTS" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :arguments 
+                                          ( ("" variable
+                                               (:pointer 1
+                                                :type ("NUMBER_OF_ND_SENSORS" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2091 2115]))                                          
+                                        :type "unsigned int")
+                                        (reparse-symbol namespacesubparts) [2049 2118]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [981 2346]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [962 2368]))                  
+                :type "namespace")
+                nil [943 2390]))          
+      :file "ccapp_pducm_constants.hpp"
+      :pointmax 2490
+      :fsize 2489
+      :lastmodtime '(20969 1855 497199 757000)
+      :unmatched-syntax '((number 2114 . 2115) (number 2043 . 2045) (string 1981 . 2001) (string 1915 . 1932) (string 1840 . 1869) (string 1772 . 1791) (string 1710 . 1729) (string 1642 . 1661) (string 1576 . 1595) (string 1512 . 1529) (string 1452 . 1471) (string 1393 . 1411) (string 1335 . 1347))
+      :lexical-table 
+        '(("CCAPP_PDUCM_CONSTANTS_HPP")
+          )
+)
+    (semanticdb-table "ccapp_pducm_commontypes.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_PDUCM_COMMONTYPES_HPP" variable (:constant-flag t) nil [729 756])
+            ("ccapp_spr_scptaskparameters.hpp" include nil nil [832 874])
+            ("core_bty_commontypes.hpp" include nil nil [876 911])
+            ("string" include (:system-flag t) nil [913 930])
+            ("vector" include (:system-flag t) nil [931 948])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("pducm" type
+                               (:members 
+                                  ( ("RawData" type
+                                       (:typedef ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("core::bty::UInt32" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :superclasses "std::vector"
+                                        :type "typedef")
+                                        (reparse-symbol namespacesubparts) [1306 1362])
+                                    ("NdSensorData" type
+                                       (:typedef ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("float" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :superclasses "std::vector"
+                                        :type "typedef")
+                                        (reparse-symbol namespacesubparts) [1364 1425])
+                                    ("TranslationKey" type
+                                       (:typedef ("std::string" type (:type "class") nil nil)
+                                        :superclasses "std::string"
+                                        :type "typedef")
+                                        (reparse-symbol namespacesubparts) [1427 1490])
+                                    ("MemoryManagerParameters" type
+                                       (:typedef ("spr::ScpTaskParameters" type (:type "class") nil nil)
+                                        :superclasses "spr::ScpTaskParameters"
+                                        :type "typedef")
+                                        (reparse-symbol namespacesubparts) [1492 1564]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1063 1867]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1044 1889]))                  
+                :type "namespace")
+                nil [1025 1911]))          
+      :file "ccapp_pducm_commontypes.hpp"
+      :pointmax 2015
+      :fsize 2014
+      :lastmodtime '(20908 20956 604167 111000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_PDUCM_COMMONTYPES_HPP")
+          )
+)
+    (semanticdb-table "ccapp_pducm_controltoapplicationevents.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_PDUCM_CONTROLTOAPPLICATIONEVENTS_HPP" variable (:constant-flag t) nil [809 851])
+            ("core_evt_eventdefinition.hpp" include nil nil [927 966])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("pducm" type
+                               (:members 
+                                  ( ("events" type (:type "namespace") (reparse-symbol namespacesubparts) [1550 1694]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1081 1792]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1062 1814]))                  
+                :type "namespace")
+                nil [1043 1836]))          
+      :file "ccapp_pducm_controltoapplicationevents.hpp"
+      :pointmax 1970
+      :fsize 1969
+      :lastmodtime '(20908 20956 604167 111000)
+      :unmatched-syntax '((semantic-list 1642 . 1691) (symbol 1630 . 1642) (semantic-list 1649 . 1651) (semantic-list 1582 . 1629) (symbol 1570 . 1582) (semantic-list 1589 . 1591))
+      :lexical-table 
+        '(("CCAPP_PDUCM_CONTROLTOAPPLICATIONEVENTS_HPP")
+          )
+))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!a_pducm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

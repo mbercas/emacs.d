@@ -1,0 +1,42 @@
+;; Object tutorial01/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tutorial01/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("MKDIR" variable (:default-value ("mkdir")) nil [2259 2271])
+            ("CP" variable (:default-value ("cp")) nil [2271 2277])
+            ("CCADMIN" variable (:default-value ("CCadmin")) nil [2277 2293])
+            ("build" function (:arguments (".build-post")) nil [2303 2322])
+            (".build-pre" function nil nil [2323 2335])
+            (".build-post" function (:arguments (".build-impl")) nil [2372 2397])
+            ("clean" function (:arguments (".clean-post")) nil [2444 2463])
+            (".clean-pre" function nil nil [2464 2476])
+            (".clean-post" function (:arguments (".clean-impl")) nil [2513 2538])
+            ("clobber" function (:arguments (".clobber-post")) nil [2587 2610])
+            (".clobber-pre" function nil nil [2611 2625])
+            (".clobber-post" function (:arguments (".clobber-impl")) nil [2664 2693])
+            ("all" function (:arguments (".all-post")) nil [2740 2755])
+            (".all-pre" function nil nil [2756 2766])
+            (".all-post" function (:arguments (".all-impl")) nil [2801 2822])
+            ("build-tests" function (:arguments (".build-tests-post")) nil [2873 2904])
+            (".build-tests-pre" function nil nil [2905 2923])
+            (".build-tests-post" function (:arguments (".build-tests-impl")) nil [2966 3003])
+            ("test" function (:arguments (".test-post")) nil [3060 3077])
+            (".test-pre" function nil nil [3078 3089])
+            (".test-post" function (:arguments (".test-impl")) nil [3125 3148])
+            ("help" function (:arguments (".help-post")) nil [3193 3210])
+            (".help-pre" function nil nil [3211 3222])
+            (".help-post" function (:arguments (".help-impl")) nil [3258 3281])
+            ("nbproject/Makefile-impl.mk" include nil nil [3362 3397])
+            ("nbproject/Makefile-variables.mk" include nil nil [3431 3471]))          
+      :file "Makefile"
+      :pointmax 3471
+      :fsize 3470
+      :lastmodtime '(20664 40425 0 0)
+      :unmatched-syntax nil))
+  :file "!localhome!localmanuel!.cache!.fr-8weov5!tutorial01!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,238 @@
+;; Object a_opm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_opm/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_opm_genericrepository.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_opm_genericrepository.hpp" include nil nil [714 756])
+            ("ccapp_opm_procedurecompatibilityrepositoryiface.hpp" include nil nil [758 820])
+            ("ccapp_opm_proceduregroupsrepositoryiface.hpp" include nil nil [821 876])
+            ("ccapp_opm_procedureimagesettings.hpp" include nil nil [877 924])
+            ("ccapp_opm_procedureimagesettingsrepositoryiface.hpp" include nil nil [925 987])
+            ("ccapp_opm_procedureinstallationpayloadrepositoryiface.hpp" include nil nil [988 1056])
+            ("ccapp_opm_proceduresrepositoryiface.hpp" include nil nil [1057 1107])
+            ("core_chk_assert.hpp" include nil nil [1109 1139])
+            ("core_log_logmsg.hpp" include nil nil [1140 1170])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("opm" type
+                               (:members 
+                                  ( ("ezono::core::log" using (:type ("ezono::core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1302 1335])
+                                    ("Imp" type
+                                       (:template 
+                                          ( ("RepoType" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("Imp" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :arguments 
+                                                  ( ("repoName" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("std::string" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1905 1935]))                                                  
+                                                :type ("Imp" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [1900 1936])
+                                            ("Imp" function
+                                               (:prototype-flag t
+                                                :destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1941 1948])
+                                            ("StartTheUpdate" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1967 1989])
+                                            ("Add" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("item" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("ElementType" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2004 2030]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1994 2031])
+                                            ("FinalizeTheUpdate" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2036 2061])
+                                            ("repoName" variable
+                                               (:constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2119 2146])
+                                            ("newRepository" variable (:type ("RepoType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2206 2238])
+                                            ("validRepository" variable (:type ("RepoType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2287 2321])
+                                            ("theUpdateStarted" variable (:type "bool") (reparse-symbol classsubparts) [2374 2396]))                                          
+                                        :parent "GenericRepository")
+                                        (reparse-symbol namespacesubparts) [1712 2399])
+                                    ("Imp" function
+                                       (:constructor-flag t
+                                        :parent "Imp"
+                                        :arguments 
+                                          ( ("repoName_" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2472 2503]))                                          
+                                        :type ("Imp" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [2462 2610])
+                                    ("Imp" function
+                                       (:destructor-flag t
+                                        :parent "Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2673 2688])
+                                    ("StartTheUpdate" function
+                                       (:parent "Imp"
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2756 3199])
+                                    ("Add" function
+                                       (:parent "Imp"
+                                        :arguments 
+                                          ( ("item" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ElementType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3277 3303]))                                          
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3267 3391])
+                                    ("FinalizeTheUpdate" function
+                                       (:parent "Imp"
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3459 3737])
+                                    ("GenericRepository" function
+                                       (:template 
+                                          ( ("RepoType" type (:type "class") nil nil))                                          
+                                        :type ("GenericRepository" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("repoName" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4210 4240]))                                          
+                                        :parent "GenericRepository"
+                                        :constructor-flag t)
+                                        (reparse-symbol namespacesubparts) [4130 4276])
+                                    ("GenericRepository" function
+                                       (:template 
+                                          ( ("RepoType" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :parent "GenericRepository"
+                                        :destructor-flag t)
+                                        (reparse-symbol namespacesubparts) [4445 4530])
+                                    ("StartTheUpdate" function
+                                       (:template 
+                                          ( ("RepoType" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :parent "GenericRepository")
+                                        (reparse-symbol namespacesubparts) [4736 4851])
+                                    ("Add" function
+                                       (:template 
+                                          ( ("RepoType" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("item" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ElementType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5212 5238]))                                          
+                                        :parent "GenericRepository")
+                                        (reparse-symbol namespacesubparts) [5141 5266])
+                                    ("FinalizeTheUpdate" function
+                                       (:template 
+                                          ( ("RepoType" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :parent "GenericRepository")
+                                        (reparse-symbol namespacesubparts) [5522 5643])
+                                    ("GetValidRepository" function
+                                       (:template 
+                                          ( ("RepoType" type (:type "class") nil nil))                                          
+                                        :type ("RepoType" type (:type "class") nil nil)
+                                        :constant-flag t
+                                        :parent "GenericRepository")
+                                        (reparse-symbol namespacesubparts) [5901 6043])
+                                    ("INSTANTIATE_GENERIC_REPOSITORY" variable (:constant-flag t) (reparse-symbol namespacesubparts) [6090 6120])
+                                    ("GenericRepository" type
+                                       (:prototype t
+                                        :template-specifier 
+                                          ( ("ProcedureGroupsRepositoryIface::Repository" type nil nil nil))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [6187 6252])
+                                    ("GenericRepository" type
+                                       (:prototype t
+                                        :template-specifier 
+                                          ( ("ProcedureImageSettingsRepositoryIface::Repository" type nil nil nil))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [6253 6325])
+                                    ("GenericRepository" type
+                                       (:prototype t
+                                        :template-specifier 
+                                          ( ("ProceduresRepositoryIface::Repository" type nil nil nil))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [6326 6386])
+                                    ("GenericRepository" type
+                                       (:prototype t
+                                        :template-specifier 
+                                          ( ("ProcedureCompatibilityRepositoryIface::Repository" type nil nil nil))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [6387 6459])
+                                    ("GenericRepository" type
+                                       (:prototype t
+                                        :template-specifier 
+                                          ( ("ProcedureInstallationPayloadRepositoryIface::Repository" type nil nil nil))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [6460 6538]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1285 6987]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1266 7007]))                  
+                :type "namespace")
+                nil [1247 7029]))          
+      :file "ccapp_opm_genericrepository.cpp"
+      :pointmax 7095
+      :fsize 7094
+      :lastmodtime '(21087 63301 462919 107000)
+      :unmatched-syntax '((TEMPLATE "template" 6460 . 6537) (TEMPLATE "template" 6387 . 6458) (TEMPLATE "template" 6326 . 6385) (TEMPLATE "template" 6253 . 6324) (TEMPLATE "template" 6187 . 6251) (punctuation 3458 . 3459) (punctuation 3457 . 3458) (punctuation 3456 . 3457) (symbol 3447 . 3455) (punctuation 3445 . 3446) (symbol 3428 . 3445) (VOID 3423 . 3427) (punctuation 3421 . 3422) (symbol 3412 . 3420) (TYPENAME 3403 . 3411) (punctuation 3401 . 3402) (TEMPLATE 3393 . 3401) (punctuation 3266 . 3267) (punctuation 3265 . 3266) (punctuation 3264 . 3265) (symbol 3255 . 3263) (punctuation 3253 . 3254) (symbol 3236 . 3253) (VOID 3231 . 3235) (punctuation 3229 . 3230) (symbol 3220 . 3228) (TYPENAME 3211 . 3219) (punctuation 3209 . 3210) (TEMPLATE 3201 . 3209) (punctuation 2755 . 2756) (punctuation 2754 . 2755) (punctuation 2753 . 2754) (symbol 2744 . 2752) (punctuation 2742 . 2743) (symbol 2725 . 2742) (VOID 2720 . 2724) (punctuation 2718 . 2719) (symbol 2709 . 2717) (TYPENAME 2700 . 2708) (punctuation 2698 . 2699) (TEMPLATE 2690 . 2698) (punctuation 2672 . 2673) (punctuation 2671 . 2672) (punctuation 2670 . 2671) (symbol 2661 . 2669) (punctuation 2659 . 2660) (symbol 2642 . 2659) (punctuation 2640 . 2641) (symbol 2631 . 2639) (TYPENAME 2622 . 2630) (punctuation 2620 . 2621) (TEMPLATE 2612 . 2620) (punctuation 2461 . 2462) (punctuation 2460 . 2461) (punctuation 2459 . 2460) (symbol 2450 . 2458) (punctuation 2448 . 2449) (symbol 2431 . 2448) (punctuation 2429 . 2430) (symbol 2420 . 2428) (TYPENAME 2411 . 2419) (punctuation 2409 . 2410) (TEMPLATE 2401 . 2409))
+      :lexical-table 
+        '(("INSTANTIATE_GENERIC_REPOSITORY" (spp-arg-list ("iface") 6120 . 6129) . 
+              ((TEMPLATE "template" 6132 . 6140) (CLASS "class" 6141 . 6146) (symbol "GenericRepository" 6147 . 6164) (punctuation "<" 6164 . 6165) (symbol "iface" 6166 . 6171) (punctuation ":" 6171 . 6172) (punctuation ":" 6172 . 6173) (symbol "Repository" 6173 . 6183) (punctuation ">" 6184 . 6185)))
+          )
+)
+    (semanticdb-table "ccapp_opm_genericrepository.hpp"
+      :file "ccapp_opm_genericrepository.hpp"
+      :fsize 2488
+      :lastmodtime '(21087 63301 464919 117000))
+    (semanticdb-table "ccapp_opm_procedurecompatibilityrepositoryiface.hpp"
+      :file "ccapp_opm_procedurecompatibilityrepositoryiface.hpp"
+      :fsize 2636
+      :lastmodtime '(21087 63301 401918 798000))
+    (semanticdb-table "ccapp_opm_proceduregroupsrepositoryiface.hpp"
+      :file "ccapp_opm_proceduregroupsrepositoryiface.hpp"
+      :fsize 2793
+      :lastmodtime '(21087 63301 405918 818000))
+    (semanticdb-table "ccapp_opm_procedureimagesettings.hpp"
+      :file "ccapp_opm_procedureimagesettings.hpp"
+      :fsize 3055
+      :lastmodtime '(21087 63301 464919 117000))
+    (semanticdb-table "ccapp_opm_procedureimagesettingsrepositoryiface.hpp"
+      :file "ccapp_opm_procedureimagesettingsrepositoryiface.hpp"
+      :fsize 3285
+      :lastmodtime '(21087 63301 490919 249000))
+    (semanticdb-table "ccapp_opm_procedureinstallationpayloadrepositoryiface.hpp"
+      :file "ccapp_opm_procedureinstallationpayloadrepositoryiface.hpp"
+      :fsize 2727
+      :lastmodtime '(21087 63301 463919 112000))
+    (semanticdb-table "ccapp_opm_proceduresrepositoryiface.hpp"
+      :file "ccapp_opm_proceduresrepositoryiface.hpp"
+      :fsize 2731
+      :lastmodtime '(21087 63301 489919 244000)))
+  :file "!sandbox!workspace!cyclades!release-2.00.01!development!code!a_opm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

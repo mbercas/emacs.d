@@ -1,0 +1,45 @@
+;; Object sensor_boards/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sensor_boards/"
+  :tables
+  (list
+    (semanticdb-table "read_sensor_boards.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 50])
+            ("pylab" include nil nil [51 100])
+            ("os" include nil nil [101 110])
+            ("matplotlib.backends.backend_pdf" include nil nil [111 163])
+            ("sensorBoardArray" variable nil nil [166 187])
+            ("SensorBoard" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [257 273])
+                            ("self" variable nil (reparse-symbol indented_block_body) [282 310])
+                            ("self" variable nil (reparse-symbol indented_block_body) [319 352])
+                            ("if" code nil (reparse-symbol indented_block_body) [370 482]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [226 230])
+                            ("name" variable nil (reparse-symbol function_parameters) [232 236]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [212 482])
+                    ("readFile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [511 515])
+                            ("fileName" variable nil (reparse-symbol function_parameters) [517 525]))                          )
+                        (reparse-symbol indented_block_body) [497 629]))                  
+                :type "class")
+                nil [189 629])
+            ("PopulateSensorBoardArray" function nil nil [631 908])
+            ("if" code nil nil [926 1429]))          
+      :file "read_sensor_boards.py"
+      :pointmax 1429
+      :fsize 1428
+      :lastmodtime '(21240 61463 997051 195000)
+      :unmatched-syntax '(($EOI 1429 . 1429))))
+  :file "!sandbox!workspace!sensor_boards!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

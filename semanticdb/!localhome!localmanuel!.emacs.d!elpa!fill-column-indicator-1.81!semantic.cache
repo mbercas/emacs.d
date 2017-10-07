@@ -1,0 +1,20 @@
+;; Object fill-column-indicator-1.81/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "fill-column-indicator-1.81/"
+  :tables
+  (list
+    (semanticdb-table "fill-column-indicator-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags nil
+      :file "fill-column-indicator-autoloads.el"
+      :pointmax 458
+      :fsize 457
+      :lastmodtime '(21705 63139 851371 522000)
+      :unmatched-syntax nil)
+    (semanticdb-table "fill-column-indicator.el"
+      :file "fill-column-indicator.el"
+      :fsize 37589
+      :lastmodtime '(21705 63139 710370 793000)))
+  :file "!localhome!localmanuel!.emacs.d!elpa!fill-column-indicator-1.81!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

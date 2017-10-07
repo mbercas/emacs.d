@@ -1,0 +1,390 @@
+;; Object common/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "common/"
+  :tables
+  (list
+    (semanticdb-table "c_Vector.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("C_VECTOR_HPP" variable (:constant-flag t) nil [378 390])
+            ("VECTOR_RT_CHECK" variable (:constant-flag t) nil [546 561])
+            ("c" type
+               (:members 
+                  ( ("Vector" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [631 638])
+                            ("iterator" type
+                               (:typedef ("T" type (:type "class") nil nil)
+                                :pointer 1
+                                :superclasses "T"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [644 664])
+                            ("const_iterator" type
+                               (:typedef ("T" type (:type "class") nil nil)
+                                :pointer 1
+                                :superclasses "T"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [669 701])
+                            ("Vector" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("vCapacity" variable
+                                       (:constant-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol arg-sub-list) [716 746])
+                                    ("vSize" variable
+                                       (:constant-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol arg-sub-list) [750 776]))                                  
+                                :type ("Vector" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [708 781])
+                            ("Vector" function
+                               (:template 
+                                  ( ("unsigned int" type nil nil nil))                                  
+                                :type ("Vector" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("" variable
+                                       (:constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [825 844]))                                  
+                                :constructor-flag t
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [786 850])
+                            ("Vector" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Vector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [863 885]))                                  
+                                :type ("Vector" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [855 886])
+                            ("Vector" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [891 901])
+                            ("=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Vector" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [925 947]))                                  
+                                :type ("Vector" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [906 948])
+                            ("=" function
+                               (:template 
+                                  ( ("unsigned int" type nil nil nil))                                  
+                                :type ("Vector" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("" variable
+                                       (:constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1003 1022]))                                  
+                                :operator-flag t
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [953 1028])
+                            ("begin" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("inline")
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1035 1053])
+                            ("begin" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("inline")
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1058 1088])
+                            ("end" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("inline")
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1093 1109])
+                            ("end" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("inline")
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1114 1142])
+                            ("reserve" function
+                               (:prototype-flag t
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("newCapacity" variable
+                                       (:constant-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol arg-sub-list) [1169 1201]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1148 1202])
+                            ("push_back" function
+                               (:prototype-flag t
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("t" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1230 1243]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1207 1244])
+                            ("clear" function
+                               (:prototype-flag t
+                                :typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1249 1269])
+                            ("[]" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("i" variable
+                                       (:constant-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol arg-sub-list) [1297 1319]))                                  
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1275 1320])
+                            ("[]" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :typemodifiers ("inline")
+                                :constant-flag t
+                                :arguments 
+                                  ( ("i" variable
+                                       (:constant-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol arg-sub-list) [1353 1375]))                                  
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1325 1382])
+                            ("size" function
+                               (:prototype-flag t
+                                :typemodifiers ("inline")
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [1388 1421])
+                            ("empty" function
+                               (:prototype-flag t
+                                :typemodifiers ("inline")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1426 1452])
+                            ("notEmpty" function
+                               (:prototype-flag t
+                                :typemodifiers ("inline")
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1457 1486])
+                            ("private" label nil (reparse-symbol classsubparts) [1488 1496])
+                            ("v" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1502 1507])
+                            ("vSize" variable (:type "unsigned int") (reparse-symbol classsubparts) [1512 1531])
+                            ("capacity" variable (:type "unsigned int") (reparse-symbol classsubparts) [1536 1558])
+                            ("n" variable
+                               (:pointer 1
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [1563 1579]))                          )
+                        (reparse-symbol namespacesubparts) [593 1582])
+                    ("Vector" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("Vector" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("vCapacity" variable
+                               (:constant-flag t
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [1742 1771])
+                            ("vSize_" variable
+                               (:constant-flag t
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [1793 1820]))                          
+                        :parent "Vector"
+                        :constructor-flag t)
+                        (reparse-symbol namespacesubparts) [1698 2036])
+                    ("Vector" function
+                       (:template 
+                          ( ("unsigned int" type nil nil nil))                          
+                        :type ("Vector" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2209 2228]))                          
+                        :parent "Vector"
+                        :constructor-flag t)
+                        (reparse-symbol namespacesubparts) [2161 2437])
+                    ("Vector" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("Vector" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("other" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2549 2571]))                          
+                        :parent "Vector"
+                        :constructor-flag t)
+                        (reparse-symbol namespacesubparts) [2505 2681])
+                    ("Vector" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :parent "Vector"
+                        :destructor-flag t)
+                        (reparse-symbol namespacesubparts) [2705 2835])
+                    ("=" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("Vector" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("other" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Vector" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2962 2984]))                          
+                        :parent "Vector"
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [2902 3109])
+                    ("begin" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("T" type (:type "class") nil nil)
+                        :typemodifiers ("inline")
+                        :parent "Vector"
+                        :pointer 1)
+                        (reparse-symbol namespacesubparts) [3258 3329])
+                    ("begin" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("T" type (:type "class") nil nil)
+                        :constant-flag t
+                        :typemodifiers ("inline")
+                        :parent "Vector"
+                        :pointer 1)
+                        (reparse-symbol namespacesubparts) [3490 3573])
+                    ("end" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("T" type (:type "class") nil nil)
+                        :typemodifiers ("inline")
+                        :parent "Vector"
+                        :pointer 1)
+                        (reparse-symbol namespacesubparts) [3754 3835])
+                    ("end" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("T" type (:type "class") nil nil)
+                        :constant-flag t
+                        :typemodifiers ("inline")
+                        :parent "Vector"
+                        :pointer 1)
+                        (reparse-symbol namespacesubparts) [4028 4121])
+                    ("reserve" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("newCapacity" variable
+                               (:constant-flag t
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [4443 4475]))                          
+                        :typemodifiers ("inline")
+                        :parent "Vector")
+                        (reparse-symbol namespacesubparts) [4386 4575])
+                    ("push_back" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("t" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4802 4815]))                          
+                        :typemodifiers ("inline")
+                        :parent "Vector")
+                        (reparse-symbol namespacesubparts) [4743 4882])
+                    ("clear" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :typemodifiers ("inline")
+                        :parent "Vector")
+                        (reparse-symbol namespacesubparts) [4927 5001])
+                    ("[]" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("T" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("i" variable
+                               (:constant-flag t
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [5322 5344]))                          
+                        :typemodifiers ("inline")
+                        :parent "Vector"
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [5264 5401])
+                    ("[]" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("T" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("i" variable
+                               (:constant-flag t
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [5740 5762]))                          
+                        :constant-flag t
+                        :typemodifiers ("inline")
+                        :parent "Vector"
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [5676 5825])
+                    ("size" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "unsigned int"
+                        :typemodifiers ("inline")
+                        :parent "Vector")
+                        (reparse-symbol namespacesubparts) [5889 5979])
+                    ("empty" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :typemodifiers ("inline")
+                        :parent "Vector")
+                        (reparse-symbol namespacesubparts) [6081 6173])
+                    ("notEmpty" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :typemodifiers ("inline")
+                        :parent "Vector")
+                        (reparse-symbol namespacesubparts) [6283 6378]))                  
+                :type "namespace")
+                nil [578 6382]))          
+      :file "c_Vector.hpp"
+      :pointmax 6452
+      :fsize 6451
+      :lastmodtime '(20792 43759 390571 698000)
+      :unmatched-syntax '((semantic-list 2228 . 2233) (semantic-list 2217 . 2228) (punctuation 2159 . 2160) (symbol 2157 . 2158) (TYPENAME 2148 . 2156) (punctuation 2146 . 2147) (TEMPLATE 2138 . 2146) (semantic-list 1022 . 1025) (semantic-list 1011 . 1022) (semantic-list 844 . 847) (semantic-list 833 . 844) (number 777 . 778) (punctuation 775 . 776) (number 747 . 748) (punctuation 745 . 746))
+      :lexical-table 
+        '(("C_VECTOR_HPP")
+          )
+))
+  :file "!sandbox!workspace!achill!trunk!development!code!common!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

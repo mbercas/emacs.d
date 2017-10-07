@@ -1,0 +1,566 @@
+;; Object unittest/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unittest/"
+  :tables
+  (list
+    (semanticdb-table "test_runner.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [83 127])
+            ("cppunit/ui/text/TestRunner.h" include (:system-flag t) nil [128 167])
+            ("cppunit/CompilerOutputter.h" include (:system-flag t) nil [168 206])
+            ("test_Node.hpp" include nil nil [208 232])
+            ("test_Edge.hpp" include nil nil [233 257])
+            ("test_Graph.hpp" include nil nil [258 283])
+            ("test_Dijkstra.hpp" include nil nil [284 312])
+            ("test_Mst.hpp" include nil nil [313 336])
+            ("test_HexBoard.hpp" include nil nil [337 365])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("NodeTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [400 410]))                  
+                :type "int")
+                nil [367 411])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("EdgeTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [445 455]))                  
+                :type "int")
+                nil [412 456])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("GraphTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [490 501]))                  
+                :type "int")
+                nil [457 502])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("DijkstraTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [536 550]))                  
+                :type "int")
+                nil [503 551])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("MstTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [585 594]))                  
+                :type "int")
+                nil [552 595])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("HexBoardTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [629 643]))                  
+                :type "int")
+                nil [596 644])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [656 665])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [666 678]))                  
+                :type "int")
+                nil [646 969]))          
+      :file "test_runner.cpp"
+      :pointmax 970
+      :fsize 969
+      :lastmodtime '(21118 44890 652024 807000)
+      :unmatched-syntax nil)
+    (semanticdb-table "test_Graph.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_GRAPH_HPP_" variable (:constant-flag t) nil [33 48])
+            ("../Graph.hpp" include nil nil [50 73])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [75 119])
+            ("GraphTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("GraphTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [193 204]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [173 205])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Constructor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [269 287]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [255 288])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_AddEdge" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [307 321]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [293 322])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetEdgeValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [341 360]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [327 361])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetNumberOfVertices" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [380 406]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [366 407])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetNumberOfEdges" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [426 449]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [412 450])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_AreNodesAdjacent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [469 492]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [455 493])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetAdjacentNodes" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [512 535]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [498 536])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_CreateRandomGraph" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [555 579]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [541 580])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_IsComplete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [599 616]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [585 617])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetEdgesPriorityList" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [636 663]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [622 664])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_IsNodeInMap" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [683 701]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [669 702])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetLowerCostNeighbor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [721 748]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [707 749])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [806 831])
+                    ("public" label nil (reparse-symbol classsubparts) [833 840])
+                    ("setUp" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [850 873])
+                    ("tearDown" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [879 905])
+                    ("test_Constructor" function (:type "void") (reparse-symbol classsubparts) [912 1047])
+                    ("test_AddEdge" function (:type "void") (reparse-symbol classsubparts) [1053 1785])
+                    ("test_GetEdgeValue" function (:type "void") (reparse-symbol classsubparts) [1791 2089])
+                    ("test_DeleteEdge" function (:type "void") (reparse-symbol classsubparts) [2096 2751])
+                    ("test_AreNodesAdjacent" function (:type "void") (reparse-symbol classsubparts) [2759 3295])
+                    ("test_GetNumberOfVertices" function (:type "void") (reparse-symbol classsubparts) [3301 3445])
+                    ("test_GetNumberOfEdges" function (:type "void") (reparse-symbol classsubparts) [3451 3589])
+                    ("test_GetAdjacentNodes" function (:type "void") (reparse-symbol classsubparts) [3595 5021])
+                    ("test_IsComplete" function (:type "void") (reparse-symbol classsubparts) [5027 5492])
+                    ("test_CreateRandomGraph" function (:type "void") (reparse-symbol classsubparts) [5498 5821])
+                    ("test_GetEdgesPriorityList" function (:type "void") (reparse-symbol classsubparts) [5827 6505])
+                    ("test_IsNodeInMap" function (:type "void") (reparse-symbol classsubparts) [6511 6841])
+                    ("test_GetLowerCostNeighbor" function (:type "void") (reparse-symbol classsubparts) [6847 7359]))                  
+                :type "class")
+                nil [122 7363]))          
+      :file "test_Graph.hpp"
+      :pointmax 7391
+      :fsize 7390
+      :lastmodtime '(21114 40382 542257 547000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_GRAPH_HPP_")
+          )
+)
+    (semanticdb-table "test_Node.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_NODE_HPP_" variable (:constant-flag t) nil [32 46])
+            ("../Node.hpp" include nil nil [48 70])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [72 116])
+            ("NodeTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("NodeTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [189 199]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [169 200])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Constructor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [264 282]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [250 283])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Hashing" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [302 316]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [288 317])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [373 398])
+                    ("public" label nil (reparse-symbol classsubparts) [400 407])
+                    ("setUp" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [417 440])
+                    ("tearDown" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [446 472])
+                    ("test_Constructor" function (:type "void") (reparse-symbol classsubparts) [479 600])
+                    ("test_Hashing" function (:type "void") (reparse-symbol classsubparts) [606 876]))                  
+                :type "class")
+                nil [119 879]))          
+      :file "test_Node.hpp"
+      :pointmax 906
+      :fsize 905
+      :lastmodtime '(21110 48633 330885 478000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_NODE_HPP_")
+          )
+)
+    (semanticdb-table "test_Edge.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("__TEST_EDGE_HPP__" variable (:constant-flag t) nil [35 52])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [54 98])
+            ("unordered_map" include (:system-flag t) nil [100 124])
+            ("functional" include (:system-flag t) nil [126 147])
+            ("../Edge.hpp" include nil nil [148 170])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [172 192])
+            ("EdgeMap" type
+               (:typedef ("std::unordered_map" type
+                     (:template-specifier 
+                        ( ("Edge" type nil nil nil)
+                          ("double" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::unordered_map"
+                :type "typedef")
+                nil [195 245])
+            ("EdgeMapIt" type
+               (:typedef ("std::unordered_map::iterator" type (:type "class") nil nil)
+                :superclasses "std::unordered_map::iterator"
+                :type "typedef")
+                nil [246 308])
+            ("EdgeTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("EdgeTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [380 390]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [360 391])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Constructor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [455 474]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [441 475])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Equal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [494 513]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [480 514])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Hashing" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [533 552]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [519 553])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_MapInsertion" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [572 591]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [558 592])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [653 678])
+                    ("public" label nil (reparse-symbol classsubparts) [680 687])
+                    ("setUp" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [697 720])
+                    ("tearDown" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [726 752])
+                    ("test_Constructor" function (:type "void") (reparse-symbol classsubparts) [759 842])
+                    ("test_Equal" function (:type "void") (reparse-symbol classsubparts) [848 1110])
+                    ("test_Hashing" function (:type "void") (reparse-symbol classsubparts) [1120 1789])
+                    ("test_MapInsertion" function (:type "void") (reparse-symbol classsubparts) [1799 3588]))                  
+                :type "class")
+                nil [310 3592]))          
+      :file "test_Edge.hpp"
+      :pointmax 3861
+      :fsize 3623
+      :lastmodtime '(21110 48633 329885 473000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__TEST_EDGE_HPP__")
+          )
+)
+    (semanticdb-table "test_Dijkstra.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_DIJKSTRA_HPP_" variable (:constant-flag t) nil [36 54])
+            ("limits" include (:system-flag t) nil [56 73])
+            ("../Dijkstra.hpp" include nil nil [75 101])
+            ("../Node.hpp" include nil nil [103 125])
+            ("../Graph.hpp" include nil nil [126 149])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [151 195])
+            ("DijkstraTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("DijkstraTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [272 286]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [252 287])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Constructor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [351 369]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [337 370])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_PendingListOperations" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [389 417]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [375 418])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_FindShortestPath_EmptyGraph" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [437 470]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [423 471])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_FindShortestPath_SameStartAndEnd" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [490 528]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [476 529])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_FindShortestPath_LineGraph" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [548 581]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [534 582])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_FindShortestPath_CircularGraph" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [601 638]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [587 639])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_FindShortestPath_ExampleGraph" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [658 694]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [644 695])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [751 776])
+                    ("INFINITY" variable (:type "double") (reparse-symbol classsubparts) [783 799])
+                    ("public" label nil (reparse-symbol classsubparts) [801 808])
+                    ("setUp" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [818 906])
+                    ("tearDown" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [912 938])
+                    ("test_Constructor" function (:type "void") (reparse-symbol classsubparts) [945 1006])
+                    ("test_FindShortestPath_EmptyGraph" function (:type "void") (reparse-symbol classsubparts) [1012 1329])
+                    ("test_FindShortestPath_SameStartAndEnd" function (:type "void") (reparse-symbol classsubparts) [1335 1823])
+                    ("test_FindShortestPath_LineGraph" function (:type "void") (reparse-symbol classsubparts) [1830 3187])
+                    ("test_FindShortestPath_CircularGraph" function (:type "void") (reparse-symbol classsubparts) [3194 4153])
+                    ("test_FindShortestPath_ExampleGraph" function (:type "void") (reparse-symbol classsubparts) [4159 5492])
+                    ("test_PendingListOperations" function (:type "void") (reparse-symbol classsubparts) [5498 7540]))                  
+                :type "class")
+                nil [198 7543]))          
+      :file "test_Dijkstra.hpp"
+      :pointmax 7574
+      :fsize 7573
+      :lastmodtime '(21110 48633 329885 473000)
+      :unmatched-syntax '((punctuation 938 . 939) (punctuation 906 . 907))
+      :lexical-table 
+        '(("TEST_DIJKSTRA_HPP_")
+          )
+)
+    (semanticdb-table "test_Mst.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_TEST_MST_HPP_" variable (:constant-flag t) nil [32 46])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [48 92])
+            ("../Mst.hpp" include nil nil [94 115])
+            ("MstTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("MstTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [187 196]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [167 197])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Prim_EmptyGraph" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [217 239]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [203 240])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Prim_CompleteGraph" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [259 284]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [245 285])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Prim_CompleteGraph_2" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [304 331]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [290 332])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [387 412])
+                    ("public" label nil (reparse-symbol classsubparts) [414 421])
+                    ("setUp" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [427 450])
+                    ("tearDown" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [456 482])
+                    ("test_Prim_EmptyGraph" function (:type "void") (reparse-symbol classsubparts) [489 676])
+                    ("test_Prim_CompleteGraph" function (:type "void") (reparse-symbol classsubparts) [682 1284])
+                    ("test_Prim_CompleteGraph_2" function (:type "void") (reparse-symbol classsubparts) [1290 2591])
+                    ("test_Prim_UnCompleteGraph" function (:type "void") (reparse-symbol classsubparts) [2599 2676]))                  
+                :type "class")
+                nil [118 2679]))          
+      :file "test_Mst.hpp"
+      :pointmax 2626
+      :fsize 2706
+      :lastmodtime '(21115 49142 860337 978000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_TEST_MST_HPP_")
+          )
+)
+    (semanticdb-table "test_HexBoard.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_TEST_HEX_BOARD_HPP_" variable (:constant-flag t) nil [38 58])
+            ("sstream" include (:system-flag t) nil [60 78])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [80 124])
+            ("../HexBoard.hpp" include nil nil [126 152])
+            ("HexBoardTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("HexBoardTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [229 243]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [209 244])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Constructor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [264 282]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [250 283])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Print" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [302 314]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [288 315])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [321 346])
+                    ("public" label nil (reparse-symbol classsubparts) [348 355])
+                    ("setUp" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [361 384])
+                    ("tearDown" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [390 416])
+                    ("test_Constructor" function (:type "void") (reparse-symbol classsubparts) [423 486])
+                    ("test_Print" function (:type "void") (reparse-symbol classsubparts) [492 747]))                  
+                :type "class")
+                nil [155 751]))          
+      :file "test_HexBoard.hpp"
+      :pointmax 780
+      :fsize 778
+      :lastmodtime '(21118 48222 240834 631000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_TEST_HEX_BOARD_HPP_")
+          )
+))
+  :file "!sandbox!workspace!coursera!cforcpp!wk2!unittest!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

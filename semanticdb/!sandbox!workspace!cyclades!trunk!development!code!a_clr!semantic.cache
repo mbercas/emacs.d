@@ -1,0 +1,1409 @@
+;; Object a_clr/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_clr/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_clr_metadatafiledata.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_CLR_METADATAFILEDATA_HPP" variable (:constant-flag t) nil [831 861])
+            ("ccapp_pda_filemessages.hpp" include nil nil [937 974])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("clr" type
+                               (:members 
+                                  ( ("MetaDataFileData" type
+                                       (:superclasses 
+                                          ( ("pda::FileData" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("ValidMsg" type
+                                               (:typedef ("void")
+                                                :superclasses "void"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1609 1631]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1556 1634]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1089 1712]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1070 1732]))                  
+                :type "namespace")
+                nil [1051 1754]))          
+      :file "ccapp_clr_metadatafiledata.hpp"
+      :pointmax 1864
+      :fsize 1863
+      :lastmodtime '(20908 20960)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_CLR_METADATAFILEDATA_HPP")
+          )
+)
+    (semanticdb-table "ccapp_clr_metadatawriter.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_clr_metadatawriter.hpp" include nil nil [701 740])
+            ("ccapp_clr_constants.hpp" include nil nil [742 776])
+            ("ccapp_clr_dsooperationstracker.hpp" include nil nil [777 822])
+            ("ccapp_clc_constants.hpp" include nil nil [824 858])
+            ("ccapp_clc_metadatafile.hpp" include nil nil [859 896])
+            ("ccapp_clc_shortwritehandler.hpp" include nil nil [897 939])
+            ("ccapp_clc_checksummanager.hpp" include nil nil [940 980])
+            ("ccapp_pda_filemessages.hpp" include nil nil [982 1019])
+            ("core_chk_assert.hpp" include nil nil [1021 1051])
+            ("core_log_logmsg.hpp" include nil nil [1052 1082])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("clr" type
+                               (:members 
+                                  ( ("ezono::core::log" using (:type ("ezono::core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1214 1247])
+                                    ("Imp" type
+                                       (:parent "MetaDataWriter"
+                                        :members 
+                                          ( ("Imp" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :arguments 
+                                                  ( ("sendMsgPtr" variable
+                                                       (:constant-flag t
+                                                        :type ("SendMsgCbPtr" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1772 1802])
+                                                    ("msgCode" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("core::ipc::MsgCode" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1812 1847]))                                                  
+                                                :type ("Imp" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [1767 1848])
+                                            ("UpdateWriteMessage" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("filesystem" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("pda::FileSystem" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1893 1929])
+                                                    ("srcDir" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("std::string" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1959 1992]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1868 1993])
+                                            ("CreateMetaData" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("info" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("clc::VideoInfo" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2019 2047]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1998 2048])
+                                            ("metaDataWrite" variable (:type ("clc::ShortWriteHandler" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2095 2132])
+                                            ("checksum" variable (:type ("clc::ChecksumManager" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2182 2212])
+                                            ("metaDataFile" variable (:type ("clc::MetaDataFile" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2301 2333])
+                                            ("dsoTracker" variable (:type ("DsoOperationsTracker" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2399 2431]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1624 2434])
+                                    ("Imp" function
+                                       (:constructor-flag t
+                                        :parent "MetaDataWriter::Imp"
+                                        :arguments 
+                                          ( ("sendMsgPtr" variable
+                                               (:constant-flag t
+                                                :type ("SendMsgCbPtr" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2462 2492])
+                                            ("msgCode" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("core::ipc::MsgCode" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2519 2554]))                                          
+                                        :type ("Imp" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [2436 3025])
+                                    ("UpdateWriteMessage" function
+                                       (:parent "MetaDataWriter::Imp"
+                                        :arguments 
+                                          ( ("filesystem" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("pda::FileSystem" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3073 3109])
+                                            ("srcDir" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3156 3189]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [3027 3282])
+                                    ("CreateMetaData" function
+                                       (:parent "MetaDataWriter::Imp"
+                                        :arguments 
+                                          ( ("info" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("clc::VideoInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3326 3354]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [3284 3924])
+                                    ("MetaDataWriter" function
+                                       (:constructor-flag t
+                                        :parent "MetaDataWriter"
+                                        :arguments 
+                                          ( ("sendMsgPtr" variable
+                                               (:constant-flag t
+                                                :type ("SendMsgCbPtr" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4395 4434])
+                                            ("msgCode" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("core::ipc::MsgCode" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4467 4504]))                                          
+                                        :type ("MetaDataWriter" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [4363 4551])
+                                    ("MetaDataWriter" function
+                                       (:destructor-flag t
+                                        :parent "MetaDataWriter"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [4663 4700])
+                                    ("UpdateWriteMessage" function
+                                       (:parent "MetaDataWriter"
+                                        :arguments 
+                                          ( ("filesystem" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("pda::FileSystem" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5031 5067])
+                                            ("srcDir" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5109 5142]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [4990 5199])
+                                    ("CreateImageMetaData" function
+                                       (:parent "MetaDataWriter"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [5449 5833])
+                                    ("CreateVideoMetaData" function
+                                       (:parent "MetaDataWriter"
+                                        :arguments 
+                                          ( ("vi" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("clc::VideoInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6169 6195]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [6119 6382])
+                                    ("SetConfiguration" function
+                                       (:parent "MetaDataWriter"
+                                        :arguments 
+                                          ( ("c" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("scf::DisplayConfiguration" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6687 6723]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [6640 6775])
+                                    ("SetConfiguration" function
+                                       (:parent "MetaDataWriter"
+                                        :arguments 
+                                          ( ("c" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("scf::ScanConfiguration" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7066 7099]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [7027 7151])
+                                    ("SetActiveWindowInfo" function
+                                       (:parent "MetaDataWriter"
+                                        :arguments 
+                                          ( ("info" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("scf::ActiveWindowInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7462 7498]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [7420 7566]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1197 8015]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1178 8035]))                  
+                :type "namespace")
+                nil [1159 8057]))          
+      :file "ccapp_clr_metadatawriter.cpp"
+      :pointmax 8120
+      :fsize 8119
+      :lastmodtime '(20908 20960)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_clr_metadatawriter.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_CLR_METADATAWRITER_HPP" variable (:constant-flag t) nil [746 774])
+            ("ccapp_pda_commontypes.hpp" include nil nil [850 886])
+            ("core_cpp_forwarddeclare.hpp" include nil nil [888 926])
+            ("core_ptr_uniqueptr.hpp" include nil nil [927 960])
+            ("core_cbk_basecallback.hpp" include nil nil [961 997])
+            ("boost/noncopyable.hpp" include (:system-flag t) nil [999 1031])
+            ("string" include (:system-flag t) nil [1032 1049])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("clr" type
+                               (:members 
+                                  ( ("core::ptr::UniquePtr" using (:type ("core::ptr::UniquePtr" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1685 1712])
+                                    ("MetaDataWriter" type
+                                       (:superclasses 
+                                          ( ("boost::noncopyable" type
+                                               (:protection "private"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [2180 2187])
+                                            ("SendMsgCbPtr" type
+                                               (:typedef ("core::cbk::BaseCallback::CallbackPtr" type (:type "class") nil nil)
+                                                :superclasses "core::cbk::BaseCallback::CallbackPtr"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [2197 2303])
+                                            ("MetaDataWriter" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :arguments 
+                                                  ( ("sendMsgPtr" variable
+                                                       (:constant-flag t
+                                                        :type ("SendMsgCbPtr" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2330 2360])
+                                                    ("msgCode" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("core::ipc::MsgCode" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2385 2420]))                                                  
+                                                :type ("MetaDataWriter" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2314 2421])
+                                            ("MetaDataWriter" function
+                                               (:prototype-flag t
+                                                :destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2430 2448])
+                                            ("UpdateWriteMessage" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("filesystem" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("pda::FileSystem" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2503 2539])
+                                                    ("srcDir" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("std::string" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2573 2606]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2478 2607])
+                                            ("CreateImageMetaData" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2617 2644])
+                                            ("CreateVideoMetaData" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("vi" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("clc::VideoInfo" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2679 2705]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2653 2706])
+                                            ("SetConfiguration" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("c" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scf::DisplayConfiguration" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2739 2775]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2716 2776])
+                                            ("SetConfiguration" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("c" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scf::ScanConfiguration" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2808 2841]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2785 2842])
+                                            ("SetActiveWindowInfo" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("info" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scf::ActiveWindowInfo" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2877 2913]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2851 2914])
+                                            ("private" label nil (reparse-symbol classsubparts) [2920 2928])
+                                            ("Imp" type
+                                               (:prototype t
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) [2938 2960])
+                                            ("pimpl" variable (:type ("UniquePtr" type
+                                                 (:template-specifier 
+                                                    ( ("Imp" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [3001 3027]))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [2014 3048]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1519 3126]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1500 3146]))                  
+                :type "namespace")
+                nil [1126 3168]))          
+      :file "ccapp_clr_metadatawriter.hpp"
+      :pointmax 3274
+      :fsize 3273
+      :lastmodtime '(20908 20960)
+      :unmatched-syntax '((semantic-list 1475 . 1498) (symbol 1454 . 1475) (semantic-list 1428 . 1453) (symbol 1407 . 1428) (semantic-list 1380 . 1406) (symbol 1359 . 1380) (semantic-list 1333 . 1358) (symbol 1312 . 1333) (semantic-list 1278 . 1311) (symbol 1257 . 1278) (semantic-list 1220 . 1256) (symbol 1199 . 1220) (semantic-list 1166 . 1198) (symbol 1145 . 1166))
+      :lexical-table 
+        '(("CCAPP_CLR_METADATAWRITER_HPP")
+          )
+)
+    (semanticdb-table "ccapp_clr_constants.hpp"
+      :file "ccapp_clr_constants.hpp"
+      :fsize 2336
+      :lastmodtime '(20908 20960))
+    (semanticdb-table "ccapp_clr_dsooperationstracker.hpp"
+      :file "ccapp_clr_dsooperationstracker.hpp"
+      :fsize 2184
+      :lastmodtime '(20908 20960))
+    (semanticdb-table "ccapp_clr_rawdatafiledata.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_CLR_RAWDATAFILEDATA_HPP" variable (:constant-flag t) nil [827 856])
+            ("ccapp_pda_filemessages.hpp" include nil nil [932 969])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("clr" type
+                               (:members 
+                                  ( ("RawDataFileData" type
+                                       (:superclasses 
+                                          ( ("pda::FileData" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("ValidMsg" type
+                                               (:typedef ("void")
+                                                :superclasses "void"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1603 1625]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1551 1628]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1084 1706]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1065 1726]))                  
+                :type "namespace")
+                nil [1046 1748]))          
+      :file "ccapp_clr_rawdatafiledata.hpp"
+      :pointmax 1856
+      :fsize 1855
+      :lastmodtime '(20908 20960)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_CLR_RAWDATAFILEDATA_HPP")
+          )
+)
+    (semanticdb-table "ccapp_clr_beamheaderversionfiledata.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_CLR_BEAMHEADERVERSIONFILEDATA_HPP" variable (:constant-flag t) nil [855 894])
+            ("ccapp_pda_filemessages.hpp" include nil nil [970 1007])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("clr" type
+                               (:members 
+                                  ( ("BeamHeaderFileData" type
+                                       (:superclasses 
+                                          ( ("pda::FileData" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("ValidMsg" type
+                                               (:typedef ("void")
+                                                :superclasses "void"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1644 1666]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1589 1669]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1122 1747]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1103 1767]))                  
+                :type "namespace")
+                nil [1084 1789]))          
+      :file "ccapp_clr_beamheaderversionfiledata.hpp"
+      :pointmax 1917
+      :fsize 1916
+      :lastmodtime '(20908 20959)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_CLR_BEAMHEADERVERSIONFILEDATA_HPP")
+          )
+)
+    (semanticdb-table "ccapp_clr_metadatareader.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_clr_metadatareader.hpp" include nil nil [699 738])
+            ("ccapp_clr_metadatafiledata.hpp" include nil nil [740 781])
+            ("ccapp_clc_metadatafile.hpp" include nil nil [783 820])
+            ("ccapp_clc_metadatafileold.hpp" include nil nil [821 861])
+            ("ccapp_clc_checksummanager.hpp" include nil nil [862 902])
+            ("core_log_logmsg.hpp" include nil nil [904 934])
+            ("core_chk_assert.hpp" include nil nil [935 965])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("clr" type
+                               (:members 
+                                  ( ("core::utl" using (:type ("core::utl" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1097 1123])
+                                    ("core::log" using (:type ("core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1124 1150])
+                                    ("uniqueId" variable (:type "int") (reparse-symbol namespacesubparts) [1376 1393])
+                                    ("Imp" type
+                                       (:parent "MetaDataReader"
+                                        :members 
+                                          ( ("Imp" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :type ("Imp" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [1688 1694])
+                                            ("UpdateConfigurations" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("src" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("pda::FileData" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1740 1766]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1713 1767])
+                                            ("GetUpdateConfig" function
+                                               (:template 
+                                                  ( ("MetaDataFileVerType" type (:type "class") nil nil))                                                  
+                                                :type ("MetaDataFileVerType" type (:type "class") nil nil)
+                                                :arguments 
+                                                  ( ("src" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("pda::FileData" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1863 1889]))                                                  
+                                                :constant-flag t
+                                                :prototype-flag t)
+                                                (reparse-symbol classsubparts) [1773 1896])
+                                            ("CheckUpdateConfigs" function
+                                               (:template 
+                                                  ( ("MetaDataFileVersion" type (:type "class") nil nil))                                                  
+                                                :type "bool"
+                                                :arguments 
+                                                  ( ("bufferData" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("MetaDataFileVersion" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1972 2011]))                                                  
+                                                :prototype-flag t)
+                                                (reparse-symbol classsubparts) [1901 2012])
+                                            ("mdFile" variable (:type ("clc::MetaDataFile" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2055 2080])
+                                            ("checksum" variable (:type ("clc::ChecksumManager" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2130 2160])
+                                            ("updated" variable (:type "bool") (reparse-symbol classsubparts) [2226 2239]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1545 2242])
+                                    ("Imp" function
+                                       (:constructor-flag t
+                                        :parent "MetaDataReader::Imp"
+                                        :type ("Imp" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [2244 2404])
+                                    ("UpdateConfigurations" function
+                                       (:parent "MetaDataReader::Imp"
+                                        :arguments 
+                                          ( ("src" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("pda::FileData" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2454 2480]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2406 3969])
+                                    ("GetUpdateConfig" function
+                                       (:template 
+                                          ( ("MetaDataFileVerType" type (:type "class") nil nil))                                          
+                                        :type ("MetaDataFileVerType" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("src" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("pda::FileData" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4087 4113]))                                          
+                                        :constant-flag t
+                                        :parent "MetaDataReader::Imp")
+                                        (reparse-symbol namespacesubparts) [3971 4270])
+                                    ("CheckUpdateConfigs" function
+                                       (:template 
+                                          ( ("MetaDataFileVersion" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("bufferData" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("MetaDataFileVersion" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4360 4399]))                                          
+                                        :parent "MetaDataReader::Imp")
+                                        (reparse-symbol namespacesubparts) [4272 5523])
+                                    ("MetaDataReader" function
+                                       (:constructor-flag t
+                                        :parent "MetaDataReader"
+                                        :type ("MetaDataReader" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [5859 5915])
+                                    ("MetaDataReader" function
+                                       (:destructor-flag t
+                                        :parent "MetaDataReader"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [6027 6064])
+                                    ("UpdateConfigurations" function
+                                       (:parent "MetaDataReader"
+                                        :arguments 
+                                          ( ("src" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("pda::FileData" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6432 6458]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [6389 6502])
+                                    ("GetVideoInfo" function
+                                       (:parent "MetaDataReader"
+                                        :constant-flag t
+                                        :type ("clc::VideoInfo" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [6795 6938])
+                                    ("GetDisplayCfg" function
+                                       (:parent "MetaDataReader"
+                                        :constant-flag t
+                                        :type ("scf::DisplayConfiguration" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [7239 7387])
+                                    ("GetScanCfg" function
+                                       (:parent "MetaDataReader"
+                                        :constant-flag t
+                                        :type ("scf::ScanConfiguration" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [7682 7824])
+                                    ("GetActiveWinInfo" function
+                                       (:parent "MetaDataReader"
+                                        :constant-flag t
+                                        :type ("scf::ActiveWindowInfo" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [8133 8245]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1080 8694]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1061 8714]))                  
+                :type "namespace")
+                nil [1042 8736]))          
+      :file "ccapp_clr_metadatareader.cpp"
+      :pointmax 8799
+      :fsize 8798
+      :lastmodtime '(20908 20960)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_clr_metadatareader.hpp"
+      :file "ccapp_clr_metadatareader.hpp"
+      :fsize 2763
+      :lastmodtime '(20908 20960))
+    (semanticdb-table "ccapp_clr_metadatafileop.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_CLR_METADATAFILEOP_HPP" variable (:constant-flag t) nil [829 857])
+            ("ccapp_pda_filemessages.hpp" include nil nil [933 970])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("clr" type
+                               (:members 
+                                  ( ("ImageMetaDataFileOp" type
+                                       (:superclasses 
+                                          ( ("pda::FileOp" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("ValidMsg" type
+                                               (:typedef ("void")
+                                                :superclasses "void"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1606 1628]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1552 1631])
+                                    ("VideoMetaDataFileOp" type
+                                       (:superclasses 
+                                          ( ("pda::FileOp" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("ValidMsg" type
+                                               (:typedef ("void")
+                                                :superclasses "void"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1687 1709]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1633 1712]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1085 1790]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1066 1810]))                  
+                :type "namespace")
+                nil [1047 1832]))          
+      :file "ccapp_clr_metadatafileop.hpp"
+      :pointmax 1938
+      :fsize 1937
+      :lastmodtime '(20908 20959)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_CLR_METADATAFILEOP_HPP")
+          )
+)
+    (semanticdb-table "ccapp_clr_recorder.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_clr_recorder.hpp" include nil nil [704 737])
+            ("ccapp_clr_constants.hpp" include nil nil [739 773])
+            ("ccapp_clr_recorderoperation.hpp" include nil nil [774 816])
+            ("ccapp_clr_recordercontroller.hpp" include nil nil [817 860])
+            ("ccapp_clr_dsooperationstracker.hpp" include nil nil [861 906])
+            ("ccapp_clr_capturevideostartbody.hpp" include nil nil [907 953])
+            ("ccapp_clr_capturevideostopbody.hpp" include nil nil [954 999])
+            ("ccapp_clr_capturevideofileop.hpp" include nil nil [1000 1043])
+            ("ccapp_clr_metadatafileop.hpp" include nil nil [1044 1083])
+            ("ccapp_clc_constants.hpp" include nil nil [1085 1119])
+            ("ccapp_scm_beamassembledbody.hpp" include nil nil [1121 1163])
+            ("core_ipc_definerxmsg.cpp" include nil nil [1166 1201])
+            ("core_ipc_msg.cpp" include nil nil [1240 1267])
+            ("core_ipc_rxmsg.cpp" include nil nil [1314 1343])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("clr" type
+                               (:members 
+                                  ( ("core::ipc" using (:type ("core::ipc" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1519 1545])
+                                    ("core::utl" using (:type ("core::utl" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1546 1572])
+                                    ("core::bty" using (:type ("core::bty" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1573 1599])
+                                    ("core::log" using (:type ("core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1600 1626])
+                                    ("Imp" type
+                                       (:parent "Recorder"
+                                        :members 
+                                          ( ("Imp" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :arguments 
+                                                  ( ("sendMsgCbPtr" variable
+                                                       (:constant-flag t
+                                                        :type ("SendMsgCbPtr" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2154 2187]))                                                  
+                                                :type ("Imp" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [2149 2188])
+                                            ("Imp" function
+                                               (:prototype-flag t
+                                                :destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2193 2200])
+                                            ("HandleCaptureVideoStart" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scf::LiveSvsMsg" type
+                                                             (:template-specifier 
+                                                                ( ("CaptureVideoStartBody" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) [2261 2314]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2219 2315])
+                                            ("HandleFrameDisplayedMsg" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scm::BeamAssembledBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2350 2385]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2320 2386])
+                                            ("HandleMetaDataFileOp" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("VideoMetaDataFileOp" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2418 2450]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2391 2451])
+                                            ("HandleFileOp" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("CaptureVideoFileOp" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2475 2506]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2456 2507])
+                                            ("EndVideoRecording" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2513 2538])
+                                            ("StopRecording" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("code" variable
+                                                       (:constant-flag t
+                                                        :type ("clc::RecordingStatusCode" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2563 2600]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2543 2601])
+                                            ("ErrorRecording" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("errStatus" variable
+                                                       (:constant-flag t
+                                                        :type ("pda::PdaStatusCode" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2627 2663]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2606 2664])
+                                            ("recControl" variable (:type ("RecorderController" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2721 2751])
+                                            ("recOperation" variable (:type ("RecorderOperation" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2801 2832])
+                                            ("recordingReporter" variable (:type ("clc::ReportRecordingStatus" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2884 2929])
+                                            ("dsoTracker" variable (:type ("DsoOperationsTracker" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2995 3027]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [2003 3030])
+                                    ("Imp" function
+                                       (:constructor-flag t
+                                        :parent "Recorder::Imp"
+                                        :arguments 
+                                          ( ("sendMsgCbPtr" variable
+                                               (:constant-flag t
+                                                :type ("SendMsgCbPtr" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3052 3085]))                                          
+                                        :type ("Imp" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [3032 3215])
+                                    ("Imp" function
+                                       (:destructor-flag t
+                                        :parent "Recorder::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [3217 3242])
+                                    ("HandleCaptureVideoStart" function
+                                       (:parent "Recorder::Imp"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("scf::LiveSvsMsg" type
+                                                     (:template-specifier 
+                                                        ( ("CaptureVideoStartBody" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [3297 3350]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [3244 3602])
+                                    ("HandleFrameDisplayedMsg" function
+                                       (:parent "Recorder::Imp"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("scm::BeamAssembledBody" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3649 3684]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [3604 4099])
+                                    ("HandleMetaDataFileOp" function
+                                       (:parent "Recorder::Imp"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("VideoMetaDataFileOp" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4143 4175]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [4101 4448])
+                                    ("HandleFileOp" function
+                                       (:parent "Recorder::Imp"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("CaptureVideoFileOp" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4484 4515]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [4450 5384])
+                                    ("EndVideoRecording" function
+                                       (:parent "Recorder::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [5386 5649])
+                                    ("StopRecording" function
+                                       (:parent "Recorder::Imp"
+                                        :arguments 
+                                          ( ("code" variable
+                                               (:constant-flag t
+                                                :type ("clc::RecordingStatusCode" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5686 5723]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [5651 5951])
+                                    ("ErrorRecording" function
+                                       (:parent "Recorder::Imp"
+                                        :arguments 
+                                          ( ("errStatus" variable
+                                               (:constant-flag t
+                                                :type ("pda::PdaStatusCode" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5989 6025]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [5953 6211])
+                                    ("Recorder" function
+                                       (:constructor-flag t
+                                        :parent "Recorder"
+                                        :arguments 
+                                          ( ("sendMsgCbPtr" variable
+                                               (:constant-flag t
+                                                :type ("SendMsgCbPtr" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6632 6665]))                                          
+                                        :type ("Recorder" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [6612 6705])
+                                    ("Recorder" function
+                                       (:destructor-flag t
+                                        :parent "Recorder"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [6817 6842])
+                                    ("Disable" function
+                                       (:parent "Recorder"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [7048 7273])
+                                    ("Enable" function
+                                       (:parent "Recorder"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [7409 7559])
+                                    ("HandleCaptureVideoStart" function
+                                       (:parent "Recorder"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("scf::LiveSvsMsg" type
+                                                     (:template-specifier 
+                                                        ( ("CaptureVideoStartBody" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [7818 7871]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [7766 8025])
+                                    ("HandleCaptureVideoStop" function
+                                       (:parent "Recorder"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("CaptureVideoStopBody" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8215 8248]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [8176 8481])
+                                    ("HandleFrameDisplayedMsg" function
+                                       (:parent "Recorder"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("scm::BeamAssembledBody" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8845 8880]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [8805 8953])
+                                    ("HandleMetaDataFileOp" function
+                                       (:parent "Recorder"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("VideoMetaDataFileOp" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9333 9365]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [9296 9580])
+                                    ("HandleFileOp" function
+                                       (:parent "Recorder"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("CaptureVideoFileOp" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9818 9849]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [9789 10055]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1502 10504]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1483 10524]))                  
+                :type "namespace")
+                nil [1464 10546]))          
+      :file "ccapp_clr_recorder.cpp"
+      :pointmax 10603
+      :fsize 10602
+      :lastmodtime '(20908 20960)
+      :unmatched-syntax '((EXPLICIT 2140 . 2148)))
+    (semanticdb-table "ccapp_clr_recorder.hpp"
+      :file "ccapp_clr_recorder.hpp"
+      :fsize 3290
+      :lastmodtime '(20908 20960))
+    (semanticdb-table "ccapp_clr_recorderoperation.hpp"
+      :file "ccapp_clr_recorderoperation.hpp"
+      :fsize 2886
+      :lastmodtime '(20908 20960))
+    (semanticdb-table "ccapp_clr_recordercontroller.hpp"
+      :file "ccapp_clr_recordercontroller.hpp"
+      :fsize 2593
+      :lastmodtime '(20908 20960))
+    (semanticdb-table "ccapp_clr_capturevideostartbody.hpp"
+      :file "ccapp_clr_capturevideostartbody.hpp"
+      :fsize 2539
+      :lastmodtime '(20917 64735))
+    (semanticdb-table "ccapp_clr_capturevideostopbody.hpp"
+      :file "ccapp_clr_capturevideostopbody.hpp"
+      :fsize 1904
+      :lastmodtime '(20908 20960))
+    (semanticdb-table "ccapp_clr_capturevideofileop.hpp"
+      :file "ccapp_clr_capturevideofileop.hpp"
+      :fsize 1879
+      :lastmodtime '(20908 20960))
+    (semanticdb-table "ccapp_clr_playerbuffersupdater.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_clr_playerbuffersupdater.hpp" include nil nil [724 769])
+            ("ccapp_clr_playererror.hpp" include nil nil [771 807])
+            ("ccapp_clc_datablockinfo.hpp" include nil nil [809 847])
+            ("ccapp_clc_headerreaderbase.hpp" include nil nil [848 889])
+            ("ccapp_clc_scanbuffersdistribution.hpp" include nil nil [890 938])
+            ("ccapp_clc_rawdatareader.hpp" include nil nil [939 977])
+            ("ccapp_scf_scanconfiguration.hpp" include nil nil [979 1021])
+            ("ccapp_scs_constants.hpp" include nil nil [1023 1057])
+            ("core_chk_assert.hpp" include nil nil [1059 1089])
+            ("core_log_logmsg.hpp" include nil nil [1090 1120])
+            ("sstream" include (:system-flag t) nil [1122 1140])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("clr" type
+                               (:members 
+                                  ( ("ezono::core::log" using (:type ("ezono::core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1272 1305])
+                                    ("unnamed" type
+                                       (:members 
+                                          ( ("MMODE_OFFSET_BREAK" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol namespacesubparts) [1459 1569]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [1307 1872])
+                                    ("Imp" type
+                                       (:parent "PlayerBuffersUpdater"
+                                        :members 
+                                          ( ("Imp" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :arguments 
+                                                  ( ("readDataFramesEvent" variable
+                                                       (:reference 1
+                                                        :type ("events::ReadDataFramesEvent" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2051 2102])
+                                                    ("checksumCalc" variable
+                                                       (:reference 1
+                                                        :type ("clc::ChecksumManager" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2112 2157]))                                                  
+                                                :type ("Imp" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [2046 2158])
+                                            ("Configure" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("c" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scf::ScanConfiguration" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2194 2227]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2178 2228])
+                                            ("UpdateBmodeBuffer" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("header" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("clc::HeaderReaderBase" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2265 2304])
+                                                    ("srcBufferIdx" variable
+                                                       (:constant-flag t
+                                                        :type "unsigned int")
+                                                        (reparse-symbol arg-sub-list) [2341 2386])
+                                                    ("readSize" variable
+                                                       (:constant-flag t
+                                                        :type "unsigned int")
+                                                        (reparse-symbol arg-sub-list) [2423 2464])
+                                                    ("offset" variable
+                                                       (:constant-flag t
+                                                        :type "unsigned int")
+                                                        (reparse-symbol arg-sub-list) [2501 2541]))                                                  
+                                                :type "unsigned int")
+                                                (reparse-symbol classsubparts) [2233 2542])
+                                            ("UpdateCmodeBuffer" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("header" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("clc::HeaderReaderBase" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2579 2618])
+                                                    ("srcBufferIdx" variable
+                                                       (:constant-flag t
+                                                        :type "unsigned int")
+                                                        (reparse-symbol arg-sub-list) [2655 2700])
+                                                    ("readSize" variable
+                                                       (:constant-flag t
+                                                        :type "unsigned int")
+                                                        (reparse-symbol arg-sub-list) [2737 2778])
+                                                    ("offset" variable
+                                                       (:constant-flag t
+                                                        :type "unsigned int")
+                                                        (reparse-symbol arg-sub-list) [2815 2855]))                                                  
+                                                :type "unsigned int")
+                                                (reparse-symbol classsubparts) [2547 2856])
+                                            ("UpdateMmodeLines" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("header" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("clc::HeaderReaderBase" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2892 2931])
+                                                    ("srcBufferIdx" variable
+                                                       (:constant-flag t
+                                                        :type "unsigned int")
+                                                        (reparse-symbol arg-sub-list) [2967 3012])
+                                                    ("readSize" variable
+                                                       (:constant-flag t
+                                                        :type "unsigned int")
+                                                        (reparse-symbol arg-sub-list) [3048 3089])
+                                                    ("offset" variable
+                                                       (:constant-flag t
+                                                        :type "unsigned int")
+                                                        (reparse-symbol arg-sub-list) [3125 3165]))                                                  
+                                                :type "unsigned int")
+                                                (reparse-symbol classsubparts) [2861 3166])
+                                            ("UpdateNeedleData" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("header" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("clc::HeaderReaderBase" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [3202 3241])
+                                                    ("srcBufferIdx" variable
+                                                       (:constant-flag t
+                                                        :type "unsigned int")
+                                                        (reparse-symbol arg-sub-list) [3277 3322])
+                                                    ("readSize" variable
+                                                       (:constant-flag t
+                                                        :type "unsigned int")
+                                                        (reparse-symbol arg-sub-list) [3358 3399])
+                                                    ("offset" variable
+                                                       (:constant-flag t
+                                                        :type "unsigned int")
+                                                        (reparse-symbol arg-sub-list) [3435 3475]))                                                  
+                                                :type "unsigned int")
+                                                (reparse-symbol classsubparts) [3171 3476])
+                                            ("NewReadBuffer" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [3481 3502])
+                                            ("EofReached" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [3507 3525])
+                                            ("UpdateDataBuffers" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [3531 3556])
+                                            ("readDataFramesEvent" variable (:type ("events::ReadDataFramesEvent" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3619 3670])
+                                            ("dataBlockInfo" variable (:type ("clc::DataBlockInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3708 3762])
+                                            ("bModeReader" variable (:type ("clc::RawDataReader" type
+                                                 (:template-specifier 
+                                                    ( ("sfm::B_MODE_SCAN" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [3853 3909])
+                                            ("cModeReader" variable (:type ("clc::RawDataReader" type
+                                                 (:template-specifier 
+                                                    ( ("sfm::C_MODE_SCAN" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [3914 3970])
+                                            ("mModeReader" variable (:type ("clc::RawDataReader" type
+                                                 (:template-specifier 
+                                                    ( ("sfm::M_MODE_SCAN" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [3975 4031])
+                                            ("needleReader" variable (:type ("clc::RawDataReader" type
+                                                 (:template-specifier 
+                                                    ( ("sfm::NEEDLE_MODE_SCAN" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [4036 4093])
+                                            ("scanBuffers" variable (:type ("clc::ScanBuffersDistribution" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4152 4193])
+                                            ("willResetImage" variable (:type "bool") (reparse-symbol classsubparts) [4266 4286])
+                                            ("newBuffer" variable (:type "bool") (reparse-symbol classsubparts) [4291 4306]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1897 4309])
+                                    ("Imp" function
+                                       (:constructor-flag t
+                                        :parent "PlayerBuffersUpdater::Imp"
+                                        :arguments 
+                                          ( ("readDataFramesEvent_" variable
+                                               (:reference 1
+                                                :type ("events::ReadDataFramesEvent" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4343 4395])
+                                            ("checksumCalc" variable
+                                               (:reference 1
+                                                :type ("clc::ChecksumManager" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4428 4473]))                                          
+                                        :type ("Imp" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [4311 4766])
+                                    ("Configure" function
+                                       (:parent "PlayerBuffersUpdater::Imp"
+                                        :arguments 
+                                          ( ("c" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("scf::ScanConfiguration" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4811 4844]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [4768 5406])
+                                    ("UpdateBmodeBuffer" function
+                                       (:parent "PlayerBuffersUpdater::Imp"
+                                        :arguments 
+                                          ( ("header" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("clc::HeaderReaderBase" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5475 5514])
+                                            ("srcBufferIdx" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [5523 5568])
+                                            ("readSize" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [5577 5618])
+                                            ("offset" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [5627 5667]))                                          
+                                        :type "unsigned int")
+                                        (reparse-symbol namespacesubparts) [5408 6777])
+                                    ("UpdateCmodeBuffer" function
+                                       (:parent "PlayerBuffersUpdater::Imp"
+                                        :arguments 
+                                          ( ("header" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("clc::HeaderReaderBase" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6846 6885])
+                                            ("srcBufferIdx" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [6894 6939])
+                                            ("readSize" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [6948 6989])
+                                            ("offset" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [6998 7038]))                                          
+                                        :type "unsigned int")
+                                        (reparse-symbol namespacesubparts) [6779 8096])
+                                    ("UpdateMmodeLines" function
+                                       (:parent "PlayerBuffersUpdater::Imp"
+                                        :arguments 
+                                          ( ("header" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("clc::HeaderReaderBase" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8164 8203])
+                                            ("srcBufferIdx" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [8212 8257])
+                                            ("readSize" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [8266 8307])
+                                            ("offset" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [8316 8356]))                                          
+                                        :type "unsigned int")
+                                        (reparse-symbol namespacesubparts) [8098 9641])
+                                    ("UpdateNeedleData" function
+                                       (:parent "PlayerBuffersUpdater::Imp"
+                                        :arguments 
+                                          ( ("header" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("clc::HeaderReaderBase" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9709 9746])
+                                            ("srcBufferIdx" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [9755 9787])
+                                            ("readSize" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [9796 9824])
+                                            ("offset" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [9833 9860]))                                          
+                                        :type "unsigned int")
+                                        (reparse-symbol namespacesubparts) [9643 10807])
+                                    ("NewReadBuffer" function
+                                       (:parent "PlayerBuffersUpdater::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [10809 10882])
+                                    ("EofReached" function
+                                       (:parent "PlayerBuffersUpdater::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [10884 10959])
+                                    ("UpdateDataBuffers" function
+                                       (:parent "PlayerBuffersUpdater::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [10961 11450])
+                                    ("PlayerBuffersUpdater" function
+                                       (:constructor-flag t
+                                        :parent "PlayerBuffersUpdater"
+                                        :arguments 
+                                          ( ("readDataFramesEvent" variable
+                                               (:reference 1
+                                                :type ("events::ReadDataFramesEvent" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [12012 12062])
+                                            ("checksumCalc" variable
+                                               (:reference 1
+                                                :type ("clc::ChecksumManager" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [12075 12119]))                                          
+                                        :type ("PlayerBuffersUpdater" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [11956 12180])
+                                    ("PlayerBuffersUpdater" function
+                                       (:destructor-flag t
+                                        :parent "PlayerBuffersUpdater"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [12292 12341])
+                                    ("Configure" function
+                                       (:parent "PlayerBuffersUpdater"
+                                        :arguments 
+                                          ( ("c" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("scf::ScanConfiguration" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [12625 12658]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [12587 12689])
+                                    ("UpdateScanBuffer" function
+                                       (:parent "PlayerBuffersUpdater"
+                                        :arguments 
+                                          ( ("header" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("clc::HeaderReaderBase" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [13562 13601])
+                                            ("srcBufferIdx" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [13610 13655])
+                                            ("readSize" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [13664 13705])
+                                            ("offset" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [13714 13754]))                                          
+                                        :type "unsigned int")
+                                        (reparse-symbol namespacesubparts) [13501 15195])
+                                    ("NewReadBuffer" function
+                                       (:parent "PlayerBuffersUpdater"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [15409 15483])
+                                    ("EofReached" function
+                                       (:parent "PlayerBuffersUpdater"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [15685 15753]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1255 16202]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1236 16222]))                  
+                :type "namespace")
+                nil [1217 16244]))          
+      :file "ccapp_clr_playerbuffersupdater.cpp"
+      :pointmax 16313
+      :fsize 16312
+      :lastmodtime '(20911 16319)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_clr_playerbuffersupdater.hpp"
+      :file "ccapp_clr_playerbuffersupdater.hpp"
+      :fsize 2970
+      :lastmodtime '(20908 20960))
+    (semanticdb-table "ccapp_clr_playererror.hpp"
+      :file "ccapp_clr_playererror.hpp"
+      :fsize 2079
+      :lastmodtime '(20908 20960)))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!a_clr!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

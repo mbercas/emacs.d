@@ -1,0 +1,93 @@
+;; Object c11/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "c11/"
+  :tables
+  (list
+    (semanticdb-table "spike.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("string" include (:system-flag t) nil [22 39])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [841 850])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [851 864]))                  
+                :type "int")
+                nil [831 890]))          
+      :file "spike.cpp"
+      :pointmax 570
+      :fsize 890
+      :lastmodtime '(21531 52564 985932 759000)
+      :unmatched-syntax nil)
+    (semanticdb-table "sse.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [50 67])
+            ("random" include (:system-flag t) nil [68 85])
+            ("iostream" include (:system-flag t) nil [86 105])
+            ("algorithm" include (:system-flag t) nil [106 126])
+            ("framewave/fwSignal.h" include (:system-flag t) nil [128 159])
+            ("testType" type
+               (:typedef ("float")
+                :superclasses "float"
+                :type "typedef")
+                nil [162 185])
+            ("MyRng" type
+               (:typedef ("std::mt19937" type (:type "class") nil nil)
+                :superclasses "std::mt19937"
+                :type "typedef")
+                nil [186 213])
+            ("seedVal" variable (:type ("uint32_t" type (:type "class") nil nil)) nil [275 292])
+            ("rng" variable (:type ("MyRng" type (:type "class") nil nil)) nil [325 335])
+            ("initialize_rnd" function (:type "void") nil [337 405])
+            ("populate_vector" function
+               (:arguments 
+                  ( ("v" variable
+                       (:pointer 1
+                        :type ("testType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [429 442])
+                    ("sz" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [443 454]))                  
+                :type "void")
+                nil [407 808])
+            ("test_vector_add" function
+               (:arguments 
+                  ( ("f" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("testType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [833 851])
+                    ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("testType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [852 871])
+                    ("r" variable
+                       (:pointer 1
+                        :type ("testType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [872 885])
+                    ("sz" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [886 897]))                  
+                :type "void")
+                nil [811 1132])
+            ("main" function (:type "int") nil [1136 1618]))          
+      :file "sse.cpp"
+      :pointmax 1498
+      :fsize 1618
+      :lastmodtime '(21385 58796 799658 85000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("LIB" variable (:default-value ("-lstdc++" "-lm" "-lfwSignal")) nil [18 48])
+            ("FLAGS" variable (:default-value ("-std=c++11" "-g")) nil [48 70])
+            ("all" function nil nil [71 76]))          
+      :file "Makefile"
+      :pointmax 113
+      :fsize 112
+      :lastmodtime '(21385 58651 139311 504000)
+      :unmatched-syntax '((shell-command 78 . 112) (bol 77 . 77))))
+  :file "!sandbox!workspace!c11!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

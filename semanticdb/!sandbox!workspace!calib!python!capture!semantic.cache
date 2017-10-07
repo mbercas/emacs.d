@@ -1,0 +1,127 @@
+;; Object capture/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "capture/"
+  :tables
+  (list
+    (semanticdb-table "spike.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("socket" include nil nil [108 121])
+            ("struct" include nil nil [122 135])
+            ("sys" include nil nil [137 161])
+            ("random" include nil nil [137 161])
+            ("time" include nil nil [137 161])
+            ("PyQt4.QtCore" include nil nil [162 188])
+            ("PyQt4.QtGui" include nil nil [189 214])
+            ("matplotlib.figure" include nil nil [216 252])
+            ("matplotlib.backends.backend_qt4agg" include nil nil [253 344])
+            ("matplotlib.backends.backend_qt4agg" include nil nil [345 425])
+            ("ApplicationWindow" type
+               (:superclasses ("QMainWindow")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("QMainWindow" code nil (reparse-symbol indented_block_body) [514 548])
+                            ("self" variable nil (reparse-symbol indented_block_body) [558 580])
+                            ("self" code nil (reparse-symbol indented_block_body) [590 614])
+                            ("self" code nil (reparse-symbol indented_block_body) [623 647])
+                            ("self" code nil (reparse-symbol indented_block_body) [657 720])
+                            ("self" code nil (reparse-symbol indented_block_body) [729 794])
+                            ("self" code nil (reparse-symbol indented_block_body) [810 885])
+                            ("self" code nil (reparse-symbol indented_block_body) [901 974])
+                            ("self" code nil (reparse-symbol indented_block_body) [983 1033]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [483 487])
+                            ("parent" variable nil (reparse-symbol function_parameters) [489 495]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [470 1034])
+                    ("create_main_frame" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1061 1065]))                          )
+                        (reparse-symbol indented_block_body) [1039 2305])
+                    ("create_status_bar" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2332 2336]))                          )
+                        (reparse-symbol indented_block_body) [2310 2477])
+                    ("start_acquisition" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2504 2508]))                          )
+                        (reparse-symbol indented_block_body) [2482 2660])
+                    ("stop_acquisition" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2686 2690]))                          )
+                        (reparse-symbol indented_block_body) [2665 2838])
+                    ("update_figure" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2861 2865])
+                            ("lE" variable nil (reparse-symbol function_parameters) [2867 2869]))                          )
+                        (reparse-symbol indented_block_body) [2843 3234])
+                    ("update_UI" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3253 3257]))                          )
+                        (reparse-symbol indented_block_body) [3239 3378])
+                    ("cleanup_UI" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3398 3402]))                          )
+                        (reparse-symbol indented_block_body) [3383 3497]))                  
+                :type "class")
+                nil [427 3497])
+            ("PORT" variable nil nil [3498 3507])
+            ("Worker" type
+               (:superclasses ("QThread")
+                :members 
+                  ( ("pixel_list" variable nil (reparse-symbol indented_block_body) [3537 3566])
+                    ("__init__" function
+                       (:suite 
+                          ( ("QThread" code nil (reparse-symbol indented_block_body) [3615 3645])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3654 3674]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3585 3589])
+                            ("parent" variable nil (reparse-symbol function_parameters) [3591 3597]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3572 3675])
+                    ("__del__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3692 3696]))                          )
+                        (reparse-symbol indented_block_body) [3680 3747])
+                    ("render" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3763 3767]))                          )
+                        (reparse-symbol indented_block_body) [3752 3791])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3804 3808]))                          
+                        :documentation "
+        n = random.randrange(100,200)
+        while not self.exiting and n > 0:
+            lE = [random.randrange(5,16) for i in xrange(512)]
+            hE = [random.randrange(80,121) for i in xrange(512)]
+            self.pixel_list.emit(lE, hE)
+            time.sleep(0.2)
+            n -= 1
+
+        ")
+                        (reparse-symbol indented_block_body) [3796 5183]))                  
+                :type "class")
+                nil [3509 5183])
+            ("if" code nil nil [5185 5309]))          
+      :file "spike.py"
+      :pointmax 5321
+      :fsize 5329
+      :lastmodtime '(21799 58207 719005 65000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!calib!python!capture!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

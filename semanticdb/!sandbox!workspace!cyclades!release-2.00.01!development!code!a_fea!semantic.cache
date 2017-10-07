@@ -1,0 +1,140 @@
+;; Object a_fea/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_fea/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_fea_dmaoffsetparser.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_fea_dmaoffsetparser.hpp" include nil nil [697 737])
+            ("core_cfu_convert.hpp" include nil nil [739 770])
+            ("core_utl_errorinvalidparameter.hpp" include nil nil [772 817])
+            ("core_log_logmsg.hpp" include nil nil [819 849])
+            ("boost/regex.hpp" include (:system-flag t) nil [851 877])
+            ("fstream" include (:system-flag t) nil [879 897])
+            ("ezono" type
+               (:members 
+                  ( ("core::cfu" using (:type ("core::cfu" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [993 1019])
+                    ("core::utl" using (:type ("core::utl" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [1020 1046])
+                    ("core::log" using (:type ("core::log" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [1047 1073])
+                    ("ccapp" type
+                       (:members 
+                          ( ("fea" type
+                               (:members 
+                                  ( ("unnamed" type
+                                       (:members 
+                                          ( ("ReadFirstLine" function
+                                               (:arguments 
+                                                  ( ("path" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("std::string" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1735 1759])
+                                                    ("cmdline" variable
+                                                       (:reference 1
+                                                        :type ("std::string" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1786 1808]))                                                  
+                                                :type "void")
+                                                (reparse-symbol namespacesubparts) [1715 2393])
+                                            ("ReadAndParseDmaOffset" function
+                                               (:arguments 
+                                                  ( ("path" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("std::string" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2674 2700]))                                                  
+                                                :type ("UInt32" type (:type "class") nil nil))
+                                                (reparse-symbol namespacesubparts) [2644 2817]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [1411 2820])
+                                    ("Imp" type
+                                       (:parent "DmaOffsetParser"
+                                        :members 
+                                          ( ("Imp" function
+                                               (:constructor-flag t
+                                                :arguments 
+                                                  ( ("path_" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("std::string" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [3069 3096]))                                                  
+                                                :type ("Imp" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [3064 3132])
+                                            ("Imp" function
+                                               (:destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [3138 3156])
+                                            ("path" variable
+                                               (:constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [3213 3236]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [2920 3239])
+                                    ("DmaOffsetParser" function
+                                       (:constructor-flag t
+                                        :parent "DmaOffsetParser"
+                                        :arguments 
+                                          ( ("path" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3718 3744]))                                          
+                                        :type ("DmaOffsetParser" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [3684 3802])
+                                    ("DmaOffsetParser" function
+                                       (:constructor-flag t
+                                        :parent "DmaOffsetParser"
+                                        :arguments 
+                                          ( ("rhs" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("DmaOffsetParser" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3994 4022]))                                          
+                                        :type ("DmaOffsetParser" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [3960 4091])
+                                    ("DmaOffsetParser" function
+                                       (:destructor-flag t
+                                        :parent "DmaOffsetParser"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [4203 4242])
+                                    ("DoGetDmaOffset" function
+                                       (:parent "DmaOffsetParser"
+                                        :type ("UInt32" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [4590 4689])
+                                    ("Parse" function
+                                       (:parent "DmaOffsetStringParser"
+                                        :arguments 
+                                          ( ("cmdline" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5036 5065]))                                          
+                                        :type ("UInt32" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [4999 6025]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1094 6474]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1075 6494]))                  
+                :type "namespace")
+                nil [974 6516]))          
+      :file "ccapp_fea_dmaoffsetparser.cpp"
+      :pointmax 6580
+      :fsize 6579
+      :lastmodtime '(21087 63264 758733 338000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_fea_dmaoffsetparser.hpp"
+      :file "ccapp_fea_dmaoffsetparser.hpp"
+      :fsize 2633
+      :lastmodtime '(21087 63264 724733 166000)))
+  :file "!sandbox!workspace!cyclades!release-2.00.01!development!code!a_fea!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

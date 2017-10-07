@@ -1,0 +1,16 @@
+;; Object probe/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "probe/"
+  :tables
+  (list
+    (semanticdb-table "ext_luts_attenuationcurve.hpp"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "ext_luts_attenuationcurve.hpp"
+      :pointmax 30351
+      :fsize 30350
+      :lastmodtime '(21144 41927 673907 486000)
+      :unmatched-syntax '((semantic-list 26978 . 30350) (punctuation 26972 . 26973) (semantic-list 23609 . 26972) (punctuation 23605 . 23606) (semantic-list 20215 . 23605) (punctuation 20211 . 20212) (semantic-list 16849 . 20211) (punctuation 16845 . 16846) (semantic-list 13482 . 16845) (punctuation 13478 . 13479) (semantic-list 10101 . 13478) (punctuation 10097 . 10098) (semantic-list 6735 . 10097) (punctuation 6731 . 6732) (semantic-list 3369 . 6731) (punctuation 3365 . 3366) (semantic-list 3 . 3365))))
+  :file "!sandbox!workspace!cyclades!release-1.13!ext!luts!35CL60!probe!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

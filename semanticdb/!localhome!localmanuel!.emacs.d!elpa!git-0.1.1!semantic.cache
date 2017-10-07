@@ -1,0 +1,16 @@
+;; Object git-0.1.1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "git-0.1.1/"
+  :tables
+  (list
+    (semanticdb-table "git-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags nil
+      :file "git-autoloads.el"
+      :pointmax 251
+      :fsize 347
+      :lastmodtime '(21705 60348 906904 805000)
+      :unmatched-syntax nil))
+  :file "!localhome!localmanuel!.emacs.d!elpa!git-0.1.1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

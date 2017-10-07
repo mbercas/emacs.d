@@ -1,0 +1,58 @@
+;; Object gain_control/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "gain_control/"
+  :tables
+  (list
+    (semanticdb-table "gain.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pylab" include nil nil [20 39])
+            ("numpy" include nil nil [40 52])
+            ("smooth" function
+               (:documentation "smooth the data using a window with requested size.
+    
+    This method is based on the convolution of a scaled window with the signal.
+    The signal is prepared by introducing reflected copies of the signal 
+    (with the window size) in both ends so that transient parts are minimized
+    in the begining and end part of the output signal.
+    
+    input:
+        x: the input signal 
+        window_len: the dimension of the smoothing window; should be an odd integer
+        window: the type of window from 'flat', 'hanning', 'hamming', 'bartlett', 'blackman'
+            flat window will produce a moving average smoothing.
+
+    output:
+        the smoothed signal
+        
+    example:
+
+    t=linspace(-2,2,0.1)
+    x=sin(t)+randn(len(t))*0.1
+    y=smooth(x)
+    
+    see also: 
+    
+    numpy.hanning, numpy.hamming, numpy.bartlett, numpy.blackman, numpy.convolve
+    scipy.signal.lfilter
+ 
+    TODO: the window parameter could be the window itself if an array instead of a string
+    NOTE: length(output) != length(input), to correct this: return y[(window_len/2-1):-(window_len/2)] instead of just y.
+    "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [66 67])
+                    ("window_len" variable nil (reparse-symbol function_parameters) [68 78])
+                    ("window" variable nil (reparse-symbol function_parameters) [82 88]))                  )
+                nil [55 1918])
+            ("smooth2" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [1934 1938])
+                ("a" variable nil (reparse-symbol function_parameters) [1940 1941]))              ) nil [1921 2101])
+            ("if" code nil nil [2105 2768]))          
+      :file "gain.py"
+      :pointmax 2768
+      :fsize 2767
+      :lastmodtime '(21373 64110 532672 35000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!gain_control!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,1481 @@
+;; Object trunk/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "trunk/"
+  :tables
+  (list
+    (semanticdb-table "run_model.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [20 57])
+            ("LookupTableGenerator" include nil nil [59 112])
+            ("Multipole" include nil nil [113 155])
+            ("ProbeDefinitions" include nil nil [156 204])
+            ("SensorDataGenerator" include nil nil [205 257])
+            ("FieldEstimator" include nil nil [258 305])
+            ("Trayectory" include nil nil [306 349])
+            ("CommonFunctions" include nil nil [350 391])
+            ("PlotFunctions" include nil nil [393 453])
+            ("matplotlib.pyplot" include nil nil [455 486])
+            ("lmfit" include nil nil [488 549])
+            ("numpy" include nil nil [551 606])
+            ("numpy.linalg" include nil nil [607 641])
+            ("numpy" include nil nil [643 726])
+            ("copy" include nil nil [728 739])
+            ("SimulationResults" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [815 839])
+                            ("self" variable nil (reparse-symbol indented_block_body) [848 1134]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [790 794])
+                            ("noPoints" variable nil (reparse-symbol function_parameters) [796 804]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [776 1135]))                  
+                :type "class")
+                nil [747 1135])
+            ("if" code nil nil [1134 1135])
+            ("if" code nil nil [1137 6432]))          
+      :file "run_model.py"
+      :pointmax 6434
+      :fsize 6432
+      :lastmodtime '(21714 15862 225279 838000)
+      :unmatched-syntax nil)
+    (semanticdb-table "LookupTableGenerator.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 98])
+            ("numpy" include nil nil [99 165])
+            ("numpy.linalg" include nil nil [166 200])
+            ("ProbeDefinitions" include nil nil [201 246])
+            ("matplotlib.pyplot" include nil nil [248 318])
+            ("struct" include nil nil [321 334])
+            ("LookupTableGenerator" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [410 426])
+                            ("self" variable nil (reparse-symbol indented_block_body) [435 451])
+                            ("self" variable nil (reparse-symbol indented_block_body) [469 513])
+                            ("self" variable nil (reparse-symbol indented_block_body) [523 576])
+                            ("self" variable nil (reparse-symbol indented_block_body) [585 616])
+                            ("self" code nil (reparse-symbol indented_block_body) [626 696])
+                            ("self" code nil (reparse-symbol indented_block_body) [705 775])
+                            ("self" variable nil (reparse-symbol indented_block_body) [785 801])
+                            ("self" variable nil (reparse-symbol indented_block_body) [810 826]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [382 386])
+                            ("pSeq" variable nil (reparse-symbol function_parameters) [388 392])
+                            ("zSeq" variable nil (reparse-symbol function_parameters) [394 398]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [368 827])
+                    ("GetTableLimits" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [853 857]))                          
+                        :documentation "
+        Returns the min and max points for Rho and Z\"
+        ")
+                        (reparse-symbol indented_block_body) [833 1015])
+                    ("ImportSyntheticLuts" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1045 1049])
+                            ("pFileName" variable nil (reparse-symbol function_parameters) [1051 1060])
+                            ("zFileName" variable nil (reparse-symbol function_parameters) [1062 1071]))                          )
+                        (reparse-symbol indented_block_body) [1020 2565])
+                    ("CreateSyntheticLut" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2649 2653])
+                            ("multipole" variable nil (reparse-symbol function_parameters) [2655 2664]))                          
+                        :documentation "
+        Calculates the field table in cylindrical coordinates (z - along the needle, 
+        p - around the needle )
+
+        We are mapping the space of sensor readings from a needle that 
+
+        @param [in]  multipole a class multipole containing the positionf of 
+                     the poles along the needle and the magnetization value
+                     for each of the poles
+        ")
+                        (reparse-symbol indented_block_body) [2625 3442])
+                    ("Interpolate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3464 3468])
+                            ("B" variable nil (reparse-symbol function_parameters) [3470 3471])
+                            ("pIdx" variable nil (reparse-symbol function_parameters) [3473 3477])
+                            ("zIdx" variable nil (reparse-symbol function_parameters) [3479 3483])
+                            ("p" variable nil (reparse-symbol function_parameters) [3485 3486])
+                            ("z" variable nil (reparse-symbol function_parameters) [3488 3489]))                          
+                        :documentation "
+        Apply bilinear interpolation
+        
+        @param B     [in] the field matrix on which to interpolate
+        @param pIndx [in] the closer index in the matrix in the p axis
+        @param zIdx  [in] the closer index in the matrix in the z axis
+        @param p     [in] the value of p
+        @param z     [in] the value of z
+
+        @returns the interpolated field across the 4 closest points in the
+                 matrix
+        ")
+                        (reparse-symbol indented_block_body) [3447 4519])
+                    ("GetPIndex" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4547 4551])
+                            ("values" variable nil (reparse-symbol function_parameters) [4553 4559]))                          
+                        :documentation "
+        Finds the index of the closest lower element in the sequence.
+        The sequence is an ordered list of floats
+        ")
+                        (reparse-symbol indented_block_body) [4532 4872])
+                    ("GetZIndex" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4893 4897])
+                            ("values" variable nil (reparse-symbol function_parameters) [4899 4905]))                          
+                        :documentation "
+        Finds the index of the closest lower element in the sequence.
+        The sequence is an ordered list of floats
+        ")
+                        (reparse-symbol indented_block_body) [4878 5218])
+                    ("Lookup" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5244 5248])
+                            ("p" variable nil (reparse-symbol function_parameters) [5250 5251])
+                            ("z" variable nil (reparse-symbol function_parameters) [5253 5254]))                          
+                        :documentation "
+        Returns the value of field for a tip in p,z (cylindrical coordinates); input 
+        assumes that the data is in the needle's coordinate system.
+
+        @param [in] p The estimated position in the p (it can be an array of positions)
+        @param [in] z The estimated postion in the Z (it can be an array of positions)
+
+        @returns a duple containing the arrays of fields in P and Z. (interpolates
+                 between the 4 nearest neighbors.
+        ")
+                        (reparse-symbol indented_block_body) [5232 6724])
+                    ("WriteFiles" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6753 6757]))                          
+                        :documentation "
+        This function will dump the LUTs into two files, all data is float32. 
+        The format of the file is
+        - first value of the pIndex array
+        - last value of the pIndex array
+        - step for the pIndex array
+        - length of the pIndex array
+        - first value of the zIndex array
+        - last value of the zIndex array
+        - step for the zIndex array
+        - length of the zIndex array
+        - the table
+        ")
+                        (reparse-symbol indented_block_body) [6737 8080])
+                    ("PlotLutField" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8103 8107])
+                            ("logPlot" variable nil (reparse-symbol function_parameters) [8109 8116]))                          )
+                        (reparse-symbol indented_block_body) [8085 9973]))                  
+                :type "class")
+                nil [336 9973]))          
+      :file "LookupTableGenerator.py"
+      :pointmax 9997
+      :fsize 9996
+      :lastmodtime '(21714 15297 354259 222000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Multipole.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 92])
+            ("numpy.linalg" include nil nil [93 122])
+            ("DEFAULT_DISTANCE" variable nil nil [124 145])
+            ("Multipole" type
+               (:documentation "
+    A class for defining an arbitrary multipole; the needle is modeled 
+    along the z axis, the tip is at (0,0) and the poles are modeled
+    as displaced from the tip
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [396 441])
+                            ("self" variable nil (reparse-symbol indented_block_body) [450 494])
+                            ("self" variable nil (reparse-symbol indented_block_body) [503 548])
+                            ("self" variable nil (reparse-symbol indented_block_body) [558 582])
+                            ("self" variable nil (reparse-symbol indented_block_body) [591 622])
+                            ("self" variable nil (reparse-symbol indented_block_body) [631 662])
+                            ("self" variable nil (reparse-symbol indented_block_body) [673 694])
+                            ("self" variable nil (reparse-symbol indented_block_body) [703 724])
+                            ("self" variable nil (reparse-symbol indented_block_body) [733 754])
+                            ("self" variable nil (reparse-symbol indented_block_body) [763 784]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [368 372])
+                            ("mag" variable nil (reparse-symbol function_parameters) [374 377]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [354 785])
+                    ("GetLength" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [805 809]))                          
+                        :documentation "
+        Returns the needle length
+        ")
+                        (reparse-symbol indented_block_body) [790 903])
+                    ("GetEnd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [920 924]))                          
+                        :documentation "
+        Returns the coordinates for the end of the needle
+        ")
+                        (reparse-symbol indented_block_body) [908 1068])
+                    ("GetSensorWithHighestField" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1108 1112])
+                            ("sensorData" variable nil (reparse-symbol function_parameters) [1114 1124]))                          
+                        :documentation "
+        Returns the index of the sensor with the highest field reading.
+        ")
+                        (reparse-symbol indented_block_body) [1077 1704])
+                    ("UnaryVectorInMaxSensor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1738 1742])
+                            ("sensors" variable nil (reparse-symbol function_parameters) [1744 1751])
+                            ("maxIndex" variable nil (reparse-symbol function_parameters) [1753 1761]))                          
+                        :documentation "
+        Retunrn the direction vector from the center of the probe to the sensor
+        with the highest reading
+        ")
+                        (reparse-symbol indented_block_body) [1710 2014])
+                    ("GetInitialRandomNeedleDirection" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2066 2070])
+                            ("sensors" variable nil (reparse-symbol function_parameters) [2072 2079])
+                            ("sensorData" variable nil (reparse-symbol function_parameters) [2081 2091]))                          
+                        :documentation "
+        Given the direction vector creates returns the postion of 
+        the tip and initial angles for a random needle.
+
+        @param snesors    [in] the positions for all the sensors
+        @param sensorData [in] the values of field for all the sensors
+        @returns          [out] tupple containing tip and direction vector
+        ")
+                        (reparse-symbol indented_block_body) [2029 2731])
+                    ("GetInitialRandomNeedleAngles" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2770 2774])
+                            ("sensors" variable nil (reparse-symbol function_parameters) [2776 2783])
+                            ("sensorData" variable nil (reparse-symbol function_parameters) [2785 2795]))                          
+                        :documentation "
+        Given the direction vector creates returns the postion of 
+        the tip and initial angles for a random needle.
+
+        @param snesors    [in] the positions for all the sensors
+        @param sensorData [in] the values of field for all the sensors
+        @returns          [out] tupple containing tip, phi, theta
+        ")
+                        (reparse-symbol indented_block_body) [2736 3659])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3683 3687]))                          )
+                        (reparse-symbol indented_block_body) [3670 3970]))                  
+                :type "class")
+                nil [147 3970]))          
+      :file "Multipole.py"
+      :pointmax 3971
+      :fsize 3970
+      :lastmodtime '(21714 14762 501398 378000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ProbeDefinitions.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [21 44])
+            ("validProbeNames" variable nil nil [46 73])
+            ("SensorCoordinates" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [134 153])
+                            ("self" variable nil (reparse-symbol indented_block_body) [162 181])
+                            ("self" variable nil (reparse-symbol indented_block_body) [190 209]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [118 122]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [104 210])
+                    ("NumberOfSensors" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [236 240]))                          )
+                        (reparse-symbol indented_block_body) [216 275]))                  
+                :type "class")
+                nil [75 275])
+            ("sPL3_12" variable nil nil [276 305])
+            ("sPL3_12" variable nil nil [306 980])
+            ("sPL3_12" variable nil nil [982 1641])
+            ("sPL3_12" variable nil nil [1643 2301])
+            ("sensorPositions" variable nil nil [2307 2327])
+            ("sensorPositions" variable nil nil [2328 2362])
+            ("for" code nil nil [2366 2434]))          
+      :file "ProbeDefinitions.py"
+      :pointmax 2434
+      :fsize 2433
+      :lastmodtime '(21613 55485 961198 427000)
+      :unmatched-syntax nil)
+    (semanticdb-table "SensorDataGenerator.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 95])
+            ("numpy.linalg" include nil nil [96 126])
+            ("Multipole" include nil nil [127 162])
+            ("FieldData" include nil nil [163 198])
+            ("numpy.random" include nil nil [200 232])
+            ("SensorDataGenerator" type
+               (:documentation "
+    An emulator to generate the readings for the sensors.
+    "
+                :superclasses ("FieldData")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("FieldData" code nil (reparse-symbol indented_block_body) [423 474])
+                            ("self" variable nil (reparse-symbol indented_block_body) [484 510])
+                            ("self" variable nil (reparse-symbol indented_block_body) [519 547])
+                            ("self" variable nil (reparse-symbol indented_block_body) [556 584])
+                            ("self" variable nil (reparse-symbol indented_block_body) [593 621])
+                            ("self" variable nil (reparse-symbol indented_block_body) [630 654]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [386 390])
+                            ("multipole" variable nil (reparse-symbol function_parameters) [392 401])
+                            ("sensors" variable nil (reparse-symbol function_parameters) [403 410]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [372 655])
+                    ("AddNoise" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [674 678])
+                            ("numberOfBits" variable nil (reparse-symbol function_parameters) [680 692]))                          )
+                        (reparse-symbol indented_block_body) [660 913])
+                    ("FieldCartesian" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [939 943])
+                            ("tip" variable nil (reparse-symbol function_parameters) [945 948])
+                            ("direction" variable nil (reparse-symbol function_parameters) [950 959]))                          
+                        :documentation "
+        Calculates the field for the multipole which with the tip and direction specified
+        at the (0,0,0) point
+
+        @param tip       [in] an array of postions of the tip in Cartesian (x,y,z) coordinates.
+        @param direction [in] an array of the direction vectors of the needle in Cartesian
+                              coordinates.
+
+        ")
+                        (reparse-symbol indented_block_body) [919 2749])
+                    ("OptimistFunctionalTestData" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2794 2798])
+                            ("tip" variable nil (reparse-symbol function_parameters) [2800 2803])
+                            ("phi" variable nil (reparse-symbol function_parameters) [2805 2808])
+                            ("theta" variable nil (reparse-symbol function_parameters) [2810 2815]))                          
+                        :documentation "
+        Generates a file that can be imported by the functional tests 
+        in the Optimist C++ implementation
+        ")
+                        (reparse-symbol indented_block_body) [2762 3354]))                  
+                :type "class")
+                nil [254 3354]))          
+      :file "SensorDataGenerator.py"
+      :pointmax 3354
+      :fsize 3353
+      :lastmodtime '(21676 64745 588914 456000)
+      :unmatched-syntax nil)
+    (semanticdb-table "FieldEstimator.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("scipy.optimize" include nil nil [1 35])
+            ("numpy" include nil nil [36 118])
+            ("numpy.linalg" include nil nil [119 150])
+            ("Quaternion" include nil nil [152 189])
+            ("FieldEstimator" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        The field estimator class.
+
+        @param sensors [in] the sensor positions in the coordinate system
+                            of the probe. This structure has independent
+                            coorsdintates for the sX, sY, sY sensors in
+                            each chip.
+        @param lut     [in] field lookup table for the p&z components in 
+                            cylindrical coordinates and in the needle 
+                            coordinate system. p is perpendicular to the
+                            needle,  z goes along the axis of
+                            the needle and the tip is at the z=0 point.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [262 923])
+                            ("self" variable nil (reparse-symbol indented_block_body) [933 955])
+                            ("self" variable nil (reparse-symbol indented_block_body) [964 982]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [232 236])
+                            ("sensors" variable nil (reparse-symbol function_parameters) [238 245])
+                            ("lut" variable nil (reparse-symbol function_parameters) [247 250]))                          
+                        :documentation "
+        The field estimator class.
+
+        @param sensors [in] the sensor positions in the coordinate system
+                            of the probe. This structure has independent
+                            coorsdintates for the sX, sY, sY sensors in
+                            each chip.
+        @param lut     [in] field lookup table for the p&z components in 
+                            cylindrical coordinates and in the needle 
+                            coordinate system. p is perpendicular to the
+                            needle,  z goes along the axis of
+                            the needle and the tip is at the z=0 point.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [218 983])
+                    ("TranslateToNewBase" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1012 1016])
+                            ("data" variable nil (reparse-symbol function_parameters) [1018 1022])
+                            ("translation" variable nil (reparse-symbol function_parameters) [1024 1035])
+                            ("rot" variable nil (reparse-symbol function_parameters) [1037 1040]))                          
+                        :documentation "
+        Transforms the array of (x,y,z) positions by applying a translation
+        and a rotation passed as arguments.
+
+        @param rot [in] the rotation definition, it can be either a rotatation
+                        matrix or an arc-quaterion
+
+        Returns an array of positions in the new coordinates base
+        ")
+                        (reparse-symbol indented_block_body) [988 1566])
+                    ("RotationMatrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1591 1595])
+                            ("phi" variable nil (reparse-symbol function_parameters) [1597 1600])
+                            ("theta" variable nil (reparse-symbol function_parameters) [1602 1607]))                          )
+                        (reparse-symbol indented_block_body) [1571 2102])
+                    ("GetCylindricalFieldInOrigin" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2141 2145])
+                            ("sXn" variable nil (reparse-symbol function_parameters) [2147 2150])
+                            ("sYn" variable nil (reparse-symbol function_parameters) [2152 2155])
+                            ("sZn" variable nil (reparse-symbol function_parameters) [2157 2160])
+                            ("valid" variable nil (reparse-symbol function_parameters) [2162 2167]))                          
+                        :documentation "
+        @param valid [out] the sensors that are estiamted within table limits
+        ")
+                        (reparse-symbol indented_block_body) [2108 4357])
+                    ("GetFieldAngles" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4382 4386])
+                            ("tip" variable nil (reparse-symbol function_parameters) [4388 4391])
+                            ("phi" variable nil (reparse-symbol function_parameters) [4393 4396])
+                            ("theta" variable nil (reparse-symbol function_parameters) [4398 4403])
+                            ("valid" variable nil (reparse-symbol function_parameters) [4405 4410]))                          
+                        :documentation "
+        Function to compare the measured B-field values to that 
+        estimated by LUT at x,y,z
+ 
+        Guesses from the nonlinear optimization are:
+ 
+ 	@param tip   [in] Translation of the tip positions in the coordinate 
+                          frame of the probe in cartesian coordinates (x,y,z)
+ 	@param phi   [in] rotation of the probe around 'z' axis (radians)
+        @param theta [in] rotation of the probe around 'y' axis (radians)
+
+        return field
+        ")
+                        (reparse-symbol indented_block_body) [4362 5833])
+                    ("GetFieldQuaternion" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5864 5868])
+                            ("tip" variable nil (reparse-symbol function_parameters) [5870 5873])
+                            ("w" variable nil (reparse-symbol function_parameters) [5875 5876])
+                            ("x" variable nil (reparse-symbol function_parameters) [5878 5879])
+                            ("y" variable nil (reparse-symbol function_parameters) [5881 5882])
+                            ("z" variable nil (reparse-symbol function_parameters) [5884 5885])
+                            ("valid" variable nil (reparse-symbol function_parameters) [5887 5892]))                          
+                        :documentation "
+        Function to compare the measured B-field values to that 
+        estimated by LUT at x,y,z
+ 
+        Guesses from the nonlinear optimization are:
+ 
+ 	@param tip   [in] Translation of the tip positions in the coordinate 
+                          frame of the probe in cartesian coordinates (x,y,z)
+ 	@param phi   [in] rotation of the probe around 'x' axis (radians)
+        @param theta [in] rotation of the probe around 'y' axis (radians)
+        @param w     [in] real part of the quaternion
+        @param x     [in] i component of the imaginary part of the quaternion
+        @param y     [in] j component of the imaginary part of the quaternion
+        @param z     [in] k component of the imaginary part of the quaternion
+
+        return field
+        ")
+                        (reparse-symbol indented_block_body) [5840 7816])
+                    ("ResidualFunction" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7843 7847])
+                            ("params" variable nil (reparse-symbol function_parameters) [7849 7855])
+                            ("sX" variable nil (reparse-symbol function_parameters) [7857 7859])
+                            ("sY" variable nil (reparse-symbol function_parameters) [7861 7863])
+                            ("sZ" variable nil (reparse-symbol function_parameters) [7865 7867])
+                            ("valid" variable nil (reparse-symbol function_parameters) [7869 7874]))                          
+                        :documentation "
+        @param params [inout] on input contain the initial condition, on output
+                              contains the estimation.
+        
+                              params can be two sets of params
+                              1.- tip, phi, theta
+                              2.- tip, directionVector
+        
+                              Selects the model depending on the parametrization
+        
+        @param sX,sY,sZ [in]  the values of gradient
+        @param valid    [in]  the array of valid sensors
+        
+        @return the residual of the input versus the estimation.
+
+        ")
+                        (reparse-symbol indented_block_body) [7821 10166]))                  
+                :type "class")
+                nil [191 10166]))          
+      :file "FieldEstimator.py"
+      :pointmax 10166
+      :fsize 10165
+      :lastmodtime '(21853 44704 229678 75000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Quaternion.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 94])
+            ("numpy.linalg" include nil nil [95 124])
+            ("Quaternion" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [208 218])
+                            ("self" variable nil (reparse-symbol indented_block_body) [227 237])
+                            ("self" variable nil (reparse-symbol indented_block_body) [246 256])
+                            ("self" variable nil (reparse-symbol indented_block_body) [265 275]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [163 167])
+                            ("w" variable nil (reparse-symbol function_parameters) [169 170])
+                            ("x" variable nil (reparse-symbol function_parameters) [174 175])
+                            ("y" variable nil (reparse-symbol function_parameters) [179 180])
+                            ("z" variable nil (reparse-symbol function_parameters) [184 185]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [149 276])
+                    ("__mul__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [294 298])
+                            ("other" variable nil (reparse-symbol function_parameters) [300 305]))                          
+                        :documentation "
+        Non conmutative quaternion multiplication, returns a quaternion
+        with the result of the quaternion multiplication.
+        ")
+                        (reparse-symbol indented_block_body) [281 1025])
+                    ("__add__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1045 1049])
+                            ("other" variable nil (reparse-symbol function_parameters) [1051 1056]))                          
+                        :documentation "
+        Quaternion addition
+        ")
+                        (reparse-symbol indented_block_body) [1032 1294])
+                    ("__truediv__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1316 1320])
+                            ("scalar" variable nil (reparse-symbol function_parameters) [1322 1328]))                          
+                        :documentation "
+        Division operation
+
+        @param a scalar value
+        ")
+                        (reparse-symbol indented_block_body) [1299 1600])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1628 1632]))                          )
+                        (reparse-symbol indented_block_body) [1615 1728])
+                    ("Conjugate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1748 1752]))                          
+                        :documentation "
+        Conjugates the current quaternion
+        ")
+                        (reparse-symbol indented_block_body) [1733 1897])
+                    ("Inverse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1916 1920]))                          
+                        :documentation "
+        Inverses the current quaternion
+        ")
+                        (reparse-symbol indented_block_body) [1903 2038])
+                    ("Normalize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2058 2062]))                          
+                        :documentation "
+        Normalizes the current quaternion.
+        ")
+                        (reparse-symbol indented_block_body) [2043 2251])
+                    ("GetConjugate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2275 2279]))                          )
+                        (reparse-symbol indented_block_body) [2257 2347])
+                    ("GetInverse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2368 2372]))                          
+                        :documentation "
+        Calculates the inverse of the quaternion
+        ")
+                        (reparse-symbol indented_block_body) [2352 2510])
+                    ("GetNorm" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2528 2532]))                          
+                        :documentation "
+        Returns the norm of the quaternion
+        ")
+                        (reparse-symbol indented_block_body) [2515 2672])
+                    ("RotationMatrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2706 2710]))                          
+                        :documentation "
+        Returns a 4x4 rotation matrix associated with the quaternion
+        ")
+                        (reparse-symbol indented_block_body) [2686 3375])
+                    ("ConvertToEulerAngles" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3406 3410]))                          
+                        :documentation "
+        Converts the quaternion to the Euler angles
+
+        - roll   ( rotation over X-axis - theta )
+        - pitch  ( rotation over Y-axis - phi   )
+        - yaw    ( rotation over Z-axis - alpha )
+
+        angle values are in radians
+        
+        ")
+                        (reparse-symbol indented_block_body) [3380 4412])
+                    ("RotateVector" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4435 4439])
+                            ("v" variable nil (reparse-symbol function_parameters) [4441 4442]))                          )
+                        (reparse-symbol indented_block_body) [4417 4598])
+                    ("InverseRotateVector" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4628 4632])
+                            ("v" variable nil (reparse-symbol function_parameters) [4634 4635]))                          )
+                        (reparse-symbol indented_block_body) [4603 4791]))                  
+                :type "class")
+                nil [126 4791])
+            ("LocalRotation" function
+               (:documentation "
+    Creates a quatuernion with the local rotation.
+
+    x,y,z unitary vector that specifies the axis around which 
+          to perform the rotation.
+    angle is the amount of rotation (in radians)
+
+    Note that Y's signed is changed because the axis is not
+    following the standard convention
+
+    "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [4820 4821])
+                    ("y" variable nil (reparse-symbol function_parameters) [4823 4824])
+                    ("z" variable nil (reparse-symbol function_parameters) [4826 4827])
+                    ("angle" variable nil (reparse-symbol function_parameters) [4829 4834]))                  )
+                nil [4801 5330])
+            ("GetRotationTo" function
+               (:documentation "
+    Returns the arc quatertion to rotate the orig vector to the destination
+    vector.
+
+    if orig and dest are parallel but with opposite signs we will rotate 180
+    degrees around the fallback axis
+
+    https://bitbucket.org/sinbad/ogre/src/9db75e3ba05c/OgreMain/include/OgreVector3.h#cl-651
+
+    "
+                :arguments 
+                  ( ("orig" variable nil (reparse-symbol function_parameters) [5360 5364])
+                    ("dest" variable nil (reparse-symbol function_parameters) [5366 5370])
+                    ("fallbackAxis" variable nil (reparse-symbol function_parameters) [5372 5384]))                  )
+                nil [5341 6401])
+            ("GetQuaternionArray" function
+               (:documentation "
+    Rotates the sensors positions to simulate a probe rotation
+
+    @param x,y,z [in] unitary vector that specifies the axis around which 
+                      to perform the rotation.
+    @param angle [in] is the amount of rotation (in radians)
+
+    @param size  [in] is the size of the vector
+
+    "
+                :arguments 
+                  ( ("axis" variable nil (reparse-symbol function_parameters) [6429 6433])
+                    ("angle" variable nil (reparse-symbol function_parameters) [6435 6440])
+                    ("size" variable nil (reparse-symbol function_parameters) [6442 6446])
+                    ("isRotationTurnAndBack" variable nil (reparse-symbol function_parameters) [6448 6469]))                  )
+                nil [6406 7195]))          
+      :file "Quaternion.py"
+      :pointmax 7192
+      :fsize 7194
+      :lastmodtime '(21853 60067 935729 873000)
+      :unmatched-syntax nil)
+    (semanticdb-table "rotations.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pylab" include nil nil [21 40])
+            ("Quaternion" include nil nil [42 66])
+            ("RotationMatrix" function (:arguments 
+              ( ("phi" variable nil (reparse-symbol function_parameters) [89 92])
+                ("theta" variable nil (reparse-symbol function_parameters) [94 99]))              ) nil [69 833])
+            ("if" code nil nil [834 1626]))          
+      :file "rotations.py"
+      :pointmax 1626
+      :fsize 1625
+      :lastmodtime '(21616 23832 404708 179000)
+      :unmatched-syntax nil)
+    (semanticdb-table "needledefinitions.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pylab" include nil nil [1 20])
+            ("Needle" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [72 91])
+                            ("self" variable nil (reparse-symbol indented_block_body) [100 114])
+                            ("self" variable nil (reparse-symbol indented_block_body) [123 135])
+                            ("self" variable nil (reparse-symbol indented_block_body) [144 160])
+                            ("self" code nil (reparse-symbol indented_block_body) [170 196]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [56 60]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [42 197])
+                    ("CalculateEnd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [220 224]))                          )
+                        (reparse-symbol indented_block_body) [202 686])
+                    ("test" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [700 704]))                          )
+                        (reparse-symbol indented_block_body) [691 1283]))                  
+                :type "class")
+                nil [24 1283])
+            ("print" code nil nil [1292 1302])
+            ("if" code nil nil [1507 1966]))          
+      :file "needledefinitions.py"
+      :pointmax 1971
+      :fsize 1970
+      :lastmodtime '(21630 4724 678805 857000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Optimizer.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("lmfit" include nil nil [1 39])
+            ("Optimizer" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [95 112]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [78 82]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [64 113])
+                    ("FindResults" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [135 139])
+                            ("params" variable nil (reparse-symbol function_parameters) [141 147])
+                            ("results" variable nil (reparse-symbol function_parameters) [149 156]))                          
+                        :documentation "
+        @params params  [inout] as input it contains the initial position entry
+                                to the optimizer, as an output it contains the
+                                result of the optimization.
+        @params results [out]   an object storing the optimization results.
+        @return needleFound     a boolean indicating if the optimization was
+                                was sucesful 
+        ")
+                        (reparse-symbol indented_block_body) [118 623]))                  
+                :type "class")
+                nil [42 623]))          
+      :file "Optimizer.py"
+      :pointmax 623
+      :fsize 622
+      :lastmodtime '(21637 25663 955968 922000)
+      :unmatched-syntax '(($EOI 602 . 602)))
+    (semanticdb-table "allanlut.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 71])
+            ("pylab" include nil nil [72 134])
+            ("LookupTableGenerator" include nil nil [136 189])
+            ("LoadFiles" function nil nil [192 1263])
+            ("if" code nil nil [1264 1527]))          
+      :file "allanlut.py"
+      :pointmax 1528
+      :fsize 1527
+      :lastmodtime '(21648 2946 213566 405000)
+      :unmatched-syntax nil)
+    (semanticdb-table "run_realdata.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [21 58])
+            ("LookupTableGenerator" include nil nil [60 113])
+            ("Multipole" include nil nil [114 156])
+            ("ProbeDefinitions" include nil nil [157 205])
+            ("SensorDataGenerator" include nil nil [206 258])
+            ("FieldEstimator" include nil nil [259 306])
+            ("Gradient" include nil nil [333 348])
+            ("Supervisor" include nil nil [349 392])
+            ("matplotlib.pyplot" include nil nil [477 526])
+            ("lmfit" include nil nil [527 592])
+            ("numpy" include nil nil [593 660])
+            ("copy" include nil nil [662 673])
+            ("firstRotateY" variable nil nil [675 694])
+            ("SimulationResults" type
+               (:documentation "
+    Holder for the results
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [772 796])
+                            ("self" variable nil (reparse-symbol indented_block_body) [805 1084]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [791 795])
+                            ("noPoints" variable nil (reparse-symbol function_parameters) [797 805]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [777 1129])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1146 1150]))                          )
+                        (reparse-symbol indented_block_body) [1134 1326]))                  
+                :type "class")
+                nil [697 1326])
+            ("PlotResults" function
+               (:documentation "
+    A function to plot the simulation results
+    "
+                :arguments 
+                  ( ("res" variable nil (reparse-symbol function_parameters) [1345 1348])
+                    ("mp" variable nil (reparse-symbol function_parameters) [1350 1352]))                  )
+                nil [1328 2624])
+            ("if" code nil nil [2626 8201]))          
+      :file "run_realdata.py"
+      :pointmax 8201
+      :fsize 8200
+      :lastmodtime '(21711 33877 664636 958000)
+      :unmatched-syntax nil)
+    (semanticdb-table "FieldEstimatorTest.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pylab" include nil nil [20 39])
+            ("FieldEstimator" include nil nil [41 82])
+            ("LookupTableGenerator" include nil nil [83 136])
+            ("SensorDataGenerator" include nil nil [137 188])
+            ("Multipole" include nil nil [189 220])
+            ("ProbeDefinitions" include nil nil [221 265])
+            ("Trayectory" include nil nil [266 299])
+            ("copy" include nil nil [300 311])
+            ("if" code nil nil [314 2541]))          
+      :file "FieldEstimatorTest.py"
+      :pointmax 2548
+      :fsize 2547
+      :lastmodtime '(21714 8843 444675 129000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Trayectory.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("Quaternion" include nil nil [1 49])
+            ("numpy" include nil nil [51 107])
+            ("numpy.linalg" include nil nil [108 137])
+            ("Trayectory" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [199 217])
+                            ("self" variable nil (reparse-symbol indented_block_body) [227 248])
+                            ("self" variable nil (reparse-symbol indented_block_body) [257 278])
+                            ("self" variable nil (reparse-symbol indented_block_body) [287 308])
+                            ("self" variable nil (reparse-symbol indented_block_body) [317 338])
+                            ("self" variable nil (reparse-symbol indented_block_body) [356 377]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [178 182]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [164 378])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [397 401]))                          )
+                        (reparse-symbol indented_block_body) [384 428])
+                    ("QuaternionCoeffs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [459 463])
+                            ("phi" variable nil (reparse-symbol function_parameters) [465 468])
+                            ("theta" variable nil (reparse-symbol function_parameters) [470 475]))                          )
+                        (reparse-symbol indented_block_body) [437 698])
+                    ("GetTrayectory" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [773 777])
+                            ("sz" variable nil (reparse-symbol function_parameters) [779 781]))                          )
+                        (reparse-symbol indented_block_body) [754 1834]))                  
+                :type "class")
+                nil [141 1834]))          
+      :file "Trayectory.py"
+      :pointmax 1834
+      :fsize 2193
+      :lastmodtime '(21853 43855 706686 520000)
+      :unmatched-syntax nil)
+    (semanticdb-table "run_model_quat.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("LookupTableGenerator" include nil nil [23 76])
+            ("Multipole" include nil nil [77 119])
+            ("ProbeDefinitions" include nil nil [120 168])
+            ("SensorDataGenerator" include nil nil [169 221])
+            ("FieldEstimator" include nil nil [222 269])
+            ("Trayectory" include nil nil [270 313])
+            ("Quaternion" include nil nil [314 357])
+            ("CommonFunctions" include nil nil [358 399])
+            ("matplotlib.pyplot" include nil nil [401 432])
+            ("lmfit" include nil nil [434 495])
+            ("numpy" include nil nil [497 585])
+            ("numpy.linalg" include nil nil [586 620])
+            ("numpy" include nil nil [622 705])
+            ("copy" include nil nil [707 718])
+            ("firstRotateY" variable nil nil [720 739])
+            ("SimulationResults" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [809 833])
+                            ("self" variable nil (reparse-symbol indented_block_body) [842 1091]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [784 788])
+                            ("noPoints" variable nil (reparse-symbol function_parameters) [790 798]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [770 1092]))                  
+                :type "class")
+                nil [741 1092])
+            ("PlotResults" function (:arguments 
+              ( ("res" variable nil (reparse-symbol function_parameters) [1110 1113])
+                ("expected" variable nil (reparse-symbol function_parameters) [1115 1123])
+                ("mp" variable nil (reparse-symbol function_parameters) [1125 1127]))              ) nil [1093 2561])
+            ("if" code nil nil [2563 7763]))          
+      :file "run_model_quat.py"
+      :pointmax 7764
+      :fsize 7763
+      :lastmodtime '(21853 43573 943679 284000)
+      :unmatched-syntax nil)
+    (semanticdb-table "TrigMath.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 40])
+            ("FromUnaryVectorToPhiTheta" function
+               (:documentation "
+    Return the angles for a unary vector in radians
+
+    phi   is the rotation over x Axis
+    theta is the rotation over y Axis
+    "
+                :arguments 
+                  ( ("u" variable nil (reparse-symbol function_parameters) [73 74]))                  )
+                nil [42 368]))          
+      :file "TrigMath.py"
+      :pointmax 370
+      :fsize 369
+      :lastmodtime '(21613 55485 958198 405000)
+      :unmatched-syntax nil)
+    (semanticdb-table "PlotFunctions.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("matplotlib.pyplot" include nil nil [1 77])
+            ("numpy" include nil nil [78 122])
+            ("CommonFunctions" include nil nil [124 160])
+            ("PlotInputField" function (:arguments 
+              ( ("mx" variable nil (reparse-symbol function_parameters) [183 185])
+                ("my" variable nil (reparse-symbol function_parameters) [187 189])
+                ("mz" variable nil (reparse-symbol function_parameters) [191 193]))              ) nil [163 701])
+            ("PlotResults" function (:arguments 
+              ( ("res" variable nil (reparse-symbol function_parameters) [719 722])
+                ("expected" variable nil (reparse-symbol function_parameters) [724 732]))              ) nil [702 2602]))          
+      :file "PlotFunctions.py"
+      :pointmax 2602
+      :fsize 2601
+      :lastmodtime '(21714 16009 587067 845000)
+      :unmatched-syntax nil)
+    (semanticdb-table "CommonFunctions.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 29])
+            ("Field" function
+               (:documentation "
+    Calculates field for all sensors
+
+    @param [in] mx the field in component X for all sensors
+    @param [in] my the field in component Y for all sensors
+    @param [in] mz the field in component Z for all sensors
+    
+    @return the field value for all sensors
+    "
+                :arguments 
+                  ( ("mx" variable nil (reparse-symbol function_parameters) [43 45])
+                    ("my" variable nil (reparse-symbol function_parameters) [47 49])
+                    ("mz" variable nil (reparse-symbol function_parameters) [51 53]))                  )
+                nil [32 380])
+            ("Gradient" function
+               (:documentation "
+    Calculates the so-called gradient for the valid sensors
+
+    @param [in] mx the field in component X for all sensors
+    @param [in] my the field in component Y for all sensors
+    @param [in] mz the field in component Z for all sensors
+    @param [inout] valid a vector indicating which sensors have valid readings. Invalid
+                readings are set to zero.
+    @param [in] removeHighestField is set to True, then the gradient is re-calculated 
+                ignoring the sensor with the highest gradient.
+    "
+                :arguments 
+                  ( ("mx" variable nil (reparse-symbol function_parameters) [395 397])
+                    ("my" variable nil (reparse-symbol function_parameters) [399 401])
+                    ("mz" variable nil (reparse-symbol function_parameters) [403 405])
+                    ("valid" variable nil (reparse-symbol function_parameters) [407 412])
+                    ("removeHighestReading" variable nil (reparse-symbol function_parameters) [414 434]))                  )
+                nil [381 1363]))          
+      :file "CommonFunctions.py"
+      :pointmax 1368
+      :fsize 1367
+      :lastmodtime '(21708 59934 94525 240000)
+      :unmatched-syntax nil)
+    (semanticdb-table "run_realdata_quat.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("LookupTableGenerator" include nil nil [23 76])
+            ("Multipole" include nil nil [77 119])
+            ("ProbeDefinitions" include nil nil [120 168])
+            ("SensorDataGenerator" include nil nil [169 221])
+            ("FieldEstimator" include nil nil [222 269])
+            ("Quaternion" include nil nil [270 313])
+            ("CommonFunctions" include nil nil [314 355])
+            ("matplotlib.pyplot" include nil nil [357 388])
+            ("lmfit" include nil nil [390 451])
+            ("numpy" include nil nil [453 541])
+            ("numpy.linalg" include nil nil [542 576])
+            ("numpy" include nil nil [578 661])
+            ("copy" include nil nil [663 674])
+            ("firstRotateY" variable nil nil [676 695])
+            ("SimulationResults" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [765 789])
+                            ("self" variable nil (reparse-symbol indented_block_body) [798 1042]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [740 744])
+                            ("noPoints" variable nil (reparse-symbol function_parameters) [746 754]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [726 1043]))                  
+                :type "class")
+                nil [697 1043])
+            ("PlotResults" function (:arguments 
+              ( ("res" variable nil (reparse-symbol function_parameters) [1061 1064])
+                ("mp" variable nil (reparse-symbol function_parameters) [1066 1068]))              ) nil [1044 1922])
+            ("if" code nil nil [1924 5854]))          
+      :file "run_realdata_quat.py"
+      :pointmax 5998
+      :fsize 5855
+      :lastmodtime '(21670 31598 976397 569000)
+      :unmatched-syntax nil)
+    (semanticdb-table "SensorData.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 79])
+            ("CommonFunctions" include nil nil [81 117])
+            ("FieldData" type
+               (:documentation "
+    A class to hold the sensor data with methods to read the data 
+    from a file.
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [280 290])
+                            ("self" variable nil (reparse-symbol indented_block_body) [300 322])
+                            ("self" variable nil (reparse-symbol indented_block_body) [331 353])
+                            ("self" variable nil (reparse-symbol indented_block_body) [362 384])
+                            ("self" variable nil (reparse-symbol indented_block_body) [394 418]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [255 259])
+                            ("N" variable nil (reparse-symbol function_parameters) [261 262]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [241 419])
+                    ("ReadFromFile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [442 446])
+                            ("fn" variable nil (reparse-symbol function_parameters) [448 450]))                          
+                        :documentation "
+        Loads the field data from a a file (as generated from the system)
+        ")
+                        (reparse-symbol indented_block_body) [424 740])
+                    ("SetAllSensorsValid" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [770 774]))                          )
+                        (reparse-symbol indented_block_body) [746 840])
+                    ("SetValidBasedOnThreshold" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [879 883])
+                            ("threshold" variable nil (reparse-symbol function_parameters) [885 894])
+                            ("usegrad" variable nil (reparse-symbol function_parameters) [901 908]))                          
+                        :documentation "
+        Removes the sensor with the highest reading and all
+        of those with a field value above the threshold
+
+        @param theshold [in] the value of field above which sensors
+                             are marked as invalid.
+        @param usegrad  [in] when set to true uses the gradient for
+                             the comparison, otherwise uses the 
+                             field
+        ")
+                        (reparse-symbol indented_block_body) [849 2367])
+                    ("WriteDataForFunctionalTest" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2407 2411])
+                            ("fn" variable nil (reparse-symbol function_parameters) [2413 2415]))                          )
+                        (reparse-symbol indented_block_body) [2375 2957]))                  
+                :type "class")
+                nil [120 2957]))          
+      :file "SensorData.py"
+      :pointmax 2676
+      :fsize 143
+      :lastmodtime '(21665 54857 919843 777000)
+      :unmatched-syntax nil)
+    (semanticdb-table "run_model_direction.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("LookupTableGenerator" include nil nil [23 76])
+            ("Multipole" include nil nil [77 119])
+            ("ProbeDefinitions" include nil nil [120 168])
+            ("SensorDataGenerator" include nil nil [169 221])
+            ("FieldEstimator" include nil nil [222 269])
+            ("CommonFunctions" include nil nil [270 311])
+            ("matplotlib.pyplot" include nil nil [313 344])
+            ("lmfit" include nil nil [346 407])
+            ("numpy" include nil nil [409 497])
+            ("numpy.linalg" include nil nil [498 532])
+            ("numpy" include nil nil [534 617])
+            ("copy" include nil nil [619 630])
+            ("firstRotateY" variable nil nil [632 651])
+            ("dirParametrization" variable nil nil [652 674])
+            ("SimulationResults" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [744 768])
+                            ("self" variable nil (reparse-symbol indented_block_body) [777 1015]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [719 723])
+                            ("noPoints" variable nil (reparse-symbol function_parameters) [725 733]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [705 1016]))                  
+                :type "class")
+                nil [676 1016])
+            ("RotationMatrix" function (:arguments 
+              ( ("phi" variable nil (reparse-symbol function_parameters) [1037 1040])
+                ("theta" variable nil (reparse-symbol function_parameters) [1042 1047]))              ) nil [1017 1857])
+            ("Trayectory2" function (:arguments 
+              ( ("sz" variable nil (reparse-symbol function_parameters) [1877 1879]))              ) nil [1860 2441])
+            ("Trayectory" function (:arguments 
+              ( ("sz" variable nil (reparse-symbol function_parameters) [2459 2461]))              ) nil [2443 2983])
+            ("Expected" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3032 3049])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3058 3075])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3084 3101]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3017 3021]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3004 3102]))                  
+                :type "class")
+                nil [2984 3102])
+            ("PlotResults" function (:arguments 
+              ( ("res" variable nil (reparse-symbol function_parameters) [3129 3132])
+                ("expected" variable nil (reparse-symbol function_parameters) [3134 3142]))              ) nil [3112 4207])
+            ("if" code nil nil [4209 9175]))          
+      :file "run_model_direction.py"
+      :pointmax 9177
+      :fsize 9176
+      :lastmodtime '(21670 29990 319113 900000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ResidualEstimatorTest.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pylab" include nil nil [20 39])
+            ("FieldEstimator" include nil nil [41 82])
+            ("LookupTableGenerator" include nil nil [83 136])
+            ("SensorDataGenerator" include nil nil [137 188])
+            ("Multipole" include nil nil [189 220])
+            ("ProbeDefinitions" include nil nil [221 265])
+            ("Trayectory" include nil nil [266 299])
+            ("CommonFunctions" include nil nil [300 336])
+            ("lmfit" include nil nil [337 365])
+            ("if" code nil nil [369 4071]))          
+      :file "ResidualEstimatorTest.py"
+      :pointmax 4078
+      :fsize 4077
+      :lastmodtime '(21678 46723 621000 175000)
+      :unmatched-syntax nil)
+    (semanticdb-table "FieldData.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 79])
+            ("CommonFunctions" include nil nil [81 117])
+            ("FieldData" type
+               (:documentation "
+    A class to hold the sensor data with methods to read the data 
+    from a file.
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [280 290])
+                            ("self" variable nil (reparse-symbol indented_block_body) [300 322])
+                            ("self" variable nil (reparse-symbol indented_block_body) [331 353])
+                            ("self" variable nil (reparse-symbol indented_block_body) [362 384])
+                            ("self" variable nil (reparse-symbol indented_block_body) [394 418]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [255 259])
+                            ("N" variable nil (reparse-symbol function_parameters) [261 262]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [241 419])
+                    ("ReadFromFile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [442 446])
+                            ("fn" variable nil (reparse-symbol function_parameters) [448 450]))                          
+                        :documentation "
+        Loads the field data from a a file (as generated from the system)
+        ")
+                        (reparse-symbol indented_block_body) [424 740])
+                    ("SetAllSensorsValid" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [770 774]))                          )
+                        (reparse-symbol indented_block_body) [746 840])
+                    ("SetValidBasedOnThreshold" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [879 883])
+                            ("threshold" variable nil (reparse-symbol function_parameters) [885 894])
+                            ("usegrad" variable nil (reparse-symbol function_parameters) [901 908]))                          
+                        :documentation "
+        Removes the sensor with the highest reading and all
+        of those with a field value above the threshold
+
+        @param theshold [in] the value of field above which sensors
+                             are marked as invalid.
+        @param usegrad  [in] when set to true uses the gradient for
+                             the comparison, otherwise uses the 
+                             field
+        ")
+                        (reparse-symbol indented_block_body) [849 2367])
+                    ("WriteDataForFunctionalTest" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2407 2411])
+                            ("fn" variable nil (reparse-symbol function_parameters) [2413 2415]))                          )
+                        (reparse-symbol indented_block_body) [2375 2957]))                  
+                :type "class")
+                nil [120 2957]))          
+      :file "FieldData.py"
+      :pointmax 2964
+      :fsize 2963
+      :lastmodtime '(21711 56126 141148 400000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Supervisor.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 23])
+            ("Supervisor" type
+               (:documentation "
+    A class to implement the input and output supervisors of the optimizer.
+
+    The input supervisor checks the data prior to the optimizer step, indicting whether
+    the data is suitable for the optimizer.
+    The output supervisor checks the results of the optimizer and validates them.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Initializer
+        \"\"\"" code nil (reparse-symbol indented_block_body) [391 426])
+                            ("self" variable nil (reparse-symbol indented_block_body) [435 465])
+                            ("self" variable nil (reparse-symbol indented_block_body) [474 505])
+                            ("self" variable nil (reparse-symbol indented_block_body) [515 530])
+                            ("self" variable nil (reparse-symbol indented_block_body) [539 554])
+                            ("self" variable nil (reparse-symbol indented_block_body) [563 578])
+                            ("self" variable nil (reparse-symbol indented_block_body) [588 977]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [376 380]))                          
+                        :documentation "
+        Initializer
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [363 978])
+                    ("FieldPower" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [998 1002])
+                            ("mx" variable nil (reparse-symbol function_parameters) [1004 1006])
+                            ("my" variable nil (reparse-symbol function_parameters) [1008 1010])
+                            ("mz" variable nil (reparse-symbol function_parameters) [1012 1014])
+                            ("valid" variable nil (reparse-symbol function_parameters) [1016 1021]))                          
+                        :documentation "
+        Calculate the sum of the field for the input data.
+
+        @param [in] mx input field in the Bx coordinate for all sensors.
+        @param [in] my input field in the By coordinate for all sensors.
+        @param [in] mz input field in the Bz coordinate for all sensors.
+        @param [in] valid indicates if the sensor readings are valid.
+
+        @return the sum of the field values for all valid sensors.
+        ")
+                        (reparse-symbol indented_block_body) [983 1536])
+                    ("FieldDispersion" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1561 1565])
+                            ("mx" variable nil (reparse-symbol function_parameters) [1567 1569])
+                            ("my" variable nil (reparse-symbol function_parameters) [1571 1573])
+                            ("mz" variable nil (reparse-symbol function_parameters) [1575 1577])
+                            ("valid" variable nil (reparse-symbol function_parameters) [1579 1584]))                          
+                        :documentation "
+        Calculate the dispersion over the average of the input data
+
+        @param [in] mx input field in the Bx coordinate for all sensors.
+        @param [in] my input field in the By coordinate for all sensors.
+        @param [in] mz input field in the Bz coordinate for all sensors.
+        @param [in] valid indicates if the sensor readings are valid.
+
+        @return the sum of the field values for all valid sensors.
+        ")
+                        (reparse-symbol indented_block_body) [1541 2308])
+                    ("InputSupervisor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2334 2338])
+                            ("mx" variable nil (reparse-symbol function_parameters) [2340 2342])
+                            ("my" variable nil (reparse-symbol function_parameters) [2344 2346])
+                            ("mz" variable nil (reparse-symbol function_parameters) [2348 2350])
+                            ("valid" variable nil (reparse-symbol function_parameters) [2352 2357]))                          
+                        :documentation "
+        Verifies that the dispersion of the input data is above the threshold
+
+        @param [in] mx input field in the Bx coordinate for all sensors.
+        @param [in] my input field in the By coordinate for all sensors.
+        @param [in] mz input field in the Bz coordinate for all sensors.
+        @param [in] valid indicates if the sensor readings are valid.
+
+        @return a pair with the error number and message
+        ")
+                        (reparse-symbol indented_block_body) [2314 2993])
+                    ("CheckTipLimits" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3018 3022])
+                            ("tip" variable nil (reparse-symbol function_parameters) [3024 3027]))                          )
+                        (reparse-symbol indented_block_body) [2998 3318])
+                    ("OutputSupervisor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3344 3348])
+                            ("tip" variable nil (reparse-symbol function_parameters) [3350 3353])
+                            ("residual" variable nil (reparse-symbol function_parameters) [3355 3363]))                          
+                        :documentation "
+        Verifies that the output of the supervisor is within constrains
+
+        @param [in] tip the coordiantes of the tip relative to the center of the probe.
+        @param [in] residual the value of the residual returned by the optimizer.
+        ")
+                        (reparse-symbol indented_block_body) [3322 3765]))                  
+                :type "class")
+                nil [25 3765]))          
+      :file "Supervisor.py"
+      :pointmax 3765
+      :fsize 3764
+      :lastmodtime '(21711 32306 963380 125000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!longNeedles!modelling!trunk!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

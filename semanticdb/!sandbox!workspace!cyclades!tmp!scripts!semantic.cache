@@ -1,0 +1,1143 @@
+;; Object scripts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "scripts/"
+  :tables
+  (list
+    (semanticdb-table "svnmerge.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("locale" include nil nil [3064 3121])
+            ("time" include nil nil [3064 3121])
+            ("tempfile" include nil nil [3064 3121])
+            ("types" include nil nil [3064 3121])
+            ("re" include nil nil [3064 3121])
+            ("getopt" include nil nil [3064 3121])
+            ("os" include nil nil [3064 3121])
+            ("sys" include nil nil [3064 3121])
+            ("bisect" include nil nil [3122 3147])
+            ("xml.dom" include nil nil [3148 3175])
+            ("NAME" variable nil nil [3177 3194])
+            ("if" code nil nil [3195 3303])
+            ("LOG_SEPARATOR" code nil nil [3683 3706])
+            ("LOG_SEPARATOR_RE" variable nil nil [3707 3819])
+            ("LOG_LINE_PREFIX" code nil nil [3899 3924])
+            ("locale" code nil nil [4113 4148])
+            ("if" code nil nil [4293 4355])
+            ("os" variable nil nil [4355 4386])
+            ("try" code nil nil [4624 4686])
+            ("lstrip" function
+               (:documentation "Replacement for str.lstrip (support for arbitrary chars to strip was
+    added in Python 2.2.2)."
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [4698 4699])
+                    ("ch" variable nil (reparse-symbol function_parameters) [4701 4703]))                  )
+                nil [4687 4940])
+            ("rstrip" function
+               (:documentation "Replacement for str.rstrip (support for arbitrary chars to strip was
+    added in Python 2.2.2)."
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [4952 4953])
+                    ("ch" variable nil (reparse-symbol function_parameters) [4955 4957]))                  )
+                nil [4941 5246])
+            ("strip" function
+               (:documentation "Replacement for str.strip (support for arbitrary chars to strip was
+    added in Python 2.2.2)."
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [5257 5258])
+                    ("ch" variable nil (reparse-symbol function_parameters) [5260 5262]))                  )
+                nil [5247 5408])
+            ("rsplit" function
+               (:documentation "Like str.rsplit, which is Python 2.4+ only."
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [5420 5421])
+                    ("sep" variable nil (reparse-symbol function_parameters) [5423 5426])
+                    ("maxsplits" variable nil (reparse-symbol function_parameters) [5428 5437]))                  )
+                nil [5409 5626])
+            ("kwextract" function
+               (:documentation "Extract info from a svn keyword string."
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [5722 5723]))                  )
+                nil [5708 5887])
+            ("__revision__" variable nil nil [5888 5921])
+            ("__date__" variable nil nil [5922 5952])
+            ("default_opts" variable nil nil [6016 6169])
+            ("logs" variable nil nil [6170 6179])
+            ("console_width" function (:documentation "Get the width of the console screen (if any).") nil [6181 7139])
+            ("error" function
+               (:documentation "Subroutine to output an error and bail."
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [7150 7151]))                  )
+                nil [7140 7266])
+            ("report" function
+               (:documentation "Subroutine to output progress message, unless in quiet mode."
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [7278 7279]))                  )
+                nil [7267 7412])
+            ("prefix_lines" function
+               (:documentation "Given a string representing one or more lines of text, insert the
+    specified prefix at the beginning of each line, and return the result.
+    The input must be terminated by a newline."
+                :arguments 
+                  ( ("prefix" variable nil (reparse-symbol function_parameters) [7430 7436])
+                    ("lines" variable nil (reparse-symbol function_parameters) [7438 7443]))                  )
+                nil [7413 7738])
+            ("recode_stdout_to_file" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [7765 7766]))              ) nil [7739 8003])
+            ("LaunchError" type
+               (:documentation "Signal a failure in execution of an external command. Parameters are the
+    exit code of the process, the original command line, and the output of the
+    command."
+                :superclasses ("Exception")
+                :type "class")
+                nil [8004 8209])
+            ("try" code nil nil [8210 11072])
+            ("launchsvn" function
+               (:documentation "Launch SVN and grab its output."
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [11087 11088])
+                    ("show" variable nil (reparse-symbol function_parameters) [11090 11094])
+                    ("pretend" variable nil (reparse-symbol function_parameters) [11102 11109])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [11117 11125]))                  )
+                nil [11073 11739])
+            ("svn_command" function
+               (:documentation "Do (or pretend to do) an SVN command."
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [11756 11757]))                  )
+                nil [11740 12007])
+            ("check_dir_clean" function
+               (:documentation "Check the current status of dir for local mods."
+                :arguments 
+                  ( ("dir" variable nil (reparse-symbol function_parameters) [12028 12031]))                  )
+                nil [12008 12791])
+            ("PathIdentifier" type
+               (:documentation "Abstraction for a path identifier, so that we can start talking
+    about it before we know the form that it takes in the properties (its
+    external_form).  Objects are referenced in the class variable 'locobjs',
+    keyed by all known forms."
+                :members 
+                  ( ("repo_hints" variable nil (reparse-symbol indented_block_body) [13128 13143])
+                    ("locobjs" variable nil (reparse-symbol indented_block_body) [13224 13236])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [13331 13375])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13384 13400])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13409 13423])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13432 13466]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13255 13259])
+                            ("repo_relative_path" variable nil (reparse-symbol function_parameters) [13261 13279])
+                            ("uuid" variable nil (reparse-symbol function_parameters) [13281 13285])
+                            ("url" variable nil (reparse-symbol function_parameters) [13292 13295])
+                            ("external_form" variable nil (reparse-symbol function_parameters) [13302 13315]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [13242 13467])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13485 13489]))                          )
+                        (reparse-symbol indented_block_body) [13472 13590])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13607 13611]))                          
+                        :documentation "Return a printable string representation")
+                        (reparse-symbol indented_block_body) [13595 13893])
+                    ("from_pathid" function
+                       (:documentation "convert pathid_str to a PathIdentifier"
+                        :arguments 
+                          ( ("pathid_str" variable nil (reparse-symbol function_parameters) [13914 13924]))                          )
+                        (reparse-symbol indented_block_body) [13898 15347])
+                    ("from_pathid" variable nil (reparse-symbol indented_block_body) [15351 15390])
+                    ("from_target" function
+                       (:documentation "Convert a target (either a working copy path or an URL) into a
+        path identifier."
+                        :arguments 
+                          ( ("target" variable nil (reparse-symbol function_parameters) [15412 15418]))                          )
+                        (reparse-symbol indented_block_body) [15396 15849])
+                    ("from_target" variable nil (reparse-symbol indented_block_body) [15853 15892])
+                    ("hint" function
+                       (:documentation "Cache some information about target, as it may be referenced by
+        repo-relative path in subversion properties; the cache can help to
+        expand such a relative path to a full path identifier."
+                        :arguments 
+                          ( ("target" variable nil (reparse-symbol function_parameters) [15907 15913]))                          )
+                        (reparse-symbol indented_block_body) [15898 17295])
+                    ("hint" variable nil (reparse-symbol indented_block_body) [17299 17324])
+                    ("format" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17341 17345])
+                            ("fmt" variable nil (reparse-symbol function_parameters) [17347 17350]))                          )
+                        (reparse-symbol indented_block_body) [17330 17641])
+                    ("match_substring" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17666 17670])
+                            ("str" variable nil (reparse-symbol function_parameters) [17672 17675]))                          
+                        :documentation "Test whether str is a substring of any representation of this
+        PathIdentifier.")
+                        (reparse-symbol indented_block_body) [17646 18130])
+                    ("get_url" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18147 18151]))                          
+                        :documentation "Convert a pathid into a URL.  If this is not possible, error out.")
+                        (reparse-symbol indented_block_body) [18135 19307]))                  
+                :type "class")
+                nil [12792 19307])
+            ("RevisionLog" type
+               (:documentation "
+    A log of the revisions which affected a given URL between two
+    revisions.
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Create a new RevisionLog object, which stores, in self.revs, a list
+        of the revisions which affected the specified URL between begin and
+        end. If find_propchanges is True, self.propchange_revs will contain a
+        list of the revisions which changed properties directly on the
+        specified URL. URL must be the URL for a directory in the repository.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [19498 19892])
+                            ("self" variable nil (reparse-symbol indented_block_body) [19901 19915])
+                            ("log_opts" code nil (reparse-symbol indented_block_body) [19998 20057])
+                            ("if" code nil (reparse-symbol indented_block_body) [20066 20247])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20332 20346])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20355 20380])
+                            ("repos_pathid" variable nil (reparse-symbol indented_block_body) [20389 20435])
+                            ("for" code nil (reparse-symbol indented_block_body) [20444 20793])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20838 20861])
+                            ("if" code nil (reparse-symbol indented_block_body) [20870 21146])
+                            ("self" variable nil (reparse-symbol indented_block_body) [21155 21174])
+                            ("self" variable nil (reparse-symbol indented_block_body) [21183 21202]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19442 19446])
+                            ("url" variable nil (reparse-symbol function_parameters) [19448 19451])
+                            ("begin" variable nil (reparse-symbol function_parameters) [19453 19458])
+                            ("end" variable nil (reparse-symbol function_parameters) [19460 19463])
+                            ("find_propchanges" variable nil (reparse-symbol function_parameters) [19465 19481]))                          
+                        :documentation "
+        Create a new RevisionLog object, which stores, in self.revs, a list
+        of the revisions which affected the specified URL between begin and
+        end. If find_propchanges is True, self.propchange_revs will contain a
+        list of the revisions which changed properties directly on the
+        specified URL. URL must be the URL for a directory in the repository.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [19429 21203])
+                    ("merge_metadata" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21227 21231]))                          
+                        :documentation "
+        Return a VersionedProperty object, with a cached view of the merge
+        metadata in the range of this log.
+        ")
+                        (reparse-symbol indented_block_body) [21208 21583])
+                    ("block_metadata" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21607 21611]))                          )
+                        (reparse-symbol indented_block_body) [21588 21783]))                  
+                :type "class")
+                nil [19308 21783])
+            ("VersionedProperty" type
+               (:documentation "
+    A read-only, cached view of a versioned property.
+
+    self.revs contains a list of the revisions in which the property changes.
+    self.values stores the new values at each corresponding revision. If the
+    value of the property is unknown, it is set to None.
+
+    Initially, we set self.revs to [0] and self.values to [None]. This
+    indicates that, as of revision zero, we know nothing about the value of
+    the property.
+
+    Later, if you run self.load(log), we cache the value of this property over
+    the entire range of the log by noting each revision in which the property
+    was changed. At the end of the range of the log, we invalidate our cache
+    by adding the value \"None\" to our cache for any revisions which fall out
+    of the range of our log.
+
+    Once self.revs and self.values are filled, we can find the value of the
+    property at any arbitrary revision using a binary search on self.revs.
+    Once we find the last revision during which the property was changed,
+    we can lookup the associated value in self.values. (If the associated
+    value is None, the associated value was not cached and we have to do
+    a full propget.)
+
+    An example: We know that the 'svnmerge' property was added in r10, and
+    changed in r21. We gathered log info up until r40.
+
+    revs = [0, 10, 21, 40]
+    values = [None, \"val1\", \"val2\", None]
+
+    What these values say:
+    - From r0 to r9, we know nothing about the property.
+    - In r10, the property was set to \"val1\". This property stayed the same
+      until r21, when it was changed to \"val2\".
+    - We don't know what happened after r40.
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"View the history of a versioned property at URL with name\"\"\"" code nil (reparse-symbol indented_block_body) [23493 23556])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23565 23579])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23588 23604])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23726 23741])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23750 23770])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23825 23851])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23860 23883])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23892 23917]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23467 23471])
+                            ("url" variable nil (reparse-symbol function_parameters) [23473 23476])
+                            ("name" variable nil (reparse-symbol function_parameters) [23478 23482]))                          
+                        :documentation "View the history of a versioned property at URL with name"
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [23454 23918])
+                    ("load" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23932 23936])
+                            ("log" variable nil (reparse-symbol function_parameters) [23938 23941]))                          
+                        :documentation "
+        Load the history of property changes from the specified
+        RevisionLog object.
+        ")
+                        (reparse-symbol indented_block_body) [23923 25333])
+                    ("raw_get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25350 25354])
+                            ("rev" variable nil (reparse-symbol function_parameters) [25356 25359]))                          
+                        :documentation "
+        Get the property at revision REV. If rev is not specified, get
+        the property at revision HEAD.
+        ")
+                        (reparse-symbol indented_block_body) [25338 25559])
+                    ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25572 25576])
+                            ("rev" variable nil (reparse-symbol function_parameters) [25578 25581]))                          
+                        :documentation "
+        Get the property at revision REV. If rev is not specified, get
+        the property at revision HEAD.
+        ")
+                        (reparse-symbol indented_block_body) [25564 26076])
+                    ("changed_revs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26098 26102])
+                            ("key" variable nil (reparse-symbol function_parameters) [26104 26107]))                          
+                        :documentation "
+        Get a list of the revisions in which the specified dictionary
+        key was changed in this property. If key is not specified,
+        return a list of revisions in which any key was changed.
+        ")
+                        (reparse-symbol indented_block_body) [26081 26728])
+                    ("initialized_revs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26754 26758]))                          
+                        :documentation "
+        Get a list of the revisions in which keys were added or
+        removed in this property.
+        ")
+                        (reparse-symbol indented_block_body) [26733 27175]))                  
+                :type "class")
+                nil [21785 27175])
+            ("RevisionSet" type
+               (:documentation "
+    A set of revisions, held in dictionary form for easy manipulation. If we
+    were to rewrite this script for Python 2.3+, we would subclass this from
+    set (or UserSet).  As this class does not include branch
+    information, it's assumed that one instance will be used per
+    branch.
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Constructs a RevisionSet from a string in property form, or from
+        a dictionary whose keys are the revisions. Raises ValueError if the
+        input string is invalid.\"\"\"" code nil (reparse-symbol indented_block_body) [27541 27720])
+                            ("self" variable nil (reparse-symbol indented_block_body) [27730 27745])
+                            ("revision_range_split_re" variable nil (reparse-symbol indented_block_body) [27755 27799])
+                            ("if" code nil (reparse-symbol indented_block_body) [27809 28649]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27520 27524])
+                            ("parm" variable nil (reparse-symbol function_parameters) [27526 27530]))                          
+                        :documentation "Constructs a RevisionSet from a string in property form, or from
+        a dictionary whose keys are the revisions. Raises ValueError if the
+        input string is invalid."
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [27507 28649])
+                    ("sorted" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28665 28669]))                          )
+                        (reparse-symbol indented_block_body) [28654 28754])
+                    ("normalized" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28774 28778]))                          
+                        :documentation "Returns a normalized version of the revision set, which is an
+        ordered list of couples (start,end), with the minimum number of
+        intervals.")
+                        (reparse-symbol indented_block_body) [28759 29219])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29236 29240]))                          
+                        :documentation "Convert the revision set to a string, using its normalized form.")
+                        (reparse-symbol indented_block_body) [29224 29524])
+                    ("__contains__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29546 29550])
+                            ("rev" variable nil (reparse-symbol function_parameters) [29552 29555]))                          )
+                        (reparse-symbol indented_block_body) [29529 29597])
+                    ("__sub__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29614 29618])
+                            ("rs" variable nil (reparse-symbol function_parameters) [29620 29622]))                          
+                        :documentation "Compute subtraction as in sets.")
+                        (reparse-symbol indented_block_body) [29602 29814])
+                    ("__and__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29831 29835])
+                            ("rs" variable nil (reparse-symbol function_parameters) [29837 29839]))                          
+                        :documentation "Compute intersections as in sets.")
+                        (reparse-symbol indented_block_body) [29819 30029])
+                    ("__nonzero__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [30050 30054]))                          )
+                        (reparse-symbol indented_block_body) [30034 30093])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [30110 30114]))                          
+                        :documentation "Return the number of revisions in the set.")
+                        (reparse-symbol indented_block_body) [30098 30205])
+                    ("__iter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [30223 30227]))                          )
+                        (reparse-symbol indented_block_body) [30210 30265])
+                    ("__or__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [30281 30285])
+                            ("rs" variable nil (reparse-symbol function_parameters) [30287 30289]))                          
+                        :documentation "Compute set union.")
+                        (reparse-symbol indented_block_body) [30270 30421]))                  
+                :type "class")
+                nil [27176 30421])
+            ("merge_props_to_revision_set" function
+               (:documentation "A converter which returns a RevisionSet instance containing the
+    revisions from PATH as known to BRANCH_PROPS.  BRANCH_PROPS is a
+    dictionary of pathid -> revision set branch integration information
+    (as returned by get_merge_props())."
+                :arguments 
+                  ( ("merge_props" variable nil (reparse-symbol function_parameters) [30454 30465])
+                    ("pathid" variable nil (reparse-symbol function_parameters) [30467 30473]))                  )
+                nil [30422 30885])
+            ("dict_from_revlist_prop" function
+               (:documentation "Given a property value as a string containing per-source revision
+    lists, return a dictionary whose key is a source path identifier
+    and whose value is the revisions for that source."
+                :arguments 
+                  ( ("propvalue" variable nil (reparse-symbol function_parameters) [30913 30922]))                  )
+                nil [30886 31560])
+            ("get_revlist_prop" function
+               (:documentation "Given a repository URL or working copy path and a property
+    name, extract the values of the property which store per-source
+    revision lists and return a dictionary whose key is a source path
+    identifier, and whose value is the revisions for that source."
+                :arguments 
+                  ( ("url_or_dir" variable nil (reparse-symbol function_parameters) [31582 31592])
+                    ("propname" variable nil (reparse-symbol function_parameters) [31594 31602])
+                    ("rev" variable nil (reparse-symbol function_parameters) [31604 31607]))                  )
+                nil [31561 32276])
+            ("get_merge_props" function
+               (:documentation "Extract the merged revisions."
+                :arguments 
+                  ( ("dir" variable nil (reparse-symbol function_parameters) [32297 32300]))                  )
+                nil [32277 32390])
+            ("get_block_props" function
+               (:documentation "Extract the blocked revisions."
+                :arguments 
+                  ( ("dir" variable nil (reparse-symbol function_parameters) [32411 32414]))                  )
+                nil [32391 32511])
+            ("get_blocked_revs" function (:arguments 
+              ( ("dir" variable nil (reparse-symbol function_parameters) [32533 32536])
+                ("source_pathid" variable nil (reparse-symbol function_parameters) [32538 32551]))              ) nil [32512 32688])
+            ("format_merge_props" function
+               (:documentation "Formats the hash PROPS as a string suitable for use as a
+    Subversion property value."
+                :arguments 
+                  ( ("props" variable nil (reparse-symbol function_parameters) [32712 32717])
+                    ("sep" variable nil (reparse-symbol function_parameters) [32719 32722]))                  )
+                nil [32689 33023])
+            ("_run_propset" function
+               (:documentation "Set the property 'prop' of directory 'dir' to value 'value'. We go
+    through a temporary file to not run into command line length limits."
+                :arguments 
+                  ( ("dir" variable nil (reparse-symbol function_parameters) [33041 33044])
+                    ("prop" variable nil (reparse-symbol function_parameters) [33046 33050])
+                    ("value" variable nil (reparse-symbol function_parameters) [33052 33057]))                  )
+                nil [33024 33739])
+            ("set_props" function (:arguments 
+              ( ("dir" variable nil (reparse-symbol function_parameters) [33754 33757])
+                ("name" variable nil (reparse-symbol function_parameters) [33759 33763])
+                ("props" variable nil (reparse-symbol function_parameters) [33765 33770]))              ) nil [33740 34165])
+            ("set_merge_props" function (:arguments 
+              ( ("dir" variable nil (reparse-symbol function_parameters) [34186 34189])
+                ("props" variable nil (reparse-symbol function_parameters) [34191 34196]))              ) nil [34166 34239])
+            ("set_block_props" function (:arguments 
+              ( ("dir" variable nil (reparse-symbol function_parameters) [34260 34263])
+                ("props" variable nil (reparse-symbol function_parameters) [34265 34270]))              ) nil [34240 34319])
+            ("set_blocked_revs" function (:arguments 
+              ( ("dir" variable nil (reparse-symbol function_parameters) [34341 34344])
+                ("source_pathid" variable nil (reparse-symbol function_parameters) [34346 34359])
+                ("revs" variable nil (reparse-symbol function_parameters) [34361 34365]))              ) nil [34320 34559])
+            ("is_url" function
+               (:documentation "Check if url looks like a valid url."
+                :arguments 
+                  ( ("url" variable nil (reparse-symbol function_parameters) [34571 34574]))                  )
+                nil [34560 34717])
+            ("check_url" function
+               (:documentation "Similar to is_url, but actually invoke get_svninfo to find out"
+                :arguments 
+                  ( ("url" variable nil (reparse-symbol function_parameters) [34732 34735]))                  )
+                nil [34718 34845])
+            ("is_pathid" function (:arguments 
+              ( ("pathid" variable nil (reparse-symbol function_parameters) [34860 34866]))              ) nil [34846 34915])
+            ("is_wc" function
+               (:documentation "Check if a directory is a working copy."
+                :arguments 
+                  ( ("dir" variable nil (reparse-symbol function_parameters) [34926 34929]))                  )
+                nil [34916 35091])
+            ("_cache_svninfo" variable nil nil [35092 35111])
+            ("get_svninfo" function
+               (:documentation "Extract the subversion information for a target (through 'svn info').
+    This function uses an internal cache to let clients query information
+    many times."
+                :arguments 
+                  ( ("target" variable nil (reparse-symbol function_parameters) [35128 35134]))                  )
+                nil [35112 35627])
+            ("target_to_url" function
+               (:documentation "Convert working copy path or repos URL to a repos URL."
+                :arguments 
+                  ( ("target" variable nil (reparse-symbol function_parameters) [35646 35652]))                  )
+                nil [35628 35822])
+            ("_cache_reporoot" variable nil nil [35823 35843])
+            ("get_repo_root" function
+               (:documentation "Compute the root repos URL given a working-copy path, or a URL."
+                :arguments 
+                  ( ("target" variable nil (reparse-symbol function_parameters) [35862 35868]))                  )
+                nil [35844 37481])
+            ("SvnLogParser" type
+               (:documentation "
+    Parse the \"svn log\", going through the XML output and using pulldom (which
+    would even allow streaming the command output).
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [37686 37725]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [37666 37670])
+                            ("xml" variable nil (reparse-symbol function_parameters) [37672 37675]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [37653 37726])
+                    ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [37746 37750])
+                            ("idx" variable nil (reparse-symbol function_parameters) [37752 37755]))                          )
+                        (reparse-symbol indented_block_body) [37730 38037])
+                    ("SvnLogRevision" type
+                       (:members 
+                          ( ("__init__" function
+                               (:suite 
+                                  ( ("self" variable nil (reparse-symbol indented_block_body) [38113 38129]))                                  
+                                :parent "dummy"
+                                :arguments 
+                                  ( ("self" variable nil (reparse-symbol function_parameters) [38085 38089])
+                                    ("xmlnode" variable nil (reparse-symbol function_parameters) [38091 38098]))                                  
+                                :constructor-flag t)
+                                (reparse-symbol indented_block_body) [38072 38130])
+                            ("revision" function
+                               (:parent "dummy"
+                                :arguments 
+                                  ( ("self" variable nil (reparse-symbol function_parameters) [38151 38155]))                                  )
+                                (reparse-symbol indented_block_body) [38138 38214])
+                            ("author" function
+                               (:parent "dummy"
+                                :arguments 
+                                  ( ("self" variable nil (reparse-symbol function_parameters) [38233 38237]))                                  )
+                                (reparse-symbol indented_block_body) [38222 38316])
+                            ("paths" function
+                               (:parent "dummy"
+                                :arguments 
+                                  ( ("self" variable nil (reparse-symbol function_parameters) [38334 38338]))                                  )
+                                (reparse-symbol indented_block_body) [38324 38447])
+                            ("SvnLogPath" type
+                               (:members 
+                                  ( ("__init__" function
+                                       (:suite 
+                                          ( ("self" variable nil (reparse-symbol indented_block_body) [38531 38547]))                                          
+                                        :parent "dummy"
+                                        :arguments 
+                                          ( ("self" variable nil (reparse-symbol function_parameters) [38499 38503])
+                                            ("xmlnode" variable nil (reparse-symbol function_parameters) [38505 38512]))                                          
+                                        :constructor-flag t)
+                                        (reparse-symbol indented_block_body) [38486 38548])
+                                    ("action" function
+                                       (:parent "dummy"
+                                        :arguments 
+                                          ( ("self" variable nil (reparse-symbol function_parameters) [38571 38575]))                                          )
+                                        (reparse-symbol indented_block_body) [38560 38631])
+                                    ("pathid" function
+                                       (:parent "dummy"
+                                        :arguments 
+                                          ( ("self" variable nil (reparse-symbol function_parameters) [38654 38658]))                                          )
+                                        (reparse-symbol indented_block_body) [38643 38707])
+                                    ("copyfrom_rev" function
+                                       (:parent "dummy"
+                                        :arguments 
+                                          ( ("self" variable nil (reparse-symbol function_parameters) [38736 38740]))                                          )
+                                        (reparse-symbol indented_block_body) [38719 38852])
+                                    ("copyfrom_pathid" function
+                                       (:parent "dummy"
+                                        :arguments 
+                                          ( ("self" variable nil (reparse-symbol function_parameters) [38884 38888]))                                          )
+                                        (reparse-symbol indented_block_body) [38864 39001]))                                  
+                                :type "class")
+                                (reparse-symbol indented_block_body) [38456 39001]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [38042 39001]))                  
+                :type "class")
+                nil [37482 39001])
+            ("get_copyfrom" function
+               (:documentation "Get copyfrom info for a given target (it represents the
+    repository-relative path from where it was branched). NOTE:
+    repos root has no copyfrom info. In this case None is returned.
+
+    Returns the:
+        - source file or directory from which the copy was made
+        - revision from which that source was copied
+        - revision in which the copy was committed
+    "
+                :arguments 
+                  ( ("target" variable nil (reparse-symbol function_parameters) [39019 39025]))                  )
+                nil [39002 39944])
+            ("get_latest_rev" function
+               (:documentation "Get the latest revision of the repository of which URL is part."
+                :arguments 
+                  ( ("url" variable nil (reparse-symbol function_parameters) [39964 39967]))                  )
+                nil [39945 40575])
+            ("get_created_rev" function
+               (:documentation "Lookup the revision at which the path identified by the
+    provided URL was first created."
+                :arguments 
+                  ( ("url" variable nil (reparse-symbol function_parameters) [40596 40599]))                  )
+                nil [40576 41344])
+            ("get_commit_log" function
+               (:documentation "Return the log message for a specific integer revision
+    number."
+                :arguments 
+                  ( ("url" variable nil (reparse-symbol function_parameters) [41364 41367])
+                    ("revnum" variable nil (reparse-symbol function_parameters) [41369 41375]))                  )
+                nil [41345 41571])
+            ("construct_merged_log_message" function
+               (:documentation "Return a commit log message containing all the commit messages
+    in the specified revisions at the given URL.  The separator used
+    in this log message is determined by searching for the longest
+    svnmerge separator existing in the commit log messages and
+    extending it by one more separator.  This results in a new commit
+    log message that is clearer in describing merges that contain
+    other merges. Trailing newlines are removed from the embedded
+    log messages."
+                :arguments 
+                  ( ("url" variable nil (reparse-symbol function_parameters) [41605 41608])
+                    ("revnums" variable nil (reparse-symbol function_parameters) [41610 41617]))                  )
+                nil [41572 42705])
+            ("get_default_source" function
+               (:documentation "Return the default source for branch_target (given its branch_props).
+    Error out if there is ambiguity."
+                :arguments 
+                  ( ("branch_target" variable nil (reparse-symbol function_parameters) [42729 42742])
+                    ("branch_props" variable nil (reparse-symbol function_parameters) [42744 42756]))                  )
+                nil [42706 43569])
+            ("should_find_reflected" function (:arguments 
+              ( ("branch_dir" variable nil (reparse-symbol function_parameters) [43596 43606]))              ) nil [43570 44003])
+            ("analyze_revs" function
+               (:documentation "For the source of the merges in the source URL being merged into
+    target_pathid, analyze the revisions in the interval begin-end (which
+    defaults to 1-HEAD), to find out which revisions are changes in
+    the url, which are changes elsewhere (so-called 'phantom'
+    revisions), optionally which are reflected changes (to avoid
+    conflicts that can occur when doing bidirectional merging between
+    branches), and which revisions initialize merge tracking against other
+    branches.  Return a tuple of four RevisionSet's:
+        (real_revs, phantom_revs, reflected_revs, initialized_revs).
+
+    NOTE: To maximize speed, if \"end\" is not provided, the function is
+    not able to find phantom revisions following the last real
+    revision in the URL.
+    "
+                :arguments 
+                  ( ("target_pathid" variable nil (reparse-symbol function_parameters) [44021 44034])
+                    ("url" variable nil (reparse-symbol function_parameters) [44036 44039])
+                    ("begin" variable nil (reparse-symbol function_parameters) [44041 44046])
+                    ("end" variable nil (reparse-symbol function_parameters) [44050 44053])
+                    ("find_reflected" variable nil (reparse-symbol function_parameters) [44077 44091]))                  )
+                nil [44004 45948])
+            ("analyze_source_revs" function
+               (:documentation "For the given branch and source, extract the real and phantom
+    source revisions."
+                :arguments 
+                  ( ("branch_target" variable nil (reparse-symbol function_parameters) [45973 45986])
+                    ("source_url" variable nil (reparse-symbol function_parameters) [45988 45998])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [46000 46008]))                  )
+                nil [45949 47008])
+            ("minimal_merge_intervals" function
+               (:documentation "Produce the smallest number of intervals suitable for merging. revs
+    is the RevisionSet which we want to merge, and phantom_revs are phantom
+    revisions which can be used to concatenate intervals, thus minimizing the
+    number of operations."
+                :arguments 
+                  ( ("revs" variable nil (reparse-symbol function_parameters) [47037 47041])
+                    ("phantom_revs" variable nil (reparse-symbol function_parameters) [47043 47055]))                  )
+                nil [47009 47837])
+            ("display_revisions" function
+               (:documentation "Show REVS as dictated by DISPLAY_STYLE, either numerically, in
+    log format, or as diffs.  When displaying revisions numerically,
+    prefix output with REVISIONS_MSG when in verbose mode.  Otherwise,
+    request logs or diffs using SOURCE_URL."
+                :arguments 
+                  ( ("revs" variable nil (reparse-symbol function_parameters) [47860 47864])
+                    ("display_style" variable nil (reparse-symbol function_parameters) [47866 47879])
+                    ("revisions_msg" variable nil (reparse-symbol function_parameters) [47881 47894])
+                    ("source_url" variable nil (reparse-symbol function_parameters) [47896 47906]))                  )
+                nil [47838 49343])
+            ("action_init" function
+               (:documentation "Initialize for merges."
+                :arguments 
+                  ( ("target_dir" variable nil (reparse-symbol function_parameters) [49360 49370])
+                    ("target_props" variable nil (reparse-symbol function_parameters) [49372 49384]))                  )
+                nil [49344 53574])
+            ("action_avail" function
+               (:documentation "Show commits available for merges."
+                :arguments 
+                  ( ("branch_dir" variable nil (reparse-symbol function_parameters) [53592 53602])
+                    ("branch_props" variable nil (reparse-symbol function_parameters) [53604 53616]))                  )
+                nil [53575 54912])
+            ("action_integrated" function
+               (:documentation "Show change sets already merged.  This set of revisions is
+    calculated from taking svnmerge-integrated property from the
+    branch, and subtracting any revision older than the branch
+    creation revision."
+                :arguments 
+                  ( ("branch_dir" variable nil (reparse-symbol function_parameters) [54935 54945])
+                    ("branch_props" variable nil (reparse-symbol function_parameters) [54947 54959]))                  )
+                nil [54913 55946])
+            ("action_merge" function
+               (:documentation "Record merge meta data, and do the actual merge (if not
+    requested otherwise via --record-only)."
+                :arguments 
+                  ( ("branch_dir" variable nil (reparse-symbol function_parameters) [55964 55974])
+                    ("branch_props" variable nil (reparse-symbol function_parameters) [55976 55988]))                  )
+                nil [55947 60010])
+            ("action_block" function
+               (:documentation "Block revisions."
+                :arguments 
+                  ( ("branch_dir" variable nil (reparse-symbol function_parameters) [60028 60038])
+                    ("branch_props" variable nil (reparse-symbol function_parameters) [60040 60052]))                  )
+                nil [60011 61278])
+            ("action_unblock" function
+               (:documentation "Unblock revisions."
+                :arguments 
+                  ( ("branch_dir" variable nil (reparse-symbol function_parameters) [61298 61308])
+                    ("branch_props" variable nil (reparse-symbol function_parameters) [61310 61322]))                  )
+                nil [61279 62411])
+            ("action_rollback" function
+               (:documentation "Rollback previously integrated revisions."
+                :arguments 
+                  ( ("branch_dir" variable nil (reparse-symbol function_parameters) [62432 62442])
+                    ("branch_props" variable nil (reparse-symbol function_parameters) [62444 62456]))                  )
+                nil [62412 65495])
+            ("action_uninit" function
+               (:documentation "Uninit SOURCE URL."
+                :arguments 
+                  ( ("branch_dir" variable nil (reparse-symbol function_parameters) [65514 65524])
+                    ("branch_props" variable nil (reparse-symbol function_parameters) [65526 65538]))                  )
+                nil [65496 66584])
+            ("OptBase" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [66868 66894])
+                            ("del" code nil (reparse-symbol indented_block_body) [66903 66921])
+                            ("self" variable nil (reparse-symbol indented_block_body) [66930 66946])
+                            ("self" variable nil (reparse-symbol indented_block_body) [66955 66971])
+                            ("for" code nil (reparse-symbol indented_block_body) [66980 67192])
+                            ("if" code nil (reparse-symbol indented_block_body) [67200 67466])
+                            ("if" code nil (reparse-symbol indented_block_body) [67474 67562]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [66836 66840])
+                            ("args" variable nil (reparse-symbol function_parameters) [66842 66847])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [66849 66857]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [66823 67562])
+                    ("repr_flags" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [67581 67585]))                          )
+                        (reparse-symbol indented_block_body) [67566 67715]))                  
+                :type "class")
+                nil [66804 67715])
+            ("Option" type
+               (:superclasses ("OptBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [67788 67834])
+                            ("del" code nil (reparse-symbol indented_block_body) [67843 67864])
+                            ("self" variable nil (reparse-symbol indented_block_body) [67873 67918])
+                            ("del" code nil (reparse-symbol indented_block_body) [67927 67946])
+                            ("OptBase" code nil (reparse-symbol indented_block_body) [67955 67994]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [67756 67760])
+                            ("args" variable nil (reparse-symbol function_parameters) [67762 67767])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [67769 67777]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [67743 67995])
+                    ("apply" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [68009 68013])
+                            ("state" variable nil (reparse-symbol function_parameters) [68015 68020])
+                            ("value" variable nil (reparse-symbol function_parameters) [68022 68027]))                          )
+                        (reparse-symbol indented_block_body) [67999 68182]))                  
+                :type "class")
+                nil [67716 68182])
+            ("OptionArg" type
+               (:superclasses ("OptBase")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [68258 68290])
+                            ("del" code nil (reparse-symbol indented_block_body) [68299 68320])
+                            ("self" variable nil (reparse-symbol indented_block_body) [68329 68378])
+                            ("del" code nil (reparse-symbol indented_block_body) [68387 68408])
+                            ("OptBase" code nil (reparse-symbol indented_block_body) [68417 68456])
+                            ("if" code nil (reparse-symbol indented_block_body) [68466 68633])
+                            ("if" code nil (reparse-symbol indented_block_body) [68641 68715]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [68226 68230])
+                            ("args" variable nil (reparse-symbol function_parameters) [68232 68237])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [68239 68247]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [68213 68715])
+                    ("apply" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [68729 68733])
+                            ("state" variable nil (reparse-symbol function_parameters) [68735 68740])
+                            ("value" variable nil (reparse-symbol function_parameters) [68742 68747]))                          )
+                        (reparse-symbol indented_block_body) [68719 68816])
+                    ("repr_flags" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [68835 68839]))                          )
+                        (reparse-symbol indented_block_body) [68820 68917]))                  
+                :type "class")
+                nil [68183 68917])
+            ("CommandOpts" type
+               (:members 
+                  ( ("Cmd" type
+                       (:members 
+                          ( ("__init__" function
+                               (:suite 
+                                  ( ("self, self, self, self, self" code nil (reparse-symbol indented_block_body) [68999 69060]))                                  
+                                :parent "dummy"
+                                :arguments 
+                                  ( ("self" variable nil (reparse-symbol function_parameters) [68973 68977])
+                                    ("args" variable nil (reparse-symbol function_parameters) [68979 68984]))                                  
+                                :constructor-flag t)
+                                (reparse-symbol indented_block_body) [68960 69061])
+                            ("short_help" function
+                               (:parent "dummy"
+                                :arguments 
+                                  ( ("self" variable nil (reparse-symbol function_parameters) [69084 69088]))                                  )
+                                (reparse-symbol indented_block_body) [69069 69134])
+                            ("__str__" function
+                               (:parent "dummy"
+                                :arguments 
+                                  ( ("self" variable nil (reparse-symbol function_parameters) [69154 69158]))                                  )
+                                (reparse-symbol indented_block_body) [69142 69190])
+                            ("__call__" function
+                               (:parent "dummy"
+                                :arguments 
+                                  ( ("self" variable nil (reparse-symbol function_parameters) [69211 69215])
+                                    ("args" variable nil (reparse-symbol function_parameters) [69217 69222])
+                                    ("kwargs" variable nil (reparse-symbol function_parameters) [69224 69232]))                                  )
+                                (reparse-symbol indented_block_body) [69198 69281]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [68941 69281])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [69369 69389])
+                            ("self" variable nil (reparse-symbol indented_block_body) [69398 69452])
+                            ("self" code nil (reparse-symbol indented_block_body) [69461 69494])
+                            ("self" variable nil (reparse-symbol indented_block_body) [69503 69537])
+                            ("self" variable nil (reparse-symbol indented_block_body) [69546 69573])
+                            ("self" variable nil (reparse-symbol indented_block_body) [69582 69609])
+                            ("self" code nil (reparse-symbol indented_block_body) [69618 69638])
+                            ("for" code nil (reparse-symbol indented_block_body) [69647 70022]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [69299 69303])
+                            ("global_opts" variable nil (reparse-symbol function_parameters) [69305 69316])
+                            ("common_opts" variable nil (reparse-symbol function_parameters) [69318 69329])
+                            ("command_table" variable nil (reparse-symbol function_parameters) [69331 69344])
+                            ("version" variable nil (reparse-symbol function_parameters) [69346 69353]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [69286 70022])
+                    ("_add_builtins" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [70045 70049]))                          )
+                        (reparse-symbol indented_block_body) [70027 70523])
+                    ("_cmd_help" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [70542 70546])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [70548 70551])
+                            ("args" variable nil (reparse-symbol function_parameters) [70558 70563]))                          )
+                        (reparse-symbol indented_block_body) [70528 70801])
+                    ("_paragraph" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [70821 70825])
+                            ("text" variable nil (reparse-symbol function_parameters) [70827 70831])
+                            ("width" variable nil (reparse-symbol function_parameters) [70833 70838]))                          )
+                        (reparse-symbol indented_block_body) [70806 71143])
+                    ("_paragraphs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [71164 71168])
+                            ("text" variable nil (reparse-symbol function_parameters) [71170 71174])
+                            ("args" variable nil (reparse-symbol function_parameters) [71176 71181])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [71183 71191]))                          )
+                        (reparse-symbol indented_block_body) [71148 71425])
+                    ("_print_wrapped" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [71449 71453])
+                            ("text" variable nil (reparse-symbol function_parameters) [71455 71459])
+                            ("indent" variable nil (reparse-symbol function_parameters) [71461 71467]))                          )
+                        (reparse-symbol indented_block_body) [71430 71616])
+                    ("_find_common" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [71638 71642])
+                            ("fl" variable nil (reparse-symbol function_parameters) [71644 71646]))                          )
+                        (reparse-symbol indented_block_body) [71621 71768])
+                    ("_compute_flags" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [71792 71796])
+                            ("opts" variable nil (reparse-symbol function_parameters) [71798 71802])
+                            ("check_conflicts" variable nil (reparse-symbol function_parameters) [71804 71819]))                          )
+                        (reparse-symbol indented_block_body) [71773 72479])
+                    ("_extract_command" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [72505 72509])
+                            ("args" variable nil (reparse-symbol function_parameters) [72511 72515]))                          
+                        :documentation "
+        Try to extract the command name from the argument list. This is
+        non-trivial because we want to allow command-specific options even
+        before the command itself.
+        ")
+                        (reparse-symbol indented_block_body) [72484 73037])
+                    ("_fancy_getopt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [73060 73064])
+                            ("args" variable nil (reparse-symbol function_parameters) [73066 73070])
+                            ("opts" variable nil (reparse-symbol function_parameters) [73072 73076])
+                            ("state" variable nil (reparse-symbol function_parameters) [73078 73083]))                          )
+                        (reparse-symbol indented_block_body) [73042 73703])
+                    ("_command" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [73721 73725])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [73727 73730]))                          )
+                        (reparse-symbol indented_block_body) [73708 73860])
+                    ("parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [73875 73879])
+                            ("args" variable nil (reparse-symbol function_parameters) [73881 73885]))                          )
+                        (reparse-symbol indented_block_body) [73865 74836])
+                    ("error" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [74851 74855])
+                            ("s" variable nil (reparse-symbol function_parameters) [74857 74858])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [74860 74863]))                          )
+                        (reparse-symbol indented_block_body) [74841 75068])
+                    ("print_small_help" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [75093 75097]))                          )
+                        (reparse-symbol indented_block_body) [75072 75157])
+                    ("print_usage_line" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [75182 75186]))                          )
+                        (reparse-symbol indented_block_body) [75161 75269])
+                    ("print_command_list" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [75296 75300]))                          )
+                        (reparse-symbol indented_block_body) [75273 75662])
+                    ("print_command_help" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [75689 75693])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [75695 75698]))                          )
+                        (reparse-symbol indented_block_body) [75666 76273])
+                    ("print_version" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [76296 76300]))                          )
+                        (reparse-symbol indented_block_body) [76278 76330]))                  
+                :type "class")
+                nil [68918 76330])
+            ("global_opts" variable nil nil [76527 77577])
+            ("common_opts" variable nil nil [77579 78965])
+            ("command_table" variable nil nil [78967 85363])
+            ("main" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [85375 85379]))              ) nil [85366 90661])
+            ("if" code nil nil [90663 91039]))          
+      :file "svnmerge.py"
+      :pointmax 91039
+      :fsize 91038
+      :lastmodtime '(21160 20996 348034 835000)
+      :unmatched-syntax nil)
+    (semanticdb-table "svnbranch.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("shutil" include nil nil [436 495])
+            ("tempfile" include nil nil [436 495])
+            ("popen2" include nil nil [436 495])
+            ("types" include nil nil [436 495])
+            ("re" include nil nil [436 495])
+            ("getopt" include nil nil [436 495])
+            ("os" include nil nil [436 495])
+            ("sys" include nil nil [436 495])
+            ("NAME" variable nil nil [497 515])
+            ("if" code nil nil [516 624])
+            ("SVNMERGE" variable nil nil [625 646])
+            ("TMP" variable nil nil [647 671])
+            ("CWD" variable nil nil [672 689])
+            ("lstrip" function
+               (:documentation "Replacement for str.lstrip (support for arbitrary chars to strip was
+    added in Python 2.2.2)."
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [702 703])
+                    ("ch" variable nil (reparse-symbol function_parameters) [705 707]))                  )
+                nil [691 944])
+            ("rstrip" function
+               (:documentation "Replacement for str.rstrip (support for arbitrary chars to strip was
+    added in Python 2.2.2)."
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [956 957])
+                    ("ch" variable nil (reparse-symbol function_parameters) [959 961]))                  )
+                nil [945 1250])
+            ("strip" function
+               (:documentation "Replacement for str.strip (support for arbitrary chars to strip was
+    added in Python 2.2.2)."
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [1261 1262])
+                    ("ch" variable nil (reparse-symbol function_parameters) [1264 1266]))                  )
+                nil [1251 1412])
+            ("kwextract" function
+               (:documentation "Extract info from a svn keyword string."
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [1427 1428]))                  )
+                nil [1413 1592])
+            ("__revision__" variable nil nil [1593 1632])
+            ("__date__" variable nil nil [1633 1710])
+            ("cleanup" function nil nil [1712 1774])
+            ("error" function
+               (:documentation "Subroutine to output an error and bail."
+                :arguments 
+                  ( ("s" variable nil (reparse-symbol function_parameters) [1785 1786]))                  )
+                nil [1775 1915])
+            ("LaunchError" type
+               (:documentation "Signal a failure in execution of an external command. Parameters are the
+    exit code of the process, the original command line, and the output of the
+    command."
+                :superclasses ("Exception")
+                :type "class")
+                nil [1916 2121])
+            ("launch" function
+               (:documentation "Launch a sub-process. Return its output (both stdout and stderr),
+    optionally split by lines (if split_lines is True). Raise a LaunchError
+    exception if the exit code of the process is non-zero (failure)."
+                :arguments 
+                  ( ("cmd" variable nil (reparse-symbol function_parameters) [2133 2136])
+                    ("split_lines" variable nil (reparse-symbol function_parameters) [2138 2149]))                  )
+                nil [2122 2947])
+            ("quitIfBranchAlreadyExists" function (:arguments 
+              ( ("branch" variable nil (reparse-symbol function_parameters) [2982 2988]))              ) nil [2952 3216])
+            ("copySourceToNewBranch" function (:arguments 
+              ( ("branch" variable nil (reparse-symbol function_parameters) [3243 3249])
+                ("src" variable nil (reparse-symbol function_parameters) [3251 3254])
+                ("svnComment" variable nil (reparse-symbol function_parameters) [3256 3266]))              ) nil [3217 3354])
+            ("checkoutSource" function (:arguments 
+              ( ("src" variable nil (reparse-symbol function_parameters) [3374 3377]))              ) nil [3355 3506])
+            ("initializeMergeInfoInSource" function (:arguments 
+              ( ("branch" variable nil (reparse-symbol function_parameters) [3539 3545])
+                ("svnComment" variable nil (reparse-symbol function_parameters) [3547 3557]))              ) nil [3507 3941])
+            ("switchToNewBranch" function (:arguments 
+              ( ("branch" variable nil (reparse-symbol function_parameters) [3964 3970]))              ) nil [3942 4069])
+            ("initializeMergeInfoInNewBranch" function (:arguments 
+              ( ("src" variable nil (reparse-symbol function_parameters) [4105 4108])
+                ("svnComment" variable nil (reparse-symbol function_parameters) [4110 4120]))              ) nil [4070 4495])
+            ("createNewBranch" function (:arguments 
+              ( ("src" variable nil (reparse-symbol function_parameters) [4516 4519])
+                ("branch" variable nil (reparse-symbol function_parameters) [4521 4527])
+                ("svnComment" variable nil (reparse-symbol function_parameters) [4529 4539]))              ) nil [4496 5129])
+            ("checkIfSvnmergeIsInPath" function nil nil [5130 5393])
+            ("main" function (:arguments 
+              ( ("args" variable nil (reparse-symbol function_parameters) [5404 5408]))              ) nil [5395 6245])
+            ("if" code nil nil [6246 6629]))          
+      :file "svnbranch.py"
+      :pointmax 6630
+      :fsize 6629
+      :lastmodtime '(21160 21326 205490 416000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!cyclades!tmp!scripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

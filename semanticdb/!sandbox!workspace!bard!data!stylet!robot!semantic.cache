@@ -1,0 +1,24 @@
+;; Object robot/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "robot/"
+  :tables
+  (list
+    (semanticdb-table "encode.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("numpy" include nil nil [11 30])
+            ("pandas" include nil nil [31 51])
+            ("struct" include nil nil [52 65])
+            ("re" include nil nil [66 75])
+            ("inp" variable nil nil [77 87])
+            ("out" variable nil nil [88 110])
+            ("if" code nil nil [112 892]))          
+      :file "encode.py"
+      :pointmax 907
+      :fsize 906
+      :lastmodtime '(21907 49259 287415 444000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!bard!data!stylet!robot!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

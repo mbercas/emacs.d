@@ -1,0 +1,1050 @@
+;; Object Optimist/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Optimist/"
+  :tables
+  (list
+    (semanticdb-table "nd_optimizerNeedle.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ND_OPTIMIZERNEEDLE_HPP_" variable (:constant-flag t) nil [153 176])
+            ("nd_common.hpp" include nil nil [178 202])
+            ("nd_optimizer.hpp" include nil nil [203 230])
+            ("nd_needleModel.hpp" include nil nil [231 260])
+            ("nd_needleField.hpp" include nil nil [261 290])
+            ("Sensor" type
+               (:prototype t
+                :type "class")
+                nil [458 471])
+            ("ndNeedleConstrainIndex" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("ND_CONSTRAIN_NEEDLE_LEN" variable
+                             (:constant-flag t
+                              :default-value (611 612)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [582 612])
+                          ("ND_CONSTRAIN_MAGNETIZATION" variable
+                             (:constant-flag t
+                              :default-value (651 652)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [622 652])
+                          ("ND_NUMBER_OF_CONSTRAINS" variable
+                             (:constant-flag t
+                              :default-value (684 685)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [655 685]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [566 711])
+            ("NeedleField" type
+               (:prototype t
+                :type "class")
+                nil [856 874])
+            ("OptimizerNeedle" type
+               (:superclasses 
+                  ( ("Optimizer" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1111 1118])
+                    ("OptimizerNeedle" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("numValues" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1897 1920])
+                            ("numParameters" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1921 1949]))                          
+                        :type ("OptimizerNeedle" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1880 1950])
+                    ("UpdateEstimates" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("parameters" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2391 2431]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2361 2432])
+                    ("IsOptimizerCheckPassed" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("parameters" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2474 2513]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2437 2514])
+                    ("SetupNeedleField" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sensors" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Sensor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2764 2788]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2741 2789])
+                    ("CalculateNeedle" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("reuseTheNeedle" variable (:type "bool") (reparse-symbol arg-sub-list) [3473 3507])
+                            ("calculatedNeedle" variable
+                               (:reference 1
+                                :type ("NeedleModelIface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3517 3557]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3442 3558])
+                    ("SetNeedleLength" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("len_" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3755 3781]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3733 3782])
+                    ("SetSquaredMaxDistance" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("newSquaredMaxDistance" variable
+                               (:constant-flag t
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3813 3854]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3785 3855])
+                    ("SetMagnetizationForce" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("mag_" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4087 4113]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4059 4114])
+                    ("GetValidConstrainVector" function
+                       (:prototype-flag t
+                        :type ("bool_vector_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4245 4299])
+                    ("SetValidConstrainVector" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("validConstrains" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("bool_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5034 5078])
+                            ("constrainWeights" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5082 5131]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5001 5132])
+                    ("SetValidSensors" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("validSensors_" variable
+                               (:reference 1
+                                :type ("bool_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5543 5574]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5521 5575])
+                    ("GetWeights" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("precision_vector_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5683 5727])
+                    ("GetNumberOfConstrains" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [5838 5882])
+                    ("GetBiggestFieldSensorIndex" function
+                       (:prototype-flag t
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6195 6233])
+                    ("SetInitialNeedle" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("needle" variable
+                               (:reference 1
+                                :type ("NeedleModelIface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6787 6814]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6764 6815])
+                    ("GetInitialNeedleFirstPoint" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("point" variable (:type ("precision_vector_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6865 6891]))                          
+                        :type ("precision_vector_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6818 6892])
+                    ("GetInitialNeedleSecondPoint" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("firstPoint" variable (:type ("precision_vector_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6942 6973]))                          
+                        :type ("precision_vector_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6894 6974])
+                    ("GetGradientSquareAmplitude" function
+                       (:prototype-flag t
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7138 7185])
+                    ("GetRelativeResidual" function
+                       (:prototype-flag t
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7341 7381])
+                    ("SetStartNeedle" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("startNeedle" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("NeedleModel" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7405 7438]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7384 7439])
+                    ("protected" label nil (reparse-symbol classsubparts) [7441 7451])
+                    ("CalculateNewWeights" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("validSensors_" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("bool_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7986 8023]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7960 8024])
+                    ("CalculateGradientAmplitude" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [8105 8139])
+                    ("GetHighestGradient" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("validSensors_" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("bool_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8413 8450]))                          
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [8380 8451])
+                    ("currentNeedle" variable (:type ("NeedleModel" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8458 8484])
+                    ("magForce" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8594 8616])
+                    ("needleLength" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8721 8747])
+                    ("squaredMaxDistance" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8917 8948])
+                    ("numberOfConstrains" variable (:type "unsigned int") (reparse-symbol classsubparts) [9080 9112])
+                    ("validConstrainVector" variable (:type ("bool_vector_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9239 9274])
+                    ("needleField" variable (:type ("NeedleField" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9313 9337])
+                    ("gradientSqAmplitude" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9385 9417])
+                    ("validMeasForGradientSqAmp" variable (:type "unsigned int") (reparse-symbol classsubparts) [9523 9561])
+                    ("sensorsPositions" variable (:type ("Sensor" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9564 9588]))                  
+                :type "class")
+                nil [1033 9591]))          
+      :file "nd_optimizerNeedle.hpp"
+      :pointmax 9632
+      :fsize 9820
+      :lastmodtime '(21379 17351 171788 885000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ND_OPTIMIZERNEEDLE_HPP_")
+          )
+)
+    (semanticdb-table "nd_common.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ND_COMMON_HPP_" variable (:constant-flag t) nil [109 123])
+            ("vector" include (:system-flag t) nil [125 142])
+            ("int16_t" type
+               (:typedef ("short")
+                :superclasses "short"
+                :type "typedef")
+                nil [218 254])
+            ("uint16_t" type
+               (:typedef ("unsigned short")
+                :superclasses "unsigned short"
+                :type "typedef")
+                nil [256 293])
+            ("int32_t" type
+               (:typedef ("int")
+                :superclasses "int"
+                :type "typedef")
+                nil [295 331])
+            ("uint32_t" type
+               (:typedef ("unsigned int")
+                :superclasses "unsigned int"
+                :type "typedef")
+                nil [333 370])
+            ("optimization_exit_t" type
+               (:members 
+                  ( ("OPTIMIZATION_EXIT_SUCCESS" variable
+                       (:constant-flag t
+                        :default-value (661 662)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [620 662])
+                    ("OPTIMIZATION_EXIT_LAMBDA_TOO_SMALL" variable
+                       (:constant-flag t
+                        :default-value (706 707)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [665 707])
+                    ("OPTIMIZATION_EXIT_LAMBDA_TOO_BIG" variable
+                       (:constant-flag t
+                        :default-value (751 752)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [710 752])
+                    ("OPTIMIZATION_EXIT_TOO_MANY_ITERATIONS" variable
+                       (:constant-flag t
+                        :default-value (796 797)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [755 797])
+                    ("OPTIMIZATION_EXIT_NEEDLE_TOO_FAR" variable
+                       (:constant-flag t
+                        :default-value (841 842)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [800 842])
+                    ("OPTIMIZATION_EXIT_NO_SOLUTION" variable
+                       (:constant-flag t
+                        :default-value (886 887)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [845 887])
+                    ("OPTIMIZATION_EXIT_NOT_INITIALIZED" variable
+                       (:constant-flag t
+                        :default-value (930 932)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [890 932]))                  
+                :type "enum")
+                nil [592 935])
+            ("SupervisorState_t" type
+               (:members 
+                  ( ("NEEDLE_TRACKED" variable
+                       (:constant-flag t
+                        :default-value (1139 1140)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1105 1140])
+                    ("NEDDLE_CENTER_INSIDE_PROBE" variable
+                       (:constant-flag t
+                        :default-value (1177 1178)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1143 1178])
+                    ("NEEDLE_TIP_INSIDE_PROBE" variable
+                       (:constant-flag t
+                        :default-value (1215 1216)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1181 1216])
+                    ("NEEDLE_END_INSIDE_PROBE" variable
+                       (:constant-flag t
+                        :default-value (1253 1254)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1219 1254])
+                    ("NEEDLE_FULLY_INSIDE_BODY" variable
+                       (:constant-flag t
+                        :default-value (1291 1292)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1257 1292])
+                    ("NEEDLE_TOO_FAR_AWAY" variable
+                       (:constant-flag t
+                        :default-value (1329 1330)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1295 1330])
+                    ("NEEDLE_TOO_SHORT" variable
+                       (:constant-flag t
+                        :default-value (1367 1368)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1333 1368])
+                    ("NEEDLE_TOO_LONG" variable
+                       (:constant-flag t
+                        :default-value (1405 1406)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1371 1406])
+                    ("NEEDLE_MAGNETIZATION_TOO_SMALL" variable
+                       (:constant-flag t
+                        :default-value (1443 1444)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1409 1444])
+                    ("NEEDLE_MAGNETIZATION_TOO_BIG" variable
+                       (:constant-flag t
+                        :default-value (1481 1482)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1447 1482])
+                    ("NEEDLE_NOISE" variable
+                       (:constant-flag t
+                        :default-value (1518 1520)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1485 1520])
+                    ("NEEDLE_RESIDUAL_TOO_HIGH" variable
+                       (:constant-flag t
+                        :default-value (1556 1558)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1523 1558]))                  
+                :type "enum")
+                nil [1079 1561])
+            ("precision_t" type
+               (:typedef ("float")
+                :superclasses "float"
+                :type "typedef")
+                nil [1623 1685])
+            ("precision_vector_t" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("precision_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::vector"
+                :type "typedef")
+                nil [1728 1797])
+            ("precision_matrix_t" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::vector"
+                :type "typedef")
+                nil [1850 1919])
+            ("precision_vector_it" type
+               (:typedef ("precision_vector_t::iterator" type (:type "class") nil nil)
+                :superclasses "precision_vector_t::iterator"
+                :type "typedef")
+                nil [1958 2028])
+            ("precision_vector_const_it" type
+               (:typedef ("precision_vector_t::const_iterator" type (:type "class") nil nil)
+                :superclasses "precision_vector_t::const_iterator"
+                :type "typedef")
+                nil [2077 2153])
+            ("precision_matrix_it" type
+               (:typedef ("precision_matrix_t::iterator" type (:type "class") nil nil)
+                :superclasses "precision_matrix_t::iterator"
+                :type "typedef")
+                nil [2234 2304])
+            ("precision_matrix_const_it" type
+               (:typedef ("precision_matrix_t::const_iterator" type (:type "class") nil nil)
+                :superclasses "precision_matrix_t::const_iterator"
+                :type "typedef")
+                nil [2363 2439])
+            ("precision_3d_matrix_t" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("precision_matrix_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::vector"
+                :type "typedef")
+                nil [2518 2582])
+            ("precision_3d_matrix_it" type
+               (:typedef ("precision_3d_matrix_t::iterator" type (:type "class") nil nil)
+                :superclasses "precision_3d_matrix_t::iterator"
+                :type "typedef")
+                nil [2624 2687])
+            ("precision_3d_matrix_const_it" type
+               (:typedef ("precision_3d_matrix_t::const_iterator" type (:type "class") nil nil)
+                :superclasses "precision_3d_matrix_t::const_iterator"
+                :type "typedef")
+                nil [2735 2810])
+            ("bool_vector_t" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("unsigned char" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::vector"
+                :type "typedef")
+                nil [2843 2892])
+            ("bool_vector_it" type
+               (:typedef ("bool_vector_t::iterator" type (:type "class") nil nil)
+                :superclasses "bool_vector_t::iterator"
+                :type "typedef")
+                nil [2937 2984])
+            ("bool_vector_const_it" type
+               (:typedef ("bool_vector_t::const_iterator" type (:type "class") nil nil)
+                :superclasses "bool_vector_t::const_iterator"
+                :type "typedef")
+                nil [3025 3084])
+            ("SensorPosArr" function
+               (:constant-flag t
+                :arguments 
+                  ( ("" variable (:type ("SensorsPosArr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3154 3168]))                  
+                :type "int")
+                nil [3134 3172])
+            ("op_division_by2" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("input" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3212 3231]))                  
+                :type ("precision_t" type (:type "class") nil nil))
+                nil [3176 3256])
+            ("op_sum" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("a" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3284 3298])
+                    ("b" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3299 3314]))                  
+                :type ("precision_t" type (:type "class") nil nil))
+                nil [3257 3333])
+            ("op_subtract" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("a" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3366 3380])
+                    ("b" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3381 3396]))                  
+                :type ("precision_t" type (:type "class") nil nil))
+                nil [3334 3415])
+            ("op_inv_substract" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("a" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3453 3467])
+                    ("b" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3468 3483]))                  
+                :type ("precision_t" type (:type "class") nil nil))
+                nil [3416 3502])
+            ("op_median" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("a" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3533 3547])
+                    ("b" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3548 3563]))                  
+                :type ("precision_t" type (:type "class") nil nil))
+                nil [3503 3590])
+            ("op_multiply" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("a" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3623 3637])
+                    ("b" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3638 3653]))                  
+                :type ("precision_t" type (:type "class") nil nil))
+                nil [3591 3672]))          
+      :file "nd_common.hpp"
+      :pointmax 3702
+      :fsize 3746
+      :lastmodtime '(21379 17351 253789 404000)
+      :unmatched-syntax '((punctuation 3172 . 3173) (TYPEDEF 3126 . 3133) (punctuation 3124 . 3125) (semantic-list 3121 . 3124) (semantic-list 3107 . 3121) (FLOAT 3101 . 3106) (CONST 3095 . 3100) (TYPEDEF 3087 . 3094))
+      :lexical-table 
+        '(("ND_COMMON_HPP_")
+          )
+)
+    (semanticdb-table "nd_optimizer.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ND_OPTIMIZER_HPP_" variable (:constant-flag t) nil [281 298])
+            ("nd_common.hpp" include nil nil [300 324])
+            ("vector" include (:system-flag t) nil [326 343])
+            ("Optimizer" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [508 515])
+                    ("Optimizer" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("numMeasurementValues_" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [531 566])
+                            ("numParametersToFit_" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [571 611]))                          
+                        :type ("Optimizer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [519 612])
+                    ("Optimizer" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [615 636])
+                    ("GetNumMeasurementValues" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [639 684])
+                    ("GetNumParametersToFit" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [686 731])
+                    ("SetLambda" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [758 771]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [734 772])
+                    ("GetLambda" function
+                       (:prototype-flag t
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [774 819])
+                    ("SetStep" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [844 857]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [822 858])
+                    ("GetStep" function
+                       (:prototype-flag t
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [860 905])
+                    ("SetMaxIterationsCount" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [944 958]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [908 959])
+                    ("GetMaxIterationsCount" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [961 1008])
+                    ("GetCurrentIterationCount" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [1011 1057])
+                    ("SetShrink" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1129 1142]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1106 1143])
+                    ("GetShrink" function
+                       (:prototype-flag t
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1146 1176])
+                    ("GetLambdaExpand" function
+                       (:prototype-flag t
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1179 1215])
+                    ("SetParameterTolerance" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1253 1266]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1218 1267])
+                    ("GetParameterTolerance" function
+                       (:prototype-flag t
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1269 1311])
+                    ("SetValues" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("valuesPtr" variable
+                               (:pointer 1
+                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1338 1370]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1314 1371])
+                    ("SetWeights" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("inputWeights" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1397 1438]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1373 1439])
+                    ("GetResiduals" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("precision_vector_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1442 1489])
+                    ("protected" label nil (reparse-symbol classsubparts) [1491 1501])
+                    ("numDependentVariables" variable (:type "unsigned int") (reparse-symbol classsubparts) [1626 1661])
+                    ("numParametersToFit" variable (:type "unsigned int") (reparse-symbol classsubparts) [1755 1787])
+                    ("public" label nil (reparse-symbol classsubparts) [1790 1797])
+                    ("itCount" variable (:type "unsigned int") (reparse-symbol classsubparts) [1888 1909])
+                    ("protected" label nil (reparse-symbol classsubparts) [1911 1921])
+                    ("itMax" variable (:type "unsigned int") (reparse-symbol classsubparts) [2015 2034])
+                    ("gradStep" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2086 2108])
+                    ("lambdaStart" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2150 2175])
+                    ("lambdaShrink" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2277 2303])
+                    ("lambdaExpand" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2386 2412])
+                    ("lambdaMax" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2451 2474])
+                    ("lambdaMin" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2517 2540])
+                    ("parameterTolerance" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2616 2648])
+                    ("currentResidual" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2694 2723])
+                    ("pValues" variable
+                       (:pointer 1
+                        :type ("precision_vector_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2966 2995])
+                    ("estimates" variable (:type ("precision_vector_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3173 3202])
+                    ("weights" variable (:type ("precision_vector_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3347 3374])
+                    ("residuals" variable (:type ("precision_vector_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3493 3522])
+                    ("cholesky" variable (:type ("precision_matrix_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3714 3742])
+                    ("transposedJacobian" variable (:type ("precision_matrix_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3847 3885])
+                    ("alpha" variable (:type ("precision_matrix_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4000 4025])
+                    ("aPrime" variable (:type ("precision_matrix_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4119 4145])
+                    ("beta" variable (:type ("precision_vector_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4239 4263])
+                    ("exitType" variable (:type ("optimization_exit_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4636 4665])
+                    ("UpdateEstimates" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("parameters" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5065 5106]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5035 5111])
+                    ("IsOptimizerCheckPassed" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("parameters" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5156 5195]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5119 5200])
+                    ("public" label nil (reparse-symbol classsubparts) [5202 5209])
+                    ("CalculateJacobian" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("params" variable
+                               (:reference 1
+                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5436 5465]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5412 5466])
+                    ("CalculateResidual" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [5576 5601])
+                    ("public" label nil (reparse-symbol classsubparts) [5603 5610])
+                    ("GetResidual" function
+                       (:prototype-flag t
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5692 5724])
+                    ("CholeskyInverse" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("matrix" variable
+                               (:reference 1
+                                :type ("precision_matrix_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5844 5873]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5822 5874])
+                    ("CalculateCholesky" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("matrix" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("precision_matrix_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5904 5939]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5880 5940])
+                    ("Optimize" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("parameters" variable
+                               (:reference 1
+                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5961 5994]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5946 5995])
+                    ("GetExitType" function
+                       (:prototype-flag t
+                        :type ("optimization_exit_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6001 6041]))                  
+                :type "class")
+                nil [489 6045]))          
+      :file "nd_optimizer.hpp"
+      :pointmax 6078
+      :fsize 6077
+      :lastmodtime '(21379 17351 168788 867000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ND_OPTIMIZER_HPP_")
+          )
+)
+    (semanticdb-table "nd_needleModel.hpp"
+      :file "nd_needleModel.hpp"
+      :fsize 5128
+      :lastmodtime '(21399 6022 913469 181000))
+    (semanticdb-table "nd_needleField.hpp"
+      :file "nd_needleField.hpp"
+      :fsize 3112
+      :lastmodtime '(21379 17351 81788 316000))
+    (semanticdb-table "optimist.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("OPTIMIST_HPP" variable (:constant-flag t) nil [613 625])
+            ("nd_calibration.hpp" include nil nil [701 730])
+            ("nd_constants.hpp" include nil nil [731 758])
+            ("nd_needleModel.hpp" include nil nil [759 788])
+            ("nd_optimizerNeedle.hpp" include nil nil [789 822])
+            ("nd_inputSupervisor.hpp" include nil nil [823 856])
+            ("nd_outputSupervisor.hpp" include nil nil [857 891])
+            ("nd_processingBuffer.hpp" include nil nil [892 926])
+            ("nd_sensor.hpp" include nil nil [927 951])
+            ("NeedleSensorsPositions.hpp" include nil nil [952 989]))          
+      :file "optimist.hpp"
+      :pointmax 1044
+      :fsize 1043
+      :lastmodtime '(21379 17351 77788 291000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("OPTIMIST_HPP")
+          )
+)
+    (semanticdb-table "nd_calibration.hpp"
+      :file "nd_calibration.hpp"
+      :fsize 1837
+      :lastmodtime '(21379 17351 259789 442000))
+    (semanticdb-table "nd_constants.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ND_CONSTANTS_HPP_" variable (:constant-flag t) nil [96 113])
+            ("nd_common.hpp" include nil nil [115 139])
+            ("ndt" type
+               (:members 
+                  ( ("C_NUMBER_OF_SENSORS" variable
+                       (:constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol namespacesubparts) [254 314])
+                    ("C_NUMBER_COORDS_PER_SENSOR" variable
+                       (:constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol namespacesubparts) [316 376])
+                    ("C_NUMBER_OF_FIELD_MEASUREMENTS" variable
+                       (:constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol namespacesubparts) [378 482])
+                    ("C_NUMBER_OF_CONSTRAINS" variable
+                       (:constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol namespacesubparts) [484 544])
+                    ("C_NUMBER_OF_ESTIMATED_PARAMS" variable
+                       (:constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol namespacesubparts) [546 606])
+                    ("C_NUMBER_OF_GOAL_PARAMETERS" variable
+                       (:constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol namespacesubparts) [609 720])
+                    ("C_SENSOR_SATURATION_VALUE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [723 784])
+                    ("C_VERY_SMALL_PRECISION_NUMBER" variable
+                       (:constant-flag t
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [804 863])
+                    ("C_SMALL_PRECISION_NUMBER" variable
+                       (:constant-flag t
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [865 923])
+                    ("MAGNETIZATION_SCALE_FACTOR" variable
+                       (:constant-flag t
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [926 986])
+                    ("DEFAULT_CONSTRAIN_WEIGHT" variable
+                       (:constant-flag t
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [989 1046])
+                    ("IMPORTANT_CONSTRAIN_WEIGHT" variable
+                       (:constant-flag t
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1048 1105])
+                    ("RANDOM_NEEDLE_DISTANCE_TO_CENTER" variable
+                       (:constant-flag t
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1111 1170])
+                    ("RANDOM_NEEDLE_SMALL_LENGTH" variable
+                       (:constant-flag t
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1175 1227]))                  
+                :type "namespace")
+                nil [142 1230]))          
+      :file "nd_constants.hpp"
+      :pointmax 1284
+      :fsize 1414
+      :lastmodtime '(21379 17351 88788 360000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ND_CONSTANTS_HPP_")
+          )
+)
+    (semanticdb-table "nd_inputSupervisor.hpp"
+      :file "nd_inputSupervisor.hpp"
+      :fsize 1288
+      :lastmodtime '(21379 17351 178788 930000))
+    (semanticdb-table "nd_outputSupervisor.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ND_OUPUTSUPERVISOR_HPP_" variable (:constant-flag t) nil [129 152])
+            ("nd_common.hpp" include nil nil [154 178])
+            ("nd_needleModel.hpp" include nil nil [179 208])
+            ("OutputSupervisor" type
+               (:prototype t
+                :type "class")
+                nil [290 313])
+            ("SupervisorState_t" function
+               (:arguments 
+                  ( ("" variable (:type ("OutputSupervisor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [344 361])
+                    ("" variable (:type ("ConstrainCheckCb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [363 380]))                  
+                :type "int")
+                nil [325 382])
+            ("OutputSupervisor" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [417 424])
+                    ("OutputSupervisor" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("OutputSupervisor" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [429 448])
+                    ("OutputSupervisor" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [453 473])
+                    ("EnableAllConstrains" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [527 554])
+                    ("CheckNeedleDetected" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("needle_" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("NeedleModel" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [884 913]))                          
+                        :type ("SupervisorState_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [845 914])
+                    ("EnableNeedleCoordinatesMagnitudeCheck" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [989 1034])
+                    ("EnableNeedleLengthCheck" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1093 1124])
+                    ("EnableNeedleMagnetizationCheck" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1190 1228])
+                    ("EnableResidualCheck" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1286 1313])
+                    ("EnableNeedleFlippedCheck" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1373 1405])
+                    ("SetProbeBodyConstrainVolume" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("length" variable
+                               (:constant-flag t
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2064 2089])
+                            ("width" variable
+                               (:constant-flag t
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2098 2122])
+                            ("height" variable
+                               (:constant-flag t
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2131 2165]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2022 2166])
+                    ("SetMaxCoordinateConstrain" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("maxCoordValue" variable
+                               (:constant-flag t
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2503 2536]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2471 2537])
+                    ("SetNeedleLengthConstrains" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("minLength" variable
+                               (:constant-flag t
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2931 2959])
+                            ("maxLength" variable
+                               (:constant-flag t
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2960 2997]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2891 2998])
+                    ("SetNeedleMagnetizationConstrains" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("minMagnetization" variable
+                               (:constant-flag t
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3403 3438])
+                            ("maxMagnetization" variable
+                               (:constant-flag t
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3447 3491]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3356 3492])
+                    ("SetResidualConstrains" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("residual" variable
+                               (:constant-flag t
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3704 3732]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3676 3733])
+                    ("private" label nil (reparse-symbol classsubparts) [3735 3743])
+                    ("NeedleCoordinatesMagnitudeCheck" function
+                       (:prototype-flag t
+                        :type ("SupervisorState_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4049 4107])
+                    ("NeedleLengthCheck" function
+                       (:prototype-flag t
+                        :type ("SupervisorState_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4500 4544])
+                    ("NeedleMagnetizationCheck" function
+                       (:prototype-flag t
+                        :type ("SupervisorState_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5018 5069])
+                    ("NeedleFlippedCheck" function
+                       (:prototype-flag t
+                        :type ("SupervisorState_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5376 5421])
+                    ("RelativeResidualCheck" function
+                       (:prototype-flag t
+                        :type ("SupervisorState_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5527 5575])
+                    ("constrains" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("ConstrainCheckCb" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5648 5691])
+                    ("currentNeedle" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("NeedleModel" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5720 5754])
+                    ("probeFaceLength" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6032 6060])
+                    ("probeFaceWidth" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6211 6238])
+                    ("probeCaseHeight" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6391 6419])
+                    ("maxCoord" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6684 6705])
+                    ("minNeedleLength" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6810 6838])
+                    ("maxNeedleLength" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6943 6971])
+                    ("minNeedleMagnetization" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7092 7127])
+                    ("maxNeedleMagnetization" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7248 7283])
+                    ("maxResidual" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7431 7455]))                  
+                :type "class")
+                nil [392 7459]))          
+      :file "nd_outputSupervisor.hpp"
+      :pointmax 7498
+      :fsize 7497
+      :lastmodtime '(21379 17351 240789 322000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ND_OUPUTSUPERVISOR_HPP_")
+          )
+)
+    (semanticdb-table "nd_processingBuffer.hpp"
+      :file "nd_processingBuffer.hpp"
+      :fsize 2688
+      :lastmodtime '(21379 17351 182788 955000))
+    (semanticdb-table "nd_sensor.hpp"
+      :file "nd_sensor.hpp"
+      :fsize 978
+      :lastmodtime '(21379 17351 69788 240000))
+    (semanticdb-table "NeedleSensorsPositions.hpp"
+      :file "NeedleSensorsPositions.hpp"
+      :fsize 724
+      :lastmodtime '(21379 17351 180788 942000)))
+  :file "!sandbox!workspace!cyclades!trunk!development!ext!Optimist!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

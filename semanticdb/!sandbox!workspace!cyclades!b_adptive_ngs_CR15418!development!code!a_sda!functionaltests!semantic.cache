@@ -1,0 +1,537 @@
+;; Object functionaltests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "functionaltests/"
+  :tables
+  (list
+    (semanticdb-table "param_analizer.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [21 40])
+            ("pylab" include nil nil [41 60])
+            ("mpl_toolkits.mplot3d" include nil nil [62 101])
+            ("dataRoot" variable nil nil [103 139])
+            ("SaveResults" function nil nil [142 951])
+            ("PlotInputData" function (:arguments 
+              ( ("r" variable nil (reparse-symbol function_parameters) [971 972])
+                ("iData" variable nil (reparse-symbol function_parameters) [974 979])
+                ("disp" variable nil (reparse-symbol function_parameters) [981 985])
+                ("dispVar" variable nil (reparse-symbol function_parameters) [987 994])
+                ("zData" variable nil (reparse-symbol function_parameters) [996 1001]))              ) nil [952 1510])
+            ("OnZoom" function
+               (:documentation "
+    Event handler for the zoom, when the linear windows zoom restrict the
+    number of poinst displayed in the cuarants plots to those in the range
+    of the other plots
+    "
+                :arguments 
+                  ( ("event" variable nil (reparse-symbol function_parameters) [1523 1528]))                  )
+                nil [1511 1858])
+            ("PlotCuadrantsRanged" function nil nil [1860 4292])
+            ("PlotCuadrants" function (:arguments 
+              ( ("tipPri" variable nil (reparse-symbol function_parameters) [4319 4325])
+                ("endPri" variable nil (reparse-symbol function_parameters) [4327 4333])
+                ("locked" variable nil (reparse-symbol function_parameters) [4335 4341])
+                ("notLocked" variable nil (reparse-symbol function_parameters) [4343 4352]))              ) nil [4300 5972])
+            ("PlotPriAndSec" function (:arguments 
+              ( ("tipPri" variable nil (reparse-symbol function_parameters) [5992 5998])
+                ("endPri" variable nil (reparse-symbol function_parameters) [6000 6006])
+                ("tipSec" variable nil (reparse-symbol function_parameters) [6008 6014])
+                ("endSec" variable nil (reparse-symbol function_parameters) [6016 6022])
+                ("locked" variable nil (reparse-symbol function_parameters) [6024 6030])
+                ("notLocked" variable nil (reparse-symbol function_parameters) [6032 6041])
+                ("iax" variable nil (reparse-symbol function_parameters) [6043 6046]))              ) nil [5973 7124])
+            ("PlotEstimates" function (:arguments 
+              ( ("tipPri" variable nil (reparse-symbol function_parameters) [7147 7153])
+                ("endPri" variable nil (reparse-symbol function_parameters) [7155 7161])
+                ("magPri" variable nil (reparse-symbol function_parameters) [7163 7169])
+                ("len_" variable nil (reparse-symbol function_parameters) [7171 7175])
+                ("resPri" variable nil (reparse-symbol function_parameters) [7177 7183])
+                ("locked" variable nil (reparse-symbol function_parameters) [7185 7191])
+                ("notLocked" variable nil (reparse-symbol function_parameters) [7193 7202])
+                ("magSec" variable nil (reparse-symbol function_parameters) [7204 7210])
+                ("resSec" variable nil (reparse-symbol function_parameters) [7212 7218])
+                ("iax" variable nil (reparse-symbol function_parameters) [7220 7223]))              ) nil [7128 8544])
+            ("Plot3D" function (:arguments 
+              ( ("tipPri" variable nil (reparse-symbol function_parameters) [8558 8564])
+                ("endPri" variable nil (reparse-symbol function_parameters) [8566 8572])
+                ("lock" variable nil (reparse-symbol function_parameters) [8574 8578]))              ) nil [8546 9218])
+            ("FilterData" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [9236 9240]))              ) nil [9220 9312])
+            ("statistics" function (:arguments 
+              ( ("lock" variable nil (reparse-symbol function_parameters) [9329 9333])
+                ("locked" variable nil (reparse-symbol function_parameters) [9335 9341]))              ) nil [9313 9486])
+            ("if" code nil nil [9488 11263]))          
+      :file "param_analizer.py"
+      :pointmax 11263
+      :fsize 11262
+      :lastmodtime '(21382 19191 356494 813000)
+      :unmatched-syntax nil)
+    (semanticdb-table "test_needle_autozeroing.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_NEEDLE_AUTOZEROING_HPP" variable (:constant-flag t) nil [789 816])
+            ("ccapp_scf_pipelineconfiguration.hpp" include nil nil [892 938])
+            ("ccapp_scf_scanconfiguration.hpp" include nil nil [939 981])
+            ("ccapp_sda_datablock.hpp" include nil nil [983 1017])
+            ("ccapp_sda_pipeline.hpp" include nil nil [1018 1051])
+            ("ccapp_sda_pipelinedestination.hpp" include nil nil [1052 1096])
+            ("ccapp_sda_pipelinesource.hpp" include nil nil [1097 1136])
+            ("ccapp_sfm_modeofoperation.hpp" include nil nil [1138 1178])
+            ("core_con_alignedbuffer.hpp" include nil nil [1180 1217])
+            ("core_ipc_posixshmem.hpp" include nil nil [1219 1253])
+            ("core_ipc_shmem.hpp" include nil nil [1254 1283])
+            ("test_referencedataformat.hpp" include nil nil [1285 1324])
+            ("memory" include (:system-flag t) nil [1326 1343])
+            ("iostream" include (:system-flag t) nil [1344 1363])
+            ("fstream" include (:system-flag t) nil [1364 1382])
+            ("vector" include (:system-flag t) nil [1383 1400])
+            ("iterator" include (:system-flag t) nil [1401 1420])
+            ("string" include (:system-flag t) nil [1421 1438])
+            ("algorithm" include (:system-flag t) nil [1439 1459])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [1461 1491])
+            ("testNeedleAutozeroing" type
+               (:members 
+                  ( ("ezono::ccapp" variable (:type "int") (reparse-symbol namespacesubparts) [1546 1559])
+                    ("ezono::core" variable (:type "int") (reparse-symbol namespacesubparts) [1578 1590])
+                    ("NeedleAutozeroingFunctionalTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2299 2306])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [2370 2885])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [2951 3020])
+                            ("test_Processing" function (:type "void") (reparse-symbol classsubparts) [3146 4026])
+                            ("private" label nil (reparse-symbol classsubparts) [4034 4042])
+                            ("TestFixture" type
+                               (:members 
+                                  ( ("nIterations" function (:type "int") (reparse-symbol classsubparts) [4634 4785])
+                                    ("TestFixture" function
+                                       (:destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4799 4895])
+                                    ("OpenDataFiles" function
+                                       (:arguments 
+                                          ( ("testFilesBase" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4929 4956]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [4909 6613])
+                                    ("LoadDataIntoSrcBuffer" function (:type "void") (reparse-symbol classsubparts) [6627 7845])
+                                    ("ApplyGradient" function
+                                       (:arguments 
+                                          ( ("line" variable
+                                               (:reference 1
+                                                :type ("sdf::NeedleSensorsData" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7879 7910]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7859 9527])
+                                    ("WriteNeedlePosIntoResFile" function (:type "void") (reparse-symbol classsubparts) [9540 10325])
+                                    ("WritePrimaryEstimatedBufferIntoResFile" function (:type "void") (reparse-symbol classsubparts) [10339 11369])
+                                    ("WriteSecondaryEstimatedBufferIntoResFile" function (:type "void") (reparse-symbol classsubparts) [11383 12054])
+                                    ("WriteZeroedDataIntoZeroedDataFile" function (:type "void") (reparse-symbol classsubparts) [12068 12423])
+                                    ("src" variable (:type ("sda::PipeLineSource" type
+                                         (:template-specifier 
+                                            ( ("sfm::EXTENDED_NEEDLE_MODE_SCAN" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [12510 12575])
+                                    ("dst" variable (:type ("sda::PipeLineDestination" type
+                                         (:template-specifier 
+                                            ( ("sfm::EXTENDED_NEEDLE_MODE_SCAN" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [12588 12653])
+                                    ("pipeline" variable (:type ("sda::Pipeline" type
+                                         (:template-specifier 
+                                            ( ("sfm::EXTENDED_NEEDLE_MODE_SCAN" type nil nil nil)
+                                              ("scf::PipelineTypeNeedle::AUTOZEROING_CONVERT" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [12667 12861])
+                                    ("needleDataTableAlloc" variable (:type ("con::AlignedBuffer" type
+                                         (:template-specifier (((12933 . 12944)) ((12952 . 12977)))
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [12875 13005])
+                                    ("needleDataTable" variable
+                                       (:pointer 1
+                                        :type ("fea::NeedleLinesTable" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [13018 13058])
+                                    ("dstBuffers" variable (:type ("ipc::PosixShMem" type
+                                         (:template-specifier 
+                                            ( ("sdf::DataBufferNeedleExtendedVisualization" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [13071 13144])
+                                    ("measurementsFile" variable (:type ("std::ifstream" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13158 13189])
+                                    ("validSensorsFile" variable (:type ("std::ifstream" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13202 13233])
+                                    ("atDataFile" variable (:type ("std::ifstream" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13246 13271])
+                                    ("resultFile" variable (:type ("std::ofstream" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13285 13310])
+                                    ("zeroedFile" variable (:type ("std::ofstream" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13323 13348])
+                                    ("nIterations" variable (:type "unsigned int") (reparse-symbol classsubparts) [13362 13387]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [4052 13398])
+                            ("LoadPipelineConfiguration" function
+                               (:arguments 
+                                  ( ("testFilesBase" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13440 13475]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [13408 13911])
+                            ("fxt" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("TestFixture" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [13923 13961])
+                            ("db" variable (:type ("sda::DataBlock" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13971 13989])
+                            ("pc" variable (:type ("scf::PipelineConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13999 14029])
+                            ("sc" variable (:type ("scf::ScanConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14038 14064]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2222 14068]))                  
+                :type "namespace")
+                nil [1493 14071])
+            ("testNeedleAutozeroing::NeedleAutozeroingFunctionalTestSuite" using (:type ("testNeedleAutozeroing::NeedleAutozeroingFunctionalTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [14098 14164]))          
+      :file "test_needle_autozeroing.hpp"
+      :pointmax 14249
+      :fsize 14248
+      :lastmodtime '(21362 17316 201182 984000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_NEEDLE_AUTOZEROING_HPP")
+          )
+)
+    (semanticdb-table "test_referencedataformat.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_REFERENCE_DATA_FORMAT_HPP" variable (:constant-flag t) nil [50 80])
+            ("optimist.hpp" include nil nil [82 105])
+            ("string" include (:system-flag t) nil [107 124])
+            ("istream" include (:system-flag t) nil [125 143])
+            ("ostream" include (:system-flag t) nil [144 162])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("scf" type
+                               (:members 
+                                  ( ("PipelineConfiguration" type
+                                       (:prototype t
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [217 246]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [198 248]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [181 250]))                  
+                :type "namespace")
+                nil [164 252])
+            ("df" type
+               (:members 
+                  ( ("ReferenceDataFile" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [305 331]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [274 332])
+                    ("ReferenceCfgFile" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [363 389]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [333 390])
+                    ("GetConfigurationFromFile" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cfgFilename" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [470 503]))                          
+                        :type ("ezono::ccapp::scf::PipelineConfiguration" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [395 504])
+                    ("GetNumberOfIterations" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("testBase" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [554 584]))                          
+                        :type "unsigned int")
+                        (reparse-symbol namespacesubparts) [507 585])
+                    ("LoadMeasurementsDataFromFile" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [641 660]))                          
+                        :type ("precision_vector_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [587 661])
+                    ("LoadValidSensorsDataFromFile" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [716 735]))                          
+                        :type ("bool_vector_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [662 736])
+                    ("LoadStartingNeedleDataFromFile" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [793 812]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [737 813])
+                    ("LoadSensorsPositionsFromFile" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [869 888]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [815 889])
+                    ("AutoTrackerData" type
+                       (:members 
+                          ( ("rawFieldSpread" variable (:type "float") (reparse-symbol classsubparts) [920 941]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [891 944])
+                    ("LoadAutoTrackerData" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [982 1001]))                          
+                        :type ("AutoTrackerData" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [945 1002]))                  
+                :type "namespace")
+                nil [257 1005]))          
+      :file "test_referencedataformat.hpp"
+      :pointmax 1015
+      :fsize 1014
+      :lastmodtime '(21298 59125 806342 511000)
+      :unmatched-syntax '((punctuation 394 . 395) (punctuation 393 . 394) (punctuation 394 . 395) (punctuation 393 . 394))
+      :lexical-table 
+        '(("TEST_REFERENCE_DATA_FORMAT_HPP")
+          )
+)
+    (semanticdb-table "create_test_files.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [21 40])
+            ("rootName" variable nil nil [3100 3136])
+            ("if" code nil nil [3138 3757]))          
+      :file "create_test_files.py"
+      :pointmax 3770
+      :fsize 3769
+      :lastmodtime '(21309 9621 779460 773000)
+      :unmatched-syntax nil)
+    (semanticdb-table "test_referencedataformat.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("test_referencedataformat.hpp" include nil nil [3 42])
+            ("ccapp_scf_pipelineconfiguration.hpp" include nil nil [44 90])
+            ("ccapp_scf_ndalgorithmparamvalues.hpp" include nil nil [91 138])
+            ("fstream" include (:system-flag t) nil [140 158])
+            ("sstream" include (:system-flag t) nil [159 177])
+            ("iterator" include (:system-flag t) nil [178 197])
+            ("type_traits" include (:system-flag t) nil [198 220])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [222 252])
+            ("ezono::ccapp" using (:type ("ezono::ccapp" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [254 283])
+            ("unnamed" type
+               (:members 
+                  ( ("SkipCommentLine" function
+                       (:arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [321 340]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [299 402])
+                    ("GetNextLineValue" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("T" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [446 465]))                          )
+                        (reparse-symbol namespacesubparts) [403 771])
+                    ("SetCommonCfgParams" function
+                       (:arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [798 816])
+                            ("common" variable
+                               (:reference 1
+                                :type ("scf::NdCommonParams" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [842 872]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [773 1379])
+                    ("SetAlgorithmCfgParams" function
+                       (:arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1408 1426])
+                            ("algorithm" variable
+                               (:reference 1
+                                :type ("scf::NdAlgorithmParams" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1455 1491]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1380 3168]))                  
+                :type "namespace")
+                nil [286 3171])
+            ("df" type
+               (:members 
+                  ( ("unnamed" type
+                       (:members 
+                          ( ("PathToDataFiles" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol namespacesubparts) [3206 3315])
+                            ("LoadDataInto" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil)
+                                    ("T1" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("is" variable
+                                       (:reference 1
+                                        :type ("std::istream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3379 3397])
+                                    ("t" variable
+                                       (:reference 1
+                                        :type ("T1" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3398 3405]))                                  
+                                :typemodifiers ("inline"))
+                                (reparse-symbol namespacesubparts) [3317 3634]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [3192 3637])
+                    ("ReferenceDataFile" function
+                       (:arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3670 3696]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3639 3750])
+                    ("ReferenceCfgFile" function
+                       (:arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3782 3808]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3752 3862])
+                    ("GetConfigurationFromFile" function
+                       (:arguments 
+                          ( ("cfgFilename" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3917 3950]))                          
+                        :type ("scf::PipelineConfiguration" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3864 4377])
+                    ("GetNumberOfIterations" function
+                       (:arguments 
+                          ( ("fileToGetNiter" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4417 4453]))                          
+                        :type "unsigned int")
+                        (reparse-symbol namespacesubparts) [4381 4955])
+                    ("LoadMeasurementsDataFromFile" function
+                       (:arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5006 5025]))                          
+                        :type ("precision_vector_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4957 5289])
+                    ("LoadValidSensorsDataFromFile" function
+                       (:arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5335 5354]))                          
+                        :type ("bool_vector_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5291 5611])
+                    ("LoadStartingNeedleDataFromFile" function
+                       (:arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5664 5683]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [5613 5946])
+                    ("LoadSensorsPositionsFromFile" function
+                       (:arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5997 6016]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [5948 6415])
+                    ("LoadAutoTrackerData" function
+                       (:arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::istream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6454 6473]))                          
+                        :type ("AutoTrackerData" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [6417 6719]))                  
+                :type "namespace")
+                nil [3176 6722]))          
+      :file "test_referencedataformat.cpp"
+      :pointmax 6723
+      :fsize 6722
+      :lastmodtime '(21298 59125 805342 504000)
+      :unmatched-syntax nil)
+    (semanticdb-table "idata.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pylab" include nil nil [20 39])
+            ("if" code nil nil [42 422]))          
+      :file "idata.py"
+      :pointmax 422
+      :fsize 421
+      :lastmodtime '(21363 8552 171397 109000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!cyclades!b_adptive_ngs_CR15418!development!code!a_sda!functionaltests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

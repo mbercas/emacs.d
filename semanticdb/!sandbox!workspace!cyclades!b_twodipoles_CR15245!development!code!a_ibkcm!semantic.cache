@@ -1,0 +1,160 @@
+;; Object a_ibkcm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_ibkcm/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_ibkcm_needletypeinfo.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_IBKCM_NEEDLETYPEINFO_HPP" variable (:constant-flag t) nil [782 812])
+            ("iosfwd" include (:system-flag t) nil [888 905])
+            ("vector" include (:system-flag t) nil [906 923])
+            ("QString" include (:system-flag t) nil [925 943])
+            ("QStringList" include (:system-flag t) nil [944 966])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("ibkcm" type
+                               (:members 
+                                  ( ("NeedleTypeInfo" type
+                                       (:prototype t
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1324 1346])
+                                    ("NeedleTypesVector" type
+                                       (:typedef ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("NeedleTypeInfo" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :superclasses "std::vector"
+                                        :type "typedef")
+                                        (reparse-symbol namespacesubparts) [1347 1425])
+                                    ("NeedleTypeInfo" type
+                                       (:members 
+                                          ( ("EXPECTED_NUMBER_OF_PARAMETERS" variable
+                                               (:typemodifiers ("static")
+                                                :constant-flag t
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [1680 1732])
+                                            ("NeedleTypeInfo" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :arguments 
+                                                  ( ("header" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("QStringList" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1754 1782]))                                                  
+                                                :type ("NeedleTypeInfo" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [1738 1783])
+                                            ("NeedleTypeInfo" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :arguments 
+                                                  ( ("rhs" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("NeedleTypeInfo" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1804 1832]))                                                  
+                                                :type ("NeedleTypeInfo" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [1788 1833])
+                                            ("NeedleTypeInfo" function
+                                               (:prototype-flag t
+                                                :destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1839 1857])
+                                            ("=" function
+                                               (:prototype-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("rhs" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("NeedleTypeInfo" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1891 1919]))                                                  
+                                                :type ("NeedleTypeInfo" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [1863 1920])
+                                            ("Print" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("os" variable
+                                                       (:reference 1
+                                                        :type ("std::ostream" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1948 1966]))                                                  
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [1926 1973])
+                                            ("name" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1979 2008])
+                                            ("values" variable (:type ("std::vector" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2013 2044])
+                                            ("parameters" variable (:type ("QStringList" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2049 2084]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1652 2087])
+                                    ("==" function
+                                       (:prototype-flag t
+                                        :operator-flag t
+                                        :arguments 
+                                          ( ("lhs" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("NeedleTypeInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2181 2208])
+                                            ("rhs" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("NeedleTypeInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2209 2237]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [2164 2238])
+                                    ("!=" function
+                                       (:prototype-flag t
+                                        :operator-flag t
+                                        :arguments 
+                                          ( ("lhs" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("NeedleTypeInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2256 2283])
+                                            ("rhs" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("NeedleTypeInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2284 2312]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [2239 2313])
+                                    ("<<" function
+                                       (:prototype-flag t
+                                        :operator-flag t
+                                        :arguments 
+                                          ( ("os" variable
+                                               (:reference 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2341 2359])
+                                            ("obj" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("NeedleTypeInfo" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2360 2388]))                                          
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [2315 2389]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1081 2392]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1062 2414]))                  
+                :type "namespace")
+                nil [1043 2436]))          
+      :file "ccapp_ibkcm_needletypeinfo.hpp"
+      :pointmax 2546
+      :fsize 2545
+      :lastmodtime '(21166 55208 472989 95000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_IBKCM_NEEDLETYPEINFO_HPP")
+          )
+))
+  :file "!sandbox!workspace!cyclades!b_twodipoles_CR15245!development!code!a_ibkcm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

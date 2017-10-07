@@ -1,0 +1,29 @@
+;; Object cs259/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cs259/"
+  :tables
+  (list
+    (semanticdb-table "u2_p1.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("matplotlib" include nil nil [194 211])
+            ("matplotlib.pyplot" include nil nil [212 236])
+            ("numpy" include nil nil [237 249])
+            ("h" variable nil nil [251 258])
+            ("earth_mass" variable nil nil [263 283])
+            ("spacecraft_mass" variable nil nil [289 313])
+            ("gravitational_constant" variable nil nil [319 352])
+            ("acceleration" function (:arguments 
+              ( ("spaceship_position" variable nil (reparse-symbol function_parameters) [384 402]))              ) nil [367 579])
+            ("total_energy" function nil nil [580 1029])
+            ("x, energy" code nil nil [1030 1056])
+            ("plot_me" function nil nil [1076 1605])
+            ("plot_me" code nil nil [1610 1619]))          
+      :file "u2_p1.py"
+      :pointmax 1623
+      :fsize 1622
+      :lastmodtime '(21173 61870 968854 602000)
+      :unmatched-syntax '((INDENT_BLOCK 1576 . 1604))))
+  :file "!sandbox!workspace!udacity!cs259!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

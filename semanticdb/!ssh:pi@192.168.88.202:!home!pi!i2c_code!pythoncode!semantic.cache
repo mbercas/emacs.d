@@ -1,0 +1,75 @@
+;; Object pythoncode/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pythoncode/"
+  :tables
+  (list
+    (semanticdb-table "lis3ndl.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [21 31])
+            ("sys" code nil nil [32 75])
+            ("sys" code nil nil [76 110])
+            ("RPi.GPIO" include nil nil [112 135])
+            ("time" include nil nil [136 147])
+            ("socket" include nil nil [148 161])
+            ("struct" include nil nil [162 175])
+            ("argparse" include nil nil [176 191])
+            ("numpy" include nil nil [193 211])
+            ("i2c_lis3mdl" include nil nil [213 248])
+            ("recordDataIntoFile" function (:arguments 
+              ( ("output_file" variable nil (reparse-symbol function_parameters) [273 284])
+                ("number_of_points" variable nil (reparse-symbol function_parameters) [286 302])
+                ("data_values" variable nil (reparse-symbol function_parameters) [309 320])
+                ("scale" variable nil (reparse-symbol function_parameters) [330 335]))              ) nil [250 996])
+            ("outputToCommandLine" function (:arguments 
+              ( ("number_of_points" variable nil (reparse-symbol function_parameters) [1021 1037])
+                ("data_values" variable nil (reparse-symbol function_parameters) [1044 1055])
+                ("scale" variable nil (reparse-symbol function_parameters) [1065 1070]))              ) nil [997 1693])
+            ("outputToSocket" function (:arguments 
+              ( ("inet_addr" variable nil (reparse-symbol function_parameters) [1714 1723])
+                ("number_of_points" variable nil (reparse-symbol function_parameters) [1725 1741])
+                ("data_values" variable nil (reparse-symbol function_parameters) [1748 1759])
+                ("scale" variable nil (reparse-symbol function_parameters) [1769 1774]))              ) nil [1695 2620])
+            ("if" code nil nil [2622 4695]))          
+      :file "lis3ndl.py"
+      :pointmax 4713
+      :fsize 4992
+      :lastmodtime '(21923 46745)
+      :unmatched-syntax nil)
+    (semanticdb-table "mmc34160.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [21 31])
+            ("sys" code nil nil [32 75])
+            ("sys" code nil nil [76 110])
+            ("RPi.GPIO" include nil nil [112 135])
+            ("time" include nil nil [136 147])
+            ("socket" include nil nil [148 161])
+            ("struct" include nil nil [162 175])
+            ("argparse" include nil nil [176 191])
+            ("numpy" include nil nil [193 211])
+            ("i2c_mmc34160" include nil nil [212 249])
+            ("recordDataIntoFile" function (:arguments 
+              ( ("output_file" variable nil (reparse-symbol function_parameters) [274 285])
+                ("number_of_points" variable nil (reparse-symbol function_parameters) [287 303])
+                ("data_values" variable nil (reparse-symbol function_parameters) [310 321])
+                ("scale" variable nil (reparse-symbol function_parameters) [331 336]))              ) nil [251 718])
+            ("outputToCommandLine" function (:arguments 
+              ( ("number_of_points" variable nil (reparse-symbol function_parameters) [743 759])
+                ("data_values" variable nil (reparse-symbol function_parameters) [766 777])
+                ("scale" variable nil (reparse-symbol function_parameters) [787 792]))              ) nil [719 1066])
+            ("outputToSocket" function (:arguments 
+              ( ("inet_addr" variable nil (reparse-symbol function_parameters) [1087 1096])
+                ("number_of_points" variable nil (reparse-symbol function_parameters) [1098 1114])
+                ("data_values" variable nil (reparse-symbol function_parameters) [1121 1132])
+                ("scale" variable nil (reparse-symbol function_parameters) [1142 1147]))              ) nil [1068 2074])
+            ("collectStatistics" function nil nil [2075 3968])
+            ("if" code nil nil [3969 5822]))          
+      :file "mmc34160.py"
+      :pointmax 5851
+      :fsize 5849
+      :lastmodtime '(21928 4455)
+      :unmatched-syntax nil))
+  :file "!ssh:pi@192.168.88.202:!home!pi!i2c_code!pythoncode!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

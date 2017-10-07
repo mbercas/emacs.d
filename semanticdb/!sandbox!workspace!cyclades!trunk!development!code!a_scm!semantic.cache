@@ -1,0 +1,172 @@
+;; Object a_scm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_scm/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_scm_beamassembledbody.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_scm_beamassembledbody.hpp" include nil nil [745 787])
+            ("core_chk_assert.hpp" include nil nil [789 819])
+            ("ostream" include (:system-flag t) nil [821 839])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("scm" type
+                               (:members 
+                                  ( ("ezono::core::chk" using (:type ("ezono::core::chk" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [971 1004])
+                                    ("Print" function
+                                       (:parent "BeamAssembledBody"
+                                        :arguments 
+                                          ( ("os" variable
+                                               (:reference 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1861 1879]))                                          
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1821 2543])
+                                    ("Check" function
+                                       (:parent "BeamAssembledBody"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2680 2860])
+                                    ("CopyFrom" function
+                                       (:parent "BeamAssembledBody"
+                                        :arguments 
+                                          ( ("other" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("BeamAssembledBody" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3067 3099]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [3033 3558]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [954 4007]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [935 4027]))                  
+                :type "namespace")
+                nil [916 4049]))          
+      :file "ccapp_scm_beamassembledbody.cpp"
+      :pointmax 4115
+      :fsize 4114
+      :lastmodtime '(20908 20982)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_scm_beamassembledbody.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SCM_BEAMASSEMBLEDBODY_HPP" variable (:constant-flag t) nil [793 824])
+            ("ccapp_sfm_modeofoperation.hpp" include nil nil [900 940])
+            ("ccapp_scf_displayconfiguration.hpp" include nil nil [941 986])
+            ("ccapp_scf_scanconfiguration.hpp" include nil nil [987 1029])
+            ("core_ipc_numberwrapper.hpp" include nil nil [1031 1068])
+            ("core_bty_commontypes.hpp" include nil nil [1070 1105])
+            ("iosfwd" include (:system-flag t) nil [1107 1124])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("scm" type
+                               (:members 
+                                  ( ("core::ipc::NumberWrapper" using (:type ("core::ipc::NumberWrapper" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1405 1436])
+                                    ("BeamAssembledBody" type
+                                       (:members 
+                                          ( ("InvalidMsg" type
+                                               (:typedef ("void")
+                                                :superclasses "void"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1885 1909])
+                                            ("NonCacheable" type
+                                               (:typedef ("void")
+                                                :superclasses "void"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1914 1940])
+                                            ("mode" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("sfm::ModeOfOperation" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2012 2055])
+                                            ("bufferId" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("core::bty::UInt32" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2133 2177])
+                                            ("beamNumber" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("core::bty::UInt32" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2233 2279])
+                                            ("dstLineOffset" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("core::bty::UInt32" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2323 2372])
+                                            ("noProcessedLines" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("core::bty::UInt32" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2410 2462])
+                                            ("timestamp_s" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("core::bty::SInt32" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2571 2618])
+                                            ("timestamp_us" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("core::bty::SInt32" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2623 2671])
+                                            ("configurationUpdated" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("bool" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2699 2748])
+                                            ("dispCfg" variable (:type ("scf::DisplayConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2753 2789])
+                                            ("scanCfg" variable (:type ("scf::ScanConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2794 2830])
+                                            ("Check" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2852 2871])
+                                            ("Print" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("os" variable
+                                                       (:reference 1
+                                                        :type ("std::ostream" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2897 2915]))                                                  
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2876 2922])
+                                            ("CopyFrom" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("BeamAssembledBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2943 2973]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2928 2974]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1738 2977]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1239 3055]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1220 3075]))                  
+                :type "namespace")
+                nil [1201 3097]))          
+      :file "ccapp_scm_beamassembledbody.hpp"
+      :pointmax 3209
+      :fsize 3208
+      :lastmodtime '(20917 64735)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_SCM_BEAMASSEMBLEDBODY_HPP")
+          )
+))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!a_scm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

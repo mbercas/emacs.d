@@ -1,0 +1,49 @@
+;; Object unittests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unittests/"
+  :tables
+  (list
+    (semanticdb-table "test_ccapp_sdf_needledata.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_SDF_NEEDLEDATA_HPP" variable (:constant-flag t) nil [775 804])
+            ("ccapp_sdf_needledata.hpp" include nil nil [880 915])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [917 947])
+            ("testNeedleData" type
+               (:members 
+                  ( ("ezono::ccapp" variable (:type "int") (reparse-symbol namespacesubparts) [995 1008])
+                    ("ezono::core" variable (:type "int") (reparse-symbol namespacesubparts) [1027 1039])
+                    ("ezono::ccapp::sdf" variable (:type "int") (reparse-symbol namespacesubparts) [1059 1077])
+                    ("NeedleDataUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1742 1749])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [1813 1845])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [1911 1946])
+                            ("test_constructor_NeedleVisualizeData" function (:type "void") (reparse-symbol classsubparts) [2079 3358])
+                            ("test_constructor_NeedleVisualizeExtendedData" function (:type "void") (reparse-symbol classsubparts) [3368 4772])
+                            ("private" label nil (reparse-symbol classsubparts) [4778 4786]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1678 4790]))                  
+                :type "namespace")
+                nil [949 4793])
+            ("testNeedleData::NeedleDataUnitTestSuite" using (:type ("testNeedleData::NeedleDataUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [4813 4859]))          
+      :file "test_ccapp_sdf_needledata.hpp"
+      :pointmax 4941
+      :fsize 4947
+      :lastmodtime '(21390 64611 286624 467000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CCAPP_SDF_NEEDLEDATA_HPP")
+          )
+))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!a_sdf!unittests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

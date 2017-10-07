@@ -1,0 +1,16 @@
+;; Object let-alist-1.0.3/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "let-alist-1.0.3/"
+  :tables
+  (list
+    (semanticdb-table "let-alist-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags nil
+      :file "let-alist-autoloads.el"
+      :pointmax 269
+      :fsize 1472
+      :lastmodtime '(21705 62218 651609 354000)
+      :unmatched-syntax nil))
+  :file "!localhome!localmanuel!.emacs.d!elpa!let-alist-1.0.3!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,16 @@
+;; Object anaconda-mode-0.1.0/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "anaconda-mode-0.1.0/"
+  :tables
+  (list
+    (semanticdb-table "anaconda-mode-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags nil
+      :file "anaconda-mode-autoloads.el"
+      :pointmax 299
+      :fsize 1313
+      :lastmodtime '(21928 45543 444643 140000)
+      :unmatched-syntax nil))
+  :file "!localhome!localmanuel!.emacs.d!elpa!anaconda-mode-0.1.0!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

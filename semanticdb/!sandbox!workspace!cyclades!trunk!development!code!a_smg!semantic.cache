@@ -1,0 +1,1923 @@
+;; Object a_smg/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_smg/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_smg_valuemanager.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SMG_VALUEMANAGER_HPP" variable (:constant-flag t) nil [731 757])
+            ("ccapp_scf_scanconfigurationvalues.hpp" include nil nil [833 881])
+            ("ccapp_scf_livesvsmsg.hpp" include nil nil [882 917])
+            ("ccapp_sfm_modeofoperation.hpp" include nil nil [919 959])
+            ("core_bty_commontypes.hpp" include nil nil [961 996])
+            ("core_cpp_forwarddeclare.hpp" include nil nil [998 1036])
+            ("core_ptr_uniqueptr.hpp" include nil nil [1038 1071])
+            ("boost/noncopyable.hpp" include (:system-flag t) nil [1073 1105])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("smg" type
+                               (:members 
+                                  ( ("ScanRunningControllerIface" type
+                                       (:prototype t
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [2638 2671])
+                                    ("ccapp::fea::FpgaMemoryMap" using (:type ("ccapp::fea::FpgaMemoryMap" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [2747 2779])
+                                    ("ccapp::scf::BModeUserSettings" using (:type ("ccapp::scf::BModeUserSettings" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [2781 2817])
+                                    ("ccapp::scf::CModeUserSettings" using (:type ("ccapp::scf::CModeUserSettings" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [2818 2854])
+                                    ("ccapp::scf::DisplayConfiguration" using (:type ("ccapp::scf::DisplayConfiguration" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [2855 2894])
+                                    ("ccapp::scf::EnableScanBody" using (:type ("ccapp::scf::EnableScanBody" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [2895 2928])
+                                    ("ccapp::scf::NdDspAlgorithmParams" using (:type ("ccapp::scf::NdDspAlgorithmParams" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [2929 2968])
+                                    ("ccapp::scf::PipelineConfiguration" using (:type ("ccapp::scf::PipelineConfiguration" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [2969 3009])
+                                    ("ccapp::scf::ScanConfiguration" using (:type ("ccapp::scf::ScanConfiguration" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [3010 3046])
+                                    ("ccapp::scf::ScanConfigurationReceivedBody" using (:type ("ccapp::scf::ScanConfigurationReceivedBody" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [3047 3095])
+                                    ("ccapp::scf::SwapFrozenWindowBody" using (:type ("ccapp::scf::SwapFrozenWindowBody" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [3096 3135])
+                                    ("ccapp::scf::ZoomInfoBody" using (:type ("ccapp::scf::ZoomInfoBody" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [3136 3167])
+                                    ("ccapp::scf::LiveSvsMsg" using (:type ("ccapp::scf::LiveSvsMsg" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [3168 3197])
+                                    ("ccapp::sfm::FreezeScanBody" using (:type ("ccapp::sfm::FreezeScanBody" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [3199 3232])
+                                    ("ccapp::sfm::ImageSettingsBody" using (:type ("ccapp::sfm::ImageSettingsBody" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [3233 3269])
+                                    ("ccapp::sfm::MechanicalThermalIndexBody" using (:type ("ccapp::sfm::MechanicalThermalIndexBody" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [3270 3315])
+                                    ("ccapp::sfm::NeedleTypeConfigBody" using (:type ("ccapp::sfm::NeedleTypeConfigBody" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [3316 3355])
+                                    ("ccapp::sfm::ProbeSupportedBody" using (:type ("ccapp::sfm::ProbeSupportedBody" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [3356 3393])
+                                    ("ccapp::sfm::SelectedThermalIndexTypeBody" using (:type ("ccapp::sfm::SelectedThermalIndexTypeBody" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [3394 3441])
+                                    ("ccapp::sfm::UserSelectionCmodeBoxPosBody" using (:type ("ccapp::sfm::UserSelectionCmodeBoxPosBody" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [3442 3489])
+                                    ("ccapp::stm::ProbeStatusBody" using (:type ("ccapp::stm::ProbeStatusBody" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [3491 3525])
+                                    ("core::dtr::ChangeTrackingMixedSet" using (:type ("core::dtr::ChangeTrackingMixedSet" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [3527 3567])
+                                    ("core::tsk::Timer100msBody" using (:type ("core::tsk::Timer100msBody" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [3569 3601])
+                                    ("core::ptr::UniquePtr" using (:type ("core::ptr::UniquePtr" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [3603 3630])
+                                    ("ValueManager" type
+                                       (:superclasses 
+                                          ( ("boost::noncopyable" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [3981 3988])
+                                            ("SendDisplayCfgFun" variable (:type "int") (reparse-symbol classsubparts) [4091 4109])
+                                            ("SendGuiCfgFun" variable (:type "int") (reparse-symbol classsubparts) [4196 4210])
+                                            ("SendMechThermIndexFun" variable (:type "int") (reparse-symbol classsubparts) [4305 4327])
+                                            ("SendPipelineCfgFun" variable (:type "int") (reparse-symbol classsubparts) [4417 4436])
+                                            ("SendDspAlgorithmParamsFun" variable (:type "int") (reparse-symbol classsubparts) [4525 4551])
+                                            ("SendProbeSupportedFun" variable (:type "int") (reparse-symbol classsubparts) [4638 4660])
+                                            ("SendScanCfgFun" variable (:type "int") (reparse-symbol classsubparts) [4746 4761])
+                                            ("SendSwapFrozenWindowFun" variable (:type "int") (reparse-symbol classsubparts) [4850 4874])
+                                            ("ValueManager" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :arguments 
+                                                  ( ("cfgVars" variable
+                                                       (:reference 1
+                                                        :type ("ChangeTrackingMixedSet" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4906 4950])
+                                                    ("scanRunningController" variable
+                                                       (:reference 1
+                                                        :type ("ScanRunningControllerIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4963 5021])
+                                                    ("sendDisplayCfgFun" variable (:type ("SendDisplayCfgFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5034 5088])
+                                                    ("sendProbeSupportedFun" variable (:type ("SendProbeSupportedFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5101 5159])
+                                                    ("sendScanCfgFun" variable (:type ("SendScanCfgFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5172 5223])
+                                                    ("sendGuiCfgFun" variable (:type ("SendGuiCfgFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5236 5286])
+                                                    ("sendSwapFrozenWindowFun" variable (:type ("SendSwapFrozenWindowFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5299 5359])
+                                                    ("sendMechThermIndexFun" variable (:type ("SendMechThermIndexFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5372 5430])
+                                                    ("sendPipelineCfgFun" variable (:type ("SendPipelineCfgFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5443 5498])
+                                                    ("sendDspAlgorithmParamsFun" variable (:type ("SendDspAlgorithmParamsFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5511 5573])
+                                                    ("fstreamFactory" variable
+                                                       (:reference 1
+                                                        :type ("core::fls::FStreamFactoryIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [5586 5646]))                                                  
+                                                :type ("ValueManager" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [4880 5647])
+                                            ("ValueManager" function
+                                               (:prototype-flag t
+                                                :destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5653 5669])
+                                            ("LocalFpgaMemoryMap" function
+                                               (:prototype-flag t
+                                                :constant-flag t
+                                                :type ("FpgaMemoryMap" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [5675 5724])
+                                            ("OnFreezeScan" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("FreezeScanBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [5749 5777]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5730 5778])
+                                            ("OnImageSettings" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("ImageSettingsBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [5806 5837]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5784 5838])
+                                            ("OnZoomInfo" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("ZoomInfoBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [5861 5887]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5844 5888])
+                                            ("OnProbeStatus" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("ProbeStatusBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [5914 5943]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5894 5944])
+                                            ("LookupTablesCanBeUsed" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5950 5979])
+                                            ("OnScanConfigurationReceived" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("body" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("ScanConfigurationReceivedBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [6031 6083]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5985 6084])
+                                            ("OnTimer100ms" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("Timer100msBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [6109 6133]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6090 6134])
+                                            ("RestoreDependencies" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6140 6167])
+                                            ("OnFrameDisplayed" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6173 6197])
+                                            ("StandbyMode" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6203 6222])
+                                            ("OnLookupTablesModified" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6228 6258])
+                                            ("OnNeedleTypeConfigChanged" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("sfm::NeedleTypeConfigBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [6296 6335]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6264 6336])
+                                            ("OnActivateAutoCompensation" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("sfm::ActivateAutoCompensationBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [6375 6422]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6342 6423])
+                                            ("OnSelectedThermalIndexType" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("SelectedThermalIndexTypeBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [6462 6504]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6429 6505])
+                                            ("OnUserSelectionCmodeBoxPos" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("UserSelectionCmodeBoxPosBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [6544 6586]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6511 6587])
+                                            ("private" label nil (reparse-symbol classsubparts) [6589 6597])
+                                            ("Imp" type
+                                               (:prototype t
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) [6603 6625])
+                                            ("pimpl" variable (:type ("UniquePtr" type
+                                                 (:template-specifier 
+                                                    ( ("Imp" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [6662 6688]))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [3932 6709])
+                                    ("SystemScanModeToFpgaScanMode" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("scanMode" variable
+                                               (:constant-flag t
+                                                :type ("sfm::ModeOfOperation" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6834 6871]))                                          
+                                        :type ("core::bty::UInt32" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [6786 6872]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [2547 6875]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [2528 6895]))                  
+                :type "namespace")
+                nil [1182 6917]))          
+      :file "ccapp_smg_valuemanager.hpp"
+      :pointmax 7019
+      :fsize 7336
+      :lastmodtime '(21509 28961 104109 4000)
+      :unmatched-syntax '((punctuation 4836 . 4837) (semantic-list 4803 . 4835) (VOID 4798 . 4802) (punctuation 4796 . 4797) (symbol 4788 . 4796) (punctuation 4787 . 4788) (punctuation 4786 . 4787) (symbol 4783 . 4786) (TYPEDEF 4767 . 4774) (punctuation 4732 . 4733) (semantic-list 4702 . 4731) (VOID 4697 . 4701) (punctuation 4695 . 4696) (symbol 4687 . 4695) (punctuation 4686 . 4687) (punctuation 4685 . 4686) (symbol 4682 . 4685) (TYPEDEF 4666 . 4673) (punctuation 4624 . 4625) (semantic-list 4593 . 4623) (VOID 4588 . 4592) (punctuation 4586 . 4587) (symbol 4578 . 4586) (punctuation 4577 . 4578) (punctuation 4576 . 4577) (symbol 4573 . 4576) (TYPEDEF 4557 . 4564) (punctuation 4511 . 4512) (semantic-list 4478 . 4510) (VOID 4473 . 4477) (punctuation 4471 . 4472) (symbol 4463 . 4471) (punctuation 4462 . 4463) (punctuation 4461 . 4462) (symbol 4458 . 4461) (TYPEDEF 4442 . 4449) (punctuation 4403 . 4404) (semantic-list 4369 . 4402) (VOID 4364 . 4368) (punctuation 4362 . 4363) (symbol 4354 . 4362) (punctuation 4353 . 4354) (punctuation 4352 . 4353) (symbol 4349 . 4352) (TYPEDEF 4333 . 4340) (punctuation 4291 . 4292) (semantic-list 4252 . 4290) (VOID 4247 . 4251) (punctuation 4245 . 4246) (symbol 4237 . 4245) (punctuation 4236 . 4237) (punctuation 4235 . 4236) (symbol 4232 . 4235) (TYPEDEF 4216 . 4223) (punctuation 4182 . 4183) (semantic-list 4152 . 4181) (VOID 4147 . 4151) (punctuation 4145 . 4146) (symbol 4137 . 4145) (punctuation 4136 . 4137) (punctuation 4135 . 4136) (symbol 4132 . 4135) (TYPEDEF 4116 . 4123) (punctuation 4077 . 4078) (semantic-list 4030 . 4076) (VOID 4025 . 4029) (punctuation 4023 . 4024) (symbol 4015 . 4023) (punctuation 4014 . 4015) (punctuation 4013 . 4014) (symbol 4010 . 4013) (TYPEDEF 3994 . 4001) (semantic-list 2497 . 2526) (symbol 2476 . 2497) (semantic-list 2440 . 2474) (symbol 2419 . 2440) (semantic-list 2380 . 2417) (symbol 2359 . 2380) (semantic-list 2326 . 2357) (symbol 2305 . 2326) (semantic-list 2259 . 2303) (symbol 2238 . 2259) (semantic-list 2193 . 2237) (symbol 2172 . 2193) (semantic-list 2137 . 2171) (symbol 2116 . 2137) (semantic-list 2071 . 2115) (symbol 2050 . 2071) (semantic-list 2013 . 2049) (symbol 1992 . 2013) (semantic-list 1949 . 1991) (symbol 1928 . 1949) (semantic-list 1894 . 1927) (symbol 1873 . 1894) (semantic-list 1842 . 1872) (symbol 1821 . 1842) (semantic-list 1791 . 1819) (symbol 1770 . 1791) (semantic-list 1733 . 1769) (symbol 1712 . 1733) (semantic-list 1666 . 1711) (symbol 1645 . 1666) (semantic-list 1611 . 1644) (symbol 1590 . 1611) (semantic-list 1552 . 1589) (symbol 1531 . 1552) (semantic-list 1494 . 1530) (symbol 1473 . 1494) (semantic-list 1442 . 1472) (symbol 1421 . 1442) (semantic-list 1384 . 1420) (symbol 1363 . 1384) (semantic-list 1329 . 1362) (symbol 1308 . 1329) (semantic-list 1274 . 1307) (symbol 1253 . 1274) (semantic-list 1222 . 1251) (symbol 1201 . 1222))
+      :lexical-table 
+        '(("CCAPP_SMG_VALUEMANAGER_HPP")
+          )
+)
+    (semanticdb-table "ccapp_smg_valuemanager.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_smg_valuemanager.hpp" include nil nil [688 725])
+            ("ccapp_fea_dactabletgcmemorymap.hpp" include nil nil [727 772])
+            ("ccapp_fea_lineidmemorymap.hpp" include nil nil [773 813])
+            ("ccapp_imm_impedanceanalyserinfobody.hpp" include nil nil [815 865])
+            ("ccapp_scf_anglevaluesconfiguration.hpp" include nil nil [867 916])
+            ("ccapp_scf_bmodeprocessingtablelut.hpp" include nil nil [917 965])
+            ("ccapp_scf_compoundingweightstablecalculatorservice.hpp" include nil nil [966 1031])
+            ("ccapp_scf_compoundingweightstablelutreaderservice.hpp" include nil nil [1032 1096])
+            ("ccapp_scf_compoundingweightstablesorterservice.hpp" include nil nil [1097 1158])
+            ("ccapp_scf_compoundingweightstablewriterservice.hpp" include nil nil [1159 1220])
+            ("ccapp_scf_displayconfiguration.hpp" include nil nil [1221 1266])
+            ("ccapp_scf_displayparametersconfiguration.hpp" include nil nil [1267 1322])
+            ("ccapp_scf_dopplerconfigtablelut.hpp" include nil nil [1323 1369])
+            ("ccapp_scf_enablescanbody.hpp" include nil nil [1370 1409])
+            ("ccapp_scf_fpgaconfigurationdependencies.hpp" include nil nil [1410 1464])
+            ("ccapp_scf_focalzonefocusareaslistadjustmentservice.hpp" include nil nil [1465 1530])
+            ("ccapp_scf_focalzonesconfiguration.hpp" include nil nil [1531 1579])
+            ("ccapp_scf_focalzonestablelut.hpp" include nil nil [1580 1623])
+            ("ccapp_scf_frameavgthresholdstablelut.hpp" include nil nil [1624 1675])
+            ("ccapp_scf_guilimitsconfiguration.hpp" include nil nil [1676 1723])
+            ("ccapp_scf_guilimitsvalues.hpp" include nil nil [1724 1764])
+            ("ccapp_scf_impedanceanalyserdisplayconfiguration.hpp" include nil nil [1765 1827])
+            ("ccapp_scf_lineidscheduler.hpp" include nil nil [1828 1868])
+            ("ccapp_scf_v2_lineidtablegenerator.hpp" include nil nil [1869 1917])
+            ("ccapp_scf_lineidtablegeneratorloggerfactory.hpp" include nil nil [1918 1976])
+            ("ccapp_scf_lineidtableinputsfactory.hpp" include nil nil [1977 2026])
+            ("ccapp_scf_miticalculation.hpp" include nil nil [2027 2067])
+            ("ccapp_scf_mitivalues.hpp" include nil nil [2068 2103])
+            ("ccapp_scf_ndalgorithmparamvalues.hpp" include nil nil [2104 2151])
+            ("ccapp_scf_nddspalgorithmparams.hpp" include nil nil [2152 2197])
+            ("ccapp_scf_needledetectionparameterconfiguration.hpp" include nil nil [2198 2260])
+            ("ccapp_scf_pipelineconfiguration.hpp" include nil nil [2261 2307])
+            ("ccapp_scf_probeconfiguration.hpp" include nil nil [2308 2351])
+            ("ccapp_scf_probeparameters.hpp" include nil nil [2352 2392])
+            ("ccapp_scf_rxfocusdelayconfiguration.hpp" include nil nil [2393 2443])
+            ("ccapp_scf_scanconfiguration.hpp" include nil nil [2444 2486])
+            ("ccapp_scf_scanconfigurationreceivedbody.hpp" include nil nil [2487 2541])
+            ("ccapp_scf_scandepthconfiguration.hpp" include nil nil [2542 2589])
+            ("ccapp_scf_scanparametersconfiguration_registration.hpp" include nil nil [2590 2655])
+            ("ccapp_scf_v2_schedulerdependencies_registration.hpp" include nil nil [2656 2718])
+            ("ccapp_scf_swapfrozenwindowbody.hpp" include nil nil [2719 2764])
+            ("ccapp_scf_systemconfiguration.hpp" include nil nil [2765 2809])
+            ("ccapp_scf_systemdefaults.hpp" include nil nil [2810 2849])
+            ("ccapp_scf_tgcconfiguration.hpp" include nil nil [2850 2891])
+            ("ccapp_scf_zoominfobody.hpp" include nil nil [2892 2929])
+            ("ccapp_sfm_freezescanbody.hpp" include nil nil [2931 2970])
+            ("ccapp_sfm_imagesettingsbody.hpp" include nil nil [2971 3013])
+            ("ccapp_sfm_mechanicalthermalindexbody.hpp" include nil nil [3014 3065])
+            ("ccapp_sfm_needletypeconfigbody.hpp" include nil nil [3066 3111])
+            ("ccapp_sfm_probesupportedbody.hpp" include nil nil [3112 3155])
+            ("ccapp_sfm_selectedthermalindextypebody.hpp" include nil nil [3156 3209])
+            ("ccapp_sfm_userselectioncmodeboxposbody.hpp" include nil nil [3210 3263])
+            ("ccapp_sfm_activateautocompensationbody.hpp" include nil nil [3264 3317])
+            ("ccapp_smg_scanconfigurationcontroller.hpp" include nil nil [3319 3371])
+            ("ccapp_smg_scanrunningcontrolleriface.hpp" include nil nil [3372 3423])
+            ("ccapp_ucm_licensedfeaturesbody.hpp" include nil nil [3425 3470])
+            ("ccapp_stm_ssmmessages.hpp" include nil nil [3472 3508])
+            ("core_cbk_callbackconstmemfunptr.hpp" include nil nil [3510 3556])
+            ("core_cbk_callbackmemfunptr.hpp" include nil nil [3557 3598])
+            ("core_cbk_function.hpp" include nil nil [3599 3631])
+            ("core_dtr_dependencyset.hpp" include nil nil [3633 3670])
+            ("core_fls_fstreamfactoryiface.hpp" include nil nil [3672 3715])
+            ("core_fls_fstreaminterface.hpp" include nil nil [3716 3756])
+            ("core_log_logmsg.hpp" include nil nil [3758 3788])
+            ("core_ptr_sharedptr.hpp" include nil nil [3790 3823])
+            ("core_utl_timeval.hpp" include nil nil [3825 3856])
+            ("cmath" include (:system-flag t) nil [3858 3874])
+            ("fstream" include (:system-flag t) nil [3875 3893])
+            ("core_ipc_shmem.cpp" include nil nil [3922 3951])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("smg" type
+                               (:members 
+                                  ( ("ccapp::scf" using (:type ("ccapp::scf" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [4083 4110])
+                                    ("ccapp::scf::gui" using (:type ("ccapp::scf::gui" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [4111 4143])
+                                    ("ccapp::scf::gui::image" using (:type ("ccapp::scf::gui::image" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [4144 4183])
+                                    ("core" using (:type ("core" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [4185 4206])
+                                    ("core::con" using (:type ("core::con" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [4208 4234])
+                                    ("core::dtr" using (:type ("core::dtr" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [4235 4261])
+                                    ("core::utl" using (:type ("core::utl" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [4262 4288])
+                                    ("core::cbk" using (:type ("core::cbk" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [4290 4316])
+                                    ("core::log" using (:type ("core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [4317 4343])
+                                    ("internal" type (:type "namespace") (reparse-symbol namespacesubparts) [4495 5247])
+                                    ("Imp" type
+                                       (:parent "ValueManager"
+                                        :superclasses 
+                                          ( ("boost::noncopyable" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("Imp" function
+                                               (:constructor-flag t
+                                                :arguments 
+                                                  ( ("cfgVars_" variable
+                                                       (:reference 1
+                                                        :type ("ChangeTrackingMixedSet" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [5678 5723])
+                                                    ("scanRunningController_" variable
+                                                       (:reference 1
+                                                        :type ("ScanRunningControllerIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [5732 5791])
+                                                    ("sendDisplayCfgFun_" variable (:type ("SendDisplayCfgFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5800 5855])
+                                                    ("sendProbeSupportedFun_" variable (:type ("SendProbeSupportedFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5864 5923])
+                                                    ("sendScanCfgFun_" variable (:type ("SendScanCfgFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5932 5984])
+                                                    ("sendGuiCfgFun_" variable (:type ("SendGuiCfgFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5993 6044])
+                                                    ("sendSwapFrozenWindowFun_" variable (:type ("SendSwapFrozenWindowFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6053 6114])
+                                                    ("sendMechThermIndexFun_" variable (:type ("SendMechThermIndexFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6123 6182])
+                                                    ("sendPipelineCfgFun_" variable (:type ("SendPipelineCfgFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6191 6247])
+                                                    ("sendDspAlgorithmParamsFun_" variable (:type ("SendDspAlgorithmParamsFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6256 6319])
+                                                    ("fstreamFactory_" variable
+                                                       (:reference 1
+                                                        :type ("core::fls::FStreamFactoryIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [6328 6388]))                                                  
+                                                :type ("Imp" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [5665 8826])
+                                            ("LocalFpgaMemoryMap" function
+                                               (:constant-flag t
+                                                :type ("FpgaMemoryMap" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [8868 8981])
+                                            ("OnFreezeScan" function
+                                               (:arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("FreezeScanBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [9006 9034]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [8987 9126])
+                                            ("OnImageSettings" function
+                                               (:arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("ImageSettingsBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [9154 9185]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [9132 9570])
+                                            ("OnZoomInfo" function
+                                               (:arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("ZoomInfoBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [9593 9619]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [9576 9679])
+                                            ("OnProbeStatus" function
+                                               (:arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("ProbeStatusBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [9705 9734]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [9685 10020])
+                                            ("OnLicensedFeaturesUpdated" function
+                                               (:arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("LicensedFeaturesBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [10058 10092]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [10026 10154])
+                                            ("OnImpedanceAnalyserInfo" function
+                                               (:arguments 
+                                                  ( ("body" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("imm::ImpedanceAnalyserInfoBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [10190 10235]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [10160 10504])
+                                            ("AfterRestoringDependenciesWithProbe" function (:type "void") (reparse-symbol classsubparts) [10510 11389])
+                                            ("RestoreDependencies" function (:type "void") (reparse-symbol classsubparts) [11395 11851])
+                                            ("OnFrameDisplayed" function (:type "void") (reparse-symbol classsubparts) [11857 12185])
+                                            ("StandbyMode" function (:type "void") (reparse-symbol classsubparts) [12191 12305])
+                                            ("OnLookupTablesModified" function (:type "void") (reparse-symbol classsubparts) [12311 12673])
+                                            ("UpdateNeedleTypeParameter" function
+                                               (:template 
+                                                  ( ("ValueT" type (:type "class") nil nil))                                                  
+                                                :type "void"
+                                                :arguments 
+                                                  ( ("update" variable
+                                                       (:constant-flag t
+                                                        :type "bool")
+                                                        (reparse-symbol arg-sub-list) [12743 12761])
+                                                    ("value" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("ValueT" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [12762 12784]))                                                  )
+                                                (reparse-symbol classsubparts) [12679 12879])
+                                            ("OnNeedleTypeConfigChanged" function
+                                               (:arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("sfm::NeedleTypeConfigBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [12917 12956]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [12885 17664])
+                                            ("OnActivateAutoCompensation" function
+                                               (:arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("sfm::ActivateAutoCompensationBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [17703 17750]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [17670 17827])
+                                            ("OnSelectedThermalIndexType" function
+                                               (:arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("SelectedThermalIndexTypeBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [17866 17908]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [17833 18032])
+                                            ("OnUserSelectionCmodeBoxPos" function
+                                               (:arguments 
+                                                  ( ("msg" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("UserSelectionCmodeBoxPosBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [18071 18113]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [18038 18685])
+                                            ("LookupTablesCanBeUsed" function (:type "void") (reparse-symbol classsubparts) [18691 18823])
+                                            ("OnScanConfigurationReceived" function
+                                               (:arguments 
+                                                  ( ("body" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("ScanConfigurationReceivedBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [18875 18927]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [18829 19012])
+                                            ("OnTimer100ms" function (:type "void") (reparse-symbol classsubparts) [19018 19112])
+                                            ("private" label nil (reparse-symbol classsubparts) [19114 19122])
+                                            ("CreateCalculationObjects" function (:type "void") (reparse-symbol classsubparts) [19128 19830])
+                                            ("CreateLookupTables" function (:type "void") (reparse-symbol classsubparts) [19836 20833])
+                                            ("DefineInitialValues" function (:type "void") (reparse-symbol classsubparts) [20839 20985])
+                                            ("DefineInitialGuiSettings" function (:type "void") (reparse-symbol classsubparts) [20991 23844])
+                                            ("DefineInitialDisplaySettings" function (:type "void") (reparse-symbol classsubparts) [23850 24217])
+                                            ("DefineNonGuiSettings" function (:type "void") (reparse-symbol classsubparts) [24223 27222])
+                                            ("AddDependencies" function (:type "void") (reparse-symbol classsubparts) [27228 27452])
+                                            ("AddBaseDependencies" function (:type "void") (reparse-symbol classsubparts) [27458 27929])
+                                            ("AddConfigurationDependencies" function (:type "void") (reparse-symbol classsubparts) [27935 29536])
+                                            ("AddEarlyOutputDependencies" function (:type "void") (reparse-symbol classsubparts) [29542 30371])
+                                            ("AddScanConfigurationDependencies" function (:type "void") (reparse-symbol classsubparts) [30377 30781])
+                                            ("AddLateOutputDependencies" function (:type "void") (reparse-symbol classsubparts) [30787 31337])
+                                            ("ProbeConnectionEvent" function
+                                               (:arguments 
+                                                  ( ("rawProbeId" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::probe::UnverifiedProbeId" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [31382 31437])
+                                                    ("status" variable
+                                                       (:reference 1
+                                                        :type ("internal::ProbeConnectionStatus" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [31456 31510]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [31343 31939])
+                                            ("IsValidProbeConnected" function (:type "bool") (reparse-symbol classsubparts) [31945 32051])
+                                            ("UpdateDopplerThresholds" function
+                                               (:arguments 
+                                                  ( ("vt" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("display::c_mode::VelocityThreshold" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [32099 32150])
+                                                    ("ttl" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("display::c_mode::TurbulenceThresholdLow" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [32163 32215])
+                                                    ("tth" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("display::c_mode::TurbulenceThresholdHi" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [32228 32280])
+                                                    ("thresholds" variable
+                                                       (:reference 1
+                                                        :type ("display::c_mode::Thresholds" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [32299 32361]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [32057 32559])
+                                            ("SendPipelineConfiguration" function
+                                               (:arguments 
+                                                  ( ("pip" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("PipelineConfiguration" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [32794 32854])
+                                                    ("st" variable
+                                                       (:reference 1
+                                                        :type ("internal::ScanPipelineConfigurationStatus" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [32873 32935]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [32750 33043])
+                                            ("SendNeedleDetectionConfiguration" function
+                                               (:arguments 
+                                                  ( ("dap" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("NdDspAlgorithmParams" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [33285 33345])
+                                                    ("st" variable
+                                                       (:reference 1
+                                                        :type ("internal::NeedleDetectionConfigurationStatus" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [33364 33426]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [33234 33541])
+                                            ("SendDisplayConfiguration" function
+                                               (:arguments 
+                                                  ( ("pc" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::probe::ValidProbeConnected" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [33774 33830])
+                                                    ("bcs" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("display::b_mode::ColorScheme" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [33843 33900])
+                                                    ("ccs" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::image::c_mode::ColorScheme" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [33913 33970])
+                                                    ("thrs" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("display::c_mode::Thresholds" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [33983 34041])
+                                                    ("hf" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::image::size_orientation::HorizontalFlip" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [34054 34110])
+                                                    ("vf" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::image::size_orientation::VerticalFlip" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [34123 34179])
+                                                    ("si" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("display::m_mode::StretchImage" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [34192 34248])
+                                                    ("wl" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("display::WindowsLayout" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [34261 34317])
+                                                    ("wr" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("display::WindowsRatio" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [34330 34386])
+                                                    ("showPosInPlane" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::needle::ShowPositionInPlane" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [34399 34467])
+                                                    ("showPosOutOfPlane" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::needle::ShowPositionOutOfPlane" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [34480 34551])
+                                                    ("showTargetInPlane" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::needle::ShowTargetInPlane" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [34564 34635])
+                                                    ("showTargetOutOfPlane" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::needle::ShowTargetOutOfPlane" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [34648 34722])
+                                                    ("showTrajectoryInPlane" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::needle::ShowTrajectoryInPlane" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [34735 34810])
+                                                    ("showTrajectoryOutOfPlane" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::needle::ShowTrajectoryOutOfPlane" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [34823 34901])
+                                                    ("showIndicator" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::needle::ShowIndicator" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [34914 34981])
+                                                    ("compensation" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("nd::AutoCompensation" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [34994 35060])
+                                                    ("showImpedancePath" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::impedance::ShowPath" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [35073 35144])
+                                                    ("st" variable
+                                                       (:reference 1
+                                                        :type ("internal::SendDisplayConfigurationStatus" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [35163 35222]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [33731 36828])
+                                            ("EnableSendingScanConfiguration" function
+                                               (:arguments 
+                                                  ( ("probeConnected" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::probe::ValidProbeConnected" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [36883 36989])
+                                                    ("frozen" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::ImageFrozen" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [37002 37049])
+                                                    ("fpgaCfgReady" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scf::internal::FpgaCfgReady" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [37062 37115])
+                                                    ("enabled" variable
+                                                       (:reference 1
+                                                        :type ("internal::ScanCfgEnabled" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [37134 37185]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [36834 37382])
+                                            ("SendScanConfiguration" function
+                                               (:arguments 
+                                                  ( ("enabled" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("internal::ScanCfgEnabled" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [37613 37669])
+                                                    ("" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scf::internal::FpgaCfgAge" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [37682 37748])
+                                                    ("scanMode" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::SystemScanMode" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [37761 37818])
+                                                    ("probeType" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::probe::parameters::ProbeTypeCode" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [37831 37889])
+                                                    ("probeModel" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::probe::parameters::ProbeModel" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [37902 37961])
+                                                    ("scanWidth" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::probe::parameters::linear::ScanWidth" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [37974 38093])
+                                                    ("radiusOfCurvature" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::probe::parameters::curvilinear::RadiusOfCurvature" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [38106 38246])
+                                                    ("scanAngle" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::probe::parameters::curvilinear::ScanAngle" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [38259 38383])
+                                                    ("mModeLinesPerSecond" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::probe::parameters::MModeLinesPerSecond" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [38396 38527])
+                                                    ("maxDopplerBoxDepthLimit" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::probe::parameters::MaxDopplerBoxDepthLimit" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [38540 38679])
+                                                    ("bMode" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::BModeConfiguration" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [38692 38746])
+                                                    ("cMode" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::CModeConfiguration" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [38759 38813])
+                                                    ("mMode" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::MModeConfiguration" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [38826 38880])
+                                                    ("scanRate" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::ScanRateConfiguration" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [38893 38950])
+                                                    ("guidanceOn" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::needle::GuidanceOn" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [38963 39022])
+                                                    ("impedanceTracingOn" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::impedance::ShowPath" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [39035 39102])
+                                                    ("delaySwapping" variable
+                                                       (:reference 1
+                                                        :type ("internal::DelaySwappingFrozenWindow" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [39121 39186]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [37573 41726])
+                                            ("RequireSendingSwapFrozenWindow" function
+                                               (:arguments 
+                                                  ( ("" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::probe::ValidProbeConnected" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [44885 44946])
+                                                    ("probeId" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::probe::ProbeId" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [44959 45011])
+                                                    ("" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("VisualizationMode" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [45024 45085])
+                                                    ("" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::image::b_mode::Swap" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [45098 45159])
+                                                    ("shouldSwap" variable
+                                                       (:reference 1
+                                                        :type ("internal::ShouldSwapFrozenWindow" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [45178 45236]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [44836 45316])
+                                            ("UpdateDelaySwapFrozenWindow" function
+                                               (:arguments 
+                                                  ( ("delaySwapping" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("internal::DelaySwappingFrozenWindow" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [45575 45683])
+                                                    ("shouldSwap" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("internal::ShouldSwapFrozenWindow" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [45696 45798])
+                                                    ("forceUpdate" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("internal::ForceUpdateOfFrozenWindow" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [45811 45917])
+                                                    ("scanMode" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("VisualizationMode" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [45930 45979])
+                                                    ("swap" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::image::b_mode::Swap" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [45992 46037])
+                                                    ("delaySwap" variable
+                                                       (:reference 1
+                                                        :type ("internal::DelaySwap" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [46056 46109]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [45529 46503])
+                                            ("SendSwapFrozenWindow" function
+                                               (:arguments 
+                                                  ( ("forceUpdate" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("internal::ForceUpdateOfFrozenWindow" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [46755 46861])
+                                                    ("scanMode" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("VisualizationMode" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [46874 46923])
+                                                    ("swap" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::image::b_mode::Swap" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [46936 46990]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [46716 47687])
+                                            ("SendProbeSupported" function
+                                               (:arguments 
+                                                  ( ("probeConnected" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::probe::ValidProbeConnected" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [47912 47971])
+                                                    ("probeId" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::probe::ProbeId" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [47984 48036])
+                                                    ("probeModel" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::probe::parameters::ProbeModel" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [48049 48104])
+                                                    ("allScanDepths" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::image::size_orientation::AllScanDepths" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [48117 48237])
+                                                    ("mModeSupported" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scan::probe::parameters::MModeSupported" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [48250 48367])
+                                                    ("leftLimit" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui_limits::m_mode::line_selection::LeftLimit" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [48380 48498])
+                                                    ("rightLimit" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui_limits::m_mode::line_selection::RightLimit" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [48511 48631])
+                                                    ("status" variable
+                                                       (:reference 1
+                                                        :type ("internal::SendProbeSupportedStatus" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [48650 48704]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [47875 50028])
+                                            ("SendMechanicalThermalIndex" function
+                                               (:arguments 
+                                                  ( ("mi" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("miti::MechanicalIndexValue" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [50269 50316])
+                                                    ("showMechanicalIndex" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("miti::display::ShowMechanicalIndex" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [50329 50393])
+                                                    ("ti" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("miti::ThermalIndexValue" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [50406 50453])
+                                                    ("tiDisplayMode" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::TiDisplayMode" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [50466 50524])
+                                                    ("showThermalIndex" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("miti::display::ShowThermalIndex" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [50537 50598])
+                                                    ("status" variable
+                                                       (:reference 1
+                                                        :type ("internal::SendMechanicalThermalIndexStatus" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [50617 50732]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [50224 51372])
+                                            ("InitializeSystemConstantsFromLookupTables" function (:type "void") (reparse-symbol classsubparts) [51378 51580])
+                                            ("ScanRunningControllerOnFreezeScan" function
+                                               (:arguments 
+                                                  ( ("frozen" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("gui::ImageFrozen" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [51638 51673])
+                                                    ("status" variable
+                                                       (:reference 1
+                                                        :type ("internal::ScanRunningControllerOnFreezeScanStatus" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [51692 51798]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [51586 51956])
+                                            ("SignalProbeDisconnected" function (:type "void") (reparse-symbol classsubparts) [51962 52257])
+                                            ("CurrentProbe" function (:type ("scan::probe::ProbeId" type (:type "class") nil nil)) (reparse-symbol classsubparts) [52263 52556])
+                                            ("cfgVars" variable (:type ("ChangeTrackingMixedSet" type (:type "class") nil nil)) (reparse-symbol classsubparts) [52562 52602])
+                                            ("baseDependencies" variable (:type ("DependencySet" type (:type "class") nil nil)) (reparse-symbol classsubparts) [52607 52656])
+                                            ("configurationDeps" variable (:type ("DependencySet" type (:type "class") nil nil)) (reparse-symbol classsubparts) [52661 52711])
+                                            ("earlyOutputDeps" variable (:type ("DependencySet" type (:type "class") nil nil)) (reparse-symbol classsubparts) [52716 52764])
+                                            ("scanConfigurationDeps" variable (:type ("DependencySet" type (:type "class") nil nil)) (reparse-symbol classsubparts) [52769 52823])
+                                            ("lateOutputDeps" variable (:type ("DependencySet" type (:type "class") nil nil)) (reparse-symbol classsubparts) [52828 52875])
+                                            ("cwtCalculator" variable (:type ("CompoundingWeightsTableCalculatorService" type (:type "class") nil nil)) (reparse-symbol classsubparts) [52881 52976])
+                                            ("cwtLutReader" variable (:type ("CompoundingWeightsTableLutReaderService" type (:type "class") nil nil)) (reparse-symbol classsubparts) [52981 53074])
+                                            ("cwtSorter" variable (:type ("CompoundingWeightsTableSorterService" type (:type "class") nil nil)) (reparse-symbol classsubparts) [53079 53166])
+                                            ("cwtWriter" variable (:type ("CompoundingWeightsTableWriterService" type (:type "class") nil nil)) (reparse-symbol classsubparts) [53171 53258])
+                                            ("fzfAdjuster" variable (:type ("FocalZoneFocusAreasListAdjustmentService" type (:type "class") nil nil)) (reparse-symbol classsubparts) [53263 53356])
+                                            ("fpgaCfgDeps" variable (:type ("FpgaConfigurationDependencies" type (:type "class") nil nil)) (reparse-symbol classsubparts) [53362 53410])
+                                            ("angleValuesCfg" variable (:type ("AngleValuesConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [53415 53466])
+                                            ("rxFocusDelayCfg" variable (:type ("RxFocusDelayConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [53471 53523])
+                                            ("scanRunningController" variable (:type ("ScanRunningControllerIface" type (:type "class") nil nil)) (reparse-symbol classsubparts) [53529 53587])
+                                            ("scanConfigurationController" variable (:type ("ScanConfigurationController" type (:type "class") nil nil)) (reparse-symbol classsubparts) [53592 53656])
+                                            ("lastReceivedImageSettingsBody" variable (:type ("ImageSettingsBody" type (:type "class") nil nil)) (reparse-symbol classsubparts) [53662 53728])
+                                            ("probeCfg" variable (:type ("ProbeConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [53733 53778])
+                                            ("scanDepthCfg" variable (:type ("ScanDepthConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [53783 53832])
+                                            ("focalZonesTableLut" variable (:type ("FocalZonesTableLut" type (:type "class") nil nil)) (reparse-symbol classsubparts) [53837 53892])
+                                            ("focalZonesCfg" variable (:type ("FocalZonesConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [53897 53947])
+                                            ("schedulerDependencies" variable (:type ("v2::SchedulerDependencies" type (:type "class") nil nil)) (reparse-symbol classsubparts) [53953 54011])
+                                            ("sendDisplayCfgFun" variable (:type ("SendDisplayCfgFun" type (:type "class") nil nil)) (reparse-symbol classsubparts) [54017 54071])
+                                            ("sendProbeSupportedFun" variable (:type ("SendProbeSupportedFun" type (:type "class") nil nil)) (reparse-symbol classsubparts) [54076 54134])
+                                            ("sendScanCfgFun" variable (:type ("SendScanCfgFun" type (:type "class") nil nil)) (reparse-symbol classsubparts) [54139 54190])
+                                            ("sendGuiCfgFun" variable (:type ("SendGuiCfgFun" type (:type "class") nil nil)) (reparse-symbol classsubparts) [54195 54245])
+                                            ("sendSwapFrozenWindowFun" variable (:type ("SendSwapFrozenWindowFun" type (:type "class") nil nil)) (reparse-symbol classsubparts) [54250 54310])
+                                            ("sendMechThermIndexFun" variable (:type ("SendMechThermIndexFun" type (:type "class") nil nil)) (reparse-symbol classsubparts) [54315 54373])
+                                            ("sendPipelineCfgFun" variable (:type ("SendPipelineCfgFun" type (:type "class") nil nil)) (reparse-symbol classsubparts) [54378 54433])
+                                            ("sendDspAlgorithmParamsFun" variable (:type ("SendDspAlgorithmParamsFun" type (:type "class") nil nil)) (reparse-symbol classsubparts) [54438 54500])
+                                            ("fstreamFactory" variable (:type ("core::fls::FStreamFactoryIface" type (:type "class") nil nil)) (reparse-symbol classsubparts) [54505 54556])
+                                            ("probeIdBeforeStandby" variable (:type ("scan::probe::ProbeId" type (:type "class") nil nil)) (reparse-symbol classsubparts) [54562 54619])
+                                            ("lookupTablesCanBeUsed" variable (:type "bool") (reparse-symbol classsubparts) [54625 54683])
+                                            ("waitingForFreezeMsg" variable (:type "bool") (reparse-symbol classsubparts) [54688 54744])
+                                            ("lastProbeHasDspForNeedleGuidance" variable (:type "bool") (reparse-symbol classsubparts) [54750 54819]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [5496 54823])
+                                    ("ValueManager" function
+                                       (:constructor-flag t
+                                        :parent "ValueManager"
+                                        :arguments 
+                                          ( ("cfgVars" variable
+                                               (:reference 1
+                                                :type ("ChangeTrackingMixedSet" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [56487 56531])
+                                            ("scanRunningController" variable
+                                               (:reference 1
+                                                :type ("ScanRunningControllerIface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [56540 56598])
+                                            ("sendDisplayCfgFun" variable (:type ("SendDisplayCfgFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56607 56661])
+                                            ("sendProbeSupportedFun" variable (:type ("SendProbeSupportedFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56670 56728])
+                                            ("sendScanCfgFun" variable (:type ("SendScanCfgFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56737 56788])
+                                            ("sendGuiCfgFun" variable (:type ("SendGuiCfgFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56797 56847])
+                                            ("sendSwapFrozenWindowFun" variable (:type ("SendSwapFrozenWindowFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56856 56916])
+                                            ("sendMechThermIndexFun" variable (:type ("SendMechThermIndexFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56925 56983])
+                                            ("sendPipelineCfgFun" variable (:type ("SendPipelineCfgFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56992 57047])
+                                            ("sendDspAlgorithmParamsFun" variable (:type ("SendDspAlgorithmParamsFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [57056 57118])
+                                            ("fstreamFactory" variable
+                                               (:reference 1
+                                                :type ("core::fls::FStreamFactoryIface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [57127 57183]))                                          
+                                        :type ("ValueManager" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [56451 57686])
+                                    ("ValueManager" function
+                                       (:destructor-flag t
+                                        :parent "ValueManager"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [57798 57831])
+                                    ("LocalFpgaMemoryMap" function
+                                       (:parent "ValueManager"
+                                        :constant-flag t
+                                        :type ("FpgaMemoryMap" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [57833 57939])
+                                    ("OnFreezeScan" function
+                                       (:parent "ValueManager"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("FreezeScanBody" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [58148 58176]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [58115 58212])
+                                    ("OnImageSettings" function
+                                       (:parent "ValueManager"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ImageSettingsBody" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [58427 58458]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [58391 58497])
+                                    ("OnZoomInfo" function
+                                       (:parent "ValueManager"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ZoomInfoBody" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [58702 58728]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [58671 58762])
+                                    ("OnProbeStatus" function
+                                       (:parent "ValueManager"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ProbeStatusBody" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [58974 59003]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [58940 59040])
+                                    ("OnLicensedFeaturesUpdated" function
+                                       (:parent "ValueManager"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("LicensedFeaturesBody" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [59268 59302]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [59222 59351])
+                                    ("OnImpedanceAnalyserInfo" function
+                                       (:parent "ValueManager"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("imm::ImpedanceAnalyserInfoBody" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [59594 59638]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [59550 59685])
+                                    ("LookupTablesCanBeUsed" function
+                                       (:parent "ValueManager"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [59815 59897])
+                                    ("OnScanConfigurationReceived" function
+                                       (:parent "ValueManager"
+                                        :arguments 
+                                          ( ("body" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ScanConfigurationReceivedBody" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [59955 60003]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [59899 60055])
+                                    ("OnTimer100ms" function
+                                       (:parent "ValueManager"
+                                        :arguments 
+                                          ( ("" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Timer100msBody" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [60090 60114]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [60057 60145])
+                                    ("RestoreDependencies" function
+                                       (:parent "ValueManager"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [60296 60374])
+                                    ("OnFrameDisplayed" function
+                                       (:parent "ValueManager"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [60376 60448])
+                                    ("StandbyMode" function
+                                       (:parent "ValueManager"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [60450 60512])
+                                    ("OnLookupTablesModified" function
+                                       (:parent "ValueManager"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [60514 60598])
+                                    ("OnNeedleTypeConfigChanged" function
+                                       (:parent "ValueManager"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("sfm::NeedleTypeConfigBody" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [60646 60685]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [60600 60734])
+                                    ("OnActivateAutoCompensation" function
+                                       (:parent "ValueManager"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("sfm::ActivateAutoCompensationBody" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [60799 60846]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [60736 60896])
+                                    ("OnSelectedThermalIndexType" function
+                                       (:parent "ValueManager"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("SelectedThermalIndexTypeBody" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [60945 60987]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [60898 61037])
+                                    ("OnUserSelectionCmodeBoxPos" function
+                                       (:parent "ValueManager"
+                                        :arguments 
+                                          ( ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("UserSelectionCmodeBoxPosBody" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [61086 61128]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [61039 61178])
+                                    ("SystemScanModeToFpgaScanMode" function
+                                       (:arguments 
+                                          ( ("scanMode" variable
+                                               (:constant-flag t
+                                                :type ("sfm::ModeOfOperation" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [61440 61477]))                                          
+                                        :type ("UInt32" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [61403 62118]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [4066 62344]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [4047 62364]))                  
+                :type "namespace")
+                nil [4028 62386]))          
+      :file "ccapp_smg_valuemanager.cpp"
+      :pointmax 62447
+      :fsize 64702
+      :lastmodtime '(21748 22428 699964 794000)
+      :unmatched-syntax '((punctuation 8848 . 8849) (DEFAULT 8841 . 8848) (punctuation 8839 . 8840) (semantic-list 8836 . 8838) (symbol 8833 . 8836) (punctuation 8832 . 8833) (semantic-list 5198 . 5244) (symbol 5178 . 5198) (semantic-list 5139 . 5177) (symbol 5119 . 5139) (semantic-list 5074 . 5118) (symbol 5054 . 5074) (semantic-list 5000 . 5053) (symbol 4980 . 5000) (semantic-list 4934 . 4979) (symbol 4914 . 4934) (semantic-list 4878 . 4913) (symbol 4858 . 4878) (semantic-list 4809 . 4857) (symbol 4789 . 4809) (semantic-list 4759 . 4787) (symbol 4739 . 4759) (semantic-list 4714 . 4737) (symbol 4694 . 4714) (semantic-list 4657 . 4693) (symbol 4637 . 4657) (semantic-list 4597 . 4636) (symbol 4577 . 4597) (semantic-list 4537 . 4576) (symbol 4517 . 4537)))
+    (semanticdb-table "ccapp_smg_scanconfigurationcontroller.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SMG_SCANCONFIGURATIONCONTROLLER_HPP" variable (:constant-flag t) nil [821 862])
+            ("ccapp_scf_scanconfigurationvalues.hpp" include nil nil [938 986])
+            ("core_cbk_basecallback.hpp" include nil nil [988 1024])
+            ("core_cpp_forwarddeclare.hpp" include nil nil [1025 1063])
+            ("core_ptr_uniqueptr.hpp" include nil nil [1064 1097])
+            ("boost/noncopyable.hpp" include (:system-flag t) nil [1099 1131])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("smg" type
+                               (:members 
+                                  ( ("ccapp::scf::ScanConfiguration" using (:type ("ccapp::scf::ScanConfiguration" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1580 1616])
+                                    ("ccapp::scf::ScanConfigurationReceivedBody" using (:type ("ccapp::scf::ScanConfigurationReceivedBody" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1617 1665])
+                                    ("core::cbk::BaseCallback" using (:type ("core::cbk::BaseCallback" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1667 1697])
+                                    ("core::ptr::UniquePtr" using (:type ("core::ptr::UniquePtr" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1698 1725])
+                                    ("core::utl::TimeVal" using (:type ("core::utl::TimeVal" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1727 1752])
+                                    ("ScanConfigurationController" type
+                                       (:superclasses 
+                                          ( ("boost::noncopyable" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [2233 2240])
+                                            ("SendScanCfgFun" variable (:type "int") (reparse-symbol classsubparts) [2338 2353])
+                                            ("ScanCfgConfirmedFun" variable (:type "int") (reparse-symbol classsubparts) [2452 2472])
+                                            ("ScanConfigurationController" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :arguments 
+                                                  ( ("sendScanCfgFun" variable (:type ("SendScanCfgFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2527 2564])
+                                                    ("scanCfgConfirmedFun" variable (:type ("ScanCfgConfirmedFun" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2581 2636]))                                                  
+                                                :type ("ScanConfigurationController" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2482 2637])
+                                            ("ScanConfigurationController" function
+                                               (:prototype-flag t
+                                                :destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2647 2678])
+                                            ("SendScanConfiguration" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("body" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("ScanConfiguration" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2751 2795]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2707 2796])
+                                            ("OnScanConfigurationReceived" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("body" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("ScanConfigurationReceivedBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2856 2912]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2806 2913])
+                                            ("OnTimer" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("now" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("TimeVal" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2937 2958]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2923 2959])
+                                            ("ConfirmationTimeoutDuration" function
+                                               (:prototype-flag t
+                                                :typemodifiers ("static")
+                                                :type ("TimeVal" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2969 3014])
+                                            ("HasImageLookChanged" function
+                                               (:prototype-flag t
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [3024 3057])
+                                            ("private" label nil (reparse-symbol classsubparts) [3063 3071])
+                                            ("Imp" type
+                                               (:prototype t
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) [3081 3103])
+                                            ("pimpl" variable (:type ("UniquePtr" type
+                                                 (:template-specifier 
+                                                    ( ("Imp" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [3144 3170]))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [2054 3191]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1414 3269]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1395 3289]))                  
+                :type "namespace")
+                nil [1208 3311]))          
+      :file "ccapp_smg_scanconfigurationcontroller.hpp"
+      :pointmax 3443
+      :fsize 3442
+      :lastmodtime '(21379 17372 847926 9000)
+      :unmatched-syntax '((punctuation 2434 . 2435) (semantic-list 2403 . 2433) (VOID 2398 . 2402) (punctuation 2396 . 2397) (symbol 2388 . 2396) (punctuation 2387 . 2388) (punctuation 2386 . 2387) (symbol 2383 . 2386) (TYPEDEF 2363 . 2370) (punctuation 2320 . 2321) (semantic-list 2290 . 2319) (VOID 2285 . 2289) (punctuation 2283 . 2284) (symbol 2275 . 2283) (punctuation 2274 . 2275) (punctuation 2273 . 2274) (symbol 2270 . 2273) (TYPEDEF 2250 . 2257) (semantic-list 1371 . 1393) (symbol 1350 . 1371) (semantic-list 1303 . 1348) (symbol 1282 . 1303) (semantic-list 1248 . 1281) (symbol 1227 . 1248))
+      :lexical-table 
+        '(("CCAPP_SMG_SCANCONFIGURATIONCONTROLLER_HPP")
+          )
+)
+    (semanticdb-table "ccapp_smg_scanrunningcontrolleriface.hpp"
+      :file "ccapp_smg_scanrunningcontrolleriface.hpp"
+      :fsize 2296
+      :lastmodtime '(21379 17372 935926 565000))
+    (semanticdb-table "ccapp_smg_fpgalocalconfig.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SMG_FPGALOCALCONFIG_HPP" variable (:constant-flag t) nil [756 785])
+            ("core_ptr_uniqueptr.hpp" include nil nil [861 894])
+            ("core_cpp_forwarddeclare.hpp" include nil nil [895 933])
+            ("core_bty_commontypes.hpp" include nil nil [934 969])
+            ("boost/noncopyable.hpp" include (:system-flag t) nil [971 1003])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("smg" type
+                               (:members 
+                                  ( ("core::ptr::UniquePtr" using (:type ("core::ptr::UniquePtr" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1336 1363])
+                                    ("FpgaLocalConfig" type
+                                       (:superclasses 
+                                          ( ("boost::noncopyable" type
+                                               (:protection "private"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [1832 1839])
+                                            ("FpgaLocalConfig" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :type ("FpgaLocalConfig" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [1849 1867])
+                                            ("FpgaLocalConfig" function
+                                               (:prototype-flag t
+                                                :destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1876 1895])
+                                            ("NewFpgaConfig" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("cfgId" variable
+                                                       (:constant-flag t
+                                                        :type ("core::bty::UInt32" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1945 1976]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1925 1977])
+                                            ("ConfigUpdated" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("id" variable
+                                                       (:constant-flag t
+                                                        :type ("core::bty::UInt8" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2006 2033]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [1986 2040])
+                                            ("ResetTheConfiguration" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2049 2078])
+                                            ("GetConfiguration" function
+                                               (:prototype-flag t
+                                                :constant-flag t
+                                                :type ("fea::FpgaMemoryMap" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2088 2139])
+                                            ("GetConfigurationId" function
+                                               (:prototype-flag t
+                                                :type ("core::bty::UInt32" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2148 2193])
+                                            ("DebugDumpConfig" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2202 2231])
+                                            ("private" label nil (reparse-symbol classsubparts) [2237 2245])
+                                            ("Imp" type
+                                               (:prototype t
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) [2255 2277])
+                                            ("pimpl" variable (:type ("UniquePtr" type
+                                                 (:template-specifier 
+                                                    ( ("Imp" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2318 2344]))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [1665 2365]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1170 2443]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1151 2463]))                  
+                :type "namespace")
+                nil [1080 2485]))          
+      :file "ccapp_smg_fpgalocalconfig.hpp"
+      :pointmax 2593
+      :fsize 2592
+      :lastmodtime '(21379 17373 126927 774000)
+      :unmatched-syntax '((semantic-list 1120 . 1149) (symbol 1099 . 1120))
+      :lexical-table 
+        '(("CCAPP_SMG_FPGALOCALCONFIG_HPP")
+          )
+)
+    (semanticdb-table "ccapp_smg_fpgalocalconfig.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_smg_fpgalocalconfig.hpp" include nil nil [710 750])
+            ("ccapp_smg_fpgaconfigurationmemory.hpp" include nil nil [752 800])
+            ("core_utl_optional.hpp" include nil nil [802 834])
+            ("core_utl_developmentactive.hpp" include nil nil [835 876])
+            ("core_log_logmsg.hpp" include nil nil [878 908])
+            ("core_chk_assert.hpp" include nil nil [909 939])
+            ("fstream" include (:system-flag t) nil [941 959])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("smg" type
+                               (:members 
+                                  ( ("unnamed" type
+                                       (:members 
+                                          ( ("ezono::core::log" using (:type ("ezono::core::log" type
+                                                 (:prototype t
+                                                  :type "namespace")
+                                                  nil nil)) (reparse-symbol namespacesubparts) [1117 1150])
+                                            ("Dump" function
+                                               (:template 
+                                                  ( ("T" type (:type "class") nil nil))                                                  
+                                                :type "void"
+                                                :arguments 
+                                                  ( ("data" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("T" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1778 1793])
+                                                    ("fileName" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type "char")
+                                                        (reparse-symbol arg-sub-list) [1794 1817]))                                                  )
+                                                (reparse-symbol namespacesubparts) [1743 1939]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [1091 2017])
+                                    ("Imp" type
+                                       (:parent "FpgaLocalConfig"
+                                        :members 
+                                          ( ("Imp" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :type ("Imp" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [2186 2192])
+                                            ("Imp" function
+                                               (:prototype-flag t
+                                                :destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2197 2204])
+                                            ("NewFpgaConfig" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("newCfgId" variable
+                                                       (:constant-flag t
+                                                        :type ("UInt32" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2244 2267]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2224 2268])
+                                            ("ConfigUpdated" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("writtenCfgId" variable
+                                                       (:constant-flag t
+                                                        :type ("UInt8" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2293 2319]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [2273 2326])
+                                            ("DebugDumpConfig" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2332 2361])
+                                            ("fpgaConfigs" variable (:type ("FpgaConfigurationMemory" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2420 2456])
+                                            ("localConfig" variable (:type ("fea::FpgaMemoryMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2498 2529])
+                                            ("lastConfigId" variable (:type ("core::utl::optional" type
+                                                 (:template-specifier 
+                                                    ( ("UInt32" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2567 2610]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [2042 2613])
+                                    ("Imp" function
+                                       (:constructor-flag t
+                                        :parent "FpgaLocalConfig::Imp"
+                                        :type ("Imp" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [2615 2775])
+                                    ("Imp" function
+                                       (:destructor-flag t
+                                        :parent "FpgaLocalConfig::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2778 2810])
+                                    ("NewFpgaConfig" function
+                                       (:parent "FpgaLocalConfig::Imp"
+                                        :arguments 
+                                          ( ("newCfgId" variable
+                                               (:constant-flag t
+                                                :type ("UInt32" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2854 2877]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2812 3030])
+                                    ("ConfigUpdated" function
+                                       (:parent "FpgaLocalConfig::Imp"
+                                        :arguments 
+                                          ( ("writtenCfgId" variable
+                                               (:constant-flag t
+                                                :type ("UInt8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3082 3108]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [3032 3398])
+                                    ("DebugDumpConfig" function
+                                       (:parent "FpgaLocalConfig::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [3400 4957])
+                                    ("FpgaLocalConfig" function
+                                       (:constructor-flag t
+                                        :parent "FpgaLocalConfig"
+                                        :type ("FpgaLocalConfig" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [5293 5351])
+                                    ("FpgaLocalConfig" function
+                                       (:destructor-flag t
+                                        :parent "FpgaLocalConfig"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [5463 5502])
+                                    ("NewFpgaConfig" function
+                                       (:parent "FpgaLocalConfig"
+                                        :arguments 
+                                          ( ("newCfgId" variable
+                                               (:constant-flag t
+                                                :type ("UInt32" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5767 5790]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [5730 5832])
+                                    ("ConfigUpdated" function
+                                       (:parent "FpgaLocalConfig"
+                                        :arguments 
+                                          ( ("writtenCfgId" variable
+                                               (:constant-flag t
+                                                :type ("UInt8" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6137 6163]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [6100 6222])
+                                    ("ResetTheConfiguration" function
+                                       (:parent "FpgaLocalConfig"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [6363 6459])
+                                    ("GetConfiguration" function
+                                       (:parent "FpgaLocalConfig"
+                                        :constant-flag t
+                                        :type ("fea::FpgaMemoryMap" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [6725 6879])
+                                    ("GetConfigurationId" function
+                                       (:parent "FpgaLocalConfig"
+                                        :type ("UInt32" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [7130 7222])
+                                    ("DebugDumpConfig" function
+                                       (:parent "FpgaLocalConfig"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [7492 7623]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1074 8072]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1055 8092]))                  
+                :type "namespace")
+                nil [1036 8114]))          
+      :file "ccapp_smg_fpgalocalconfig.cpp"
+      :pointmax 8178
+      :fsize 8177
+      :lastmodtime '(21420 20119 229189 632000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_smg_fpgaconfigurationmemory.hpp"
+      :file "ccapp_smg_fpgaconfigurationmemory.hpp"
+      :fsize 1942
+      :lastmodtime '(21379 17372 920926 470000))
+    (semanticdb-table "ccapp_smg_initializelogcompressiontable_L10.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SMG_INITIALIZELOGCOMPRESSIONTABLE_L10_HPP" variable (:constant-flag t) nil [801 848])
+            ("ccapp_scf_contrasttable.hpp" include nil nil [924 962])
+            ("ccapp_smg_initializelookuptablecommon.hpp" include nil nil [964 1016])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("smg" type (:type "namespace") (reparse-symbol namespacesubparts) [1131 2046]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1112 2066]))                  
+                :type "namespace")
+                nil [1093 2088]))          
+      :file "ccapp_smg_initializelogcompressiontable_L10.hpp"
+      :pointmax 2232
+      :fsize 2231
+      :lastmodtime '(21481 58199 175556 406000)
+      :unmatched-syntax '((punctuation 1967 . 1968) (semantic-list 1918 . 1967) (punctuation 1917 . 1918) (number 1911 . 1912) (punctuation 1909 . 1910) (semantic-list 1865 . 1908) (punctuation 1863 . 1864) (number 1861 . 1862) (punctuation 1851 . 1852) (symbol 1837 . 1851) (punctuation 1836 . 1837) (punctuation 1835 . 1836) (symbol 1832 . 1835) (punctuation 1822 . 1823) (symbol 1799 . 1822) (VOID 1794 . 1798) (punctuation 1792 . 1793) (punctuation 1791 . 1792) (TEMPLATE 1782 . 1790) (punctuation 1779 . 1780) (semantic-list 1730 . 1779) (punctuation 1729 . 1730) (semantic-list 1681 . 1724) (punctuation 1679 . 1680) (number 1677 . 1678) (punctuation 1667 . 1668) (symbol 1653 . 1667) (punctuation 1652 . 1653) (punctuation 1651 . 1652) (symbol 1648 . 1651) (punctuation 1638 . 1639) (symbol 1615 . 1638) (VOID 1610 . 1614) (punctuation 1608 . 1609) (punctuation 1607 . 1608) (TEMPLATE 1598 . 1606))
+      :lexical-table 
+        '(("CCAPP_SMG_INITIALIZELOGCOMPRESSIONTABLE_L10_HPP")
+          )
+)
+    (semanticdb-table "ccapp_smg_initializelookuptablecommon.hpp"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "ccapp_smg_initializelookuptablecommon.hpp"
+      :pointmax 6384
+      :fsize 6383
+      :lastmodtime '(21379 17373 191928 185000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_smg_initializelogcompressiontable_L10.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_smg_initializelogcompressiontable_CL2_8.hpp" include nil nil [998 1058])
+            ("CONTRAST_LUT_SIMPLE" variable (:constant-flag t) nil [1147 1166])
+            ("CONTRAST_LUT_HE" variable (:constant-flag t) nil [1290 1305])
+            ("CONTRAST_LUT_HE" variable (:constant-flag t) nil [1290 1305])
+            ("PROBE_ID" variable (:constant-flag t) nil [1418 1426])
+            ("PROBE_ID" variable (:constant-flag t) nil [1418 1426])
+            ("ext_luts_contrast.hpp" include nil nil [1469 1501])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("smg" type
+                               (:members 
+                                  ( ("ccapp::fea" using (:type ("ccapp::fea" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1700 1727])
+                                    ("ccapp::scf" using (:type ("ccapp::scf" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1728 1755])
+                                    ("ext::lut" using (:type ("ext::lut" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1756 1781]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1683 4144]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1664 4164]))                  
+                :type "namespace")
+                nil [1645 4186]))          
+      :file "ccapp_smg_initializelogcompressiontable_L10.cpp"
+      :pointmax 4244
+      :fsize 4243
+      :lastmodtime '(21480 51449 622169 716000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CONTRAST_LUT_HE" . ((string "\"L10/probe/ext_luts_contrast_he.hpp\"" 1306 . 1342)))
+          ("PROBE_ID" . 
+              ((symbol "ezono" 1427 . 1432) (punctuation ":" 1432 . 1433) (punctuation ":" 1433 . 1434) (symbol "ccapp" 1434 . 1439) (punctuation ":" 1439 . 1440) (punctuation ":" 1440 . 1441) (symbol "fea" 1441 . 1444) (punctuation ":" 1444 . 1445) (punctuation ":" 1445 . 1446) (symbol "PROBE_ID_CL2_8" 1446 . 1460)))
+          )
+)
+    (semanticdb-table "ccapp_smg_initializelogcompressiontable_L3_12.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SMG_INITIALIZELOGCOMPRESSIONTABLE_L3_12_HPP" variable (:constant-flag t) nil [805 854])
+            ("ccapp_scf_contrasttable.hpp" include nil nil [930 968])
+            ("ccapp_smg_initializelookuptablecommon.hpp" include nil nil [970 1022])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("smg" type (:type "namespace") (reparse-symbol namespacesubparts) [1137 2056]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1118 2076]))                  
+                :type "namespace")
+                nil [1099 2098]))          
+      :file "ccapp_smg_initializelogcompressiontable_L3_12.hpp"
+      :pointmax 2246
+      :fsize 2245
+      :lastmodtime '(21379 17373 14927 65000)
+      :unmatched-syntax '((punctuation 1977 . 1978) (semantic-list 1928 . 1977) (punctuation 1927 . 1928) (number 1921 . 1922) (punctuation 1919 . 1920) (semantic-list 1873 . 1918) (punctuation 1871 . 1872) (number 1869 . 1870) (punctuation 1859 . 1860) (symbol 1845 . 1859) (punctuation 1844 . 1845) (punctuation 1843 . 1844) (symbol 1840 . 1843) (punctuation 1830 . 1831) (symbol 1807 . 1830) (VOID 1802 . 1806) (punctuation 1800 . 1801) (punctuation 1799 . 1800) (TEMPLATE 1790 . 1798) (punctuation 1787 . 1788) (semantic-list 1738 . 1787) (punctuation 1737 . 1738) (semantic-list 1687 . 1732) (punctuation 1685 . 1686) (number 1683 . 1684) (punctuation 1673 . 1674) (symbol 1659 . 1673) (punctuation 1658 . 1659) (punctuation 1657 . 1658) (symbol 1654 . 1657) (punctuation 1644 . 1645) (symbol 1621 . 1644) (VOID 1616 . 1620) (punctuation 1614 . 1615) (punctuation 1613 . 1614) (TEMPLATE 1604 . 1612))
+      :lexical-table 
+        '(("CCAPP_SMG_INITIALIZELOGCOMPRESSIONTABLE_L3_12_HPP")
+          )
+)
+    (semanticdb-table "ccapp_smg_initializelogcompressiontable.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_smg_initializelogcompressiontable.hpp" include nil nil [733 787])
+            ("ccapp_scf_contrasttable.hpp" include nil nil [789 827])
+            ("ccapp_smg_initializelookuptablecommon.hpp" include nil nil [829 881])
+            ("core_log_logmsg.hpp" include nil nil [883 913])
+            ("core_ipc_posixshmem.cpp" include nil nil [942 976])
+            ("core_ipc_shmem.cpp" include nil nil [977 1006])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("smg" type
+                               (:members 
+                                  ( ("ccapp::fea" using (:type ("ccapp::fea" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1138 1165])
+                                    ("ccapp::scf" using (:type ("ccapp::scf" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1166 1193])
+                                    ("core::log" using (:type ("core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1194 1220])
+                                    ("InitializeLogCompressionTable" function (:type "void") (reparse-symbol namespacesubparts) [2186 2448]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1121 2674]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1102 2694]))                  
+                :type "namespace")
+                nil [1083 2716]))          
+      :file "ccapp_smg_initializelogcompressiontable.cpp"
+      :pointmax 2794
+      :fsize 2793
+      :lastmodtime '(21379 17373 147927 906000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_smg_initializelogcompressiontable.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SMG_INITIALIZELOGCOMPRESSIONTABLE_HPP" variable (:constant-flag t) nil [793 836])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("smg" type
+                               (:members 
+                                  ( ("InitializeLogCompressionTable" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [1568 1605]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1026 1608]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1007 1628]))                  
+                :type "namespace")
+                nil [988 1650]))          
+      :file "ccapp_smg_initializelogcompressiontable.hpp"
+      :pointmax 1786
+      :fsize 1785
+      :lastmodtime '(21379 17373 78927 470000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_SMG_INITIALIZELOGCOMPRESSIONTABLE_HPP")
+          )
+)
+    (semanticdb-table "ccapp_smg_initializelogcompressiontable_12LA.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_smg_initializelogcompressiontable_12LA.hpp" include nil nil [996 1055])
+            ("CONTRAST_LUT_SIMPLE" variable (:constant-flag t) nil [1144 1163])
+            ("CONTRAST_LUT_HE" variable (:constant-flag t) nil [1286 1301])
+            ("PROBE_ID" variable (:constant-flag t) nil [1413 1421])
+            ("ext_luts_contrast.hpp" include nil nil [1463 1495])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("smg" type
+                               (:members 
+                                  ( ("ccapp::fea" using (:type ("ccapp::fea" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1694 1721])
+                                    ("ccapp::scf" using (:type ("ccapp::scf" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1722 1749])
+                                    ("ext::lut" using (:type ("ext::lut" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1750 1775]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1677 4130]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1658 4150]))                  
+                :type "namespace")
+                nil [1639 4172]))          
+      :file "ccapp_smg_initializelogcompressiontable_12LA.cpp"
+      :pointmax 4255
+      :fsize 4254
+      :lastmodtime '(21585 19015 84907 483000)
+      :unmatched-syntax '((punctuation 3903 . 3904) (semantic-list 3859 . 3903) (punctuation 3858 . 3859) (number 3852 . 3853) (punctuation 3850 . 3851) (symbol 3836 . 3849) (punctuation 3834 . 3835) (number 3832 . 3833) (punctuation 3822 . 3823) (symbol 3808 . 3822) (punctuation 3798 . 3799) (symbol 3775 . 3798) (VOID 3770 . 3774) (punctuation 3768 . 3769) (punctuation 3767 . 3768) (TEMPLATE 3758 . 3766) (punctuation 3755 . 3756) (semantic-list 3711 . 3755) (punctuation 3710 . 3711) (symbol 3692 . 3705) (punctuation 3690 . 3691) (number 3688 . 3689) (punctuation 3678 . 3679) (symbol 3664 . 3678) (punctuation 3654 . 3655) (symbol 3631 . 3654) (VOID 3626 . 3630) (punctuation 3624 . 3625) (punctuation 3623 . 3624) (TEMPLATE 3614 . 3622) (semantic-list 3422 . 3576) (semantic-list 3377 . 3421) (punctuation 3376 . 3377) (number 3370 . 3371) (punctuation 3368 . 3369) (symbol 3354 . 3367) (punctuation 3352 . 3353) (number 3350 . 3351) (punctuation 3340 . 3341) (symbol 3326 . 3340) (punctuation 3316 . 3317) (symbol 3293 . 3316) (VOID 3288 . 3292) (punctuation 3286 . 3287) (punctuation 3285 . 3286) (TEMPLATE 3276 . 3284) (semantic-list 2924 . 3074) (semantic-list 2879 . 2923) (punctuation 2878 . 2879) (symbol 2860 . 2873) (punctuation 2858 . 2859) (number 2856 . 2857) (punctuation 2846 . 2847) (symbol 2832 . 2846) (punctuation 2822 . 2823) (symbol 2799 . 2822) (VOID 2794 . 2798) (punctuation 2792 . 2793) (punctuation 2791 . 2792) (TEMPLATE 2782 . 2790) (punctuation 3903 . 3904) (semantic-list 3859 . 3903) (punctuation 3858 . 3859) (number 3852 . 3853) (punctuation 3850 . 3851) (symbol 3836 . 3849) (punctuation 3834 . 3835) (number 3832 . 3833) (punctuation 3822 . 3823) (symbol 3808 . 3822) (punctuation 3798 . 3799) (symbol 3775 . 3798) (VOID 3770 . 3774) (punctuation 3768 . 3769) (punctuation 3767 . 3768) (TEMPLATE 3758 . 3766) (punctuation 3755 . 3756) (semantic-list 3711 . 3755) (punctuation 3710 . 3711) (symbol 3692 . 3705) (punctuation 3690 . 3691) (number 3688 . 3689) (punctuation 3678 . 3679) (symbol 3664 . 3678) (punctuation 3654 . 3655) (symbol 3631 . 3654) (VOID 3626 . 3630) (punctuation 3624 . 3625) (punctuation 3623 . 3624) (TEMPLATE 3614 . 3622) (semantic-list 3422 . 3576) (semantic-list 3377 . 3421) (punctuation 3376 . 3377) (number 3370 . 3371) (punctuation 3368 . 3369) (symbol 3354 . 3367) (punctuation 3352 . 3353) (number 3350 . 3351) (punctuation 3340 . 3341) (symbol 3326 . 3340) (punctuation 3316 . 3317) (symbol 3293 . 3316) (VOID 3288 . 3292) (punctuation 3286 . 3287) (punctuation 3285 . 3286) (TEMPLATE 3276 . 3284) (semantic-list 2924 . 3074) (semantic-list 2879 . 2923) (punctuation 2878 . 2879) (symbol 2860 . 2873) (punctuation 2858 . 2859) (number 2856 . 2857) (punctuation 2846 . 2847) (symbol 2832 . 2846) (punctuation 2822 . 2823) (symbol 2799 . 2822) (VOID 2794 . 2798) (punctuation 2792 . 2793) (punctuation 2791 . 2792) (TEMPLATE 2782 . 2790) (punctuation 2878 . 2879) (symbol 2860 . 2873) (punctuation 2858 . 2859) (number 2856 . 2857) (punctuation 2846 . 2847) (symbol 2832 . 2846) (punctuation 2822 . 2823) (symbol 2799 . 2822) (VOID 2794 . 2798) (punctuation 2792 . 2793) (punctuation 2791 . 2792) (TEMPLATE 2782 . 2790)))
+    (semanticdb-table "ccapp_smg_initializelogcompressiontable_12LA.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SMG_INITIALIZELOGCOMPRESSIONTABLE_12LA_HPP" variable (:constant-flag t) nil [803 851])
+            ("ccapp_scf_contrasttable.hpp" include nil nil [927 965])
+            ("ccapp_smg_initializelookuptablecommon.hpp" include nil nil [967 1019])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("smg" type (:type "namespace") (reparse-symbol namespacesubparts) [1134 2051]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1115 2071]))                  
+                :type "namespace")
+                nil [1096 2093]))          
+      :file "ccapp_smg_initializelogcompressiontable_12LA.hpp"
+      :pointmax 2239
+      :fsize 2238
+      :lastmodtime '(21585 19136 720347 923000)
+      :unmatched-syntax '((punctuation 1972 . 1973) (semantic-list 1923 . 1972) (punctuation 1922 . 1923) (number 1916 . 1917) (punctuation 1914 . 1915) (semantic-list 1869 . 1913) (punctuation 1867 . 1868) (number 1865 . 1866) (punctuation 1855 . 1856) (symbol 1841 . 1855) (punctuation 1840 . 1841) (punctuation 1839 . 1840) (symbol 1836 . 1839) (punctuation 1826 . 1827) (symbol 1803 . 1826) (VOID 1798 . 1802) (punctuation 1796 . 1797) (punctuation 1795 . 1796) (TEMPLATE 1786 . 1794) (punctuation 1783 . 1784) (semantic-list 1734 . 1783) (punctuation 1733 . 1734) (semantic-list 1684 . 1728) (punctuation 1682 . 1683) (number 1680 . 1681) (punctuation 1670 . 1671) (symbol 1656 . 1670) (punctuation 1655 . 1656) (punctuation 1654 . 1655) (symbol 1651 . 1654) (punctuation 1641 . 1642) (symbol 1618 . 1641) (VOID 1613 . 1617) (punctuation 1611 . 1612) (punctuation 1610 . 1611) (TEMPLATE 1601 . 1609) (punctuation 1972 . 1973) (semantic-list 1923 . 1972) (punctuation 1922 . 1923) (number 1916 . 1917) (punctuation 1914 . 1915) (semantic-list 1869 . 1913) (punctuation 1867 . 1868) (number 1865 . 1866) (punctuation 1855 . 1856) (symbol 1841 . 1855) (punctuation 1840 . 1841) (punctuation 1839 . 1840) (symbol 1836 . 1839) (punctuation 1826 . 1827) (symbol 1803 . 1826) (VOID 1798 . 1802) (punctuation 1796 . 1797) (punctuation 1795 . 1796) (TEMPLATE 1786 . 1794) (punctuation 1783 . 1784) (semantic-list 1734 . 1783) (punctuation 1733 . 1734) (semantic-list 1684 . 1728) (punctuation 1682 . 1683) (number 1680 . 1681) (punctuation 1670 . 1671) (symbol 1656 . 1670) (punctuation 1655 . 1656) (punctuation 1654 . 1655) (symbol 1651 . 1654) (punctuation 1641 . 1642) (symbol 1618 . 1641) (VOID 1613 . 1617) (punctuation 1611 . 1612) (punctuation 1610 . 1611) (TEMPLATE 1601 . 1609) (punctuation 1977 . 1978) (semantic-list 1928 . 1977) (punctuation 1927 . 1928) (number 1921 . 1922) (punctuation 1919 . 1920) (semantic-list 1873 . 1918) (punctuation 1871 . 1872) (number 1869 . 1870) (punctuation 1859 . 1860) (symbol 1845 . 1859) (punctuation 1844 . 1845) (punctuation 1843 . 1844) (symbol 1840 . 1843) (punctuation 1830 . 1831) (symbol 1807 . 1830) (VOID 1802 . 1806) (punctuation 1800 . 1801) (punctuation 1799 . 1800) (TEMPLATE 1790 . 1798) (punctuation 1787 . 1788) (semantic-list 1738 . 1787) (punctuation 1737 . 1738) (semantic-list 1687 . 1732) (punctuation 1685 . 1686) (number 1683 . 1684) (punctuation 1673 . 1674) (symbol 1659 . 1673) (punctuation 1658 . 1659) (punctuation 1657 . 1658) (symbol 1654 . 1657) (punctuation 1644 . 1645) (symbol 1621 . 1644) (VOID 1616 . 1620) (punctuation 1614 . 1615) (punctuation 1613 . 1614) (TEMPLATE 1604 . 1612))
+      :lexical-table 
+        '(("CCAPP_SMG_INITIALIZELOGCOMPRESSIONTABLE_12LA_HPP")
+          )
+))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!a_smg!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

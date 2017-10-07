@@ -1,0 +1,259 @@
+;; Object t_snc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "t_snc/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_task_snc_builder.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_task_snc_builder.hpp" include nil nil [724 761])
+            ("ccapp_fea_dmaoffsetparser.hpp" include nil nil [763 803])
+            ("ccapp_ngc_applicationfileparser.hpp" include nil nil [805 851])
+            ("ccapp_sncal_applicationeventhandler.hpp" include nil nil [853 903])
+            ("ccapp_sncal_ipcmessagehandler.hpp" include nil nil [904 948])
+            ("ccapp_sncco_calibrationdatalinereader.hpp" include nil nil [950 1002])
+            ("ccapp_sncco_calibrationmatrixlinereader.hpp" include nil nil [1003 1057])
+            ("ccapp_sncco_ngscalibrationconductor.hpp" include nil nil [1058 1108])
+            ("ccapp_sncco_ngsfirmwareupdateconductor.hpp" include nil nil [1109 1162])
+            ("ccapp_sncdm_ngscalibrationmodel.hpp" include nil nil [1164 1210])
+            ("ccapp_sncdm_ngsfirmwareupdatemodel.hpp" include nil nil [1211 1260])
+            ("core_cbk_callbackfunptr.hpp" include nil nil [1262 1300])
+            ("core_con_mixedset.hpp" include nil nil [1302 1334])
+            ("core_fls_fstream.hpp" include nil nil [1336 1367])
+            ("core_log_logmsg.hpp" include nil nil [1369 1399])
+            ("core_mvp_eventmaps.hpp" include nil nil [1401 1434])
+            ("core_tmg_basetask.hpp" include nil nil [1436 1468])
+            ("core_tmg_ipcmessageregistrator.hpp" include nil nil [1469 1514])
+            ("core_tmg_ipcmessagetransmitter.hpp" include nil nil [1515 1560])
+            ("cstdlib" include (:system-flag t) nil [1562 1580])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("snc" type
+                               (:members 
+                                  ( ("ezono::core" using (:type ("ezono::core" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1712 1740])
+                                    ("ezono::core::log" using (:type ("ezono::core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1741 1774])
+                                    ("ACHILL_FIRMWARE_IMAGE_FILE" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1850 1974])
+                                    ("unnamed" type
+                                       (:members 
+                                          ( ("EventMapsPtr" type
+                                               (:typedef ("ptr::SharedPtr" type
+                                                     (:template-specifier 
+                                                        ( ("mvp::EventMaps" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :superclasses "ptr::SharedPtr"
+                                                :type "typedef")
+                                                (reparse-symbol namespacesubparts) [2085 2143])
+                                            ("DmaOffsetParserPtr" type
+                                               (:typedef ("ptr::SharedPtr" type
+                                                     (:template-specifier 
+                                                        ( ("fea::DmaOffsetParserBase" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :superclasses "ptr::SharedPtr"
+                                                :type "typedef")
+                                                (reparse-symbol namespacesubparts) [2153 2227])
+                                            ("FStreamPtr" type
+                                               (:typedef ("ptr::SharedPtr" type
+                                                     (:template-specifier 
+                                                        ( ("fls::FStreamInterface" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :superclasses "ptr::SharedPtr"
+                                                :type "typedef")
+                                                (reparse-symbol namespacesubparts) [2237 2300])
+                                            ("DataFileParserPtr" type
+                                               (:typedef ("ptr::SharedPtr" type
+                                                     (:template-specifier 
+                                                        ( ("ngc::DataFileParserIface" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :superclasses "ptr::SharedPtr"
+                                                :type "typedef")
+                                                (reparse-symbol namespacesubparts) [2310 2383])
+                                            ("ApplicationEventHandlerPtr" type
+                                               (:typedef ("ptr::SharedPtr" type
+                                                     (:template-specifier 
+                                                        ( ("sncal::ApplicationEventHandler" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :superclasses "ptr::SharedPtr"
+                                                :type "typedef")
+                                                (reparse-symbol namespacesubparts) [2395 2483])
+                                            ("CalibrationConductorPtr" type
+                                               (:typedef ("ptr::SharedPtr" type
+                                                     (:template-specifier 
+                                                        ( ("sncco::NgsCalibrationConductor" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :superclasses "ptr::SharedPtr"
+                                                :type "typedef")
+                                                (reparse-symbol namespacesubparts) [2495 2580])
+                                            ("FirmwareUpdateConductorPtr" type
+                                               (:typedef ("ptr::SharedPtr" type
+                                                     (:template-specifier 
+                                                        ( ("sncco::NgsFirmwareUpdateConductor" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :superclasses "ptr::SharedPtr"
+                                                :type "typedef")
+                                                (reparse-symbol namespacesubparts) [2582 2673])
+                                            ("CalibrationDataLineReaderPtr" type
+                                               (:typedef ("ptr::SharedPtr" type
+                                                     (:template-specifier 
+                                                        ( ("sncco::CalibrationDataLineReader" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :superclasses "ptr::SharedPtr"
+                                                :type "typedef")
+                                                (reparse-symbol namespacesubparts) [2675 2767])
+                                            ("CalibrationMatrixLineReaderPtr" type
+                                               (:typedef ("ptr::SharedPtr" type
+                                                     (:template-specifier 
+                                                        ( ("sncco::CalibrationMatrixLineReader" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :superclasses "ptr::SharedPtr"
+                                                :type "typedef")
+                                                (reparse-symbol namespacesubparts) [2769 2865])
+                                            ("NgsCalibrationModelPtr" type
+                                               (:typedef ("ptr::SharedPtr" type
+                                                     (:template-specifier 
+                                                        ( ("sncdm::NgsCalibrationModel" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :superclasses "ptr::SharedPtr"
+                                                :type "typedef")
+                                                (reparse-symbol namespacesubparts) [2877 2957])
+                                            ("NgsFirmwareUpdateModelPtr" type
+                                               (:typedef ("ptr::SharedPtr" type
+                                                     (:template-specifier 
+                                                        ( ("sncdm::NgsFirmwareUpdateModel" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :superclasses "ptr::SharedPtr"
+                                                :type "typedef")
+                                                (reparse-symbol namespacesubparts) [2959 3045])
+                                            ("IpcMessageHandlerPtr" type
+                                               (:typedef ("tmg::TaskBuilderBase::IpcMessageHandlerPtr" type (:type "class") nil nil)
+                                                :superclasses "tmg::TaskBuilderBase::IpcMessageHandlerPtr"
+                                                :type "typedef")
+                                                (reparse-symbol namespacesubparts) [3055 3131])
+                                            ("AddToStoreIfNotPresent" function
+                                               (:template 
+                                                  ( ("T" type (:type "class") nil nil))                                                  
+                                                :type "void"
+                                                :arguments 
+                                                  ( ("store" variable
+                                                       (:reference 1
+                                                        :type ("con::MixedSet" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [3344 3370])
+                                                    ("value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3379 3410]))                                                  )
+                                                (reparse-symbol namespacesubparts) [3283 3521])
+                                            ("GetMemoryManagerParameters" function
+                                               (:arguments 
+                                                  ( ("store" variable
+                                                       (:reference 1
+                                                        :type ("con::MixedSet" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [3622 3649]))                                                  
+                                                :type ("spr::NeedleDataLineReaderBase::MemoryManagerParameters" type (:type "class") nil nil))
+                                                (reparse-symbol namespacesubparts) [3523 3949])
+                                            ("CreateEventMaps" function
+                                               (:arguments 
+                                                  ( ("store" variable
+                                                       (:reference 1
+                                                        :type ("con::MixedSet" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [3981 4012]))                                                  
+                                                :type "void")
+                                                (reparse-symbol namespacesubparts) [3951 4169])
+                                            ("CreateBasicObjects" function
+                                               (:arguments 
+                                                  ( ("store" variable
+                                                       (:reference 1
+                                                        :type ("con::MixedSet" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4204 4235]))                                                  
+                                                :type "void")
+                                                (reparse-symbol namespacesubparts) [4171 4903])
+                                            ("CreateModelObjects" function
+                                               (:arguments 
+                                                  ( ("store" variable
+                                                       (:reference 1
+                                                        :type ("con::MixedSet" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4938 4969]))                                                  
+                                                :type "void")
+                                                (reparse-symbol namespacesubparts) [4905 5330])
+                                            ("CreateConductorLayerObjects" function
+                                               (:arguments 
+                                                  ( ("store" variable
+                                                       (:reference 1
+                                                        :type ("con::MixedSet" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [5374 5405]))                                                  
+                                                :type "void")
+                                                (reparse-symbol namespacesubparts) [5332 6982])
+                                            ("CreateApplicationLayerObjects" function
+                                               (:arguments 
+                                                  ( ("" variable
+                                                       (:reference 1
+                                                        :type ("tmg::BaseTask" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [7028 7057])
+                                                    ("store" variable
+                                                       (:reference 1
+                                                        :type ("con::MixedSet" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [7066 7097]))                                                  
+                                                :type "void")
+                                                (reparse-symbol namespacesubparts) [6984 7608]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [2051 7611])
+                                    ("Builder" function
+                                       (:constructor-flag t
+                                        :parent "Builder"
+                                        :type ("Builder" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [8045 8094])
+                                    ("Builder" function
+                                       (:destructor-flag t
+                                        :parent "Builder"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [8206 8229])
+                                    ("MakePersistentObjects" function
+                                       (:parent "Builder"
+                                        :arguments 
+                                          ( ("task" variable
+                                               (:reference 1
+                                                :type ("tmg::BaseTask" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8491 8516])
+                                            ("store" variable
+                                               (:reference 1
+                                                :type ("ObjectsStore" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8525 8556]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [8446 8758]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1695 9207]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1676 9227]))                  
+                :type "namespace")
+                nil [1657 9249]))          
+      :file "ccapp_task_snc_builder.cpp"
+      :pointmax 9310
+      :fsize 9309
+      :lastmodtime '(21390 53300 415509 771000)
+      :unmatched-syntax '((string 1912 . 1959)))
+    (semanticdb-table "ccapp_task_snc_builder.hpp"
+      :file "ccapp_task_snc_builder.hpp"
+      :fsize 2114
+      :lastmodtime '(21390 53300 436509 879000)))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!t_snc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

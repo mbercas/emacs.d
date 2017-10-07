@@ -1,0 +1,14 @@
+;; Object unittest/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unittest/"
+  :tables
+  (list
+    (semanticdb-table "test_logger.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "test_logger.py"
+      :pointmax 1
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!needle_sim!unittest!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,19 @@
+;; Object rotation/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "rotation/"
+  :tables
+  (list
+    (semanticdb-table "mvis.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("visual" include nil nil [22 42])
+            ("pylab" include nil nil [43 68])
+            ("if" code nil nil [71 1007]))          
+      :file "mvis.py"
+      :pointmax 1007
+      :fsize 1042
+      :lastmodtime '(21840 43898 367288 314000)
+      :unmatched-syntax nil))
+  :file "!mnt!projects!achill!liffey!users!alexander.gil!rotation!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

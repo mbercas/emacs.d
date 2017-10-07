@@ -1,0 +1,373 @@
+;; Object a_pdupl/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_pdupl/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_pdupl_needlecharacterizingagent.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_pdupl_needlecharacterizingagent.hpp" include nil nil [771 823])
+            ("ccapp_fea_needlelinestable.hpp" include nil nil [825 866])
+            ("ccapp_pducm_constants.hpp" include nil nil [868 904])
+            ("ccapp_pdupl_dspapplicationstatusupdateriface.hpp" include nil nil [906 965])
+            ("ccapp_pdupl_fpgaaccessiface.hpp" include nil nil [966 1008])
+            ("ccapp_pdupl_needlepipelineconfiguratoriface.hpp" include nil nil [1009 1067])
+            ("ccapp_pdupl_currentprogress.hpp" include nil nil [1068 1110])
+            ("ccapp_pdupl_utilityagentimplbase.hpp" include nil nil [1111 1158])
+            ("ccapp_pduvl_mainviewiface.hpp" include nil nil [1160 1200])
+            ("ccapp_pduvl_viewtocontrolevents.hpp" include nil nil [1201 1247])
+            ("ccapp_sac_enum_dspapplicationid.hpp" include nil nil [1249 1295])
+            ("ccapp_sac_enum_dspapplicationstatus.hpp" include nil nil [1296 1346])
+            ("ccapp_sac_enum_dspstatus.hpp" include nil nil [1347 1386])
+            ("ccapp_scf_pipelineconfiguration.hpp" include nil nil [1388 1434])
+            ("ccapp_scf_scanconfiguration.hpp" include nil nil [1435 1477])
+            ("ccapp_sda_datablock.hpp" include nil nil [1479 1513])
+            ("ccapp_sda_pipeline.hpp" include nil nil [1514 1547])
+            ("ccapp_sda_pipelinedestination.hpp" include nil nil [1548 1592])
+            ("ccapp_sda_pipelinesource.hpp" include nil nil [1593 1632])
+            ("ccapp_spr_needledatalinereaderiface.hpp" include nil nil [1634 1684])
+            ("core_fls_fstreaminterface.hpp" include nil nil [1686 1726])
+            ("core_ipc_posixshmem.hpp" include nil nil [1728 1762])
+            ("core_log_logmsg.hpp" include nil nil [1764 1794])
+            ("core_mvp_eventmaps.hpp" include nil nil [1796 1829])
+            ("QString" include (:system-flag t) nil [1831 1849])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("pdupl" type
+                               (:members 
+                                  ( ("core" using (:type ("core" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1983 2004])
+                                    ("core::log" using (:type ("core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [2005 2031])
+                                    ("mvp::controlLayer" using (:type ("mvp::controlLayer" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [2033 2067])
+                                    ("DELAY_BETWEEN_READ" function
+                                       (:prototype-flag t
+                                        :constant-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol namespacesubparts) [2143 2183])
+                                    ("ExtendedNeedleDataPipeline" type
+                                       (:superclasses 
+                                          ( ("boost::noncopyable" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [2544 2551])
+                                            ("ExtendedNeedleDataPipeline" function
+                                               (:constructor-flag t
+                                                :type ("ExtendedNeedleDataPipeline" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2561 2790])
+                                            ("ExtendedNeedleDataPipeline" function
+                                               (:destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2800 2849])
+                                            ("UpdateConfig" function
+                                               (:arguments 
+                                                  ( ("pc" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scf::PipelineConfiguration" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2878 2916])
+                                                    ("sc" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("scf::ScanConfiguration" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2944 2983]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2859 3085])
+                                            ("Process" function
+                                               (:arguments 
+                                                  ( ("block" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("sda::DataBlock" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [3119 3149]))                                                  
+                                                :type ("sda::DataBlock" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [3095 3215])
+                                            ("UpdateCurrentSourceBuffer" function
+                                               (:arguments 
+                                                  ( ("table" variable
+                                                       (:reference 1
+                                                        :typemodifiers ("volatile")
+                                                        :constant-flag t
+                                                        :type ("ezono::ccapp::fea::NeedleLinesTable" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [3281 3341]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [3225 3410])
+                                            ("GetSourceLine" function
+                                               (:arguments 
+                                                  ( ("offset" variable
+                                                       (:constant-flag t
+                                                        :type "unsigned int")
+                                                        (reparse-symbol arg-sub-list) [3458 3481]))                                                  
+                                                :type ("sdf::NeedleSensorsData" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [3420 3543])
+                                            ("GetDestinationBufferData" function (:type ("sdf::NeedleVisualizeExtendedData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3553 3690])
+                                            ("private" label nil (reparse-symbol classsubparts) [3696 3704])
+                                            ("source" variable (:type ("sda::PipeLineSource" type
+                                                 (:template-specifier 
+                                                    ( ("sfm::EXTENDED_NEEDLE_MODE_SCAN" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [3714 3785])
+                                            ("destination" variable (:type ("sda::PipeLineDestination" type
+                                                 (:template-specifier 
+                                                    ( ("sfm::EXTENDED_NEEDLE_MODE_SCAN" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [3794 3870])
+                                            ("pipeline" variable (:type ("sda::Pipeline" type
+                                                 (:template-specifier 
+                                                    ( ("sfm::EXTENDED_NEEDLE_MODE_SCAN" type nil nil nil)
+                                                      ("scf::PipelineTypeNeedle::AUTOZEROING_CONVERT" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [3880 4008])
+                                            ("dstBuffers" variable (:type ("ipc::PosixShMem" type
+                                                 (:template-specifier 
+                                                    ( ("sdf::DataBufferNeedleExtendedVisualization" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [4018 4093]))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [2484 4096])
+                                    ("Imp" type
+                                       (:parent "NeedleCharacterizingAgent"
+                                        :superclasses 
+                                          ( ("UtilityAgentImplBase" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("Imp" function
+                                               (:constructor-flag t
+                                                :arguments 
+                                                  ( ("dspAppStatusUpdater" variable
+                                                       (:reference 1
+                                                        :type ("DspApplicationStatusUpdaterIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4297 4352])
+                                                    ("fpgaAccess" variable
+                                                       (:reference 1
+                                                        :type ("FpgaAccessIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4373 4419])
+                                                    ("needleLineReader" variable
+                                                       (:reference 1
+                                                        :type ("spr::NeedleDataLineReaderIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4440 4492])
+                                                    ("configurator" variable
+                                                       (:reference 1
+                                                        :type ("NeedlePipelineConfiguratorIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4513 4561])
+                                                    ("window" variable
+                                                       (:reference 1
+                                                        :type ("pduvl::MainViewIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4582 4624])
+                                                    ("fstream" variable
+                                                       (:reference 1
+                                                        :type ("fls::FStreamInterface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4645 4688])
+                                                    ("delay" variable
+                                                       (:reference 1
+                                                        :type ("utl::SleepIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4709 4750])
+                                                    ("eventMaps" variable
+                                                       (:reference 1
+                                                        :type ("mvp::EventMaps" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4771 4816])
+                                                    ("resultFilePath" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("std::string" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4831 4888]))                                                  
+                                                :type ("Imp" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [4286 5964])
+                                            ("Imp" function
+                                               (:destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5975 6003])
+                                            ("AgentStart" function
+                                               (:prototype-flag t
+                                                :typemodifiers ("virtual")
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6034 6060])
+                                            ("StartTheNeedleApplication" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6071 6104])
+                                            ("ReadNeedleDataAndProcess" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6114 6146])
+                                            ("ProcessLine" function
+                                               (:prototype-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [6156 6182])
+                                            ("WriteNeedleLine" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("line" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("std::string" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [6214 6240]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6192 6241])
+                                            ("CheckDspAfterStartingBootloader" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6252 6291])
+                                            ("CheckDspAfterStartingNeedleApplication" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6301 6347])
+                                            ("OnStopButtonPressed" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [6358 6385])
+                                            ("fpga" variable (:type ("FpgaAccessIface" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6415 6476])
+                                            ("needleLine" variable (:type ("spr::NeedleDataLineReaderIface" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6486 6553])
+                                            ("mainWindow" variable (:type ("pduvl::MainViewIface" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6563 6630])
+                                            ("dataFile" variable (:type ("fls::FStreamInterface" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6641 6706])
+                                            ("dataFilePath" variable
+                                               (:constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [6717 6786])
+                                            ("finishCharactization" variable (:type "bool") (reparse-symbol classsubparts) [6797 6874])
+                                            ("configurations" variable (:type ("NeedlePipelineConfiguratorIface" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6885 6956])
+                                            ("pipeline" variable (:type ("ExtendedNeedleDataPipeline" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6967 7032])
+                                            ("subscriptions" variable (:type ("std::vector" type
+                                                 (:template-specifier 
+                                                    ( ("evt::Subscription" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [7043 7113]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [4098 7121])
+                                    ("AgentStart" function
+                                       (:parent "NeedleCharacterizingAgent::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [7246 8433])
+                                    ("StartTheNeedleApplication" function
+                                       (:parent "NeedleCharacterizingAgent::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [8567 8726])
+                                    ("ReadNeedleDataAndProcess" function
+                                       (:parent "NeedleCharacterizingAgent::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [8934 9811])
+                                    ("ProcessLine" function
+                                       (:parent "NeedleCharacterizingAgent::Imp"
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [9980 10870])
+                                    ("WriteNeedleLine" function
+                                       (:parent "NeedleCharacterizingAgent::Imp"
+                                        :arguments 
+                                          ( ("line" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [11127 11153]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [11073 11206])
+                                    ("CheckDspAfterStartingBootloader" function
+                                       (:parent "NeedleCharacterizingAgent::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [11486 12295])
+                                    ("CheckDspAfterStartingNeedleApplication" function
+                                       (:parent "NeedleCharacterizingAgent::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [12575 13403])
+                                    ("OnStopButtonPressed" function
+                                       (:parent "NeedleCharacterizingAgent::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [13560 13757])
+                                    ("NeedleCharacterizingAgent" function
+                                       (:constructor-flag t
+                                        :parent "NeedleCharacterizingAgent"
+                                        :arguments 
+                                          ( ("dspAppStatusUpdater" variable
+                                               (:reference 1
+                                                :type ("DspApplicationStatusUpdaterIface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [14877 14932])
+                                            ("fpgaAccess" variable
+                                               (:reference 1
+                                                :type ("FpgaAccessIface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [14949 14995])
+                                            ("needleLineReader" variable
+                                               (:reference 1
+                                                :type ("spr::NeedleDataLineReaderIface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15012 15064])
+                                            ("configurator" variable
+                                               (:reference 1
+                                                :type ("NeedlePipelineConfiguratorIface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15081 15129])
+                                            ("window" variable
+                                               (:reference 1
+                                                :type ("pduvl::MainViewIface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15146 15188])
+                                            ("fstream" variable
+                                               (:reference 1
+                                                :type ("fls::FStreamInterface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15205 15248])
+                                            ("delay" variable
+                                               (:reference 1
+                                                :type ("utl::SleepIface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15265 15306])
+                                            ("eventMaps" variable
+                                               (:reference 1
+                                                :type ("mvp::EventMaps" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15323 15368])
+                                            ("dataFile" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15379 15430]))                                          
+                                        :type ("NeedleCharacterizingAgent" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [14807 15633])
+                                    ("NeedleCharacterizingAgent" function
+                                       (:destructor-flag t
+                                        :parent "NeedleCharacterizingAgent"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [15745 15804]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1964 16253]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1945 16275]))                  
+                :type "namespace")
+                nil [1926 16297]))          
+      :file "ccapp_pdupl_needlecharacterizingagent.cpp"
+      :pointmax 16373
+      :fsize 16372
+      :lastmodtime '(21327 58411 988220 603000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_pdupl_needlecharacterizingagent.hpp"
+      :file "ccapp_pdupl_needlecharacterizingagent.hpp"
+      :fsize 3378
+      :lastmodtime '(21325 10342 719992 795000))
+    (semanticdb-table "ccapp_pdupl_dspapplicationstatusupdateriface.hpp"
+      :file "ccapp_pdupl_dspapplicationstatusupdateriface.hpp"
+      :fsize 2459
+      :lastmodtime '(21325 10342 720992 801000))
+    (semanticdb-table "ccapp_pdupl_fpgaaccessiface.hpp"
+      :file "ccapp_pdupl_fpgaaccessiface.hpp"
+      :fsize 4244
+      :lastmodtime '(21325 10342 725992 833000))
+    (semanticdb-table "ccapp_pdupl_needlepipelineconfiguratoriface.hpp"
+      :file "ccapp_pdupl_needlepipelineconfiguratoriface.hpp"
+      :fsize 2576
+      :lastmodtime '(21325 10342 726992 839000))
+    (semanticdb-table "ccapp_pdupl_currentprogress.hpp"
+      :file "ccapp_pdupl_currentprogress.hpp"
+      :fsize 2323
+      :lastmodtime '(21325 10342 723992 820000))
+    (semanticdb-table "ccapp_pdupl_utilityagentimplbase.hpp"
+      :file "ccapp_pdupl_utilityagentimplbase.hpp"
+      :fsize 3959
+      :lastmodtime '(21325 10342 721992 807000)))
+  :file "!sandbox!workspace!cyclades!b_multidipole_new!development!code!a_pdupl!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

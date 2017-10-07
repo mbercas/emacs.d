@@ -1,0 +1,72 @@
+;; Object unittests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unittests/"
+  :tables
+  (list
+    (semanticdb-table "test_ccapp_sda_needlegradientcalc.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_SDA_NEEDLEGRADIENTCALC_HPP" variable (:constant-flag t) nil [800 837])
+            ("ccapp_sda_needlegradientcalc.hpp" include nil nil [913 956])
+            ("ccapp_sdf_needledata.hpp" include nil nil [958 993])
+            ("memory" include (:system-flag t) nil [995 1012])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [1014 1044])
+            ("testNeedleGradientCalc" type
+               (:members 
+                  ( ("ezono::ccapp" variable (:type "int") (reparse-symbol namespacesubparts) [1100 1113])
+                    ("ezono::ccapp::sda" variable (:type "int") (reparse-symbol namespacesubparts) [1133 1151])
+                    ("testing" variable (:type "int") (reparse-symbol namespacesubparts) [1171 1179])
+                    ("NeedleGradientCalcUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1851 1858])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [1922 1954])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [2020 2055])
+                            ("test_constructor" function (:type "void") (reparse-symbol classsubparts) [2180 2456])
+                            ("test_AddMeasurements" function (:type "void") (reparse-symbol classsubparts) [2466 3096])
+                            ("test_Average_noValid" function (:type "void") (reparse-symbol classsubparts) [3106 3525])
+                            ("test_Average_someValid" function (:type "void") (reparse-symbol classsubparts) [3535 3953])
+                            ("test_CalculateAvgMeasurementsData" function (:type "void") (reparse-symbol classsubparts) [3963 4337])
+                            ("test_ApplyGradient" function (:type "void") (reparse-symbol classsubparts) [4347 5308])
+                            ("test_GetSensorsDistanceToAvg" function (:type "void") (reparse-symbol classsubparts) [5318 5933])
+                            ("test_RemoveSensorWithHighestDistFromAvg" function (:type "void") (reparse-symbol classsubparts) [5943 7198])
+                            ("test_RemoveSensorsWithHigherDistThanThreshold_allDistancesBelowThreshold" function (:type "void") (reparse-symbol classsubparts) [7209 7793])
+                            ("test_RemoveSensorsWithHigherDistThanThreshold_someDistancesAboveThreshold" function (:type "void") (reparse-symbol classsubparts) [7803 9210])
+                            ("private" label nil (reparse-symbol classsubparts) [9218 9226])
+                            ("SetMeasurements" function
+                               (:arguments 
+                                  ( ("startVal" variable
+                                       (:constant-flag t
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [9258 9279])
+                                    ("allValid" variable
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [9280 9301]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [9236 10146])
+                            ("mes" variable (:type ("sdf::NeedleSensorsData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10156 10183]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1779 10187]))                  
+                :type "namespace")
+                nil [1046 10190])
+            ("testNeedleGradientCalc::NeedleGradientCalcUnitTestSuite" using (:type ("testNeedleGradientCalc::NeedleGradientCalcUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [10218 10280]))          
+      :file "test_ccapp_sda_needlegradientcalc.hpp"
+      :pointmax 10385
+      :fsize 10384
+      :lastmodtime '(21151 20513 885862 210000)
+      :unmatched-syntax '((punctuation 1170 . 1171) (punctuation 1169 . 1170) (NAMESPACE 1159 . 1168) (USING 1153 . 1158) (punctuation 1132 . 1133) (punctuation 1131 . 1132) (NAMESPACE 1121 . 1130) (USING 1115 . 1120) (punctuation 1099 . 1100) (punctuation 1098 . 1099) (NAMESPACE 1088 . 1097) (USING 1082 . 1087))
+      :lexical-table 
+        '(("TEST_CCAPP_SDA_NEEDLEGRADIENTCALC_HPP")
+          )
+))
+  :file "!sandbox!workspace!cyclades!b_multipole_CR15245!development!code!a_sda!unittests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

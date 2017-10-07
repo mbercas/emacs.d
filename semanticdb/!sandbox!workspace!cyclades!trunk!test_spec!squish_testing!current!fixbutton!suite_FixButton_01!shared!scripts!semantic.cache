@@ -1,0 +1,64 @@
+;; Object scripts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "scripts/"
+  :tables
+  (list
+    (semanticdb-table "objectnames.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("ImageButton" variable nil nil [1 45])
+            ("BmodeLabel" variable nil nil [47 179])
+            ("CmodeSensitivityLabel" variable nil nil [180 311])
+            ("MmodeSpeedLabe" variable nil nil [312 465])
+            ("MeasureLabel" variable nil nil [466 582])
+            ("PatientSelectLabel" variable nil nil [583 651])
+            ("PatientSelectClose" variable nil nil [652 743])
+            ("PatientNotSelectMsgClose01" variable nil nil [744 880])
+            ("PatientNotSelectMsgClose02" variable nil nil [881 1017])
+            ("DualviewButton" variable nil nil [1018 1198])
+            ("NeedleGuidanceTab" variable nil nil [1200 1277])
+            ("NeedleGuidanceOnOffButton" variable nil nil [1280 1467])
+            ("NeedleTypeButton" variable nil nil [1469 1643])
+            ("NeedleTypeList" variable nil nil [1645 1865])
+            ("Pajunk50mm20GItem" variable nil nil [1867 1913])
+            ("NeedleSelectDoneButton" variable nil nil [1915 2205])
+            ("NeedleSelectCancelButton" variable nil nil [2207 2508])
+            ("sshCommand" variable nil nil [2510 2615])
+            ("bmodeCommand" variable nil nil [2616 2658])
+            ("fmodeCommand" variable nil nil [2659 2701])
+            ("mmodeCommand" variable nil nil [2702 2744])
+            ("freezeCommand" variable nil nil [2745 2789])
+            ("saveCommand" variable nil nil [2790 2830]))          
+      :file "objectnames.py"
+      :pointmax 2875
+      :fsize 2874
+      :lastmodtime '(21132 35717 884481 359000)
+      :unmatched-syntax '((NAME 2831 . 2844) ($EOI 2875 . 2875)))
+    (semanticdb-table "functions.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("subprocess" include nil nil [11 28])
+            ("source" code nil nil [29 73])
+            ("GetNeedlesTypeNames" function (:arguments 
+              ( ("ip" variable nil (reparse-symbol function_parameters) [99 101]))              ) nil [75 565])
+            ("bmode" function (:arguments 
+              ( ("IP" variable nil (reparse-symbol function_parameters) [576 578]))              ) nil [566 643])
+            ("fmode" function (:arguments 
+              ( ("IP" variable nil (reparse-symbol function_parameters) [658 660]))              ) nil [648 725])
+            ("mmode" function (:arguments 
+              ( ("IP" variable nil (reparse-symbol function_parameters) [740 742]))              ) nil [730 807])
+            ("freeze" function (:arguments 
+              ( ("IP" variable nil (reparse-symbol function_parameters) [823 825]))              ) nil [812 895])
+            ("save" function (:arguments 
+              ( ("IP" variable nil (reparse-symbol function_parameters) [909 911]))              ) nil [900 977])
+            ("record" function (:arguments 
+              ( ("IP" variable nil (reparse-symbol function_parameters) [993 995]))              ) nil [982 1064]))          
+      :file "functions.py"
+      :pointmax 1064
+      :fsize 1063
+      :lastmodtime '(21521 28389 132859 505000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!cyclades!trunk!test_spec!squish_testing!current!fixbutton!suite_FixButton_01!shared!scripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

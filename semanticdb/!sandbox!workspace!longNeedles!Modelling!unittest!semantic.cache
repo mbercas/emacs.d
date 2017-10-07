@@ -1,0 +1,281 @@
+;; Object unittest/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unittest/"
+  :tables
+  (list
+    (semanticdb-table "test_Multipole.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("unittest" include nil nil [1 16])
+            ("sys" include nil nil [18 28])
+            ("sys" code nil nil [29 53])
+            ("Multipole" include nil nil [56 87])
+            ("MultipoleTestCase" type
+               (:superclasses ("unittest.TestCase")
+                :members 
+                  ( ("test_Constructor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [163 167]))                          )
+                        (reparse-symbol indented_block_body) [141 324]))                  
+                :type "class")
+                nil [90 324]))          
+      :file "test_Multipole.py"
+      :pointmax 324
+      :fsize 323
+      :lastmodtime '(21599 52838 804465 222000)
+      :unmatched-syntax '((NEWLINE 372 . 373) (FOR 333 . 336) (NAME 341 . 342) (COLON 371 . 372) (NEWLINE 372 . 373) (FOR 333 . 336) (NAME 341 . 342) (COLON 371 . 372)))
+    (semanticdb-table "test_SensorDataGenerator.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("unittest" include nil nil [1 16])
+            ("sys" include nil nil [18 28])
+            ("sys" code nil nil [29 53])
+            ("numpy" include nil nil [55 97])
+            ("SensorDataGenerator" include nil nil [99 150])
+            ("MultipoleMockup" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [235 267])
+                            ("self" variable nil (reparse-symbol indented_block_body) [276 310])
+                            ("self" variable nil (reparse-symbol indented_block_body) [319 353]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [219 223]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [205 354]))                  
+                :type "class")
+                nil [178 354])
+            ("SensorsMockup" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [414 490]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [398 402]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [384 491]))                  
+                :type "class")
+                nil [359 491])
+            ("SensorDataGeneratorTestCase" type
+               (:superclasses ("unittest.TestCase")
+                :members 
+                  ( ("test_Constructor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [575 579]))                          )
+                        (reparse-symbol indented_block_body) [553 780])
+                    ("test_FieldCartesian_ZeroFields" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [821 825]))                          )
+                        (reparse-symbol indented_block_body) [785 2387]))                  
+                :type "class")
+                nil [492 2387]))          
+      :file "test_SensorDataGenerator.py"
+      :pointmax 2387
+      :fsize 2386
+      :lastmodtime '(21600 35843 741858 664000)
+      :unmatched-syntax nil)
+    (semanticdb-table "test_LookupTableGenerator.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("unittest" include nil nil [1 16])
+            ("sys" include nil nil [18 28])
+            ("sys" code nil nil [29 53])
+            ("numpy" include nil nil [55 86])
+            ("LookupTableGenerator" include nil nil [88 141])
+            ("MultipoleMockup" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [226 258])
+                            ("self" variable nil (reparse-symbol indented_block_body) [267 301])
+                            ("self" variable nil (reparse-symbol indented_block_body) [310 344]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [210 214]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [196 345]))                  
+                :type "class")
+                nil [169 345])
+            ("LookupTableGeneratorTestCase" type
+               (:superclasses ("unittest.TestCase")
+                :members 
+                  ( ("setUp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [420 424]))                          )
+                        (reparse-symbol indented_block_body) [409 598])
+                    ("test_Constructor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [626 630]))                          )
+                        (reparse-symbol indented_block_body) [604 1351])
+                    ("test_CreateSyntheticLut" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1385 1389]))                          )
+                        (reparse-symbol indented_block_body) [1356 2065])
+                    ("test_Interpolate_LastPoint" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2102 2106]))                          )
+                        (reparse-symbol indented_block_body) [2070 2693])
+                    ("test_Lookup_OutOfBounds" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2727 2731]))                          )
+                        (reparse-symbol indented_block_body) [2698 3235])
+                    ("test_Lookup" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3257 3261]))                          )
+                        (reparse-symbol indented_block_body) [3240 4014])
+                    ("test_GetIndex" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4038 4042]))                          )
+                        (reparse-symbol indented_block_body) [4019 4582]))                  
+                :type "class")
+                nil [347 4582]))          
+      :file "test_LookupTableGenerator.py"
+      :pointmax 4583
+      :fsize 4582
+      :lastmodtime '(21613 54647 921363 633000)
+      :unmatched-syntax nil)
+    (semanticdb-table "test_FieldEstimator.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("unittest" include nil nil [1 16])
+            ("sys" include nil nil [18 28])
+            ("sys" code nil nil [29 53])
+            ("numpy" include nil nil [55 126])
+            ("numpy.linalg" include nil nil [127 156])
+            ("FieldEstimator" include nil nil [158 199])
+            ("SensorsMock" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [253 277])
+                            ("self" variable nil (reparse-symbol indented_block_body) [286 317])
+                            ("self" variable nil (reparse-symbol indented_block_body) [326 357]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [238 242]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [225 358])
+                    ("NumberOfSensors" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [382 386]))                          )
+                        (reparse-symbol indented_block_body) [362 421]))                  
+                :type "class")
+                nil [202 421])
+            ("LutMock" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [469 486]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [454 458]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [441 487]))                  
+                :type "class")
+                nil [422 487])
+            ("FieldEstimatorTestCase" type
+               (:superclasses ("unittest.TestCase")
+                :members 
+                  ( ("setUp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [555 559]))                          )
+                        (reparse-symbol indented_block_body) [544 698])
+                    ("assertArrayIsEqual" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [727 731])
+                            ("ref" variable nil (reparse-symbol function_parameters) [733 736])
+                            ("dat" variable nil (reparse-symbol function_parameters) [738 741]))                          )
+                        (reparse-symbol indented_block_body) [703 803])
+                    ("assertArraysAlmostEqual" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [837 841])
+                            ("ref" variable nil (reparse-symbol function_parameters) [843 846])
+                            ("dat" variable nil (reparse-symbol function_parameters) [848 851])
+                            ("err" variable nil (reparse-symbol function_parameters) [853 856]))                          )
+                        (reparse-symbol indented_block_body) [808 935])
+                    ("test_TranslateToNewBase_NoTranslationNoRotation" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [993 997]))                          )
+                        (reparse-symbol indented_block_body) [940 1723])
+                    ("test_TranslateToNewBase_NoRotation" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1768 1772]))                          )
+                        (reparse-symbol indented_block_body) [1728 2596])
+                    ("test_TranslateToNewBase_NoTranslation" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2644 2648]))                          )
+                        (reparse-symbol indented_block_body) [2601 3810]))                  
+                :type "class")
+                nil [488 3810]))          
+      :file "test_FieldEstimator.py"
+      :pointmax 3810
+      :fsize 3809
+      :lastmodtime '(21607 47788 847645 532000)
+      :unmatched-syntax nil)
+    (semanticdb-table "test_TrigMath.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("unittest" include nil nil [1 16])
+            ("sys" include nil nil [18 38])
+            ("path" code nil nil [40 58])
+            ("TrigMath" include nil nil [60 82])
+            ("TrigMathTestCase" type
+               (:superclasses ("unittest.TestCase")
+                :members 
+                  ( ("test_FromUnaryVectorToPhiTheta_xOnlyVector" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [207 211]))                          )
+                        (reparse-symbol indented_block_body) [159 367]))                  
+                :type "class")
+                nil [109 369]))          
+      :file "test_TrigMath.py"
+      :pointmax 433
+      :fsize 452
+      :lastmodtime '(21610 1477 502269 466000)
+      :unmatched-syntax nil)
+    (semanticdb-table "test_Quaternion.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("unittest" include nil nil [21 36])
+            ("sys" include nil nil [37 57])
+            ("path" code nil nil [59 79])
+            ("Quaternion" include nil nil [81 105])
+            ("numpy" include nil nil [107 155])
+            ("QuaterinionTestCase" type
+               (:superclasses ("unittest.TestCase")
+                :members 
+                  ( ("test_RotationMatrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [235 239]))                          )
+                        (reparse-symbol indented_block_body) [210 1469]))                  
+                :type "class")
+                nil [157 1469]))          
+      :file "test_Quaternion.py"
+      :pointmax 1471
+      :fsize 1468
+      :lastmodtime '(21611 29963 681501 994000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!longNeedles!Modelling!unittest!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

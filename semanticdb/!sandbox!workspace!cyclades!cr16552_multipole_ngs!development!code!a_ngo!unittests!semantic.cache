@@ -1,0 +1,77 @@
+;; Object unittests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unittests/"
+  :tables
+  (list
+    (semanticdb-table "test_ccapp_ngo_multipolelutneedlemodel.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_NGO_MULTIPOLELUTNEEDLEMODEL_HPP" variable (:constant-flag t) nil [824 866])
+            ("ccapp_ngo_multipolelutneedlemodel.hpp" include nil nil [942 990])
+            ("core_log_logger.hpp" include nil nil [992 1022])
+            ("memory" include (:system-flag t) nil [1024 1041])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [1043 1073])
+            ("testMultipoleLutNeedleModel" type
+               (:members 
+                  ( ("ezono::ccapp" variable (:type "int") (reparse-symbol namespacesubparts) [1134 1147])
+                    ("ezono::core" variable (:type "int") (reparse-symbol namespacesubparts) [1166 1178])
+                    ("ezono::ccapp::ngo" variable (:type "int") (reparse-symbol namespacesubparts) [1198 1216])
+                    ("ezono::core::log" variable (:type "int") (reparse-symbol namespacesubparts) [1236 1253])
+                    ("testing" variable (:type "int") (reparse-symbol namespacesubparts) [1273 1281])
+                    ("MultipoleLutNeedleModelUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1958 1965])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [2029 2348])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [2414 2657])
+                            ("test_Angles_To_Tip_End" function (:type "void") (reparse-symbol classsubparts) [2782 3564])
+                            ("test_Tip_End_To_Tip_End" function (:type "void") (reparse-symbol classsubparts) [3574 4383])
+                            ("private" label nil (reparse-symbol classsubparts) [4391 4399])
+                            ("TestFixture" type
+                               (:members 
+                                  ( ("TestFixture" function
+                                       (:constructor-flag t
+                                        :type ("TestFixture" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [4450 4542])
+                                    ("ObjectUnderTest" type
+                                       (:typedef ("MultipoleLutNeedleModel" type (:type "class") nil nil)
+                                        :superclasses "MultipoleLutNeedleModel"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [4556 4605])
+                                    ("MakeObjectUnderTest" function (:type ("std::unique_ptr" type
+                                         (:template-specifier 
+                                            ( ("ObjectUnderTest" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [4619 4830])
+                                    ("VerifyAndClearExpectations" function (:type "void") (reparse-symbol classsubparts) [4844 4994]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [4409 5006])
+                            ("fxt" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("TestFixture" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5016 5054]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1881 5058]))                  
+                :type "namespace")
+                nil [1075 5061])
+            ("testMultipoleLutNeedleModel::MultipoleLutNeedleModelUnitTestSuite" using (:type ("testMultipoleLutNeedleModel::MultipoleLutNeedleModelUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [5094 5166]))          
+      :file "test_ccapp_ngo_multipolelutneedlemodel.hpp"
+      :pointmax 5247
+      :fsize 5280
+      :lastmodtime '(21637 35141 501434 944000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CCAPP_NGO_MULTIPOLELUTNEEDLEMODEL_HPP")
+          )
+))
+  :file "!sandbox!workspace!cyclades!cr16552_multipole_ngs!development!code!a_ngo!unittests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

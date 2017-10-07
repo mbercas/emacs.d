@@ -1,0 +1,182 @@
+;; Object cluster/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cluster/"
+  :tables
+  (list
+    (semanticdb-table "cluster.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 92])
+            ("numpy.linalg" include nil nil [93 122])
+            ("pylab" include nil nil [124 189])
+            ("numberOfSensors" variable nil nil [191 211])
+            ("sensorPos" variable nil nil [213 651])
+            ("CalculateDistancesMatrix" function (:arguments 
+              ( ("sensorPositions" variable nil (reparse-symbol function_parameters) [683 698]))              ) nil [653 1140])
+            ("SensorClusterMetric" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [1166 1170])
+                ("distMat" variable nil (reparse-symbol function_parameters) [1172 1179]))              ) nil [1141 1247])
+            ("FilterFileInput" function
+               (:documentation "
+    Generator for filtering the input to the loadtxt function
+    "
+                :arguments 
+                  ( ("fn" variable nil (reparse-symbol function_parameters) [1269 1271]))                  )
+                nil [1248 1427])
+            ("GetField" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [1442 1446]))              ) nil [1428 1596])
+            ("QueueFsm" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1651 1695])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1704 1735])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1745 1762])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1771 1790])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1800 1822]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1632 1636]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1618 1820])
+                    ("QueuePush" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1840 1844])
+                            ("inputData" variable nil (reparse-symbol function_parameters) [1846 1855]))                          )
+                        (reparse-symbol indented_block_body) [1825 2039])
+                    ("GetBackground" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2064 2068]))                          )
+                        (reparse-symbol indented_block_body) [2045 2212])
+                    ("UpdateQueueState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2239 2243])
+                            ("clusterZeroedField" variable nil (reparse-symbol function_parameters) [2245 2263])
+                            ("clusterFieldSigma" variable nil (reparse-symbol function_parameters) [2265 2282])
+                            ("i" variable nil (reparse-symbol function_parameters) [2284 2285]))                          )
+                        (reparse-symbol indented_block_body) [2217 2923]))                  
+                :type "class")
+                nil [1597 2923])
+            ("SmoothFilter" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2989 3005])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3014 3032])
+                            ("assert" code nil (reparse-symbol indented_block_body) [3050 3076])
+                            ("self" code nil (reparse-symbol indented_block_body) [3085 3115])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3125 3146]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2964 2968])
+                            ("coef" variable nil (reparse-symbol function_parameters) [2970 2974]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2950 3144])
+                    ("Filter" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3161 3165])
+                            ("currentValue" variable nil (reparse-symbol function_parameters) [3167 3179]))                          )
+                        (reparse-symbol indented_block_body) [3149 3424]))                  
+                :type "class")
+                nil [2925 3424])
+            ("BaseFilter" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3495 3527])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3536 3557])
+                            ("assert" code nil (reparse-symbol indented_block_body) [3567 3593]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3462 3466])
+                            ("filterLength" variable nil (reparse-symbol function_parameters) [3468 3480]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3448 3591])
+                    ("Filter" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3608 3612])
+                            ("inputValue" variable nil (reparse-symbol function_parameters) [3614 3624]))                          )
+                        (reparse-symbol indented_block_body) [3596 3807])
+                    ("FilterOperation" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3837 3841]))                          )
+                        (reparse-symbol indented_block_body) [3816 3865]))                  
+                :type "class")
+                nil [3425 3865])
+            ("MeanFilter" type
+               (:documentation "
+    Calculates the mean along the time axis for the data stored.
+    Every execution of the filter stores a new data value.
+    "
+                :superclasses ("BaseFilter")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("BaseFilter" code nil (reparse-symbol indented_block_body) [4091 4132]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4058 4062])
+                            ("filterLength" variable nil (reparse-symbol function_parameters) [4064 4076]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4044 4130])
+                    ("FilterOperation" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4156 4160]))                          )
+                        (reparse-symbol indented_block_body) [4135 4215]))                  
+                :type "class")
+                nil [3867 4215])
+            ("SigmaFilter" type
+               (:documentation "
+    Calculates the standard deviation along the time axis for the
+    data stored. Every execution of the filter stores a new data value.
+    "
+                :superclasses ("BaseFilter")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("BaseFilter" code nil (reparse-symbol indented_block_body) [4467 4508]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4433 4437])
+                            ("filterLength" variable nil (reparse-symbol function_parameters) [4439 4451]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4419 4506])
+                    ("FilterOperation" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4532 4536]))                          )
+                        (reparse-symbol indented_block_body) [4511 4598]))                  
+                :type "class")
+                nil [4228 4598])
+            ("if" code nil nil [4607 7105]))          
+      :file "cluster.py"
+      :pointmax 7219
+      :fsize 7114
+      :lastmodtime '(21901 19427 689156 431000)
+      :unmatched-syntax nil)
+    (semanticdb-table "filter.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pylab" include nil nil [21 40])
+            ("scipy" include nil nil [41 65])
+            ("fn" variable nil nil [67 96])
+            ("smooth" function (:arguments 
+              ( ("ts" variable nil (reparse-symbol function_parameters) [110 112]))              ) nil [98 305])
+            ("plot_smooth" function (:arguments 
+              ( ("ts" variable nil (reparse-symbol function_parameters) [323 325]))              ) nil [306 457])
+            ("if" code nil nil [460 708]))          
+      :file "filter.py"
+      :pointmax 708
+      :fsize 707
+      :lastmodtime '(21564 58521 616240 722000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!cluster!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

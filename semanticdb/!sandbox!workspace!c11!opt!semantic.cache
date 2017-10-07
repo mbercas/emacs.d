@@ -1,0 +1,38 @@
+;; Object opt/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "opt/"
+  :tables
+  (list
+    (semanticdb-table "spike.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("calcVariance" function
+               (:template 
+                  ( ("int" type nil nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("begin" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [66 100])
+                    ("end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("flost" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [106 138])
+                    ("result" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [150 180]))                  )
+                nil [22 768])
+            ("main" function (:type "int") nil [772 1055]))          
+      :file "spike.cpp"
+      :pointmax 1056
+      :fsize 1051
+      :lastmodtime '(21401 55712 210837 735000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!c11!opt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

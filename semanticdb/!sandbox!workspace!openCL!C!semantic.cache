@@ -1,0 +1,89 @@
+;; Object C/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "C/"
+  :tables
+  (list
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "main.cpp"
+      :pointmax 29031
+      :fsize 623
+      :lastmodtime '(20976 16540)
+      :unmatched-syntax nil)
+    (semanticdb-table "cll.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("ADVCL_CLL_H_INCLUDED" variable (:constant-flag t) nil [38 58])
+            ("CL/opencl.h" include (:system-flag t) nil [138 164])
+            ("CL" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [188 195])
+                    ("cl_a" variable (:type ("cl_mem" type (:type "class") nil nil)) (reparse-symbol classsubparts) [261 273])
+                    ("cl_b" variable (:type ("cl_mem" type (:type "class") nil nil)) (reparse-symbol classsubparts) [282 294])
+                    ("cl_c" variable (:type ("cl_mem" type (:type "class") nil nil)) (reparse-symbol classsubparts) [303 315])
+                    ("num" variable (:type "int") (reparse-symbol classsubparts) [324 332])
+                    ("workGroupSize" variable
+                       (:dereference 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [371 395])
+                    ("CL" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("CL" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [575 580])
+                    ("CL" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [666 672])
+                    ("loadProgram" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("relative_path" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [818 844]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [801 845])
+                    ("popCorn" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [989 1004])
+                    ("runKernel" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1042 1059])
+                    ("private" label nil (reparse-symbol classsubparts) [1065 1073])
+                    ("platform" variable (:type ("cl_platform_id" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1133 1157])
+                    ("devices" variable
+                       (:pointer 1
+                        :type ("cl_device_id" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1202 1224])
+                    ("numDevices" variable (:type ("cl_uint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1233 1252])
+                    ("deviceUsed" variable (:type "unsigned int") (reparse-symbol classsubparts) [1261 1285])
+                    ("context" variable (:type ("cl_context" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1303 1322])
+                    ("command_queue" variable (:type ("cl_command_queue" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1332 1363])
+                    ("program" variable (:type ("cl_program" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1372 1391])
+                    ("kernel" variable (:type ("cl_kernel" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1400 1417])
+                    ("err" variable (:type ("cl_int" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1466 1477])
+                    ("event" variable (:type ("cl_event" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1486 1501])
+                    ("buildExecutable" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1620 1643]))                  
+                :type "class")
+                nil [173 1646]))          
+      :file "cll.h"
+      :pointmax 1655
+      :fsize 1654
+      :lastmodtime '(20976 16625)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ADVCL_CLL_H_INCLUDED")
+          )
+))
+  :file "!sandbox!workspace!openCL!C!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

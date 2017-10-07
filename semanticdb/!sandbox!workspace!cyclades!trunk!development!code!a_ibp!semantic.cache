@@ -1,0 +1,430 @@
+;; Object a_ibp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_ibp/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_ibp_needledetectioncontrolpresenter.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_IBP_NEEDLEDETECTIONCONTROLPRESENTER_HPP" variable (:constant-flag t) nil [833 878])
+            ("ccapp_ibp_allpresentationlayereventmaps.hpp" include nil nil [954 1008])
+            ("core_bst_optional.hpp" include nil nil [1010 1042])
+            ("core_cpp_forwarddeclare.hpp" include nil nil [1044 1082])
+            ("core_ptr_uniqueptr.hpp" include nil nil [1084 1117])
+            ("boost/noncopyable.hpp" include (:system-flag t) nil [1119 1151])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("ibp" type
+                               (:members 
+                                  ( ("ccapp::sfm::NeedleUserSettings" using (:type ("ccapp::sfm::NeedleUserSettings" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1729 1766])
+                                    ("core::ptr::UniquePtr" using (:type ("core::ptr::UniquePtr" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1768 1795])
+                                    ("NeedleDetectionControlPresenter" type
+                                       (:superclasses 
+                                          ( ("boost::noncopyable" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("NeedleSettingsUpdatedFunc" variable (:type "int") (reparse-symbol classsubparts) [2392 2418])
+                                            ("NeedleTypeSelectedFunc" variable (:type "int") (reparse-symbol classsubparts) [2559 2582])
+                                            ("SelectionWindowShownFunc" variable (:type "int") (reparse-symbol classsubparts) [2644 2669])
+                                            ("PlaySoundFunc" variable (:type "int") (reparse-symbol classsubparts) [2731 2745])
+                                            ("public" label nil (reparse-symbol classsubparts) [2751 2758])
+                                            ("NeedleDetectionControlPresenter" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :arguments 
+                                                  ( ("model" variable
+                                                       (:reference 1
+                                                        :type ("ibm::NeedleDetectionControlModelIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2825 2871])
+                                                    ("view" variable
+                                                       (:reference 1
+                                                        :type ("ibv::NeedleDetectionControlViewIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2896 2941])
+                                                    ("eventMaps" variable
+                                                       (:reference 1
+                                                        :type ("core::mvp::EventMaps" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2966 3016])
+                                                    ("fromUpvEventMap" variable
+                                                       (:reference 1
+                                                        :type ("FromUpvEventMap" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [3041 3097])
+                                                    ("settingsUpdated" variable (:type ("NeedleSettingsUpdatedFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3122 3178])
+                                                    ("needleSelected" variable (:type ("NeedleTypeSelectedFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3203 3258])
+                                                    ("playSound" variable (:type ("PlaySoundFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3283 3333])
+                                                    ("selectionWindowShown" variable (:type ("SelectionWindowShownFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3358 3440]))                                                  
+                                                :type ("NeedleDetectionControlPresenter" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2768 3441])
+                                            ("NeedleDetectionControlPresenter" function
+                                               (:prototype-flag t
+                                                :destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [3450 3485])
+                                            ("private" label nil (reparse-symbol classsubparts) [3491 3499])
+                                            ("Imp" type
+                                               (:prototype t
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) [3509 3531])
+                                            ("pimpl" variable (:type ("UniquePtr" type
+                                                 (:template-specifier 
+                                                    ( ("Imp" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [3572 3596]))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [2097 3617]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1563 3695]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1544 3715]))                  
+                :type "namespace")
+                nil [1228 3737]))          
+      :file "ccapp_ibp_needledetectioncontrolpresenter.hpp"
+      :pointmax 3877
+      :fsize 3876
+      :lastmodtime '(20908 20965 358265 115000)
+      :unmatched-syntax '((punctuation 2706 . 2707) (semantic-list 2703 . 2705) (VOID 2698 . 2702) (punctuation 2696 . 2697) (symbol 2688 . 2696) (punctuation 2687 . 2688) (punctuation 2686 . 2687) (symbol 2683 . 2686) (TYPEDEF 2675 . 2682) (punctuation 2631 . 2632) (semantic-list 2616 . 2630) (VOID 2611 . 2615) (punctuation 2609 . 2610) (symbol 2601 . 2609) (punctuation 2600 . 2601) (punctuation 2599 . 2600) (symbol 2596 . 2599) (TYPEDEF 2588 . 2595) (punctuation 2497 . 2498) (semantic-list 2452 . 2496) (VOID 2447 . 2451) (punctuation 2445 . 2446) (symbol 2437 . 2445) (punctuation 2436 . 2437) (punctuation 2435 . 2436) (symbol 2432 . 2435) (TYPEDEF 2424 . 2431) (punctuation 2330 . 2331) (semantic-list 2299 . 2329) (VOID 2294 . 2298) (punctuation 2292 . 2293) (symbol 2284 . 2292) (punctuation 2283 . 2284) (punctuation 2282 . 2283) (symbol 2279 . 2282) (TYPEDEF 2271 . 2278) (semantic-list 1518 . 1542) (symbol 1497 . 1518) (semantic-list 1461 . 1495) (symbol 1440 . 1461) (semantic-list 1392 . 1439) (symbol 1371 . 1392) (semantic-list 1322 . 1370) (symbol 1301 . 1322) (semantic-list 1268 . 1300) (symbol 1247 . 1268))
+      :lexical-table 
+        '(("CCAPP_IBP_NEEDLEDETECTIONCONTROLPRESENTER_HPP")
+          )
+)
+    (semanticdb-table "ccapp_ibp_allpresentationlayereventmaps.hpp"
+      :file "ccapp_ibp_allpresentationlayereventmaps.hpp"
+      :fsize 1998
+      :lastmodtime '(20908 20965 371265 260000))
+    (semanticdb-table "ccapp_ibp_needledetectioncontrolpresenter.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_ibp_needledetectioncontrolpresenter.hpp" include nil nil [771 827])
+            ("ccapp_ibm_modeltocontrolevents.hpp" include nil nil [829 874])
+            ("ccapp_ibm_needledetectioncontrolmodeliface.hpp" include nil nil [875 932])
+            ("ccapp_ibt_upvtocontrolevents.hpp" include nil nil [934 977])
+            ("ccapp_ibv_needledetectioncontrolviewiface.hpp" include nil nil [979 1035])
+            ("ccapp_ibv_viewtocontrolevents.hpp" include nil nil [1036 1080])
+            ("ccapp_sfm_imagesettingsbody.hpp" include nil nil [1082 1124])
+            ("ccapp_sfm_needleusersettings.hpp" include nil nil [1125 1168])
+            ("ccapp_sfm_needletypeconfigbody.hpp" include nil nil [1169 1214])
+            ("core_evt_subscription.hpp" include nil nil [1216 1252])
+            ("core_log_logmsg.hpp" include nil nil [1254 1284])
+            ("core_mvp_eventmaps.hpp" include nil nil [1286 1319])
+            ("QStringList" include (:system-flag t) nil [1321 1343])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("static_assert" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("ibkcm::NeedleTypeInfo::EXPECTED_NUMBER_OF_PARAMETERS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1477 1531])
+                                    ("" variable (:type ("sfm::NUMBER_OF_NEEDLE_TYPE_PARAMETERS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1553 1591]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [1458 1658])
+                            ("ibp" type
+                               (:members 
+                                  ( ("core" using (:type ("core" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1677 1698])
+                                    ("core::log" using (:type ("core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1699 1725])
+                                    ("mvp::controlLayer" using (:type ("mvp::controlLayer" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1727 1761])
+                                    ("Imp" type
+                                       (:parent "NeedleDetectionControlPresenter"
+                                        :members 
+                                          ( ("Imp" function
+                                               (:constructor-flag t
+                                                :arguments 
+                                                  ( ("theModel" variable
+                                                       (:reference 1
+                                                        :type ("ibm::NeedleDetectionControlModelIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2303 2352])
+                                                    ("theView" variable
+                                                       (:reference 1
+                                                        :type ("ibv::NeedleDetectionControlViewIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2362 2410])
+                                                    ("eventMaps" variable
+                                                       (:reference 1
+                                                        :type ("mvp::EventMaps" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2420 2470])
+                                                    ("fromUpvEventMap" variable
+                                                       (:reference 1
+                                                        :type ("FromUpvEventMap" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2480 2536])
+                                                    ("settingsUpdatedFun" variable (:type ("NeedleSettingsUpdatedFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2546 2605])
+                                                    ("needleSelectedFun" variable (:type ("NeedleTypeSelectedFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2615 2673])
+                                                    ("playSoundFun" variable (:type ("PlaySoundFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2683 2736])
+                                                    ("selectionWindowShownFun" variable (:type ("SelectionWindowShownFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2746 2811]))                                                  
+                                                :type ("Imp" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [2298 4948])
+                                            ("Imp" function
+                                               (:destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4954 4972])
+                                            ("OnShowCalibrationWindow" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4993 5024])
+                                            ("OnHideCalibrationWindow" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5029 5060])
+                                            ("OnGuidanceOn" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("on" variable
+                                                       (:constant-flag t
+                                                        :type "bool")
+                                                        (reparse-symbol arg-sub-list) [5085 5100]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5066 5101])
+                                            ("OnZeroNow" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("checked" variable
+                                                       (:constant-flag t
+                                                        :type "bool")
+                                                        (reparse-symbol arg-sub-list) [5123 5143]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5107 5144])
+                                            ("OnHideAutoCompWorkFlowWindow" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5149 5185])
+                                            ("OnNeedleTypeChanged" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5191 5218])
+                                            ("OnNeedleTypeSelectionCancelled" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5223 5261])
+                                            ("OnSelectionWindowShown" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("isShown" variable
+                                                       (:constant-flag t
+                                                        :type "bool")
+                                                        (reparse-symbol arg-sub-list) [5296 5316]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5267 5317])
+                                            ("OnUpdateNeedleTypes" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5323 5350])
+                                            ("OnImageSettingsChanged" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("body" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("sfm::ImageSettingsBody" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [5385 5422]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5356 5423])
+                                            ("OnProbeDisconnected" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5428 5455])
+                                            ("OnUpdateLastSelectedNeedle" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("index" variable
+                                                       (:constant-flag t
+                                                        :type "unsigned int")
+                                                        (reparse-symbol arg-sub-list) [5493 5515]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5460 5516])
+                                            ("OnTurnOffNeedleGuidance" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("turnOff" variable
+                                                       (:constant-flag t
+                                                        :type "bool")
+                                                        (reparse-symbol arg-sub-list) [5551 5571]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5521 5572])
+                                            ("UpdateSettings" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("playBaseSound" variable
+                                                       (:constant-flag t
+                                                        :type "bool")
+                                                        (reparse-symbol arg-sub-list) [5599 5625]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5578 5626])
+                                            ("TurnOffGuidance" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("playBaseSound" variable
+                                                       (:constant-flag t
+                                                        :type "bool")
+                                                        (reparse-symbol arg-sub-list) [5653 5679]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5631 5680])
+                                            ("PlayBaseSound" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5686 5707])
+                                            ("model" variable (:type ("ibm::NeedleDetectionControlModelIface" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5727 5773])
+                                            ("view" variable (:type ("ibv::NeedleDetectionControlViewIface" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5778 5823])
+                                            ("settingsUpdated" variable (:type ("NeedleSettingsUpdatedFunc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5829 5885])
+                                            ("needleSelected" variable (:type ("NeedleTypeSelectedFunc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5890 5945])
+                                            ("playSound" variable (:type ("PlaySoundFunc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5950 6000])
+                                            ("selectionWindowShown" variable (:type ("SelectionWindowShownFunc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6005 6066])
+                                            ("subscriptions" variable (:type ("std::vector" type
+                                                 (:template-specifier 
+                                                    ( ("evt::Subscription" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [6072 6126]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [2138 6129])
+                                    ("OnShowCalibrationWindow" function
+                                       (:parent "NeedleDetectionControlPresenter::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [6322 17264])
+                                    ("OnHideCalibrationWindow" function
+                                       (:parent "NeedleDetectionControlPresenter::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [9094 9507])
+                                    ("OnGuidanceOn" function
+                                       (:parent "NeedleDetectionControlPresenter::Imp"
+                                        :arguments 
+                                          ( ("on" variable
+                                               (:constant-flag t
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [9773 9788]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [9716 9976])
+                                    ("OnNeedleTypeChanged" function
+                                       (:parent "NeedleDetectionControlPresenter::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [10113 10910])
+                                    ("OnNeedleTypeSelectionCancelled" function
+                                       (:parent "NeedleDetectionControlPresenter::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [11058 11395])
+                                    ("OnSelectionWindowShown" function
+                                       (:parent "NeedleDetectionControlPresenter::Imp"
+                                        :arguments 
+                                          ( ("isShown" variable
+                                               (:constant-flag t
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [11662 11682]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [11595 11723])
+                                    ("OnUpdateNeedleTypes" function
+                                       (:parent "NeedleDetectionControlPresenter::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [11869 11998])
+                                    ("OnImageSettingsChanged" function
+                                       (:parent "NeedleDetectionControlPresenter::Imp"
+                                        :arguments 
+                                          ( ("" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("sfm::ImageSettingsBody" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [12422 12463]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [12339 12496])
+                                    ("OnProbeDisconnected" function
+                                       (:parent "NeedleDetectionControlPresenter::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [12695 12845])
+                                    ("OnUpdateLastSelectedNeedle" function
+                                       (:parent "NeedleDetectionControlPresenter::Imp"
+                                        :arguments 
+                                          ( ("index" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [13150 13172]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [13063 13222])
+                                    ("OnTurnOffNeedleGuidance" function
+                                       (:parent "NeedleDetectionControlPresenter::Imp"
+                                        :arguments 
+                                          ( ("turnOff" variable
+                                               (:constant-flag t
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [13519 13539]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [13451 13615])
+                                    ("UpdateSettings" function
+                                       (:parent "NeedleDetectionControlPresenter::Imp"
+                                        :arguments 
+                                          ( ("playBaseSound" variable
+                                               (:constant-flag t
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [13939 13965]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [13880 14088])
+                                    ("TurnOffGuidance" function
+                                       (:parent "NeedleDetectionControlPresenter::Imp"
+                                        :arguments 
+                                          ( ("playBaseSound" variable
+                                               (:constant-flag t
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [14405 14431]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [14345 14531])
+                                    ("PlayBaseSound" function
+                                       (:parent "NeedleDetectionControlPresenter::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [14652 14731])
+                                    ("NeedleDetectionControlPresenter" function
+                                       (:constructor-flag t
+                                        :parent "NeedleDetectionControlPresenter"
+                                        :arguments 
+                                          ( ("model" variable
+                                               (:reference 1
+                                                :type ("ibm::NeedleDetectionControlModelIface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15827 15873])
+                                            ("view" variable
+                                               (:reference 1
+                                                :type ("ibv::NeedleDetectionControlViewIface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15890 15935])
+                                            ("eventMaps" variable
+                                               (:reference 1
+                                                :type ("mvp::EventMaps" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15952 16002])
+                                            ("fromUpvEventMap" variable
+                                               (:reference 1
+                                                :type ("FromUpvEventMap" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [16019 16075])
+                                            ("settingsUpdated" variable (:type ("NeedleSettingsUpdatedFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16092 16148])
+                                            ("needleSelected" variable (:type ("NeedleTypeSelectedFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16165 16220])
+                                            ("playSound" variable (:type ("PlaySoundFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16237 16287])
+                                            ("selectionWindowShown" variable (:type ("SelectionWindowShownFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16304 16366]))                                          
+                                        :type ("NeedleDetectionControlPresenter" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [15745 16632])
+                                    ("NeedleDetectionControlPresenter" function
+                                       (:destructor-flag t
+                                        :parent "NeedleDetectionControlPresenter"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [16744 16815]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1660 17264]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1439 17284]))                  
+                :type "namespace")
+                nil [1420 17306]))          
+      :file "ccapp_ibp_needledetectioncontrolpresenter.cpp"
+      :pointmax 17386
+      :fsize 17385
+      :lastmodtime '(21096 10222 915840 495000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!a_ibp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

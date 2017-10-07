@@ -1,0 +1,16 @@
+;; Object auto-complete-1.4.0/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "auto-complete-1.4.0/"
+  :tables
+  (list
+    (semanticdb-table "auto-complete-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags nil
+      :file "auto-complete-autoloads.el"
+      :pointmax 281
+      :fsize 1909
+      :lastmodtime '(21705 59486 74494 343000)
+      :unmatched-syntax nil))
+  :file "!localhome!localmanuel!.emacs.d!elpa!auto-complete-1.4.0!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

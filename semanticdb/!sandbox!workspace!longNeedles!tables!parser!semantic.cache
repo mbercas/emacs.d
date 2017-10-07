@@ -1,0 +1,75 @@
+;; Object parser/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "parser/"
+  :tables
+  (list
+    (semanticdb-table "tables.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [20 57])
+            ("numpy" include nil nil [60 129])
+            ("numpy" include nil nil [130 191])
+            ("matplotlib.pyplot" include nil nil [192 282])
+            ("numpy.linalg" include nil nil [283 312])
+            ("glob" include nil nil [313 324])
+            ("string" include nil nil [325 338])
+            ("scipy.interpolate" include nil nil [339 388])
+            ("sys" include nil nil [390 400])
+            ("sys" code nil nil [403 446])
+            ("sys" code nil nil [447 468])
+            ("LookupTableGenerator" include nil nil [470 523])
+            ("Calibrate" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [541 545]))              ) nil [526 1746])
+            ("OutputLineFile" function
+               (:documentation "
+    Generates a file of calibrated sensor data for a line
+    of the input data
+    "
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [1768 1772]))                  )
+                nil [1748 2370])
+            ("CreateArray" function (:arguments 
+              ( ("fileName" variable nil (reparse-symbol function_parameters) [2388 2396]))              ) nil [2372 3179])
+            ("ExportTables" function
+               (:documentation "
+    Write the tables into a file
+    This function will dump the LUTs into two files, all data is float32. 
+    The format of the file is
+    - first value of the pIndex array
+    - last value of the pIndex array
+    - step for the pIndex array
+    - length of the pIndex array
+    - first value of the zIndex array
+    - last value of the zIndex array
+    - step for the zIndex array
+    - length of the zIndex array
+    - the table
+    "
+                :arguments 
+                  ( ("bP" variable nil (reparse-symbol function_parameters) [3198 3200])
+                    ("bZ" variable nil (reparse-symbol function_parameters) [3202 3204])
+                    ("pSeq" variable nil (reparse-symbol function_parameters) [3206 3210])
+                    ("zSeq" variable nil (reparse-symbol function_parameters) [3212 3216]))                  )
+                nil [3180 4356])
+            ("if" code nil nil [4358 8045]))          
+      :file "tables.py"
+      :pointmax 8048
+      :fsize 8047
+      :lastmodtime '(21713 56689 13849 543000)
+      :unmatched-syntax nil)
+    (semanticdb-table "load_tables.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pylab" include nil nil [25 55])
+            ("sys" include nil nil [56 78])
+            ("path" code nil nil [80 119])
+            ("LookupTableGenerator" include nil nil [123 176])
+            ("if" code nil nil [179 346]))          
+      :file "load_tables.py"
+      :pointmax 346
+      :fsize 345
+      :lastmodtime '(21694 24364 822322 888000)
+      :unmatched-syntax '(($EOI 346 . 346) ($EOI 341 . 341))))
+  :file "!sandbox!workspace!longNeedles!tables!parser!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

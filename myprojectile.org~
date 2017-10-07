@@ -1,0 +1,19 @@
+#+STARTUP: overview
+
+
+* Basic configuration for projectile 
+#+BEGIN_SRC emacs-lisp
+;;(projectile-global-mode)
+
+;; helm autocompletion mode and integration with projectile
+(require 'helm-config)
+(require 'helm-projectile)
+(setq projectile-completion-system 'helm)
+(helm-projectile-on)
+
+(setq projectile-switch-project-action 'helm-projectile)
+(setq projectile-enable-idle-timer t)
+(setq projectile-globally-unignored-files (quote ("*.o" "*.pyc" "*~")))
+(setq projectile-tags-backend (quote find-tag))
+
+#+END_SRC

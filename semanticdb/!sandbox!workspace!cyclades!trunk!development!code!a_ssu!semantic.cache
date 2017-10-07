@@ -1,0 +1,143 @@
+;; Object a_ssu/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_ssu/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_ssu_listenerstable.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SSU_LISTENERSTABLE_HPP" variable (:constant-flag t) nil [750 778])
+            ("core_sdb_commontypes.hpp" include nil nil [854 889])
+            ("core_cpp_forwarddeclare.hpp" include nil nil [891 929])
+            ("core_ptr_uniqueptr.hpp" include nil nil [930 963])
+            ("boost/noncopyable.hpp" include (:system-flag t) nil [965 997])
+            ("limits" include (:system-flag t) nil [999 1016])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("ssu" type
+                               (:members 
+                                  ( ("core::ipc::BaseTxMsg" using (:type ("core::ipc::BaseTxMsg" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1344 1371])
+                                    ("core::sdb::ListenerId" using (:type ("core::sdb::ListenerId" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1372 1400])
+                                    ("core::ptr::UniquePtr" using (:type ("core::ptr::UniquePtr" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1401 1428])
+                                    ("ListenersTable" type
+                                       (:superclasses 
+                                          ( ("boost::noncopyable" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [1895 1902])
+                                            ("INITIAL_ID" variable
+                                               (:typemodifiers ("static")
+                                                :constant-flag t
+                                                :type ("ListenerId::base_type" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [1912 1979])
+                                            ("ID_INCREMENT" variable
+                                               (:typemodifiers ("static")
+                                                :constant-flag t
+                                                :type ("ListenerId::base_type" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [1989 2058])
+                                            ("MAX_ID_COUNT_MINUS_ONE" variable
+                                               (:typemodifiers ("static")
+                                                :constant-flag t
+                                                :type ("ListenerId::base_type" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2068 2260])
+                                            ("ID_INCREMENT" variable
+                                               (:pointer 1
+                                                :type ("MAX_ID_COUNT_MINUS_ONE" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2345 2383])
+                                            ("ListenersTable" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :type ("ListenersTable" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2393 2410])
+                                            ("ListenersTable" function
+                                               (:prototype-flag t
+                                                :destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2420 2438])
+                                            ("GetListener" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("listenerQueueName" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("std::string" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2492 2531]))                                                  
+                                                :type ("ListenerId" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2468 2532])
+                                            ("RemoveListener" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("listenerId" variable
+                                                       (:constant-flag t
+                                                        :type ("ListenerId" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2563 2592]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2542 2593])
+                                            ("ForwardMsg" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("listenerId" variable
+                                                       (:constant-flag t
+                                                        :type ("ListenerId" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2620 2650])
+                                                    ("msg" variable
+                                                       (:reference 1
+                                                        :type ("BaseTxMsg" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2682 2699])
+                                                    ("sysMsg" variable
+                                                       (:constant-flag t
+                                                        :type "bool")
+                                                        (reparse-symbol arg-sub-list) [2725 2752]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2603 2753])
+                                            ("Resend" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2763 2777])
+                                            ("HasAnyDelayedTxMsg" function
+                                               (:prototype-flag t
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [2786 2818])
+                                            ("private" label nil (reparse-symbol classsubparts) [2824 2832])
+                                            ("Imp" type
+                                               (:prototype t
+                                                :type "struct")
+                                                (reparse-symbol classsubparts) [2842 2864])
+                                            ("pimpl" variable (:type ("UniquePtr" type
+                                                 (:template-specifier 
+                                                    ( ("Imp" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2905 2931]))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [1730 2952]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1178 3030]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1159 3050]))                  
+                :type "namespace")
+                nil [1093 3072]))          
+      :file "ccapp_ssu_listenerstable.hpp"
+      :pointmax 3178
+      :fsize 3177
+      :lastmodtime '(20908 20988 147515 534000)
+      :unmatched-syntax '((punctuation 2343 . 2344) (symbol 2332 . 2342) (punctuation 2330 . 2331) (symbol 2317 . 2323) (symbol 2295 . 2304) (punctuation 2294 . 2295) (punctuation 2293 . 2294) (symbol 2283 . 2293) (CONST 2277 . 2282) (STATIC 2270 . 2276) (semantic-list 1133 . 1157) (symbol 1112 . 1133))
+      :lexical-table 
+        '(("CCAPP_SSU_LISTENERSTABLE_HPP")
+          )
+))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!a_ssu!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

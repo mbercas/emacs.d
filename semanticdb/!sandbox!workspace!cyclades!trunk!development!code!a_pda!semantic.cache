@@ -1,0 +1,89 @@
+;; Object a_pda/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_pda/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_pda_filedatablock.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_pda_filedatablock.hpp" include nil nil [723 761])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("pda" type (:type "namespace") (reparse-symbol namespacesubparts) [876 1938]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [857 1958]))                  
+                :type "namespace")
+                nil [838 1980]))          
+      :file "ccapp_pda_filedatablock.cpp"
+      :pointmax 2042
+      :fsize 2041
+      :lastmodtime '(20908 20964)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_pda_filedatablock.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_PDA_FILEDATABLOCK_HPP" variable (:constant-flag t) nil [767 794])
+            ("core_ipc_bufferwrapper.hpp" include nil nil [870 907])
+            ("core_bty_commontypes.hpp" include nil nil [909 944])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("pda" type
+                               (:members 
+                                  ( ("core::ipc::BufferWrapper" using (:type ("core::ipc::BufferWrapper" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1225 1256])
+                                    ("core::bty::CounterT" using (:type ("core::bty::CounterT" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1257 1283])
+                                    ("FILE_DATA_BLOCK_SIZE" variable
+                                       (:constant-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol namespacesubparts) [1585 1638])
+                                    ("FileDataBlock" type
+                                       (:members 
+                                          ( ("InvalidShMem" type
+                                               (:typedef ("void")
+                                                :superclasses "void"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1676 1717])
+                                            ("FILE_DATA_BLOCK_COUNT" variable
+                                               (:typemodifiers ("static")
+                                                :constant-flag t
+                                                :type ("std::size_t" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [1723 1778])
+                                            ("SHM_COUNT" variable
+                                               (:typemodifiers ("static")
+                                                :constant-flag t
+                                                :type ("CounterT" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [1784 1846])
+                                            ("data" variable (:type ("BufferWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("FILE_DATA_BLOCK_SIZE" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1852 1895]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1649 1899]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1059 1977]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1040 1997]))                  
+                :type "namespace")
+                nil [1021 2019]))          
+      :file "ccapp_pda_filedatablock.hpp"
+      :pointmax 2123
+      :fsize 2122
+      :lastmodtime '(20908 20964)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_PDA_FILEDATABLOCK_HPP")
+          )
+))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!a_pda!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

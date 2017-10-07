@@ -1,0 +1,18 @@
+;; Object std/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "std/"
+  :tables
+  (list
+    (semanticdb-table "running.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("online_variance" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [21 25]))              ) nil [1 239]))          
+      :file "running.py"
+      :pointmax 239
+      :fsize 238
+      :lastmodtime '(21337 32026 340061 570000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!tmp!std!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

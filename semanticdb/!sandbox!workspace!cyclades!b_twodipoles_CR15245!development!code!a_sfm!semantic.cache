@@ -1,0 +1,118 @@
+;; Object a_sfm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_sfm/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_sfm_needletypeconfigbody.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_sfm_needletypeconfigbody.hpp" include nil nil [707 752])
+            ("core_chk_assert.hpp" include nil nil [754 784])
+            ("ostream" include (:system-flag t) nil [786 804])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("sfm" type
+                               (:members 
+                                  ( ("Print" function
+                                       (:parent "NeedleTypeConfigBody"
+                                        :arguments 
+                                          ( ("os" variable
+                                               (:reference 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1786 1804]))                                          
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1742 2027])
+                                    ("Check" function
+                                       (:parent "NeedleTypeConfigBody"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2227 2409]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [919 2858]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [900 2878]))                  
+                :type "namespace")
+                nil [881 2900]))          
+      :file "ccapp_sfm_needletypeconfigbody.cpp"
+      :pointmax 2969
+      :fsize 2968
+      :lastmodtime '(21160 27127 583535 741000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_sfm_needletypeconfigbody.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SFM_NEEDLETYPECONFIGBODY_HPP" variable (:constant-flag t) nil [758 792])
+            ("core_ipc_arraywrapper.hpp" include nil nil [868 904])
+            ("core_ipc_stringwrapper.hpp" include nil nil [905 942])
+            ("iosfwd" include (:system-flag t) nil [944 961])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("sfm" type
+                               (:members 
+                                  ( ("core::ipc::ArrayWrapper" using (:type ("core::ipc::ArrayWrapper" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1242 1272])
+                                    ("core::ipc::StringWrapper" using (:type ("core::ipc::StringWrapper" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1273 1304])
+                                    ("NUMBER_OF_NEEDLE_TYPE_PARAMETERS" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [1455 1503])
+                                    ("NeedleTypeConfigBody" type
+                                       (:members 
+                                          ( ("Cacheable" type
+                                               (:typedef ("void")
+                                                :superclasses "void"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1689 1720])
+                                            ("Print" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("os" variable
+                                                       (:reference 1
+                                                        :type ("std::ostream" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1748 1766]))                                                  
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [1726 1773])
+                                            ("Check" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1778 1797])
+                                            ("parameters" variable (:type ("ArrayWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("StringWrapper" type nil nil nil)
+                                                      ("NUMBER_OF_NEEDLE_TYPE_PARAMETERS" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1803 1886])
+                                            ("values" variable (:type ("ArrayWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil)
+                                                      ("NUMBER_OF_NEEDLE_TYPE_PARAMETERS" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1891 1970]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1655 1973]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1076 2051]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1057 2071]))                  
+                :type "namespace")
+                nil [1038 2093]))          
+      :file "ccapp_sfm_needletypeconfigbody.hpp"
+      :pointmax 2211
+      :fsize 2210
+      :lastmodtime '(21166 55249 480650 653000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_SFM_NEEDLETYPECONFIGBODY_HPP")
+          )
+))
+  :file "!sandbox!workspace!cyclades!b_twodipoles_CR15245!development!code!a_sfm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

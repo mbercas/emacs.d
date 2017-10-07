@@ -1,0 +1,16 @@
+;; Object python-environment-0.0.1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "python-environment-0.0.1/"
+  :tables
+  (list
+    (semanticdb-table "python-environment-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags nil
+      :file "python-environment-autoloads.el"
+      :pointmax 296
+      :fsize 450
+      :lastmodtime '(21705 60504 160613 57000)
+      :unmatched-syntax nil))
+  :file "!localhome!localmanuel!.emacs.d!elpa!python-environment-0.0.1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

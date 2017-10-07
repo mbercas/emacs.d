@@ -1,0 +1,256 @@
+;; Object a_sdf/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_sdf/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_sdf_needledata.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SDF_NEEDLEDATA_HPP" variable (:constant-flag t) nil [736 760])
+            ("ccapp_scs_constants.hpp" include nil nil [836 870])
+            ("core_bty_commontypes.hpp" include nil nil [872 907])
+            ("core_mat_floats.hpp" include nil nil [908 938])
+            ("ccapp_sdf_databuffers.hpp" include nil nil [940 976])
+            ("optimist.hpp" include nil nil [977 1000])
+            ("array" include (:system-flag t) nil [1002 1018])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("sdf" type
+                               (:members 
+                                  ( ("core::mat::Float2" using (:type ("core::mat::Float2" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1299 1323])
+                                    ("core::mat::Float3" using (:type ("core::mat::Float3" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1324 1348])
+                                    ("core::bty::CounterT" using (:type ("core::bty::CounterT" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1349 1375])
+                                    ("NeedleVisualizeData" type
+                                       (:members 
+                                          ( ("LineType" type
+                                               (:typedef ("NeedleVisualizeData" type (:type "class") nil nil)
+                                                :superclasses "NeedleVisualizeData"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1710 1756])
+                                            ("NeedleVisualizeData" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :type ("NeedleVisualizeData" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [1763 1785])
+                                            ("needleTip" variable (:type ("Float3" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1792 1814])
+                                            ("needleBottom" variable (:type ("Float3" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1819 1844])
+                                            ("rayPoints" variable
+                                               (:dereference 1
+                                                :type ("Float2" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [1850 1877])
+                                            ("sectionPoint" variable (:type ("Float2" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1883 1908])
+                                            ("autoCompensationReliability" variable (:type "float") (reparse-symbol classsubparts) [1914 1954])
+                                            ("magnetization" variable (:type "float") (reparse-symbol classsubparts) [1959 1985])
+                                            ("plotNeedle" variable (:type "bool") (reparse-symbol classsubparts) [1991 2014])
+                                            ("plotRay" variable (:type "bool") (reparse-symbol classsubparts) [2019 2039])
+                                            ("isNeedleInPlane" variable (:type "bool") (reparse-symbol classsubparts) [2044 2072])
+                                            ("autoCompensationActive" variable (:type "bool") (reparse-symbol classsubparts) [2129 2164]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1677 2167])
+                                    ("DataBufferNeedleVisualization" type
+                                       (:members 
+                                          ( ("SHM_COUNT" variable
+                                               (:typemodifiers ("static")
+                                                :constant-flag t
+                                                :type ("CounterT" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2258 2322])
+                                            ("BufferType" type
+                                               (:typedef ("NeedleVisualizeData" type (:type "class") nil nil)
+                                                :superclasses "NeedleVisualizeData"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [2328 2376])
+                                            ("LineType" type
+                                               (:typedef ("NeedleVisualizeData" type (:type "class") nil nil)
+                                                :superclasses "NeedleVisualizeData"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [2381 2427])
+                                            ("lines" variable (:type ("std::array" type
+                                                 (:template-specifier 
+                                                    ( ("LineType" type nil nil nil)
+                                                      ("1"))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2470 2502]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [2169 2505])
+                                    ("NeedleVisualizeExtendedData" type
+                                       (:members 
+                                          ( ("LineType" type
+                                               (:typedef ("NeedleVisualizeExtendedData" type (:type "class") nil nil)
+                                                :superclasses "NeedleVisualizeExtendedData"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [2548 2602])
+                                            ("NeedleVisualizeExtendedData" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :type ("NeedleVisualizeExtendedData" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [2608 2638])
+                                            ("vData" variable (:type ("NeedleVisualizeData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2644 2675])
+                                            ("params" variable
+                                               (:dereference 1
+                                                :type ("precision_t" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2680 2744])
+                                            ("optimistPri" variable (:type ("LineEstimatedNeedleData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2769 2806])
+                                            ("smoothPri" variable (:type ("LineEstimatedNeedleData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2811 2846])
+                                            ("optimistSec" variable (:type ("LineEstimatedNeedleData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2851 2888])
+                                            ("outSupSec" variable (:type ("LineEstimatedNeedleData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2893 2928]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [2507 2931])
+                                    ("DataBufferNeedleExtendedVisualization" type
+                                       (:members 
+                                          ( ("SHM_COUNT" variable
+                                               (:typemodifiers ("static")
+                                                :constant-flag t
+                                                :type ("CounterT" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [3030 3094])
+                                            ("BufferType" type
+                                               (:typedef ("NeedleVisualizeExtendedData" type (:type "class") nil nil)
+                                                :superclasses "NeedleVisualizeExtendedData"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [3100 3156])
+                                            ("LineType" type
+                                               (:typedef ("NeedleVisualizeExtendedData" type (:type "class") nil nil)
+                                                :superclasses "NeedleVisualizeExtendedData"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [3161 3215])
+                                            ("lines" variable (:type ("std::array" type
+                                                 (:template-specifier 
+                                                    ( ("LineType" type nil nil nil)
+                                                      ("1"))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [3258 3290]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [2933 3293])
+                                    ("NeedleSensorsData" type
+                                       (:members 
+                                          ( ("ReadingsType" type
+                                               (:typedef ("float")
+                                                :superclasses "float"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [3327 3376])
+                                            ("StateType" type
+                                               (:typedef ("core::bty::UInt16" type (:type "class") nil nil)
+                                                :superclasses "core::bty::UInt16"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [3381 3427])
+                                            ("sensorReadings" variable
+                                               (:dereference 1
+                                                :type ("ReadingsType" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [3434 3491])
+                                            ("sensorState" variable
+                                               (:dereference 1
+                                                :type ("StateType" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [3496 3550])
+                                            ("inputSupervisorState" variable (:type ("StateType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3555 3612])
+                                            ("fieldDispersion" variable (:type "float") (reparse-symbol classsubparts) [3617 3669]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [3296 3672])
+                                    ("NeedleSensorsDataBuffer" type
+                                       (:members 
+                                          ( ("BufferType" type
+                                               (:typedef ("NeedleSensorsData" type (:type "class") nil nil)
+                                                :superclasses "NeedleSensorsData"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [3711 3757])
+                                            ("LineType" type
+                                               (:typedef ("NeedleSensorsData" type (:type "class") nil nil)
+                                                :superclasses "NeedleSensorsData"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [3762 3806])
+                                            ("lines" variable (:type ("std::array" type
+                                                 (:template-specifier 
+                                                    ( ("LineType" type nil nil nil)
+                                                      ("1"))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [3849 3881]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [3674 3884])
+                                    ("NeedleCalibrationMatrixData" type
+                                       (:members 
+                                          ( ("ReadingsType" type
+                                               (:typedef ("float")
+                                                :superclasses "float"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [3928 3977])
+                                            ("matrices" variable
+                                               (:dereference 1
+                                                :type ("ReadingsType" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [3983 4034]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [3887 4037])
+                                    ("NeedleCalibrationData" type
+                                       (:members 
+                                          ( ("ReadingsType" type
+                                               (:typedef ("float")
+                                                :superclasses "float"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [4074 4123])
+                                            ("data" variable
+                                               (:dereference 1
+                                                :type ("ReadingsType" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [4129 4176]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [4039 4179]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1133 4257]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1114 4277]))                  
+                :type "namespace")
+                nil [1095 4299]))          
+      :file "ccapp_sdf_needledata.hpp"
+      :pointmax 4103
+      :fsize 4396
+      :lastmodtime '(21327 36310 479568 653000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_SDF_NEEDLEDATA_HPP")
+          )
+)
+    (semanticdb-table "ccapp_sdf_databuffers.hpp"
+      :file "ccapp_sdf_databuffers.hpp"
+      :fsize 5283
+      :lastmodtime '(21325 20209 209392 622000))
+    (semanticdb-table "ccapp_sdf_needledata.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_sdf_needledata.hpp" include nil nil [695 730])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("sdf" type
+                               (:members 
+                                  ( ("core" using (:type ("core" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [862 883])
+                                    ("NeedleVisualizeData" function
+                                       (:constructor-flag t
+                                        :parent "NeedleVisualizeData"
+                                        :type ("NeedleVisualizeData" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1594 1983])
+                                    ("outSupSec" function (:type "int") (reparse-symbol namespacesubparts) [2235 2250]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [845 2699]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [826 2719]))                  
+                :type "namespace")
+                nil [807 2741]))          
+      :file "ccapp_sdf_needledata.cpp"
+      :pointmax 2740
+      :fsize 2799
+      :lastmodtime '(21327 36119 877540 0)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!cyclades!b_multidipole_new!development!code!a_sdf!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

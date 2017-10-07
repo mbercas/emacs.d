@@ -1,0 +1,18 @@
+;; Object scripts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "scripts/"
+  :tables
+  (list
+    (semanticdb-table "kk.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [21 58])
+            ("if" code nil nil [62 108]))          
+      :file "kk.py"
+      :pointmax 108
+      :fsize 107
+      :lastmodtime '(21851 22529 73907 809000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!cyclades!trunk!development!occ-packages!scripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

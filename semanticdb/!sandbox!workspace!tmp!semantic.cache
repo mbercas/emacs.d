@@ -1,0 +1,87 @@
+;; Object tmp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tmp/"
+  :tables
+  (list
+    (semanticdb-table "spike.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [1 18])
+            ("iostream" include (:system-flag t) nil [19 38])
+            ("RescaleIntArray" function
+               (:arguments 
+                  ( ("begin" variable
+                       (:pointer 1
+                        :type ("UInt32" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [810 824])
+                    ("end" variable
+                       (:pointer 1
+                        :type ("UInt32" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [853 865])
+                    ("oldMaxValue" variable
+                       (:constant-flag t
+                        :type ("UInt32" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [888 914])
+                    ("newMaxValue" variable
+                       (:constant-flag t
+                        :type ("UInt32" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [937 964]))                  
+                :type "void")
+                nil [782 1365])
+            ("main" function (:type "int") nil [1368 1403]))          
+      :file "spike.cpp"
+      :pointmax 1404
+      :fsize 1397
+      :lastmodtime '(21595 19600 342400 826000)
+      :unmatched-syntax nil)
+    (semanticdb-table "untitled0.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Created on Fri Jul 19 21:34:19 2013
+
+@author: localmanuel
+\"\"\"" code nil nil [25 90])
+            ("numpy" include nil nil [91 109])
+            ("scipy" include nil nil [110 122])
+            ("scipy.linalg" include nil nil [123 160])
+            ("matplotlib" include nil nil [161 197])
+            ("matplotlib.animation" include nil nil [198 238])
+            ("global" code nil nil [240 248])
+            ("DrawRecord" function (:arguments 
+              ( ("U" variable nil (reparse-symbol function_parameters) [266 267]))              ) nil [251 428])
+            ("J" variable nil nil [429 436])
+            ("dt" variable nil nil [438 445])
+            ("T" variable nil nil [447 452])
+            ("t" variable nil nil [454 474])
+            ("dx" code nil nil [476 484])
+            ("D" variable nil nil [487 494])
+            ("c" variable nil nil [496 501])
+            ("r" variable nil nil [503 508])
+            ("mu" code nil nil [511 527])
+            ("lambd" code nil nil [529 549])
+            ("K_x" code nil nil [552 573])
+            ("alpha_t" code nil nil [575 602])
+            ("u" variable nil nil [625 638])
+            ("u" variable nil nil [640 656])
+            ("U" variable nil nil [658 661])
+            ("espace" variable nil nil [663 688])
+            ("AA" variable nil nil [823 845])
+            ("for" code nil nil [848 985])
+            ("DrawRecord" code nil nil [986 999])
+            ("fig" variable nil nil [1003 1021])
+            ("window" variable nil nil [1022 1051])
+            ("line" variable nil nil [1052 1085])
+            ("init" function nil nil [1087 1131])
+            ("animate" function (:arguments 
+              ( ("i" variable nil (reparse-symbol function_parameters) [1144 1145]))              ) nil [1132 1197])
+            ("anim" variable nil nil [1198 1321])
+            ("plt" code nil nil [1323 1333]))          
+      :file "untitled0.py"
+      :pointmax 1318
+      :fsize 1312
+      :lastmodtime '(20969 39306 911329 678000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!tmp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

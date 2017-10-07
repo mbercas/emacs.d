@@ -1,0 +1,16 @@
+;; Object probe/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "probe/"
+  :tables
+  (list
+    (semanticdb-table "ext_luts_bmodeprocessing.hpp"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "ext_luts_bmodeprocessing.hpp"
+      :pointmax 12994
+      :fsize 12993
+      :lastmodtime '(21243 30732 287360 150000)
+      :unmatched-syntax '((semantic-list 11954 . 12993) (punctuation 11951 . 11952) (semantic-list 10876 . 11951) (punctuation 10873 . 10874) (semantic-list 9814 . 10873) (punctuation 9811 . 9812) (semantic-list 8778 . 9811) (punctuation 8775 . 8776) (semantic-list 7668 . 8775) (punctuation 7665 . 7666) (semantic-list 6577 . 7665) (punctuation 6574 . 6575) (semantic-list 5516 . 6574) (punctuation 5513 . 5514) (semantic-list 4480 . 5513) (punctuation 4477 . 4478) (semantic-list 3369 . 4477) (punctuation 3366 . 3367) (semantic-list 2279 . 3366) (punctuation 2276 . 2277) (semantic-list 1218 . 2276) (punctuation 1215 . 1216) (semantic-list 1 . 1215))))
+  :file "!sandbox!workspace!cyclades!b_adptive_ngs_CR15418!development!ext!luts!L3_12!probe!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

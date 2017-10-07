@@ -1,0 +1,22 @@
+;; Object config/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "config/"
+  :tables
+  (list
+    (semanticdb-table "requires_threads.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("BOOST_CONFIG_REQUIRES_THREADS_HPP" variable (:constant-flag t) nil [284 317])
+            ("boost/config.hpp" include (:system-flag t) nil [344 373]))          
+      :file "requires_threads.hpp"
+      :pointmax 3508
+      :fsize 3599
+      :lastmodtime '(21383 17441 934188 119000)
+      :unmatched-syntax '((string 3285 . 3412) (symbol 3279 . 3284) (punctuation 3276 . 3277) (string 1571 . 1737) (symbol 1565 . 1570) (punctuation 1561 . 1562))
+      :lexical-table 
+        '(("BOOST_CONFIG_REQUIRES_THREADS_HPP")
+          )
+))
+  :file "!sandbox!workspace!external_libs!framewave!FW_SourceForge!Framewave!sdk!boost_1_34_0!boost!config!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

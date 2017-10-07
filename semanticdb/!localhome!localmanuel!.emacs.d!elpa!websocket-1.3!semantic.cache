@@ -1,0 +1,16 @@
+;; Object websocket-1.3/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "websocket-1.3/"
+  :tables
+  (list
+    (semanticdb-table "websocket-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags nil
+      :file "websocket-autoloads.el"
+      :pointmax 269
+      :fsize 408
+      :lastmodtime '(21705 60705 308531 467000)
+      :unmatched-syntax nil))
+  :file "!localhome!localmanuel!.emacs.d!elpa!websocket-1.3!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

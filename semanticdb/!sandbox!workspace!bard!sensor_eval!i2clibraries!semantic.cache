@@ -1,0 +1,492 @@
+;; Object i2clibraries/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "i2clibraries/"
+  :tables
+  (list
+    (semanticdb-table "i2c_hmc5883l.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("math" include nil nil [20 31])
+            ("i2clibraries" include nil nil [32 60])
+            ("time" include nil nil [61 79])
+            ("i2c_lis2mdl" type
+               (:members 
+                  ( ("WHO_AM_I" variable nil (reparse-symbol indented_block_body) [105 122])
+                    ("CTRL_REG1" variable nil (reparse-symbol indented_block_body) [127 144])
+                    ("CTRL_REG2" variable nil (reparse-symbol indented_block_body) [149 166])
+                    ("CTRL_REG3" variable nil (reparse-symbol indented_block_body) [171 188])
+                    ("CTRL_REG4" variable nil (reparse-symbol indented_block_body) [193 210])
+                    ("CTRL_REG5" variable nil (reparse-symbol indented_block_body) [215 232])
+                    ("STATUS_REG" variable nil (reparse-symbol indented_block_body) [237 254])
+                    ("OUT_X_L" variable nil (reparse-symbol indented_block_body) [259 273])
+                    ("OUT_X_H" variable nil (reparse-symbol indented_block_body) [278 292])
+                    ("OUT_Y_L" variable nil (reparse-symbol indented_block_body) [297 311])
+                    ("OUT_Y_H" variable nil (reparse-symbol indented_block_body) [316 330])
+                    ("OUT_Z_L" variable nil (reparse-symbol indented_block_body) [335 349])
+                    ("OUT_Z_H" variable nil (reparse-symbol indented_block_body) [354 368])
+                    ("TEMP_OUT_L" variable nil (reparse-symbol indented_block_body) [373 390])
+                    ("TEMP_OUT_H" variable nil (reparse-symbol indented_block_body) [395 412])
+                    ("INT_CFG" variable nil (reparse-symbol indented_block_body) [417 431])
+                    ("INT_SRC" variable nil (reparse-symbol indented_block_body) [436 450])
+                    ("INT_THS_L" variable nil (reparse-symbol indented_block_body) [455 471])
+                    ("INT_THS_H" variable nil (reparse-symbol indented_block_body) [476 490])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [555 585])
+                            ("self" code nil (reparse-symbol indented_block_body) [590 610]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [519 523])
+                            ("port" variable nil (reparse-symbol function_parameters) [525 529])
+                            ("addr" variable nil (reparse-symbol function_parameters) [531 535])
+                            ("gauss" variable nil (reparse-symbol function_parameters) [542 547]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [506 611])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [630 634]))                          )
+                        (reparse-symbol indented_block_body) [618 932])
+                    ("setContinuousMode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [967 971]))                          )
+                        (reparse-symbol indented_block_body) [945 1037])
+                    ("setScale" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1057 1061])
+                            ("gauss" variable nil (reparse-symbol function_parameters) [1063 1068]))                          )
+                        (reparse-symbol indented_block_body) [1044 3857]))                  
+                :type "class")
+                nil [81 3857]))          
+      :file "i2c_hmc5883l.py"
+      :pointmax 3867
+      :fsize 3859
+      :lastmodtime '(21917 11082 515093 997000)
+      :unmatched-syntax '((INDENT_BLOCK 1285 . 1724) (INDENT_BLOCK 1264 . 1285) ($EOI 3867 . 3867) (INDENT_BLOCK 1278 . 1717) (INDENT_BLOCK 1257 . 1278) (INDENT_BLOCK 1278 . 1717) (INDENT_BLOCK 1257 . 1278) (INDENT_BLOCK 101 . 3871) ($EOI 3923 . 3923) ($EOI 3906 . 3906) (INDENT_BLOCK 82 . 3894) (INDENT_BLOCK 81 . 3893) (NEWLINE 80 . 81) (INDENT_BLOCK 82 . 3894) (INDENT_BLOCK 82 . 3890) (INDENT_BLOCK 82 . 3894)))
+    (semanticdb-table "i2c_lis3mdl.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("math" include nil nil [20 31])
+            ("i2clibraries" include nil nil [32 60])
+            ("time" include nil nil [61 79])
+            ("i2c_lis3mdl" type
+               (:members 
+                  ( ("WHO_AM_I" variable nil (reparse-symbol indented_block_body) [105 120])
+                    ("whoami" variable nil (reparse-symbol indented_block_body) [125 135])
+                    ("CTRL_REG1" variable nil (reparse-symbol indented_block_body) [169 185])
+                    ("temp_en_reg" variable nil (reparse-symbol indented_block_body) [190 206])
+                    ("om_reg" variable nil (reparse-symbol indented_block_body) [211 227])
+                    ("do_reg" variable nil (reparse-symbol indented_block_body) [232 248])
+                    ("fast_odr_reg" variable nil (reparse-symbol indented_block_body) [253 269])
+                    ("st_reg" variable nil (reparse-symbol indented_block_body) [274 290])
+                    ("CTRL_REG2" variable nil (reparse-symbol indented_block_body) [300 316])
+                    ("fs_reg" variable nil (reparse-symbol indented_block_body) [326 336])
+                    ("CTRL_REG3" variable nil (reparse-symbol indented_block_body) [346 362])
+                    ("lp_reg" variable nil (reparse-symbol indented_block_body) [368 378])
+                    ("md_reg" variable nil (reparse-symbol indented_block_body) [383 393])
+                    ("CTRL_REG4" variable nil (reparse-symbol indented_block_body) [403 419])
+                    ("ble_reg" variable nil (reparse-symbol indented_block_body) [425 436])
+                    ("CTRL_REG5" variable nil (reparse-symbol indented_block_body) [446 462])
+                    ("STATUS_REG" variable nil (reparse-symbol indented_block_body) [467 484])
+                    ("status" variable nil (reparse-symbol indented_block_body) [490 500])
+                    ("OUT_X_L" variable nil (reparse-symbol indented_block_body) [510 524])
+                    ("OUT_X_H" variable nil (reparse-symbol indented_block_body) [529 543])
+                    ("magno_x" variable nil (reparse-symbol indented_block_body) [549 560])
+                    ("OUT_Y_L" variable nil (reparse-symbol indented_block_body) [570 584])
+                    ("OUT_Y_H" variable nil (reparse-symbol indented_block_body) [589 603])
+                    ("magno_y" variable nil (reparse-symbol indented_block_body) [609 620])
+                    ("OUT_Z_L" variable nil (reparse-symbol indented_block_body) [626 640])
+                    ("OUT_Z_H" variable nil (reparse-symbol indented_block_body) [645 659])
+                    ("magno_z" variable nil (reparse-symbol indented_block_body) [665 676])
+                    ("TEMP_OUT_L" variable nil (reparse-symbol indented_block_body) [682 699])
+                    ("TEMP_OUT_H" variable nil (reparse-symbol indented_block_body) [704 721])
+                    ("magno_temp" variable nil (reparse-symbol indented_block_body) [727 741])
+                    ("INT_CFG" variable nil (reparse-symbol indented_block_body) [751 765])
+                    ("INT_SRC" variable nil (reparse-symbol indented_block_body) [770 784])
+                    ("INT_THS_L" variable nil (reparse-symbol indented_block_body) [789 805])
+                    ("INT_THS_H" variable nil (reparse-symbol indented_block_body) [810 826])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [887 917])
+                            ("self" code nil (reparse-symbol indented_block_body) [968 1003])
+                            ("self" code nil (reparse-symbol indented_block_body) [1037 1077])
+                            ("self" code nil (reparse-symbol indented_block_body) [1094 1116])
+                            ("self" code nil (reparse-symbol indented_block_body) [1134 1154]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [845 849])
+                            ("port" variable nil (reparse-symbol function_parameters) [851 855])
+                            ("addr" variable nil (reparse-symbol function_parameters) [857 861])
+                            ("gauss" variable nil (reparse-symbol function_parameters) [868 873]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [832 1155])
+                    ("enableTemperatureSensor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1188 1192])
+                            ("enable" variable nil (reparse-symbol function_parameters) [1194 1200]))                          
+                        :documentation "
+        Enables the temperature sensor, set to zero to disable it.
+        ")
+                        (reparse-symbol indented_block_body) [1160 1428])
+                    ("setOperativeModeSelection" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1463 1467])
+                            ("om" variable nil (reparse-symbol function_parameters) [1469 1471]))                          
+                        :documentation "
+        Set the X and Y axes operative mode slection
+        00 : low power mode
+        01 : medium performance mode
+        01 : high performance mode
+        11 : ultra-high performance mode
+        ")
+                        (reparse-symbol indented_block_body) [1433 1858])
+                    ("setOutputDataRateConfiguration" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1906 1910])
+                            ("odr" variable nil (reparse-symbol function_parameters) [1912 1915]))                          )
+                        (reparse-symbol indented_block_body) [1871 2032])
+                    ("enableFastDataRate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2060 2064])
+                            ("fast_odr" variable nil (reparse-symbol function_parameters) [2065 2073]))                          )
+                        (reparse-symbol indented_block_body) [2037 2266])
+                    ("enableSelfTest" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2290 2294])
+                            ("enable" variable nil (reparse-symbol function_parameters) [2296 2302]))                          )
+                        (reparse-symbol indented_block_body) [2271 2429])
+                    ("setScale" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2455 2459])
+                            ("gauss" variable nil (reparse-symbol function_parameters) [2461 2466]))                          
+                        :documentation "
+        CTRL_REG2 bits 6:7 control the scale:
+        00:  4 Gauss
+        01:  8 Gauss
+        10: 12 Gauss
+        11: 16 Gauss
+        ")
+                        (reparse-symbol indented_block_body) [2442 3072])
+                    ("rebootMemmoryContent" function nil (reparse-symbol indented_block_body) [3077 3152])
+                    ("softReset" function nil (reparse-symbol indented_block_body) [3157 3221])
+                    ("enableLowPowerModeConfiguration" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3262 3266])
+                            ("enable" variable nil (reparse-symbol function_parameters) [3267 3273]))                          )
+                        (reparse-symbol indented_block_body) [3226 3364])
+                    ("setOperationMode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3390 3394])
+                            ("md" variable nil (reparse-symbol function_parameters) [3396 3398]))                          
+                        :documentation "
+        Sets the operation mode:
+        00 : Continous conversion mode
+        01 : Single conversion mode
+        10 : Power down mode
+        11 : power down mode
+        ")
+                        (reparse-symbol indented_block_body) [3369 3847])
+                    ("enableLittleEndian" function
+                       (:documentation "
+        0: data LSb at lower address; 1: data MSb at lower address
+        "
+                        :arguments 
+                          ( ("enable" variable nil (reparse-symbol function_parameters) [3875 3881]))                          )
+                        (reparse-symbol indented_block_body) [3852 4092])
+                    ("enableFastRead" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4116 4120])
+                            ("enable" variable nil (reparse-symbol function_parameters) [4122 4128]))                          
+                        :documentation "
+        Enables fast read, when set to 1 allows reading only the
+        high part of DATA_OUT
+        ")
+                        (reparse-symbol indented_block_body) [4097 4379])
+                    ("enableBlockUpdateForMagneticData" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4421 4425])
+                            ("enable" variable nil (reparse-symbol function_parameters) [4427 4433]))                          
+                        :documentation "
+        When set to 1 output registers are not updated until MSB 
+        and LSB have been read.
+        ")
+                        (reparse-symbol indented_block_body) [4384 4675])
+                    ("setOption" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4702 4706])
+                            ("register" variable nil (reparse-symbol function_parameters) [4708 4716])
+                            ("function_set" variable nil (reparse-symbol function_parameters) [4718 4731]))                          )
+                        (reparse-symbol indented_block_body) [4688 4883])
+                    ("addOption" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4957 4961])
+                            ("register" variable nil (reparse-symbol function_parameters) [4963 4971])
+                            ("function_set" variable nil (reparse-symbol function_parameters) [4973 4986]))                          )
+                        (reparse-symbol indented_block_body) [4943 5162])
+                    ("getWhoAmI" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5181 5185]))                          )
+                        (reparse-symbol indented_block_body) [5167 5271])
+                    ("getStatus" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5299 5303]))                          )
+                        (reparse-symbol indented_block_body) [5285 5386])
+                    ("getSensorReadings" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5413 5417]))                          )
+                        (reparse-symbol indented_block_body) [5391 5577])
+                    ("getTemperatureReading" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5608 5612]))                          )
+                        (reparse-symbol indented_block_body) [5582 5710]))                  
+                :type "class")
+                nil [81 5710]))          
+      :file "i2c_lis3mdl.py"
+      :pointmax 5710
+      :fsize 5709
+      :lastmodtime '(21918 17947 797500 979000)
+      :unmatched-syntax nil)
+    (semanticdb-table "i2c.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("quick2wire.i2c" include nil nil [1 61])
+            ("time" include nil nil [62 73])
+            ("i2c" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [138 171])
+                            ("self" variable nil (reparse-symbol indented_block_body) [174 190])
+                            ("self" variable nil (reparse-symbol indented_block_body) [196 214]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [102 106])
+                            ("port" variable nil (reparse-symbol function_parameters) [108 112])
+                            ("addr" variable nil (reparse-symbol function_parameters) [114 118])
+                            ("debug" variable nil (reparse-symbol function_parameters) [120 125]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [89 215])
+                    ("write_byte" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [234 238])
+                            ("bytes" variable nil (reparse-symbol function_parameters) [240 246]))                          )
+                        (reparse-symbol indented_block_body) [219 317])
+                    ("read_byte" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [337 341])
+                            ("register" variable nil (reparse-symbol function_parameters) [343 351]))                          )
+                        (reparse-symbol indented_block_body) [323 477])
+                    ("read_16bit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [495 499])
+                            ("register" variable nil (reparse-symbol function_parameters) [501 509])
+                            ("flip" variable nil (reparse-symbol function_parameters) [511 515]))                          )
+                        (reparse-symbol indented_block_body) [480 806])
+                    ("read_s16int" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [825 829])
+                            ("register" variable nil (reparse-symbol function_parameters) [831 839])
+                            ("flip" variable nil (reparse-symbol function_parameters) [841 845]))                          )
+                        (reparse-symbol indented_block_body) [809 933])
+                    ("read_3s16int" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [953 957])
+                            ("register" variable nil (reparse-symbol function_parameters) [959 967])
+                            ("flip" variable nil (reparse-symbol function_parameters) [969 973]))                          )
+                        (reparse-symbol indented_block_body) [936 1558])
+                    ("twosToInt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1587 1591])
+                            ("val" variable nil (reparse-symbol function_parameters) [1593 1596])
+                            ("len" variable nil (reparse-symbol function_parameters) [1598 1601]))                          )
+                        (reparse-symbol indented_block_body) [1573 1748]))                  
+                :type "class")
+                nil [75 1748]))          
+      :file "i2c.py"
+      :pointmax 1761
+      :fsize 1760
+      :lastmodtime '(21917 8899 889204 63000)
+      :unmatched-syntax nil)
+    (semanticdb-table "i2c_l3g4200.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("math" include nil nil [1 12])
+            ("i2clibraries" include nil nil [13 41])
+            ("time" include nil nil [42 60])
+            ("i2c_itg3205" type
+               (:members 
+                  ( ("WhoAmI" variable nil (reparse-symbol indented_block_body) [84 97])
+                    ("Control1" variable nil (reparse-symbol indented_block_body) [99 114])
+                    ("Control2" variable nil (reparse-symbol indented_block_body) [116 131])
+                    ("Control3" variable nil (reparse-symbol indented_block_body) [133 148])
+                    ("Control4" variable nil (reparse-symbol indented_block_body) [150 165])
+                    ("Control5" variable nil (reparse-symbol indented_block_body) [167 182])
+                    ("Reference" variable nil (reparse-symbol indented_block_body) [184 200])
+                    ("Temperature" variable nil (reparse-symbol indented_block_body) [202 220])
+                    ("StatusRegister" variable nil (reparse-symbol indented_block_body) [222 243])
+                    ("GyroXDataLSB" variable nil (reparse-symbol indented_block_body) [245 264])
+                    ("GyroXDataMSB" variable nil (reparse-symbol indented_block_body) [266 285])
+                    ("GyroYDataLSB" variable nil (reparse-symbol indented_block_body) [287 306])
+                    ("GyroYDataMSB" variable nil (reparse-symbol indented_block_body) [308 327])
+                    ("GyroZDataLSB" variable nil (reparse-symbol indented_block_body) [329 348])
+                    ("GyroZDataMSB" variable nil (reparse-symbol indented_block_body) [350 369])
+                    ("FIFOControl" variable nil (reparse-symbol indented_block_body) [371 389])
+                    ("FIFOSource" variable nil (reparse-symbol indented_block_body) [391 408])
+                    ("InterruptControl" variable nil (reparse-symbol indented_block_body) [410 433])
+                    ("InterruptSource" variable nil (reparse-symbol indented_block_body) [435 457])
+                    ("InterruptThresholdXMSB" variable nil (reparse-symbol indented_block_body) [459 488])
+                    ("InterruptThresholdXLSB" variable nil (reparse-symbol indented_block_body) [490 519])
+                    ("InterruptThresholdYMSB" variable nil (reparse-symbol indented_block_body) [521 550])
+                    ("InterruptThresholdYLSB" variable nil (reparse-symbol indented_block_body) [552 581])
+                    ("InterruptThresholdZMSB" variable nil (reparse-symbol indented_block_body) [583 612])
+                    ("InterruptThresholdZLSB" variable nil (reparse-symbol indented_block_body) [614 643])
+                    ("InterruptDuration" variable nil (reparse-symbol indented_block_body) [645 669])
+                    ("FullScale_2000_sec" variable nil (reparse-symbol indented_block_body) [703 728])
+                    ("DLPF_256_8" variable nil (reparse-symbol indented_block_body) [753 770])
+                    ("DLPF_188_1" variable nil (reparse-symbol indented_block_body) [807 824])
+                    ("DLPF_98_1" variable nil (reparse-symbol indented_block_body) [826 842])
+                    ("DLPF_42_1" variable nil (reparse-symbol indented_block_body) [844 860])
+                    ("DLPF_20_1" variable nil (reparse-symbol indented_block_body) [862 878])
+                    ("DLPF_10_1" variable nil (reparse-symbol indented_block_body) [880 896])
+                    ("DLPF_5_1" variable nil (reparse-symbol indented_block_body) [898 913])
+                    ("PM_H_Reset" variable nil (reparse-symbol indented_block_body) [945 962])
+                    ("PM_Sleep" variable nil (reparse-symbol indented_block_body) [1031 1046])
+                    ("PM_Standby_X" variable nil (reparse-symbol indented_block_body) [1079 1098])
+                    ("PM_Standby_Y" variable nil (reparse-symbol indented_block_body) [1129 1148])
+                    ("PM_Standby_Z" variable nil (reparse-symbol indented_block_body) [1179 1198])
+                    ("PM_Clock_Internal" variable nil (reparse-symbol indented_block_body) [1229 1253])
+                    ("PM_Clock_X_Gyro" variable nil (reparse-symbol indented_block_body) [1281 1303])
+                    ("PM_Clock_Y_Gyro" variable nil (reparse-symbol indented_block_body) [1305 1327])
+                    ("PM_Clock_Z_Gyro" variable nil (reparse-symbol indented_block_body) [1329 1351])
+                    ("PM_Clock_Ext_32_768" variable nil (reparse-symbol indented_block_body) [1353 1379])
+                    ("PM_Clock_Ext_19_2" variable nil (reparse-symbol indented_block_body) [1381 1405])
+                    ("IC_IntPinActiveLow" variable nil (reparse-symbol indented_block_body) [1436 1461])
+                    ("IC_IntPinOpen" variable nil (reparse-symbol indented_block_body) [1463 1483])
+                    ("IC_LatchUntilIntCleared" variable nil (reparse-symbol indented_block_body) [1485 1515])
+                    ("IC_LatchClearAnyRegRead" variable nil (reparse-symbol indented_block_body) [1517 1547])
+                    ("IC_IntOnDeviceReady" variable nil (reparse-symbol indented_block_body) [1549 1575])
+                    ("IC_IntOnDataReady" variable nil (reparse-symbol indented_block_body) [1577 1601])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1700 1730])
+                            ("self" code nil (reparse-symbol indented_block_body) [1736 1765])
+                            ("self" code nil (reparse-symbol indented_block_body) [1768 1799])
+                            ("self" code nil (reparse-symbol indented_block_body) [1802 1868])
+                            ("self" code nil (reparse-symbol indented_block_body) [1871 1968]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1674 1678])
+                            ("port" variable nil (reparse-symbol function_parameters) [1680 1684])
+                            ("addr" variable nil (reparse-symbol function_parameters) [1686 1690]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1661 1969])
+                    ("setPowerManagement" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1995 1999])
+                            ("function_set" variable nil (reparse-symbol function_parameters) [2001 2014]))                          )
+                        (reparse-symbol indented_block_body) [1972 2071])
+                    ("setSampleRateDivider" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2099 2103])
+                            ("divider" variable nil (reparse-symbol function_parameters) [2105 2112]))                          )
+                        (reparse-symbol indented_block_body) [2074 2165])
+                    ("setDLPFAndFullScale" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2193 2197])
+                            ("function_set" variable nil (reparse-symbol function_parameters) [2199 2212]))                          )
+                        (reparse-symbol indented_block_body) [2169 2270])
+                    ("setInterrupt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2291 2295])
+                            ("function_set" variable nil (reparse-symbol function_parameters) [2297 2310]))                          )
+                        (reparse-symbol indented_block_body) [2274 2367])
+                    ("setOption" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2385 2389])
+                            ("register" variable nil (reparse-symbol function_parameters) [2391 2399])
+                            ("function_set" variable nil (reparse-symbol function_parameters) [2401 2414]))                          )
+                        (reparse-symbol indented_block_body) [2371 2539])
+                    ("addOption" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2597 2601])
+                            ("register" variable nil (reparse-symbol function_parameters) [2603 2611])
+                            ("function_set" variable nil (reparse-symbol function_parameters) [2613 2626]))                          )
+                        (reparse-symbol indented_block_body) [2583 2775])
+                    ("removeOption" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2828 2832])
+                            ("register" variable nil (reparse-symbol function_parameters) [2834 2842])
+                            ("function_set" variable nil (reparse-symbol function_parameters) [2844 2857]))                          )
+                        (reparse-symbol indented_block_body) [2811 3021])
+                    ("getWhoAmI" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3039 3043]))                          )
+                        (reparse-symbol indented_block_body) [3025 3105])
+                    ("getDieTemperature" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3131 3135]))                          )
+                        (reparse-symbol indented_block_body) [3109 3254])
+                    ("getInterruptStatus" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3280 3284]))                          )
+                        (reparse-symbol indented_block_body) [3257 3442])
+                    ("getOptions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3460 3464])
+                            ("register" variable nil (reparse-symbol function_parameters) [3466 3474]))                          )
+                        (reparse-symbol indented_block_body) [3445 3692])
+                    ("getAxes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3708 3712]))                          )
+                        (reparse-symbol indented_block_body) [3696 3926])
+                    ("getDegPerSecAxes" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3950 3954]))                          )
+                        (reparse-symbol indented_block_body) [3929 4061]))                  
+                :type "class")
+                nil [62 4061]))          
+      :file "i2c_l3g4200.py"
+      :pointmax 4061
+      :fsize 4060
+      :lastmodtime '(21917 8899 891204 78000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!bard!sensor_eval!i2clibraries!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

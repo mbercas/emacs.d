@@ -1,0 +1,209 @@
+;; Object tgc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tgc/"
+  :tables
+  (list
+    (semanticdb-table "bindump2raw.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [21 30])
+            ("os.path" include nil nil [31 45])
+            ("ifile_name_root" variable nil nil [47 85])
+            ("get_input_files" function
+               (:documentation "
+    Reads all the files in the directory passed in path
+    that match the root file name
+    "
+                :arguments 
+                  ( ("path" variable nil (reparse-symbol function_parameters) [108 112]))                  )
+                nil [87 840])
+            ("if" code nil nil [842 1057]))          
+      :file "bindump2raw.py"
+      :pointmax 1057
+      :fsize 1056
+      :lastmodtime '(21732 47324 604259 53000)
+      :unmatched-syntax nil)
+    (semanticdb-table "comp_curves.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [403 415])
+            ("pylab" include nil nil [416 428])
+            ("ofile" variable nil nil [432 455])
+            ("no_samples" variable nil nil [457 471])
+            ("interpolate_line" function (:arguments 
+              ( ("points" variable nil (reparse-symbol function_parameters) [495 501])
+                ("start_sample" variable nil (reparse-symbol function_parameters) [526 538])
+                ("start_value" variable nil (reparse-symbol function_parameters) [540 551])
+                ("end_sample" variable nil (reparse-symbol function_parameters) [576 586])
+                ("end_value" variable nil (reparse-symbol function_parameters) [588 597]))              ) nil [473 812])
+            ("print_line" function (:arguments 
+              ( ("ofd" variable nil (reparse-symbol function_parameters) [830 833])
+                ("points" variable nil (reparse-symbol function_parameters) [835 841]))              ) nil [814 1118])
+            ("if" code nil nil [1119 3404]))          
+      :file "comp_curves.py"
+      :pointmax 3407
+      :fsize 3406
+      :lastmodtime '(21777 7786 137746 491000)
+      :unmatched-syntax nil)
+    (semanticdb-table "tgc.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [25 34])
+            ("scp" include nil nil [35 65])
+            ("paramiko" include nil nil [66 111])
+            ("GetFiles" function (:arguments 
+              ( ("ipAddr" variable nil (reparse-symbol function_parameters) [127 133]))              ) nil [113 664])
+            ("if" code nil nil [666 726]))          
+      :file "tgc.py"
+      :pointmax 732
+      :fsize 731
+      :lastmodtime '(21732 49201 474025 980000)
+      :unmatched-syntax nil)
+    (semanticdb-table "parse_data_bin.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pylab" include nil nil [20 39])
+            ("numpy" include nil nil [40 65])
+            ("struct" include nil nil [67 80])
+            ("os" include nil nil [81 90])
+            ("os.path" include nil nil [91 105])
+            ("sys" include nil nil [106 116])
+            ("re" include nil nil [117 126])
+            ("parse_data" function
+               (:documentation "
+    Open the file for reading and extract the data as uint16
+    Remove frame header and empty lines.
+    "
+                :arguments 
+                  ( ("file_name" variable nil (reparse-symbol function_parameters) [144 153]))                  )
+                nil [128 847])
+            ("trim_data" function
+               (:documentation "
+    Remvoe frame header, line headers and empty lines.
+    "
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [864 868]))                  )
+                nil [849 1149])
+            ("read_filenames" function
+               (:documentation "
+    Reads all the files from the directory specified as
+    path and returns an array with the file names that
+    match the root path.
+    "
+                :arguments 
+                  ( ("dir_path" variable nil (reparse-symbol function_parameters) [1176 1184]))                  )
+                nil [1156 1684])
+            ("write_data_in_tmp_dir" function
+               (:documentation "
+    Writes the data into a file with the given file name in the
+    tmp directory. If the directory does not exist it creates one.
+
+    If a file with the given name already exists overweites it.
+
+    Pack the data as uint16
+    "
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [1717 1721])
+                    ("file_name" variable nil (reparse-symbol function_parameters) [1723 1732])
+                    ("tmp_path" variable nil (reparse-symbol function_parameters) [1734 1742]))                  )
+                nil [1690 2386])
+            ("if" code nil nil [2388 2846]))          
+      :file "parse_data_bin.py"
+      :pointmax 2859
+      :fsize 2858
+      :lastmodtime '(21732 49435 170302 418000)
+      :unmatched-syntax nil)
+    (semanticdb-table "parser.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("if" code nil nil [22 207]))          
+      :file "parser.py"
+      :pointmax 205
+      :fsize 206
+      :lastmodtime '(21732 50163 37300 203000)
+      :unmatched-syntax nil)
+    (semanticdb-table "parse_dac.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("if" code nil nil [21 323]))          
+      :file "parse_dac.py"
+      :pointmax 323
+      :fsize 322
+      :lastmodtime '(21732 47324 622259 158000)
+      :unmatched-syntax nil)
+    (semanticdb-table "parse_tgc_table.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "parse_tgc_table.py"
+      :pointmax 1
+      :fsize 3541
+      :lastmodtime '(21777 33855 657237 128000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ext_luts_attenuationcurve.hpp"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "ext_luts_attenuationcurve.hpp"
+      :pointmax 30297
+      :fsize 30296
+      :lastmodtime '(21777 7901 893249 134000)
+      :unmatched-syntax '((semantic-list 26925 . 30296) (punctuation 26919 . 26920) (semantic-list 23558 . 26919) (punctuation 23554 . 23555) (semantic-list 20193 . 23554) (punctuation 20189 . 20190) (semantic-list 16828 . 20189) (punctuation 16824 . 16825) (semantic-list 13463 . 16824) (punctuation 13459 . 13460) (semantic-list 10098 . 13459) (punctuation 10094 . 10095) (semantic-list 6733 . 10094) (punctuation 6729 . 6730) (semantic-list 3368 . 6729) (punctuation 3364 . 3365) (semantic-list 4 . 3364)))
+    (semanticdb-table "ez_tx_compact_table_cfg.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 32])
+            ("probes_supported" variable nil nil [34 80])
+            ("angles_bmode" variable nil nil [116 133])
+            ("angles_bmode" variable nil nil [134 201])
+            ("angles_bmode" variable nil nil [203 270])
+            ("angles_bmode" variable nil nil [272 339])
+            ("angles_cmode" variable nil nil [342 359])
+            ("angles_cmode" variable nil nil [360 408])
+            ("angles_cmode" variable nil nil [410 458])
+            ("angles_cmode" variable nil nil [460 508])
+            ("focal_points_bmode" variable nil nil [512 535])
+            ("focal_points_bmode" variable nil nil [542 614])
+            ("focal_points_bmode" variable nil nil [615 681])
+            ("focal_points_bmode" variable nil nil [682 754])
+            ("focal_points_cmode" variable nil nil [756 779])
+            ("focal_points_cmode" variable nil nil [786 858])
+            ("focal_points_cmode" variable nil nil [859 931])
+            ("focal_points_cmode" variable nil nil [932 1004])
+            ("aperture_mask_bmode" variable nil nil [1006 1030])
+            ("aperture_mask_bmode" variable nil nil [1031 1115])
+            ("aperture_mask_bmode" variable nil nil [1116 1200])
+            ("aperture_mask_bmode" variable nil nil [1201 1285])
+            ("aperture_mask_cmode" variable nil nil [1287 1311])
+            ("aperture_mask_cmode" variable nil nil [1312 1396])
+            ("aperture_mask_cmode" variable nil nil [1397 1481])
+            ("aperture_mask_cmode" variable nil nil [1482 1566])
+            ("pitch" variable nil nil [1569 1579])
+            ("pitch" variable nil nil [1593 1618])
+            ("pitch" variable nil nil [1619 1642])
+            ("pitch" variable nil nil [1643 1669])
+            ("roc" variable nil nil [1693 1701])
+            ("roc" variable nil nil [1737 1759])
+            ("roc" variable nil nil [1760 1779])
+            ("roc" variable nil nil [1780 1799])
+            ("fov" variable nil nil [1817 1825])
+            ("fov" variable nil nil [1866 1888])
+            ("fov" variable nil nil [1889 1908])
+            ("fov" variable nil nil [1909 1928])
+            ("HZ" variable nil nil [1977 1981])
+            ("CL" variable nil nil [2002 2006])
+            ("HV" variable nil nil [2017 2021])
+            ("seq_b" variable nil nil [2040 2050])
+            ("seq_f" variable nil nil [2051 2061])
+            ("seq_b" variable nil nil [2062 2321])
+            ("seq_b" variable nil nil [2331 2578])
+            ("seq_b" variable nil nil [2588 2839])
+            ("seq_f" variable nil nil [2849 3186])
+            ("seq_f" variable nil nil [3205 3539])
+            ("seq_f" variable nil nil [3557 3892]))          
+      :file "ez_tx_compact_table_cfg.py"
+      :pointmax 3909
+      :fsize 3908
+      :lastmodtime '(21732 47324 612259 100000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!tgc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

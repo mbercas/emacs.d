@@ -1,0 +1,425 @@
+;; Object unittests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unittests/"
+  :tables
+  (list
+    (semanticdb-table "test_ccapp_siv_shaderbmodetint.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_SIV_SHADERBMODETINT_HPP" variable (:constant-flag t) nil [793 827])
+            ("ccapp_scf_displayconfiguration.hpp" include nil nil [903 948])
+            ("ccapp_siv_shaderbmodetint.hpp" include nil nil [950 990])
+            ("ccapp_siv_shadererror.hpp" include nil nil [991 1027])
+            ("test_ccapp_siv_testopenglapi.hpp" include nil nil [1029 1072])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [1074 1104])
+            ("testShaderBmodeTint" type
+               (:members 
+                  ( ("ezono::ccapp::scf" using (:type ("ezono::ccapp::scf" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [1736 1770])
+                    ("ezono::ccapp::sfm" using (:type ("ezono::ccapp::sfm" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [1771 1805])
+                    ("ezono::ccapp::siv" using (:type ("ezono::ccapp::siv" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [1806 1840])
+                    ("ShaderBmodeTintUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1911 1918])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [1982 2206])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [2272 2432])
+                            ("test_UpdateShaderParameters1" function (:type "void") (reparse-symbol classsubparts) [2516 3109])
+                            ("test_UpdateShaderParameters2" function (:type "void") (reparse-symbol classsubparts) [3189 3925])
+                            ("test_UpdateShaderParameters3" function (:type "void") (reparse-symbol classsubparts) [4042 4726])
+                            ("private" label nil (reparse-symbol classsubparts) [4733 4741])
+                            ("c" variable (:type ("DisplayConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4752 4775]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1842 4779]))                  
+                :type "namespace")
+                nil [1704 4782])
+            ("testShaderBmodeTint::ShaderBmodeTintUnitTestSuite" using (:type ("testShaderBmodeTint::ShaderBmodeTintUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [4807 4863]))          
+      :file "test_ccapp_siv_shaderbmodetint.hpp"
+      :pointmax 4962
+      :fsize 4961
+      :lastmodtime '(21426 55164 658649 468000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CCAPP_SIV_SHADERBMODETINT_HPP")
+          )
+)
+    (semanticdb-table "test_ccapp_siv_testopenglapi.hpp"
+      :file "test_ccapp_siv_testopenglapi.hpp"
+      :fsize 14978
+      :lastmodtime '(21379 17363 444866 525000))
+    (semanticdb-table "test_ccapp_siv_displaymmodeprimarywindow.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_SIV_DISPLAYMMODEPRIMARYWINDOW_HPP" variable (:constant-flag t) nil [834 878])
+            ("ccapp_siv_displaymmodeprimarywindow.hpp" include nil nil [954 1004])
+            ("ccapp_siv_texturesholder.hpp" include nil nil [1006 1045])
+            ("ccapp_siv_renderinginformation.hpp" include nil nil [1046 1091])
+            ("ccapp_siv_imageconfiguration.hpp" include nil nil [1092 1135])
+            ("ccapp_scf_displayconfiguration.hpp" include nil nil [1137 1182])
+            ("test_ccapp_siv_testopenglapi.hpp" include nil nil [1184 1227])
+            ("test_ccapp_siv_testglutapi.hpp" include nil nil [1228 1269])
+            ("gmock/gmock.h" include (:system-flag t) nil [1271 1295])
+            ("memory" include (:system-flag t) nil [1297 1314])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [1316 1346])
+            ("testDisplayMmodePrimaryWindow" type
+               (:members 
+                  ( ("ezono::ccapp::siv" using (:type ("ezono::ccapp::siv" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [1988 2022])
+                    ("ezono::ccapp::scf" using (:type ("ezono::ccapp::scf" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [2023 2057])
+                    ("testing" variable (:type "int") (reparse-symbol namespacesubparts) [2077 2085])
+                    ("DisplayMmodePrimaryWindowUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2166 2173])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [2237 2723])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [2789 2858])
+                            ("test_draw_withConfigurations" function (:type "void") (reparse-symbol classsubparts) [2983 5304])
+                            ("private" label nil (reparse-symbol classsubparts) [5311 5319])
+                            ("TestFixture" type
+                               (:members 
+                                  ( ("TestFixture" function
+                                       (:constructor-flag t
+                                        :type ("TestFixture" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [5370 5894])
+                                    ("TestFixture" function
+                                       (:destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [5907 6073])
+                                    ("ObjectUnderTest" type
+                                       (:typedef ("DisplayMmodePrimaryWindow" type
+                                             (:template-specifier 
+                                                ( ("TestOpenglApi" type nil nil nil)
+                                                  ("TestGlutApi" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :superclasses "DisplayMmodePrimaryWindow"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [6087 6187])
+                                    ("MakeObjectUnderTest" function (:type ("std::unique_ptr" type
+                                         (:template-specifier 
+                                            ( ("ObjectUnderTest" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [6201 6432])
+                                    ("VerifyAndClearExpectations" function (:type "void") (reparse-symbol classsubparts) [6446 6596])
+                                    ("winId" variable (:type "int") (reparse-symbol classsubparts) [6610 6620]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [5329 6632])
+                            ("fxt" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("TestFixture" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [6642 6680])
+                            ("ic" variable (:type ("ImageConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6690 6714])
+                            ("dc" variable (:type ("DisplayConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6723 6747])
+                            ("ids" variable (:type ("RenderingInformation" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6756 6781]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2087 6785]))                  
+                :type "namespace")
+                nil [1946 6788])
+            ("testDisplayMmodePrimaryWindow::DisplayMmodePrimaryWindowUnitTestSuite" using (:type ("testDisplayMmodePrimaryWindow::DisplayMmodePrimaryWindowUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [6823 6899]))          
+      :file "test_ccapp_siv_displaymmodeprimarywindow.hpp"
+      :pointmax 7018
+      :fsize 7017
+      :lastmodtime '(21426 56695 623325 427000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CCAPP_SIV_DISPLAYMMODEPRIMARYWINDOW_HPP")
+          )
+)
+    (semanticdb-table "test_ccapp_siv_testglutapi.hpp"
+      :file "test_ccapp_siv_testglutapi.hpp"
+      :fsize 4618
+      :lastmodtime '(21400 22959 296787 870000))
+    (semanticdb-table "test_ccapp_siv_displayfmode.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_SIV_DISPLAYFMODE_HPP" variable (:constant-flag t) nil [764 795])
+            ("ccapp_siv_displayfmode.hpp" include nil nil [871 908])
+            ("ccapp_siv_textureparameters.hpp" include nil nil [910 952])
+            ("ccapp_siv_texturedata.hpp" include nil nil [953 989])
+            ("ccapp_siv_texture.hpp" include nil nil [990 1022])
+            ("ccapp_siv_imageconfiguration.hpp" include nil nil [1023 1066])
+            ("ccapp_siv_texturesholder.hpp" include nil nil [1067 1106])
+            ("ccapp_siv_renderinginformation.hpp" include nil nil [1107 1152])
+            ("ccapp_siv_vboobjectsfactory.hpp" include nil nil [1153 1195])
+            ("ccapp_scf_displayconfiguration.hpp" include nil nil [1197 1242])
+            ("core_cbk_callbackmemfunptr.hpp" include nil nil [1244 1285])
+            ("test_ccapp_siv_testopenglapi.hpp" include nil nil [1287 1330])
+            ("test_ccapp_siv_testglutapi.hpp" include nil nil [1331 1372])
+            ("mock/mock_ccapp_siv_vboobjectiface.hpp" include nil nil [1374 1423])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [1425 1455])
+            ("testDisplayFmode" type
+               (:members 
+                  ( ("ezono::ccapp::siv" using (:type ("ezono::ccapp::siv" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [2084 2118])
+                    ("ezono::ccapp::scf" using (:type ("ezono::ccapp::scf" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [2119 2153])
+                    ("ezono::ccapp::sfm" using (:type ("ezono::ccapp::sfm" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [2154 2188])
+                    ("ezono::ccapp" using (:type ("ezono::ccapp" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [2190 2219])
+                    ("ezono::core" using (:type ("ezono::core" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [2220 2248])
+                    ("mock::ezono::ccapp::siv" using (:type ("mock::ezono::ccapp::siv" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [2250 2290])
+                    ("testing" variable (:type "int") (reparse-symbol namespacesubparts) [2310 2318])
+                    ("DisplayFmodeUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2387 2394])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [2458 4165])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [4231 4828])
+                            ("test_Constructor" function (:type "void") (reparse-symbol classsubparts) [4862 8130])
+                            ("test_Draw1" function (:type "void") (reparse-symbol classsubparts) [8189 8526])
+                            ("test_Draw2" function (:type "void") (reparse-symbol classsubparts) [8640 11494])
+                            ("test_Draw3" function (:type "void") (reparse-symbol classsubparts) [11608 15586])
+                            ("private" label nil (reparse-symbol classsubparts) [15592 15600])
+                            ("TestFixture" type
+                               (:members 
+                                  ( ("TestFixture" function
+                                       (:constructor-flag t
+                                        :type ("TestFixture" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [15651 15729])
+                                    ("CreateVbo" function
+                                       (:arguments 
+                                          ( ("" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("VertexArrayFmodeBox" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15768 15797]))                                          
+                                        :type ("VboObjectPtr" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [15744 15979])
+                                    ("VerifyAndClearExpectations" function (:type "void") (reparse-symbol classsubparts) [15993 16115])
+                                    ("vboMock" variable
+                                       (:pointer 1
+                                        :type ("MockVboObject" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [16130 16166]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [15610 16177])
+                            ("fxt" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("TestFixture" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [16187 16225])
+                            ("winId" variable (:type "int") (reparse-symbol classsubparts) [16257 16267])
+                            ("ic" variable (:type ("ImageConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [16307 16331])
+                            ("dc" variable (:type ("DisplayConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [16373 16397])
+                            ("ids" variable (:type ("RenderingInformation" type (:type "class") nil nil)) (reparse-symbol classsubparts) [16457 16482]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2321 16486]))                  
+                :type "namespace")
+                nil [2055 16489])
+            ("testDisplayFmode::DisplayFmodeUnitTestSuite" using (:type ("testDisplayFmode::DisplayFmodeUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [16511 16561]))          
+      :file "test_ccapp_siv_displayfmode.hpp"
+      :pointmax 16654
+      :fsize 16653
+      :lastmodtime '(21426 55340 278782 671000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CCAPP_SIV_DISPLAYFMODE_HPP")
+          )
+)
+    (semanticdb-table "test_ccapp_siv_displaymmodesecondarywindow.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_SIV_DISPLAYMMODESECONDARYWINDOW_HPP" variable (:constant-flag t) nil [842 888])
+            ("ccapp_siv_displaymmodesecondarywindow.hpp" include nil nil [964 1016])
+            ("ccapp_siv_texturesholder.hpp" include nil nil [1018 1057])
+            ("ccapp_siv_renderinginformation.hpp" include nil nil [1058 1103])
+            ("ccapp_siv_imageconfiguration.hpp" include nil nil [1104 1147])
+            ("ccapp_scf_displayconfiguration.hpp" include nil nil [1149 1194])
+            ("test_ccapp_siv_testopenglapi.hpp" include nil nil [1196 1239])
+            ("test_ccapp_siv_testglutapi.hpp" include nil nil [1240 1281])
+            ("memory" include (:system-flag t) nil [1283 1300])
+            ("gmock/gmock.h" include (:system-flag t) nil [1302 1326])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [1328 1358])
+            ("testDisplayMmodeSecondaryWindow" type
+               (:members 
+                  ( ("ezono::ccapp::siv" using (:type ("ezono::ccapp::siv" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [2002 2036])
+                    ("ezono::ccapp::scf" using (:type ("ezono::ccapp::scf" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [2037 2071])
+                    ("testing" variable (:type "int") (reparse-symbol namespacesubparts) [2091 2099])
+                    ("DisplayMmodeSecondaryWindowUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2182 2189])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [2253 3426])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [3492 3561])
+                            ("test_Draw_withoutSettingTexture" function (:type "void") (reparse-symbol classsubparts) [3631 3865])
+                            ("test_Draw_settingParameters_stretchedImage" function (:type "void") (reparse-symbol classsubparts) [3875 5426])
+                            ("test_Draw_settingParameters_notStretchedImage" function (:type "void") (reparse-symbol classsubparts) [5436 6991])
+                            ("private" label nil (reparse-symbol classsubparts) [6998 7006])
+                            ("TestFixture" type
+                               (:members 
+                                  ( ("TestFixture" function
+                                       (:constructor-flag t
+                                        :type ("TestFixture" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [7057 7430])
+                                    ("TestFixture" function
+                                       (:destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7443 7609])
+                                    ("ObjectUnderTest" type
+                                       (:typedef ("DisplayMmodeSecondaryWindow" type
+                                             (:template-specifier 
+                                                ( ("TestOpenglApi" type nil nil nil)
+                                                  ("TestGlutApi" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :superclasses "DisplayMmodeSecondaryWindow"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [7623 7725])
+                                    ("MakeObjectUnderTest" function (:type ("std::unique_ptr" type
+                                         (:template-specifier 
+                                            ( ("ObjectUnderTest" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [7739 7970])
+                                    ("VerifyAndClearExpectations" function (:type "void") (reparse-symbol classsubparts) [7984 8134])
+                                    ("winId" variable (:type "int") (reparse-symbol classsubparts) [8148 8158]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [7016 8170])
+                            ("fxt" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("TestFixture" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [8180 8218])
+                            ("ri" variable (:type ("RenderingInformation" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8228 8255])
+                            ("ic" variable (:type ("ImageConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8264 8291])
+                            ("dc" variable (:type ("DisplayConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8300 8327]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2101 8331]))                  
+                :type "namespace")
+                nil [1958 8334])
+            ("testDisplayMmodeSecondaryWindow::DisplayMmodeSecondaryWindowUnitTestSuite" using (:type ("testDisplayMmodeSecondaryWindow::DisplayMmodeSecondaryWindowUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [8371 8451]))          
+      :file "test_ccapp_siv_displaymmodesecondarywindow.hpp"
+      :pointmax 8574
+      :fsize 8573
+      :lastmodtime '(21426 55231 430082 546000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CCAPP_SIV_DISPLAYMMODESECONDARYWINDOW_HPP")
+          )
+)
+    (semanticdb-table "test_ccapp_siv_displaybmode.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_SIV_DISPLAYBMODE_HPP" variable (:constant-flag t) nil [764 795])
+            ("ccapp_siv_displaybmode.hpp" include nil nil [871 908])
+            ("ccapp_siv_textureparameters.hpp" include nil nil [910 952])
+            ("ccapp_siv_texturedata.hpp" include nil nil [953 989])
+            ("ccapp_siv_texture.hpp" include nil nil [990 1022])
+            ("ccapp_siv_imageconfiguration.hpp" include nil nil [1023 1066])
+            ("ccapp_siv_texturesholder.hpp" include nil nil [1067 1106])
+            ("ccapp_siv_renderinginformation.hpp" include nil nil [1107 1152])
+            ("ccapp_scf_displayconfiguration.hpp" include nil nil [1154 1199])
+            ("test_ccapp_siv_testopenglapi.hpp" include nil nil [1201 1244])
+            ("test_ccapp_siv_testglutapi.hpp" include nil nil [1245 1286])
+            ("algorithm" include (:system-flag t) nil [1288 1308])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [1310 1340])
+            ("testDisplayBmode" type
+               (:members 
+                  ( ("ezono::ccapp::siv" using (:type ("ezono::ccapp::siv" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [1970 2004])
+                    ("ezono::ccapp::scf" using (:type ("ezono::ccapp::scf" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [2005 2039])
+                    ("DisplayBmodeUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2108 2115])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [2179 3199])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [3262 3702])
+                            ("test_Draw1" function (:type "void") (reparse-symbol classsubparts) [3813 5577])
+                            ("test_Draw2" function (:type "void") (reparse-symbol classsubparts) [5684 7516])
+                            ("test_Draw3" function (:type "void") (reparse-symbol classsubparts) [7620 10611])
+                            ("test_Draw4" function (:type "void") (reparse-symbol classsubparts) [10728 14048])
+                            ("private" label nil (reparse-symbol classsubparts) [14055 14063])
+                            ("winId" variable (:type "int") (reparse-symbol classsubparts) [14073 14083])
+                            ("ic" variable (:type ("ImageConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14092 14116])
+                            ("dc" variable (:type ("DisplayConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14125 14149])
+                            ("ids" variable (:type ("RenderingInformation" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14158 14183]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2042 14186]))                  
+                :type "namespace")
+                nil [1940 14189])
+            ("testDisplayBmode::DisplayBmodeUnitTestSuite" using (:type ("testDisplayBmode::DisplayBmodeUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [14211 14261]))          
+      :file "test_ccapp_siv_displaybmode.hpp"
+      :pointmax 14354
+      :fsize 14353
+      :lastmodtime '(21426 55377 204018 741000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CCAPP_SIV_DISPLAYBMODE_HPP")
+          )
+))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!a_siv!unittests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

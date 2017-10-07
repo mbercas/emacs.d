@@ -1,0 +1,24 @@
+;; Object probe/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "probe/"
+  :tables
+  (list
+    (semanticdb-table "ext_luts_attenuationcurve.hpp"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "ext_luts_attenuationcurve.hpp"
+      :pointmax 30342
+      :fsize 30341
+      :lastmodtime '(21417 36446 572044 237000)
+      :unmatched-syntax '((semantic-list 26970 . 30341) (punctuation 26964 . 26965) (semantic-list 23602 . 26964) (punctuation 23598 . 23599) (semantic-list 20209 . 23598) (punctuation 20205 . 20206) (semantic-list 16844 . 20205) (punctuation 16840 . 16841) (semantic-list 13478 . 16840) (punctuation 13474 . 13475) (semantic-list 10098 . 13474) (punctuation 10094 . 10095) (semantic-list 6733 . 10094) (punctuation 6729 . 6730) (semantic-list 3368 . 6729) (punctuation 3364 . 3365) (semantic-list 3 . 3364)))
+    (semanticdb-table "ext_luts_focalzones.hpp"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "ext_luts_focalzones.hpp"
+      :pointmax 3107
+      :fsize 3106
+      :lastmodtime '(21417 30750 191903 184000)
+      :unmatched-syntax '((semantic-list 3013 . 3106) (punctuation 3009 . 3010) (semantic-list 2916 . 3009) (punctuation 2912 . 2913) (semantic-list 2819 . 2912) (punctuation 2815 . 2816) (semantic-list 2722 . 2815) (punctuation 2718 . 2719) (semantic-list 2625 . 2718) (punctuation 2621 . 2622) (semantic-list 2528 . 2621) (punctuation 2524 . 2525) (semantic-list 2431 . 2524) (punctuation 2427 . 2428) (semantic-list 2334 . 2427) (punctuation 2329 . 2330) (semantic-list 2236 . 2329) (punctuation 2232 . 2233) (semantic-list 2139 . 2232) (punctuation 2135 . 2136) (semantic-list 2042 . 2135) (punctuation 2038 . 2039) (semantic-list 1945 . 2038) (punctuation 1941 . 1942) (semantic-list 1848 . 1941) (punctuation 1844 . 1845) (semantic-list 1751 . 1844) (punctuation 1747 . 1748) (semantic-list 1654 . 1747) (punctuation 1650 . 1651) (semantic-list 1557 . 1650) (punctuation 1552 . 1553) (semantic-list 1459 . 1552) (punctuation 1455 . 1456) (semantic-list 1362 . 1455) (punctuation 1358 . 1359) (semantic-list 1265 . 1358) (punctuation 1261 . 1262) (semantic-list 1168 . 1261) (punctuation 1164 . 1165) (semantic-list 1071 . 1164) (punctuation 1067 . 1068) (semantic-list 974 . 1067) (punctuation 970 . 971) (semantic-list 877 . 970) (punctuation 873 . 874) (semantic-list 780 . 873) (punctuation 775 . 776) (semantic-list 682 . 775) (punctuation 678 . 679) (semantic-list 585 . 678) (punctuation 581 . 582) (semantic-list 488 . 581) (punctuation 484 . 485) (semantic-list 391 . 484) (punctuation 387 . 388) (semantic-list 294 . 387) (punctuation 290 . 291) (semantic-list 197 . 290) (punctuation 193 . 194) (semantic-list 100 . 193) (punctuation 96 . 97) (semantic-list 3 . 96))))
+  :file "!sandbox!workspace!cyclades!release-2.01!development!ext!luts!CL1_6!probe!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

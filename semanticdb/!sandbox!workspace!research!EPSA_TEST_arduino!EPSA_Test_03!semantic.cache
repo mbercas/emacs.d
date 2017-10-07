@@ -1,0 +1,104 @@
+;; Object EPSA_Test_03/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "EPSA_Test_03/"
+  :tables
+  (list
+    (semanticdb-table "testCommands.ino"
+      :major-mode 'c-mode
+      :tags 
+        '( ("checkMux" function
+               (:arguments 
+                  ( ("muxAddr" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19 33]))                  
+                :type ("boolean" type (:type "class") nil nil))
+                nil [1 428])
+            ("triggerSelfTest" function
+               (:arguments 
+                  ( ("direction" variable (:type "int") (reparse-symbol arg-sub-list) [639 654]))                  
+                :type "unsigned long")
+                nil [608 878])
+            ("setupMeasurements" function (:type "unsigned long") nil [887 1053])
+            ("selfTest" function
+               (:arguments 
+                  ( ("count" variable (:type "int") (reparse-symbol arg-sub-list) [1078 1088])
+                    ("x" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1089 1096])
+                    ("y" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1097 1104])
+                    ("z" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1105 1112]))                  
+                :type ("boolean" type (:type "class") nil nil))
+                nil [1061 1783])
+            ("selfTest" function
+               (:arguments 
+                  ( ("count" variable (:type "int") (reparse-symbol arg-sub-list) [1817 1827])
+                    ("x" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1828 1835])
+                    ("y" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1836 1843])
+                    ("z" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1844 1851]))                  
+                :type ("boolean" type (:type "class") nil nil))
+                nil [1800 3077])
+            ("sigmaTest" function
+               (:arguments 
+                  ( ("ta" variable (:type ("boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3114 3125])
+                    ("tb" variable (:type ("boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3126 3137]))                  
+                :type "void")
+                nil [3099 3729])
+            ("sigmaResult" function
+               (:arguments 
+                  ( ("sensor" variable (:type "int") (reparse-symbol arg-sub-list) [3757 3768]))                  
+                :type "float")
+                nil [3738 3938])
+            ("rotationTest" function
+               (:arguments 
+                  ( ("ta" variable (:type ("boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3978 3989])
+                    ("tb" variable (:type ("boolean" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3990 4001]))                  
+                :type "void")
+                nil [3960 5353])
+            ("rotationResult" function
+               (:arguments 
+                  ( ("sensor" variable (:type "int") (reparse-symbol arg-sub-list) [5378 5389]))                  
+                :type ("boolean" type (:type "class") nil nil))
+                nil [5355 5552]))          
+      :file "testCommands.ino"
+      :pointmax 4198
+      :fsize 5553
+      :lastmodtime '(21319 40501 647828 72000)
+      :unmatched-syntax nil)
+    (semanticdb-table "EPSA_Test_03.ino"
+      :major-mode 'c-mode
+      :tags nil
+      :file "EPSA_Test_03.ino"
+      :pointmax 14317
+      :fsize 14336
+      :lastmodtime '(21319 46135 211120 102000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("HMC5843_ADDRESS" . ((number "0x1E" 292 . 296)))
+          ("SENSOR_COUNT" . ((number "16" 518 . 520)))
+          ("PCA_9548_A" . ((number "0x70" 87 . 91)))
+          ("HMC5843_MODE" . ((number "0x02" 388 . 392)))
+          ("PCA_9548_B" . ((number "0x71" 111 . 115)))
+          ("HMC5843_VALUE_REG" . ((number "0x03" 420 . 424)))
+          ("PCA_9548_C" . ((number "0x72" 135 . 139)))
+          ("HMC5843_A" . ((number "0x00" 324 . 328)))
+          ("HMC5843_B" . ((number "0x01" 356 . 360)))
+          ("HMC5843_ID_0" . ((number "0x0a" 453 . 457)))
+          )
+))
+  :file "!sandbox!workspace!research!EPSA_TEST_arduino!EPSA_Test_03!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

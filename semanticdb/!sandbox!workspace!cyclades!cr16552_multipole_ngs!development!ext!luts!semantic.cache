@@ -1,0 +1,167 @@
+;; Object luts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "luts/"
+  :tables
+  (list
+    (semanticdb-table "ext_luts_bmodeprocessing.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ext" type
+               (:members 
+                  ( ("lut" type
+                       (:members 
+                          ( ("ezono::core::bty::Double" using (:type ("ezono::core::bty::Double" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [35 66])
+                            ("ezono::core::bty::Float" using (:type ("ezono::core::bty::Float" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [67 97])
+                            ("ezono::core::bty::UInt32" using (:type ("ezono::core::bty::UInt32" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [98 129])
+                            ("ezono::ccapp::fea::ProbeIdCode" using (:type ("ezono::ccapp::fea::ProbeIdCode" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [131 168])
+                            ("ezono::ccapp::fea::PROBE_ID_L3_12" using (:type ("ezono::ccapp::fea::PROBE_ID_L3_12" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [169 209])
+                            ("ezono::ccapp::fea::PROBE_ID_CL1_6" using (:type ("ezono::ccapp::fea::PROBE_ID_CL1_6" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [210 250])
+                            ("ezono::ccapp::fea::PROBE_ID_SCL1_6" using (:type ("ezono::ccapp::fea::PROBE_ID_SCL1_6" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [251 292])
+                            ("ezono::ccapp::fea::PROBE_ID_L10" using (:type ("ezono::ccapp::fea::PROBE_ID_L10" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [293 331])
+                            ("ezono::ccapp::fea::PROBE_ID_CL2_8" using (:type ("ezono::ccapp::fea::PROBE_ID_CL2_8" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [332 372])
+                            ("ezono::ccapp::fea::PROBE_ID_12LA" using (:type ("ezono::ccapp::fea::PROBE_ID_12LA" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [373 412])
+                            ("ezono::ccapp::sfm::ImageFilterSetting" using (:type ("ezono::ccapp::sfm::ImageFilterSetting" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [472 516])
+                            ("ezono::ccapp::sfm::IMAGE_FILTER_SETTING_1" using (:type ("ezono::ccapp::sfm::IMAGE_FILTER_SETTING_1" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [517 565])
+                            ("ezono::ccapp::sfm::IMAGE_FILTER_SETTING_2" using (:type ("ezono::ccapp::sfm::IMAGE_FILTER_SETTING_2" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [566 614])
+                            ("ezono::ccapp::sfm::IMAGE_FILTER_SETTING_3" using (:type ("ezono::ccapp::sfm::IMAGE_FILTER_SETTING_3" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [615 663])
+                            ("ezono::ccapp::sfm::IMAGE_FILTER_SETTING_4" using (:type ("ezono::ccapp::sfm::IMAGE_FILTER_SETTING_4" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [664 712])
+                            ("ezono::ccapp::scf::BMODE_PROCESSING_TABLE_CONFIGURATIONS" using (:type ("ezono::ccapp::scf::BMODE_PROCESSING_TABLE_CONFIGURATIONS" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [714 777])
+                            ("ezono::ccapp::sfm::ModeOfOperation" using (:type ("ezono::ccapp::sfm::ModeOfOperation" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [779 820])
+                            ("ezono::ccapp::sfm::B_MODE_SCAN" using (:type ("ezono::ccapp::sfm::B_MODE_SCAN" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [821 858])
+                            ("ezono::ccapp::sfm::C_MODE_SCAN" using (:type ("ezono::ccapp::sfm::C_MODE_SCAN" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [859 896])
+                            ("ezono::ccapp::sfm::M_MODE_SCAN" using (:type ("ezono::ccapp::sfm::M_MODE_SCAN" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [897 934])
+                            ("ezono::ccapp::scf::PipelineTypeBmode" using (:type ("ezono::ccapp::scf::PipelineTypeBmode" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [936 979])
+                            ("ezono::ccapp::scf::TEMPMED_FRAMEAVG_LC" using (:type ("ezono::ccapp::scf::TEMPMED_FRAMEAVG_LC" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [980 1025])
+                            ("ezono::ccapp::scf::TEMPMED_ADVHE_GAMMA" using (:type ("ezono::ccapp::scf::TEMPMED_ADVHE_GAMMA" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [1026 1071])
+                            ("ezono::ccapp::scf::FRAMEAVG_ADVHE_AREASMOOTH_DIRSHARP_GAMMA" using (:type ("ezono::ccapp::scf::FRAMEAVG_ADVHE_AREASMOOTH_DIRSHARP_GAMMA" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [1072 1138])
+                            ("ezono::ccapp::scf::OdsFilterConfigFileName" using (:type ("ezono::ccapp::scf::OdsFilterConfigFileName" type
+                                 (:prototype t
+                                  :type "class")
+                                  nil nil)) (reparse-symbol namespacesubparts) [1140 1189])
+                            ("BmodeProcessingTableSimple" type
+                               (:members 
+                                  ( ("Index" type
+                                       (:members 
+                                          ( ("probeId" variable (:type ("ProbeIdCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1258 1306])
+                                            ("guiImageFilterSetting" variable (:type ("ImageFilterSetting" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1315 1377])
+                                            ("mode" variable (:type ("ModeOfOperation" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1386 1431]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [1231 1438])
+                                    ("Data" type
+                                       (:members 
+                                          ( ("bModePipelineTypeWithoutMedianFilter" variable (:type ("PipelineTypeBmode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1470 1547])
+                                            ("bModePipelineTypeWithMedianFilter" variable (:type ("PipelineTypeBmode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1556 1630])
+                                            ("elevation" variable (:type ("Double" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1680 1730])
+                                            ("azimuth" variable (:type ("Double" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1739 1787])
+                                            ("depth" variable (:type ("Double" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1796 1842])
+                                            ("ambient" variable (:type ("Double" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1851 1899])
+                                            ("lowerLimitMin" variable (:type ("Double" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1950 2004])
+                                            ("lowerLimitMax" variable (:type ("Double" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2013 2067])
+                                            ("upperLimitMin" variable (:type ("Double" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2076 2130])
+                                            ("upperLimitMax" variable (:type ("Double" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2139 2193])
+                                            ("noPointsToSkip" variable (:type ("UInt32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2202 2257])
+                                            ("threshold" variable (:type ("UInt32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2327 2377])
+                                            ("factor1" variable (:type ("Double" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2386 2434])
+                                            ("factor2" variable (:type ("Double" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2443 2491]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [1444 2498])
+                                    ("index" variable (:type ("Index" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2504 2554])
+                                    ("data" variable (:type ("Data" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2559 2608]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [1191 2611])
+                            ("lutBmodeProcessingTableSimple" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :type ("BmodeProcessingTableSimple" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [2614 3196])
+                            ("static_assert" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("BMODE_PROCESSING_TABLE_CONFIGURATIONS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3373 3420])
+                                    ("" variable (:type ("ARRAY_SIZE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3430 3473]))                                  
+                                :type "int")
+                                (reparse-symbol namespacesubparts) [3350 3510]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [18 3513]))                  
+                :type "namespace")
+                nil [1 3533]))          
+      :file "ext_luts_bmodeprocessing.hpp"
+      :pointmax 3551
+      :fsize 3550
+      :lastmodtime '(21637 30139 223913 544000)
+      :unmatched-syntax '((string 3483 . 3503) (semantic-list 3440 . 3473) (punctuation 3420 . 3421) (punctuation 3419 . 3420))))
+  :file "!sandbox!workspace!cyclades!cr16552_multipole_ngs!development!ext!luts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

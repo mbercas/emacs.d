@@ -1,0 +1,458 @@
+;; Object extensions/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "extensions/"
+  :tables
+  (list
+    (semanticdb-table "HelperMacros.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("CPPUNIT_EXTENSIONS_HELPERMACROS_H" variable (:constant-flag t) nil [302 335])
+            ("cppunit/TestCaller.h" include (:system-flag t) nil [337 368])
+            ("cppunit/TestSuite.h" include (:system-flag t) nil [369 399])
+            ("cppunit/extensions/AutoRegisterSuite.h" include (:system-flag t) nil [400 449])
+            ("cppunit/extensions/ExceptionTestCaseDecorator.h" include (:system-flag t) nil [450 508])
+            ("cppunit/extensions/TestFixtureFactory.h" include (:system-flag t) nil [509 559])
+            ("cppunit/extensions/TestNamer.h" include (:system-flag t) nil [560 601])
+            ("cppunit/extensions/TestSuiteBuilderContext.h" include (:system-flag t) nil [602 657])
+            ("memory" include (:system-flag t) nil [658 675])
+            ("CPPUNIT_TEST_SUITE" variable (:constant-flag t) nil [3103 3121])
+            ("CPPUNIT_TEST_SUB_SUITE" variable (:constant-flag t) nil [5526 5548])
+            ("CPPUNIT_TEST_SUITE_END" variable (:constant-flag t) nil [6106 6128])
+            ("CPPUNIT_TEST_SUITE_END_ABSTRACT" variable (:constant-flag t) nil [8819 8850])
+            ("CPPUNIT_TEST_SUITE_ADD_TEST" variable (:constant-flag t) nil [10959 10986])
+            ("CPPUNIT_TEST" variable (:constant-flag t) nil [11291 11303])
+            ("CPPUNIT_TEST_EXCEPTION" variable (:constant-flag t) nil [12427 12449])
+            ("CPPUNIT_TEST_FAIL" variable (:constant-flag t) nil [13365 13382])
+            ("CPPUNIT_TEST_SUITE_ADD_CUSTOM_TESTS" variable (:constant-flag t) nil [15217 15252])
+            ("CPPUNIT_TEST_SUITE_PROPERTY" variable (:constant-flag t) nil [15583 15610])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" variable (:constant-flag t) nil [16553 16584])
+            ("CPPUNIT_TEST_SUITE_NAMED_REGISTRATION" variable (:constant-flag t) nil [18118 18155])
+            ("CPPUNIT_REGISTRY_ADD" variable (:constant-flag t) nil [19353 19373])
+            ("CPPUNIT_REGISTRY_ADD_TO_DEFAULT" variable (:constant-flag t) nil [19947 19978]))          
+      :file "HelperMacros.h"
+      :pointmax 20575
+      :fsize 20574
+      :lastmodtime '(16467 1064 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CPPUNIT_TEST_SUITE_END_ABSTRACT" (spp-arg-list nil 8850 . 8852) . 
+              ((close-paren "}" 8896 . 8897) (PRIVATE "private" 8975 . 8982) (punctuation ":" 8982 . 8983) (TYPEDEF "typedef" 9058 . 9065) (INT "int" 9066 . 9069) (symbol "CppUnitDummyTypedefForSemiColonEnding__" 9070 . 9109)))
+          ("CPPUNIT_TEST_SUITE" (spp-arg-list ("ATestFixtureType") 3121 . 3141) . 
+              ((PUBLIC "public" 3175 . 3181) (punctuation ":" 3181 . 3182) (TYPEDEF "typedef" 3255 . 3262) (symbol "ATestFixtureType" 3263 . 3279) (symbol "TestFixtureType" 3280 . 3295) (punctuation ";" 3295 . 3296) (PRIVATE "private" 3409 . 3416) (punctuation ":" 3416 . 3417) (STATIC "static" 3489 . 3495) (CONST "const" 3496 . 3501) (symbol "CPPUNIT_NS" 3502 . 3512) (punctuation ":" 3512 . 3513) (punctuation ":" 3513 . 3514) (symbol "TestNamer" 3514 . 3523) (punctuation "&" 3524 . 3525) (symbol "getTestNamer__" 3525 . 3539) (semantic-list "()" 3539 . 3541) (semantic-list "{                                                                       \\
+      static CPPUNIT_TESTNAMER_DECL( testNamer, ATestFixtureType );         \\
+      return testNamer;                                                     \\
+    }" 3567 . 3802) (PUBLIC "public" 3955 . 3961) (punctuation ":" 3961 . 3962) (TYPEDEF "typedef" 4035 . 4042) (symbol "CPPUNIT_NS" 4043 . 4053) (punctuation ":" 4053 . 4054) (punctuation ":" 4054 . 4055) (symbol "TestSuiteBuilderContext" 4055 . 4078) (punctuation "<" 4078 . 4079) (symbol "TestFixtureType" 4079 . 4094) (punctuation ">" 4094 . 4095) (symbol "TestSuiteBuilderContextType" 4125 . 4152) (punctuation ";" 4152 . 4153) (STATIC "static" 4269 . 4275) (VOID "void" 4276 . 4280) (symbol "addTestsToSuite" 4347 . 4362) (semantic-list "( CPPUNIT_NS::TestSuiteBuilderContextBase &baseContext )" 4362 . 4418) (semantic-list "{                                                                       \\
+      TestSuiteBuilderContextType context( baseContext )" 4425 . 4555)))
+          ("CPPUNIT_TEST_SUITE_NAMED_REGISTRATION" (spp-arg-list ("ATestFixtureType" "suiteName") 18155 . 18186) . 
+              ((STATIC "static" 18191 . 18197) (symbol "CPPUNIT_NS" 18198 . 18208) (punctuation ":" 18208 . 18209) (punctuation ":" 18209 . 18210) (symbol "AutoRegisterSuite" 18210 . 18227) (punctuation "<" 18227 . 18228) (symbol "ATestFixtureType" 18229 . 18245) (punctuation ">" 18246 . 18247) (symbol "CPPUNIT_MAKE_UNIQUE_NAME" 18281 . 18305) (semantic-list "(autoRegisterRegistry__ )" 18305 . 18330) (semantic-list "(suiteName)" 18330 . 18341)))
+          ("CPPUNIT_TEST" (spp-arg-list ("testMethod") 11303 . 11317) . ((symbol "CPPUNIT_TEST_SUITE_ADD_TEST" 11347 . 11374) (semantic-list "(                           \\
+        ( new CPPUNIT_NS::TestCaller<TestFixtureType>(    \\
+                  context.getTestNameFor( #testMethod),   \\
+                  &TestFixtureType::testMethod,           \\
+                  context.makeFixture() ) ) )" 11374 . 11629)))
+          ("CPPUNIT_TEST_FAIL" (spp-arg-list ("testMethod") 13382 . 13396) . ((symbol "CPPUNIT_TEST_EXCEPTION" 13413 . 13435) (semantic-list "( testMethod, CPPUNIT_NS::Exception )" 13435 . 13472)))
+          ("CPPUNIT_TEST_SUITE_REGISTRATION" (spp-arg-list ("ATestFixtureType") 16584 . 16604) . 
+              ((STATIC "static" 16614 . 16620) (symbol "CPPUNIT_NS" 16621 . 16631) (punctuation ":" 16631 . 16632) (punctuation ":" 16632 . 16633) (symbol "AutoRegisterSuite" 16633 . 16650) (punctuation "<" 16650 . 16651) (symbol "ATestFixtureType" 16652 . 16668) (punctuation ">" 16669 . 16670) (symbol "CPPUNIT_MAKE_UNIQUE_NAME" 16692 . 16716) (semantic-list "(autoRegisterRegistry__ )" 16716 . 16741)))
+          ("CPPUNIT_TEST_EXCEPTION" (spp-arg-list ("testMethod" "ExceptionType") 12449 . 12478) . ((symbol "CPPUNIT_TEST_SUITE_ADD_TEST" 12492 . 12519) (semantic-list "(                                        \\
+      (new CPPUNIT_NS::ExceptionTestCaseDecorator< ExceptionType >(  \\
+          new CPPUNIT_NS::TestCaller< TestFixtureType >(             \\
+                               context.getTestNameFor( #testMethod ),  \\
+                               &TestFixtureType::testMethod,         \\
+                               context.makeFixture() ) ) ) )" 12519 . 12908)))
+          ("CPPUNIT_TEST_SUITE_ADD_TEST" (spp-arg-list ("test") 10986 . 10994) . 
+              ((symbol "context" 11003 . 11010) (punctuation "." 11010 . 11011) (symbol "addTest" 11011 . 11018) (semantic-list "( test )" 11018 . 11026)))
+          ("CPPUNIT_TEST_SUB_SUITE" (spp-arg-list ("ATestFixtureType" "ASuperClass") 5548 . 5581) . 
+              ((PUBLIC "public" 5587 . 5593) (punctuation ":" 5593 . 5594) (TYPEDEF "typedef" 5656 . 5663) (symbol "ASuperClass" 5664 . 5675) (symbol "ParentTestFixtureType" 5676 . 5697) (punctuation ";" 5697 . 5698) (PRIVATE "private" 5721 . 5728) (punctuation ":" 5728 . 5729) (symbol "CPPUNIT_TEST_SUITE" 5790 . 5808) (semantic-list "( ATestFixtureType )" 5808 . 5828) (punctuation ";" 5828 . 5829) (symbol "ParentTestFixtureType" 5859 . 5880) (punctuation ":" 5880 . 5881) (punctuation ":" 5881 . 5882) (symbol "addTestsToSuite" 5882 . 5897) (semantic-list "( baseContext )" 5897 . 5912)))
+          ("CPPUNIT_TEST_SUITE_ADD_CUSTOM_TESTS" (spp-arg-list ("testAdderMethod") 15252 . 15271) . ((symbol "testAdderMethod" 15280 . 15295) (semantic-list "( context )" 15295 . 15306)))
+          ("CPPUNIT_TEST_SUITE_PROPERTY" (spp-arg-list ("APropertyKey" "APropertyValue") 15610 . 15642) . 
+              ((symbol "context" 15649 . 15656) (punctuation "." 15656 . 15657) (symbol "addProperty" 15657 . 15668) (semantic-list "( std::string(APropertyKey),                 \\
+                         std::string(APropertyValue) )" 15668 . 15769)))
+          ("CPPUNIT_EXTENSIONS_HELPERMACROS_H")
+          ("CPPUNIT_REGISTRY_ADD_TO_DEFAULT" (spp-arg-list ("which") 19978 . 19987) . 
+              ((STATIC "static" 20016 . 20022) (symbol "CPPUNIT_NS" 20023 . 20033) (punctuation ":" 20033 . 20034) (punctuation ":" 20034 . 20035) (symbol "AutoRegisterRegistry" 20035 . 20055) (symbol "CPPUNIT_MAKE_UNIQUE_NAME" 20102 . 20126) (semantic-list "( autoRegisterRegistry__ )" 20126 . 20152) (semantic-list "( which )" 20152 . 20161)))
+          ("CPPUNIT_TEST_SUITE_END" (spp-arg-list nil 6128 . 6130) . 
+              ((close-paren "}" 6183 . 6184) (STATIC "static" 6345 . 6351) (symbol "CPPUNIT_NS" 6352 . 6362) (punctuation ":" 6362 . 6363) (punctuation ":" 6363 . 6364) (symbol "TestSuite" 6364 . 6373) (punctuation "*" 6374 . 6375) (symbol "suite" 6375 . 6380) (semantic-list "()" 6380 . 6382) (semantic-list "{                                                                          \\
+      const CPPUNIT_NS::TestNamer &namer = getTestNamer__();                   \\
+      std::auto_ptr<CPPUNIT_NS::TestSuite> suite(                              \\
+             new CPPUNIT_NS::TestSuite( namer.getFixtureName() ));             \\
+      CPPUNIT_NS::ConcretTestFixtureFactory<TestFixtureType> factory;          \\
+      CPPUNIT_NS::TestSuiteBuilderContextBase context( *suite.get(),           \\
+                                                       namer,                  \\
+                                                       factory );              \\
+      TestFixtureType::addTestsToSuite( context );                             \\
+      return suite.release();                                                  \\
+    }" 6426 . 7237) (PRIVATE "private" 7315 . 7322) (punctuation ":" 7322 . 7323) (TYPEDEF "typedef" 7398 . 7405) (INT "int" 7406 . 7409) (symbol "CppUnitDummyTypedefForSemiColonEnding__" 7410 . 7449)))
+          ("CPPUNIT_REGISTRY_ADD" (spp-arg-list ("which" "to") 19373 . 19386) . 
+              ((STATIC "static" 19427 . 19433) (symbol "CPPUNIT_NS" 19434 . 19444) (punctuation ":" 19444 . 19445) (punctuation ":" 19445 . 19446) (symbol "AutoRegisterRegistry" 19446 . 19466) (symbol "CPPUNIT_MAKE_UNIQUE_NAME" 19518 . 19542) (semantic-list "( autoRegisterRegistry__ )" 19542 . 19568) (semantic-list "( which, to )" 19568 . 19581)))
+          )
+)
+    (semanticdb-table "AutoRegisterSuite.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("CPPUNIT_EXTENSIONS_AUTOREGISTERSUITE_H" variable (:constant-flag t) nil [56 94])
+            ("cppunit/extensions/TestSuiteFactory.h" include (:system-flag t) nil [96 144])
+            ("cppunit/extensions/TestFactoryRegistry.h" include (:system-flag t) nil [145 196])
+            ("string" include (:system-flag t) nil [197 214])
+            ("AutoRegisterSuite" type
+               (:template 
+                  ( ("TestCaseType" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [923 930])
+                    ("AutoRegisterSuite" function
+                       (:constructor-flag t
+                        :type ("AutoRegisterSuite" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1001 1133])
+                    ("AutoRegisterSuite" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1266 1291]))                          
+                        :type ("AutoRegisterSuite" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1247 1410])
+                    ("AutoRegisterSuite" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1414 1535])
+                    ("private" label nil (reparse-symbol classsubparts) [1537 1545])
+                    ("m_registry" variable
+                       (:pointer 1
+                        :type ("TestFactoryRegistry" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1548 1580])
+                    ("m_factory" variable (:type ("TestSuiteFactory" type
+                         (:template-specifier 
+                            ( ("TestCaseType" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1583 1624]))                  )
+                nil [868 1627])
+            ("AutoRegisterRegistry" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1860 1867])
+                    ("AutoRegisterRegistry" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("which" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1892 1917])
+                            ("to" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1942 1965]))                          
+                        :type ("AutoRegisterRegistry" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1870 2038])
+                    ("AutoRegisterRegistry" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("which" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2064 2090]))                          
+                        :type ("AutoRegisterRegistry" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2042 2159]))                  
+                :type "class")
+                nil [1831 2162]))          
+      :file "AutoRegisterSuite.h"
+      :pointmax 2231
+      :fsize 2230
+      :lastmodtime '(15664 526 0 0)
+      :unmatched-syntax '((symbol 2165 . 2179) (symbol 216 . 232))
+      :lexical-table 
+        '(("CPPUNIT_EXTENSIONS_AUTOREGISTERSUITE_H")
+          )
+)
+    (semanticdb-table "ExceptionTestCaseDecorator.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("CPPUNIT_EXTENSIONS_EXCEPTIONTESTCASEDECORATOR_H" variable (:constant-flag t) nil [65 112])
+            ("cppunit/Portability.h" include (:system-flag t) nil [114 146])
+            ("cppunit/Exception.h" include (:system-flag t) nil [147 177])
+            ("cppunit/extensions/TestCaseDecorator.h" include (:system-flag t) nil [178 227])
+            ("ExceptionTestCaseDecorator" type
+               (:template 
+                  ( ("ExpectedException" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1274 1281])
+                    ("ExpectedExceptionType" type
+                       (:typedef ("ExpectedException" type (:type "class") nil nil)
+                        :superclasses "ExpectedException"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1284 1332])
+                    ("ExceptionTestCaseDecorator" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("test" variable
+                               (:pointer 1
+                                :type ("TestCase" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1483 1499]))                          
+                        :type ("ExceptionTestCaseDecorator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1455 1541])
+                    ("runTest" function (:type "void") (reparse-symbol classsubparts) [1881 2581])
+                    ("private" label nil (reparse-symbol classsubparts) [2583 2591])
+                    ("checkException" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("e" variable
+                               (:reference 1
+                                :type ("ExpectedExceptionType" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2733 2759]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2704 2767]))                  
+                :superclasses 
+                  ( ("TestCaseDecorator" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  )
+                nil [1178 2770]))          
+      :file "ExceptionTestCaseDecorator.h"
+      :pointmax 2848
+      :fsize 2847
+      :lastmodtime '(15986 60032 0 0)
+      :unmatched-syntax '((symbol 2773 . 2787) (symbol 229 . 245))
+      :lexical-table 
+        '(("CPPUNIT_EXTENSIONS_EXCEPTIONTESTCASEDECORATOR_H")
+          )
+)
+    (semanticdb-table "TestFixtureFactory.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("CPPUNIT_EXTENSIONS_TESTFIXTUREFACTORY_H" variable (:constant-flag t) nil [57 96])
+            ("cppunit/Portability.h" include (:system-flag t) nil [98 130])
+            ("TestFixture" type
+               (:prototype t
+                :type "class")
+                nil [152 170])
+            ("TestFixtureFactory" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [343 350])
+                    ("makeFixture" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TestFixture" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [395 433])
+                    ("TestFixtureFactory" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [437 469]))                  
+                :type "class")
+                nil [316 472])
+            ("ConcretTestFixtureFactory" type
+               (:template 
+                  ( ("TestFixtureType" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("makeFixture" function
+                       (:pointer 1
+                        :type ("TestFixture" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1028 1096]))                  
+                :superclasses 
+                  ( ("CPPUNIT_NS::TestFixtureFactory" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  )
+                nil [618 1099]))          
+      :file "TestFixtureFactory.h"
+      :pointmax 1170
+      :fsize 1169
+      :lastmodtime '(17831 5258 0 0)
+      :unmatched-syntax '((symbol 1102 . 1116) (symbol 133 . 149))
+      :lexical-table 
+        '(("CPPUNIT_EXTENSIONS_TESTFIXTUREFACTORY_H")
+          )
+)
+    (semanticdb-table "TestNamer.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("CPPUNIT_EXTENSIONS_TESTNAMER_H" variable (:constant-flag t) nil [48 78])
+            ("cppunit/Portability.h" include (:system-flag t) nil [80 112])
+            ("string" include (:system-flag t) nil [113 130])
+            ("CPPUNIT_TESTNAMER_DECL" variable (:constant-flag t) nil [871 893])
+            ("TestNamer" variable (:type ("CPPUNIT_API" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1159 2298]))          
+      :file "TestNamer.h"
+      :pointmax 2359
+      :fsize 2358
+      :lastmodtime '(15993 26854 0 0)
+      :unmatched-syntax '((symbol 2301 . 2315) (symbol 1019 . 1035))
+      :lexical-table 
+        '(("CPPUNIT_EXTENSIONS_TESTNAMER_H")
+          ("CPPUNIT_TESTNAMER_DECL" (spp-arg-list ("variableName" "FixtureType") 893 . 922) . 
+              ((symbol "CPPUNIT_NS" 945 . 955) (punctuation ":" 955 . 956) (punctuation ":" 956 . 957) (symbol "TestNamer" 957 . 966) (symbol "variableName" 967 . 979) (semantic-list "( std::string(#FixtureType) )" 979 . 1008)))
+          )
+)
+    (semanticdb-table "TestSuiteBuilderContext.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("CPPUNIT_HELPER_TESTSUITEBUILDERCONTEXT_H" variable (:constant-flag t) nil [58 98])
+            ("cppunit/Portability.h" include (:system-flag t) nil [100 132])
+            ("cppunit/portability/CppUnitMap.h" include (:system-flag t) nil [133 176])
+            ("string" include (:system-flag t) nil [177 194])
+            ("TestSuite" type
+               (:prototype t
+                :type "class")
+                nil [373 389])
+            ("TestFixture" type
+               (:prototype t
+                :type "class")
+                nil [390 408])
+            ("TestFixtureFactory" type
+               (:prototype t
+                :type "class")
+                nil [409 434])
+            ("TestNamer" type
+               (:prototype t
+                :type "class")
+                nil [435 451])
+            ("TestSuiteBuilderContextBase" variable (:type ("CPPUNIT_API" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [773 2816])
+            ("TestSuiteBuilderContext" type
+               (:template 
+                  ( ("Fixture" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3032 3039])
+                    ("FixtureType" type
+                       (:typedef ("Fixture" type (:type "class") nil nil)
+                        :superclasses "Fixture"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [3042 3070])
+                    ("TestSuiteBuilderContext" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("contextBase" variable
+                               (:reference 1
+                                :type ("TestSuiteBuilderContextBase" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3099 3141]))                          
+                        :type ("TestSuiteBuilderContext" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3074 3200])
+                    ("makeFixture" function
+                       (:pointer 1
+                        :type ("FixtureType" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3506 3676]))                  
+                :superclasses 
+                  ( ("TestSuiteBuilderContextBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  )
+                nil [2939 3679]))          
+      :file "TestSuiteBuilderContext.h"
+      :pointmax 3807
+      :fsize 3806
+      :lastmodtime '(16594 40001 0 0)
+      :unmatched-syntax '((symbol 3682 . 3696) (symbol 355 . 371))
+      :lexical-table 
+        '(("CPPUNIT_HELPER_TESTSUITEBUILDERCONTEXT_H")
+          )
+)
+    (semanticdb-table "TestSuiteFactory.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("CPPUNIT_EXTENSIONS_TESTSUITEFACTORY_H" variable (:constant-flag t) nil [55 92])
+            ("cppunit/extensions/TestFactory.h" include (:system-flag t) nil [94 137])
+            ("Test" type
+               (:prototype t
+                :type "class")
+                nil [160 171])
+            ("TestSuiteFactory" type
+               (:template 
+                  ( ("TestCaseType" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [373 380])
+                    ("makeTest" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("Test" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [385 457]))                  
+                :superclasses 
+                  ( ("TestFactory" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  )
+                nil [292 462]))          
+      :file "TestSuiteFactory.h"
+      :pointmax 530
+      :fsize 529
+      :lastmodtime '(15662 28765 0 0)
+      :unmatched-syntax '((symbol 465 . 479) (symbol 139 . 155))
+      :lexical-table 
+        '(("CPPUNIT_EXTENSIONS_TESTSUITEFACTORY_H")
+          )
+)
+    (semanticdb-table "TestFactoryRegistry.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("CPPUNIT_EXTENSIONS_TESTFACTORYREGISTRY_H" variable (:constant-flag t) nil [58 98])
+            ("cppunit/Portability.h" include (:system-flag t) nil [100 132])
+            ("cppunit/portability/CppUnitSet.h" include (:system-flag t) nil [291 334])
+            ("cppunit/extensions/TestFactory.h" include (:system-flag t) nil [335 378])
+            ("string" include (:system-flag t) nil [379 396])
+            ("TestSuite" type
+               (:prototype t
+                :type "class")
+                nil [417 433])
+            ("TestFactory" variable (:type "int") nil [2972 6080]))          
+      :file "TestFactoryRegistry.h"
+      :pointmax 6209
+      :fsize 6208
+      :lastmodtime '(15750 9166 0 0)
+      :unmatched-syntax '((symbol 6083 . 6097) (PUBLIC 2965 . 2971) (punctuation 2963 . 2964) (symbol 2943 . 2962) (symbol 2931 . 2942) (CLASS 2925 . 2930) (symbol 398 . 414))
+      :lexical-table 
+        '(("CPPUNIT_EXTENSIONS_TESTFACTORYREGISTRY_H")
+          )
+)
+    (semanticdb-table "TestCaseDecorator.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("CPPUNIT_EXTENSIONS_TESTCASEDECORATOR_H" variable (:constant-flag t) nil [56 94])
+            ("cppunit/Portability.h" include (:system-flag t) nil [96 128])
+            ("cppunit/TestCase.h" include (:system-flag t) nil [129 158])
+            ("TestCase" variable (:type "int") nil [528 732]))          
+      :file "TestCaseDecorator.h"
+      :pointmax 759
+      :fsize 758
+      :lastmodtime '(15691 64296 0 0)
+      :unmatched-syntax '((symbol 735 . 749) (PUBLIC 521 . 527) (punctuation 519 . 520) (symbol 501 . 518) (symbol 489 . 500) (CLASS 483 . 488) (symbol 160 . 176))
+      :lexical-table 
+        '(("CPPUNIT_EXTENSIONS_TESTCASEDECORATOR_H")
+          )
+)
+    (semanticdb-table "TestFactory.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("CPPUNIT_EXTENSIONS_TESTFACTORY_H" variable (:constant-flag t) nil [50 82])
+            ("cppunit/Portability.h" include (:system-flag t) nil [84 116])
+            ("Test" type
+               (:prototype t
+                :type "class")
+                nil [137 148])
+            ("TestFactory" variable (:type ("CPPUNIT_API" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [188 347]))          
+      :file "TestFactory.h"
+      :pointmax 410
+      :fsize 409
+      :lastmodtime '(15662 28765 0 0)
+      :unmatched-syntax '((symbol 350 . 364) (symbol 118 . 134))
+      :lexical-table 
+        '(("CPPUNIT_EXTENSIONS_TESTFACTORY_H")
+          )
+))
+  :file "!usr!include!cppunit!extensions!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,20 @@
+;; Object RTL/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "RTL/"
+  :tables
+  (list
+    (semanticdb-table "gen_line_id_table.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("header_" variable nil nil [17 303])
+            ("tail_" variable nil nil [305 319])
+            ("noLines" variable nil nil [323 336])
+            ("if" code nil nil [339 1025]))          
+      :file "gen_line_id_table.py"
+      :pointmax 779
+      :fsize 1031
+      :lastmodtime '(20941 37742)
+      :unmatched-syntax nil))
+  :file "!sandbox!fpga!maldives-release-1.12-manufacturing-tests!data!config_mem_ctrl!RTL!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

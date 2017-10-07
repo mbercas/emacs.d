@@ -1,0 +1,32 @@
+;; Object data/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "data/"
+  :tables
+  (list
+    (semanticdb-table "calibrate.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [21 39])
+            ("matplotlib.pyplot" include nil nil [40 71])
+            ("fn" variable nil nil [123 169])
+            ("fng" variable nil nil [228 284])
+            ("ReadData" function (:arguments 
+              ( ("fn" variable nil (reparse-symbol function_parameters) [301 303]))              ) nil [287 336])
+            ("CalculateAverage" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [359 363]))              ) nil [337 601])
+            ("CalculateGradient" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [625 629]))              ) nil [602 742])
+            ("SinglePoleLowPass" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [766 770])
+                ("p" variable nil (reparse-symbol function_parameters) [772 773]))              ) nil [743 1058])
+            ("CalibratedDataNoOffsets" function (:arguments 
+              ( ("fn" variable nil (reparse-symbol function_parameters) [1088 1090]))              ) nil [1059 1460])
+            ("if" code nil nil [1463 1803]))          
+      :file "calibrate.py"
+      :pointmax 1807
+      :fsize 1802
+      :lastmodtime '(21058 62546 670332 956000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!calib!data!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

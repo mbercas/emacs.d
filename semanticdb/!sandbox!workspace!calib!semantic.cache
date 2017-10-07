@@ -1,0 +1,21 @@
+;; Object calib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "calib/"
+  :tables
+  (list
+    (semanticdb-table "parse_calibration.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("struct" include nil nil [21 34])
+            ("data" variable nil nil [36 1910])
+            ("convertToBinaryString" function (:arguments 
+              ( ("iStr" variable nil (reparse-symbol function_parameters) [1940 1944]))              ) nil [1913 2181])
+            ("if" code nil nil [2182 2564]))          
+      :file "parse_calibration.py"
+      :pointmax 2582
+      :fsize 2577
+      :lastmodtime '(21149 40614 838685 745000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!calib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

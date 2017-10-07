@@ -1,0 +1,64 @@
+;; Object fsm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "fsm/"
+  :tables
+  (list
+    (semanticdb-table "fsm_ReadSensorsData.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("fsm_ReadSensorsData.hpp" include nil nil [387 421])
+            ("c_checks.hpp" include nil nil [423 446])
+            ("fsm" type
+               (:members 
+                  ( ("STATE_SENSORS_DISABLED" variable (:constant-flag t) (reparse-symbol namespacesubparts) [473 495])
+                    ("STATE_SENSORS_RESET" variable (:constant-flag t) (reparse-symbol namespacesubparts) [511 530])
+                    ("STATE_SENSORS_OFF" variable (:constant-flag t) (reparse-symbol namespacesubparts) [560 577])
+                    ("STATE_SENSORS_INIT_CHANNEL" variable (:constant-flag t) (reparse-symbol namespacesubparts) [598 624])
+                    ("STATE_SENSORS_INIT_SENSORS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [636 662])
+                    ("STATE_SENSORS_READY" variable (:constant-flag t) (reparse-symbol namespacesubparts) [674 693])
+                    ("ReadSensorsData" function
+                       (:constructor-flag t
+                        :parent "ReadSensorsData"
+                        :arguments 
+                          ( ("readSensorsCb" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ReadSensorsCb" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [830 867]))                          
+                        :type ("ReadSensorsData" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [796 953])
+                    ("RequestSensorsRead" function
+                       (:parent "ReadSensorsData"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1117 1824])
+                    ("PowerSensorsOff" function
+                       (:parent "ReadSensorsData"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1910 2068])
+                    ("DisableSensorsAccess" function
+                       (:parent "ReadSensorsData"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2182 2293]))                  
+                :type "namespace")
+                nil [448 2296]))          
+      :file "fsm_ReadSensorsData.cpp"
+      :pointmax 2317
+      :fsize 2316
+      :lastmodtime '(21316 6590 854263 887000)
+      :unmatched-syntax '((semantic-list 2164 . 2181) (symbol 2152 . 2164) (string 2166 . 2179) (symbol 2145 . 2151) (string 2166 . 2179) (punctuation 2144 . 2145) (semantic-list 1892 . 1909) (symbol 1880 . 1892) (string 1894 . 1907) (symbol 1873 . 1879) (string 1894 . 1907) (punctuation 1872 . 1873) (semantic-list 1099 . 1116) (symbol 1087 . 1099) (string 1101 . 1114) (symbol 1080 . 1086) (string 1101 . 1114) (punctuation 1079 . 1080) (number 501 . 502) (punctuation 500 . 501))
+      :lexical-table 
+        '(("STATE_SENSORS_READY" . ((number "25" 702 . 704)))
+          ("STATE_SENSORS_DISABLED" . ((punctuation "-" 500 . 501) (number "1" 501 . 502)))
+          ("STATE_SENSORS_INIT_SENSORS" . ((number "5" 664 . 665)))
+          ("STATE_SENSORS_RESET" . ((number "0" 539 . 540)))
+          ("STATE_SENSORS_OFF" . ((number "2" 588 . 589)))
+          ("STATE_SENSORS_INIT_CHANNEL" . ((number "4" 626 . 627)))
+          )
+)
+    (semanticdb-table "fsm_ReadSensorsData.hpp"
+      :file "fsm_ReadSensorsData.hpp"
+      :fsize 1003
+      :lastmodtime '(20792 43761 171580 863000)))
+  :file "!sandbox!workspace!achill!trunk!development!code!fsm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

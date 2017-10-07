@@ -1,0 +1,143 @@
+;; Object optimist/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "optimist/"
+  :tables
+  (list
+    (semanticdb-table "nd_needleField.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("nd_needleField.hpp" include nil nil [130 159])
+            ("nd_needleModelIface.hpp" include nil nil [160 194])
+            ("FastRTS_functions.hpp" include nil nil [196 228])
+            ("FastMath.hpp" include nil nil [229 252])
+            ("algorithm" include (:system-flag t) nil [254 274])
+            ("numeric" include (:system-flag t) nil [275 293])
+            ("cmath" include (:system-flag t) nil [294 310])
+            ("xmmintrin.h" include (:system-flag t) nil [311 333])
+            ("pmmintrin.h" include (:system-flag t) nil [334 356])
+            ("unnamed" type
+               (:members 
+                  ( ("tmpNeedlePoint" variable
+                       (:dereference 1
+                        :type "float")
+                        (reparse-symbol namespacesubparts) [371 449]))                  
+                :type "namespace")
+                nil [358 452])
+            ("NeedleField" function
+               (:constructor-flag t
+                :parent "NeedleField"
+                :arguments 
+                  ( ("numberOfChannels" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [485 520]))                  
+                :type ("NeedleField" type (:type "class") nil nil))
+                nil [455 760])
+            ("NeedleField" function
+               (:destructor-flag t
+                :parent "NeedleField"
+                :type "void")
+                nil [762 793])
+            ("CalculateNormalizedDistanceToSensor" function
+               (:parent "NeedleField"
+                :arguments 
+                  ( ("sensorPosition" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SensorPosArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1282 1318])
+                    ("point" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("precision_vector_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1375 1408])
+                    ("component" variable
+                       (:constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [1465 1495]))                  
+                :type "float")
+                nil [1226 2350])
+            ("SetMagnetizationCoefficient" function
+               (:parent "NeedleField"
+                :arguments 
+                  ( ("coeff" variable
+                       (:constant-flag t
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2399 2424]))                  
+                :type "void")
+                nil [2352 2464])
+            ("CalculateMagnetizationField" function
+               (:parent "NeedleField"
+                :arguments 
+                  ( ("sensorPosition" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SensorPosArr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2515 2551])
+                    ("needle" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("NeedleModelIface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2600 2632])
+                    ("magnetization" variable
+                       (:constant-flag t
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2681 2713])
+                    ("component" variable
+                       (:constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [2762 2792]))                  
+                :type "float")
+                nil [2467 3375])
+            ("GetField" function
+               (:parent "NeedleField"
+                :constant-flag t
+                :arguments 
+                  ( ("needle" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("NeedleModelIface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3427 3460]))                  
+                :type ("precision_vector_t" type (:type "class") nil nil))
+                nil [3377 6378])
+            ("SetSensorPositions" function
+               (:parent "NeedleField"
+                :arguments 
+                  ( ("sensors_" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Sensor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6418 6443]))                  
+                :type "void")
+                nil [6380 6474])
+            ("SetValidSensors" function
+               (:parent "NeedleField"
+                :arguments 
+                  ( ("validSensors_" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("bool_vector_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6512 6549]))                  
+                :type "void")
+                nil [6477 6948]))          
+      :file "nd_needleField.cpp"
+      :pointmax 6949
+      :fsize 6948
+      :lastmodtime '(21442 42044 466931 989000)
+      :unmatched-syntax nil)
+    (semanticdb-table "nd_needleField.hpp"
+      :file "nd_needleField.hpp"
+      :fsize 3112
+      :lastmodtime '(21381 53377 267842 561000))
+    (semanticdb-table "nd_needleModelIface.hpp"
+      :file "nd_needleModelIface.hpp"
+      :fsize 5350
+      :lastmodtime '(21381 53377 272842 597000))
+    (semanticdb-table "FastRTS_functions.hpp"
+      :file "FastRTS_functions.hpp"
+      :fsize 767
+      :lastmodtime '(21381 53377 135841 632000))
+    (semanticdb-table "FastMath.hpp"
+      :file "FastMath.hpp"
+      :fsize 2839
+      :lastmodtime '(21381 53377 132841 611000)))
+  :file "!sandbox!workspace!achill!probe_firmware!development!prototype!delfino!optimist!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

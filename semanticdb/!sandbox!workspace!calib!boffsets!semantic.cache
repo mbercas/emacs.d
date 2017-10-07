@@ -1,0 +1,19 @@
+;; Object boffsets/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "boffsets/"
+  :tables
+  (list
+    (semanticdb-table "parse_offsets.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [21 58])
+            ("struct" include nil nil [60 73])
+            ("if" code nil nil [75 396]))          
+      :file "parse_offsets.py"
+      :pointmax 396
+      :fsize 395
+      :lastmodtime '(21749 30574 61233 467000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!calib!boffsets!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,196 @@
+;; Object a_ibm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_ibm/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_ibm_needledetectioncontrolmodel.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_ibm_needledetectioncontrolmodel.hpp" include nil nil [750 802])
+            ("ccapp_ibm_modeltocontrolevents.hpp" include nil nil [804 849])
+            ("ccapp_sfm_needleusersettings.hpp" include nil nil [851 894])
+            ("core_mvp_eventmaps.hpp" include nil nil [896 929])
+            ("core_log_logmsg.hpp" include nil nil [931 961])
+            ("algorithm" include (:system-flag t) nil [963 983])
+            ("QStringList" include (:system-flag t) nil [985 1007])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("ibm" type
+                               (:members 
+                                  ( ("core" using (:type ("core" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1139 1160])
+                                    ("core::log" using (:type ("core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1161 1187])
+                                    ("mvp::guiModelLayer" using (:type ("mvp::guiModelLayer" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1189 1224])
+                                    ("Imp" type
+                                       (:parent "NeedleDetectionControlModel"
+                                        :members 
+                                          ( ("Imp" function
+                                               (:constructor-flag t
+                                                :arguments 
+                                                  ( ("eventMaps" variable
+                                                       (:reference 1
+                                                        :type ("mvp::EventMaps" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1762 1790]))                                                  
+                                                :type ("Imp" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [1757 2256])
+                                            ("Imp" function
+                                               (:destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2262 2280])
+                                            ("GetSettings" function
+                                               (:prototype-flag t
+                                                :type ("sfm::NeedleUserSettings" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2301 2345])
+                                            ("CanEnableGuidance" function
+                                               (:prototype-flag t
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [2351 2382])
+                                            ("settings" variable (:type ("sfm::NeedleUserSettings" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2402 2445])
+                                            ("guidanceOnClicked" variable (:type "bool") (reparse-symbol classsubparts) [2450 2502])
+                                            ("needleTypes" variable (:type ("ibkcm::NeedleTypesVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2508 2554])
+                                            ("selectedNeedle" variable (:type ("NeedleTypeSelection" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2559 2608])
+                                            ("updateNeedleTypesAnnouncer" variable (:type ("events::UpdatesListOfAvailNeedleTypes::PublisherType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2614 2732]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1601 2735])
+                                    ("GetSettings" function
+                                       (:parent "NeedleDetectionControlModel::Imp"
+                                        :type ("sfm::NeedleUserSettings" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [2897 3213])
+                                    ("CanEnableGuidance" function
+                                       (:parent "NeedleDetectionControlModel::Imp"
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [3519 3642])
+                                    ("NeedleDetectionControlModel" function
+                                       (:constructor-flag t
+                                        :parent "NeedleDetectionControlModel"
+                                        :arguments 
+                                          ( ("eventMaps" variable
+                                               (:reference 1
+                                                :type ("mvp::EventMaps" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4112 4140]))                                          
+                                        :type ("NeedleDetectionControlModel" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [4054 4177])
+                                    ("NeedleDetectionControlModel" function
+                                       (:destructor-flag t
+                                        :parent "NeedleDetectionControlModel"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [4289 4352])
+                                    ("SetGuidanceOn" function
+                                       (:parent "NeedleDetectionControlModel"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [4479 4636])
+                                    ("SetGuidanceOff" function
+                                       (:parent "NeedleDetectionControlModel"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [4764 4937])
+                                    ("SetIndicatorOn" function
+                                       (:parent "NeedleDetectionControlModel"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [5065 5166])
+                                    ("SetIndicatorOff" function
+                                       (:parent "NeedleDetectionControlModel"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [5295 5398])
+                                    ("SetTrajectoryStatus" function
+                                       (:parent "NeedleDetectionControlModel"
+                                        :arguments 
+                                          ( ("checked" variable
+                                               (:constant-flag t
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [5661 5681]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [5606 5736])
+                                    ("SetPositionStatus" function
+                                       (:parent "NeedleDetectionControlModel"
+                                        :arguments 
+                                          ( ("checked" variable
+                                               (:constant-flag t
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [5995 6015]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [5942 6068])
+                                    ("SetTargetStatus" function
+                                       (:parent "NeedleDetectionControlModel"
+                                        :arguments 
+                                          ( ("checked" variable
+                                               (:constant-flag t
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [6323 6343]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [6272 6394])
+                                    ("AvailableNeedleTypeNames" function
+                                       (:parent "NeedleDetectionControlModel"
+                                        :type ("QStringList" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [6609 6961])
+                                    ("UpdateNeedleTypeList" function
+                                       (:parent "NeedleDetectionControlModel"
+                                        :arguments 
+                                          ( ("list" variable
+                                               (:reference 1
+                                                :type ("ibkcm::NeedleTypesVector" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7227 7260]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [7171 7353])
+                                    ("SetSelectedNeedle" function
+                                       (:parent "NeedleDetectionControlModel"
+                                        :arguments 
+                                          ( ("index" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [7618 7641]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [7565 7779])
+                                    ("GetSelectedNeedleName" function
+                                       (:parent "NeedleDetectionControlModel"
+                                        :type ("QString" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [7982 8198])
+                                    ("GetSelectedNeedle" function
+                                       (:parent "NeedleDetectionControlModel"
+                                        :type ("NeedleTypeSelection" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [8431 8543])
+                                    ("UpdateNeedleSettings" function
+                                       (:parent "NeedleDetectionControlModel"
+                                        :arguments 
+                                          ( ("settings" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("sfm::NeedleUserSettings" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8811 8853]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [8739 9137])
+                                    ("GetNeedleSettings" function
+                                       (:parent "NeedleDetectionControlModel"
+                                        :type ("sfm::NeedleUserSettings" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [9304 9419]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1122 9868]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1103 9888]))                  
+                :type "namespace")
+                nil [1084 9910]))          
+      :file "ccapp_ibm_needledetectioncontrolmodel.cpp"
+      :pointmax 9986
+      :fsize 9985
+      :lastmodtime '(20908 20965 34261 508000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_ibm_needledetectioncontrolmodel.hpp"
+      :file "ccapp_ibm_needledetectioncontrolmodel.hpp"
+      :fsize 3265
+      :lastmodtime '(20908 20965 37261 541000))
+    (semanticdb-table "ccapp_ibm_modeltocontrolevents.hpp"
+      :file "ccapp_ibm_modeltocontrolevents.hpp"
+      :fsize 3482
+      :lastmodtime '(20908 20965 190263 245000)))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!a_ibm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

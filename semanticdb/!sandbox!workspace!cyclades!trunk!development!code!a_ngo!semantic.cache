@@ -1,0 +1,660 @@
+;; Object a_ngo/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_ngo/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_ngo_optimizerneedle.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_ngo_optimizerneedle.hpp" include nil nil [685 725])
+            ("ccapp_ngo_common.hpp" include nil nil [727 758])
+            ("ccapp_ngo_constants.hpp" include nil nil [759 793])
+            ("ccapp_ngo_defaults.hpp" include nil nil [794 827])
+            ("ccapp_ngo_fastrtsfunctions.hpp" include nil nil [828 869])
+            ("ccapp_ngo_optimizerneedle.hpp" include nil nil [870 910])
+            ("ccapp_ngo_sensor.hpp" include nil nil [911 942])
+            ("ccapp_ngo_needlesensorpositions.hpp" include nil nil [943 989])
+            ("cmath" include (:system-flag t) nil [991 1007])
+            ("cstdlib" include (:system-flag t) nil [1008 1026])
+            ("ctime" include (:system-flag t) nil [1027 1043])
+            ("algorithm" include (:system-flag t) nil [1044 1064])
+            ("numeric" include (:system-flag t) nil [1065 1083])
+            ("iostream" include (:system-flag t) nil [1084 1103])
+            ("cassert" include (:system-flag t) nil [1105 1123])
+            ("unistd.h" include (:system-flag t) nil [1124 1143])
+            ("core_log_logmsg.hpp" include nil nil [1145 1175])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("ngo" type
+                               (:members 
+                                  ( ("core" using (:type ("core" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1307 1328])
+                                    ("core::log" using (:type ("core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1329 1355])
+                                    ("MAX_RANDOM_RANGE" variable
+                                       (:constant-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol namespacesubparts) [1432 1477])
+                                    ("RAND_NORM_FACTOR_INV" variable
+                                       (:constant-flag t
+                                        :type ("precision_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1478 1542])
+                                    ("INV_RES_NORM_FACTOR" variable
+                                       (:constant-flag t
+                                        :type "float")
+                                        (reparse-symbol namespacesubparts) [1543 1587])
+                                    ("GetRandomInRange_0_1" function
+                                       (:typemodifiers ("inline")
+                                        :type ("precision_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1814 1928])
+                                    ("Imp" type
+                                       (:parent "OptimizerNeedle"
+                                        :superclasses 
+                                          ( ("Optimizer" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("Imp" function
+                                               (:constructor-flag t
+                                                :arguments 
+                                                  ( ("numValues" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2173 2196])
+                                                    ("numParameters" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2206 2233])
+                                                    ("params" variable (:type ("std::vector" type
+                                                         (:template-specifier 
+                                                            ( ("std::string" type nil nil nil))                                                            
+                                                          :type "class")
+                                                          nil nil)) (reparse-symbol arg-sub-list) [2243 2277])
+                                                    ("factory" variable
+                                                       (:reference 1
+                                                        :type ("AlgorithmFactoryIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2287 2320]))                                                  
+                                                :type ("Imp" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [2168 3042])
+                                            ("Imp" function
+                                               (:destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [3048 3066])
+                                            ("CalculateNewWeights" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("validSensors_" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("bool_vector_t" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [3112 3149]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [3086 3150])
+                                            ("CalculateGradientAmplitude" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [3155 3189])
+                                            ("GetHighestGradient" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("validSensors_" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("bool_vector_t" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [3227 3264]))                                                  
+                                                :type "unsigned int")
+                                                (reparse-symbol classsubparts) [3194 3265])
+                                            ("override" variable (:type "int") (reparse-symbol classsubparts) [3343 3352])
+                                            ("override" variable (:type "int") (reparse-symbol classsubparts) [3434 3443])
+                                            ("GetBiggestFieldSensorIndex" function
+                                               (:prototype-flag t
+                                                :type ("uint16_t" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [3449 3487])
+                                            ("currentNeedle" variable (:type ("std::shared_ptr" type
+                                                 (:template-specifier 
+                                                    ( ("NeedleModelIface" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [3506 3556])
+                                            ("auxiliaryNeedle" variable (:type ("std::shared_ptr" type
+                                                 (:template-specifier 
+                                                    ( ("NeedleModelIface" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [3561 3613])
+                                            ("magForce" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3723 3745])
+                                            ("needleLength" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3849 3875])
+                                            ("squaredMaxDistance" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4044 4075])
+                                            ("numberOfConstrains" variable (:type "unsigned int") (reparse-symbol classsubparts) [4206 4238])
+                                            ("validConstrainVector" variable (:type ("bool_vector_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4364 4399])
+                                            ("needleField" variable (:type ("std::shared_ptr" type
+                                                 (:template-specifier 
+                                                    ( ("NeedleFieldIface" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [4447 4495])
+                                            ("gradientSqAmplitude" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4552 4584])
+                                            ("validMeasForGradientSqAmp" variable (:type "unsigned int") (reparse-symbol classsubparts) [4702 4737])
+                                            ("sensorsPositions" variable (:type ("Sensor" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4743 4767]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [2006 4770])
+                                    ("CalculateNewWeights" function
+                                       (:parent "OptimizerNeedle::Imp"
+                                        :arguments 
+                                          ( ("validSensors_" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("bool_vector_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5381 5418]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [5333 5914])
+                                    ("CalculateGradientAmplitude" function
+                                       (:parent "OptimizerNeedle::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [6053 7241])
+                                    ("GetHighestGradient" function
+                                       (:parent "OptimizerNeedle::Imp"
+                                        :arguments 
+                                          ( ("validSensors_" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("bool_vector_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7659 7696]))                                          
+                                        :type "unsigned int")
+                                        (reparse-symbol namespacesubparts) [7552 8583])
+                                    ("UpdateEstimates" function
+                                       (:parent "OptimizerNeedle::Imp"
+                                        :arguments 
+                                          ( ("parameters" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9074 9113]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [9030 9770])
+                                    ("IsOptimizerCheckPassed" function
+                                       (:parent "OptimizerNeedle::Imp"
+                                        :arguments 
+                                          ( ("parameters" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9823 9862]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [9772 10223])
+                                    ("GetBiggestFieldSensorIndex" function
+                                       (:parent "OptimizerNeedle::Imp"
+                                        :type ("uint16_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [10588 11139])
+                                    ("OptimizerNeedle" function
+                                       (:constructor-flag t
+                                        :parent "OptimizerNeedle"
+                                        :arguments 
+                                          ( ("numValues" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [12217 12240])
+                                            ("numParameters" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [12275 12302])
+                                            ("params" variable (:type ("std::vector" type
+                                                 (:template-specifier 
+                                                    ( ("std::string" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [12337 12371])
+                                            ("factory" variable
+                                               (:reference 1
+                                                :type ("AlgorithmFactoryIface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [12406 12439]))                                          
+                                        :type ("OptimizerNeedle" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [12183 12900])
+                                    ("OptimizerNeedle" function
+                                       (:destructor-flag t
+                                        :parent "OptimizerNeedle"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [13012 13051])
+                                    ("SetMagnetizationForce" function
+                                       (:parent "OptimizerNeedle"
+                                        :arguments 
+                                          ( ("mag_" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("precision_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [13362 13388]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [13317 13420])
+                                    ("SetMagnetizationCoefficient" function
+                                       (:parent "OptimizerNeedle"
+                                        :arguments 
+                                          ( ("coeff_" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("precision_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [13658 13686]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [13607 13753])
+                                    ("SetNeedleLength" function
+                                       (:parent "OptimizerNeedle"
+                                        :arguments 
+                                          ( ("len_" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("precision_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [14025 14051]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [13986 14087])
+                                    ("SetSquaredMaxDistance" function
+                                       (:parent "OptimizerNeedle"
+                                        :arguments 
+                                          ( ("newSquaredMaxDistance" variable
+                                               (:constant-flag t
+                                                :type ("precision_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [14134 14175]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [14089 14234])
+                                    ("SetupNeedleField" function
+                                       (:parent "OptimizerNeedle"
+                                        :arguments 
+                                          ( ("sensors" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Sensor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [14569 14593]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [14529 14717])
+                                    ("SetValidConstrainVector" function
+                                       (:parent "OptimizerNeedle"
+                                        :arguments 
+                                          ( ("validConstrainVector_" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("bool_vector_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15527 15577])
+                                            ("constrainWeights" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15582 15632]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [15476 16062])
+                                    ("GetWeights" function
+                                       (:parent "OptimizerNeedle"
+                                        :constant-flag t
+                                        :type ("precision_vector_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [16211 16302])
+                                    ("GetNumberOfConstrains" function
+                                       (:parent "OptimizerNeedle"
+                                        :type "unsigned int")
+                                        (reparse-symbol namespacesubparts) [16458 16560])
+                                    ("GetValidConstrainVector" function
+                                       (:parent "OptimizerNeedle"
+                                        :type ("bool_vector_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [16747 16861])
+                                    ("SetValidSensors" function
+                                       (:parent "OptimizerNeedle"
+                                        :arguments 
+                                          ( ("validSensors_" variable
+                                               (:reference 1
+                                                :type ("bool_vector_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [17341 17372]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [17302 17483])
+                                    ("CalculateNeedle" function
+                                       (:parent "OptimizerNeedle"
+                                        :arguments 
+                                          ( ("reuseTheNeedle" variable (:type "bool") (reparse-symbol arg-sub-list) [17526 17547]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [17487 18185])
+                                    ("SetInitialNeedle" function
+                                       (:parent "OptimizerNeedle"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [18767 19448])
+                                    ("GetNeedle" function
+                                       (:parent "OptimizerNeedle"
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("NeedleModelIface" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol namespacesubparts) [19450 19551])
+                                    ("GetField" function
+                                       (:parent "OptimizerNeedle"
+                                        :type ("std::shared_ptr" type
+                                             (:template-specifier 
+                                                ( ("NeedleFieldIface" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol namespacesubparts) [19553 19651])
+                                    ("GetGradientSquareAmplitude" function
+                                       (:parent "OptimizerNeedle"
+                                        :type ("precision_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [19872 19978])
+                                    ("GetRelativeResidual" function
+                                       (:parent "OptimizerNeedle"
+                                        :type ("precision_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [20178 20348])
+                                    ("SetValues" function
+                                       (:parent "OptimizerNeedle"
+                                        :arguments 
+                                          ( ("valuesPtr" variable
+                                               (:pointer 1
+                                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [20384 20416]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [20350 20455])
+                                    ("GetExitType" function
+                                       (:parent "OptimizerNeedle"
+                                        :type ("optimization_exit_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [20457 20550])
+                                    ("GetNumMeasurementValues" function
+                                       (:parent "OptimizerNeedle"
+                                        :type "unsigned int")
+                                        (reparse-symbol namespacesubparts) [20552 20662])
+                                    ("GetNumParametersToFit" function
+                                       (:parent "OptimizerNeedle"
+                                        :type "unsigned int")
+                                        (reparse-symbol namespacesubparts) [20664 20770])
+                                    ("SetLambda" function
+                                       (:parent "OptimizerNeedle"
+                                        :arguments 
+                                          ( ("lambda" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20805 20825]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [20772 20861])
+                                    ("GetLambda" function
+                                       (:parent "OptimizerNeedle"
+                                        :type ("precision_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [20863 20944])
+                                    ("SetStep" function
+                                       (:parent "OptimizerNeedle"
+                                        :arguments 
+                                          ( ("step" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20977 20995]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [20946 21034])
+                                    ("GetStep" function
+                                       (:parent "OptimizerNeedle"
+                                        :type ("precision_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [21036 21113])
+                                    ("SetMaxIterationsCount" function
+                                       (:parent "OptimizerNeedle"
+                                        :arguments 
+                                          ( ("iterCount" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [21160 21184]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [21115 21242])
+                                    ("GetMaxIterationsCount" function
+                                       (:parent "OptimizerNeedle"
+                                        :type "unsigned int")
+                                        (reparse-symbol namespacesubparts) [21244 21350])
+                                    ("GetCurrentIterationCount" function
+                                       (:parent "OptimizerNeedle"
+                                        :type "unsigned int")
+                                        (reparse-symbol namespacesubparts) [21352 21464])
+                                    ("SetShrink" function
+                                       (:parent "OptimizerNeedle"
+                                        :arguments 
+                                          ( ("schrink" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21499 21520]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [21466 21564])
+                                    ("GetShrink" function
+                                       (:parent "OptimizerNeedle"
+                                        :type ("precision_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [21566 21647])
+                                    ("GetLambdaExpand" function
+                                       (:parent "OptimizerNeedle"
+                                        :type ("precision_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [21649 21742])
+                                    ("SetParameterTolerance" function
+                                       (:parent "OptimizerNeedle"
+                                        :arguments 
+                                          ( ("tolerance" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21789 21812]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [21744 21870])
+                                    ("GetParameterTolerance" function
+                                       (:parent "OptimizerNeedle"
+                                        :type ("precision_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [21872 21977])
+                                    ("SetWeights" function
+                                       (:parent "OptimizerNeedle"
+                                        :arguments 
+                                          ( ("inputWeights" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [22013 22054]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [21979 22097])
+                                    ("GetResiduals" function
+                                       (:parent "OptimizerNeedle"
+                                        :constant-flag t
+                                        :type ("precision_vector_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [22099 22201])
+                                    ("GetResidual" function
+                                       (:parent "OptimizerNeedle"
+                                        :type ("precision_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [22203 22288])
+                                    ("Update" function
+                                       (:parent "OptimizerNeedle"
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [22290 22341]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1290 22790]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1271 22810]))                  
+                :type "namespace")
+                nil [1252 22832]))          
+      :file "ccapp_ngo_optimizerneedle.cpp"
+      :pointmax 22896
+      :fsize 22895
+      :lastmodtime '(21878 37320 120124 879000)
+      :unmatched-syntax '((semantic-list 3392 . 3433) (symbol 3370 . 3392) (BOOL 3365 . 3369) (VIRTUAL 3357 . 3364) (semantic-list 3299 . 3342) (symbol 3284 . 3299) (VOID 3279 . 3283) (VIRTUAL 3271 . 3278)))
+    (semanticdb-table "ccapp_ngo_optimizerneedle.hpp"
+      :file "ccapp_ngo_optimizerneedle.hpp"
+      :fsize 5955
+      :lastmodtime '(21878 37320 124124 880000))
+    (semanticdb-table "ccapp_ngo_common.hpp"
+      :file "ccapp_ngo_common.hpp"
+      :fsize 5281
+      :lastmodtime '(21611 1756 653201 289000))
+    (semanticdb-table "ccapp_ngo_constants.hpp"
+      :file "ccapp_ngo_constants.hpp"
+      :fsize 3211
+      :lastmodtime '(21878 37321 693125 348000))
+    (semanticdb-table "ccapp_ngo_defaults.hpp"
+      :file "ccapp_ngo_defaults.hpp"
+      :fsize 2685
+      :lastmodtime '(21878 37321 681125 345000))
+    (semanticdb-table "ccapp_ngo_fastrtsfunctions.hpp"
+      :file "ccapp_ngo_fastrtsfunctions.hpp"
+      :fsize 1883
+      :lastmodtime '(21611 1756 703201 557000))
+    (semanticdb-table "ccapp_ngo_sensor.hpp"
+      :file "ccapp_ngo_sensor.hpp"
+      :fsize 2796
+      :lastmodtime '(21878 37321 692125 348000))
+    (semanticdb-table "ccapp_ngo_needlesensorpositions.hpp"
+      :file "ccapp_ngo_needlesensorpositions.hpp"
+      :fsize 1889
+      :lastmodtime '(21611 1756 679201 428000))
+    (semanticdb-table "ccapp_ngo_needlefield.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_ngo_needlefield.hpp" include nil nil [685 721])
+            ("core_log_logmsg.hpp" include nil nil [722 752])
+            ("ccapp_ngo_constants.hpp" include nil nil [754 788])
+            ("ccapp_ngo_fastmath.hpp" include nil nil [789 822])
+            ("ccapp_ngo_fastrtsfunctions.hpp" include nil nil [823 864])
+            ("algorithm" include (:system-flag t) nil [866 886])
+            ("numeric" include (:system-flag t) nil [887 905])
+            ("cmath" include (:system-flag t) nil [906 922])
+            ("xmmintrin.h" include (:system-flag t) nil [923 945])
+            ("pmmintrin.h" include (:system-flag t) nil [946 968])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("ngo" type
+                               (:members 
+                                  ( ("core" using (:type ("core" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1100 1121])
+                                    ("core::log" using (:type ("core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1122 1148])
+                                    ("unnamed" type
+                                       (:members 
+                                          ( ("tmpNeedlePoint" variable
+                                               (:dereference 1
+                                                :type "float")
+                                                (reparse-symbol namespacesubparts) [1542 1620]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [1525 1623])
+                                    ("Imp" type
+                                       (:parent "NeedleField"
+                                        :members 
+                                          ( ("Imp" function
+                                               (:constructor-flag t
+                                                :type ("Imp" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [1765 1782])
+                                            ("Imp" function
+                                               (:destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1788 1806]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1625 1825])
+                                    ("NeedleField" function
+                                       (:constructor-flag t
+                                        :parent "NeedleField"
+                                        :arguments 
+                                          ( ("numberOfChannels" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2188 2219]))                                          
+                                        :type ("NeedleField" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [2162 2460])
+                                    ("NeedleField" function
+                                       (:destructor-flag t
+                                        :parent "NeedleField"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2572 2603])
+                                    ("CalculateNormalizedDistanceToSensor" function
+                                       (:parent "NeedleField"
+                                        :arguments 
+                                          ( ("sensorPosition" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("SensorPosArr" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3145 3181])
+                                            ("point" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3235 3268])
+                                            ("component" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [3322 3352]))                                          
+                                        :type "float")
+                                        (reparse-symbol namespacesubparts) [3036 4195])
+                                    ("SetMagnetizationCoefficient" function
+                                       (:parent "NeedleField"
+                                        :arguments 
+                                          ( ("coeff" variable
+                                               (:constant-flag t
+                                                :type ("precision_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4244 4269]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [4197 4312])
+                                    ("CalculateMagnetizationField" function
+                                       (:parent "NeedleField"
+                                        :arguments 
+                                          ( ("sensorPosition" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("SensorPosArr" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4363 4399])
+                                            ("needle" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("NeedleModel" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4448 4475])
+                                            ("magnetization" variable
+                                               (:constant-flag t
+                                                :type ("precision_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4524 4556])
+                                            ("component" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [4605 4635]))                                          
+                                        :type "float")
+                                        (reparse-symbol namespacesubparts) [4315 5211])
+                                    ("GetField" function
+                                       (:parent "NeedleField"
+                                        :constant-flag t
+                                        :arguments 
+                                          ( ("needle" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("NeedleModel" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5263 5291]))                                          
+                                        :type ("precision_vector_t" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [5213 8128])
+                                    ("SetSensorPositions" function
+                                       (:parent "NeedleField"
+                                        :arguments 
+                                          ( ("sensors_" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Sensor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8168 8193]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [8130 8224])
+                                    ("SetValidSensors" function
+                                       (:parent "NeedleField"
+                                        :arguments 
+                                          ( ("validSensors_" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("bool_vector_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8262 8299]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [8227 8794]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1083 9243]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1064 9263]))                  
+                :type "namespace")
+                nil [1045 9285]))          
+      :file "ccapp_ngo_needlefield.cpp"
+      :pointmax 9345
+      :fsize 10843
+      :lastmodtime '(21878 37320 122124 880000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_ngo_needlefield.hpp"
+      :file "ccapp_ngo_needlefield.hpp"
+      :fsize 2703
+      :lastmodtime '(21878 37320 125124 881000))
+    (semanticdb-table "ccapp_ngo_fastmath.hpp"
+      :file "ccapp_ngo_fastmath.hpp"
+      :fsize 4500
+      :lastmodtime '(21611 1756 700201 541000))
+    (semanticdb-table "ccapp_ngo_optimist.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_NGO_OPTIMIST_HPP" variable (:constant-flag t) nil [705 727])
+            ("ccapp_ngo_constants.hpp" include nil nil [804 838])
+            ("ccapp_ngo_needlemodel.hpp" include nil nil [839 875])
+            ("ccapp_ngo_optimizerneedle.hpp" include nil nil [876 916])
+            ("ccapp_ngo_outputsupervisor.hpp" include nil nil [917 958])
+            ("ccapp_ngo_sensor.hpp" include nil nil [959 990])
+            ("ccapp_ngo_needlesensorpositions.hpp" include nil nil [991 1037]))          
+      :file "ccapp_ngo_optimist.hpp"
+      :pointmax 1188
+      :fsize 1187
+      :lastmodtime '(21878 37321 690125 347000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_NGO_OPTIMIST_HPP")
+          )
+)
+    (semanticdb-table "ccapp_ngo_needlemodel.hpp"
+      :file "ccapp_ngo_needlemodel.hpp"
+      :fsize 3270
+      :lastmodtime '(21878 37321 696125 349000))
+    (semanticdb-table "ccapp_ngo_outputsupervisor.hpp"
+      :file "ccapp_ngo_outputsupervisor.hpp"
+      :fsize 5692
+      :lastmodtime '(21878 37320 128124 881000)))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!a_ngo!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,55 @@
+;; Object openCL/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "openCL/"
+  :tables
+  (list
+    (semanticdb-table "py_cl_explorer.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pyopencl" include nil nil [109 130])
+            ("GetPlatformInfo" function (:documentation "
+    Queries the platform and prints all its attributes.
+    ") nil [133 738])
+            ("GetDeviceInfo" function (:arguments 
+              ( ("platform" variable nil (reparse-symbol function_parameters) [759 767]))              ) nil [740 1355])
+            ("if" code nil nil [1365 1485]))          
+      :file "py_cl_explorer.py"
+      :pointmax 1485
+      :fsize 1484
+      :lastmodtime '(19993 22827 119323 856000)
+      :unmatched-syntax nil)
+    (semanticdb-table "example.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pyopencl" include nil nil [1 22])
+            ("numpy" include nil nil [23 35])
+            ("numpy.linalg" include nil nil [36 61])
+            ("a" variable nil nil [63 117])
+            ("b" variable nil nil [118 172])
+            ("ctx" variable nil nil [174 204])
+            ("queue" variable nil nil [205 235])
+            ("mf" variable nil nil [237 254])
+            ("a_buf" variable nil nil [256 326])
+            ("b_buf" variable nil nil [327 397])
+            ("dest_buf" variable nil nil [398 450])
+            ("prg" variable nil nil [452 703])
+            ("prg" code nil nil [705 760])
+            ("a_plus_b" variable nil nil [762 794])
+            ("cl" code nil nil [795 839])
+            ("print" code nil nil [900 923]))          
+      :file "example.py"
+      :pointmax 924
+      :fsize 923
+      :lastmodtime '(20978 52358 164997 454000)
+      :unmatched-syntax '(($EOI 924 . 924)))
+    (semanticdb-table "spike.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "spike.py"
+      :pointmax 0
+      :fsize 978
+      :lastmodtime '(21798 42288 670922 889000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!openCL!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

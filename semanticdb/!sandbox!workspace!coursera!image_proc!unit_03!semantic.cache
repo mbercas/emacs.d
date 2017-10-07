@@ -1,0 +1,43 @@
+;; Object unit_03/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unit_03/"
+  :tables
+  (list
+    (semanticdb-table "hist_eq.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("PIL" include nil nil [1 22])
+            ("cv2" include nil nil [23 47])
+            ("pylab" include nil nil [48 67])
+            ("time" include nil nil [68 90])
+            ("calculateFrequencyDensity" function
+               (:documentation "
+    Calculates the frequency density of a gray scale image by
+    normalizing the histogram (divinding each value by the area
+    underneath the histogram curve up to the value at which we 
+    are calculating the frequency density
+    "
+                :arguments 
+                  ( ("im" variable nil (reparse-symbol function_parameters) [124 126]))                  )
+                nil [93 471])
+            ("relProb" function
+               (:documentation "
+    Returns an array with the relative probability for each value
+    "
+                :arguments 
+                  ( ("hist" variable nil (reparse-symbol function_parameters) [485 489]))                  )
+                nil [472 604])
+            ("cdf" function (:arguments 
+              ( ("hist" variable nil (reparse-symbol function_parameters) [619 623]))              ) nil [610 665])
+            ("if" code nil nil [695 810])
+            ("check_args" function (:arguments 
+              ( ("argv" variable nil (reparse-symbol function_parameters) [682 686]))              ) nil [666 830])
+            ("if" code nil nil [831 1973]))          
+      :file "hist_eq.py"
+      :pointmax 1974
+      :fsize 1973
+      :lastmodtime '(20828 37862)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!coursera!image_proc!unit_03!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

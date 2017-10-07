@@ -1,0 +1,299 @@
+;; Object unittests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unittests/"
+  :tables
+  (list
+    (semanticdb-table "test_ccapp_scf_ndalgorithmparams.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_SCF_NDALGORITHMPARAMS_HPP" variable (:constant-flag t) nil [805 841])
+            ("ccapp_scf_ndalgorithmparams.hpp" include nil nil [917 959])
+            ("core_chk_assert.hpp" include nil nil [961 991])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [993 1023])
+            ("testNdAlgorithmParams" type
+               (:members 
+                  ( ("ezono::ccapp::scf" using (:type ("ezono::ccapp::scf" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [1060 1094])
+                    ("ezono::core::chk::AssertionFailed" using (:type ("ezono::core::chk::AssertionFailed" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [1096 1136])
+                    ("NdAlgorithmParamsUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1807 1814])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [1878 1910])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [1976 2011])
+                            ("test_Print" function (:type "void") (reparse-symbol classsubparts) [2136 5367])
+                            ("test_StreamOperator" function (:type "void") (reparse-symbol classsubparts) [5377 8611])
+                            ("test_Check" function (:type "void") (reparse-symbol classsubparts) [8621 9307])
+                            ("test_OperatorEqual" function (:type "void") (reparse-symbol classsubparts) [9317 9965])
+                            ("private" label nil (reparse-symbol classsubparts) [9971 9979]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1736 9983]))                  
+                :type "namespace")
+                nil [1025 9986])
+            ("testNdAlgorithmParams::NdAlgorithmParamsUnitTestSuite" using (:type ("testNdAlgorithmParams::NdAlgorithmParamsUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [10013 10073]))          
+      :file "test_ccapp_scf_ndalgorithmparams.hpp"
+      :pointmax 10176
+      :fsize 10175
+      :lastmodtime '(21379 17374 164934 340000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CCAPP_SCF_NDALGORITHMPARAMS_HPP")
+          )
+)
+    (semanticdb-table "test_ccapp_scf_needledetectionparameterconfiguration.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_SCF_NEEDLEDETECTIONPARAMETERCONFIGURATION_HPP" variable (:constant-flag t) nil [885 941])
+            ("ccapp_scf_needledetectionparameterconfiguration.hpp" include nil nil [1017 1079])
+            ("ccapp_scf_ndalgorithmparamvalues.hpp" include nil nil [1081 1128])
+            ("ccapp_scf_nddspalgorithmparams.hpp" include nil nil [1129 1174])
+            ("ccapp_scf_pipelineneedleconfig.hpp" include nil nil [1175 1220])
+            ("memory" include (:system-flag t) nil [1222 1239])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [1241 1271])
+            ("testNeedleDetectionParameterConfiguration" type
+               (:members 
+                  ( ("ezono::ccapp" variable (:type "int") (reparse-symbol namespacesubparts) [1346 1359])
+                    ("ezono::ccapp::scf" using (:type ("ezono::ccapp::scf" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [1360 1394])
+                    ("ezono::ccapp::scf::needle_detection" using (:type ("ezono::ccapp::scf::needle_detection" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [1395 1447])
+                    ("ezono::ccapp::scf::needle_detection::hidden" using (:type ("ezono::ccapp::scf::needle_detection::hidden" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [1448 1508])
+                    ("ezono::core" variable (:type "int") (reparse-symbol namespacesubparts) [1527 1539])
+                    ("testing" variable (:type "int") (reparse-symbol namespacesubparts) [1559 1567])
+                    ("NeedleDetectionParameterConfigurationUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2258 2265])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [2329 2361])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [2427 2462])
+                            ("test_UpdateNeedleAlgorithmConfiguration" function (:type "void") (reparse-symbol classsubparts) [2587 12106])
+                            ("test_UpdateDspAlgorithmConfiguration" function (:type "void") (reparse-symbol classsubparts) [12116 12664])
+                            ("private" label nil (reparse-symbol classsubparts) [12670 12678]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2167 12682]))                  
+                :type "namespace")
+                nil [1273 12685])
+            ("testNeedleDetectionParameterConfiguration::NeedleDetectionParameterConfigurationUnitTestSuite" using (:type ("testNeedleDetectionParameterConfiguration::NeedleDetectionParameterConfigurationUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [12732 12849]))          
+      :file "test_ccapp_scf_needledetectionparameterconfiguration.hpp"
+      :pointmax 12992
+      :fsize 12991
+      :lastmodtime '(21408 23941 576744 654000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CCAPP_SCF_NEEDLEDETECTIONPARAMETERCONFIGURATION_HPP")
+          )
+)
+    (semanticdb-table "test_ccapp_scf_pipelineconfiguration.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_SCF_PIPELINECONFIGURATION_HPP" variable (:constant-flag t) nil [821 861])
+            ("ccapp_scf_pipelineconfiguration.hpp" include nil nil [937 983])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [985 1015])
+            ("testPipelineConfiguration" type
+               (:members 
+                  ( ("ezono::ccapp::scf" using (:type ("ezono::ccapp::scf" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [1653 1687])
+                    ("PipelineConfigurationUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1764 1771])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [1835 1867])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [1933 1968])
+                            ("test_Print" function (:type "void") (reparse-symbol classsubparts) [1995 10349])
+                            ("test_Check" function (:type "void") (reparse-symbol classsubparts) [10379 13224])
+                            ("test_OperatorEqual" function (:type "void") (reparse-symbol classsubparts) [13257 15681])
+                            ("private" label nil (reparse-symbol classsubparts) [15688 15696]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1689 15700]))                  
+                :type "namespace")
+                nil [1615 15703])
+            ("testPipelineConfiguration::PipelineConfigurationUnitTestSuite" using (:type ("testPipelineConfiguration::PipelineConfigurationUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [15734 15802]))          
+      :file "test_ccapp_scf_pipelineconfiguration.hpp"
+      :pointmax 15795
+      :fsize 12891
+      :lastmodtime '(21390 53301 353514 626000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CCAPP_SCF_PIPELINECONFIGURATION_HPP")
+          )
+)
+    (semanticdb-table "test_ccapp_scf_pipelineneedleconfig.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_SCF_PIPELINENEEDLECONFIG_HPP" variable (:constant-flag t) nil [817 856])
+            ("ccapp_scf_pipelineneedleconfig.hpp" include nil nil [932 977])
+            ("memory" include (:system-flag t) nil [979 996])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [998 1028])
+            ("testPipelineNeedleConfig" type
+               (:members 
+                  ( ("ezono::ccapp" variable (:type "int") (reparse-symbol namespacesubparts) [1086 1099])
+                    ("ezono::core" variable (:type "int") (reparse-symbol namespacesubparts) [1118 1130])
+                    ("ezono::ccapp::scf" variable (:type "int") (reparse-symbol namespacesubparts) [1150 1168])
+                    ("testing" variable (:type "int") (reparse-symbol namespacesubparts) [1188 1196])
+                    ("PipelineNeedleConfigUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1870 1877])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [1941 1973])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [2039 2074])
+                            ("test_Print" function (:type "void") (reparse-symbol classsubparts) [2218 5864])
+                            ("test_Check" function (:type "void") (reparse-symbol classsubparts) [5894 6563])
+                            ("test_OperatorEqual" function (:type "void") (reparse-symbol classsubparts) [6574 7502])
+                            ("private" label nil (reparse-symbol classsubparts) [7509 7517]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1796 7522]))                  
+                :type "namespace")
+                nil [1030 7525])
+            ("testPipelineNeedleConfig::PipelineNeedleConfigUnitTestSuite" using (:type ("testPipelineNeedleConfig::PipelineNeedleConfigUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [7555 7621]))          
+      :file "test_ccapp_scf_pipelineneedleconfig.hpp"
+      :pointmax 7612
+      :fsize 7749
+      :lastmodtime '(21379 17374 408935 883000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CCAPP_SCF_PIPELINENEEDLECONFIG_HPP")
+          )
+)
+    (semanticdb-table "test_ccapp_scf_ndoptimistparams.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_SCF_NDOPTIMISTPARAMS_HPP" variable (:constant-flag t) nil [801 836])
+            ("ccapp_scf_ndoptimistparams.hpp" include nil nil [912 953])
+            ("core_chk_assert.hpp" include nil nil [955 985])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [987 1017])
+            ("testNdOptimistParams" type
+               (:members 
+                  ( ("ezono::ccapp::scf" using (:type ("ezono::ccapp::scf" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [1053 1087])
+                    ("ezono::core::chk::AssertionFailed" using (:type ("ezono::core::chk::AssertionFailed" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [1089 1129])
+                    ("NdOptimistParamsUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1799 1806])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [1870 1902])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [1968 2003])
+                            ("test_Print" function (:type "void") (reparse-symbol classsubparts) [2128 3704])
+                            ("test_StreamOperator" function (:type "void") (reparse-symbol classsubparts) [3714 5293])
+                            ("test_Check" function (:type "void") (reparse-symbol classsubparts) [5303 6150])
+                            ("test_OperatorEqual" function (:type "void") (reparse-symbol classsubparts) [6160 8290])
+                            ("private" label nil (reparse-symbol classsubparts) [8296 8304]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1729 8308]))                  
+                :type "namespace")
+                nil [1019 8311])
+            ("testNdOptimistParams::NdOptimistParamsUnitTestSuite" using (:type ("testNdOptimistParams::NdOptimistParamsUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [8337 8395]))          
+      :file "test_ccapp_scf_ndoptimistparams.hpp"
+      :pointmax 7280
+      :fsize 8495
+      :lastmodtime '(21379 17374 199934 561000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CCAPP_SCF_NDOPTIMISTPARAMS_HPP")
+          )
+)
+    (semanticdb-table "test_ccapp_scf_ndoutputsupervisorparams.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_SCF_NDOUTPUTSUPERVISORPARAMS_HPP" variable (:constant-flag t) nil [833 876])
+            ("ccapp_scf_ndoutputsupervisorparams.hpp" include nil nil [952 1001])
+            ("core_chk_assert.hpp" include nil nil [1003 1033])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [1035 1065])
+            ("testNdOutputSupervisorParams" type
+               (:members 
+                  ( ("ezono::ccapp::scf" using (:type ("ezono::ccapp::scf" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [1109 1143])
+                    ("ezono::core::chk::AssertionFailed" using (:type ("ezono::core::chk::AssertionFailed" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [1145 1185])
+                    ("NdOutputSupervisorParamsUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1863 1870])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [1934 1966])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [2032 2067])
+                            ("test_Print" function (:type "void") (reparse-symbol classsubparts) [2192 3473])
+                            ("test_StreamOperator" function (:type "void") (reparse-symbol classsubparts) [3483 4767])
+                            ("test_Check" function (:type "void") (reparse-symbol classsubparts) [4777 4916])
+                            ("test_OperatorEqual" function (:type "void") (reparse-symbol classsubparts) [4926 6521])
+                            ("private" label nil (reparse-symbol classsubparts) [6527 6535]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1785 6539]))                  
+                :type "namespace")
+                nil [1067 6542])
+            ("testNdOutputSupervisorParams::NdOutputSupervisorParamsUnitTestSuite" using (:type ("testNdOutputSupervisorParams::NdOutputSupervisorParamsUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [6576 6650]))          
+      :file "test_ccapp_scf_ndoutputsupervisorparams.hpp"
+      :pointmax 6242
+      :fsize 6766
+      :lastmodtime '(21379 17374 435936 54000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CCAPP_SCF_NDOUTPUTSUPERVISORPARAMS_HPP")
+          )
+))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!a_scf!unittests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

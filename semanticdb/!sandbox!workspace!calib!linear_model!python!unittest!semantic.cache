@@ -1,0 +1,41 @@
+;; Object unittest/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unittest/"
+  :tables
+  (list
+    (semanticdb-table "test_calib.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("unittest" include nil nil [21 36])
+            ("numpy" include nil nil [37 55])
+            ("sys" include nil nil [56 66])
+            ("sys" code nil nil [68 92])
+            ("calib" include nil nil [94 113])
+            ("CalibTestCase" type
+               (:superclasses ("unittest.TestCase")
+                :members 
+                  ( ("setUp" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [173 177]))                          )
+                        (reparse-symbol indented_block_body) [162 214])
+                    ("test_applyRotation_dataIsAllZeros" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [258 262]))                          )
+                        (reparse-symbol indented_block_body) [219 510])
+                    ("test_applyRotation_multiplyByAllOnesToGetMatrixBack" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [572 576]))                          )
+                        (reparse-symbol indented_block_body) [515 1177]))                  
+                :type "class")
+                nil [115 1177]))          
+      :file "test_calib.py"
+      :pointmax 1196
+      :fsize 1195
+      :lastmodtime '(21010 19951 709880 222000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!calib!linear_model!python!unittest!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

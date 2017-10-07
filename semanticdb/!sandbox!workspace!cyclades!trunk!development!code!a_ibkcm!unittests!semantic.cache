@@ -1,0 +1,62 @@
+;; Object unittests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unittests/"
+  :tables
+  (list
+    (semanticdb-table "test_ccapp_ibkcm_needletypeinfo.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_IBKCM_NEEDLETYPEINFO_HPP" variable (:constant-flag t) nil [799 834])
+            ("ccapp_ibkcm_needletypeinfo.hpp" include nil nil [910 951])
+            ("memory" include (:system-flag t) nil [953 970])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [972 1002])
+            ("testNeedleTypeInfo" type
+               (:members 
+                  ( ("ezono::ccapp" variable (:type "int") (reparse-symbol namespacesubparts) [1054 1067])
+                    ("ezono::ccapp::ibkcm" variable (:type "int") (reparse-symbol namespacesubparts) [1087 1107])
+                    ("testing" variable (:type "int") (reparse-symbol namespacesubparts) [1127 1135])
+                    ("NeedleTypeInfoUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1803 1810])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [1874 1948])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [2014 2083])
+                            ("test_Constructors" function (:type "void") (reparse-symbol classsubparts) [2208 2589])
+                            ("test_Print" function (:type "void") (reparse-symbol classsubparts) [2599 3377])
+                            ("test_Equality" function (:type "void") (reparse-symbol classsubparts) [3387 3968])
+                            ("private" label nil (reparse-symbol classsubparts) [3974 3982])
+                            ("TestFixture" type
+                               (:members 
+                                  ( ("header" function (:type "int") (reparse-symbol classsubparts) [4065 4400])
+                                    ("header" variable (:type ("QStringList" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4414 4433]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [3992 4444])
+                            ("fxt" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("TestFixture" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4454 4492]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1735 4496]))                  
+                :type "namespace")
+                nil [1004 4499])
+            ("testNeedleTypeInfo::NeedleTypeInfoUnitTestSuite" using (:type ("testNeedleTypeInfo::NeedleTypeInfoUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [4523 4577]))          
+      :file "test_ccapp_ibkcm_needletypeinfo.hpp"
+      :pointmax 4522
+      :fsize 4677
+      :lastmodtime '(21096 4740 104058 685000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CCAPP_IBKCM_NEEDLETYPEINFO_HPP")
+          )
+))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!a_ibkcm!unittests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

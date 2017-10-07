@@ -1,0 +1,180 @@
+;; Object python/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "python/"
+  :tables
+  (list
+    (semanticdb-table "calib_lm.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 38])
+            ("pylab" include nil nil [39 58])
+            ("calib_verification" include nil nil [60 92])
+            ("calib_common" include nil nil [93 125])
+            ("NB_SENSORS" variable nil nil [127 142])
+            ("data" variable nil nil [252 306])
+            ("rotationMatrix" variable nil nil [483 520])
+            ("calculateCalibMatrixUsingLm" function
+               (:documentation "
+    Calculates the calibration coefficients by solving the linear model
+    that equalizes each coordianate of the field for all sensors.
+
+    x_i = ax_i * x_j + ay_i * y_j * az_i * z_j + bx_i
+
+    "
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [675 679])
+                    ("rotateA" variable nil (reparse-symbol function_parameters) [682 689])
+                    ("refSensor" variable nil (reparse-symbol function_parameters) [699 708]))                  )
+                nil [642 1864])
+            ("singlePass" function (:arguments 
+              ( ("rdata" variable nil (reparse-symbol function_parameters) [1882 1887]))              ) nil [1866 2175])
+            ("multiplePass" function (:arguments 
+              ( ("rdata" variable nil (reparse-symbol function_parameters) [2194 2199])
+                ("nbIter" variable nil (reparse-symbol function_parameters) [2201 2207]))              ) nil [2176 3155])
+            ("rdata" variable nil nil [3156 3201])
+            ("print" code nil nil [3202 3258])
+            ("cdata" variable nil nil [3290 3323])
+            ("verification" code nil nil [3325 3353]))          
+      :file "calib_lm.py"
+      :pointmax 3354
+      :fsize 3353
+      :lastmodtime '(21024 29440 610742 534000)
+      :unmatched-syntax nil)
+    (semanticdb-table "calib_verification.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 38])
+            ("pylab" include nil nil [39 58])
+            ("calib_common" include nil nil [60 86])
+            ("verification" function
+               (:documentation "
+    data  : raw data (x,y,z) for 16 sensors
+    cdata : calibrated data
+    "
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [106 110])
+                    ("cdata" variable nil (reparse-symbol function_parameters) [112 117]))                  )
+                nil [88 320])
+            ("verifyCloudPlots" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [343 347])
+                ("cdata" variable nil (reparse-symbol function_parameters) [349 354]))              ) nil [321 1268])
+            ("verifyFieldPlots" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [1292 1296])
+                ("cdata" variable nil (reparse-symbol function_parameters) [1298 1303]))              ) nil [1270 1540])
+            ("verifyAxisPlot" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [1561 1565])
+                ("cdata" variable nil (reparse-symbol function_parameters) [1567 1572]))              ) nil [1541 2270]))          
+      :file "calib_verification.py"
+      :pointmax 2270
+      :fsize 2269
+      :lastmodtime '(21195 9100 929966 707000)
+      :unmatched-syntax '((NAME 2290 . 2291) ($EOI 2291 . 2291)))
+    (semanticdb-table "calib_common.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 38])
+            ("pylab" include nil nil [39 58])
+            ("calib_verification" include nil nil [60 92])
+            ("NB_SENSORS" variable nil nil [94 109])
+            ("systemRotationMatrix" variable nil nil [135 1043])
+            ("noRotationMatrix" variable nil nil [1045 1102])
+            ("rotationMatrixAllan" variable nil nil [1105 2009])
+            ("applyRotation" function
+               (:documentation "
+    Applies the rotation matrix to the current data
+
+    rM :   rotation Matrix a NB_SENSORS x 3x3 matrix, 
+           where each 3x3 matrix corresponds to a sensor.
+    data :
+    "
+                :arguments 
+                  ( ("rM" variable nil (reparse-symbol function_parameters) [2031 2033])
+                    ("data" variable nil (reparse-symbol function_parameters) [2035 2039]))                  )
+                nil [2012 2486])
+            ("calibrate" function
+               (:documentation "
+    data : raw data (x,y,z) for 16 sensors
+    a :    rotation matrix
+    b :    offset matrix
+
+    returns a matrix of the same size as the input matrix containing
+    the calibrated data.
+    "
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [2502 2506])
+                    ("a" variable nil (reparse-symbol function_parameters) [2508 2509])
+                    ("b" variable nil (reparse-symbol function_parameters) [2511 2512]))                  )
+                nil [2487 2919])
+            ("field" function
+               (:documentation "
+    data : matrix where every row has 48 values (x,y,z) x 16 sensors
+    "
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [2932 2936]))                  )
+                nil [2921 3187])
+            ("calculateResidual" function
+               (:documentation "
+    Caculates the residual of the calibrated data by estimating the differences
+    in every axis 
+    "
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [3211 3215]))                  )
+                nil [3188 3588]))          
+      :file "calib_common.py"
+      :pointmax 3597
+      :fsize 3596
+      :lastmodtime '(21031 18233 251156 849000)
+      :unmatched-syntax nil)
+    (semanticdb-table "calib_nlm.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 38])
+            ("pylab" include nil nil [39 58])
+            ("scipy.optimize.leastsq" include nil nil [60 100])
+            ("calib_verification" include nil nil [103 135])
+            ("calib_common" include nil nil [136 168])
+            ("NB_SENSORS" variable nil nil [170 185])
+            ("data" variable nil nil [295 349])
+            ("rotationMatrix" variable nil nil [526 563])
+            ("calibrationGoal" function
+               (:documentation "
+    params: is an array of 12 elements containing the parameters
+            that are being optimized.
+    data: is an Nx3 matrix, where N is the number of samples and
+          the columns represent the readings in x,y,z
+    "
+                :arguments 
+                  ( ("params" variable nil (reparse-symbol function_parameters) [705 711])
+                    ("data" variable nil (reparse-symbol function_parameters) [713 717])
+                    ("y" variable nil (reparse-symbol function_parameters) [719 720]))                  )
+                nil [684 1085])
+            ("calculateCalibMatrixUsingNonLm" function
+               (:documentation "
+    Calculates the calibration coefficients by using a non linear model
+    that equalizes each coordianate of the field for all sensors.
+
+    x_i = ax_i * x_j + ay_i * y_j * az_i * z_j + bx_i
+    "
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [1122 1126])
+                    ("amp" variable nil (reparse-symbol function_parameters) [1128 1131])
+                    ("itmax" variable nil (reparse-symbol function_parameters) [1133 1138])
+                    ("rotateA" variable nil (reparse-symbol function_parameters) [1140 1147]))                  )
+                nil [1086 4027])
+            ("singlePass" function (:arguments 
+              ( ("rdata" variable nil (reparse-symbol function_parameters) [4044 4049]))              ) nil [4028 4350])
+            ("multiplePass" function (:arguments 
+              ( ("rdata" variable nil (reparse-symbol function_parameters) [4369 4374])
+                ("nbIter" variable nil (reparse-symbol function_parameters) [4376 4382]))              ) nil [4351 5624])
+            ("rdata" variable nil nil [5625 5670])
+            ("print" code nil nil [5671 5727])
+            ("cdata" variable nil nil [5729 5756])
+            ("verification" code nil nil [5793 5821]))          
+      :file "calib_nlm.py"
+      :pointmax 5822
+      :fsize 5821
+      :lastmodtime '(21031 13798 460374 927000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!calib!linear_model!python!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

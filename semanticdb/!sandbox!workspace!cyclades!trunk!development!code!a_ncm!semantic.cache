@@ -1,0 +1,159 @@
+;; Object a_ncm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_ncm/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_ncm_ngscalibrationstatusbody.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_ncm_ngscalibrationstatusbody.hpp" include nil nil [796 845])
+            ("core_chk_assert.hpp" include nil nil [847 877])
+            ("core_ipc_messageregistration_instantiation.hpp" include nil nil [879 936])
+            ("ostream" include (:system-flag t) nil [938 956])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("ncm" type
+                               (:members 
+                                  ( ("Print" function
+                                       (:parent "NgsSensorStatusInfoWrapper"
+                                        :arguments 
+                                          ( ("os" variable
+                                               (:reference 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1944 1962]))                                          
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1894 2146])
+                                    ("Print" function
+                                       (:parent "NgsCalibrationStatusBody"
+                                        :arguments 
+                                          ( ("os" variable
+                                               (:reference 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2404 2422]))                                          
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [2356 2971])
+                                    ("Check" function
+                                       (:parent "NgsCalibrationStatusBody"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [3171 3262])
+                                    ("SetSensorStatusInfo" function
+                                       (:parent "NgsCalibrationStatusBody"
+                                        :arguments 
+                                          ( ("statusInfos" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ngc::SensorStatusList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3691 3734]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [3623 4136])
+                                    ("GetSensorStatusInfo" function
+                                       (:parent "NgsCalibrationStatusBody"
+                                        :arguments 
+                                          ( ("statusInfos" variable
+                                               (:reference 1
+                                                :type ("ngc::SensorStatusList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4563 4600]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [4495 5092]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1071 5542]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1052 5562]))                  
+                :type "namespace")
+                nil [1033 5584]))          
+      :file "ccapp_ncm_ngscalibrationstatusbody.cpp"
+      :pointmax 5761
+      :fsize 5760
+      :lastmodtime '(21901 11490 698231 753000)
+      :unmatched-syntax '((semantic-list 5655 . 5707) (symbol 5605 . 5655)))
+    (semanticdb-table "ccapp_ncm_ngscalibrationstatusbody.hpp"
+      :file "ccapp_ncm_ngscalibrationstatusbody.hpp"
+      :fsize 3199
+      :lastmodtime '(21390 53301 739516 624000))
+    (semanticdb-table "ccapp_ncm_readngscalibrationbody.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_ncm_readngscalibrationbody.hpp" include nil nil [754 801])
+            ("core_chk_assert.hpp" include nil nil [803 833])
+            ("core_ipc_messageregistration_instantiation.hpp" include nil nil [835 892])
+            ("ostream" include (:system-flag t) nil [894 912])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("ncm" type
+                               (:members 
+                                  ( ("Print" function
+                                       (:parent "ReadNgsCalibrationBody"
+                                        :arguments 
+                                          ( ("os" variable
+                                               (:reference 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1896 1914]))                                          
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1850 1987])
+                                    ("Check" function
+                                       (:parent "ReadNgsCalibrationBody"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2187 2233]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1027 2682]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1008 2702]))                  
+                :type "namespace")
+                nil [989 2724]))          
+      :file "ccapp_ncm_readngscalibrationbody.cpp"
+      :pointmax 2897
+      :fsize 2896
+      :lastmodtime '(21379 17378 678962 895000)
+      :unmatched-syntax '((semantic-list 2795 . 2845) (symbol 2745 . 2795)))
+    (semanticdb-table "ccapp_ncm_readngscalibrationbody.hpp"
+      :file "ccapp_ncm_readngscalibrationbody.hpp"
+      :fsize 1928
+      :lastmodtime '(21379 17378 674962 870000))
+    (semanticdb-table "ccapp_ncm_handledngsupdatecontrollermessagebody.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_ncm_handledngsupdatecontrollermessagebody.hpp" include nil nil [857 919])
+            ("core_chk_assert.hpp" include nil nil [921 951])
+            ("core_ipc_messageregistration_instantiation.hpp" include nil nil [953 1010])
+            ("ostream" include (:system-flag t) nil [1012 1030])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("ncm" type
+                               (:members 
+                                  ( ("Print" function
+                                       (:parent "HandledNgsUpdateControllerMessageBody"
+                                        :arguments 
+                                          ( ("os" variable
+                                               (:reference 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2029 2047]))                                          
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1968 2135])
+                                    ("Check" function
+                                       (:parent "HandledNgsUpdateControllerMessageBody"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2335 2396]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1145 2845]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1126 2865]))                  
+                :type "namespace")
+                nil [1107 2887]))          
+      :file "ccapp_ncm_handledngsupdatecontrollermessagebody.cpp"
+      :pointmax 3090
+      :fsize 3089
+      :lastmodtime '(21390 53301 697516 407000)
+      :unmatched-syntax '((semantic-list 2958 . 3023) (symbol 2908 . 2958)))
+    (semanticdb-table "ccapp_ncm_handledngsupdatecontrollermessagebody.hpp"
+      :file "ccapp_ncm_handledngsupdatecontrollermessagebody.hpp"
+      :fsize 2109
+      :lastmodtime '(21390 53301 699516 417000)))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!a_ncm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,362 @@
+;; Object unittests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unittests/"
+  :tables
+  (list
+    (semanticdb-table "test_ccapp_pdupl_needlepipelineconfigurator.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_PDUPL_NEEDLEPIPELINECONFIGURATOR_HPP" variable (:constant-flag t) nil [857 904])
+            ("ccapp_pdupl_needlepipelineconfigurator.hpp" include nil nil [980 1033])
+            ("ccapp_scf_ndalgorithmparamvalues.hpp" include nil nil [1035 1082])
+            ("ccapp_scf_pipelineconfiguration.hpp" include nil nil [1083 1129])
+            ("ccapp_scf_scanconfiguration.hpp" include nil nil [1130 1172])
+            ("ccapp_sda_datablock.hpp" include nil nil [1174 1208])
+            ("core_gmk_expectcall.hpp" include nil nil [1210 1244])
+            ("core_log_logger.hpp" include nil nil [1246 1276])
+            ("mock/mock_core_fls_basefilesystem.hpp" include nil nil [1278 1326])
+            ("mock/mock_core_fls_fstreaminterface.hpp" include nil nil [1327 1377])
+            ("memory" include (:system-flag t) nil [1379 1396])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [1398 1428])
+            ("testNeedlePipelineConfigurator" type
+               (:members 
+                  ( ("ezono::ccapp" variable (:type "int") (reparse-symbol namespacesubparts) [1492 1505])
+                    ("ezono::core" variable (:type "int") (reparse-symbol namespacesubparts) [1524 1536])
+                    ("ezono::ccapp::pdupl" variable (:type "int") (reparse-symbol namespacesubparts) [1556 1576])
+                    ("mock::ezono::core::fls" variable (:type "int") (reparse-symbol namespacesubparts) [1596 1619])
+                    ("testing" variable (:type "int") (reparse-symbol namespacesubparts) [1639 1647])
+                    ("EZ_ASSERT_DEFAULT_INPUTSUPER_EQUALS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [1715 1750])
+                    ("EZ_ASSERT_DEFAULT_OPTIMIST_EQUALS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [1904 1937])
+                    ("EZ_ASSERT_DEFAULT_OUTPUTSUPER_EQUALS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [2084 2120])
+                    ("EZ_ASSERT_DEFAULT_COMMON_EQUALS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [2275 2306])
+                    ("EZ_ASSERT_INPUTSUPER_EQUALS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [2423 2450])
+                    ("EZ_ASSERT_OPTIMIST_EQUALS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [2578 2603])
+                    ("EZ_ASSERT_OUTPUTSUPER_EQUALS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [2714 2742])
+                    ("EZ_ASSERT_COMMON_EQUALS" variable (:constant-flag t) (reparse-symbol namespacesubparts) [2871 2894])
+                    ("ACTION_P" function
+                       (:arguments 
+                          ( ("" variable (:type ("SetContent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3239 3250])
+                            ("" variable (:type ("content" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3251 3259]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [3230 3301])
+                    ("NeedlePipelineConfiguratorUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3981 3988])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [4052 4209])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [4275 4431])
+                            ("test_DefaultValues_AreSet_AfterCreation" function (:type "void") (reparse-symbol classsubparts) [4556 10053])
+                            ("test_Setting_DataBlock" function (:type "void") (reparse-symbol classsubparts) [10063 10304])
+                            ("test_Update_DoesNothing_IfCfgFile_IsMissing" function (:type "void") (reparse-symbol classsubparts) [10314 10817])
+                            ("test_Update_Updates_NeedleCfg_FromCfgFile" function (:type "void") (reparse-symbol classsubparts) [10827 15134])
+                            ("private" label nil (reparse-symbol classsubparts) [15140 15148])
+                            ("TestFixture" type
+                               (:members 
+                                  ( ("TestFixture" function
+                                       (:constructor-flag t
+                                        :type ("TestFixture" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [15199 15336])
+                                    ("AssertDataBlock" function
+                                       (:arguments 
+                                          ( ("db" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("sda::DataBlock" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15372 15398])
+                                            ("line" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [15399 15415]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [15350 15766])
+                                    ("AssertScanConfiguration" function
+                                       (:arguments 
+                                          ( ("sc" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("scf::ScanConfiguration" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15810 15844])
+                                            ("line" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [15887 15924]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [15780 16547])
+                                    ("AssertFixedPipelineConfiguration" function
+                                       (:arguments 
+                                          ( ("pc" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("scf::PipelineConfiguration" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [16628 16666])
+                                            ("line" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [16695 16736]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [16561 20597])
+                                    ("ExpectFileRead" function
+                                       (:arguments 
+                                          ( ("line" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [20632 20648]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [20611 22916])
+                                    ("ObjectUnderTest" type
+                                       (:typedef ("NeedlePipelineConfigurator" type (:type "class") nil nil)
+                                        :superclasses "NeedlePipelineConfigurator"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [22930 22982])
+                                    ("MakeObjectUnderTest" function (:type ("std::unique_ptr" type
+                                         (:template-specifier 
+                                            ( ("ObjectUnderTest" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [22996 23244])
+                                    ("VerifyAndClearExpectations" function (:type "void") (reparse-symbol classsubparts) [23258 23445])
+                                    ("fstream" variable (:type ("MockFStream" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23465 23489])
+                                    ("fsystem" variable (:type ("MockFilesystem" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23508 23532])
+                                    ("path" variable
+                                       (:constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [23546 23573]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [15158 23584])
+                            ("fxt" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("TestFixture" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [23594 23632]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3901 23636]))                  
+                :type "namespace")
+                nil [1430 23639])
+            ("testNeedlePipelineConfigurator::NeedlePipelineConfiguratorUnitTestSuite" using (:type ("testNeedlePipelineConfigurator::NeedlePipelineConfiguratorUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [23675 23753]))          
+      :file "test_ccapp_pdupl_needlepipelineconfigurator.hpp"
+      :pointmax 23878
+      :fsize 23689
+      :lastmodtime '(21379 17367 289890 849000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("EZ_ASSERT_DEFAULT_INPUTSUPER_EQUALS" (spp-arg-list ("t" "a" "v") 1750 . 1761) . ((symbol "TS_ASSERT_EQUALS" 1768 . 1784) (semantic-list "( \\
+        obj->PipelineConfig().needle.algorithm[ a ].inputSupervisor.t.Get(), \\
+        ndef::v.baseValue )" 1784 . 1894)))
+          ("EZ_ASSERT_DEFAULT_OPTIMIST_EQUALS" (spp-arg-list ("t" "a" "v") 1937 . 1948) . ((symbol "TS_ASSERT_EQUALS" 1955 . 1971) (semantic-list "( \\
+        obj->PipelineConfig().needle.algorithm[ a ].optimist.t.Get(), \\
+        ndef::v.baseValue )" 1971 . 2074)))
+          ("EZ_ASSERT_INPUTSUPER_EQUALS" (spp-arg-list ("t" "a" "v") 2450 . 2461) . ((symbol "TS_ASSERT_EQUALS" 2468 . 2484) (semantic-list "( \\
+        obj->PipelineConfig().needle.algorithm[ a ].inputSupervisor.t.Get(), v )" 2484 . 2568)))
+          ("TEST_CCAPP_PDUPL_NEEDLEPIPELINECONFIGURATOR_HPP")
+          ("EZ_ASSERT_OUTPUTSUPER_EQUALS" (spp-arg-list ("t" "a" "v") 2742 . 2753) . ((symbol "TS_ASSERT_EQUALS" 2760 . 2776) (semantic-list "( \\
+        obj->PipelineConfig().needle.algorithm[ a ].outputSupervisor.t.Get(), v )" 2776 . 2861)))
+          ("EZ_ASSERT_OPTIMIST_EQUALS" (spp-arg-list ("t" "a" "v") 2603 . 2614) . ((symbol "TS_ASSERT_EQUALS" 2621 . 2637) (semantic-list "( obj->PipelineConfig().needle.algorithm[ a ].optimist.t.Get(), v )" 2637 . 2704)))
+          ("EZ_ASSERT_COMMON_EQUALS" (spp-arg-list ("t" "v") 2894 . 2902) . ((symbol "TS_ASSERT_EQUALS" 2909 . 2925) (semantic-list "( obj->PipelineConfig().needle.common.t.Get(), v )" 2925 . 2975)))
+          ("EZ_ASSERT_DEFAULT_OUTPUTSUPER_EQUALS" (spp-arg-list ("t" "a" "v") 2120 . 2131) . ((symbol "TS_ASSERT_EQUALS" 2138 . 2154) (semantic-list "( \\
+        obj->PipelineConfig().needle.algorithm[ a ].outputSupervisor.t.Get(), \\
+        ndef::v.baseValue )" 2154 . 2265)))
+          ("EZ_ASSERT_DEFAULT_COMMON_EQUALS" (spp-arg-list ("t" "v") 2306 . 2314) . ((symbol "TS_ASSERT_EQUALS" 2321 . 2337) (semantic-list "( \\
+        obj->PipelineConfig().needle.common.t.Get(), ndef::v.baseValue )" 2337 . 2413)))
+          )
+)
+    (semanticdb-table "test_ccapp_pdupl_needlecharacterizingagent.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_PDUPL_NEEDLECHARACTERIZINGAGENT_HPP" variable (:constant-flag t) nil [853 899])
+            ("ccapp_pdupl_needlecharacterizingagent.hpp" include nil nil [975 1027])
+            ("ccapp_fea_needlelinestable.hpp" include nil nil [1028 1069])
+            ("ccapp_pducm_applicationtocontrolevents.hpp" include nil nil [1071 1124])
+            ("ccapp_pducm_constants.hpp" include nil nil [1125 1161])
+            ("ccapp_pducm_controltoapplicationevents.hpp" include nil nil [1162 1215])
+            ("ccapp_pduvl_viewtocontrolevents.hpp" include nil nil [1217 1263])
+            ("ccapp_sac_enum_dspapplicationid.hpp" include nil nil [1265 1311])
+            ("ccapp_sac_enum_dspapplicationstatus.hpp" include nil nil [1312 1362])
+            ("ccapp_sac_enum_dspstatus.hpp" include nil nil [1363 1402])
+            ("ccapp_scf_pipelineconfiguration.hpp" include nil nil [1404 1450])
+            ("ccapp_scf_scanconfiguration.hpp" include nil nil [1451 1493])
+            ("ccapp_sda_datablock.hpp" include nil nil [1495 1529])
+            ("core_gmk_expectcall.hpp" include nil nil [1531 1565])
+            ("core_mvp_eventmaps.hpp" include nil nil [1567 1600])
+            ("core_log_logger.hpp" include nil nil [1602 1632])
+            ("QString" include (:system-flag t) nil [1634 1652])
+            ("mock/mock_ccapp_pdupl_dspapplicationstatusupdateriface.hpp" include nil nil [1654 1723])
+            ("mock/mock_ccapp_pdupl_fpgaaccessiface.hpp" include nil nil [1724 1776])
+            ("mock/mock_ccapp_pdupl_needlepipelineconfiguratoriface.hpp" include nil nil [1777 1845])
+            ("mock/mock_ccapp_pduvl_mainviewiface.hpp" include nil nil [1846 1896])
+            ("mock/mock_ccapp_spr_needledatalinereaderiface.hpp" include nil nil [1897 1957])
+            ("mock/mock_core_fls_fstreaminterface.hpp" include nil nil [1958 2008])
+            ("mock/mock_core_utl_sleepiface.hpp" include nil nil [2009 2053])
+            ("memory" include (:system-flag t) nil [2055 2072])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [2074 2104])
+            ("testNeedleCharacterizingAgent" type
+               (:members 
+                  ( ("ezono::ccapp" variable (:type "int") (reparse-symbol namespacesubparts) [2167 2180])
+                    ("ezono::core" variable (:type "int") (reparse-symbol namespacesubparts) [2199 2211])
+                    ("ezono::ccapp::pdupl" variable (:type "int") (reparse-symbol namespacesubparts) [2231 2251])
+                    ("mock::ezono::ccapp::pdupl" variable (:type "int") (reparse-symbol namespacesubparts) [2271 2297])
+                    ("mock::ezono::ccapp::pduvl" variable (:type "int") (reparse-symbol namespacesubparts) [2316 2342])
+                    ("mock::ezono::ccapp::spr" variable (:type "int") (reparse-symbol namespacesubparts) [2361 2385])
+                    ("mock::ezono::core::fls" variable (:type "int") (reparse-symbol namespacesubparts) [2404 2427])
+                    ("mock::ezono::core::utl" variable (:type "int") (reparse-symbol namespacesubparts) [2446 2469])
+                    ("testing" variable (:type "int") (reparse-symbol namespacesubparts) [2489 2497])
+                    ("NeedleCharacterizingAgentUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3176 3183])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [3247 3404])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [3470 3627])
+                            ("test_Characterization_Run_Successfully" function (:type "void") (reparse-symbol classsubparts) [3752 6997])
+                            ("test_DspNotReady_AfterStartingBootloader_AbortsRecording" function (:type "void") (reparse-symbol classsubparts) [7007 8599])
+                            ("test_NotRunningBootloader_AfterStartingBootloader_AbortsRecording" function (:type "void") (reparse-symbol classsubparts) [8610 10229])
+                            ("test_DspNotReady_AfterStartingApplication_AbortsRecording" function (:type "void") (reparse-symbol classsubparts) [10240 12123])
+                            ("test_NotRunningApplication_AfterStartingApplication_AbortsRecording" function (:type "void") (reparse-symbol classsubparts) [12134 14018])
+                            ("test_All_ErrorBase_Exceptions_AreCaught" function (:type "void") (reparse-symbol classsubparts) [14028 14748])
+                            ("test_All_StdExceptions_AreCaught" function (:type "void") (reparse-symbol classsubparts) [14758 15484])
+                            ("test_All_Other_Exceptions_AreCaught" function (:type "void") (reparse-symbol classsubparts) [15494 16176])
+                            ("private" label nil (reparse-symbol classsubparts) [16181 16189])
+                            ("MockApplication" type
+                               (:members 
+                                  ( ("MOCK_METHOD0" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("OnUtilityFinished" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16258 16276])
+                                            ("" variable (:type "void") (reparse-symbol arg-sub-list) [16277 16284]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [16244 16287]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [16199 16298])
+                            ("TestFixture" type
+                               (:members 
+                                  ( ("TestFixture" function
+                                       (:constructor-flag t
+                                        :type ("TestFixture" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [16349 17118])
+                                    ("ExpectCall_Delay" function
+                                       (:arguments 
+                                          ( ("sec" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [17155 17174])
+                                            ("msec" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [17210 17230])
+                                            ("line" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [17266 17286])
+                                            ("times" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [17322 17344]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [17132 17711])
+                                    ("ExpectCalls_StartNeedleApplication" function
+                                       (:arguments 
+                                          ( ("line" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [17766 17782]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [17725 18208])
+                                    ("ExpectCalls_StartReadingSensors" function
+                                       (:arguments 
+                                          ( ("line" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [18260 18276]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [18222 19173])
+                                    ("ExpectCalls_RecordingDone" function
+                                       (:arguments 
+                                          ( ("success" variable
+                                               (:constant-flag t
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [19219 19243])
+                                            ("msgText" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [19288 19312])
+                                            ("line" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [19357 19379]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [19187 19884])
+                                    ("StartUpdate" function (:type "void") (reparse-symbol classsubparts) [19898 20086])
+                                    ("PressStopButton" function (:type "void") (reparse-symbol classsubparts) [20100 20288])
+                                    ("ObjectUnderTest" type
+                                       (:typedef ("NeedleCharacterizingAgent" type (:type "class") nil nil)
+                                        :superclasses "NeedleCharacterizingAgent"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [20302 20353])
+                                    ("MakeObjectUnderTest" function
+                                       (:arguments 
+                                          ( ("line" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [20435 20451]))                                          
+                                        :type ("std::unique_ptr" type
+                                             (:template-specifier 
+                                                ( ("ObjectUnderTest" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [20367 21884])
+                                    ("VerifyAndClearExpectations" function (:type "void") (reparse-symbol classsubparts) [21898 22496])
+                                    ("dspUpdater" variable (:type ("MockDspApplicationStatusUpdater" type (:type "class") nil nil)) (reparse-symbol classsubparts) [22510 22557])
+                                    ("fpga" variable (:type ("MockFpgaAccess" type (:type "class") nil nil)) (reparse-symbol classsubparts) [22570 22611])
+                                    ("needleLineReader" variable (:type ("MockNeedleDataLineReader" type (:type "class") nil nil)) (reparse-symbol classsubparts) [22624 22677])
+                                    ("needlePipelineConfigurator" variable (:type ("MockNeedlePipelineConfigurator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [22690 22753])
+                                    ("mainWindow" variable (:type ("MockMainView" type (:type "class") nil nil)) (reparse-symbol classsubparts) [22766 22813])
+                                    ("fstream" variable (:type ("MockFStream" type (:type "class") nil nil)) (reparse-symbol classsubparts) [22826 22870])
+                                    ("delay" variable (:type ("MockSleep" type (:type "class") nil nil)) (reparse-symbol classsubparts) [22883 22925])
+                                    ("application" variable (:type ("MockApplication" type (:type "class") nil nil)) (reparse-symbol classsubparts) [22939 22987])
+                                    ("eventMaps" variable (:type ("mvp::EventMaps" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23001 23047])
+                                    ("dspStatus" variable (:type ("sac::DspApplicationStatus" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23060 23106])
+                                    ("db" variable (:type ("sda::DataBlock" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23120 23159])
+                                    ("pc" variable (:type ("scf::PipelineConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23172 23211])
+                                    ("sc" variable (:type ("scf::ScanConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23224 23263])
+                                    ("filepath" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23277 23322])
+                                    ("subscription" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("evt::Subscription" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [23336 23385]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [16308 23396])
+                            ("fxt" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("TestFixture" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [23406 23444]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3097 23448]))                  
+                :type "namespace")
+                nil [2106 23451])
+            ("testNeedleCharacterizingAgent::NeedleCharacterizingAgentUnitTestSuite" using (:type ("testNeedleCharacterizingAgent::NeedleCharacterizingAgentUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [23486 23562]))          
+      :file "test_ccapp_pdupl_needlecharacterizingagent.hpp"
+      :pointmax 23685
+      :fsize 23684
+      :lastmodtime '(21379 17367 279890 786000)
+      :unmatched-syntax '((number 17345 . 17346) (punctuation 17343 . 17344) (number 17345 . 17346) (punctuation 17343 . 17344) (semantic-list 16282 . 16284) (semantic-list 16282 . 16284) (punctuation 2488 . 2489) (punctuation 2487 . 2488) (NAMESPACE 2477 . 2486) (USING 2471 . 2476) (punctuation 2445 . 2446) (punctuation 2444 . 2445) (NAMESPACE 2434 . 2443) (USING 2428 . 2433) (punctuation 2403 . 2404) (punctuation 2402 . 2403) (NAMESPACE 2392 . 2401) (USING 2386 . 2391) (punctuation 2360 . 2361) (punctuation 2359 . 2360) (NAMESPACE 2349 . 2358) (USING 2343 . 2348) (punctuation 2315 . 2316) (punctuation 2314 . 2315) (NAMESPACE 2304 . 2313) (USING 2298 . 2303) (punctuation 2270 . 2271) (punctuation 2269 . 2270) (NAMESPACE 2259 . 2268) (USING 2253 . 2258) (punctuation 2230 . 2231) (punctuation 2229 . 2230) (NAMESPACE 2219 . 2228) (USING 2213 . 2218) (punctuation 2198 . 2199) (punctuation 2197 . 2198) (NAMESPACE 2187 . 2196) (USING 2181 . 2186) (punctuation 2166 . 2167) (punctuation 2165 . 2166) (NAMESPACE 2155 . 2164) (USING 2149 . 2154))
+      :lexical-table 
+        '(("TEST_CCAPP_PDUPL_NEEDLECHARACTERIZINGAGENT_HPP")
+          )
+))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!a_pdupl!unittests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

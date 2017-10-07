@@ -1,0 +1,107 @@
+;; Object c_mat/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "c_mat/"
+  :tables
+  (list
+    (semanticdb-table "core_mat_rescaleintarray.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("core_mat_rescaleintarray.hpp" include nil nil [705 744])
+            ("core_mat_bittwiddling.hpp" include nil nil [746 782])
+            ("core_chk_assert.hpp" include nil nil [784 814])
+            ("xmmintrin.h" include (:system-flag t) nil [816 838])
+            ("ezono" type
+               (:members 
+                  ( ("core" type
+                       (:members 
+                          ( ("mat" type
+                               (:members 
+                                  ( ("bty::UInt32" using (:type ("bty::UInt32" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [969 987])
+                                    ("RescaleIntArray" function
+                                       (:arguments 
+                                          ( ("begin" variable
+                                               (:pointer 1
+                                                :type ("UInt32" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2504 2518])
+                                            ("end" variable
+                                               (:pointer 1
+                                                :type ("UInt32" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2547 2559])
+                                            ("oldMaxValue" variable
+                                               (:constant-flag t
+                                                :type ("UInt32" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2582 2608])
+                                            ("newMaxValue" variable
+                                               (:constant-flag t
+                                                :type ("UInt32" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2631 2658]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2476 3059]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [952 3285]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [934 3305]))                  
+                :type "namespace")
+                nil [915 3326]))          
+      :file "core_mat_rescaleintarray.cpp"
+      :pointmax 3389
+      :fsize 3388
+      :lastmodtime '(21379 17370 619911 914000)
+      :unmatched-syntax nil)
+    (semanticdb-table "core_mat_rescaleintarray.hpp"
+      :file "core_mat_rescaleintarray.hpp"
+      :fsize 1897
+      :lastmodtime '(21379 17370 615911 889000))
+    (semanticdb-table "core_mat_bittwiddling.hpp"
+      :file "core_mat_bittwiddling.hpp"
+      :fsize 1812
+      :lastmodtime '(21379 17370 512911 238000))
+    (semanticdb-table "core_mat_bittwiddling.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("core_mat_bittwiddling.hpp" include nil nil [791 827])
+            ("ezono" type
+               (:members 
+                  ( ("core" type
+                       (:members 
+                          ( ("mat" type
+                               (:members 
+                                  ( ("unnamed" type
+                                       (:members 
+                                          ( ("MultiplyDeBruijnBitPosition" variable
+                                               (:dereference 1
+                                                :constant-flag t
+                                                :type "int")
+                                                (reparse-symbol namespacesubparts) [1059 1234]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [958 1537])
+                                    ("BitCount" function
+                                       (:arguments 
+                                          ( ("u" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [2311 2333]))                                          
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2297 2535])
+                                    ("HighestSetBit" function
+                                       (:arguments 
+                                          ( ("v" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2965 2981]))                                          
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2946 3141]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [941 3367]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [923 3387]))                  
+                :type "namespace")
+                nil [904 3408]))          
+      :file "core_mat_bittwiddling.cpp"
+      :pointmax 3468
+      :fsize 3467
+      :lastmodtime '(21379 17370 593911 750000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!c_mat!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

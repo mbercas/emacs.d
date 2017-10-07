@@ -1,0 +1,116 @@
+;; Object ch_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ch_test/"
+  :tables
+  (list
+    (semanticdb-table "create_test_fpga_ch_plot_report_pdf.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [1043 1053])
+            ("os" include nil nil [1054 1063])
+            ("datetime" include nil nil [1064 1079])
+            ("reportlab.pdfgen.canvas" include nil nil [1081 1123])
+            ("reportlab.lib.units" include nil nil [1124 1162])
+            ("reportlab.lib.pagesizes" include nil nil [1163 1201])
+            ("set_name_and_plot" function (:arguments 
+              ( ("pdf" variable nil (reparse-symbol function_parameters) [1225 1228])
+                ("test_plot" variable nil (reparse-symbol function_parameters) [1230 1239])
+                ("plot_v" variable nil (reparse-symbol function_parameters) [1240 1246])
+                ("plot_w" variable nil (reparse-symbol function_parameters) [1247 1253])
+                ("plot_h" variable nil (reparse-symbol function_parameters) [1254 1260]))              ) nil [1203 2235])
+            ("set_page_botton_comment" function (:arguments 
+              ( ("pdf" variable nil (reparse-symbol function_parameters) [2264 2267])
+                ("text_botton" variable nil (reparse-symbol function_parameters) [2268 2279]))              ) nil [2236 2889])
+            ("set_3plots_page" function (:arguments 
+              ( ("pdf" variable nil (reparse-symbol function_parameters) [2915 2918])
+                ("test_plot1" variable nil (reparse-symbol function_parameters) [2919 2929])
+                ("test_plot2" variable nil (reparse-symbol function_parameters) [2930 2940])
+                ("test_plot3" variable nil (reparse-symbol function_parameters) [2941 2951]))              ) nil [2895 3697])
+            ("set_2plots_page" function (:arguments 
+              ( ("pdf" variable nil (reparse-symbol function_parameters) [3718 3721])
+                ("test_plot1" variable nil (reparse-symbol function_parameters) [3722 3732])
+                ("test_plot2" variable nil (reparse-symbol function_parameters) [3733 3743]))              ) nil [3698 4306])
+            ("find_file_with_extension" function (:arguments 
+              ( ("extension" variable nil (reparse-symbol function_parameters) [4337 4346]))              ) nil [4307 4629])
+            ("create_autotest_report_pdf" function (:arguments 
+              ( ("test_id" variable nil (reparse-symbol function_parameters) [4666 4673]))              ) nil [4635 8015])
+            ("if" code nil nil [8017 8400]))          
+      :file "create_test_fpga_ch_plot_report_pdf.py"
+      :pointmax 8400
+      :fsize 8399
+      :lastmodtime '(20957 7042)
+      :unmatched-syntax nil)
+    (semanticdb-table "plot_vector_linux.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [1228 1238])
+            ("time" include nil nil [1239 1250])
+            ("pylab" include nil nil [1251 1270])
+            ("matplotlib.pyplot" include nil nil [1271 1302])
+            ("plot_data" function (:arguments 
+              ( ("data_vec" variable nil (reparse-symbol function_parameters) [1319 1327]))              ) nil [1305 1536])
+            ("plot_data_e_by_channels" function
+               (:documentation "
+        Save an image with the elements values order by channels.
+    "
+                :arguments 
+                  ( ("report_fign" variable nil (reparse-symbol function_parameters) [1565 1576])
+                    ("data_v" variable nil (reparse-symbol function_parameters) [1577 1583])
+                    ("nb_buffers" variable nil (reparse-symbol function_parameters) [1584 1594])
+                    ("tx_start" variable nil (reparse-symbol function_parameters) [1595 1603])
+                    ("tx_end" variable nil (reparse-symbol function_parameters) [1604 1610]))                  )
+                nil [1537 3453])
+            ("plot_matrix_e_by_channels" function
+               (:documentation "
+        Save an image with the elements values order by channels.
+    "
+                :arguments 
+                  ( ("report_fign" variable nil (reparse-symbol function_parameters) [3493 3504])
+                    ("data_m" variable nil (reparse-symbol function_parameters) [3505 3511])
+                    ("d_min" variable nil (reparse-symbol function_parameters) [3512 3517])
+                    ("d_max" variable nil (reparse-symbol function_parameters) [3518 3523])
+                    ("legend" variable nil (reparse-symbol function_parameters) [3524 3530]))                  )
+                nil [3463 5359])
+            ("plot_boxplot_e_by_channels" function (:arguments 
+              ( ("report_fign" variable nil (reparse-symbol function_parameters) [5392 5403])
+                ("data_vec" variable nil (reparse-symbol function_parameters) [5404 5412])
+                ("nb_buffers" variable nil (reparse-symbol function_parameters) [5413 5423])
+                ("d_start" variable nil (reparse-symbol function_parameters) [5424 5431])
+                ("d_end" variable nil (reparse-symbol function_parameters) [5432 5437]))              ) nil [5361 7727])
+            ("get_limits_noi" function
+               (:documentation "
+    get max and minimum of the vector.
+    compare with the refence vectors
+    "
+                :arguments 
+                  ( ("noi_vector" variable nil (reparse-symbol function_parameters) [7755 7765]))                  )
+                nil [7736 8854])
+            ("get_limits_m" function (:arguments 
+              ( ("data_m" variable nil (reparse-symbol function_parameters) [8872 8878]))              ) nil [8855 9212])
+            ("convert_noi_matrix2vector" function (:arguments 
+              ( ("ch_noi_std" variable nil (reparse-symbol function_parameters) [9247 9257]))              ) nil [9217 9601])
+            ("convert_noi_vector2matrix" function
+               (:documentation "
+        transform input into a matrix
+    "
+                :arguments 
+                  ( ("noi_std" variable nil (reparse-symbol function_parameters) [9632 9639]))                  )
+                nil [9602 10106])
+            ("get_noi_std_limits" function (:arguments 
+              ( ("script_path" variable nil (reparse-symbol function_parameters) [10130 10141])
+                ("e_noi_std" variable nil (reparse-symbol function_parameters) [10143 10152]))              ) nil [10107 10475])
+            ("get_ref_limits" function (:arguments 
+              ( ("file_name" variable nil (reparse-symbol function_parameters) [10495 10504]))              ) nil [10476 11273])
+            ("check_ref" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [11288 11292])
+                ("ref_min" variable nil (reparse-symbol function_parameters) [11293 11300])
+                ("ref_max" variable nil (reparse-symbol function_parameters) [11301 11308]))              ) nil [11274 11605])
+            ("if" code nil nil [11607 15340]))          
+      :file "plot_vector_linux.py"
+      :pointmax 15357
+      :fsize 15356
+      :lastmodtime '(20957 7042)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!malta!manufacture!scripts!ch_test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

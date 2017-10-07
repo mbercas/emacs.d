@@ -1,0 +1,129 @@
+;; Object a_sfm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_sfm/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_sfm_modeofoperation.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SFM_MODEOFOPERATION_HPP" variable (:constant-flag t) nil [763 792])
+            ("string" include (:system-flag t) nil [868 885])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("sfm" type
+                               (:members 
+                                  ( ("ModeOfOperation" type
+                                       (:members 
+                                          ( ("NONE_SCAN" variable
+                                               (:constant-flag t
+                                                :default-value (1213 1216)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1193 1216])
+                                            ("B_MODE_SCAN" variable
+                                               (:constant-flag t
+                                                :default-value (1242 1245)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1222 1245])
+                                            ("C_MODE_SCAN" variable
+                                               (:constant-flag t
+                                                :default-value (1271 1274)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1251 1274])
+                                            ("F_MODE_SCAN" variable
+                                               (:constant-flag t
+                                                :default-value (1298 1310)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1280 1310])
+                                            ("M_MODE_SCAN" variable
+                                               (:constant-flag t
+                                                :default-value (1335 1338)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1315 1338])
+                                            ("BB_MODE_SCAN" variable
+                                               (:constant-flag t
+                                                :default-value (1364 1367)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1344 1367])
+                                            ("NEEDLE_MODE_SCAN" variable
+                                               (:constant-flag t
+                                                :default-value (1435 1438)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1415 1438])
+                                            ("EXTENDED_NEEDLE_MODE_SCAN" variable
+                                               (:constant-flag t
+                                                :default-value (1641 1644)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1613 1644])
+                                            ("SCAN_MODE_MIN" variable
+                                               (:constant-flag t
+                                                :default-value (1667 1677)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1651 1677])
+                                            ("SCAN_MODE_MAX" variable
+                                               (:constant-flag t
+                                                :default-value (1698 1712)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [1682 1712]))                                          
+                                        :type "enum")
+                                        (reparse-symbol namespacesubparts) [1166 1713])
+                                    ("GetModeName" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("mode" variable
+                                               (:constant-flag t
+                                                :type ("ModeOfOperation" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1814 1842]))                                          
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1789 1843]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1000 1846]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [981 1866]))                  
+                :type "namespace")
+                nil [962 1888]))          
+      :file "ccapp_sfm_modeofoperation.hpp"
+      :pointmax 2004
+      :fsize 2003
+      :lastmodtime '(21243 30764 857560 835000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_SFM_MODEOFOPERATION_HPP")
+          )
+)
+    (semanticdb-table "ccapp_sfm_modeofoperation.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_sfm_modeofoperation.hpp" include nil nil [717 757])
+            ("core_chk_assert.hpp" include nil nil [759 789])
+            ("sstream" include (:system-flag t) nil [791 809])
+            ("map" include (:system-flag t) nil [810 824])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("sfm" type
+                               (:members 
+                                  ( ("GetModeName" function
+                                       (:arguments 
+                                          ( ("mode" variable
+                                               (:constant-flag t
+                                                :type ("ModeOfOperation" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2111 2139]))                                          
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [2086 2782]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [939 3008]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [920 3028]))                  
+                :type "namespace")
+                nil [901 3050]))          
+      :file "ccapp_sfm_modeofoperation.cpp"
+      :pointmax 3114
+      :fsize 3113
+      :lastmodtime '(21243 30764 856560 829000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!cyclades!b_adptive_ngs_CR15418!development!code!a_sfm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

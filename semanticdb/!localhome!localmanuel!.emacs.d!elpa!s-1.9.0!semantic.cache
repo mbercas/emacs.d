@@ -1,0 +1,16 @@
+;; Object s-1.9.0/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "s-1.9.0/"
+  :tables
+  (list
+    (semanticdb-table "s-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags nil
+      :file "s-autoloads.el"
+      :pointmax 245
+      :fsize 337
+      :lastmodtime '(21705 60348 462902 779000)
+      :unmatched-syntax nil))
+  :file "!localhome!localmanuel!.emacs.d!elpa!s-1.9.0!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

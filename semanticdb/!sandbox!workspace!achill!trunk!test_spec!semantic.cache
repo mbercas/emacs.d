@@ -1,0 +1,21 @@
+;; Object test_spec/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test_spec/"
+  :tables
+  (list
+    (semanticdb-table "parse_calibration.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("struct" include nil nil [21 34])
+            ("data" variable nil nil [36 846])
+            ("convertToBinaryString" function (:arguments 
+              ( ("iStr" variable nil (reparse-symbol function_parameters) [876 880]))              ) nil [849 1117])
+            ("if" code nil nil [1118 1491]))          
+      :file "parse_calibration.py"
+      :pointmax 1505
+      :fsize 1504
+      :lastmodtime '(21056 25085 498995 419000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!achill!trunk!test_spec!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

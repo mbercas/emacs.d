@@ -1,0 +1,129 @@
+;; Object localmanuel/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "localmanuel/"
+  :tables
+  (list
+    (semanticdb-table ".emacs"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("package" include nil nil [2 20])
+            ("add-to-list" code nil nil [21 123])
+            ("add-to-list" code nil nil [124 226])
+            ("add-to-list" code nil nil [229 271])
+            ("let" code nil nil [272 369])
+            ("line-number-mode" code nil nil [418 438])
+            ("column-number-mode" code nil nil [439 461])
+            ("setq" code nil nil [462 483])
+            ("tool-bar" include nil nil [550 569])
+            ("tool-bar-mode" code nil nil [570 589])
+            ("ido" include nil nil [642 656])
+            ("ido-mode" code nil nil [657 669])
+            ("setq" code nil nil [721 744])
+            ("setq" code nil nil [824 854])
+            ("setq-default" code nil nil [855 890])
+            ("setq" code nil nil [999 1027])
+            ("add-hook" code nil nil [1218 1277])
+            ("add-hook" code nil nil [1278 1339])
+            ("add-hook" code nil nil [1340 1434])
+            ("add-hook" code nil nil [1475 1525])
+            ("add-hook" code nil nil [1526 1577])
+            ("add-hook" code nil nil [1578 1630])
+            ("processing-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [1734 1799])
+            ("add-to-list" code nil nil [1800 1861])
+            ("setq" code nil nil [1862 1914])
+            ("add-hook" code nil nil [1915 1974])
+            ("setq" code nil nil [2023 2092])
+            ("lua-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [2093 2146])
+            ("add-hook" code nil nil [2215 2259])
+            ("add-hook" code nil nil [2410 2462])
+            ("taskjuggler-mode" include nil nil [2496 2523])
+            ("add-hook" code nil nil [2524 2647])
+            ("python-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [2705 2767])
+            ("add-to-list" code nil nil [2768 2825])
+            ("setq" code nil nil [2826 2859])
+            ("add-to-list" code nil nil [2949 3012])
+            ("pymacs" include nil nil [3015 3032])
+            ("pymacs-load" code nil nil [3033 3065])
+            ("setq" code nil nil [3066 3101])
+            ("jedi" include nil nil [3103 3118])
+            ("auto-complete-config" include nil nil [3119 3150])
+            ("add-to-list" code nil nil [3151 3243])
+            ("ac-config-default" code nil nil [3244 3263])
+            ("setq" code nil nil [3264 3370])
+            ("add-to-list" code nil nil [3373 3442])
+            ("yasnippet" include nil nil [3443 3463])
+            ("yas-global-mode" code nil nil [3464 3483])
+            ("add-hook" code nil nil [3486 3602])
+            ("add-hook" code nil nil [3604 3646])
+            ("add-hook" code nil nil [3738 3778])
+            ("jedi:setup" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [3779 3814])
+            ("setq" code nil nil [3815 3844])
+            ("setq-default" code nil nil [3861 3900])
+            ("setq-default" code nil nil [3901 3943])
+            ("setq" code nil nil [3998 4076])
+            ("setq" code nil nil [4077 4110])
+            ("setq" code nil nil [4162 4207])
+            ("setq" code nil nil [4208 4247])
+            ("setq" code nil nil [4271 4311])
+            ("setq" code nil nil [4359 4388])
+            ("global-font-lock-mode" code nil nil [4391 4416])
+            ("setq" code nil nil [4417 4454])
+            ("octave-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [4513 4555])
+            ("setq" code nil nil [4556 4632])
+            ("add-hook" code nil nil [4634 4817])
+            ("run-octave" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [4819 4860])
+            ("add-hook" code nil nil [4906 4961])
+            ("vhdl-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [4985 5040])
+            ("add-hook" code nil nil [5083 5136])
+            ("setq" code nil nil [5207 5240])
+            ("load-file" code nil nil [5334 5399])
+            ("semantic-mode" code nil nil [5401 5418])
+            ("my-semantic-hook" function nil nil [5420 5479])
+            ("add-hook" code nil nil [5480 5529])
+            ("when" code nil nil [5579 5724])
+            ("when" code nil nil [5810 5901])
+            ("my-cedet-hook" function nil nil [6362 6634])
+            ("add-hook" code nil nil [6635 6680])
+            ("fill-column-indicator" include nil nil [6682 6714])
+            ("xcscope" include nil nil [6716 6734])
+            ("org-install" include nil nil [6797 6819])
+            ("add-to-list" code nil nil [6821 6875])
+            ("define-key" code nil nil [6877 6924])
+            ("eval-after-load" code nil nil [6926 7889])
+            ("remember" include nil nil [7891 7910])
+            ("add-hook" code nil nil [7912 7971])
+            ("define-key" code nil nil [7973 8026])
+            ("custom-set-variables" code nil nil [8028 9372])
+            ("global-set-key" code nil nil [9396 9448])
+            ("setq" code nil nil [9479 9504])
+            ("custom-set-variables" code nil nil [9505 10452])
+            ("custom-set-faces" code nil nil [10453 10692]))          
+      :file ".emacs"
+      :pointmax 10693
+      :fsize 10692
+      :lastmodtime '(21928 46964 192023 618000)
+      :unmatched-syntax nil))
+  :file "!localhome!localmanuel!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

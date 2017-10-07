@@ -1,0 +1,1498 @@
+;; Object unittest/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unittest/"
+  :tables
+  (list
+    (semanticdb-table "test_needleModelIface.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_NEEDLEMODELIFACE_HPP_" variable (:constant-flag t) nil [140 166])
+            ("../nd_needleModelIface.hpp" include nil nil [169 206])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [208 252])
+            ("NeedleModelMock" type
+               (:superclasses 
+                  ( ("NeedleModelIface" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [304 311])
+                    ("NeedleModelMock" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("np" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [333 350]))                          
+                        :type ("NeedleModelMock" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [316 376])
+                    ("NeedleModelMock" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [381 410])
+                    ("GetRealNeedle" function
+                       (:typemodifiers ("virtual")
+                        :constant-flag t
+                        :arguments 
+                          ( ("shiftTip" variable
+                               (:constant-flag t
+                                :type "float")
+                                (reparse-symbol arg-sub-list) [466 487])
+                            ("shiftEnd" variable
+                               (:constant-flag t
+                                :type "float")
+                                (reparse-symbol arg-sub-list) [542 564]))                          
+                        :type ("precision_vector_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [416 599])
+                    ("GetNeedleTip" function
+                       (:typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("precision_vector_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [604 698])
+                    ("GetNeedleEnd" function
+                       (:typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("precision_vector_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [703 793])
+                    ("GetNeedleCenterSquaredDistance" function
+                       (:typemodifiers ("virtual")
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [798 888])
+                    ("GetNeedleLength" function
+                       (:typemodifiers ("virtual")
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [893 974])
+                    ("GetNeedleMagnetization" function
+                       (:typemodifiers ("virtual")
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [979 1067])
+                    ("UpdateInternals" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1072 1123])
+                    ("GetSphericalCoordinates" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("length" variable
+                               (:reference 1
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1174 1195])
+                            ("alpha" variable
+                               (:reference 1
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1204 1224])
+                            ("beta" variable
+                               (:reference 1
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1233 1261]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1128 1288])
+                    ("SetCalculatedResidual" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable
+                               (:constant-flag t
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1329 1349]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1293 1361])
+                    ("GetCalculatedResidual" function
+                       (:typemodifiers ("virtual")
+                        :type ("precision_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1366 1447]))                  
+                :type "class")
+                nil [254 1451])
+            ("NeedleModelIfaceTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("NeedleModelIfaceTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1535 1557]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1515 1558])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetParamsReference" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1609 1634]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1595 1635])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_SetParams" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1654 1670]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1640 1671])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_SetParamsThrows" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1690 1712]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1676 1713])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1723 1748])
+                    ("dut" variable
+                       (:pointer 1
+                        :type ("NeedleModelMock" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1763 1785])
+                    ("numberOfParameters" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1795 1821])
+                    ("public" label nil (reparse-symbol classsubparts) [1827 1834])
+                    ("setUp" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1840 1961])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [1971 2065])
+                    ("test_SetParams" function (:type "void") (reparse-symbol classsubparts) [2076 3110])
+                    ("test_GetParamsReference" function (:type "void") (reparse-symbol classsubparts) [3116 3531])
+                    ("test_SetParamsThrows" function (:type "void") (reparse-symbol classsubparts) [3537 3894]))                  
+                :type "class")
+                nil [1453 3902]))          
+      :file "test_needleModelIface.hpp"
+      :pointmax 3945
+      :fsize 3944
+      :lastmodtime '(21148 37237 737701 259000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_NEEDLEMODELIFACE_HPP_")
+          )
+)
+    (semanticdb-table "test_runner.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [83 127])
+            ("cppunit/ui/text/TestRunner.h" include (:system-flag t) nil [128 167])
+            ("cppunit/CompilerOutputter.h" include (:system-flag t) nil [168 206])
+            ("test_needleModelIface.hpp" include nil nil [209 245])
+            ("test_needleModel.hpp" include nil nil [246 277])
+            ("test_optimizer.hpp" include nil nil [278 307])
+            ("test_optimizerNeedle.hpp" include nil nil [308 343])
+            ("test_needleField.hpp" include nil nil [344 375])
+            ("test_outputSupervisor.hpp" include nil nil [376 412])
+            ("test_inputSupervisor.hpp" include nil nil [413 448])
+            ("test_inputBuffer.hpp" include nil nil [449 480])
+            ("test_inputBufferManager.hpp" include nil nil [481 519])
+            ("test_processingBuffer.hpp" include nil nil [520 556])
+            ("test_calibration.hpp" include nil nil [557 588])
+            ("test_FastMath.hpp" include nil nil [589 617])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("NeedleModelIfaceTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [712 734]))                  
+                :type "int")
+                nil [679 735])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("NeedleModelTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [769 786]))                  
+                :type "int")
+                nil [736 787])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("OptimizerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [821 836]))                  
+                :type "int")
+                nil [788 837])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("OptimizerNeedleTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [871 892]))                  
+                :type "int")
+                nil [838 893])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("NeedleFieldTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [927 944]))                  
+                :type "int")
+                nil [894 945])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("OutputSupervisorTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [979 1001]))                  
+                :type "int")
+                nil [946 1002])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("InputSupervisorTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1036 1057]))                  
+                :type "int")
+                nil [1003 1058])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("InputBufferTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1092 1109]))                  
+                :type "int")
+                nil [1059 1110])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("InputBufferManagerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1144 1168]))                  
+                :type "int")
+                nil [1111 1169])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("ProcessingBufferTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1203 1225]))                  
+                :type "int")
+                nil [1170 1226])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("CalibrationTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1260 1277]))                  
+                :type "int")
+                nil [1227 1278])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("test_FastMath::FastMathTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1312 1341]))                  
+                :type "int")
+                nil [1279 1342])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1414 1423])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1424 1436]))                  
+                :type "int")
+                nil [1404 1728]))          
+      :file "test_runner.cpp"
+      :pointmax 1729
+      :fsize 1728
+      :lastmodtime '(21151 2111 125318 6000)
+      :unmatched-syntax '((string 1375 . 1402) (symbol 1367 . 1374) (symbol 1356 . 1366) (symbol 1352 . 1355) (symbol 1345 . 1351) (punctuation 1344 . 1345) (string 650 . 677) (symbol 642 . 649) (symbol 631 . 641) (symbol 627 . 630) (symbol 620 . 626) (punctuation 619 . 620)))
+    (semanticdb-table "test_optimizer.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_OPTIMIZER_HPP_" variable (:constant-flag t) nil [126 145])
+            ("vector" include (:system-flag t) nil [147 164])
+            ("algorithm" include (:system-flag t) nil [165 185])
+            ("../nd_optimizer.hpp" include nil nil [187 217])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [219 263])
+            ("OptiTest" type
+               (:superclasses 
+                  ( ("Optimizer" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [303 310])
+                    ("testMatrixEstimates" variable
+                       (:pointer 1
+                        :type ("precision_vector_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [316 357])
+                    ("functionSelect" variable (:type "unsigned int") (reparse-symbol classsubparts) [367 403])
+                    ("OptiTest" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("numValues" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [423 446])
+                            ("numParams" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [447 470]))                          
+                        :type ("OptiTest" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [413 925])
+                    ("OptiTest" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [935 1033])
+                    ("InitTrace" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1043 1079])
+                    ("CallCalculateResidual" function (:type "void") (reparse-symbol classsubparts) [1089 1164])
+                    ("GetResidualVector" function (:type ("precision_vector_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1174 1252])
+                    ("CallCaculateJacobian" function
+                       (:arguments 
+                          ( ("params" variable
+                               (:reference 1
+                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1285 1314]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1258 1363])
+                    ("GetTransposedJacobian" function (:type ("precision_matrix_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1369 1460])
+                    ("IsOptimizerCheckPassed" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1503 1531]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1466 1545])
+                    ("GetCholesky" function (:type ("precision_matrix_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1555 1614])
+                    ("GetWeigthsVector" function
+                       (:constant-flag t
+                        :type ("precision_vector_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1626 1697])
+                    ("SetEstimates" function
+                       (:arguments 
+                          ( ("e_" variable
+                               (:reference 1
+                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1727 1752]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1708 1826])
+                    ("private" label nil (reparse-symbol classsubparts) [1829 1837])
+                    ("UpdateEstimates" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("parameters" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1872 1911]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1842 3213])
+                    ("private" label nil (reparse-symbol classsubparts) [3214 3222]))                  
+                :type "class")
+                nil [266 3227])
+            ("OptimizerTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("OptimizerTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3305 3320]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3285 3321])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Constructor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3372 3390]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3358 3391])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetNumMeasurementValues" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3410 3440]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3396 3441])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetNumParametersToFit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3460 3488]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3446 3489])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_SetGetLambda" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3508 3527]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3494 3528])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_SetGetStep" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3547 3564]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3533 3565])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_SetGetMaxIterationsCount" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3584 3615]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3570 3616])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetCurrentIterationCount" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3635 3666]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3621 3667])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetLambdaExpand" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3686 3708]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3672 3709])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_SetGetShrink" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3728 3747]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3714 3748])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_SetGetTol" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3767 3783]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3753 3784])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_CalculateCholesky" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3803 3827]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3789 3828])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_CholeskyInverse" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3847 3869]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3833 3870])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_CalculateJacobian" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3889 3913]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3875 3914])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetResidual" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3933 3951]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3919 3952])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_RosenBrock" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3971 3988]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3957 3989])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Parabolid" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4008 4024]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3994 4025])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Parabolid2" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4044 4061]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4030 4062])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [4131 4156])
+                    ("numValues" variable (:type "unsigned int") (reparse-symbol classsubparts) [4229 4252])
+                    ("numParamFit" variable (:type "unsigned int") (reparse-symbol classsubparts) [4257 4282])
+                    ("dut" variable
+                       (:pointer 1
+                        :type ("OptiTest" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4292 4307])
+                    ("public" label nil (reparse-symbol classsubparts) [4309 4316])
+                    ("setUp" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [4322 4475])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [4481 4575])
+                    ("test_Constructor" function (:type "void") (reparse-symbol classsubparts) [4585 4685])
+                    ("test_GetNumMeasurementValues" function (:type "void") (reparse-symbol classsubparts) [4691 4809])
+                    ("test_GetNumParametersToFit" function (:type "void") (reparse-symbol classsubparts) [4819 4935])
+                    ("test_SetGetLambda" function (:type "void") (reparse-symbol classsubparts) [4945 5222])
+                    ("test_SetGetStep" function (:type "void") (reparse-symbol classsubparts) [5232 5499])
+                    ("test_SetGetMaxIterationsCount" function (:type "void") (reparse-symbol classsubparts) [5505 5762])
+                    ("test_GetCurrentIterationCount" function (:type "void") (reparse-symbol classsubparts) [5768 5880])
+                    ("test_GetLambdaExpand" function (:type "void") (reparse-symbol classsubparts) [5890 6007])
+                    ("test_SetGetShrink" function (:type "void") (reparse-symbol classsubparts) [6017 6608])
+                    ("test_SetGetTol" function (:type "void") (reparse-symbol classsubparts) [6618 6907])
+                    ("test_CalculateCholesky" function (:type "void") (reparse-symbol classsubparts) [6913 10529])
+                    ("test_CholeskyInverse" function (:type "void") (reparse-symbol classsubparts) [10539 13102])
+                    ("test_GetResidual" function (:type "void") (reparse-symbol classsubparts) [13112 15041])
+                    ("test_Parabolid" function (:type "void") (reparse-symbol classsubparts) [15051 16054])
+                    ("test_Parabolid2" function (:type "void") (reparse-symbol classsubparts) [16064 17427])
+                    ("test_RosenBrock" function (:type "void") (reparse-symbol classsubparts) [17442 19046])
+                    ("test_CalculateJacobian" function (:type "void") (reparse-symbol classsubparts) [19057 22341]))                  
+                :type "class")
+                nil [3230 22344]))          
+      :file "test_optimizer.hpp"
+      :pointmax 22379
+      :fsize 22378
+      :lastmodtime '(21151 2774 602313 660000)
+      :unmatched-syntax '((string 4188 . 4215) (symbol 4180 . 4187) (symbol 4169 . 4179) (symbol 4165 . 4168) (symbol 4158 . 4164) (punctuation 4157 . 4158) (string 4099 . 4126) (symbol 4091 . 4098) (symbol 4080 . 4090) (symbol 4076 . 4079) (symbol 4069 . 4075) (punctuation 4068 . 4069) (punctuation 1826 . 1827) (punctuation 1697 . 1698) (punctuation 1615 . 1616))
+      :lexical-table 
+        '(("TEST_OPTIMIZER_HPP_")
+          )
+)
+    (semanticdb-table "test_optimizerNeedle.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_OPTIMIZERNEEDLE_HPP_" variable (:constant-flag t) nil [138 163])
+            ("../nd_constants.hpp" include nil nil [165 195])
+            ("../nd_optimizerNeedle.hpp" include nil nil [196 232])
+            ("../nd_needleModel.hpp" include nil nil [233 265])
+            ("../nd_processingBuffer.hpp" include nil nil [277 314])
+            ("../nd_sensor.hpp" include nil nil [315 342])
+            ("../NeedleSensorsPositions.hpp" include nil nil [343 383])
+            ("iostream" include (:system-flag t) nil [385 404])
+            ("cmath" include (:system-flag t) nil [405 421])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [439 483])
+            ("ndt" using (:type ("ndt" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [485 505])
+            ("OptimizerNeedleTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("OptimizerNeedleTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [588 609]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [568 610])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Constructor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [652 670]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [638 671])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_SetGetValidConstrainVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [691 724]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [677 725])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetWeights" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [744 761]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [730 762])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetBiggestFieldSensorIndex" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [781 814]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [767 815])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_SetInitialNeedle" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [834 857]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [820 858])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_CalculateNeedle_PerfectMatch" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [877 912]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [863 913])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetGradientSqAmplitude" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [932 961]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [918 962])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_NeedleInCircularMovement_KeepNeedleTracking" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [981 1031]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [967 1032])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_NeedleInCircularMovement_WithRandomInitialNeedle" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1051 1106]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1037 1107])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_NeedleInCircularMovement_KeepNeedleTracking_SomeInvalidSensors" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1126 1195]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1112 1196])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_NeedleInCircularMovement_WithRandomInitialNeedle_SomeInvalidSensors" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1215 1289]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1201 1290])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1338 1363])
+                    ("dut" variable
+                       (:pointer 1
+                        :type ("OptimizerNeedle" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1369 1391])
+                    ("numValues" variable (:type "unsigned int") (reparse-symbol classsubparts) [1397 1420])
+                    ("numConstrains" variable (:type "unsigned int") (reparse-symbol classsubparts) [1425 1452])
+                    ("numParamFit" variable (:type "unsigned int") (reparse-symbol classsubparts) [1457 1482])
+                    ("tol" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1488 1504])
+                    ("length" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1509 1528])
+                    ("magnetization" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1533 1559])
+                    ("validConstrains" variable (:type ("bool_vector_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1565 1600])
+                    ("constrainWeights" variable (:type ("precision_vector_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1605 1641])
+                    ("public" label nil (reparse-symbol classsubparts) [1643 1650])
+                    ("setUp" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1656 2241])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [2247 2365])
+                    ("test_Constructor" function (:type "void") (reparse-symbol classsubparts) [2371 2504])
+                    ("test_SetGetValidConstrainVector" function (:type "void") (reparse-symbol classsubparts) [2510 4395])
+                    ("test_GetWeights" function (:type "void") (reparse-symbol classsubparts) [4401 6256])
+                    ("test_GetBiggestFieldSensorIndex" function (:type "void") (reparse-symbol classsubparts) [6262 7894])
+                    ("test_SetInitialNeedle" function (:type "void") (reparse-symbol classsubparts) [7904 9816])
+                    ("test_CalculateNeedle_PerfectMatch" function (:type "void") (reparse-symbol classsubparts) [9823 13658])
+                    ("test_GetGradientSqAmplitude" function (:type "void") (reparse-symbol classsubparts) [13668 15088])
+                    ("helper_NeedleInCircularMovement" function
+                       (:arguments 
+                          ( ("reusePreviousNeedle" variable (:type "bool") (reparse-symbol arg-sub-list) [15145 15170])
+                            ("disableSensors" variable (:type "bool") (reparse-symbol arg-sub-list) [15171 15201]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [15098 23633])
+                    ("test_NeedleInCircularMovement_KeepNeedleTracking" function (:type "void") (reparse-symbol classsubparts) [23640 23800])
+                    ("test_NeedleInCircularMovement_KeepNeedleTracking_SomeInvalidSensors" function (:type "void") (reparse-symbol classsubparts) [23806 23974])
+                    ("test_NeedleInCircularMovement_WithRandomInitialNeedle_SomeInvalidSensors" function (:type "void") (reparse-symbol classsubparts) [23980 24128])
+                    ("test_NeedleInCircularMovement_WithRandomInitialNeedle" function (:type "void") (reparse-symbol classsubparts) [24138 24293])
+                    ("test_VerifyTracer" function (:type "void") (reparse-symbol classsubparts) [24300 31239]))                  
+                :type "class")
+                nil [507 31247]))          
+      :file "test_optimizerNeedle.hpp"
+      :pointmax 31289
+      :fsize 31288
+      :lastmodtime '(21432 1265 830444 673000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_OPTIMIZERNEEDLE_HPP_")
+          )
+)
+    (semanticdb-table "test_needleModel.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_NEEDLEMODEL_HPP_" variable (:constant-flag t) nil [135 156])
+            ("../nd_needleModel.hpp" include nil nil [159 191])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [193 237])
+            ("NeedleModelTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("NeedleModelTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [317 334]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [297 335])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetParamsReference" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [378 403]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [364 404])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_SetParams" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [423 439]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [409 440])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_SetParamsAndLengths" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [459 485]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [445 486])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_SetParamsOverloaded" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [505 531]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [491 532])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_SetParamsThrows" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [551 573]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [537 574])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetNeedleTip" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [593 612]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [579 613])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetNeedleEnd" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [632 651]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [618 652])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetNeedleMiddle" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [671 693]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [657 694])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetRealNeedle" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [713 733]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [699 734])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetNeedleCenter" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [753 775]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [739 776])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetNeedleMagnetizationFirstDipole" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [795 834]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [781 835])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetNeedleMagnetizationSecondDipole" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [858 898]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [844 899])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetNeedleLength" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [918 940]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [904 941])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetSphericalCoordinates" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [960 990]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [946 991])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Set_Get_ResidualArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1010 1038]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [996 1039])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetUnarySquareModulus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1058 1086]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1044 1087])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1152 1177])
+                    ("dut" variable
+                       (:pointer 1
+                        :type ("NeedleModel" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1246 1264])
+                    ("numberOfParameters" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1270 1296])
+                    ("public" label nil (reparse-symbol classsubparts) [1298 1305])
+                    ("setUp" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1311 1410])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [1416 1520])
+                    ("test_GetParamsReference" function (:type "void") (reparse-symbol classsubparts) [1527 1813])
+                    ("test_SetParams" function (:type "void") (reparse-symbol classsubparts) [1820 2911])
+                    ("test_SetParamsAndLengths" function (:type "void") (reparse-symbol classsubparts) [2917 3464])
+                    ("test_SetParamsOverloaded" function (:type "void") (reparse-symbol classsubparts) [3471 3787])
+                    ("test_SetParamsThrows" function (:type "void") (reparse-symbol classsubparts) [3793 4150])
+                    ("test_GetNeedleTip" function (:type "void") (reparse-symbol classsubparts) [4156 4754])
+                    ("test_GetNeedleEnd" function (:type "void") (reparse-symbol classsubparts) [4760 5377])
+                    ("test_GetNeedleMiddle" function (:type "void") (reparse-symbol classsubparts) [5383 6170])
+                    ("test_GetRealNeedle" function (:type "void") (reparse-symbol classsubparts) [6176 7893])
+                    ("test_GetNeedleCenter" function (:type "void") (reparse-symbol classsubparts) [7903 8351])
+                    ("test_GetNeedleMagnetizationFirstDipole" function (:type "void") (reparse-symbol classsubparts) [8373 8767])
+                    ("test_GetNeedleMagnetizationSecondDipole" function (:type "void") (reparse-symbol classsubparts) [8773 9169])
+                    ("test_GetNeedleLength" function (:type "void") (reparse-symbol classsubparts) [9176 9674])
+                    ("test_GetSphericalCoordinates" function (:type "void") (reparse-symbol classsubparts) [9681 11316])
+                    ("test_Set_Get_ResidualArray" function (:type "void") (reparse-symbol classsubparts) [11326 11747])
+                    ("test_GetUnarySquareModulus" function (:type "void") (reparse-symbol classsubparts) [11753 12544]))                  
+                :type "class")
+                nil [240 12550]))          
+      :file "test_needleModel.hpp"
+      :pointmax 12588
+      :fsize 12587
+      :lastmodtime '(21214 13801 968452 973000)
+      :unmatched-syntax '((string 1209 . 1236) (symbol 1201 . 1208) (symbol 1190 . 1200) (symbol 1186 . 1189) (symbol 1179 . 1185) (punctuation 1178 . 1179) (string 1120 . 1147) (symbol 1112 . 1119) (symbol 1101 . 1111) (symbol 1097 . 1100) (symbol 1090 . 1096) (punctuation 1089 . 1090) (punctuation 12550 . 12551) (close-paren 12549 . 12550) (semantic-list 291 . 12545) (symbol 279 . 290) (punctuation 278 . 279) (punctuation 277 . 278) (symbol 270 . 277) (PUBLIC 263 . 269) (punctuation 261 . 262) (symbol 246 . 261) (CLASS 240 . 245) (number 12531 . 12535) (semantic-list 12527 . 12529) (punctuation 12505 . 12506) (punctuation 12504 . 12505) (number 12496 . 12499) (punctuation 12455 . 12456) (string 1209 . 1236) (symbol 1201 . 1208) (symbol 1190 . 1200) (symbol 1186 . 1189) (symbol 1179 . 1185) (punctuation 1178 . 1179) (string 1120 . 1147) (symbol 1112 . 1119) (symbol 1101 . 1111) (symbol 1097 . 1100) (symbol 1090 . 1096) (punctuation 1089 . 1090) (number 12531 . 12535) (semantic-list 12527 . 12529) (punctuation 12505 . 12506) (punctuation 12504 . 12505) (number 12496 . 12499) (punctuation 12455 . 12456) (string 1209 . 1236) (symbol 1201 . 1208) (symbol 1190 . 1200) (symbol 1186 . 1189) (symbol 1179 . 1185) (punctuation 1178 . 1179) (string 1120 . 1147) (symbol 1112 . 1119) (symbol 1101 . 1111) (symbol 1097 . 1100) (symbol 1090 . 1096) (punctuation 1089 . 1090) (number 12531 . 12535) (semantic-list 12527 . 12529) (punctuation 12505 . 12506) (punctuation 12504 . 12505) (number 12496 . 12499) (punctuation 12455 . 12456))
+      :lexical-table 
+        '(("TEST_NEEDLEMODEL_HPP_")
+          )
+)
+    (semanticdb-table "test_needleField.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_NEEDLEFIELD_HPP_" variable (:constant-flag t) nil [171 192])
+            ("../nd_needleField.hpp" include nil nil [194 226])
+            ("../nd_needleModelIface.hpp" include nil nil [227 264])
+            ("algorithm" include (:system-flag t) nil [266 286])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [288 332])
+            ("iostream" include (:system-flag t) nil [334 353])
+            ("test_same_sensor_pos" type
+               (:members 
+                  ( ("x" variable
+                       (:dereference 2
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol namespacesubparts) [389 1081])
+                    ("y" variable
+                       (:dereference 2
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol namespacesubparts) [1083 1791])
+                    ("z" variable
+                       (:dereference 2
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol namespacesubparts) [1793 2478]))                  
+                :type "namespace")
+                nil [355 2481])
+            ("test_paralel_sensor_pos" type
+               (:members 
+                  ( ("x" variable
+                       (:dereference 2
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol namespacesubparts) [2520 3249])
+                    ("y" variable
+                       (:dereference 2
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol namespacesubparts) [3251 3961])
+                    ("z" variable
+                       (:dereference 2
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol namespacesubparts) [3963 4673]))                  
+                :type "namespace")
+                nil [2483 4676])
+            ("test_real_sensor_pos" type
+               (:members 
+                  ( ("x" variable
+                       (:dereference 2
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol namespacesubparts) [4712 5398])
+                    ("y" variable
+                       (:dereference 2
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol namespacesubparts) [5400 6086])
+                    ("z" variable
+                       (:dereference 2
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol namespacesubparts) [6088 6774]))                  
+                :type "namespace")
+                nil [4678 6777])
+            ("NeedleFieldAccessor" type
+               (:superclasses 
+                  ( ("NeedleField" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [6828 6835])
+                    ("NeedleFieldAccessor" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("numSensors" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [6861 6886]))                          
+                        :type ("NeedleFieldAccessor" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6840 6940])
+                    ("CalculateNormDist" function
+                       (:arguments 
+                          ( ("sensorPosition" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SensorPosArr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6971 7007])
+                            ("point" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("precision_vector_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7037 7070])
+                            ("component" variable
+                               (:constant-flag t
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [7100 7130]))                          
+                        :type "float")
+                        (reparse-symbol classsubparts) [6946 7230])
+                    ("CalculateMagField" function
+                       (:arguments 
+                          ( ("sensorPosition" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SensorPosArr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7261 7297])
+                            ("needle" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("NeedleModel" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7341 7368])
+                            ("firstDipoleMag" variable
+                               (:constant-flag t
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7412 7445])
+                            ("secondDipoleMag" variable
+                               (:constant-flag t
+                                :type ("precision_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7489 7523])
+                            ("component" variable
+                               (:constant-flag t
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [7567 7597]))                          
+                        :type "float")
+                        (reparse-symbol classsubparts) [7236 7911]))                  
+                :type "class")
+                nil [6779 7919])
+            ("NeedleFieldTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("NeedleFieldTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7999 8016]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7979 8017])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_CalculateNormDist" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8068 8092]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [8054 8093])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_CalculateMagField" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8112 8136]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [8098 8137])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetField" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8157 8172]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [8143 8173])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetField_ReverseNeedle" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8192 8221]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [8178 8222])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_GetField_realData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8241 8265]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [8227 8266])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [8335 8360])
+                    ("numChannels" variable (:type "unsigned int") (reparse-symbol classsubparts) [8433 8458])
+                    ("dut" variable
+                       (:pointer 1
+                        :type ("NeedleFieldAccessor" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8468 8494])
+                    ("public" label nil (reparse-symbol classsubparts) [8500 8507])
+                    ("setUp" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [8517 8665])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [8671 8765])
+                    ("test_CalculateNormDist" function (:type "void") (reparse-symbol classsubparts) [8771 10566])
+                    ("test_CalculateMagField" function (:type "void") (reparse-symbol classsubparts) [10572 13658])
+                    ("test_GetField" function (:type "void") (reparse-symbol classsubparts) [13670 18079])
+                    ("test_GetField_ReverseNeedle" function (:type "void") (reparse-symbol classsubparts) [18085 20027])
+                    ("test_GetField_realData" function (:type "void") (reparse-symbol classsubparts) [20033 21682]))                  
+                :type "class")
+                nil [7922 21686]))          
+      :file "test_needleField.hpp"
+      :pointmax 21723
+      :fsize 21722
+      :lastmodtime '(21210 53654 162375 911000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_NEEDLEFIELD_HPP_")
+          )
+)
+    (semanticdb-table "test_inputSupervisor.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_INPUTSUPERVISOR_HPP_" variable (:constant-flag t) nil [139 164])
+            ("../nd_inputSupervisor.hpp" include nil nil [167 203])
+            ("../nd_processingBuffer.hpp" include nil nil [204 241])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [243 287])
+            ("InputSupervisorTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("InputSupervisorTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [368 389]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [348 390])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_CheckInputValues" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [441 464]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [427 465])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [576 601])
+                    ("dut" variable
+                       (:pointer 1
+                        :type ("InputSupervisor" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [669 691])
+                    ("noiseLevel" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [694 717])
+                    ("SetBrokenSensor" function
+                       (:arguments 
+                          ( ("buffer" variable
+                               (:reference 1
+                                :type ("ProcessingBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [742 768])
+                            ("sensor" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [769 787]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [720 1001])
+                    ("ResetBrokenSensor" function
+                       (:arguments 
+                          ( ("buffer" variable
+                               (:reference 1
+                                :type ("ProcessingBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1031 1057])
+                            ("sensor" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1058 1076]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1007 1354])
+                    ("public" label nil (reparse-symbol classsubparts) [1356 1363])
+                    ("setUp" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1367 1496])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [1499 1560])
+                    ("test_CheckInputValues" function (:type "void") (reparse-symbol classsubparts) [1563 3162]))                  
+                :type "class")
+                nil [290 3166]))          
+      :file "test_inputSupervisor.hpp"
+      :pointmax 3209
+      :fsize 3208
+      :lastmodtime '(21151 2399 713390 317000)
+      :unmatched-syntax '((string 633 . 660) (symbol 625 . 632) (symbol 614 . 624) (symbol 610 . 613) (symbol 603 . 609) (punctuation 602 . 603) (string 544 . 571) (symbol 536 . 543) (symbol 525 . 535) (symbol 521 . 524) (symbol 514 . 520) (punctuation 513 . 514) (string 633 . 660) (symbol 625 . 632) (symbol 614 . 624) (symbol 610 . 613) (symbol 603 . 609) (punctuation 602 . 603) (string 544 . 571) (symbol 536 . 543) (symbol 525 . 535) (symbol 521 . 524) (symbol 514 . 520) (punctuation 513 . 514))
+      :lexical-table 
+        '(("TEST_INPUTSUPERVISOR_HPP_")
+          )
+)
+    (semanticdb-table "test_outputSupervisor.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_OUTPUTSUPERVISOR_HPP_" variable (:constant-flag t) nil [141 167])
+            ("../nd_outputSupervisor.hpp" include nil nil [169 206])
+            ("../nd_optimizerNeedle.hpp" include nil nil [207 243])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [245 289])
+            ("OutputSupervisorTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("OutputSupervisorTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [374 396]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [354 397])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Constructor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [457 475]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [443 476])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_CheckNeedleDetected_AllConstrainsAreOff" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [495 541]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [481 542])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_CoordinatesMagnitudeCheck" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [561 607]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [547 608])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_NeedleLengthCheck" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [627 673]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [613 674])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_NeedleMagnetizationCheck" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [693 739]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [679 740])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_NeedleResidualCheck_aboveTh" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [759 805]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [745 806])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_NeedleResidualCheck_nan" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [825 871]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [811 872])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [988 1013])
+                    ("dut" variable
+                       (:pointer 1
+                        :type ("OutputSupervisor" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1084 1107])
+                    ("probeLength" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1113 1137])
+                    ("probeWidth" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1142 1165])
+                    ("probeHeight" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1170 1194])
+                    ("maxCoord" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1200 1221])
+                    ("minNeedleLength" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1227 1255])
+                    ("maxNeedleLength" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1260 1288])
+                    ("minNeedleMagnetization" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1294 1329])
+                    ("maxNeedleMagnetization" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1334 1369])
+                    ("safeMag" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1374 1394])
+                    ("firstDipoleLength" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1404 1434])
+                    ("secondDipoleLength" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1439 1470])
+                    ("needleLength" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1475 1500])
+                    ("firstDipoleMag" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1510 1537])
+                    ("secondDipoleMag" variable (:type ("precision_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1542 1570])
+                    ("public" label nil (reparse-symbol classsubparts) [1573 1580])
+                    ("setUp" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1587 2574])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [2580 2674])
+                    ("test_Constructor" function (:type "void") (reparse-symbol classsubparts) [2684 2719])
+                    ("test_CheckNeedleDetected_AllConstrainsAreOff" function (:type "void") (reparse-symbol classsubparts) [2725 2979])
+                    ("test_CoordinatesMagnitudeCheck" function (:type "void") (reparse-symbol classsubparts) [2986 6318])
+                    ("test_NeedleLengthCheck" function (:type "void") (reparse-symbol classsubparts) [6324 8148])
+                    ("test_NeedleMagnetizationCheck" function (:type "void") (reparse-symbol classsubparts) [8155 10064])
+                    ("test_NeedleResidualCheck_aboveTh" function (:type "void") (reparse-symbol classsubparts) [10071 10608])
+                    ("test_NeedleResidualCheck_nan" function (:type "void") (reparse-symbol classsubparts) [10619 11153]))                  
+                :type "class")
+                nil [292 11156]))          
+      :file "test_outputSupervisor.hpp"
+      :pointmax 11200
+      :fsize 11199
+      :lastmodtime '(21210 53511 943589 945000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_OUTPUTSUPERVISOR_HPP_")
+          )
+)
+    (semanticdb-table "test_inputBuffer.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_INPUTBUFFER_HPP_" variable (:constant-flag t) nil [131 152])
+            ("../nd_inputBuffer.hpp" include nil nil [154 186])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [187 231])
+            ("algorithm" include (:system-flag t) nil [233 253])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [255 275])
+            ("InputBufferTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("InputBufferTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [351 368]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [331 369])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Constructor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [420 438]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [406 439])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [550 575])
+                    ("dut" variable
+                       (:pointer 1
+                        :type ("InputBuffer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [641 659])
+                    ("public" label nil (reparse-symbol classsubparts) [661 668])
+                    ("setUp" function (:type "void") (reparse-symbol classsubparts) [671 724])
+                    ("tearDown" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [727 797])
+                    ("test_Constructor" function (:type "void") (reparse-symbol classsubparts) [800 1273]))                  
+                :type "class")
+                nil [277 1278]))          
+      :file "test_inputBuffer.hpp"
+      :pointmax 1315
+      :fsize 1314
+      :lastmodtime '(21151 2383 105259 902000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_INPUTBUFFER_HPP_")
+          )
+)
+    (semanticdb-table "test_inputBufferManager.hpp"
+      :file "test_inputBufferManager.hpp"
+      :fsize 6345
+      :lastmodtime '(21148 31849 682134 235000))
+    (semanticdb-table "test_processingBuffer.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_PROCESSINGBUFFER_HPP_" variable (:constant-flag t) nil [141 167])
+            ("../nd_processingBuffer.hpp" include nil nil [169 206])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [207 251])
+            ("algorithm" include (:system-flag t) nil [253 273])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [275 295])
+            ("ProcessingBufferTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ProcessingBufferTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [438 460]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [418 461])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Constructor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [584 602]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [570 603])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_ValidateMeasurements" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [622 649]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [608 650])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_CalculateGradient_AllSensorsInvalid" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [669 711]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [655 712])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_CalculateGradient_OnlyOneSensorValid" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [731 774]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [717 775])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_CalculateGradient_MoreThanOneSensorValid" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [794 841]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [780 842])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_InitializeWitInputBuffer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [861 892]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [847 893])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_ZeroGradient" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [912 931]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [898 932])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1048 1073])
+                    ("dut" variable
+                       (:pointer 1
+                        :type ("ProcessingBuffer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1137 1160])
+                    ("public" label nil (reparse-symbol classsubparts) [1162 1169])
+                    ("setUp" function (:type "void") (reparse-symbol classsubparts) [1175 1253])
+                    ("tearDown" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1259 1372])
+                    ("test_Constructor" function (:type "void") (reparse-symbol classsubparts) [1378 1991])
+                    ("test_ValidateMeasurements" function (:type "void") (reparse-symbol classsubparts) [1997 2943])
+                    ("test_CalculateGradient_AllSensorsInvalid" function (:type "void") (reparse-symbol classsubparts) [2949 3518])
+                    ("test_CalculateGradient_OnlyOneSensorValid" function (:type "void") (reparse-symbol classsubparts) [3524 4444])
+                    ("test_CalculateGradient_MoreThanOneSensorValid" function (:type "void") (reparse-symbol classsubparts) [4451 5986])
+                    ("test_InitializeWitInputBuffer" function (:type "void") (reparse-symbol classsubparts) [5993 8330])
+                    ("test_ZeroGradient" function (:type "void") (reparse-symbol classsubparts) [8336 10050]))                  
+                :type "class")
+                nil [297 10054]))          
+      :file "test_processingBuffer.hpp"
+      :pointmax 10095
+      :fsize 10094
+      :lastmodtime '(21210 53811 527251 80000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_PROCESSINGBUFFER_HPP_")
+          )
+)
+    (semanticdb-table "test_calibration.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CALIBRATION_HPP_" variable (:constant-flag t) nil [130 151])
+            ("iostream" include (:system-flag t) nil [153 172])
+            ("../nd_calibration.hpp" include nil nil [174 206])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [208 252])
+            ("CalibrationTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("CalibrationTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [391 408]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [371 409])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_Constructor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 527]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [495 528])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_CalibrateInput" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [544 565]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [530 566])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test_UpdateCalibrationData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [585 613]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [571 614])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [680 705])
+                    ("dut" variable
+                       (:pointer 1
+                        :type ("Calibration" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [771 789])
+                    ("public" label nil (reparse-symbol classsubparts) [791 798])
+                    ("setUp" function (:type "void") (reparse-symbol classsubparts) [801 847])
+                    ("tearDown" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [850 893])
+                    ("test_Constructor" function (:type "void") (reparse-symbol classsubparts) [896 955])
+                    ("test_CalibrateInput" function (:type "void") (reparse-symbol classsubparts) [958 1799])
+                    ("test_UpdateCalibrationData" function (:type "void") (reparse-symbol classsubparts) [1805 2829]))                  
+                :type "class")
+                nil [254 2833]))          
+      :file "test_calibration.hpp"
+      :pointmax 2871
+      :fsize 2870
+      :lastmodtime '(21151 2254 210776 525000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CALIBRATION_HPP_")
+          )
+)
+    (semanticdb-table "test_adaptiveSmoother.hpp"
+      :file "test_adaptiveSmoother.hpp"
+      :fsize 2859
+      :lastmodtime '(21148 31849 680134 208000))
+    (semanticdb-table "test_FastMath.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("../FastMath.hpp" include nil nil [349 375])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [377 421])
+            ("test_FastMath" type
+               (:members 
+                  ( ("FastMathTest" type
+                       (:superclasses 
+                          ( ("CppUnit::TestFixture" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [502 509])
+                            ("setUp" function
+                               (:typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [514 546])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [552 579])
+                            ("private" label nil (reparse-symbol classsubparts) [582 590])
+                            ("CPPUNIT_TEST_SUITE" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("FastMathTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [616 630]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [596 631])
+                            ("CPPUNIT_TEST" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("test_CalculatePower" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [678 699]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [664 700])
+                            ("CPPUNIT_TEST" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("test_CalculateInvSqrt_invalidData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [719 754]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [705 755])
+                            ("CPPUNIT_TEST" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("test_CalculateInvSqrt_validData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [774 807]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [760 808])
+                            ("CPPUNIT_TEST" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("test_CalculateInverseNormalizationFactor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [827 869]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [813 870])
+                            ("CPPUNIT_TEST_SUITE_END" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [939 964])
+                            ("test_CalculatePower" function (:type "void") (reparse-symbol classsubparts) [1037 2410])
+                            ("test_CalculateInvSqrt_invalidData" function (:type "void") (reparse-symbol classsubparts) [2420 3214])
+                            ("test_CalculateInvSqrt_validData" function (:type "void") (reparse-symbol classsubparts) [3224 4236])
+                            ("test_CalculateInverseNormalizationFactor" function (:type "void") (reparse-symbol classsubparts) [4242 6068]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [451 6076]))                  
+                :type "namespace")
+                nil [423 6079]))          
+      :file "test_FastMath.hpp"
+      :pointmax 6110
+      :fsize 6109
+      :lastmodtime '(21151 2854 922251 884000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!achill!b_field_model_with_two_poles!unittest!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

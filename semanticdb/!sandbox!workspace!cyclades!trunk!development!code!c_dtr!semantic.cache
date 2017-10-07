@@ -1,0 +1,121 @@
+;; Object c_dtr/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "c_dtr/"
+  :tables
+  (list
+    (semanticdb-table "core_dtr_dependencysetiface.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CORE_DTR_DEPENDENCYSETIFACE_HPP" variable (:constant-flag t) nil [791 822])
+            ("core_bty_commontypes.hpp" include nil nil [898 933])
+            ("core_dtr_dependencydef.hpp" include nil nil [935 972])
+            ("boost/noncopyable.hpp" include (:system-flag t) nil [974 1006])
+            ("ezono" type
+               (:members 
+                  ( ("core" type
+                       (:members 
+                          ( ("dtr" type
+                               (:members 
+                                  ( ("ChangeTrackingMixedSet" type
+                                       (:prototype t
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [1211 1240])
+                                    ("DependencySetIface" type
+                                       (:superclasses 
+                                          ( ("boost::noncopyable" type
+                                               (:protection "private"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("AddDependency" function
+                                               (:template 
+                                                  ( ("Function" type (:type "class") nil nil))                                                  
+                                                :type "void"
+                                                :arguments 
+                                                  ( ("dependencies" variable
+                                                       (:reference 1
+                                                        :type ("DependencySetIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1865 1902])
+                                                    ("dependencyAlgorithm" variable (:type ("Function" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1915 1968]))                                                  
+                                                :prototype-flag t)
+                                                (reparse-symbol classsubparts) [1787 1969])
+                                            ("public" label nil (reparse-symbol classsubparts) [1975 1982])
+                                            ("DependencySetIface" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :type ("DependencySetIface" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [1992 2013])
+                                            ("DependencySetIface" function
+                                               (:prototype-flag t
+                                                :destructor-flag t
+                                                :typemodifiers ("virtual")
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2023 2053])
+                                            ("Restore" function
+                                               (:pure-virtual-flag t
+                                                :prototype-flag t
+                                                :typemodifiers ("virtual")
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2082 2109])
+                                            ("private" label nil (reparse-symbol classsubparts) [2115 2123])
+                                            ("AddDependencyObject" function
+                                               (:pure-virtual-flag t
+                                                :prototype-flag t
+                                                :typemodifiers ("virtual")
+                                                :arguments 
+                                                  ( ("dependency" variable (:type ("BaseDepDefPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2167 2193]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2133 2198])
+                                            ("DataBag" function
+                                               (:pure-virtual-flag t
+                                                :prototype-flag t
+                                                :typemodifiers ("virtual")
+                                                :type ("ChangeTrackingMixedSet" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2208 2255]))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [1617 2259])
+                                    ("AddDependency" function
+                                       (:template 
+                                          ( ("Function" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("dependencies" variable
+                                               (:reference 1
+                                                :type ("DependencySetIface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2395 2432])
+                                            ("dependencyAlgorithm" variable (:type ("Function" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2441 2490]))                                          
+                                        :prototype-flag t)
+                                        (reparse-symbol namespacesubparts) [2336 2491])
+                                    ("AddDependency" function
+                                       (:template 
+                                          ( ("Function" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("dependencies" variable
+                                               (:reference 1
+                                                :type ("DependencySetIface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2859 2896])
+                                            ("dependencyAlgorithm" variable (:type ("Function" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2905 2954]))                                          )
+                                        (reparse-symbol namespacesubparts) [2800 3201]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1120 3204]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1102 3224]))                  
+                :type "namespace")
+                nil [1083 3245]))          
+      :file "core_dtr_dependencysetiface.hpp"
+      :pointmax 3357
+      :fsize 3356
+      :lastmodtime '(20908 20966 656279 560000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CORE_DTR_DEPENDENCYSETIFACE_HPP")
+          )
+)
+    (semanticdb-table "core_dtr_dependencydef.hpp"
+      :file "core_dtr_dependencydef.hpp"
+      :fsize 7225
+      :lastmodtime '(20908 20966 824281 429000)))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!c_dtr!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,452 @@
+;; Object a_sncco/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_sncco/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_sncco_calibrationdatalinereader.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_sncco_calibrationdatalinereader.hpp" include nil nil [776 828])
+            ("ccapp_snccm_constants.hpp" include nil nil [830 866])
+            ("ccapp_sdf_needledata.hpp" include nil nil [868 903])
+            ("core_log_logmsg.hpp" include nil nil [905 935])
+            ("algorithm" include (:system-flag t) nil [937 957])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("sncco" type
+                               (:members 
+                                  ( ("core" using (:type ("core" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1091 1112])
+                                    ("core::log" using (:type ("core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1113 1139])
+                                    ("CalibrationDataLineReader" function
+                                       (:constructor-flag t
+                                        :parent "CalibrationDataLineReader"
+                                        :arguments 
+                                          ( ("memParameters" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("MemoryManagerParameters" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2012 2059]))                                          
+                                        :type ("CalibrationDataLineReader" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1942 2116])
+                                    ("CalibrationDataLineReader" function
+                                       (:destructor-flag t
+                                        :parent "CalibrationDataLineReader"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2228 2287])
+                                    ("InitializeDataBuffer" function
+                                       (:parent "CalibrationDataLineReader"
+                                        :arguments 
+                                          ( ("buffer" variable
+                                               (:reference 1
+                                                :type ("DataBufferType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2512 2537]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2458 2724])
+                                    ("FillDataBuffer" function
+                                       (:parent "CalibrationDataLineReader"
+                                        :arguments 
+                                          ( ("currentLine" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :constant-flag t
+                                                :type ("fea::NdlLine" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3026 3070])
+                                            ("buffer" variable
+                                               (:reference 1
+                                                :type ("DataBufferType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3102 3127]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2962 4281]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1072 4730]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1053 4752]))                  
+                :type "namespace")
+                nil [1034 4774]))          
+      :file "ccapp_sncco_calibrationdatalinereader.cpp"
+      :pointmax 4850
+      :fsize 4712
+      :lastmodtime '(21769 41042 846282 753000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_sncco_calibrationdatalinereader.hpp"
+      :file "ccapp_sncco_calibrationdatalinereader.hpp"
+      :fsize 2467
+      :lastmodtime '(21390 53301 88513 254000))
+    (semanticdb-table "ccapp_sncco_calibrationmatrixlinereader.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_sncco_calibrationmatrixlinereader.hpp" include nil nil [770 824])
+            ("ccapp_snccm_constants.hpp" include nil nil [826 862])
+            ("ccapp_sdf_needledata.hpp" include nil nil [864 899])
+            ("core_log_logmsg.hpp" include nil nil [901 931])
+            ("algorithm" include (:system-flag t) nil [933 953])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("sncco" type
+                               (:members 
+                                  ( ("core" using (:type ("core" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1087 1108])
+                                    ("core::log" using (:type ("core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1109 1135])
+                                    ("CalibrationMatrixLineReader" function
+                                       (:constructor-flag t
+                                        :parent "CalibrationMatrixLineReader"
+                                        :arguments 
+                                          ( ("memParameters" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("MemoryManagerParameters" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2012 2059]))                                          
+                                        :type ("CalibrationMatrixLineReader" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1938 2116])
+                                    ("CalibrationMatrixLineReader" function
+                                       (:destructor-flag t
+                                        :parent "CalibrationMatrixLineReader"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2228 2291])
+                                    ("InitializeDataBuffer" function
+                                       (:parent "CalibrationMatrixLineReader"
+                                        :arguments 
+                                          ( ("buffer" variable
+                                               (:reference 1
+                                                :type ("DataBufferType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2518 2543]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2462 2788])
+                                    ("FillDataBuffer" function
+                                       (:parent "CalibrationMatrixLineReader"
+                                        :arguments 
+                                          ( ("currentLine" variable
+                                               (:pointer 1
+                                                :typemodifiers ("volatile")
+                                                :constant-flag t
+                                                :type ("fea::NdlLine" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3092 3136])
+                                            ("buffer" variable
+                                               (:reference 1
+                                                :type ("DataBufferType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3168 3193]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [3026 4074]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1068 4523]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1049 4545]))                  
+                :type "namespace")
+                nil [1030 4567]))          
+      :file "ccapp_sncco_calibrationmatrixlinereader.cpp"
+      :pointmax 4645
+      :fsize 4506
+      :lastmodtime '(21878 38833 510394 572000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_sncco_calibrationmatrixlinereader.hpp"
+      :file "ccapp_sncco_calibrationmatrixlinereader.hpp"
+      :fsize 2445
+      :lastmodtime '(21390 53301 84513 233000))
+    (semanticdb-table "ccapp_sncco_ngscalibrationconductor.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_sncco_ngscalibrationconductor.hpp" include nil nil [758 808])
+            ("ccapp_ncm_enum_ngsupdatecontrollerstatus.hpp" include nil nil [810 865])
+            ("ccapp_ngc_commontypes.hpp" include nil nil [867 903])
+            ("ccapp_ngc_enum_sensorstatuscode.hpp" include nil nil [904 950])
+            ("ccapp_snccm_applicationtocontrolevents.hpp" include nil nil [952 1005])
+            ("ccapp_snccm_constants.hpp" include nil nil [1006 1042])
+            ("ccapp_snccm_controltoapplicationevents.hpp" include nil nil [1043 1096])
+            ("ccapp_snccm_enum_ngscalibrationstep.hpp" include nil nil [1097 1147])
+            ("ccapp_sncdm_ngscalibrationmodeliface.hpp" include nil nil [1149 1200])
+            ("ccapp_spr_needledatalinereaderiface.hpp" include nil nil [1202 1252])
+            ("ccapp_stm_ssmmessages.hpp" include nil nil [1254 1290])
+            ("core_cbk_function.hpp" include nil nil [1292 1324])
+            ("core_evt_subscription.hpp" include nil nil [1326 1362])
+            ("core_log_logmsg.hpp" include nil nil [1364 1394])
+            ("core_mvp_eventmaps.hpp" include nil nil [1396 1429])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("sncco" type
+                               (:members 
+                                  ( ("core" using (:type ("core" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1563 1584])
+                                    ("core::log" using (:type ("core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1585 1611])
+                                    ("mvp::controlLayer" using (:type ("mvp::controlLayer" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1613 1647])
+                                    ("EMPTY_SENSORS_LIST" variable
+                                       (:constant-flag t
+                                        :type ("ngc::SensorStatusList" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [1723 1778])
+                                    ("SensorStatusData" type
+                                       (:typedef ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("unsigned int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :superclasses "std::vector"
+                                        :type "typedef")
+                                        (reparse-symbol namespacesubparts) [1854 1907])
+                                    ("Imp" type
+                                       (:parent "NgsCalibrationConductor"
+                                        :members 
+                                          ( ("Imp" function
+                                               (:constructor-flag t
+                                                :arguments 
+                                                  ( ("theModel" variable
+                                                       (:reference 1
+                                                        :type ("sncdm::NgsCalibrationModelIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2291 2334])
+                                                    ("calibrationMatrixLine" variable
+                                                       (:reference 1
+                                                        :type ("spr::NeedleDataLineReaderIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2344 2400])
+                                                    ("calibrationDataLine" variable
+                                                       (:reference 1
+                                                        :type ("spr::NeedleDataLineReaderIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2410 2464])
+                                                    ("eventMaps" variable
+                                                       (:reference 1
+                                                        :type ("mvp::EventMaps" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2474 2519]))                                                  
+                                                :type ("Imp" type (:type "struct") nil nil))
+                                                (reparse-symbol classsubparts) [2286 4009])
+                                            ("Imp" function
+                                               (:destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4015 4033])
+                                            ("OnStartCalibration" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4054 4080])
+                                            ("OnDspStatusUpdated" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("status" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("stm::DspStatusInformation" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4110 4152]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4085 4153])
+                                            ("OnTimer100msTick" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4158 4182])
+                                            ("OnUpdateControllerMessageHandled" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4187 4227])
+                                            ("ReadCalibrationData" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4233 4260])
+                                            ("UpdateCalibrationData" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("part" variable
+                                                       (:constant-flag t
+                                                        :type "unsigned int")
+                                                        (reparse-symbol arg-sub-list) [4293 4314]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4265 4319])
+                                            ("CheckSensorStates" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("buffer" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("snccm::CalibrationData" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4366 4405]))                                                  
+                                                :type ("ngc::SensorStatusList" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [4325 4406])
+                                            ("SetAndPublishRunningStatus" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("step" variable
+                                                       (:constant-flag t
+                                                        :type ("snccm::NgsCalibrationStep" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4445 4483]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4412 4484])
+                                            ("CalibrationFinished" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4489 4516])
+                                            ("CalibrationError" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("sensors" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("ngc::SensorStatusList" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4545 4584]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4522 4585])
+                                            ("LogSensorStates" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("sensors" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("ngc::SensorStatusList" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [4613 4652]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [4591 4653])
+                                            ("model" variable (:type ("sncdm::NgsCalibrationModelIface" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4673 4715])
+                                            ("calibrationMatrixLineReader" variable (:type ("spr::NeedleDataLineReaderIface" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4720 4784])
+                                            ("calibrationDataLineReader" variable (:type ("spr::NeedleDataLineReaderIface" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4789 4851])
+                                            ("readCalibrationDataPublisher" variable (:type ("snccm::events::ReadCalibrationData::PublisherType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4857 4978])
+                                            ("updateCalibrationStatusPublisher" variable (:type ("snccm::events::UpdateCalibrationStatus::PublisherType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4983 5112])
+                                            ("prepareCalibrationMatricesUpdatePublisher" variable (:type ("snccm::events::PrepareCalibrationMatricesUpdate::PublisherType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5117 5264])
+                                            ("eraseOldCalibrationMatricesPublisher" variable (:type ("snccm::events::EraseOldCalibrationMatrices::PublisherType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5269 5406])
+                                            ("updateCalibrationMatricesPublisher" variable (:type ("snccm::events::UpdateCalibrationMatrices::PublisherType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5411 5544])
+                                            ("subscriptions" variable (:type ("std::vector" type
+                                                 (:template-specifier 
+                                                    ( ("evt::Subscription" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [5550 5600]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [2134 5603])
+                                    ("OnStartCalibration" function
+                                       (:parent "NgsCalibrationConductor::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [5814 5999])
+                                    ("OnDspStatusUpdated" function
+                                       (:parent "NgsCalibrationConductor::Imp"
+                                        :arguments 
+                                          ( ("status" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("stm::DspStatusInformation" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6255 6297]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [6184 6335])
+                                    ("OnTimer100msTick" function
+                                       (:parent "NgsCalibrationConductor::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [6468 7546])
+                                    ("OnUpdateControllerMessageHandled" function
+                                       (:parent "NgsCalibrationConductor::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [7697 8427])
+                                    ("ReadCalibrationData" function
+                                       (:parent "NgsCalibrationConductor::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [8567 9929])
+                                    ("UpdateCalibrationData" function
+                                       (:parent "NgsCalibrationConductor::Imp"
+                                        :arguments 
+                                          ( ("part" variable
+                                               (:constant-flag t
+                                                :type "unsigned int")
+                                                (reparse-symbol arg-sub-list) [10156 10177]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [10098 12058])
+                                    ("CheckSensorStates" function
+                                       (:parent "NgsCalibrationConductor::Imp"
+                                        :arguments 
+                                          ( ("buffer" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("snccm::CalibrationData" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [12478 12517]))                                          
+                                        :type ("ngc::SensorStatusList" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [12391 13726])
+                                    ("SetAndPublishRunningStatus" function
+                                       (:parent "NgsCalibrationConductor::Imp"
+                                        :arguments 
+                                          ( ("step" variable
+                                               (:constant-flag t
+                                                :type ("snccm::NgsCalibrationStep" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [14061 14099]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [13982 14399])
+                                    ("CalibrationFinished" function
+                                       (:parent "NgsCalibrationConductor::Imp"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [14557 14950])
+                                    ("CalibrationError" function
+                                       (:parent "NgsCalibrationConductor::Imp"
+                                        :arguments 
+                                          ( ("sensors" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ngc::SensorStatusList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15314 15353]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [15245 15690])
+                                    ("LogSensorStates" function
+                                       (:parent "NgsCalibrationConductor::Imp"
+                                        :arguments 
+                                          ( ("sensors" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ngc::SensorStatusList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [16044 16083]))                                          
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [15976 16446])
+                                    ("NgsCalibrationConductor" function
+                                       (:constructor-flag t
+                                        :parent "NgsCalibrationConductor"
+                                        :arguments 
+                                          ( ("model" variable
+                                               (:reference 1
+                                                :type ("sncdm::NgsCalibrationModelIface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [17291 17331])
+                                            ("calibrationMatrixLineReader" variable
+                                               (:reference 1
+                                                :type ("spr::NeedleDataLineReaderIface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [17348 17410])
+                                            ("calibrationDataLineReader" variable
+                                               (:reference 1
+                                                :type ("spr::NeedleDataLineReaderIface" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [17427 17487])
+                                            ("eventMaps" variable
+                                               (:reference 1
+                                                :type ("mvp::EventMaps" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [17504 17549]))                                          
+                                        :type ("NgsCalibrationConductor" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [17225 17724])
+                                    ("NgsCalibrationConductor" function
+                                       (:destructor-flag t
+                                        :parent "NgsCalibrationConductor"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [17836 17891]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1544 18340]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1525 18362]))                  
+                :type "namespace")
+                nil [1506 18384]))          
+      :file "ccapp_sncco_ngscalibrationconductor.cpp"
+      :pointmax 18458
+      :fsize 18457
+      :lastmodtime '(21407 58611 580382 112000)
+      :unmatched-syntax '((number 4315 . 4316) (punctuation 4313 . 4314)))
+    (semanticdb-table "ccapp_sncco_ngscalibrationconductor.hpp"
+      :file "ccapp_sncco_ngscalibrationconductor.hpp"
+      :fsize 2746
+      :lastmodtime '(21390 53301 44513 27000)))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!a_sncco!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

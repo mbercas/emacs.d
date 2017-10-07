@@ -1,0 +1,1396 @@
+;; Object ext_lut_generator/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ext_lut_generator/"
+  :tables
+  (list
+    (semanticdb-table "ez_logcompress_table.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [230 240])
+            ("numpy" include nil nil [273 332])
+            ("pylab" include nil nil [333 366])
+            ("ez_headerfilewriter" include nil nil [411 452])
+            ("probe_strs" variable nil nil [454 494])
+            ("DEBUG__" variable nil nil [496 507])
+            ("ExtLutCompress" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [571 621])
+                            ("self" variable nil (reparse-symbol indented_block_body) [630 699])
+                            ("self" variable nil (reparse-symbol indented_block_body) [708 740])
+                            ("self" variable nil (reparse-symbol indented_block_body) [749 782])
+                            ("self" code nil (reparse-symbol indented_block_body) [791 830]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [555 559]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [541 831])
+                    ("get_sw_nullcurve" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [858 862]))                          
+                        :documentation "
+        Create a set of 10 curves with lines from zero to 255
+        ")
+                        (reparse-symbol indented_block_body) [836 1384])
+                    ("get_ext_lut_contrast" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1417 1421]))                          
+                        :documentation "
+        Generates the set of curves for 16bit to 8 bit conversion to 
+        be used in the FPGA
+        ")
+                        (reparse-symbol indented_block_body) [1391 3172])
+                    ("get_ext_lut_contrast_pure_log" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3211 3215]))                          
+                        :documentation "
+        Generates the set of curves for 16bit to 8 bit conversion to 
+        be used in the FPGA
+        ")
+                        (reparse-symbol indented_block_body) [3177 6546])
+                    ("gen_fpgalogconstants" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6582 6586]))                          
+                        :documentation "
+        Generates the header files for the intialization of the
+        constant tables for the FPGA log compression.
+        ")
+                        (reparse-symbol indented_block_body) [6556 9351])
+                    ("get_allans" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9381 9385]))                          
+                        :documentation "
+        Generates the set of curves for 16bit to 8 bit conversion to 
+        be used in the FPGA
+        ")
+                        (reparse-symbol indented_block_body) [9366 12294]))                  
+                :type "class")
+                nil [510 12294])
+            ("if" code nil nil [12297 12440]))          
+      :file "ez_logcompress_table.py"
+      :pointmax 12497
+      :fsize 12496
+      :lastmodtime '(20908 20934 513915 177000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ez_headerfilewriter.py"
+      :file "ez_headerfilewriter.py"
+      :fsize 3305
+      :lastmodtime '(20908 20934 516915 212000))
+    (semanticdb-table "ez_txpulsers_table.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [258 267])
+            ("numpy" include nil nil [269 288])
+            ("ez_constants" include nil nil [290 323])
+            ("ez_table_cfg" include nil nil [324 400])
+            ("ez_headerfilewriter" include nil nil [401 442])
+            ("of_delays_prefix" variable nil nil [482 529])
+            ("of_masks_prefix" variable nil nil [530 576])
+            ("of_sequence_prefix" variable nil nil [577 627])
+            ("TxPulsersError" type
+               (:superclasses ("Exception")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [704 741]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [688 692]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [674 742]))                  
+                :type "class")
+                nil [630 742])
+            ("TxPulsersLongSequenceError" type
+               (:superclasses ("TxPulsersError")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [841 860]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [818 822])
+                            ("limit" variable nil (reparse-symbol function_parameters) [824 829]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [804 861])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [879 883]))                          )
+                        (reparse-symbol indented_block_body) [866 1011]))                  
+                :type "class")
+                nil [743 1011])
+            ("TxPulsersDelayOverflowError" type
+               (:superclasses ("TxPulsersError")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1111 1130]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1088 1092])
+                            ("limit" variable nil (reparse-symbol function_parameters) [1094 1099]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1074 1131])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1149 1153]))                          )
+                        (reparse-symbol indented_block_body) [1136 1274]))                  
+                :type "class")
+                nil [1012 1274])
+            ("TxPulsers" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" code nil (reparse-symbol indented_block_body) [1326 1365])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1374 1426])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1435 1486])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1495 1550])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1568 1597])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1606 1633]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1311 1315]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1298 1634])
+                    ("CreateProbeDir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1660 1664])
+                            ("probe" variable nil (reparse-symbol function_parameters) [1666 1671]))                          
+                        :documentation "
+        Check if the directory for the probe exists if not create
+        a directory for the probe.
+        ")
+                        (reparse-symbol indented_block_body) [1640 1887])
+                    ("GetExpandedSequence" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1933 1937])
+                            ("probe" variable nil (reparse-symbol function_parameters) [1939 1944])
+                            ("seq" variable nil (reparse-symbol function_parameters) [1946 1949])
+                            ("sm" variable nil (reparse-symbol function_parameters) [1951 1953]))                          
+                        :documentation "
+        Returns the expanded sequence for all focal zones.
+        sm: contains a string map, any value gets mapped into the string in
+        the map.
+        ")
+                        (reparse-symbol indented_block_body) [1908 2820])
+                    ("GetTof" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2841 2845])
+                            ("pitch" variable nil (reparse-symbol function_parameters) [2847 2852])
+                            ("aperture" variable nil (reparse-symbol function_parameters) [2854 2862])
+                            ("distance" variable nil (reparse-symbol function_parameters) [2864 2872])
+                            ("angle" variable nil (reparse-symbol function_parameters) [2874 2879])
+                            ("roc" variable nil (reparse-symbol function_parameters) [2881 2884])
+                            ("fov" variable nil (reparse-symbol function_parameters) [2886 2889]))                          
+                        :documentation "
+        Calculates the time of flight in seconds for the focus at
+        distance 'd' on the focal line, when the beam is transmited
+        with an angle.
+
+        pitch: distance between elements in mm
+        aperture: array containing the distance in pitches of all the 
+               elements to the center of the line.
+        distance: focus distance in mm.
+        angle: angle of the line in radians
+        roc:   radious of curvature of the probe, use 0 to indicate 
+               linear probes.
+        fov:   field of view of the probe, in radians
+        ")
+                        (reparse-symbol indented_block_body) [2829 4165])
+                    ("GetDelayClocks" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4190 4194])
+                            ("tof" variable nil (reparse-symbol function_parameters) [4196 4199])
+                            ("ftx" variable nil (reparse-symbol function_parameters) [4201 4204])
+                            ("offset" variable nil (reparse-symbol function_parameters) [4206 4212]))                          
+                        :documentation "
+        Returns the delay in clock cycles of the transmission frequency
+        for the time of flight passed as argument, and offset can be added
+        or substracted from all the values so all the lines have the same
+        relative delays.
+
+        tof:    time of flight in seconds
+        ftx:    frequency of the transmission clock in Hertzs
+        offset: number of clock cycles of offset to add/substract to all 
+                values to equalize the delays for all focal zones and angles.
+        ")
+                        (reparse-symbol indented_block_body) [4170 5118])
+                    ("GetApertureArrayLength" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5151 5155])
+                            ("probe" variable nil (reparse-symbol function_parameters) [5157 5162]))                          
+                        :documentation "
+        Returns the size of the transmission aperture array for the
+        given probe.
+        ")
+                        (reparse-symbol indented_block_body) [5123 5326])
+                    ("GetCorrectionDelay" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5355 5359])
+                            ("probe" variable nil (reparse-symbol function_parameters) [5361 5366]))                          
+                        :documentation "
+        probe: the probe indentifier, used to select probe 
+               parameters in the dictionary.
+        ")
+                        (reparse-symbol indented_block_body) [5331 7830])
+                    ("WriteMasksHppFile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7867 7871]))                          
+                        :documentation "
+        Writes a header file with the masks for an angle
+        ")
+                        (reparse-symbol indented_block_body) [7844 8735])
+                    ("WriteDelaysHppFile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8765 8769]))                          
+                        :documentation "
+        Writes a header file with the delays for an angle
+        ")
+                        (reparse-symbol indented_block_body) [8741 9765])
+                    ("WriteDelaysHppFileFz" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9797 9801])
+                            ("hpp" variable nil (reparse-symbol function_parameters) [9803 9806])
+                            ("probe" variable nil (reparse-symbol function_parameters) [9808 9813])
+                            ("mode" variable nil (reparse-symbol function_parameters) [9815 9819])
+                            ("focal_points" variable nil (reparse-symbol function_parameters) [9851 9863])
+                            ("angles" variable nil (reparse-symbol function_parameters) [9865 9871])
+                            ("correction_offset" variable nil (reparse-symbol function_parameters) [9903 9920])
+                            ("last_group" variable nil (reparse-symbol function_parameters) [9953 9963]))                          
+                        :documentation "
+        Cacluates the delays for the foci selected for the aperture passed 
+        as an argument.
+
+        @arguments
+        hpp:          A class of type HppWriter. A header file writer already
+                      initialized.
+        key:          string. Contains the probe type. It is used for printing
+                      comments and for selecting variables in data dictionary.
+        mode:         string. Identifies the scanning mode. B-Mode, C-Mode, 
+                      or M-Mode, it;
+                      is used for printing comments.
+        focal_points: ndarray contains the focal positions to be used.
+
+        aperture_mask: 
+        correction_offset:
+        last_group: bool, indicates if the file has to be closed.
+        ")
+                        (reparse-symbol indented_block_body) [9771 14134])
+                    ("WriteMasksHppFileFz" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14177 14181])
+                            ("hpp" variable nil (reparse-symbol function_parameters) [14183 14186])
+                            ("probe" variable nil (reparse-symbol function_parameters) [14188 14193])
+                            ("mode" variable nil (reparse-symbol function_parameters) [14195 14199])
+                            ("focal_points" variable nil (reparse-symbol function_parameters) [14230 14242])
+                            ("angles" variable nil (reparse-symbol function_parameters) [14244 14250])
+                            ("aperture_mask" variable nil (reparse-symbol function_parameters) [14281 14294])
+                            ("last_group" variable nil (reparse-symbol function_parameters) [14296 14306]))                          )
+                        (reparse-symbol indented_block_body) [14152 15795])
+                    ("WriteSequenceHppFile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15840 15844]))                          
+                        :documentation "
+        Writes the header file with the sequence bits.
+
+        This function has to be refactor and commonality extracted into 
+        another function
+        ")
+                        (reparse-symbol indented_block_body) [15814 19531]))                  
+                :type "class")
+                nil [1276 19531]))          
+      :file "ez_txpulsers_table.py"
+      :pointmax 19532
+      :fsize 19531
+      :lastmodtime '(21425 21091 319744 794000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ez_constants.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("c" variable nil nil [212 226])
+            ("ftx" variable nil nil [237 250])
+            ("frx" variable nil nil [284 296]))          
+      :file "ez_constants.py"
+      :pointmax 328
+      :fsize 327
+      :lastmodtime '(20908 20934 534915 420000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ez_table_cfg.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [606 681])
+            ("validScanModes" variable nil nil [684 751])
+            ("validProbeTypes" variable nil nil [752 814])
+            ("validDopplerModes" variable nil nil [815 881])
+            ("ProbeBaseError" type
+               (:superclasses ("Exception")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [958 974]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [936 940])
+                            ("str_" variable nil (reparse-symbol function_parameters) [942 946]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [923 975])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [991 995]))                          )
+                        (reparse-symbol indented_block_body) [979 1018]))                  
+                :type "class")
+                nil [884 1018])
+            ("ProbeAngleIdxError" type
+               (:superclasses ("ProbeBaseError")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1102 1119]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1080 1084])
+                            ("str_" variable nil (reparse-symbol function_parameters) [1086 1090]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1067 1120])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1136 1140]))                          )
+                        (reparse-symbol indented_block_body) [1124 1218]))                  
+                :type "class")
+                nil [1019 1218])
+            ("ProbeFocalZoneIdxError" type
+               (:superclasses ("ProbeBaseError")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1306 1323]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1284 1288])
+                            ("str_" variable nil (reparse-symbol function_parameters) [1290 1294]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1271 1324])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1340 1344]))                          )
+                        (reparse-symbol indented_block_body) [1328 1427]))                  
+                :type "class")
+                nil [1219 1427])
+            ("ProbeScanModeError" type
+               (:superclasses ("ProbeBaseError")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1511 1528]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1489 1493])
+                            ("str_" variable nil (reparse-symbol function_parameters) [1495 1499]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1476 1529])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1545 1549]))                          )
+                        (reparse-symbol indented_block_body) [1533 1607]))                  
+                :type "class")
+                nil [1428 1607])
+            ("ProbeInvalidProbeType" type
+               (:superclasses ("ProbeBaseError")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1690 1737]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1674 1678]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1660 1738])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1754 1758]))                          )
+                        (reparse-symbol indented_block_body) [1742 1822]))                  
+                :type "class")
+                nil [1609 1822])
+            ("LpfConfiguration" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1883 1910])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1919 1946])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1955 1982])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1991 2018])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2027 2054]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1867 1871]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1853 2055]))                  
+                :type "class")
+                nil [1824 2055])
+            ("Probe" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2111 2128])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2137 2154])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2163 2180])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2191 2218])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2227 2255])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2265 2282])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2291 2308])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2317 2334])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2352 2371])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2380 2398])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2473 2496])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2505 2528])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2537 2560])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2569 2610])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2619 2642])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2651 2674])
+                            ("for" code nil (reparse-symbol indented_block_body) [2684 3007])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3016 3043])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3052 3079])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3127 3145])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3212 3243])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3252 3283])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3387 3684])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3717 3772])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3791 3849])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3898 4066])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4076 4422])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4433 4864])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4877 4902])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4912 4941])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5005 5038])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5101 5124])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5133 5186])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5246 5275])
+                            ("self" code nil (reparse-symbol indented_block_body) [5333 5352])
+                            ("self" code nil (reparse-symbol indented_block_body) [5361 5380]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2094 2098]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2080 5381])
+                    ("AssertFov" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5401 5405]))                          
+                        :documentation " 
+        Uses the values of FOV, number of elements and ROC to
+        verify the pitch
+        ")
+                        (reparse-symbol indented_block_body) [5386 5679])
+                    ("AssertInitialization" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5710 5714]))                          )
+                        (reparse-symbol indented_block_body) [5684 7491])
+                    ("AssertAngleMmode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7702 7706]))                          
+                        :documentation "
+        M-mode angle must match B-Mode angle 0
+        ")
+                        (reparse-symbol indented_block_body) [7681 7861])
+                    ("AssertApertureShift" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7892 7896]))                          
+                        :documentation "
+        The aperture shifts must be smaller than the number of
+        elements in the aperture.
+        ")
+                        (reparse-symbol indented_block_body) [7867 8115])
+                    ("GetRxAperture" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8139 8143])
+                            ("angleIdx" variable nil (reparse-symbol function_parameters) [8145 8153])
+                            ("aperture_shift" variable nil (reparse-symbol function_parameters) [8155 8169]))                          
+                        :documentation "
+        Returns the receive aperture for the given angle index
+        
+        @ params
+        angleIdx:   the angle index
+
+        @ returns
+        A ndarray containing the aperture in pitches
+
+        @ raises
+        ProbeAngleIdxError
+        ")
+                        (reparse-symbol indented_block_body) [8120 8826])
+                    ("GetXYCompensation" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8854 8858])
+                            ("swAngleIdx" variable nil (reparse-symbol function_parameters) [8860 8870]))                          
+                        :documentation "
+        Returns the pair of x,y values for software compensation for 
+        a given angle.
+
+        @ params
+        swAngleIdx: the software angle index (assumes symmetry for
+                    all angles but the first. 
+
+        @ returns
+        An array containing the x,y correction in mm
+
+        @ raises
+        ProbeAngleIdxError
+        ")
+                        (reparse-symbol indented_block_body) [8831 9936])
+                    ("GetApertureShiftInMeters" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9971 9975])
+                            ("shift" variable nil (reparse-symbol function_parameters) [9977 9982]))                          )
+                        (reparse-symbol indented_block_body) [9941 10029])
+                    ("GetApertureShiftInDegrees" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10065 10069])
+                            ("shift" variable nil (reparse-symbol function_parameters) [10071 10076]))                          )
+                        (reparse-symbol indented_block_body) [10034 10140])
+                    ("GetTxAperture" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10164 10168])
+                            ("focalZone" variable nil (reparse-symbol function_parameters) [10170 10179])
+                            ("angleIdx" variable nil (reparse-symbol function_parameters) [10181 10189])
+                            ("mode" variable nil (reparse-symbol function_parameters) [10191 10195])
+                            ("aperture_shift" variable nil (reparse-symbol function_parameters) [10197 10211]))                          
+                        :documentation "
+        Returns an array of values of delay for the given focal
+        zone and the given angle.
+
+        @params
+        focalZone: the focal zone that we are targeting
+        angleIdx:  the index of the angle were we are calculating the
+                   aperture.
+        mode:      B-Mode of F-Mode
+
+        @returns
+        An array of values of aperture in pitches.
+
+        @raises
+        ProbeAngleIdxError:
+        If the index of the angle is out of bounds.
+        ProbeFocalZoneIdxError:
+        If the index of the focal zone is out of bounds.
+        ")
+                        (reparse-symbol indented_block_body) [10145 11711])
+                    ("IsValidScanMode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11739 11743])
+                            ("mode" variable nil (reparse-symbol function_parameters) [11745 11749]))                          
+                        :documentation "
+        Returns True if the string passed as mode is a valid scan mode.
+        
+        @params
+        mode: a string describing the scan mode.
+        
+        @raises
+        ProbeScanModeError if the scan mode passed is not a valid one.
+        ")
+                        (reparse-symbol indented_block_body) [11718 12141])
+                    ("GetRotationPointInMeters" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12184 12188]))                          
+                        :documentation "
+        Returns the distance to the rotation point in meters.
+        ")
+                        (reparse-symbol indented_block_body) [12154 12388])
+                    ("GetAngularApertureShift" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12430 12434]))                          
+                        :documentation "
+        Returns the aperture shift in degrees.
+        Value returned is zero for linear probes
+        ")
+                        (reparse-symbol indented_block_body) [12401 12824]))                  
+                :type "class")
+                nil [2058 12824])
+            ("HZ" variable nil nil [12872 12876])
+            ("CL" variable nil nil [12899 12903])
+            ("HV" variable nil nil [12917 12921])
+            ("ez_table_cfg_l3_12" include nil nil [13136 13172])
+            ("ez_table_cfg_cl1_6" include nil nil [13173 13209])
+            ("ez_table_cfg_l10" include nil nil [13210 13246])
+            ("ez_table_cfg_cl2_8" include nil nil [13247 13283])
+            ("ez_table_cfg_12la" include nil nil [13284 13320])
+            ("probes_supported" variable nil nil [13323 13505]))          
+      :file "ez_table_cfg.py"
+      :pointmax 13508
+      :fsize 13507
+      :lastmodtime '(21586 5970 544160 210000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ez_fullfocusdelay_table.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [343 352])
+            ("ez_constants" include nil nil [355 388])
+            ("ez_table_cfg" include nil nil [389 454])
+            ("ez_headerfilewriter" include nil nil [455 496])
+            ("numpy" include nil nil [497 530])
+            ("FullFocusDelayGenError" type
+               (:superclasses ("Exception")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [611 648]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [595 599]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [581 649])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [666 670]))                          )
+                        (reparse-symbol indented_block_body) [653 699]))                  
+                :type "class")
+                nil [533 699])
+            ("FullFocusDelayGenErrorDistanceTooShort" type
+               (:superclasses ("FullFocusDelayGenError")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [817 881]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [791 795])
+                            ("distance" variable nil (reparse-symbol function_parameters) [797 805]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [777 882])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [899 903]))                          )
+                        (reparse-symbol indented_block_body) [886 932]))                  
+                :type "class")
+                nil [700 932])
+            ("FullFocusDelayGenErrorPushMatrixAssert" type
+               (:superclasses ("FullFocusDelayGenError")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" code nil (reparse-symbol indented_block_body) [1040 1166]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1024 1028]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1010 1167])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1193 1197]))                          )
+                        (reparse-symbol indented_block_body) [1180 1226]))                  
+                :type "class")
+                nil [933 1226])
+            ("FullFocusDelayGenErrorDelayMatrixAssert" type
+               (:superclasses ("FullFocusDelayGenError")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1335 1392]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1319 1323]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1305 1393])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1419 1423]))                          )
+                        (reparse-symbol indented_block_body) [1406 1452]))                  
+                :type "class")
+                nil [1227 1452])
+            ("FullFocusDelayGenErrorTooManyInjections" type
+               (:superclasses ("FullFocusDelayGenError")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1562 1619]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1546 1550]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1532 1620])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1646 1650]))                          )
+                        (reparse-symbol indented_block_body) [1633 1679]))                  
+                :type "class")
+                nil [1454 1679])
+            ("FullFocusDelayGen" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1811 1833])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1843 1879])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1889 2163])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2174 2210])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2220 2281])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2291 2305])
+                            ("self" code nil (reparse-symbol indented_block_body) [2315 2339]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1794 1798]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1780 2340])
+                    ("AssertConstructor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2368 2372]))                          
+                        :documentation "
+        Basic auto-checks to the constructor.
+        ")
+                        (reparse-symbol indented_block_body) [2345 2538])
+                    ("SetSamplingFrequency" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2578 2582])
+                            ("probe" variable nil (reparse-symbol function_parameters) [2584 2589]))                          )
+                        (reparse-symbol indented_block_body) [2552 2623])
+                    ("GetFlightDistance" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2651 2655])
+                            ("aperture" variable nil (reparse-symbol function_parameters) [2657 2665])
+                            ("pitch" variable nil (reparse-symbol function_parameters) [2667 2672])
+                            ("distance" variable nil (reparse-symbol function_parameters) [2674 2682])
+                            ("angle" variable nil (reparse-symbol function_parameters) [2684 2689])
+                            ("roc" variable nil (reparse-symbol function_parameters) [2691 2694])
+                            ("fov" variable nil (reparse-symbol function_parameters) [2696 2699]))                          
+                        :documentation "
+        Calculates the time of flight in seconds for the focus at
+        distance 'd' on the focal line, when the beam is transmited
+        with an angle.
+
+        aperture: aperture distance of each element in pitches
+        distance: distance to the target in mm
+        angle:    angle of the central line in radians
+        roc:      radious of curvature of the probe in mm (make zero 
+                  for linear probes\"
+        fov:      field of view of the probe in degrees
+        ")
+                        (reparse-symbol indented_block_body) [2628 4125])
+                    ("GenerateDelayPoints" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4155 4159])
+                            ("distance" variable nil (reparse-symbol function_parameters) [4161 4169])
+                            ("rx_offset" variable nil (reparse-symbol function_parameters) [4171 4180]))                          
+                        :documentation "
+        Calculate the distance to the base of the center line 
+        for the points scanned at the line.
+
+        distance: distance to the last point in mm
+        ")
+                        (reparse-symbol indented_block_body) [4130 4644])
+                    ("TranslateDistanceIntoClks" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4681 4685])
+                            ("fd" variable nil (reparse-symbol function_parameters) [4687 4689])
+                            ("tick_coef" variable nil (reparse-symbol function_parameters) [4691 4700]))                          
+                        :documentation "
+        Returns the delay in clock cycles of the frequency passed as an 
+        argument for the time of fligth passed as argument
+
+        fd: an array containing the distances.
+        tick_coef: the number of clock ticks per distance.
+        ")
+                        (reparse-symbol indented_block_body) [4650 5031])
+                    ("GenerateDelayMatrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5062 5066])
+                            ("distance" variable nil (reparse-symbol function_parameters) [5068 5076])
+                            ("aperture" variable nil (reparse-symbol function_parameters) [5078 5086])
+                            ("pitch" variable nil (reparse-symbol function_parameters) [5088 5093])
+                            ("angle" variable nil (reparse-symbol function_parameters) [5124 5129])
+                            ("roc" variable nil (reparse-symbol function_parameters) [5131 5134])
+                            ("fov" variable nil (reparse-symbol function_parameters) [5136 5139])
+                            ("numberOfPoints" variable nil (reparse-symbol function_parameters) [5141 5155])
+                            ("rx_offset" variable nil (reparse-symbol function_parameters) [5186 5195]))                          
+                        :documentation "
+        Generates a matrix where each row represent the delay for
+        the given aperture at a depth, the distance between depths
+        is given by the sampling time.
+        
+        @params
+        distance:  the maximum scan distance in mm.
+        aperture:  the aperture vector in pitches.
+        pitch:     the pitch size in mm.
+        angle:     the angle in degrees of the scan line.
+        roc:       the radious of curvature of the probe.
+        fov:       the field of view of the probe.
+        numberOfPoints: the maximum number of points that can be used
+                   in a scan line.
+        rx_offset: the number of clock cycles to skip at the beginning of the
+                   focus table
+
+        @returns
+        A matrix of integers where each row represent the delay for
+        the given aperture at a depth, the distance between depths
+        is given by the sampling time. The values are given in clock
+        cycles of the sampling clock.
+
+        @raises
+        FullFocusDelayGenErrorDelayMatrixAssert: 
+                   if the distance vector is longer than the maximum 
+                   number of points that can be holf in the matrix.
+        ")
+                        (reparse-symbol indented_block_body) [5037 7476])
+                    ("GetDelayMatrixErrors" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7507 7511])
+                            ("dm" variable nil (reparse-symbol function_parameters) [7513 7515]))                          
+                        :documentation "
+        Calculates the focus time for each channels were there is a 
+        repetition of the time and thus a queuePush will be missed
+        ")
+                        (reparse-symbol indented_block_body) [7481 8333])
+                    ("InjectOnesInQueuePushMatrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8371 8375])
+                            ("queuePush" variable nil (reparse-symbol function_parameters) [8377 8386])
+                            ("errorCnt" variable nil (reparse-symbol function_parameters) [8388 8396]))                          
+                        :documentation "
+        For each channel check if the matrix has errors and inject queue
+        pushes in the first avalable zero to compensate for the error.
+        Check that the first availale zero does not overtake the next
+        error.
+        ")
+                        (reparse-symbol indented_block_body) [8338 9209])
+                    ("get_channel_delays_from_output" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9266 9270])
+                            ("outmat" variable nil (reparse-symbol function_parameters) [9272 9278])
+                            ("channel" variable nil (reparse-symbol function_parameters) [9280 9287]))                          
+                        :documentation "
+        For a given channel checks that the delay curve generated
+        has an error below 1 clk of the optimal delay
+        ")
+                        (reparse-symbol indented_block_body) [9230 9596])
+                    ("AssertDelayMatrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9634 9638])
+                            ("dm" variable nil (reparse-symbol function_parameters) [9640 9642]))                          
+                        :documentation "
+        Some checks for the delay matrix calculations
+        ")
+                        (reparse-symbol indented_block_body) [9611 10529])
+                    ("FindNoFocusingPoint" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10560 10564])
+                            ("dm" variable nil (reparse-symbol function_parameters) [10566 10568]))                          
+                        :documentation "
+        For a given delay matrix finds the point at which all the 
+        increments happen every second clock cycle and thus 
+        focusing is not required any longer.
+        ")
+                        (reparse-symbol indented_block_body) [10535 11191])
+                    ("GeneratePushMatrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11220 11224])
+                            ("delay_matrix" variable nil (reparse-symbol function_parameters) [11226 11238])
+                            ("numberOfPoints" variable nil (reparse-symbol function_parameters) [11240 11254]))                          
+                        :documentation "
+        Given a delay matrix creates a matrix of 0's and 1's
+        where the position of the 1's correspond to the values
+        of delay described  in the delay matrix
+
+        @params
+
+        delay_matrix: an array containing the delays. 
+        numberOfPoints:    the number of rows of the delay matrix to read
+
+        @ returns
+        
+        A matrix of zeros and ones where each of the ones correspond
+        to a delay point.
+        ")
+                        (reparse-symbol indented_block_body) [11196 12038])
+                    ("generate_delay_words_table" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12075 12079])
+                            ("push_matrix" variable nil (reparse-symbol function_parameters) [12081 12092]))                          )
+                        (reparse-symbol indented_block_body) [12043 12281])
+                    ("printdbg" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12301 12305])
+                            ("str_" variable nil (reparse-symbol function_parameters) [12307 12311]))                          )
+                        (reparse-symbol indented_block_body) [12287 12368])
+                    ("get_reception_delta" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12399 12403])
+                            ("dm" variable nil (reparse-symbol function_parameters) [12405 12407]))                          
+                        :documentation "
+        Calculates the delta in clocks between the first element that
+        receives the last sample and the last element that receives
+        it
+        ")
+                        (reparse-symbol indented_block_body) [12374 12634])
+                    ("CreateProbeDir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12660 12664])
+                            ("probe" variable nil (reparse-symbol function_parameters) [12666 12671]))                          
+                        :documentation "
+        Check if the directory for the probe exists if not create
+        a directory for the probe.
+        ")
+                        (reparse-symbol indented_block_body) [12640 12883])
+                    ("generate_all_fullfocusdelay_extluts" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12933 12937]))                          )
+                        (reparse-symbol indented_block_body) [12893 13438])
+                    ("generate_fullfocusdelay_extluts" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13479 13483])
+                            ("probe" variable nil (reparse-symbol function_parameters) [13485 13490]))                          
+                        :documentation "
+        Generates the content of the fullfocusdelay header file
+        for the probe passed as parameter. 
+        ")
+                        (reparse-symbol indented_block_body) [13443 17492])
+                    ("GenerateFile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17519 17523])
+                            ("probe" variable nil (reparse-symbol function_parameters) [17524 17529])
+                            ("delays" variable nil (reparse-symbol function_parameters) [17530 17536])
+                            ("hpp" variable nil (reparse-symbol function_parameters) [17537 17540]))                          
+                        :documentation "\"
+        Stores the content of the fullfocusdelay header file
+        for the probe passed as parameter in the header file
+        described by hpp.
+        Write the index.
+        ")
+                        (reparse-symbol indented_block_body) [17502 18006])
+                    ("AssertPushMatrix" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18034 18038])
+                            ("pm" variable nil (reparse-symbol function_parameters) [18040 18042]))                          
+                        :documentation "
+        Asserts the push matrix satisfies the conditions:
+         - All columns have the same number of ones
+         - at least there is a one in each column
+         - raises an exception on error, otherwise returns zero
+         
+        ")
+                        (reparse-symbol indented_block_body) [18012 18522])
+                    ("GeneratePliFocusDelayExtLuts" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18561 18565])
+                            ("probe" variable nil (reparse-symbol function_parameters) [18567 18572])
+                            ("pm" variable nil (reparse-symbol function_parameters) [18574 18576])
+                            ("numberOfChannels" variable nil (reparse-symbol function_parameters) [18578 18594])
+                            ("numberOfBands" variable nil (reparse-symbol function_parameters) [18596 18609]))                          
+                        :documentation "
+        Generate the parameters for the piecewise-linear-interpolation.
+        Using the queue_push matrix as reference, create the parameteres:
+        - nb samples used for each band
+        - ratio: number of extra data valid to be added.
+        
+        By default it considers a data_valid each two samples.
+        This corresponds to the central channel, when angle is 90.
+        The agorithm estimates the extra data_valid we need to add for each channel
+        depending on the angle of reception.
+
+        The algorithm estimates in an iterative loop which are the best parameters.
+
+        @params
+        probe     The probe class with all the parameter for the probe that is being 
+                  calculated.
+        pm        The push-matrix, a matrix with ones and zeros, where rows represent 
+                  clock cycles and colums represent channels. If three is a one the
+                  sample in the clk/channel is used for focing.
+        numberOfChannels the number of channels used in the algorithm
+        numberOfBands    the number of bands in the piece-wise-linear aproximation
+
+        @returns
+        
+
+        ")
+                        (reparse-symbol indented_block_body) [18527 28824]))                  
+                :type "class")
+                nil [1750 28824])
+            ("if" code nil nil [28830 28941]))          
+      :file "ez_fullfocusdelay_table.py"
+      :pointmax 29040
+      :fsize 29039
+      :lastmodtime '(21426 27977 853043 130000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ez_table_cfg_cl1_6.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [722 753])
+            ("ez_table_cfg" include nil nil [754 780])
+            ("ProbeCL1_6" type
+               (:superclasses ("Probe")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Probe" code nil (reparse-symbol indented_block_body) [854 876])
+                            ("self" variable nil (reparse-symbol indented_block_body) [886 908])
+                            ("self" variable nil (reparse-symbol indented_block_body) [917 948])
+                            ("self" variable nil (reparse-symbol indented_block_body) [957 985])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1003 1029])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1058 1083])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1119 1148])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1165 1190])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1221 1239])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1248 1266])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1333 1423])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1441 1486])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1495 1540])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1586 1911])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1929 1976])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1998 2045])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2068 2231])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2249 2678])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2845 3191])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3271 3393])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3427 3495])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3505 3627])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3637 3704])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3713 3832])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3886 4207])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4217 4537])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4547 4616])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4626 4785])
+                            ("self" code nil (reparse-symbol indented_block_body) [4796 4852])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5026 5580])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5590 5789])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5799 5848])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5924 6294])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6303 6673])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6723 6886])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6895 7058])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7067 7230])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7239 7401])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7410 7572])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7628 7647])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7656 7675])
+                            ("self" code nil (reparse-symbol indented_block_body) [7685 7712]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [829 833]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [815 7713]))                  
+                :type "class")
+                nil [783 7713]))          
+      :file "ez_table_cfg_cl1_6.py"
+      :pointmax 7722
+      :fsize 7721
+      :lastmodtime '(21425 887 824358 361000)
+      :unmatched-syntax nil)
+    (semanticdb-table "make_all.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("ez_fullfocusdelay_table" include nil nil [410 447])
+            ("ez_txpulsers_table" include nil nil [448 480])
+            ("ez_anglevalues_table" include nil nil [481 515])
+            ("ez_dopplerconfig" include nil nil [516 546])
+            ("ez_lpfpolyphase" include nil nil [547 576])
+            ("ez_gammacorrection_table" include nil nil [577 615])
+            ("sys" include nil nil [616 626])
+            ("sys" code nil nil [627 656])
+            ("run_all" include nil nil [658 679])
+            ("if" code nil nil [681 1530]))          
+      :file "make_all.py"
+      :pointmax 1531
+      :fsize 1530
+      :lastmodtime '(20908 20934 533915 408000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ez_anglevalues_table.py"
+      :file "ez_anglevalues_table.py"
+      :fsize 5355
+      :lastmodtime '(20908 20934 534915 420000))
+    (semanticdb-table "ez_dopplerconfig.py"
+      :file "ez_dopplerconfig.py"
+      :fsize 5866
+      :lastmodtime '(20908 20934 512915 165000))
+    (semanticdb-table "ez_lpfpolyphase.py"
+      :file "ez_lpfpolyphase.py"
+      :fsize 10316
+      :lastmodtime '(21204 62149 823822 272000))
+    (semanticdb-table "ez_gammacorrection_table.py"
+      :file "ez_gammacorrection_table.py"
+      :fsize 2862
+      :lastmodtime '(21204 62149 792822 177000))
+    (semanticdb-table "ez_table_cfg_l3_12.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [269 306])
+            ("ez_table_cfg" include nil nil [307 333])
+            ("ProbeL10" type
+               (:superclasses ("Probe")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Probe" code nil (reparse-symbol indented_block_body) [397 419])
+                            ("self" variable nil (reparse-symbol indented_block_body) [429 449])
+                            ("self" variable nil (reparse-symbol indented_block_body) [458 487])
+                            ("self" variable nil (reparse-symbol indented_block_body) [497 520])
+                            ("self" variable nil (reparse-symbol indented_block_body) [569 587])
+                            ("self" variable nil (reparse-symbol indented_block_body) [596 614])
+                            ("self" variable nil (reparse-symbol indented_block_body) [640 656])
+                            ("self" variable nil (reparse-symbol indented_block_body) [696 708])
+                            ("self" variable nil (reparse-symbol indented_block_body) [742 754])
+                            ("self" variable nil (reparse-symbol indented_block_body) [811 876])
+                            ("self" variable nil (reparse-symbol indented_block_body) [885 931])
+                            ("self" variable nil (reparse-symbol indented_block_body) [940 986])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1022 1360])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1370 1417])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1439 1486])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1509 1672])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1682 2148])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2302 2654])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2664 3017])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3026 3093])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3103 3225])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3259 3381])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3391 3510])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3563 3582])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3749 4046])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4056 4228])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4277 4445])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4455 4801])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4812 5243])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5300 5621])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5631 5952])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5962 6031])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6042 6146])
+                            ("self" code nil (reparse-symbol indented_block_body) [6157 6213])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6380 7030])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7040 7313])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7328 7377])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7454 7825])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7834 8205])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8255 8418])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8427 8590])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8599 8762])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8771 8933])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8942 9104])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9160 9179])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9188 9208])
+                            ("self" code nil (reparse-symbol indented_block_body) [9231 9258]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [381 385]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [367 9259]))                  
+                :type "class")
+                nil [337 9259]))          
+      :file "ez_table_cfg_l3_12.py"
+      :pointmax 9274
+      :fsize 9273
+      :lastmodtime '(21426 30197 254258 984000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ez_attenuation.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [21 40])
+            ("pylab" include nil nil [41 60])
+            ("a" variable nil nil [62 3376])
+            ("print_" function (:arguments 
+              ( ("gains" variable nil (reparse-symbol function_parameters) [3391 3396])
+                ("delays" variable nil (reparse-symbol function_parameters) [3398 3404]))              ) nil [3379 3523])
+            ("if" code nil nil [3525 4004]))          
+      :file "ez_attenuation.py"
+      :pointmax 4004
+      :fsize 4003
+      :lastmodtime '(21427 47390 152871 214000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ez_table_cfg_l10.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [269 306])
+            ("ez_table_cfg" include nil nil [307 333])
+            ("ProbeL10" type
+               (:superclasses ("Probe")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Probe" code nil (reparse-symbol indented_block_body) [397 419])
+                            ("self" variable nil (reparse-symbol indented_block_body) [429 449])
+                            ("self" variable nil (reparse-symbol indented_block_body) [458 487])
+                            ("self" variable nil (reparse-symbol indented_block_body) [497 520])
+                            ("self" variable nil (reparse-symbol indented_block_body) [569 587])
+                            ("self" variable nil (reparse-symbol indented_block_body) [596 614])
+                            ("self" variable nil (reparse-symbol indented_block_body) [640 656])
+                            ("self" variable nil (reparse-symbol indented_block_body) [696 708])
+                            ("self" variable nil (reparse-symbol indented_block_body) [742 754])
+                            ("self" variable nil (reparse-symbol indented_block_body) [811 876])
+                            ("self" variable nil (reparse-symbol indented_block_body) [885 931])
+                            ("self" variable nil (reparse-symbol indented_block_body) [940 986])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1022 1360])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1370 1417])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1439 1486])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1509 1672])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1682 2148])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2302 2654])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2664 3017])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3026 3093])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3103 3225])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3259 3381])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3391 3510])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3563 3582])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3749 4046])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4056 4228])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4277 4445])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4455 4801])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4812 5243])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5300 5621])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5631 5952])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5962 6031])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6042 6146])
+                            ("self" code nil (reparse-symbol indented_block_body) [6157 6213])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6380 7030])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7040 7313])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7328 7377])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7454 7825])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7834 8205])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8255 8418])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8427 8590])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8599 8762])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8771 8933])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8942 9104])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9160 9179])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9188 9208])
+                            ("self" code nil (reparse-symbol indented_block_body) [9231 9258]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [381 385]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [367 9259]))                  
+                :type "class")
+                nil [337 9259]))          
+      :file "ez_table_cfg_l10.py"
+      :pointmax 9268
+      :fsize 9267
+      :lastmodtime '(21481 48644 750160 616000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ez_table_cfg_12la.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [384 415])
+            ("ez_table_cfg" include nil nil [416 442])
+            ("Probe12LA" type
+               (:superclasses ("Probe")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("Probe" code nil (reparse-symbol indented_block_body) [507 529])
+                            ("self" variable nil (reparse-symbol indented_block_body) [539 557])
+                            ("self" variable nil (reparse-symbol indented_block_body) [566 596])
+                            ("self" variable nil (reparse-symbol indented_block_body) [605 625])
+                            ("self" variable nil (reparse-symbol indented_block_body) [674 691])
+                            ("self" variable nil (reparse-symbol indented_block_body) [700 718])
+                            ("self" variable nil (reparse-symbol indented_block_body) [754 773])
+                            ("self" variable nil (reparse-symbol indented_block_body) [847 859])
+                            ("self" variable nil (reparse-symbol indented_block_body) [903 915])
+                            ("self" variable nil (reparse-symbol indented_block_body) [982 1072])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1081 1126])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1135 1180])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1226 1550])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1560 1607])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1629 1676])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1699 1862])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1880 2348])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2502 2856])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2866 3215])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3225 3292])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3302 3424])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3458 3580])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3590 3709])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3762 3781])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3948 4245])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4255 4427])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4478 4646])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4656 5002])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5013 5444])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5501 5822])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5832 6153])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6163 6232])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6242 6346])
+                            ("self" code nil (reparse-symbol indented_block_body) [6356 6412])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6587 7142])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7152 7427])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7437 7486])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7496 7867])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7876 8247])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8297 8460])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8469 8632])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8641 8804])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8813 8975])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8984 9146])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9202 9221])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9230 9250])
+                            ("self" code nil (reparse-symbol indented_block_body) [9260 9287]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [490 494]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [476 9288]))                  
+                :type "class")
+                nil [445 9288]))          
+      :file "ez_table_cfg_12la.py"
+      :pointmax 7468
+      :fsize 9288
+      :lastmodtime '(21586 6393 437248 272000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ez_table_cfg_cl2_8.py"
+      :file "ez_table_cfg_cl2_8.py"
+      :fsize 7413
+      :lastmodtime '(21481 64000 469602 605000)))
+  :file "!sandbox!workspace!cyclades!trunk!development!ext!ConfGen!ext_lut_generator!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

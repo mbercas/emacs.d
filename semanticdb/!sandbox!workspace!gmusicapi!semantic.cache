@@ -1,0 +1,22 @@
+;; Object gmusicapi/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "gmusicapi/"
+  :tables
+  (list
+    (semanticdb-table "spike.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("gmusicapi" include nil nil [1 35])
+            ("api" variable nil nil [37 57])
+            ("library" variable nil nil [111 140])
+            ("sweet_track_ids" variable nil nil [141 251])
+            ("playlist_id" variable nil nil [253 297])
+            ("api" code nil nil [298 353]))          
+      :file "spike.py"
+      :pointmax 358
+      :fsize 353
+      :lastmodtime '(21332 12699 289918 954000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!gmusicapi!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

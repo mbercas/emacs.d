@@ -1,0 +1,45 @@
+;; Object unittest/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unittest/"
+  :tables
+  (list
+    (semanticdb-table "test_needleModel.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("unittest" include nil nil [21 36])
+            ("sys" include nil nil [37 62])
+            ("path" code nil nil [64 84])
+            ("needleModel" include nil nil [86 121])
+            ("numpy" include nil nil [122 151])
+            ("TestNeedleModel" type
+               (:superclasses ("unittest.TestCase")
+                :members 
+                  ( ("test_Length" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [219 223]))                          )
+                        (reparse-symbol indented_block_body) [202 448])
+                    ("test_Center" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [470 474]))                          )
+                        (reparse-symbol indented_block_body) [453 708]))                  
+                :type "class")
+                nil [153 709])
+            ("if" code nil nil [710 757]))          
+      :file "test_needleModel.py"
+      :pointmax 815
+      :fsize 756
+      :lastmodtime '(21444 19297 979937 477000)
+      :unmatched-syntax nil)
+    (semanticdb-table "test_dipoleField.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "test_dipoleField.py"
+      :pointmax 1
+      :fsize 376
+      :lastmodtime '(21444 19018 660486 389000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!needledetection!unittest!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

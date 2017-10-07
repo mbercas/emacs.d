@@ -1,0 +1,16 @@
+;; Object ein-0.2.0/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ein-0.2.0/"
+  :tables
+  (list
+    (semanticdb-table "ein-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags nil
+      :file "ein-autoloads.el"
+      :pointmax 251
+      :fsize 12370
+      :lastmodtime '(21705 60708 183544 629000)
+      :unmatched-syntax nil))
+  :file "!localhome!localmanuel!.emacs.d!elpa!ein-0.2.0!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

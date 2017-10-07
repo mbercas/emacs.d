@@ -1,0 +1,1649 @@
+;; Object a_scf/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "a_scf/"
+  :tables
+  (list
+    (semanticdb-table "ccapp_scf_needledetectionparameterconfiguration.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SCF_NEEDLEDETECTIONPARAMETERCONFIGURATION_HPP" variable (:constant-flag t) nil [848 899])
+            ("core_cpp_forwarddeclare.hpp" include nil nil [975 1013])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("scf" type
+                               (:members 
+                                  ( ("NdDspAlgorithmParams" type
+                                       (:prototype t
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [1201 1228])
+                                    ("PipelineNeedleConfig" type
+                                       (:prototype t
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [1229 1256])
+                                    ("nd" type
+                                       (:members 
+                                          ( ("MagnetizationForceFirstDipolePrimary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [1274 1317])
+                                            ("MagnetizationForceSecondDipolePrimary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [1318 1362])
+                                            ("MagnetizationForceFirstDipoleSecondary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [1363 1408])
+                                            ("MagnetizationForceSecondDipoleSecondary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [1409 1455])
+                                            ("MagnetizationForceFirstDipoleWeightPrimary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [1456 1505])
+                                            ("MagnetizationForceSecondDipoleWeightPrimary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [1506 1556])
+                                            ("MagnetizationForceFirstDipoleWeightSecondary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [1557 1608])
+                                            ("MagnetizationForceSecondDipoleWeightSecondary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [1609 1661])
+                                            ("MagnetizationCoefficient" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [1662 1693])
+                                            ("MagnetizationForceLimitMinPrimary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [1694 1734])
+                                            ("MagnetizationForceLimitMaxPrimary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [1735 1775])
+                                            ("MagnetizationForceLimitMinSecondary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [1776 1818])
+                                            ("MagnetizationForceLimitMaxSecondary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [1819 1861])
+                                            ("NeedleLengthFirstDipolePrimary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [1862 1899])
+                                            ("NeedleLengthSecondDipolePrimary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [1900 1938])
+                                            ("NeedleLengthFirstDipoleSecondary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [1939 1978])
+                                            ("NeedleLengthSecondDipoleSecondary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [1979 2019])
+                                            ("NeedleLengthConstrainFirstDipoleWeightPrimary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2020 2072])
+                                            ("NeedleLengthConstrainSecondDipoleWeightPrimary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2073 2126])
+                                            ("NeedleLengthConstrainFirstDipoleWeightSecondary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2127 2181])
+                                            ("NeedleLengthConstrainSecondDipoleWeightSecondary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2182 2237])
+                                            ("UnaryVectorWeightPrimary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2238 2269])
+                                            ("UnaryVectorWeightSecondary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2270 2303])
+                                            ("NeedleLengthLimitMinPrimary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2304 2338])
+                                            ("NeedleLengthLimitMaxPrimary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2339 2373])
+                                            ("NeedleLengthLimitMinSecondary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2374 2410])
+                                            ("NeedleLengthLimitMaxSecondary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2411 2447])
+                                            ("RealNeedleTipShift" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2448 2473])
+                                            ("RealNeedleEndShift" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2474 2499])
+                                            ("MaxNeedleDistanceConstrain" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2500 2533])
+                                            ("MaxResidualPrimary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2534 2559])
+                                            ("MaxResidualSecondary" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2560 2587])
+                                            ("SafetyMonitorGreenLimit" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2588 2618])
+                                            ("SafetyMonitorRedLimit" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2619 2647])
+                                            ("GradientThreshold" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2648 2672])
+                                            ("MinNumberOfValidSensors" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2673 2703])
+                                            ("AutoCompensation" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2704 2727])
+                                            ("MaxNeedleDisplayDepth" type
+                                               (:prototype t
+                                                :type "class")
+                                                (reparse-symbol namespacesubparts) [2728 2756]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [1258 2759])
+                                    ("needle_detection" type
+                                       (:members 
+                                          ( ("core::dtr::DependencySetIface" using (:type ("core::dtr::DependencySetIface" type
+                                                 (:prototype t
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol namespacesubparts) [2940 2976])
+                                            ("RegisterDependencies" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("deps" variable
+                                                       (:reference 1
+                                                        :type ("DependencySetIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [3387 3429]))                                                  
+                                                :type "void")
+                                                (reparse-symbol namespacesubparts) [3352 3430])
+                                            ("hidden" type
+                                               (:members 
+                                                  ( ("UpdateNeedleAlgorithmConfiguration" function
+                                                       (:prototype-flag t
+                                                        :arguments 
+                                                          ( ("magnetizationForceFirstDipolePrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceFirstDipolePrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3497 3600])
+                                                            ("magnetizationForceSecondDipolePrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceSecondDipolePrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3605 3710])
+                                                            ("magnetizationForceFirstDipoleSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceFirstDipoleSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3715 3822])
+                                                            ("magnetizationForceSecondDipoleSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceSecondDipoleSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3827 3936])
+                                                            ("magnetizationForceFirstDipoleWeightPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceFirstDipoleWeightPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3941 4056])
+                                                            ("magnetizationForceSecondDipoleWeightPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceSecondDipoleWeightPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4061 4183])
+                                                            ("magnetizationForceFirstDipoleWeightSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceFirstDipoleWeightSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4188 4306])
+                                                            ("magnetizationForceSecondDipoleWeightSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceSecondDipoleWeightSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4311 4431])
+                                                            ("magnetizationCoefficient" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationCoefficient" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4436 4510])
+                                                            ("minMagnetizationForceLimitPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceLimitMinPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4515 4598])
+                                                            ("maxMagnetizationForceLimitPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceLimitMaxPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4603 4686])
+                                                            ("minMagnetizationForceLimitSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceLimitMinSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4691 4776])
+                                                            ("maxMagnetizationForceLimitSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceLimitMaxSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4781 4866])
+                                                            ("needleLengthFirstDipolePrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthFirstDipolePrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4871 4951])
+                                                            ("needleLengthSecondDipolePrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthSecondDipolePrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4956 5037])
+                                                            ("needleLengthFirstDipoleSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthFirstDipoleSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [5042 5124])
+                                                            ("needleLengthSecondDipoleSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthSecondDipoleSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [5129 5212])
+                                                            ("needleLengthConstrainFirstDipoleWeightPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthConstrainFirstDipoleWeightPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [5217 5340])
+                                                            ("needleLengthConstrainSecondDipoleWeightPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthConstrainSecondDipoleWeightPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [5345 5470])
+                                                            ("needleLengthConstrainFirstWeightSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthConstrainFirstDipoleWeightSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [5475 5594])
+                                                            ("needleLengthConstrainSecondWeightSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthConstrainSecondDipoleWeightSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [5599 5720])
+                                                            ("unaryVectorWeightPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::UnaryVectorWeightPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [5725 5799])
+                                                            ("unaryVectorWeightSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::UnaryVectorWeightSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [5804 5880])
+                                                            ("minNeedleLengthPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthLimitMinPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [5885 5957])
+                                                            ("maxNeedleLengthPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthLimitMaxPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [5962 6034])
+                                                            ("minNeedleLengthSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthLimitMinSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [6039 6113])
+                                                            ("maxNeedleLengthSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthLimitMaxSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [6118 6192])
+                                                            ("realNeedleTip" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::RealNeedleTipShift" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [6197 6260])
+                                                            ("realNeedleEnd" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::RealNeedleEndShift" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [6265 6328])
+                                                            ("maxNeedleDistance" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MaxNeedleDistanceConstrain" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [6333 6400])
+                                                            ("maxResidualPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MaxResidualPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [6405 6473])
+                                                            ("maxResidualSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MaxResidualSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [6478 6548])
+                                                            ("safetyMonGreenLimit" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::SafetyMonitorGreenLimit" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [6553 6622])
+                                                            ("safetyMonRedLimit" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::SafetyMonitorRedLimit" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [6627 6694])
+                                                            ("gradientThreshold" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::GradientThreshold" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [6699 6766])
+                                                            ("minNumberOfValidSensors" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MinNumberOfValidSensors" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [6771 6844])
+                                                            ("compensation" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::AutoCompensation" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [6849 6911])
+                                                            ("maxNeedleDisplayDepth" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MaxNeedleDisplayDepth" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [6916 6987])
+                                                            ("config" variable
+                                                               (:reference 1
+                                                                :type ("PipelineNeedleConfig" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [6998 7053]))                                                          
+                                                        :type "void")
+                                                        (reparse-symbol namespacesubparts) [3452 7054])
+                                                    ("UpdateDspAlgorithmConfiguration" function
+                                                       (:prototype-flag t
+                                                        :arguments 
+                                                          ( ("needleLenghtPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthFirstDipolePrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [7174 7238])
+                                                            ("params" variable
+                                                               (:reference 1
+                                                                :type ("NdDspAlgorithmParams" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [7253 7303]))                                                          
+                                                        :type "void")
+                                                        (reparse-symbol namespacesubparts) [7128 7304]))                                                  
+                                                :type "namespace")
+                                                (reparse-symbol namespacesubparts) [3432 7307]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [2761 7330]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1184 7363]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1165 7383]))                  
+                :type "namespace")
+                nil [1090 7405]))          
+      :file "ccapp_scf_needledetectionparameterconfiguration.hpp"
+      :pointmax 7557
+      :fsize 7556
+      :lastmodtime '(21166 56603 169620 258000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_SCF_NEEDLEDETECTIONPARAMETERCONFIGURATION_HPP")
+          )
+)
+    (semanticdb-table "ccapp_scf_needledetectionparameterconfiguration.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_scf_needledetectionparameterconfiguration.hpp" include nil nil [780 842])
+            ("ccapp_scf_ndalgorithmparams.hpp" include nil nil [844 886])
+            ("ccapp_scf_ndalgorithmparamvalues.hpp" include nil nil [887 934])
+            ("ccapp_scf_nddspalgorithmparams.hpp" include nil nil [935 980])
+            ("ccapp_scf_pipelineneedleconfig.hpp" include nil nil [981 1026])
+            ("core_log_logmsg.hpp" include nil nil [1028 1058])
+            ("core_dtr_dependencysetiface.hpp" include nil nil [1060 1102])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("scf" type
+                               (:members 
+                                  ( ("core" using (:type ("core" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1234 1255])
+                                    ("core::dtr" using (:type ("core::dtr" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1256 1282])
+                                    ("core::log" using (:type ("core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1283 1309])
+                                    ("needle_detection" type
+                                       (:members 
+                                          ( ("hidden" type
+                                               (:members 
+                                                  ( ("UpdateNeedleAlgorithmConfiguration" function
+                                                       (:arguments 
+                                                          ( ("magnetizationForceFirstDipolePrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceFirstDipolePrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [1706 1808])
+                                                            ("magnetizationForceSecondDipolePrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceSecondDipolePrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [1813 1917])
+                                                            ("magnetizationForceFirstDipoleSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceFirstDipoleSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [1922 2027])
+                                                            ("magnetizationForceSecondDipoleSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceSecondDipoleSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [2032 2139])
+                                                            ("magnetizationForceFirstDipoleWeightPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceFirstDipoleWeightPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [2144 2259])
+                                                            ("magnetizationForceSecondDipoleWeightPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceSecondDipoleWeightPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [2264 2385])
+                                                            ("magnetizationForceFirstDipoleWeightSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceFirstDipoleWeightSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [2390 2511])
+                                                            ("magnetizationForceSecondDipoleWeightSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceSecondDipoleWeightSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [2516 2639])
+                                                            ("magnetizationCoefficient" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationCoefficient" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [2644 2719])
+                                                            ("minMagnetizationForceLimitPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceLimitMinPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [2724 2808])
+                                                            ("maxMagnetizationForceLimitPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceLimitMaxPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [2813 2897])
+                                                            ("minMagnetizationForceLimitSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceLimitMinSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [2902 3032])
+                                                            ("maxMagnetizationForceLimitSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MagnetizationForceLimitMaxSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3037 3167])
+                                                            ("needleLengthFirstDipolePrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthFirstDipolePrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3172 3253])
+                                                            ("needleLengthSecondDipolePrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthSecondDipolePrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3258 3340])
+                                                            ("needleLengthFirstDipoleSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthFirstDipoleSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3345 3428])
+                                                            ("needleLengthSecondDipoleSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthSecondDipoleSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3433 3517])
+                                                            ("needleLengthConstrainFirstDipoleWeightPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthConstrainFirstDipoleWeightPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3522 3644])
+                                                            ("needleLengthConstrainSecondDipoleWeightPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthConstrainSecondDipoleWeightPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3649 3773])
+                                                            ("needleLengthConstrainFirstDipoleWeightSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthConstrainFirstDipoleWeightSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3778 3903])
+                                                            ("needleLengthConstrainSecondDipoleWeightSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthConstrainSecondDipoleWeightSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3908 4035])
+                                                            ("unaryVectorWeightPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::UnaryVectorWeightPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4040 4115])
+                                                            ("unaryVectorWeightSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::UnaryVectorWeightSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4120 4197])
+                                                            ("minNeedleLengthPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthLimitMinPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4202 4275])
+                                                            ("maxNeedleLengthPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthLimitMaxPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4280 4353])
+                                                            ("minNeedleLengthSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthLimitMinSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4358 4433])
+                                                            ("maxNeedleLengthSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthLimitMaxSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4438 4513])
+                                                            ("realNeedleTip" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::RealNeedleTipShift" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4518 4582])
+                                                            ("realNeedleEnd" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::RealNeedleEndShift" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4587 4651])
+                                                            ("maxNeedleDistance" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MaxNeedleDistanceConstrain" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4656 4724])
+                                                            ("maxResidualPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MaxResidualPrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4729 4798])
+                                                            ("maxResidualSecondary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MaxResidualSecondary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4803 4874])
+                                                            ("safetyMonGreenLimit" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::SafetyMonitorGreenLimit" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4879 4949])
+                                                            ("safetyMonRedLimit" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::SafetyMonitorRedLimit" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4954 5022])
+                                                            ("gradientThreshold" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::GradientThreshold" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [5027 5095])
+                                                            ("minNumberOfValidSensors" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MinNumberOfValidSensors" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [5100 5174])
+                                                            ("compensation" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::AutoCompensation" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [5179 5242])
+                                                            ("maxNeedleDisplayDepth" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::MaxNeedleDisplayDepth" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [5247 5319])
+                                                            ("config" variable
+                                                               (:reference 1
+                                                                :type ("PipelineNeedleConfig" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [5330 5386]))                                                          
+                                                        :type "void")
+                                                        (reparse-symbol namespacesubparts) [1661 12047])
+                                                    ("UpdateDspAlgorithmConfiguration" function
+                                                       (:arguments 
+                                                          ( ("needleLenghtPrimary" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("nd::NeedleLengthFirstDipolePrimary" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [12220 12286])
+                                                            ("params" variable
+                                                               (:reference 1
+                                                                :type ("NdDspAlgorithmParams" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [12301 12353]))                                                          
+                                                        :type "void")
+                                                        (reparse-symbol namespacesubparts) [12174 12553]))                                                  
+                                                :type "namespace")
+                                                (reparse-symbol namespacesubparts) [1341 12631])
+                                            ("RegisterDependencies" function
+                                               (:arguments 
+                                                  ( ("deps" variable
+                                                       (:reference 1
+                                                        :type ("DependencySetIface" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [13350 13392]))                                                  
+                                                :type "void")
+                                                (reparse-symbol namespacesubparts) [13315 13550]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [1311 13776]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1217 13809]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1198 13829]))                  
+                :type "namespace")
+                nil [1179 13851]))          
+      :file "ccapp_scf_needledetectionparameterconfiguration.cpp"
+      :pointmax 13937
+      :fsize 13936
+      :lastmodtime '(21166 57034 724565 79000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_scf_ndalgorithmparams.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SCF_NDALGORITHMPARAMS_HPP" variable (:constant-flag t) nil [773 804])
+            ("ccapp_scf_ndinputsupervisorparams.hpp" include nil nil [880 928])
+            ("ccapp_scf_ndoptimistparams.hpp" include nil nil [929 970])
+            ("ccapp_scf_ndoutputsupervisorparams.hpp" include nil nil [971 1020])
+            ("iosfwd" include (:system-flag t) nil [1022 1039])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("scf" type
+                               (:members 
+                                  ( ("NdAlgorithmParams" type
+                                       (:members 
+                                          ( ("inputSupervisor" variable (:type ("NdInputSupervisorParams" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1652 1696])
+                                            ("optimist" variable (:type ("NdOptimistParams" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1701 1738])
+                                            ("outputSupervisor" variable (:type ("NdOutputSupervisorParams" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1743 1788])
+                                            ("==" function
+                                               (:prototype-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("rhs" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("NdAlgorithmParams" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1826 1857]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [1809 1864])
+                                            ("Print" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("os" variable
+                                                       (:reference 1
+                                                        :type ("std::ostream" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1891 1909]))                                                  
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [1869 1916])
+                                            ("Check" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1921 1940]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1621 1943])
+                                    ("<<" function
+                                       (:prototype-flag t
+                                        :operator-flag t
+                                        :arguments 
+                                          ( ("os" variable
+                                               (:reference 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2045 2062])
+                                            ("obj" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("NdAlgorithmParams" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2063 2093]))                                          
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [2019 2094]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1154 2097]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1135 2117]))                  
+                :type "namespace")
+                nil [1116 2139]))          
+      :file "ccapp_scf_ndalgorithmparams.hpp"
+      :pointmax 2251
+      :fsize 2250
+      :lastmodtime '(21160 27123 314645 742000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_SCF_NDALGORITHMPARAMS_HPP")
+          )
+)
+    (semanticdb-table "ccapp_scf_ndalgorithmparamvalues.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SCF_NDALGORITHMPARAMVALUES_HPP" variable (:constant-flag t) nil [782 818])
+            ("core_bty_commontypes.hpp" include nil nil [894 929])
+            ("core_bty_strongtypedef.hpp" include nil nil [930 967])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("scf" type
+                               (:members 
+                                  ( ("nd" type
+                                       (:members 
+                                          ( ("core::bty::Float" using (:type ("core::bty::Float" type
+                                                 (:prototype t
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol namespacesubparts) [1264 1287])
+                                            ("needle_defaults" type
+                                               (:members 
+                                                  ( ("INITIAL_MAGNETIZATION_FORCE_FD_P" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MagnetizationForceFirstDipolePrimary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [4211 4296])
+                                                    ("INITIAL_MAGNETIZATION_FORCE_SD_P" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MagnetizationForceSecondDipolePrimary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [4297 4382])
+                                                    ("INITIAL_MAGNETIZATION_FORCE_FD_S" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MagnetizationForceFirstDipoleSecondary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [4383 4470])
+                                                    ("INITIAL_MAGNETIZATION_FORCE_SD_S" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MagnetizationForceSecondDipoleSecondary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [4471 4558])
+                                                    ("INITIAL_MAGNETIZATION_FORCE_FD_WEIGHT_P" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MagnetizationForceFirstDipoleWeightPrimary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [4559 4668])
+                                                    ("INITIAL_MAGNETIZATION_FORCE_SD_WEIGHT_P" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MagnetizationForceSecondDipoleWeightPrimary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [4669 4779])
+                                                    ("INITIAL_MAGNETIZATION_FORCE_FD_WEIGHT_S" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MagnetizationForceFirstDipoleWeightSecondary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [4780 4893])
+                                                    ("INITIAL_MAGNETIZATION_FORCE_SD_WEIGHT_S" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MagnetizationForceFirstDipoleWeightSecondary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [4894 5007])
+                                                    ("INITIAL_MAGNETIZATION_COEFFICIENT" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MagnetizationCoefficient" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [5008 5091])
+                                                    ("INITIAL_MIN_MAGNETIZATION_FORCE_LIMIT_P" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MagnetizationForceLimitMinPrimary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [5092 5195])
+                                                    ("INITIAL_MAX_MAGNETIZATION_FORCE_LIMIT_P" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MagnetizationForceLimitMaxPrimary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [5196 5300])
+                                                    ("INITIAL_MIN_MAGNETIZATION_FORCE_LIMIT_S" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MagnetizationForceLimitMinSecondary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [5301 5404])
+                                                    ("INITIAL_MAX_MAGNETIZATION_FORCE_LIMIT_S" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MagnetizationForceLimitMaxSecondary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [5405 5509])
+                                                    ("INITIAL_NEEDLE_LENGTH_FD_P" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("NeedleLengthFirstDipolePrimary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [5511 5586])
+                                                    ("INITIAL_NEEDLE_LENGTH_SD_P" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("NeedleLengthSecondDipolePrimary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [5587 5662])
+                                                    ("INITIAL_NEEDLE_LENGTH_FD_S" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("NeedleLengthFirstDipoleSecondary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [5663 5738])
+                                                    ("INITIAL_NEEDLE_LENGTH_SD_S" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("NeedleLengthSecondDipoleSecondary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [5739 5814])
+                                                    ("INITIAL_MIN_NEEDLE_LENGTH_LIMIT_P" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("NeedleLengthLimitMinPrimary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [5816 5894])
+                                                    ("INITIAL_MAX_NEEDLE_LENGTH_LIMIT_P" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("NeedleLengthLimitMaxPrimary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [5895 5973])
+                                                    ("INITIAL_MIN_NEEDLE_LENGTH_LIMIT_S" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("NeedleLengthLimitMinSecondary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [5974 6052])
+                                                    ("INITIAL_MAX_NEEDLE_LENGTH_LIMIT_S" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("NeedleLengthLimitMaxSecondary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [6053 6131])
+                                                    ("INITIAL_NEEDLE_LENGTH_CONSTRAIN_FD_WEIGHT_P" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("NeedleLengthConstrainFirstDipoleWeightPrimary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [6132 6247])
+                                                    ("INITIAL_NEEDLE_LENGTH_CONSTRAIN_SD_WEIGHT_P" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("NeedleLengthConstrainSecondDipoleWeightPrimary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [6248 6364])
+                                                    ("INITIAL_NEEDLE_LENGTH_CONSTRAIN_FD_WEIGHT_S" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("NeedleLengthConstrainFirstDipoleWeightSecondary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [6365 6482])
+                                                    ("INITIAL_NEEDLE_LENGTH_CONSTRAIN_SD_WEIGHT_S" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("NeedleLengthConstrainSecondDipoleWeightSecondary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [6483 6601])
+                                                    ("INITIAL_UNARY_VECTOR_WEIGHT_P" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("UnaryVectorWeightPrimary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [6603 6680])
+                                                    ("INITIAL_UNARY_VECTOR_WEIGHT_S" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("UnaryVectorWeightSecondary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [6681 6758])
+                                                    ("INITIAL_MAX_NEEDLE_DISPLAY_DEPTH" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MaxNeedleDisplayDepth" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [6760 6841])
+                                                    ("INITIAL_TIP_NEEDLE_SHIFT" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("RealNeedleTipShift" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [6843 6915])
+                                                    ("INITIAL_END_NEEDLE_SHIFT" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("RealNeedleEndShift" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [6916 6989])
+                                                    ("INITIAL_MAX_NEEDLE_DISTANCE" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MaxNeedleDistanceConstrain" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [6991 7068])
+                                                    ("INITIAL_MAX_RESIDUAL_P" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MaxResidualPrimary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [7069 7139])
+                                                    ("INITIAL_MAX_RESIDUAL_S" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MaxResidualSecondary" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [7140 7210])
+                                                    ("INITIAL_AUTO_COMPENSATION" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :arguments 
+                                                          ( ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7279 7286]))                                                          
+                                                        :type ("AutoCompensation" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [7212 7287])
+                                                    ("INITIAL_SAFTETY_MON_GREEN_LIMIT" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("SafetyMonitorGreenLimit" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [7289 7368])
+                                                    ("INITIAL_SAFTETY_MON_RED_LIMIT" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("SafetyMonitorRedLimit" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [7369 7446])
+                                                    ("INITIAL_GRADIENT_THRESHOLD" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("GradientThreshold" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [7448 7524])
+                                                    ("INITIAL_MIN_NUMBER_OF_VALID_SENSORS" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type ("MinNumberOfValidSensors" type (:type "class") nil nil))
+                                                        (reparse-symbol namespacesubparts) [7526 7609])
+                                                    ("DECIMATION_FACTOR" function
+                                                       (:prototype-flag t
+                                                        :constant-flag t
+                                                        :type "unsigned int")
+                                                        (reparse-symbol namespacesubparts) [7611 7674]))                                                  
+                                                :type "namespace")
+                                                (reparse-symbol namespacesubparts) [4182 7677])
+                                            ("primary" type
+                                               (:members 
+                                                  ( ("input" type
+                                                       (:members 
+                                                          ( ("NOISE_THRESHOLD" function
+                                                               (:prototype-flag t
+                                                                :constant-flag t
+                                                                :type ("Float" type (:type "class") nil nil))
+                                                                (reparse-symbol namespacesubparts) [7888 7924]))                                                          
+                                                        :type "namespace")
+                                                        (reparse-symbol namespacesubparts) [7869 7927])
+                                                    ("optimist" type
+                                                       (:members 
+                                                          ( ("PARAMETER_TOLERANCE" function
+                                                               (:prototype-flag t
+                                                                :constant-flag t
+                                                                :type ("Float" type (:type "class") nil nil))
+                                                                (reparse-symbol namespacesubparts) [8025 8065])
+                                                            ("MAX_ITERATIONS_COUNT" function
+                                                               (:prototype-flag t
+                                                                :constant-flag t
+                                                                :type "unsigned int")
+                                                                (reparse-symbol namespacesubparts) [8066 8112])
+                                                            ("LAMBDA" function
+                                                               (:prototype-flag t
+                                                                :constant-flag t
+                                                                :type ("Float" type (:type "class") nil nil))
+                                                                (reparse-symbol namespacesubparts) [8113 8140])
+                                                            ("SHRINK" function
+                                                               (:prototype-flag t
+                                                                :constant-flag t
+                                                                :type ("Float" type (:type "class") nil nil))
+                                                                (reparse-symbol namespacesubparts) [8141 8167])
+                                                            ("STEP" function
+                                                               (:prototype-flag t
+                                                                :constant-flag t
+                                                                :type ("Float" type (:type "class") nil nil))
+                                                                (reparse-symbol namespacesubparts) [8168 8193]))                                                          
+                                                        :type "namespace")
+                                                        (reparse-symbol namespacesubparts) [8003 8196])
+                                                    ("output" type
+                                                       (:members 
+                                                          ( ("MAX_COORDINATE_CONSTRAIN" function
+                                                               (:prototype-flag t
+                                                                :constant-flag t
+                                                                :type ("Float" type (:type "class") nil nil))
+                                                                (reparse-symbol namespacesubparts) [8306 8352]))                                                          
+                                                        :type "namespace")
+                                                        (reparse-symbol namespacesubparts) [8286 8355]))                                                  
+                                                :type "namespace")
+                                                (reparse-symbol namespacesubparts) [7783 8378])
+                                            ("secondary" type
+                                               (:members 
+                                                  ( ("input" type
+                                                       (:members 
+                                                          ( ("NOISE_THRESHOLD" function
+                                                               (:prototype-flag t
+                                                                :constant-flag t
+                                                                :type ("Float" type (:type "class") nil nil))
+                                                                (reparse-symbol namespacesubparts) [8595 8631]))                                                          
+                                                        :type "namespace")
+                                                        (reparse-symbol namespacesubparts) [8576 8634])
+                                                    ("optimist" type
+                                                       (:members 
+                                                          ( ("PARAMETER_TOLERANCE" function
+                                                               (:prototype-flag t
+                                                                :constant-flag t
+                                                                :type ("Float" type (:type "class") nil nil))
+                                                                (reparse-symbol namespacesubparts) [8732 8772])
+                                                            ("MAX_ITERATIONS_COUNT" function
+                                                               (:prototype-flag t
+                                                                :constant-flag t
+                                                                :type "unsigned int")
+                                                                (reparse-symbol namespacesubparts) [8773 8819])
+                                                            ("LAMBDA" function
+                                                               (:prototype-flag t
+                                                                :constant-flag t
+                                                                :type ("Float" type (:type "class") nil nil))
+                                                                (reparse-symbol namespacesubparts) [8820 8847])
+                                                            ("SHRINK" function
+                                                               (:prototype-flag t
+                                                                :constant-flag t
+                                                                :type ("Float" type (:type "class") nil nil))
+                                                                (reparse-symbol namespacesubparts) [8848 8874])
+                                                            ("STEP" function
+                                                               (:prototype-flag t
+                                                                :constant-flag t
+                                                                :type ("Float" type (:type "class") nil nil))
+                                                                (reparse-symbol namespacesubparts) [8875 8900]))                                                          
+                                                        :type "namespace")
+                                                        (reparse-symbol namespacesubparts) [8710 8903])
+                                                    ("output" type
+                                                       (:members 
+                                                          ( ("MAX_COORDINATE_CONSTRAIN" function
+                                                               (:prototype-flag t
+                                                                :constant-flag t
+                                                                :type ("Float" type (:type "class") nil nil))
+                                                                (reparse-symbol namespacesubparts) [9013 9059]))                                                          
+                                                        :type "namespace")
+                                                        (reparse-symbol namespacesubparts) [8993 9062]))                                                  
+                                                :type "namespace")
+                                                (reparse-symbol namespacesubparts) [8488 9085]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [1099 9336]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1082 9355]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1063 9375]))                  
+                :type "namespace")
+                nil [1044 9397]))          
+      :file "ccapp_scf_ndalgorithmparamvalues.hpp"
+      :pointmax 9519
+      :fsize 9518
+      :lastmodtime '(21166 56384 295888 820000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_SCF_NDALGORITHMPARAMVALUES_HPP")
+          )
+)
+    (semanticdb-table "ccapp_scf_nddspalgorithmparams.hpp"
+      :file "ccapp_scf_nddspalgorithmparams.hpp"
+      :fsize 2326
+      :lastmodtime '(21160 27123 342645 18000))
+    (semanticdb-table "ccapp_scf_pipelineneedleconfig.hpp"
+      :file "ccapp_scf_pipelineneedleconfig.hpp"
+      :fsize 2414
+      :lastmodtime '(21160 27123 345644 941000))
+    (semanticdb-table "ccapp_scf_optimistparamscommon.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_scf_optimistparamscommon.hpp" include nil nil [723 768])
+            ("core_log_logmsg.hpp" include nil nil [770 800])
+            ("ostream" include (:system-flag t) nil [802 820])
+            ("cstring" include (:system-flag t) nil [821 839])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("scf" type
+                               (:members 
+                                  ( ("core" using (:type ("core" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [971 992])
+                                    ("core::log" using (:type ("core::log" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [993 1019])
+                                    ("==" function
+                                       (:operator-flag t
+                                        :parent "OptimistParamsCommon"
+                                        :arguments 
+                                          ( ("rhs" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("OptimistParamsCommon" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1914 1948]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [1875 2023])
+                                    ("Print" function
+                                       (:parent "OptimistParamsCommon"
+                                        :arguments 
+                                          ( ("os" variable
+                                               (:reference 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2276 2294]))                                          
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [2233 2643])
+                                    ("Check" function
+                                       (:parent "OptimistParamsCommon"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [2843 2887])
+                                    ("<<" function
+                                       (:operator-flag t
+                                        :arguments 
+                                          ( ("os" variable
+                                               (:reference 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3374 3391])
+                                            ("obj" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("OptimistParamsCommon" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3392 3425]))                                          
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [3348 3457]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [954 3683]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [935 3703]))                  
+                :type "namespace")
+                nil [916 3725]))          
+      :file "ccapp_scf_optimistparamscommon.cpp"
+      :pointmax 3794
+      :fsize 3793
+      :lastmodtime '(21160 27123 471641 686000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_scf_optimistparamscommon.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SCF_OPTIMISTPARAMSCOMMON_HPP" variable (:constant-flag t) nil [774 808])
+            ("core_ipc_numberwrapper.hpp" include nil nil [884 921])
+            ("iosfwd" include (:system-flag t) nil [923 940])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("scf" type
+                               (:members 
+                                  ( ("core::ipc::NumberWrapper" using (:type ("core::ipc::NumberWrapper" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1221 1252])
+                                    ("OptimistParamsCommon" type
+                                       (:members 
+                                          ( ("maxIterationsCount" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("unsigned int" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1588 1639])
+                                            ("parameterTolerance" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1644 1695])
+                                            ("lambda" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1700 1739])
+                                            ("step" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1744 1781])
+                                            ("shrink" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1786 1825])
+                                            ("==" function
+                                               (:prototype-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("rhs" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("OptimistParamsCommon" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1864 1898]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [1847 1905])
+                                            ("Print" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("os" variable
+                                                       (:reference 1
+                                                        :type ("std::ostream" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1932 1950]))                                                  
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [1910 1957])
+                                            ("Check" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [1962 1981]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1554 1984])
+                                    ("<<" function
+                                       (:prototype-flag t
+                                        :operator-flag t
+                                        :arguments 
+                                          ( ("os" variable
+                                               (:reference 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2086 2103])
+                                            ("obj" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("OptimistParamsCommon" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2104 2137]))                                          
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [2060 2138]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1055 2141]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1036 2161]))                  
+                :type "namespace")
+                nil [1017 2183]))          
+      :file "ccapp_scf_optimistparamscommon.hpp"
+      :pointmax 2301
+      :fsize 2300
+      :lastmodtime '(21160 27123 347644 890000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_SCF_OPTIMISTPARAMSCOMMON_HPP")
+          )
+)
+    (semanticdb-table "ccapp_scf_ndoptimistparams.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_scf_ndoptimistparams.hpp" include nil nil [722 763])
+            ("core_chk_assert.hpp" include nil nil [765 795])
+            ("ostream" include (:system-flag t) nil [797 815])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("scf" type
+                               (:members 
+                                  ( ("==" function
+                                       (:operator-flag t
+                                        :parent "NdOptimistParams"
+                                        :arguments 
+                                          ( ("rhs" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("NdOptimistParams" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1836 1866]))                                          
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [1801 3433])
+                                    ("Print" function
+                                       (:parent "NdOptimistParams"
+                                        :arguments 
+                                          ( ("os" variable
+                                               (:reference 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3684 3702]))                                          
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [3644 5092])
+                                    ("Check" function
+                                       (:parent "NdOptimistParams"
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [5292 5442])
+                                    ("<<" function
+                                       (:operator-flag t
+                                        :arguments 
+                                          ( ("os" variable
+                                               (:reference 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5933 5950])
+                                            ("obj" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("NdOptimistParams" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5951 5980]))                                          
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [5907 6012]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [930 6238]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [911 6258]))                  
+                :type "namespace")
+                nil [892 6280]))          
+      :file "ccapp_scf_ndoptimistparams.cpp"
+      :pointmax 6105
+      :fsize 6344
+      :lastmodtime '(21166 54591 549341 231000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ccapp_scf_ndoptimistparams.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SCF_NDOPTIMISTPARAMS_HPP" variable (:constant-flag t) nil [769 799])
+            ("core_ipc_numberwrapper.hpp" include nil nil [875 912])
+            ("iosfwd" include (:system-flag t) nil [914 931])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("scf" type
+                               (:members 
+                                  ( ("core::ipc::NumberWrapper" using (:type ("core::ipc::NumberWrapper" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1212 1243])
+                                    ("NdOptimistParams" type
+                                       (:members 
+                                          ( ("magnetizationForceFirstDipole" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1575 1629])
+                                            ("magnetizationForceSecondDipole" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1634 1689])
+                                            ("magnetizationForceFirstDipoleWeight" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1694 1754])
+                                            ("magnetizationForceSecondDipoleWeight" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1759 1820])
+                                            ("magnetizationCoefficient" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1825 1874])
+                                            ("needleLengthFirstDipole" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1880 1928])
+                                            ("needleLengthSecondDipole" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1933 1982])
+                                            ("needleLengthFirstDipoleWeight" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1987 2041])
+                                            ("needleLengthSecondDipoleWeight" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2046 2101])
+                                            ("unaryVectorWeight" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2107 2149])
+                                            ("maxIterationsCount" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("unsigned int" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2155 2205])
+                                            ("parameterTolerance" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2210 2253])
+                                            ("shrink" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2259 2290])
+                                            ("lambda" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2295 2326])
+                                            ("step" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2331 2360])
+                                            ("squaredMaxDistance" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [2366 2409])
+                                            ("==" function
+                                               (:prototype-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("rhs" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("NdOptimistParams" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2447 2477]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [2430 2484])
+                                            ("Print" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("os" variable
+                                                       (:reference 1
+                                                        :type ("std::ostream" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [2511 2529]))                                                  
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [2489 2536])
+                                            ("Check" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2541 2560]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1545 2563])
+                                    ("<<" function
+                                       (:prototype-flag t
+                                        :operator-flag t
+                                        :arguments 
+                                          ( ("os" variable
+                                               (:reference 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2665 2682])
+                                            ("obj" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("NdOptimistParams" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2683 2712]))                                          
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [2639 2713]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1046 2716]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1027 2736]))                  
+                :type "namespace")
+                nil [1008 2758]))          
+      :file "ccapp_scf_ndoptimistparams.hpp"
+      :pointmax 2868
+      :fsize 2867
+      :lastmodtime '(21166 54800 742284 226000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_SCF_NDOPTIMISTPARAMS_HPP")
+          )
+)
+    (semanticdb-table "ccapp_scf_ndinputsupervisorparams.hpp"
+      :file "ccapp_scf_ndinputsupervisorparams.hpp"
+      :fsize 2255
+      :lastmodtime '(21160 27123 451642 203000))
+    (semanticdb-table "ccapp_scf_ndoutputsupervisorparams.hpp"
+      :file "ccapp_scf_ndoutputsupervisorparams.hpp"
+      :fsize 2504
+      :lastmodtime '(21160 27123 318645 638000))
+    (semanticdb-table "ccapp_scf_ndconstants.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SCF_NDCONSTANTS_HPP" variable (:constant-flag t) nil [725 750])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("scf" type
+                               (:members 
+                                  ( ("ND_ADAPTIVE_SMOOTHING_COEFF" variable
+                                       (:constant-flag t
+                                        :type "float")
+                                        (reparse-symbol namespacesubparts) [1298 1345]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [940 1573]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [921 1593]))                  
+                :type "namespace")
+                nil [902 1615]))          
+      :file "ccapp_scf_ndconstants.hpp"
+      :pointmax 1715
+      :fsize 1714
+      :lastmodtime '(21160 27123 337645 147000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_SCF_NDCONSTANTS_HPP")
+          )
+)
+    (semanticdb-table "ccapp_scf_ndcommonparams.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CCAPP_SCF_NDCOMMONPARAMS_HPP" variable (:constant-flag t) nil [763 791])
+            ("core_ipc_numberwrapper.hpp" include nil nil [867 904])
+            ("iosfwd" include (:system-flag t) nil [906 923])
+            ("ezono" type
+               (:members 
+                  ( ("ccapp" type
+                       (:members 
+                          ( ("scf" type
+                               (:members 
+                                  ( ("core::ipc::NumberWrapper" using (:type ("core::ipc::NumberWrapper" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1204 1235])
+                                    ("NdCommonParams" type
+                                       (:members 
+                                          ( ("tipNeedleShift" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1565 1604])
+                                            ("endNeedleShift" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1609 1648])
+                                            ("safetyMonGreenLimit" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1654 1698])
+                                            ("safetyMonRedLimit" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1703 1745])
+                                            ("gradientThreshold" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("float" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1751 1793])
+                                            ("decimationFactor" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("unsigned int" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1799 1848])
+                                            ("autozeroingActive" variable (:type ("NumberWrapper" type
+                                                 (:template-specifier 
+                                                    ( ("bool" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol classsubparts) [1854 1896])
+                                            ("==" function
+                                               (:prototype-flag t
+                                                :operator-flag t
+                                                :arguments 
+                                                  ( ("rhs" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("NdCommonParams" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1934 1962]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [1917 1969])
+                                            ("Print" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("os" variable
+                                                       (:reference 1
+                                                        :type ("std::ostream" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [1996 2014]))                                                  
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [1974 2021])
+                                            ("Check" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [2026 2045]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [1537 2048])
+                                    ("<<" function
+                                       (:prototype-flag t
+                                        :operator-flag t
+                                        :arguments 
+                                          ( ("os" variable
+                                               (:reference 1
+                                                :type ("std::ostream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2150 2167])
+                                            ("obj" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("NdCommonParams" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2168 2195]))                                          
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol namespacesubparts) [2124 2196]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1038 2199]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1019 2219]))                  
+                :type "namespace")
+                nil [1000 2241]))          
+      :file "ccapp_scf_ndcommonparams.hpp"
+      :pointmax 2347
+      :fsize 2346
+      :lastmodtime '(21160 27123 450642 229000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CCAPP_SCF_NDCOMMONPARAMS_HPP")
+          )
+))
+  :file "!sandbox!workspace!cyclades!b_twodipoles_CR15245!development!code!a_scf!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

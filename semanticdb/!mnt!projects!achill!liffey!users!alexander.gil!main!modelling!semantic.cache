@@ -1,0 +1,100 @@
+;; Object modelling/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "modelling/"
+  :tables
+  (list
+    (semanticdb-table "run_model.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [24 61])
+            ("LookupTableGenerator" include nil nil [63 116])
+            ("Multipole" include nil nil [117 159])
+            ("ProbeDefinitions" include nil nil [160 208])
+            ("SensorDataGenerator" include nil nil [209 261])
+            ("FieldEstimator" include nil nil [262 309])
+            ("Trayectory" include nil nil [310 353])
+            ("CommonFunctions" include nil nil [354 402])
+            ("Supervisor" include nil nil [403 446])
+            ("PlotFunctions" include nil nil [447 507])
+            ("settings" include nil nil [508 523])
+            ("matplotlib.pyplot" include nil nil [525 556])
+            ("lmfit" include nil nil [558 619])
+            ("numpy" include nil nil [621 676])
+            ("numpy.linalg" include nil nil [677 711])
+            ("numpy" include nil nil [713 809])
+            ("copy" include nil nil [810 821])
+            ("SimulationResults" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [891 915])
+                            ("self" variable nil (reparse-symbol indented_block_body) [924 1210]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [866 870])
+                            ("noPoints" variable nil (reparse-symbol function_parameters) [872 880]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [852 1211]))                  
+                :type "class")
+                nil [823 1211])
+            ("print_results" function (:arguments 
+              ( ("tip" variable nil (reparse-symbol function_parameters) [1230 1233])
+                ("result" variable nil (reparse-symbol function_parameters) [1235 1241])
+                ("ltg" variable nil (reparse-symbol function_parameters) [1243 1246]))              ) nil [1212 1672])
+            ("save_results" function (:arguments 
+              ( ("r" variable nil (reparse-symbol function_parameters) [1690 1691])
+                ("idx" variable nil (reparse-symbol function_parameters) [1693 1696])
+                ("result" variable nil (reparse-symbol function_parameters) [1698 1704])
+                ("params" variable nil (reparse-symbol function_parameters) [1713 1719]))              ) nil [1673 2344])
+            ("are_equal" function (:arguments 
+              ( ("first_array" variable nil (reparse-symbol function_parameters) [2359 2370])
+                ("second_array" variable nil (reparse-symbol function_parameters) [2372 2384]))              ) nil [2345 2610])
+            ("if" code nil nil [2612 10653]))          
+      :file "run_model.py"
+      :pointmax 10655
+      :fsize 10654
+      :lastmodtime '(21840 43923 408108 909000)
+      :unmatched-syntax nil)
+    (semanticdb-table "LookupTableGenerator.py"
+      :file "LookupTableGenerator.py"
+      :fsize 10393
+      :lastmodtime '(21840 43923 398108 573000))
+    (semanticdb-table "Multipole.py"
+      :file "Multipole.py"
+      :fsize 4033
+      :lastmodtime '(21840 43935 201503 741000))
+    (semanticdb-table "ProbeDefinitions.py"
+      :file "ProbeDefinitions.py"
+      :fsize 2433
+      :lastmodtime '(21840 43936 794557 60000))
+    (semanticdb-table "SensorDataGenerator.py"
+      :file "SensorDataGenerator.py"
+      :fsize 3948
+      :lastmodtime '(21840 43935 4497 31000))
+    (semanticdb-table "FieldEstimator.py"
+      :file "FieldEstimator.py"
+      :fsize 10377
+      :lastmodtime '(21840 43923 347106 886000))
+    (semanticdb-table "Trayectory.py"
+      :file "Trayectory.py"
+      :fsize 2180
+      :lastmodtime '(21840 43935 264505 684000))
+    (semanticdb-table "CommonFunctions.py"
+      :file "CommonFunctions.py"
+      :fsize 1795
+      :lastmodtime '(21840 43923 388108 222000))
+    (semanticdb-table "Supervisor.py"
+      :file "Supervisor.py"
+      :fsize 3764
+      :lastmodtime '(21840 43936 738555 182000))
+    (semanticdb-table "PlotFunctions.py"
+      :file "PlotFunctions.py"
+      :fsize 2575
+      :lastmodtime '(21840 43936 920561 287000))
+    (semanticdb-table "settings.py"
+      :file "settings.py"
+      :fsize 867
+      :lastmodtime '(21840 43935 114500 722000)))
+  :file "!mnt!projects!achill!liffey!users!alexander.gil!main!modelling!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

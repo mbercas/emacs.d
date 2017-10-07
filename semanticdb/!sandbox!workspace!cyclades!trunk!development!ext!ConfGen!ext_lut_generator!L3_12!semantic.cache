@@ -1,0 +1,16 @@
+;; Object L3_12/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "L3_12/"
+  :tables
+  (list
+    (semanticdb-table "ext_luts_fullfocusdelay.hpp"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "ext_luts_fullfocusdelay.hpp"
+      :pointmax 862938
+      :fsize 862937
+      :lastmodtime '(21586 6400 10282 443000)
+      :unmatched-syntax '((semantic-list 1 . 862937))))
+  :file "!sandbox!workspace!cyclades!trunk!development!ext!ConfGen!ext_lut_generator!L3_12!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

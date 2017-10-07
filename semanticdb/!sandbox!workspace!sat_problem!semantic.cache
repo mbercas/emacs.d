@@ -1,0 +1,38 @@
+;; Object sat_problem/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sat_problem/"
+  :tables
+  (list
+    (semanticdb-table "analize.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pylab" include nil nil [21 43])
+            ("scp" include nil nil [44 74])
+            ("uuid" include nil nil [75 86])
+            ("paramiko" include nil nil [87 102])
+            ("paramiko" include nil nil [103 133])
+            ("files" variable nil nil [135 171])
+            ("ssh" variable nil nil [174 191])
+            ("ssh" code nil nil [192 249])
+            ("ssh" code nil nil [251 278])
+            ("ssh" code nil nil [279 322])
+            ("FilterFileInput" function
+               (:documentation "
+    Generator for filtering the input to the loadtxt function
+    "
+                :arguments 
+                  ( ("fn" variable nil (reparse-symbol function_parameters) [345 347]))                  )
+                nil [324 503])
+            ("GetFile" function (:arguments 
+              ( ("f" variable nil (reparse-symbol function_parameters) [518 519]))              ) nil [505 681])
+            ("DoBoxplots" function (:arguments 
+              ( ("f" variable nil (reparse-symbol function_parameters) [699 700]))              ) nil [683 1138])
+            ("if" code nil nil [1139 1246]))          
+      :file "analize.py"
+      :pointmax 1261
+      :fsize 1260
+      :lastmodtime '(21569 12386 371670 542000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!sat_problem!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

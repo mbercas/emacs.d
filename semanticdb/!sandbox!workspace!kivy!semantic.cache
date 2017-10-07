@@ -1,0 +1,31 @@
+;; Object kivy/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "kivy/"
+  :tables
+  (list
+    (semanticdb-table "tut01.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("kivy.app" include nil nil [24 48])
+            ("kivy.uix.label" include nil nil [50 82])
+            ("kivy.uix.scatter" include nil nil [83 119])
+            ("kivy.uix.floatlayout" include nil nil [120 164])
+            ("TutorialApp" type
+               (:superclasses ("App")
+                :members 
+                  ( ("build" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [213 217]))                          )
+                        (reparse-symbol indented_block_body) [202 394]))                  
+                :type "class")
+                nil [167 394])
+            ("if" code nil nil [396 448]))          
+      :file "tut01.py"
+      :pointmax 448
+      :fsize 447
+      :lastmodtime '(21250 33911 131038 705000)
+      :unmatched-syntax '((INDENT_BLOCK 270 . 338))))
+  :file "!sandbox!workspace!kivy!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

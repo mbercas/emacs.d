@@ -1,0 +1,161 @@
+;; Object quick2wire/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "quick2wire/"
+  :tables
+  (list
+    (semanticdb-table "i2c.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [2 12])
+            ("contextlib" include nil nil [13 43])
+            ("posix" include nil nil [44 56])
+            ("fcntl" include nil nil [57 80])
+            ("quick2wire.i2c_ctypes" include nil nil [81 116])
+            ("ctypes" include nil nil [117 209])
+            ("quick2wire.board_revision" include nil nil [210 256])
+            ("assert" code nil nil [258 337])
+            ("0" code nil nil [379 380])
+            ("I2CMaster" type
+               (:documentation "Performs I2C I/O transactions on an I2C bus.
+    
+    Transactions are performed by passing one or more I2C I/O messages
+    to the transaction method of the I2CMaster.  I2C I/O messages are
+    created with the reading, reading_into, writing and writing_bytes
+    functions defined in the quick2wire.i2c module.
+    
+    An I2CMaster acts as a context manager, allowing it to be used in a
+    with statement.  The I2CMaster's file descriptor is closed at
+    the end of the with statement and the instance cannot be used for
+    further I/O.
+    
+    For example:
+    
+        from quick2wire.i2c import I2CMaster, writing
+        
+        with I2CMaster() as i2c:
+            i2c.transaction(
+                writing(0x20, bytes([0x01, 0xFF])))
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Opens the bus device.
+        
+        Arguments:
+        n                -- the number of the bus (default is
+                            the bus on the Raspberry Pi accessible
+                            via the header pins).
+        extra_open_flags -- extra flags passed to posix.open when 
+                            opening the I2C bus device file (default 0; 
+                            e.g. no extra flags).
+        \"\"\"" code nil (reparse-symbol indented_block_body) [1241 1674])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1683 1751]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1191 1195])
+                            ("n" variable nil (reparse-symbol function_parameters) [1197 1198])
+                            ("extra_open_flags" variable nil (reparse-symbol function_parameters) [1212 1228]))                          
+                        :documentation "Opens the bus device.
+        
+        Arguments:
+        n                -- the number of the bus (default is
+                            the bus on the Raspberry Pi accessible
+                            via the header pins).
+        extra_open_flags -- extra flags passed to posix.open when 
+                            opening the I2C bus device file (default 0; 
+                            e.g. no extra flags).
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1178 1752])
+                    ("__enter__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1775 1779]))                          )
+                        (reparse-symbol indented_block_body) [1761 1802])
+                    ("__exit__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1824 1828])
+                            ("exc_type" variable nil (reparse-symbol function_parameters) [1830 1838])
+                            ("exc_value" variable nil (reparse-symbol function_parameters) [1840 1849])
+                            ("traceback" variable nil (reparse-symbol function_parameters) [1851 1860]))                          )
+                        (reparse-symbol indented_block_body) [1811 1884])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1903 1907]))                          
+                        :documentation "
+        Closes the I2C bus device.
+        ")
+                        (reparse-symbol indented_block_body) [1893 1998])
+                    ("transaction" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2023 2027])
+                            ("msgs" variable nil (reparse-symbol function_parameters) [2029 2034]))                          
+                        :documentation "
+        Perform an I2C I/O transaction.
+
+        Arguments:
+        *msgs -- I2C messages created by one of the reading, reading_into,
+                 writing or writing_bytes functions.
+        
+        Returns: a list of byte sequences, one for each read operation 
+                 performed.
+        ")
+                        (reparse-symbol indented_block_body) [2007 2654]))                  
+                :type "class")
+                nil [382 2654])
+            ("reading" function
+               (:documentation "An I2C I/O message that reads n_bytes bytes of data"
+                :arguments 
+                  ( ("addr" variable nil (reparse-symbol function_parameters) [2669 2673])
+                    ("n_bytes" variable nil (reparse-symbol function_parameters) [2675 2682]))                  )
+                nil [2657 2808])
+            ("reading_into" function
+               (:documentation "An I2C I/O message that reads into an existing ctypes string buffer."
+                :arguments 
+                  ( ("addr" variable nil (reparse-symbol function_parameters) [2826 2830])
+                    ("buf" variable nil (reparse-symbol function_parameters) [2832 2835]))                  )
+                nil [2809 2962])
+            ("writing_bytes" function
+               (:documentation "An I2C I/O message that writes one or more bytes of data. 
+    
+    Each byte is passed as an argument to this function.
+    "
+                :arguments 
+                  ( ("addr" variable nil (reparse-symbol function_parameters) [2981 2985])
+                    ("bytes" variable nil (reparse-symbol function_parameters) [2987 2993]))                  )
+                nil [2963 3164])
+            ("writing" function
+               (:documentation "An I2C I/O message that writes one or more bytes of data.
+    
+    The bytes are passed to this function as a sequence.
+    "
+                :arguments 
+                  ( ("addr" variable nil (reparse-symbol function_parameters) [3177 3181])
+                    ("byte_seq" variable nil (reparse-symbol function_parameters) [3183 3191]))                  )
+                nil [3165 3425])
+            ("_new_i2c_msg" function (:arguments 
+              ( ("addr" variable nil (reparse-symbol function_parameters) [3444 3448])
+                ("flags" variable nil (reparse-symbol function_parameters) [3450 3455])
+                ("buf" variable nil (reparse-symbol function_parameters) [3457 3460]))              ) nil [3427 3532])
+            ("i2c_msg_to_bytes" function (:arguments 
+              ( ("m" variable nil (reparse-symbol function_parameters) [3555 3556]))              ) nil [3534 3594]))          
+      :file "i2c.py"
+      :pointmax 3594
+      :fsize 3593
+      :lastmodtime '(21917 8927 691418 863000)
+      :unmatched-syntax '((NAME 340 . 351) (IF 356 . 358) (ELSE 374 . 378)))
+    (semanticdb-table "i2c_ctypes.py"
+      :file "i2c_ctypes.py"
+      :fsize 1763
+      :lastmodtime '(21917 8927 691418 863000))
+    (semanticdb-table "board_revision.py"
+      :file "board_revision.py"
+      :fsize 288
+      :lastmodtime '(21917 8927 690418 855000)))
+  :file "!sandbox!workspace!bard!sensor_eval!quick2wire-python-api!quick2wire!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

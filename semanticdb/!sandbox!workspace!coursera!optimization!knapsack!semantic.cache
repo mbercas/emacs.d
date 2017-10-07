@@ -1,0 +1,221 @@
+;; Object knapsack/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "knapsack/"
+  :tables
+  (list
+    (semanticdb-table "solver.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("greedy" include nil nil [44 69])
+            ("dynamic_programming" include nil nil [70 121])
+            ("tree_prunning" include nil nil [122 173])
+            ("collections" include nil nil [175 209])
+            ("Item" variable nil nil [210 265])
+            ("solve_it" function (:arguments 
+              ( ("input_data" variable nil (reparse-symbol function_parameters) [283 293]))              ) nil [270 1242])
+            ("sys" include nil nil [1244 1254])
+            ("if" code nil nil [1256 1671]))          
+      :file "solver.py"
+      :pointmax 1672
+      :fsize 1671
+      :lastmodtime '(21287 21711 969946 356000)
+      :unmatched-syntax nil)
+    (semanticdb-table "submit.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("urllib" include nil nil [44 57])
+            ("urllib2" include nil nil [58 72])
+            ("hashlib" include nil nil [73 87])
+            ("email.message" include nil nil [88 108])
+            ("email.encoders" include nil nil [109 130])
+            ("time" include nil nil [132 143])
+            ("collections" include nil nil [144 178])
+            ("Metadata" variable nil nil [180 243])
+            ("Part" variable nil nil [244 310])
+            ("check_login" function (:arguments 
+              ( ("metadata" variable nil (reparse-symbol function_parameters) [328 336])
+                ("login" variable nil (reparse-symbol function_parameters) [338 343])
+                ("password" variable nil (reparse-symbol function_parameters) [345 353]))              ) nil [312 991])
+            ("print" code nil nil [911 936])
+            ("load_meta_data" function nil nil [993 1767])
+            ("submit" function nil nil [1777 2664])
+            ("login_prompt" function (:documentation "Prompt the user for login credentials. Returns a tuple (login, password).") nil [2666 2838])
+            ("basic_prompt" function (:documentation "Prompt the user for login credentials. Returns a tuple (login, password).") nil [2840 3191])
+            ("part_prompt" function (:arguments 
+              ( ("parts" variable nil (reparse-symbol function_parameters) [3209 3214]))              ) nil [3193 4177])
+            ("get_challenge" function
+               (:documentation "Gets the challenge salt from the server. Returns (email,ch,state,ch_aux)."
+                :arguments 
+                  ( ("c_url" variable nil (reparse-symbol function_parameters) [4197 4202])
+                    ("email" variable nil (reparse-symbol function_parameters) [4204 4209])
+                    ("sid" variable nil (reparse-symbol function_parameters) [4211 4214]))                  )
+                nil [4179 4766])
+            ("challenge_response" function (:arguments 
+              ( ("email" variable nil (reparse-symbol function_parameters) [4791 4796])
+                ("passwd" variable nil (reparse-symbol function_parameters) [4798 4804])
+                ("challenge" variable nil (reparse-symbol function_parameters) [4806 4815]))              ) nil [4768 5039])
+            ("challenge_url" function
+               (:documentation "Returns the challenge url."
+                :arguments 
+                  ( ("url" variable nil (reparse-symbol function_parameters) [5059 5062]))                  )
+                nil [5041 5175])
+            ("submit_url" function
+               (:documentation "Returns the submission url."
+                :arguments 
+                  ( ("url" variable nil (reparse-symbol function_parameters) [5192 5195]))                  )
+                nil [5177 5306])
+            ("submit_solution" function
+               (:documentation "Submits a solution to the server. Returns (result, string)."
+                :arguments 
+                  ( ("c_url" variable nil (reparse-symbol function_parameters) [5328 5333])
+                    ("email_address" variable nil (reparse-symbol function_parameters) [5335 5348])
+                    ("ch_resp" variable nil (reparse-symbol function_parameters) [5350 5357])
+                    ("sid" variable nil (reparse-symbol function_parameters) [5359 5362])
+                    ("output" variable nil (reparse-symbol function_parameters) [5364 5370])
+                    ("source" variable nil (reparse-symbol function_parameters) [5372 5378])
+                    ("state" variable nil (reparse-symbol function_parameters) [5380 5385])
+                    ("ch_aux" variable nil (reparse-symbol function_parameters) [5387 5393]))                  )
+                nil [5308 6289])
+            ("get_source" function
+               (:documentation "Collects the source code (just for logging purposes)."
+                :arguments 
+                  ( ("source_file" variable nil (reparse-symbol function_parameters) [6306 6317]))                  )
+                nil [6291 6462])
+            ("try" code nil nil [6464 6734])
+            ("load_input_data" function (:arguments 
+              ( ("fileLocation" variable nil (reparse-symbol function_parameters) [6756 6768]))              ) nil [6736 6913])
+            ("output" function
+               (:documentation "Use student code to compute the output for test cases."
+                :arguments 
+                  ( ("part" variable nil (reparse-symbol function_parameters) [6925 6929]))                  )
+                nil [6914 7799])
+            ("submit" code nil nil [7801 7809]))          
+      :file "submit.py"
+      :pointmax 7774
+      :fsize 7809
+      :lastmodtime '(21276 31564 834968 66000)
+      :unmatched-syntax nil)
+    (semanticdb-table "greedy.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("greedy" function (:arguments 
+              ( ("items" variable nil (reparse-symbol function_parameters) [13 18])
+                ("item_count" variable nil (reparse-symbol function_parameters) [20 30])
+                ("capacity" variable nil (reparse-symbol function_parameters) [32 40]))              ) nil [1 421]))          
+      :file "greedy.py"
+      :pointmax 421
+      :fsize 420
+      :lastmodtime '(21287 21136 12030 954000)
+      :unmatched-syntax nil)
+    (semanticdb-table "dynamic_programming.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("dynamic_programming" function
+               (:documentation "
+    Uses a bottom up approach technique to solve the probem using
+    dynamic programming.
+    "
+                :arguments 
+                  ( ("items" variable nil (reparse-symbol function_parameters) [26 31])
+                    ("item_count" variable nil (reparse-symbol function_parameters) [33 43])
+                    ("capacity" variable nil (reparse-symbol function_parameters) [45 53]))                  )
+                nil [1 2136]))          
+      :file "dynamic_programming.py"
+      :pointmax 2136
+      :fsize 2135
+      :lastmodtime '(21287 21243 197548 972000)
+      :unmatched-syntax nil)
+    (semanticdb-table "tree_prunning.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("collections" include nil nil [1 30])
+            ("heapq" include nil nil [31 72])
+            ("BinaryTree" type
+               (:documentation "
+    Implements a very simple Binary tree
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [192 211])
+                            ("self" variable nil (reparse-symbol indented_block_body) [220 238])
+                            ("self" variable nil (reparse-symbol indented_block_body) [247 265])
+                            ("self" variable nil (reparse-symbol indented_block_body) [274 292]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [168 172])
+                            ("value" variable nil (reparse-symbol function_parameters) [174 179]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [154 293])
+                    ("setLeft" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [311 315])
+                            ("value" variable nil (reparse-symbol function_parameters) [317 322]))                          )
+                        (reparse-symbol indented_block_body) [298 405])
+                    ("setRight" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [424 428])
+                            ("value" variable nil (reparse-symbol function_parameters) [430 435]))                          )
+                        (reparse-symbol indented_block_body) [410 520])
+                    ("inOrder" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [538 542]))                          )
+                        (reparse-symbol indented_block_body) [525 745])
+                    ("nodeCoeff" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [765 769]))                          )
+                        (reparse-symbol indented_block_body) [750 881]))                  
+                :type "class")
+                nil [74 913])
+            ("Node" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [952 973])
+                            ("self" variable nil (reparse-symbol indented_block_body) [982 1002])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1011 1035]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1369 1373])
+                            ("value" variable nil (reparse-symbol function_parameters) [1375 1380])
+                            ("room" variable nil (reparse-symbol function_parameters) [1382 1386])
+                            ("estimate" variable nil (reparse-symbol function_parameters) [1388 1396]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1355 1492])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1510 1514]))                          )
+                        (reparse-symbol indented_block_body) [1497 1717]))                  
+                :type "class")
+                nil [1339 1717])
+            ("depth_first" function
+               (:documentation "
+    Depth first algorithm, brute force approach
+    "
+                :arguments 
+                  ( ("items" variable nil (reparse-symbol function_parameters) [1735 1740])
+                    ("item_count" variable nil (reparse-symbol function_parameters) [1742 1752])
+                    ("capacity" variable nil (reparse-symbol function_parameters) [1754 1762]))                  )
+                nil [1718 5769])
+            ("breath_first" function
+               (:documentation "
+    Depth first algorithm, brute force approach
+    "
+                :arguments 
+                  ( ("items" variable nil (reparse-symbol function_parameters) [5788 5793])
+                    ("item_count" variable nil (reparse-symbol function_parameters) [5795 5805])
+                    ("capacity" variable nil (reparse-symbol function_parameters) [5807 5815]))                  )
+                nil [5770 8296]))          
+      :file "tree_prunning.py"
+      :pointmax 7814
+      :fsize 8295
+      :lastmodtime '(21290 40335 475571 165000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!coursera!optimization!knapsack!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

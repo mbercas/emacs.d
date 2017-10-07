@@ -1,0 +1,34 @@
+;; Object experiments/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "experiments/"
+  :tables
+  (list
+    (semanticdb-table "tables.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [20 53])
+            ("matplotlib.pyplot" include nil nil [54 110])
+            ("fnb" variable nil nil [113 160])
+            ("fnn" variable nil nil [161 204])
+            ("bg" variable nil nil [206 225])
+            ("nd" variable nil nil [226 245])
+            ("ndnbg" code nil nil [247 273])
+            ("print" code nil nil [275 305])
+            ("print" code nil nil [306 323])
+            ("print" code nil nil [324 354])
+            ("xticks" variable nil nil [443 455])
+            ("yticks" variable nil nil [456 468])
+            ("ndnbg" variable nil nil [470 511])
+            ("x" variable nil nil [513 533])
+            ("sIdxVector" variable nil nil [552 572])
+            ("depth" variable nil nil [573 582])
+            ("for" code nil nil [583 1062])
+            ("show" code nil nil [1064 1070]))          
+      :file "tables.py"
+      :pointmax 1072
+      :fsize 1071
+      :lastmodtime '(21683 44488 176128 513000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!longNeedles!tables!experiments!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

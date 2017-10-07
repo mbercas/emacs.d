@@ -1,0 +1,275 @@
+;; Object unittests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unittests/"
+  :tables
+  (list
+    (semanticdb-table "test_ccapp_smg_valuemanager.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_SMG_VALUEMANAGER_HPP" variable (:constant-flag t) nil [778 809])
+            ("ccapp_fea_lineid.hpp" include nil nil [885 916])
+            ("ccapp_imm_impedanceanalyserinfobody.hpp" include nil nil [918 968])
+            ("ccapp_sac_commontypes.hpp" include nil nil [970 1006])
+            ("ccapp_scf_displayconfiguration.hpp" include nil nil [1008 1053])
+            ("ccapp_scf_enablescanbody.hpp" include nil nil [1054 1093])
+            ("ccapp_scf_guiconfigurationvalues.hpp" include nil nil [1094 1141])
+            ("ccapp_scf_nddspalgorithmparams.hpp" include nil nil [1142 1187])
+            ("ccapp_scf_pipelineconfiguration.hpp" include nil nil [1188 1234])
+            ("ccapp_scf_scanconfiguration.hpp" include nil nil [1235 1277])
+            ("ccapp_scf_scanconfigurationreceivedbody.hpp" include nil nil [1278 1332])
+            ("ccapp_scf_scanrunningbody.hpp" include nil nil [1333 1373])
+            ("ccapp_scf_swapfrozenwindowbody.hpp" include nil nil [1374 1419])
+            ("ccapp_sfm_freezescanbody.hpp" include nil nil [1421 1460])
+            ("ccapp_sfm_imagesettingsbody.hpp" include nil nil [1461 1503])
+            ("ccapp_sfm_mechanicalthermalindexbody.hpp" include nil nil [1504 1555])
+            ("ccapp_sfm_probesupportedbody.hpp" include nil nil [1556 1599])
+            ("ccapp_sfm_userselectioncmodeboxposbody.hpp" include nil nil [1600 1653])
+            ("ccapp_smg_lookuptableloader.hpp" include nil nil [1655 1697])
+            ("ccapp_smg_lookuptableloadertask.hpp" include nil nil [1698 1744])
+            ("ccapp_smg_valuemanager.hpp" include nil nil [1745 1782])
+            ("ccapp_stm_ssmmessages.hpp" include nil nil [1784 1820])
+            ("ccapp_ucm_licensedfeaturesbody.hpp" include nil nil [1822 1867])
+            ("core_cbk_function.hpp" include nil nil [1869 1901])
+            ("core_chk_assert.hpp" include nil nil [1903 1933])
+            ("core_dtr_changetrackingmixedset.hpp" include nil nil [1935 1981])
+            ("core_log_logger.hpp" include nil nil [1983 2013])
+            ("core_tsk_timer100msbody.hpp" include nil nil [2015 2053])
+            ("mock/mock_ccapp_smg_scanrunningcontrolleriface.hpp" include nil nil [2055 2116])
+            ("mock/mock_core_fls_fstreamfactoryiface.hpp" include nil nil [2117 2170])
+            ("mock/mock_core_fls_fstreaminterface.hpp" include nil nil [2171 2221])
+            ("algorithm" include (:system-flag t) nil [2223 2243])
+            ("fstream" include (:system-flag t) nil [2244 2262])
+            ("iostream" include (:system-flag t) nil [2263 2282])
+            ("iterator" include (:system-flag t) nil [2283 2302])
+            ("gmock/gmock.h" include (:system-flag t) nil [2304 2328])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [2330 2360])
+            ("testValueManager" type
+               (:members 
+                  ( ("ezono::ccapp" using (:type ("ezono::ccapp" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [2989 3018])
+                    ("ezono::ccapp::fea" using (:type ("ezono::ccapp::fea" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [3019 3053])
+                    ("ezono::ccapp::scf" using (:type ("ezono::ccapp::scf" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [3054 3088])
+                    ("ezono::ccapp::sfm" using (:type ("ezono::ccapp::sfm" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [3089 3123])
+                    ("ezono::ccapp::smg" using (:type ("ezono::ccapp::smg" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [3124 3158])
+                    ("ezono::core" using (:type ("ezono::core" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [3159 3187])
+                    ("ezono::core::bty" using (:type ("ezono::core::bty" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [3188 3221])
+                    ("ezono::core::cbk" using (:type ("ezono::core::cbk" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [3222 3255])
+                    ("ezono::core::dtr" using (:type ("ezono::core::dtr" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [3256 3289])
+                    ("ezono::core::fls" using (:type ("ezono::core::fls" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [3290 3323])
+                    ("ezono::core::log" using (:type ("ezono::core::log" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [3324 3357])
+                    ("ezono::core::tsk" using (:type ("ezono::core::tsk" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [3358 3391])
+                    ("mock::ezono::ccapp::smg" variable (:type "int") (reparse-symbol namespacesubparts) [3411 3435])
+                    ("mock::ezono::core::fls" variable (:type "int") (reparse-symbol namespacesubparts) [3454 3477])
+                    ("testing" variable (:type "int") (reparse-symbol namespacesubparts) [3497 3505])
+                    ("ValueManagerUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("Self" type
+                               (:typedef ("ValueManagerUnitTestSuite" type (:type "class") nil nil)
+                                :superclasses "ValueManagerUnitTestSuite"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3577 3616])
+                            ("public" label nil (reparse-symbol classsubparts) [3622 3629])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [3693 3873])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [3939 4043])
+                            ("test_constructor" function (:type "void") (reparse-symbol classsubparts) [4168 4279])
+                            ("test_InitialDependenciesUpdateWhenLookupTablesNotLoaded" function (:type "void") (reparse-symbol classsubparts) [4300 4883])
+                            ("test_LookupTablesCanBeUsed" function (:type "void") (reparse-symbol classsubparts) [4904 5262])
+                            ("test_InitialDependenciesUpdateWhenLookupTablesAreLoaded" function (:type "void") (reparse-symbol classsubparts) [5283 5937])
+                            ("test_LookupTablesCanBeUsedAndInvalidProbeDetected" function (:type "void") (reparse-symbol classsubparts) [5958 6771])
+                            ("test_LookupTablesCanBeUsedAndValidProbeDetected" function (:type "void") (reparse-symbol classsubparts) [6792 7623])
+                            ("test_InitialDependenciesUpdateWhenProbeIdInvalid" function (:type "void") (reparse-symbol classsubparts) [7644 8589])
+                            ("test_InitialDependenciesUpdateWhenProbeIdValid" function (:type "void") (reparse-symbol classsubparts) [8610 10327])
+                            ("test_ScanConfigurationReceivedWhenNoneSent" function (:type "void") (reparse-symbol classsubparts) [10348 11243])
+                            ("test_Timer100msWhenNoneSent" function (:type "void") (reparse-symbol classsubparts) [11264 11790])
+                            ("test_AllReady" function (:type "void") (reparse-symbol classsubparts) [11811 13237])
+                            ("test_SystemScanModeToFpgaScanMode" function (:type "void") (reparse-symbol classsubparts) [13258 14304])
+                            ("test_OnUserSelectionCmodeBoxPos" function (:type "void") (reparse-symbol classsubparts) [14325 15611])
+                            ("test_OnLicensedFeaturesUpdated" function (:type "void") (reparse-symbol classsubparts) [15621 17127])
+                            ("test_OnImpedanceAnalyserInfo" function (:type "void") (reparse-symbol classsubparts) [17137 17792])
+                            ("private" label nil (reparse-symbol classsubparts) [17798 17806])
+                            ("ValueManagerPtr" type
+                               (:typedef ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("ValueManager" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :superclasses "std::unique_ptr"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [17816 17874])
+                            ("MockServer" type
+                               (:members 
+                                  ( ("MOCK_METHOD1" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("UploadFpgaMemoryMap" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17959 17979])
+                                            ("" variable (:type "void") (reparse-symbol arg-sub-list) [18000 18042]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [17925 18061])
+                                    ("MOCK_METHOD1" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("SendScanRunning" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18109 18125])
+                                            ("" variable (:type "void") (reparse-symbol arg-sub-list) [18146 18183]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [18075 18202])
+                                    ("MOCK_METHOD1" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("SendDisplayCfg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18250 18265])
+                                            ("" variable (:type "void") (reparse-symbol arg-sub-list) [18286 18342]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [18216 18361])
+                                    ("MOCK_METHOD1" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("SendProbeSupported" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18409 18428])
+                                            ("" variable (:type "void") (reparse-symbol arg-sub-list) [18449 18489]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [18375 18508])
+                                    ("MOCK_METHOD1" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("SendScanCfg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18556 18568])
+                                            ("" variable (:type "void") (reparse-symbol arg-sub-list) [18589 18628]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [18522 18647])
+                                    ("MOCK_METHOD1" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("SendGuiCfg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18695 18706])
+                                            ("" variable (:type "void") (reparse-symbol arg-sub-list) [18727 18766]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [18661 18785])
+                                    ("MOCK_METHOD1" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("SendSwapFrozenWindow" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18833 18854])
+                                            ("" variable (:type "void") (reparse-symbol arg-sub-list) [18875 18917]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [18799 18936])
+                                    ("MOCK_METHOD1" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("SendMechanicalThermalIndex" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18984 19011])
+                                            ("" variable (:type "void") (reparse-symbol arg-sub-list) [19032 19080]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [18950 19099])
+                                    ("MOCK_METHOD1" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("SendPipelineConfiguration" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19147 19173])
+                                            ("" variable (:type "void") (reparse-symbol arg-sub-list) [19194 19237]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [19113 19256])
+                                    ("MOCK_METHOD1" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("SendDspAlgorithmParameter" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19304 19330])
+                                            ("" variable (:type "void") (reparse-symbol arg-sub-list) [19351 19393]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [19270 19412]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [17884 19424])
+                            ("TestFixture" type
+                               (:members 
+                                  ( ("TestFixture" function
+                                       (:constructor-flag t
+                                        :type ("TestFixture" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [19475 19697])
+                                    ("ObjectUnderTest" type
+                                       (:typedef ("ValueManager" type (:type "class") nil nil)
+                                        :superclasses "ValueManager"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [19711 19751])
+                                    ("MakeObjectUnderTest" function (:type ("std::unique_ptr" type
+                                         (:template-specifier 
+                                            ( ("ObjectUnderTest" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [19765 21198])
+                                    ("VerifyAndClearExpectations" function (:type "void") (reparse-symbol classsubparts) [21212 21559])
+                                    ("cfgVars" variable (:type ("ChangeTrackingMixedSet" type (:type "class") nil nil)) (reparse-symbol classsubparts) [21573 21613])
+                                    ("scanRunningController" variable (:type ("MockScanRunningController" type (:type "class") nil nil)) (reparse-symbol classsubparts) [21626 21680])
+                                    ("mockServer" variable (:type ("MockServer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [21693 21736])
+                                    ("fstreamFactory" variable (:type ("MockFStreamFactory" type (:type "class") nil nil)) (reparse-symbol classsubparts) [21749 21796])
+                                    ("mockFStream" variable (:type ("ptr::SharedPtr" type
+                                         (:template-specifier 
+                                            ( ("MockFStream" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [21809 21853]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [19434 21864])
+                            ("LoadLookupTables" function (:type "void") (reparse-symbol classsubparts) [21874 22065])
+                            ("CompareLog" function
+                               (:arguments 
+                                  ( ("fileName" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [22092 22122]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [22075 24770])
+                            ("fxt" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("TestFixture" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [24776 24814]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3507 24817]))                  
+                :type "namespace")
+                nil [2960 24820])
+            ("testValueManager::ValueManagerUnitTestSuite" using (:type ("testValueManager::ValueManagerUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [24842 24892]))          
+      :file "test_ccapp_smg_valuemanager.hpp"
+      :pointmax 24985
+      :fsize 24984
+      :lastmodtime '(21509 28961 108108 978000)
+      :unmatched-syntax '((semantic-list 19356 . 19393) (semantic-list 19199 . 19237) (semantic-list 19037 . 19080) (semantic-list 18880 . 18917) (semantic-list 18732 . 18766) (semantic-list 18594 . 18628) (semantic-list 18454 . 18489) (semantic-list 18291 . 18342) (semantic-list 18151 . 18183) (semantic-list 18005 . 18042) (semantic-list 19356 . 19393) (semantic-list 19199 . 19237) (semantic-list 19037 . 19080) (semantic-list 18880 . 18917) (semantic-list 18732 . 18766) (semantic-list 18594 . 18628) (semantic-list 18454 . 18489) (semantic-list 18291 . 18342) (semantic-list 18151 . 18183) (semantic-list 18005 . 18042) (punctuation 3496 . 3497) (punctuation 3495 . 3496) (NAMESPACE 3485 . 3494) (USING 3479 . 3484) (punctuation 3453 . 3454) (punctuation 3452 . 3453) (NAMESPACE 3442 . 3451) (USING 3436 . 3441) (punctuation 3410 . 3411) (punctuation 3409 . 3410) (NAMESPACE 3399 . 3408) (USING 3393 . 3398))
+      :lexical-table 
+        '(("TEST_CCAPP_SMG_VALUEMANAGER_HPP")
+          )
+))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!a_smg!unittests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

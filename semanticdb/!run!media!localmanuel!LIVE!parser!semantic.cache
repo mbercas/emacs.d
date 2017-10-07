@@ -1,0 +1,27 @@
+;; Object parser/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "parser/"
+  :tables
+  (list
+    (semanticdb-table "tables.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("create_array" function (:arguments 
+              ( ("f" variable nil (reparse-symbol function_parameters) [37 38]))              ) nil [20 650])
+            ("numpy" include nil nil [653 693])
+            ("matplotlib.pyplot" include nil nil [694 766])
+            ("glob" include nil nil [767 778])
+            ("string" include nil nil [779 792])
+            ("file_list" variable nil nil [794 824])
+            ("figure_index" variable nil nil [825 841])
+            ("sIdxVector" variable nil nil [843 898])
+            ("for" code nil nil [900 2173])
+            ("show" code nil nil [2193 2199]))          
+      :file "tables.py"
+      :pointmax 2203
+      :fsize 2296
+      :lastmodtime '(21693 9066 0 0)
+      :unmatched-syntax nil))
+  :file "!run!media!localmanuel!LIVE!parser!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

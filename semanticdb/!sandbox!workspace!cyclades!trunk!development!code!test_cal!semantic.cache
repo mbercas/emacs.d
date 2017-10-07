@@ -1,0 +1,225 @@
+;; Object test_cal/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test_cal/"
+  :tables
+  (list
+    (semanticdb-table "cal_test.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ccapp_scf_configurationidchangebody.hpp" include nil nil [1 51])
+            ("ccapp_scf_displayconfiguration.hpp" include nil nil [52 97])
+            ("ccapp_scf_scanconfiguration.hpp" include nil nil [98 140])
+            ("ccapp_scf_scanconfigurationreceivedbody.hpp" include nil nil [141 195])
+            ("ccapp_scf_swapfrozenwindowbody.hpp" include nil nil [196 241])
+            ("ccapp_scf_livesvsmsg.hpp" include nil nil [242 277])
+            ("ccapp_sfm_freezescanbody.hpp" include nil nil [279 318])
+            ("ccapp_sfm_imagesettingsbody.hpp" include nil nil [319 361])
+            ("ccapp_sfm_probesupportedbody.hpp" include nil nil [362 405])
+            ("ccapp_scm_imageindexbody.hpp" include nil nil [407 446])
+            ("ccapp_scm_imagefrozenbody.hpp" include nil nil [447 487])
+            ("ccapp_smg_fpgamemorymapupdatedbody.hpp" include nil nil [489 538])
+            ("ccapp_stm_ssmmessages.hpp" include nil nil [540 576])
+            ("core_log_logger.hpp" include nil nil [578 608])
+            ("core_tmg_derivedtask.hpp" include nil nil [610 645])
+            ("core_tsk_timer1sbody.hpp" include nil nil [647 682])
+            ("cerrno" include (:system-flag t) nil [684 701])
+            ("core_ipc_definerxmsg.cpp" include nil nil [703 738])
+            ("core_ipc_msg.cpp" include nil nil [777 804])
+            ("core_ipc_rxmsg.cpp" include nil nil [851 880])
+            ("core_ipc_txmsg.cpp" include nil nil [925 954])
+            ("ezono::ccapp::fea" using (:type ("ezono::ccapp::fea" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1000 1034])
+            ("ezono::ccapp::scf" using (:type ("ezono::ccapp::scf" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1035 1069])
+            ("ezono::ccapp::scm" using (:type ("ezono::ccapp::scm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1070 1104])
+            ("ezono::ccapp::sfm" using (:type ("ezono::ccapp::sfm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1105 1139])
+            ("ezono::ccapp::smg" using (:type ("ezono::ccapp::smg" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1140 1174])
+            ("ezono::ccapp::stm" using (:type ("ezono::ccapp::stm" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1175 1209])
+            ("ezono::core::cbk" using (:type ("ezono::core::cbk" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1210 1243])
+            ("ezono::core::ipc" using (:type ("ezono::core::ipc" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1244 1277])
+            ("ezono::core::log" using (:type ("ezono::core::log" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1278 1311])
+            ("ezono::core::sdb" using (:type ("ezono::core::sdb" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1312 1345])
+            ("ezono::core::tmg" using (:type ("ezono::core::tmg" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1346 1379])
+            ("ezono::core::tsk" using (:type ("ezono::core::tsk" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1380 1413])
+            ("ezono::core::utl" using (:type ("ezono::core::utl" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1414 1447])
+            ("Application" type
+               (:superclasses 
+                  ( ("DerivedTask" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("DerivedTask" friend nil (reparse-symbol classsubparts) [1652 1676])
+                    ("public" label nil (reparse-symbol classsubparts) [1698 1705])
+                    ("Application" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1715 1757])
+                    ("protected" label nil (reparse-symbol classsubparts) [1763 1773])
+                    ("Application" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("argc" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1796 1811])
+                            ("argv" variable
+                               (:pointer 1
+                                :dereference 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1812 1826]))                          
+                        :type ("Application" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1783 2659])
+                    ("RegisterMessageHandlers" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2728 3736])
+                    ("BeforeMainLoop" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [3746 3952])
+                    ("TaskIdentity" function
+                       (:typemodifiers ("static")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4025 4109])
+                    ("private" label nil (reparse-symbol classsubparts) [4115 4123])
+                    ("OnDisplayConfiguration" function
+                       (:arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LiveSvsMsg" type
+                                     (:template-specifier 
+                                        ( ("DisplayConfiguration" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4178 4238]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4133 4307])
+                    ("OnImageFrozen" function
+                       (:arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ImageFrozenBody" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4353 4394]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4317 4463])
+                    ("OnImageSettings" function
+                       (:arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ImageSettingsBody" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4511 4554]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4473 4623])
+                    ("OnProbeSupported" function
+                       (:arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ProbeSupportedBody" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4672 4716]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4633 4785])
+                    ("OnScanConfiguration" function
+                       (:arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ScanConfiguration" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4837 4880]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4795 5268])
+                    ("OnSwapFrozenWindow" function
+                       (:arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LiveSvsMsg" type
+                                     (:template-specifier 
+                                        ( ("SwapFrozenWindowBody" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5319 5378]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5278 5447])
+                    ("OnFpgaMemoryMapUpdated" function
+                       (:arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("FpgaMemoryMapUpdatedBody" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5502 5552]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5457 6033])
+                    ("OnTimer1s" function
+                       (:arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Timer1sBody" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6076 6117]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6044 6395])
+                    ("probeId" variable (:type ("scan::probe::ProbeId" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6405 6437])
+                    ("extra" variable (:type "bool") (reparse-symbol classsubparts) [6446 6476]))                  
+                :type "class")
+                nil [1478 6480])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [6492 6501])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6502 6516]))                  
+                :type "int")
+                nil [6482 6564]))          
+      :file "cal_test.cpp"
+      :pointmax 6565
+      :fsize 6564
+      :lastmodtime '(21475 17489 7341 251000)
+      :unmatched-syntax '((punctuation 1691 . 1692) (punctuation 1690 . 1691) (symbol 1678 . 1689) (punctuation 1676 . 1677))))
+  :file "!sandbox!workspace!cyclades!trunk!development!code!test_cal!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

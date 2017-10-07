@@ -1,0 +1,72 @@
+;; Object code/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "code/"
+  :tables
+  (list
+    (semanticdb-table "rotateSensor.m"
+      :major-mode 'texinfo-mode
+      :tags nil
+      :file "rotateSensor.m"
+      :pointmax 541
+      :fsize 564
+      :lastmodtime '(21031 3798 522019 276000)
+      :unmatched-syntax nil)
+    (semanticdb-table "plotVec.m"
+      :major-mode 'texinfo-mode
+      :tags nil
+      :file "plotVec.m"
+      :pointmax 432
+      :fsize 456
+      :lastmodtime '(21021 49535 638400 741000)
+      :unmatched-syntax nil)
+    (semanticdb-table "plotAmp.m"
+      :major-mode 'texinfo-mode
+      :tags nil
+      :file "plotAmp.m"
+      :pointmax 725
+      :fsize 761
+      :lastmodtime '(21021 49535 638400 741000)
+      :unmatched-syntax nil)
+    (semanticdb-table "plotDir.m"
+      :major-mode 'texinfo-mode
+      :tags nil
+      :file "plotDir.m"
+      :pointmax 817
+      :fsize 855
+      :lastmodtime '(21021 49535 638400 741000)
+      :unmatched-syntax nil)
+    (semanticdb-table "iterativeCalibration.m"
+      :major-mode 'texinfo-mode
+      :tags nil
+      :file "iterativeCalibration.m"
+      :pointmax 4674
+      :fsize 4832
+      :lastmodtime '(21275 5515 656147 487000)
+      :unmatched-syntax nil)
+    (semanticdb-table "iterativeCalibrationGoal.m"
+      :major-mode 'texinfo-mode
+      :tags nil
+      :file "iterativeCalibrationGoal.m"
+      :pointmax 768
+      :fsize 803
+      :lastmodtime '(21021 49535 636400 717000)
+      :unmatched-syntax nil)
+    (semanticdb-table "calibrateData.m"
+      :major-mode 'texinfo-mode
+      :tags nil
+      :file "calibrateData.m"
+      :pointmax 642
+      :fsize 672
+      :lastmodtime '(21021 49535 638400 741000)
+      :unmatched-syntax nil)
+    (semanticdb-table "readData.m"
+      :major-mode 'texinfo-mode
+      :tags nil
+      :file "readData.m"
+      :pointmax 670
+      :fsize 694
+      :lastmodtime '(21021 49535 636400 717000)
+      :unmatched-syntax nil))
+  :file "!sandbox!workspace!calib!linear_model!octave!code!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

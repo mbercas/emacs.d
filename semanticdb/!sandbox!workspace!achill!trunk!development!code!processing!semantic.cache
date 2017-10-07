@@ -1,0 +1,194 @@
+;; Object processing/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "processing/"
+  :tables
+  (list
+    (semanticdb-table "p_CalibrationDataBuffer.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("p_CalibrationDataBuffer.hpp" include nil nil [391 429])
+            ("p" type
+               (:members 
+                  ( ("calibrations" variable
+                       (:constant-flag t
+                        :type ("CalibrationCorrections" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [487 2363]))                  
+                :type "namespace")
+                nil [431 2366]))          
+      :file "p_CalibrationDataBuffer.cpp"
+      :pointmax 2367
+      :fsize 3068
+      :lastmodtime '(21431 53775 381257 765000)
+      :unmatched-syntax '((semantic-list 466 . 486) (symbol 454 . 466) (string 467 . 485) (symbol 447 . 453) (string 467 . 485) (punctuation 446 . 447)))
+    (semanticdb-table "p_CalibrationDataBuffer.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("P_CALIBRATIONDATABUFFER_HPP" variable (:constant-flag t) nil [434 461])
+            ("c_types.hpp" include nil nil [463 485])
+            ("c_constants.hpp" include nil nil [486 512])
+            ("CalibrationData_RunStart" variable
+               (:type "unsigned int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [621 666])
+            ("CalibrationData_LoadsSize" variable
+               (:type "unsigned int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [574 620])
+            ("CalibrationData_LoadStart" variable
+               (:type "unsigned int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [527 573])
+            ("p" type
+               (:members 
+                  ( ("CalibrationMatrixA" type
+                       (:members 
+                          ( ("xx" variable (:type "float") (reparse-symbol classsubparts) [717 726])
+                            ("xy" variable (:type "float") (reparse-symbol classsubparts) [731 740])
+                            ("xz" variable (:type "float") (reparse-symbol classsubparts) [745 754])
+                            ("yx" variable (:type "float") (reparse-symbol classsubparts) [760 769])
+                            ("yy" variable (:type "float") (reparse-symbol classsubparts) [774 783])
+                            ("yz" variable (:type "float") (reparse-symbol classsubparts) [788 797])
+                            ("zx" variable (:type "float") (reparse-symbol classsubparts) [803 812])
+                            ("zy" variable (:type "float") (reparse-symbol classsubparts) [817 826])
+                            ("zz" variable (:type "float") (reparse-symbol classsubparts) [831 840]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [685 843])
+                    ("CalibrationMatrixB" type
+                       (:members 
+                          ( ("x" variable (:type "float") (reparse-symbol classsubparts) [877 885])
+                            ("y" variable (:type "float") (reparse-symbol classsubparts) [890 898])
+                            ("z" variable (:type "float") (reparse-symbol classsubparts) [903 911]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [845 914])
+                    ("SensorCorrection" type
+                       (:members 
+                          ( ("a" variable (:type ("CalibrationMatrixA" type (:type "class") nil nil)) (reparse-symbol classsubparts) [946 967])
+                            ("b" variable (:type ("CalibrationMatrixB" type (:type "class") nil nil)) (reparse-symbol classsubparts) [972 993]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [916 996])
+                    ("CalibrationCorrections" type
+                       (:members 
+                          ( ("sensor" variable
+                               (:dereference 1
+                                :type ("SensorCorrection" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1034 1079]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [998 1082])
+                    ("calibrations" variable
+                       (:typemodifiers ("extern")
+                        :constant-flag t
+                        :type ("CalibrationCorrections" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1119 1168]))                  
+                :type "namespace")
+                nil [670 1171]))          
+      :file "p_CalibrationDataBuffer.hpp"
+      :pointmax 1232
+      :fsize 1571
+      :lastmodtime '(21431 53775 382257 773000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("P_CALIBRATIONDATABUFFER_HPP")
+          )
+)
+    (semanticdb-table "p_CalcDataStatistics.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("p_CalcDataStatistics.hpp" include nil nil [349 384])
+            ("p_SensorsStatusCodes.hpp" include nil nil [386 421])
+            ("p_DataBufferSource.hpp" include nil nil [422 455])
+            ("FastRTS_functions.hpp" include nil nil [457 489])
+            ("cmath" include (:system-flag t) nil [491 507])
+            ("p" type
+               (:members 
+                  ( ("unnamed" type
+                       (:members 
+                          ( ("SOME_HUGE_ERROR_VALUE" variable (:constant-flag t) (reparse-symbol namespacesubparts) [545 566]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [524 574])
+                    ("CalcDataStatistics" function
+                       (:constructor-flag t
+                        :parent "CalcDataStatistics"
+                        :type ("CalcDataStatistics" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [576 759])
+                    ("RecalculateDataStatistics" function
+                       (:parent "CalcDataStatistics"
+                        :arguments 
+                          ( ("sensorsData" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SensorsDataBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1027 1066]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [975 1183])
+                    ("GetNumberOfValidSensors" function
+                       (:parent "CalcDataStatistics"
+                        :type "unsigned int")
+                        (reparse-symbol namespacesubparts) [1223 1318])
+                    ("GetMeanValue" function
+                       (:parent "CalcDataStatistics"
+                        :type "float")
+                        (reparse-symbol namespacesubparts) [1358 1425])
+                    ("GetStandardDeviation" function
+                       (:parent "CalcDataStatistics"
+                        :type "float")
+                        (reparse-symbol namespacesubparts) [1465 1553])
+                    ("UpdateAmplitudeArray" function
+                       (:parent "CalcDataStatistics"
+                        :arguments 
+                          ( ("sensorsData" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SensorsDataBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1640 1679]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1593 1920])
+                    ("CalculateMean" function
+                       (:parent "CalcDataStatistics"
+                        :arguments 
+                          ( ("sensorsData" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SensorsDataBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2000 2039]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1960 2542])
+                    ("CalculateVariance" function
+                       (:parent "CalcDataStatistics"
+                        :arguments 
+                          ( ("sensorsData" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SensorsDataBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2626 2665]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2582 3339]))                  
+                :type "namespace")
+                nil [509 3342]))          
+      :file "p_CalcDataStatistics.cpp"
+      :pointmax 3361
+      :fsize 3360
+      :lastmodtime '(21431 53775 388257 817000)
+      :unmatched-syntax '((semantic-list 2564 . 2581) (symbol 2552 . 2564) (string 2566 . 2579) (symbol 2545 . 2551) (string 2566 . 2579) (punctuation 2544 . 2545) (semantic-list 1942 . 1959) (symbol 1930 . 1942) (string 1944 . 1957) (symbol 1923 . 1929) (string 1944 . 1957) (punctuation 1922 . 1923) (semantic-list 1575 . 1592) (symbol 1563 . 1575) (string 1577 . 1590) (symbol 1556 . 1562) (string 1577 . 1590) (punctuation 1555 . 1556) (semantic-list 1447 . 1464) (symbol 1435 . 1447) (string 1449 . 1462) (symbol 1428 . 1434) (string 1449 . 1462) (punctuation 1427 . 1428) (semantic-list 1340 . 1357) (symbol 1328 . 1340) (string 1342 . 1355) (symbol 1321 . 1327) (string 1342 . 1355) (punctuation 1320 . 1321) (semantic-list 1205 . 1222) (symbol 1193 . 1205) (string 1207 . 1220) (symbol 1186 . 1192) (string 1207 . 1220) (punctuation 1185 . 1186) (semantic-list 957 . 974) (symbol 945 . 957) (string 959 . 972) (symbol 938 . 944) (string 959 . 972) (punctuation 937 . 938))
+      :lexical-table 
+        '(("SOME_HUGE_ERROR_VALUE" . ((number "1e4" 568 . 571)))
+          )
+)
+    (semanticdb-table "p_CalcDataStatistics.hpp"
+      :file "p_CalcDataStatistics.hpp"
+      :fsize 1164
+      :lastmodtime '(20844 7787 674364 255000))
+    (semanticdb-table "p_SensorsStatusCodes.hpp"
+      :file "p_SensorsStatusCodes.hpp"
+      :fsize 823
+      :lastmodtime '(21431 53775 386257 802000))
+    (semanticdb-table "p_DataBufferSource.hpp"
+      :file "p_DataBufferSource.hpp"
+      :fsize 1589
+      :lastmodtime '(20820 2418 421031 858000))
+    (semanticdb-table "FastRTS_functions.hpp"
+      :file "FastRTS_functions.hpp"
+      :fsize 679
+      :lastmodtime '(20792 43760 24574 960000)))
+  :file "!sandbox!workspace!achill!trunk!development!code!processing!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,490 @@
+;; Object unittests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unittests/"
+  :tables
+  (list
+    (semanticdb-table "test_ccapp_sda_filterneedleoutputsupervisor.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_SDA_FILTERNEEDLEOUTPUTSUPERVISOR_HPP" variable (:constant-flag t) nil [840 887])
+            ("ccapp_sda_filterneedleoutputsupervisor.hpp" include nil nil [963 1016])
+            ("ccapp_sda_datablock.hpp" include nil nil [1018 1052])
+            ("ccapp_sda_filterbufferinputbase.hpp" include nil nil [1053 1099])
+            ("ccapp_sda_filterbufferoutputbase.hpp" include nil nil [1100 1147])
+            ("ccapp_scf_ndconstants.hpp" include nil nil [1149 1185])
+            ("ccapp_scf_pipelineconfiguration.hpp" include nil nil [1186 1232])
+            ("ccapp_sdf_needledata.hpp" include nil nil [1234 1269])
+            ("core_con_mixedset.hpp" include nil nil [1271 1303])
+            ("memory" include (:system-flag t) nil [1305 1322])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [1324 1354])
+            ("testFilterNeedleOutputSupervisor" type
+               (:members 
+                  ( ("ezono::ccapp" variable (:type "int") (reparse-symbol namespacesubparts) [1420 1433])
+                    ("ezono::core" variable (:type "int") (reparse-symbol namespacesubparts) [1452 1464])
+                    ("ezono::ccapp::sda" variable (:type "int") (reparse-symbol namespacesubparts) [1484 1502])
+                    ("testing" variable (:type "int") (reparse-symbol namespacesubparts) [1522 1530])
+                    ("TestInpBuffer" type
+                       (:superclasses 
+                          ( ("FilterBufferInputBase" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("TestInpBuffer" function
+                               (:constructor-flag t
+                                :type ("TestInpBuffer" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1999 2030])
+                            ("GetLine" function
+                               (:typemodifiers ("virtual")
+                                :constant-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:constant-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol arg-sub-list) [2089 2109]))                                  
+                                :type ("sdf::LineEstimatedNeedleData" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2036 2148])
+                            ("data" variable (:type ("sdf::LineEstimatedNeedleData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2154 2188]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1907 2191])
+                    ("TestOutBuffer" type
+                       (:superclasses 
+                          ( ("FilterBufferOutputBase" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("TestOutBuffer" function
+                               (:constructor-flag t
+                                :type ("TestOutBuffer" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2286 2317])
+                            ("GetLine" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable
+                                       (:constant-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol arg-sub-list) [2369 2389]))                                  
+                                :type ("sdf::LineEstimatedNeedleData" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2322 2422])
+                            ("data" variable (:type ("sdf::LineEstimatedNeedleData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2428 2462]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [2193 2465])
+                    ("FilterNeedleOutputSupervisorUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2773 2780])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [2844 4270])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [4336 4452])
+                            ("test_primary_NeedleNotDetected" function (:type "void") (reparse-symbol classsubparts) [4579 5443])
+                            ("test_primary_NeedleDetected_OutputSupervisorCheckFailed" function (:type "void") (reparse-symbol classsubparts) [5453 6385])
+                            ("test_primary_NeedleDetected_OutputSupervisorCheckPassed" function (:type "void") (reparse-symbol classsubparts) [6395 7287])
+                            ("test_primary_NeedleDetected_OutputSupervisorCheckPassed_decimationFailed" function (:type "void") (reparse-symbol classsubparts) [7297 8200])
+                            ("test_secondary_NeedleNotDetected" function (:type "void") (reparse-symbol classsubparts) [8210 9076])
+                            ("test_secondary_NeedleDetected_OutputSupervisorCheckFailed" function (:type "void") (reparse-symbol classsubparts) [9086 10022])
+                            ("test_secondary_NeedleDetected_OutputSupervisorCheckPassed" function (:type "void") (reparse-symbol classsubparts) [10032 10929])
+                            ("test_secondary_NeedleDetected_OutputSupervisorCheckPassed_decimationFailed" function (:type "void") (reparse-symbol classsubparts) [10939 11844])
+                            ("private" label nil (reparse-symbol classsubparts) [11850 11858])
+                            ("TestFixture" type
+                               (:members 
+                                  ( ("TestFixture" function
+                                       (:constructor-flag t
+                                        :type ("TestFixture" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [11909 12136])
+                                    ("ObjectUnderTest" variable (:type "int") (reparse-symbol classsubparts) [12195 12245])
+                                    ("MakeObjectUnderTest" function
+                                       (:template 
+                                          ( ("unsigned int" type nil nil nil))                                          
+                                        :type ("std::unique_ptr" type
+                                             (:template-specifier 
+                                                ( ("ObjectUnderTest" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [12259 12548])
+                                    ("SetTheInBuffer" function
+                                       (:arguments 
+                                          ( ("startA" variable
+                                               (:constant-flag t
+                                                :type "float")
+                                                (reparse-symbol arg-sub-list) [12583 12602])
+                                            ("startB" variable
+                                               (:constant-flag t
+                                                :type "float")
+                                                (reparse-symbol arg-sub-list) [12636 12655])
+                                            ("residual" variable
+                                               (:constant-flag t
+                                                :type "float")
+                                                (reparse-symbol arg-sub-list) [12689 12710])
+                                            ("magnetization" variable
+                                               (:constant-flag t
+                                                :type "float")
+                                                (reparse-symbol arg-sub-list) [12744 12770])
+                                            ("fieldDispersion" variable
+                                               (:constant-flag t
+                                                :type "float")
+                                                (reparse-symbol arg-sub-list) [12804 12832])
+                                            ("detected" variable
+                                               (:constant-flag t
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [12866 12887]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [12562 13390])
+                                    ("ClearTheOutBuffer" function (:type "void") (reparse-symbol classsubparts) [13403 13544])
+                                    ("VerifyAndClearExpectations" function (:type "void") (reparse-symbol classsubparts) [13558 13708])
+                                    ("inBuff" variable (:type ("TestInpBuffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13722 13743])
+                                    ("outBuff" variable (:type ("TestOutBuffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13756 13778])
+                                    ("token" variable (:type ("PipelineConfigTokenPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13792 13821]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [11868 13833])
+                            ("fxt" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("TestFixture" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [13843 13881])
+                            ("db" variable (:type ("DataBlock" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13891 13904])
+                            ("pc" variable (:type ("scf::PipelineConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13913 13943]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2691 13946]))                  
+                :type "namespace")
+                nil [1356 13949])
+            ("testFilterNeedleOutputSupervisor::FilterNeedleOutputSupervisorUnitTestSuite" using (:type ("testFilterNeedleOutputSupervisor::FilterNeedleOutputSupervisorUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [13987 14069]))          
+      :file "test_ccapp_sda_filterneedleoutputsupervisor.hpp"
+      :pointmax 14194
+      :fsize 14193
+      :lastmodtime '(21113 3258 413728 238000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CCAPP_SDA_FILTERNEEDLEOUTPUTSUPERVISOR_HPP")
+          )
+)
+    (semanticdb-table "test_ccapp_sda_needleitemscalculations.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_SDA_NEEDLEITEMSCALCULATIONS_HPP" variable (:constant-flag t) nil [820 862])
+            ("ccapp_sda_needleitemscalculations.hpp" include nil nil [938 986])
+            ("ccapp_sdf_databuffers.hpp" include nil nil [988 1024])
+            ("ccapp_sdf_needledata.hpp" include nil nil [1026 1061])
+            ("memory" include (:system-flag t) nil [1063 1080])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [1082 1112])
+            ("testNeedleItemsCalculations" type
+               (:members 
+                  ( ("ezono::ccapp" variable (:type "int") (reparse-symbol namespacesubparts) [1173 1186])
+                    ("ezono::core" variable (:type "int") (reparse-symbol namespacesubparts) [1205 1217])
+                    ("ezono::ccapp::sda" variable (:type "int") (reparse-symbol namespacesubparts) [1237 1255])
+                    ("testing" variable (:type "int") (reparse-symbol namespacesubparts) [1275 1283])
+                    ("NeedleItemsCalculationsUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1960 1967])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [2031 2633])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [2699 2734])
+                            ("test_ShouldPlotNeedle" function (:type "void") (reparse-symbol classsubparts) [2859 3389])
+                            ("test_CalculateNeedlePolarAngle" function (:type "void") (reparse-symbol classsubparts) [3399 6785])
+                            ("test_AllowedToPlotRay" function (:type "void") (reparse-symbol classsubparts) [6795 8372])
+                            ("test_IsNeedleInPlane_endPointInRangeForInPlane" function (:type "void") (reparse-symbol classsubparts) [8382 11431])
+                            ("test_IsNeedleInPlane_polarAngleInRangeForInPlane" function (:type "void") (reparse-symbol classsubparts) [11441 12989])
+                            ("test_UpdateNeedleFlags_notPlotting" function (:type "void") (reparse-symbol classsubparts) [12999 13305])
+                            ("test_UpdateNeedleFlags_tipTooDeep" function (:type "void") (reparse-symbol classsubparts) [13319 13796])
+                            ("test_UpdateNeedleFlags_lowDispersionValue" function (:type "void") (reparse-symbol classsubparts) [13807 14057])
+                            ("test_UpdateNeedleFlags_plotting_lowPolarAngle" function (:type "void") (reparse-symbol classsubparts) [14067 14483])
+                            ("test_UpdateNeedleFlags_plotting_highPolarAngle" function (:type "void") (reparse-symbol classsubparts) [14493 14911])
+                            ("test_UpdateRayDataForParalelToX_leftOfImage" function (:type "void") (reparse-symbol classsubparts) [14921 15169])
+                            ("test_UpdateRayDataForParalelToX_rightOfImage" function (:type "void") (reparse-symbol classsubparts) [15179 15426])
+                            ("test_UpdateRayDataForParalelToX_inImage" function (:type "void") (reparse-symbol classsubparts) [15436 15973])
+                            ("test_UpdateRayDataForParalelToY_aboveImage" function (:type "void") (reparse-symbol classsubparts) [15983 16230])
+                            ("test_UpdateRayDataForParalelToY_belowImage" function (:type "void") (reparse-symbol classsubparts) [16240 16485])
+                            ("test_UpdateRayDataForParalelToY_inImage" function (:type "void") (reparse-symbol classsubparts) [16495 17032])
+                            ("test_UpdateRayDataForNotParalelToXY_withinImage_cutXX_1" function (:type "void") (reparse-symbol classsubparts) [17042 17694])
+                            ("test_UpdateRayDataForNotParalelToXY_withinImage_cutXY_1" function (:type "void") (reparse-symbol classsubparts) [17704 18353])
+                            ("test_UpdateRayDataForNotParalelToXY_withinImage_cutXY_2" function (:type "void") (reparse-symbol classsubparts) [18363 19018])
+                            ("test_UpdateRayDataForNotParalelToXY_withinImage_cutXY_3" function (:type "void") (reparse-symbol classsubparts) [19028 19671])
+                            ("test_UpdateRayDataForNotParalelToXY_withinImage_cutYY_1" function (:type "void") (reparse-symbol classsubparts) [19681 20331])
+                            ("test_UpdateRayDataForNotParalelToXY_outsideImage_above" function (:type "void") (reparse-symbol classsubparts) [20341 20690])
+                            ("test_UpdateRayDataForNotParalelToXY_outsideImage_below_1" function (:type "void") (reparse-symbol classsubparts) [20700 21053])
+                            ("test_UpdateRayDataForNotParalelToXY_outsideImage_below_2" function (:type "void") (reparse-symbol classsubparts) [21063 21414])
+                            ("test_UpdateNeedlePoints_dontPlot" function (:type "void") (reparse-symbol classsubparts) [21424 21986])
+                            ("test_UpdateNeedlePoints_plot" function (:type "void") (reparse-symbol classsubparts) [21996 22563])
+                            ("test_UpdateNeedleRayPoints_notPlotting" function (:type "void") (reparse-symbol classsubparts) [22573 22817])
+                            ("test_UpdateNeedleRayPoints_plot_paralelX" function (:type "void") (reparse-symbol classsubparts) [22827 23616])
+                            ("test_UpdateNeedleRayPoints_plot_paralelY" function (:type "void") (reparse-symbol classsubparts) [23626 24415])
+                            ("test_UpdateNeedleRayPoints_plot_paralelZ" function (:type "void") (reparse-symbol classsubparts) [24425 24944])
+                            ("test_UpdateNeedleRayPoints_plot_notParalel" function (:type "void") (reparse-symbol classsubparts) [24954 25602])
+                            ("test_UpdateNeedleSectionPoint_notPlotting" function (:type "void") (reparse-symbol classsubparts) [25612 25919])
+                            ("test_UpdateNeedleSectionPoint_plotting_inPlane" function (:type "void") (reparse-symbol classsubparts) [25929 26287])
+                            ("test_UpdateNeedleSectionPoint_plotting_notInPlane" function (:type "void") (reparse-symbol classsubparts) [26297 26662])
+                            ("test_AdjustDataToVisualCoordSystem" function (:type "void") (reparse-symbol classsubparts) [26672 27595])
+                            ("test_ShrinkAndOrientNeedle_pointsAreSame" function (:type "void") (reparse-symbol classsubparts) [27605 28540])
+                            ("test_ShrinkAndOrientNeedle_pointsAreDifferent_negativeMagnetization" function (:type "void") (reparse-symbol classsubparts) [28550 29530])
+                            ("test_ShrinkAndOrientNeedle_pointsAreDifferent_positiveMagnetization" function (:type "void") (reparse-symbol classsubparts) [29540 30520])
+                            ("private" label nil (reparse-symbol classsubparts) [30526 30534])
+                            ("SetNeedlePoints" function
+                               (:arguments 
+                                  ( ("ax" variable
+                                       (:constant-flag t
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [30566 30581])
+                                    ("ay" variable
+                                       (:constant-flag t
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [30612 30627])
+                                    ("az" variable
+                                       (:constant-flag t
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [30658 30673])
+                                    ("bx" variable
+                                       (:constant-flag t
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [30704 30719])
+                                    ("by" variable
+                                       (:constant-flag t
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [30750 30765])
+                                    ("bz" variable
+                                       (:constant-flag t
+                                        :type "float")
+                                        (reparse-symbol arg-sub-list) [30796 30812]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [30544 31097])
+                            ("inData" variable (:type ("sdf::LineEstimatedNeedleData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [31108 31147])
+                            ("outData" variable (:type ("sdf::NeedleVisualizeData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [31156 31196])
+                            ("staticFieldData" variable (:type ("sdf::NeedleSensorsData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [31205 31253])
+                            ("scanWidth" variable (:type "float") (reparse-symbol classsubparts) [31263 31279])
+                            ("scanDepth" variable (:type "float") (reparse-symbol classsubparts) [31288 31304]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1883 31308]))                  
+                :type "namespace")
+                nil [1114 31311])
+            ("testNeedleItemsCalculations::NeedleItemsCalculationsUnitTestSuite" using (:type ("testNeedleItemsCalculations::NeedleItemsCalculationsUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [31344 31416]))          
+      :file "test_ccapp_sda_needleitemscalculations.hpp"
+      :pointmax 31529
+      :fsize 31530
+      :lastmodtime '(21112 65169 875943 87000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CCAPP_SDA_NEEDLEITEMSCALCULATIONS_HPP")
+          )
+)
+    (semanticdb-table "test_ccapp_sda_filterneedleoutitemscalculator.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TEST_CCAPP_SDA_FILTERNEEDLEOUTITEMSCALCULATOR_HPP" variable (:constant-flag t) nil [848 897])
+            ("ccapp_sda_filterneedleoutitemscalculator.hpp" include nil nil [973 1028])
+            ("ccapp_sda_datablock.hpp" include nil nil [1030 1064])
+            ("ccapp_sda_filterbufferinputbase.hpp" include nil nil [1065 1111])
+            ("ccapp_sda_filterbufferoutputbase.hpp" include nil nil [1112 1159])
+            ("ccapp_sda_needleitemscalculations.hpp" include nil nil [1160 1208])
+            ("ccapp_scf_pipelineconfiguration.hpp" include nil nil [1210 1256])
+            ("ccapp_scf_scanconfiguration.hpp" include nil nil [1257 1299])
+            ("ccapp_sdf_databuffers.hpp" include nil nil [1301 1337])
+            ("ccapp_sdf_needledata.hpp" include nil nil [1338 1373])
+            ("core_con_mixedset.hpp" include nil nil [1375 1407])
+            ("memory" include (:system-flag t) nil [1409 1426])
+            ("cxxtest/TestSuite.h" include (:system-flag t) nil [1428 1458])
+            ("testFilterNeedleOutItemsCalculator" type
+               (:members 
+                  ( ("ezono::ccapp" variable (:type "int") (reparse-symbol namespacesubparts) [1526 1539])
+                    ("ezono::core" variable (:type "int") (reparse-symbol namespacesubparts) [1558 1570])
+                    ("ezono::ccapp::sda" variable (:type "int") (reparse-symbol namespacesubparts) [1590 1608])
+                    ("testing" variable (:type "int") (reparse-symbol namespacesubparts) [1628 1636])
+                    ("TestInpBuffer" type
+                       (:superclasses 
+                          ( ("FilterBufferInputBase" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("TestInpBuffer" function
+                               (:constructor-flag t
+                                :type ("TestInpBuffer" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2105 2148])
+                            ("GetLine" function
+                               (:typemodifiers ("virtual")
+                                :constant-flag t
+                                :arguments 
+                                  ( ("n" variable
+                                       (:constant-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol arg-sub-list) [2207 2229]))                                  
+                                :type ("sdf::LineEstimatedNeedleData" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2154 2287])
+                            ("data" variable (:type ("sdf::LineEstimatedNeedleData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2293 2327])
+                            ("lastN" variable
+                               (:typemodifiers ("mutable")
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [2332 2359]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [2013 2362])
+                    ("TestNormalOutBuffer" type
+                       (:superclasses 
+                          ( ("FilterBufferOutputBase" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("TestNormalOutBuffer" function
+                               (:constructor-flag t
+                                :type ("TestNormalOutBuffer" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2457 2504])
+                            ("GetLine" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("n" variable
+                                       (:constant-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol arg-sub-list) [2552 2574]))                                  
+                                :type ("sdf::NeedleVisualizeData" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2509 2626])
+                            ("data" variable (:type ("sdf::NeedleVisualizeData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2632 2662])
+                            ("lastN" variable
+                               (:typemodifiers ("mutable")
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [2667 2694]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [2364 2697])
+                    ("TestExtendedOutBuffer" type
+                       (:superclasses 
+                          ( ("FilterBufferOutputBase" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("TestExtendedOutBuffer" function
+                               (:constructor-flag t
+                                :type ("TestExtendedOutBuffer" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2820 2869])
+                            ("GetLine" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("n" variable
+                                       (:constant-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol arg-sub-list) [2917 2939]))                                  
+                                :type ("sdf::NeedleVisualizeData" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2874 2991])
+                            ("data" variable (:type ("sdf::NeedleVisualizeData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2997 3027])
+                            ("lastN" variable
+                               (:typemodifiers ("mutable")
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [3032 3059]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [2699 3062])
+                    ("TestStatFieldBuffer" type
+                       (:superclasses 
+                          ( ("FilterBufferInputBase" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("TestStatFieldBuffer" function
+                               (:constructor-flag t
+                                :type ("TestStatFieldBuffer" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [3160 3207])
+                            ("GetLine" function
+                               (:typemodifiers ("virtual")
+                                :constant-flag t
+                                :arguments 
+                                  ( ("n" variable
+                                       (:constant-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol arg-sub-list) [3259 3281]))                                  
+                                :type ("sdf::NeedleSensorsData" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3212 3339])
+                            ("data" variable (:type ("sdf::NeedleSensorsData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3345 3373])
+                            ("lastN" variable
+                               (:typemodifiers ("mutable")
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [3378 3405]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [3064 3408])
+                    ("FilterNeedleOutItemsCalculatorUnitTestSuite" type
+                       (:superclasses 
+                          ( ("CxxTest::TestSuite" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3717 3724])
+                            ("setUp" function (:type "void") (reparse-symbol classsubparts) [3788 4630])
+                            ("tearDown" function (:type "void") (reparse-symbol classsubparts) [4696 4812])
+                            ("test_Process_NormalObject" function (:type "void") (reparse-symbol classsubparts) [4937 6147])
+                            ("test_Process_ExtendedObject" function (:type "void") (reparse-symbol classsubparts) [6157 7375])
+                            ("private" label nil (reparse-symbol classsubparts) [7381 7389])
+                            ("TestFixture" type
+                               (:members 
+                                  ( ("TestFixture" function
+                                       (:constructor-flag t
+                                        :type ("TestFixture" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [7440 7815])
+                                    ("NormalObjectUnderTest" type
+                                       (:typedef ("FilterNeedleOutItemsCalculator" type (:type "class") nil nil)
+                                        :superclasses "FilterNeedleOutItemsCalculator"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [7829 7899])
+                                    ("ExtendedObjectUnderTest" type
+                                       (:typedef ("FilterExtendedNeedleOutItemsCalculator" type (:type "class") nil nil)
+                                        :superclasses "FilterExtendedNeedleOutItemsCalculator"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [7912 7984])
+                                    ("MakeNormalObjectUnderTest" function (:type ("std::unique_ptr" type
+                                         (:template-specifier 
+                                            ( ("NormalObjectUnderTest" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [7998 8324])
+                                    ("MakeExtendedObjectUnderTest" function (:type ("std::unique_ptr" type
+                                         (:template-specifier 
+                                            ( ("ExtendedObjectUnderTest" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [8338 8674])
+                                    ("VerifyAndClearExpectations" function (:type "void") (reparse-symbol classsubparts) [8688 8838])
+                                    ("SetTheInBuffer" function (:type "void") (reparse-symbol classsubparts) [8852 9309])
+                                    ("SetStaticFieldBuffer" function (:type "void") (reparse-symbol classsubparts) [9322 9466])
+                                    ("ClearTheOutBuffer" function (:type "void") (reparse-symbol classsubparts) [9479 9738])
+                                    ("inBuff" variable (:type ("TestInpBuffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9752 9783])
+                                    ("outBuffNormal" variable (:type ("TestNormalOutBuffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9796 9834])
+                                    ("outBuffExtended" variable (:type ("TestExtendedOutBuffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9847 9887])
+                                    ("statFieldBuff" variable (:type ("TestStatFieldBuffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9900 9938])
+                                    ("token" variable (:type ("PipelineConfigTokenPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9952 9981]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [7399 9993])
+                            ("fxt" variable (:type ("std::unique_ptr" type
+                                 (:template-specifier 
+                                    ( ("TestFixture" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [10003 10041])
+                            ("pc" variable (:type ("scf::PipelineConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10051 10081])
+                            ("sc" variable (:type ("scf::ScanConfiguration" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10090 10117])
+                            ("db" variable (:type ("DataBlock" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10126 10141]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3633 10145]))                  
+                :type "namespace")
+                nil [1460 10148])
+            ("testFilterNeedleOutItemsCalculator::FilterNeedleOutItemsCalculatorUnitTestSuite" using (:type ("testFilterNeedleOutItemsCalculator::FilterNeedleOutItemsCalculatorUnitTestSuite" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [10188 10274]))          
+      :file "test_ccapp_sda_filterneedleoutitemscalculator.hpp"
+      :pointmax 10403
+      :fsize 10402
+      :lastmodtime '(21113 3355 431296 480000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TEST_CCAPP_SDA_FILTERNEEDLEOUTITEMSCALCULATOR_HPP")
+          )
+))
+  :file "!sandbox!workspace!cyclades!release-2.00.01!development!code!a_sda!unittests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

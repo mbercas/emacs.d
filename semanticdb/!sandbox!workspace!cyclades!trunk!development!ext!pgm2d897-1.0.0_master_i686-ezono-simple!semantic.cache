@@ -1,0 +1,248 @@
+;; Object pgm2d897-1.0.0_master_i686-ezono-simple/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pgm2d897-1.0.0_master_i686-ezono-simple/"
+  :tables
+  (list
+    (semanticdb-table "d897cmd.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [361 379])
+            ("stdlib.h" include (:system-flag t) nil [380 399])
+            ("string.h" include (:system-flag t) nil [400 419])
+            ("signal.h" include (:system-flag t) nil [420 439])
+            ("d897cmd.h" include nil nil [441 461])
+            ("wrapper.h" include nil nil [462 482])
+            ("DPRINTF" variable (:constant-flag t) nil [556 563])
+            ("d897SigTout" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [575 598])
+            ("d897SigTerm" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [599 622])
+            ("signal_handler" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [726 734]))                  
+                :type "void")
+                nil [699 1019])
+            ("initSignal" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1080 1085]))                  
+                :type "void")
+                nil [1064 1631])
+            ("flushCmd" function
+               (:arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type ("uINT8" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1811 1822])
+                    ("cmdsize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1822 1837])
+                    ("outFD" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1837 1849]))                  
+                :type "int")
+                nil [1797 2178])
+            ("flushDATA" function
+               (:arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :type ("uINT8" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2355 2366])
+                    ("cmdsize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2366 2381])
+                    ("outFD" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2381 2393]))                  
+                :type "int")
+                nil [2341 3408])
+            ("getSenseData" function
+               (:arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type ("uINT8" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3548 3559])
+                    ("senseSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3560 3577])
+                    ("outFD" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3578 3590]))                  
+                :type "int")
+                nil [3531 4028])
+            ("cmd_mode_select" function
+               (:arguments 
+                  ( ("outFD" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4657 4669])
+                    ("transfer_mode" variable (:type ("uINT8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4679 4699])
+                    ("origX" variable (:type ("uINT16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4709 4722])
+                    ("origY" variable (:type ("uINT16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4723 4736])
+                    ("width" variable (:type ("uINT16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4746 4759])
+                    ("height" variable (:type ("uINT16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4760 4774]))                  
+                :type "int")
+                nil [4637 5791])
+            ("newStatusDATA" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5917 5922]))                  
+                :type ("StatusDATA" type (:type "class") nil nil))
+                nil [5891 6122])
+            ("cmd_status_sense" function
+               (:pointer 1
+                :arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6471 6480]))                  
+                :type ("StatusDATA" type (:type "class") nil nil))
+                nil [6442 8059])
+            ("check_status_printing" function
+               (:arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8173 8182]))                  
+                :type "void")
+                nil [8146 8549])
+            ("check_status" function
+               (:arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8893 8902]))                  
+                :type "int")
+                nil [8876 9833])
+            ("check_status_after_print" function
+               (:arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9864 9873]))                  
+                :type "int")
+                nil [9835 10933])
+            ("cmd_print_quantity" function
+               (:arguments 
+                  ( ("outFD" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11127 11139])
+                    ("quantity" variable (:type ("uINT8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11139 11154]))                  
+                :type "int")
+                nil [11104 11586])
+            ("cmd_send_imagedata" function
+               (:arguments 
+                  ( ("outFD" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12070 12082])
+                    ("data" variable
+                       (:pointer 1
+                        :type ("rasterImage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12083 12101]))                  
+                :type "int")
+                nil [12047 12814])
+            ("cmd_print_mode_select" function
+               (:arguments 
+                  ( ("outFD" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13325 13337])
+                    ("print_mode1" variable (:type ("uINT8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13344 13362])
+                    ("print_mode2" variable (:type ("uINT8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13369 13387])
+                    ("addrX" variable (:type ("uINT16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13394 13407])
+                    ("addrY" variable (:type ("uINT16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13415 13428])
+                    ("axisX" variable (:type ("uINT16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13436 13449])
+                    ("axisY" variable (:type ("uINT16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13457 13470]))                  
+                :type "int")
+                nil [13299 14565])
+            ("cmd_print" function
+               (:arguments 
+                  ( ("outFD" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14798 14810]))                  
+                :type "int")
+                nil [14784 14965])
+            ("cmd_stop_print" function
+               (:arguments 
+                  ( ("outFD" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15195 15207]))                  
+                :type "int")
+                nil [15176 15362])
+            ("cmd_color_adjust" function
+               (:arguments 
+                  ( ("outFD" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15833 15845])
+                    ("red" variable (:type ("INT8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15849 15858])
+                    ("green" variable (:type ("INT8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15862 15873])
+                    ("blue" variable (:type ("INT8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15877 15887])
+                    ("dark" variable (:type ("INT8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15891 15901])
+                    ("light" variable (:type ("INT8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15905 15916])
+                    ("sharpness" variable (:type ("INT8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15920 15935])
+                    ("gamma" variable (:type ("INT8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15939 15954]))                  
+                :type "int")
+                nil [15812 16687])
+            ("cmd_resize_select" function
+               (:arguments 
+                  ( ("outFD" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16874 16886])
+                    ("enlargeToFit" variable (:type ("enumResizeEnlargeToFit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16886 16922])
+                    ("enlargeType" variable (:type ("enumResizeEnlargeType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16923 16957])
+                    ("pageWidth" variable (:type ("uINT16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16958 16975])
+                    ("pageHeight" variable (:type ("uINT16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16976 16994]))                  
+                :type "int")
+                nil [16852 17925])
+            ("cmd_gamma_select" function
+               (:arguments 
+                  ( ("outFD" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18106 18118])
+                    ("gamma" variable (:type ("enumGammaValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18118 18139]))                  
+                :type "int")
+                nil [18085 18639])
+            ("cmd_reserve_unit" function
+               (:arguments 
+                  ( ("outFD" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18785 18797]))                  
+                :type "int")
+                nil [18764 19031])
+            ("cmd_release_unit" function
+               (:arguments 
+                  ( ("outFD" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19176 19188]))                  
+                :type "int")
+                nil [19155 19422]))          
+      :file "d897cmd.c"
+      :pointmax 19425
+      :fsize 19424
+      :lastmodtime '(20908 20934 567915 801000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DPRINTF" (spp-arg-list ("x") 563 . 566))
+          )
+)
+    (semanticdb-table "d897cmd.h"
+      :file "d897cmd.h"
+      :fsize 4421
+      :lastmodtime '(20908 20934 569915 824000))
+    (semanticdb-table "wrapper.h"
+      :file "wrapper.h"
+      :fsize 1838
+      :lastmodtime '(20908 20934 570915 836000)))
+  :file "!sandbox!workspace!cyclades!trunk!development!ext!pgm2d897-1.0.0_master_i686-ezono-simple!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

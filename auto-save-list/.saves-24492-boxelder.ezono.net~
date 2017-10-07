@@ -1,8 +1,0 @@
-/ssh:pi@192.168.88.196:/home/pi/code/fpga_emulator/spike.py
-#_assh_bpi@192.168.88.196_b_ahome_api_acode_afpga__emulator_aspike.py#
-/sandbox/workspace/repos/achill/trunk/development/code/dsp_integration_test.org
-/sandbox/workspace/repos/achill/trunk/development/code/#dsp_integration_test.org#
-/ssh:pi@192.168.88.196:/home/pi/code/fpga_emulator/fem_main.py
-#_assh_bpi@192.168.88.196_b_ahome_api_acode_afpga__emulator_afem__main.py#
-/ssh:pi@192.168.88.196:/home/pi/code/fpga_emulator/fem_apphexfileparser.py
-#_assh_bpi@192.168.88.196_b_ahome_api_acode_afpga__emulator_afem__apphexfileparser.py#

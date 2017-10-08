@@ -26,9 +26,6 @@
 (org-babel-load-file (expand-file-name "~/.emacs.d/myprojectile.org"))
 
 
-(require 'mode-icons)
-(mode-icons-mode)
-
 ;; Enable line numbers and column numbers.
 ;; 
 (line-number-mode 1)

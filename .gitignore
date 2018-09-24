@@ -1,6 +1,16 @@
 session.*
 tramp
 ac-comphist.dat
+bookmarks
+diary
+eww-bookmarks
+network-security.data
+projectile-bookmarks.eld
+projectile.cache
+recentf
+.org-id-locations
+*~
+*.swp
 
 semanticdb/
 .python-environments/

@@ -82,44 +82,6 @@ contains an ID, that ID will be replaced with a new one."
 
 (setq org-agenda-overriding-columns-format "%58ITEM(Details) %PRIORITY(P) %TAGS(Context) %7TODO(To Do) %5Effort(Time){:} %6CLOCKSUM{Total}")
 
-(setq org-agenda-custom-commands
-'(
-
-  ("P" "Projects"   
-   ((agenda)
-    (tags "gtd")
-    (tags "Vinno")
-    (tags "Wisonic")
-    (tags "Bard")
-    (tags "CustomProbes")
-    (tags "L7.5-128NGS")
-    (tags "FCU")
-    (tags "Hansono")
-    (tags "Sonoscape")
-    (tags  "Mindray")
-    (tags "ECM")
-    (tags "Development")))
-
-  ("H" "Office and Home Lists"
-   ((agenda)
-    (tags-todo "OFFICE")
-    (tags-todo "HOME")
-    (tags-todo "COMPUTER")
-    (tags-todo "MANAGEMENT")
-    (tags-todo "TRAINING")
-    (tags-todo "PHONE")
-    (tags-todo "READING")))
-
-  ("D" "Daily Action List"
-   (
-    (agenda "" ((org-agenda-ndays 1)
-                (org-agenda-sorting-strategy
-                 (quote ((agenda time-up priority-down tag-up) )))
-                (org-deadline-warning-days 0)
-                ))))
-  )
-)
-
 (setq org-todo-keyword-faces
       (quote (("TODO" :foreground "medium blue" :weight bold)
               ("APPT" :foreground "medium blue" :weight bold)

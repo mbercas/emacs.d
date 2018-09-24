@@ -23,6 +23,14 @@
 (add-hook 'cc-mode-hook (lambda () (linum-mode 1)))
 (add-hook 'c++-mode-hook (lambda () (linum-mode 1)))
 
+(add-hook 'c-mode-hook (lambda () (show-paren-mode 1)))
+(add-hook 'cc-mode-hook (lambda () (show-paren-mode 1)))
+(add-hook 'c++-mode-hook (lambda () (show-paren-mode 1)))
+
+(add-hook 'c-mode-hook 'projectile-mode)
+(add-hook 'cc-mode-hook 'projectile-mode)
+(add-hook 'c++-mode-hook 'projectile-mode)
+
 ;;; ********************
 ;;; Sets the Python mode
 ;;;
@@ -45,21 +53,40 @@
 ;(setq ropemacs-enable-autoimport t)
 
 (add-hook 'python-mode-hook (lambda () (linum-mode 1)))
+(add-hook 'python-mode-hook (lambda () (show-paren-mode 1)))
 
 (require 'jedi)
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories' "/usr/share/emacs/site-lisp/auto-complete/ac-dict")
 (ac-config-default)
 (setq ac-auto-start 2
       ac-override-local-map nil
       ac-use-menu-map t
       ac-candidate-limit 20)
 
-(add-hook 'python-mode-hook 'jedi:setup)
-(autoload 'jedi:setup "jedi" nil t)
-(setq jedi:complete-on-dot t)
+;;(add-hook 'python-mode-hook 'jedi:setup)
+;;(autoload 'jedi:setup "jedi" nil t)
+;;(setq jedi:complete-on-dot t)
+
+(add-hook 'python-mode-hook 'projectile-mode)
 
 (add-hook 'python-mode-hook 'company-mode)
+(defun my-python-hooks()
+    ;; pythom mode keybindings
+    (define-key python-mode-map (kbd "M-.") 'jedi:goto-definition)
+    (define-key python-mode-map (kbd "M-,") 'jedi:goto-definition-pop-marker)
+    (define-key python-mode-map (kbd "M-/") 'jedi:show-doc)
+    (define-key python-mode-map (kbd "M-?") 'helm-jedi-related-names)
+    ;; end python mode keybindings
+
+    (eval-after-load "company"
+        '(progn
+            (unless (member 'company-jedi (car company-backends))
+                (setq comp-back (car company-backends))
+                (push 'company-jedi comp-back)
+                (setq company-backends (list comp-back)))
+            )))
+
+(add-hook 'python-mode-hook 'my-python-hooks)
 ;(add-hook 'python-mode-hook 'anaconda-mode)
 ;(add-hook 'python-mode-hook 'eldoc-mode)
 
@@ -72,6 +99,12 @@
     (and server-buffer-clients (server-done)))
   (add-hook 'kill-buffer-hook 'fp-kill-server-with-buffer-routine))
 
+;; set ipython3 as the interpreter
+;;
+(setq
+ python-shell-interpreter "ipython"
+ python-shell-interpreter-args "--simple-prompt -i")
+
 (setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 
@@ -81,8 +114,10 @@
 (add-hook 'lua-mode-hook (lambda () (linum-mode 1)))
 
 (require 'taskjuggler-mode)
-(add-hook 'taskjuggler-mode-hook (lambda () (linum-mode 1)
-                                   (setq tab-width 4)))
+(add-hook 'taskjuggler-mode-hook (lambda () (linum-mode 1)))
+(add-hook 'taskjuggler-mode-hook (lambda () (setq tab-width 4)))
+(add-hook 'taskjuggler-mode-hook (lambda () (show-parent-mode 1)))
+(add-hook 'taskjuggler-mode-hook (lambda () (highlight-blocks-mode 1)))
 
 (autoload 'markdown-mode "markdown-mode" 
           "Major mode for editing Markdown files" t)

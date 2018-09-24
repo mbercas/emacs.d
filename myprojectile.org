@@ -16,6 +16,8 @@
 (setq projectile-globally-unignored-files (quote ("*.o" "*.pyc" "*~")))
 (setq projectile-tags-backend (quote find-tag))
 
+(setq projectile-enable-caching t)
+
 #+END_SRC
 
 ** Treemacs

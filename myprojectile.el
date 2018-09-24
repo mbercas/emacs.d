@@ -11,14 +11,16 @@
 (setq projectile-globally-unignored-files (quote ("*.o" "*.pyc" "*~")))
 (setq projectile-tags-backend (quote find-tag))
 
+(setq projectile-enable-caching t)
+
 (use-package treemacs
   :ensure t
   :defer t
   :config
   (progn
-                                        ;(use-package treemacs-evil
-                                        ;  :ensure t
-                                        ;  :demand t)
+    ;(use-package treemacs-evil
+    ;  :ensure t
+    ;  :demand t)
     (setq treemacs-follow-after-init          t
           treemacs-width                      35
           treemacs-indentation                2

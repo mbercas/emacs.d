@@ -83,7 +83,11 @@
 ;;  :ensure t
 ;;  :config (load-theme 'zenburn t))
 
- ;; spacemacs look
+
+(require 'mode-icons)
+(mode-icons-mode)
+
+;; spacemacs look
    (use-package spacemacs-theme
   :defer t
   :init
@@ -106,4 +110,4 @@
   (setq powerline-default-separator 'arrow-fade)
   :config
   (require 'spaceline-config)
-  (spaceline-spacemacs-theme))
+  (spaceline-emacs-theme))

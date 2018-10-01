@@ -25,8 +25,6 @@
 (setq org-log-done 'time)
 #+END_SRC
 
-
-
 * Extensions for collection of actions from meeting minutes
 #+BEGIN_SRC emacs-lisp
 (defcustom org-mactions-numbered-action-format "TODO Action #%d "
@@ -95,20 +93,95 @@ contains an ID, that ID will be replaced with a new one."
                (kill-new (buffer-string)))
         (kill-buffer buf)))))
 #+END_SRC
-
 * GTD orgranization
   - Agenda columns format
   - Agenda custom commands
 #+BEGIN_SRC emacs-lisp
 (setq org-agenda-overriding-columns-format "%58ITEM(Details) %PRIORITY(P) %TAGS(Context) %7TODO(To Do) %5Effort(Time){:} %6CLOCKSUM{Total}")
 
+;; == bh/helper-functions ==
+(defun bh/is-project-p ()
+  "Any task with a todo keyword subtask."
+  (save-restriction
+    (widen)
+    (let ((has-subtask)
+          (subtree-end (save-excursion (org-end-of-subtree t)))
+          (is-a-task (member (nth 2 (org-heading-components)) org-todo-keywords-1)))
+      (save-excursion
+        (forward-line 1)
+        (while (and (not has-subtask)
+                    (< (point) subtree-end)
+                    (re-search-forward "^\*+ " subtree-end t))
+          (when (member (org-get-todo-state) org-todo-keywords-1)
+            (setq has-subtask t))))
+      (and is-a-task has-subtask))))
+(defun bh/find-project-task ()
+  "Move point to the parent (project) task if any."
+  (save-restriction
+    (widen)
+    (let ((parent-task (save-excursion (org-back-to-heading 'invisible-ok) (point))))
+      (while (org-up-heading-safe)
+        (when (member (nth 2 (org-heading-components)) org-todo-keywords-1)
+          (setq parent-task (point))))
+      (goto-char parent-task)
+      parent-task)))
+(defun bh/is-project-subtree-p ()
+  "Any task with a todo keyword that is in a project subtree.
+Callers of this function already widen the buffer view."
+  (let ((task (save-excursion (org-back-to-heading 'invisible-ok)
+                              (point))))
+    (save-excursion
+      (bh/find-project-task)
+      (if (equal (point) task)
+          nil
+        t))))
+
+
+
+;; == Custom State Keywords ==
+(setq org-use-fast-todo-selection t)
+
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "STARTED(s)" "NEXT(n)" "|" "DONE(d)")
+	(sequence "WAITING(w@/!)" "INACTIVE(i)" "|" "CANCELLED(c@/!)" "MEETING")))
+
+;; Custom colors for the keywords
 (setq org-todo-keyword-faces
-      (quote (("TODO" :foreground "medium blue" :weight bold)
-              ("APPT" :foreground "medium blue" :weight bold)
-              ("NOTE" :foreground "dark violet" :weight bold)
-              ("STARTED" :foreground "dark orange" :weight bold)
-              ("WAITING" :foreground "red" :weight bold)
-              ("DELEGATED" :foreground "dark orange" :weight bold))))
+      '(("TODO" :foreground "red" :weight bold)
+	("NEXT" :foreground "blue" :weight bold)
+	("DONE" :foreground "forest green" :weight bold)
+	("WAITING" :foreground "orange" :weight bold)
+	("INACTIVE" :foreground "magenta" :weight bold)
+	("CANCELLED" :foreground "forest green" :weight bold)
+	("MEETING" :foreground "forest green" :weight bold)
+        ("NOTE" :foreground "dark violet" :weight bold)
+        ("STARTED" :foreground "dark orange" :weight bold)))
+
+;; Auto-update tags whenever the state is changed
+(setq org-todo-state-tags-triggers
+      '(("CANCELLED" ("CANCELLED" . t))
+	("WAITING" ("WAITING" . t))
+	("INACTIVE" ("WAITING") ("INACTIVE" . t))
+	(done ("WAITING") ("INACTIVE"))
+	("TODO" ("WAITING") ("CANCELLED") ("INACTIVE"))
+	("NEXT" ("WAITING") ("CANCELLED") ("INACTIVE"))
+	("DONE" ("WAITING") ("CANCELLED") ("INACTIVE"))))
+
+(defun gs/mark-next-done-parent-tasks-todo ()
+  "Visit each parent task and change NEXT (or DONE) states to TODO."
+  ;; Don't change the value if new state is "DONE"
+  (let ((mystate (or (and (fboundp 'org-state)
+                          (member state
+				  (list "NEXT" "TODO")))
+                     (member (nth 2 (org-heading-components))
+			     (list "NEXT" "TODO")))))
+    (when mystate
+      (save-excursion
+        (while (org-up-heading-safe)
+          (when (member (nth 2 (org-heading-components)) (list "NEXT" "DONE"))
+            (org-todo "TODO")))))))
+(add-hook 'org-after-todo-state-change-hook 'gs/mark-next-done-parent-tasks-todo 'append)
+
 
 (defvar org-my-archive-expiry-days 4.0
   "The number of days after which a completed task should be auto-archived.
@@ -144,7 +217,6 @@ contains an ID, that ID will be replaced with a new one."
 (setq safe-local-variable-values (quote ((after-save-hook archive-done-tasks))))
 
 (defalias 'archive-done-tasks 'org-my-archive-done-tasks)
-
 
 (defun org-archive-done-tasks-file ()
   (interactive)

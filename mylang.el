@@ -34,76 +34,48 @@
 ;;; ********************
 ;;; Sets the Python mode
 ;;;
+(use-package python
+  :ensure t
+  :defer t
+  :mode ("\\.py\\'" . python-mode))
 
+;; ensure:
+;;; pip install jedi
+;;  pip install flake8
+;;  pip install importmagic
+;;  pip install autopep8
+;;  pip install yapf
 
-;(autoload 'python-mode "python-mode" "Python editing mode." t)
-(add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
-(setq py-electric-colon-active t)
-(setq interpreter-mode-alist (cons '("python" . python-mode) interpreter-mode-alist))
-;;;(add-to-list 'interpreter-mode-alist '("python" . python-mode))
+(use-package elpy
+  :ensure t
+  :after python
+  :init  (elpy-enable)
+  :config
+  (progn 
+    (setq
+      python-shell-interpreter "ipython"
+      python-shell-interpreter-args "--simple-prompt -i")
+    (when (fboundp 'flycheck-mode)
+      (setq elpy-modules (delete 'elpy-module-flymake elpy-modules)))
+    (add-hook 'elpy-mode-hook
+      (lambda ()
+        (set (make-local-variable 'company-backends)
+          (append company-backends '(company-yasnippet)))))
+  )
+)
 
-(defun run-python-once ()
-  (remove-hook 'python-mode-hook 'run-python-once)
-  (run-python))
+(use-package flycheck
+  :init
+  :after elpy
+  :config
+  ;;(setq elpy-default-minor-modes (delete 'flymake-mode elpy-default-minor-modes))
+  ;;(add-to-list 'elpy-default-minor-modes 'flycheck-mode) 
+  ;;(setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
 
-(add-hook 'python-mode-hook 'run-python-once)
-
-;(require 'pymacs)
-;(pymacs-load "ropemacs" "rope-")
-;(setq ropemacs-enable-autoimport t)
-
-(add-hook 'python-mode-hook (lambda () (linum-mode 1)))
-(add-hook 'python-mode-hook (lambda () (show-paren-mode 1)))
-
-(require 'jedi)
-(require 'auto-complete-config)
-(ac-config-default)
-(setq ac-auto-start 2
-      ac-override-local-map nil
-      ac-use-menu-map t
-      ac-candidate-limit 20)
-
-;;(add-hook 'python-mode-hook 'jedi:setup)
-;;(autoload 'jedi:setup "jedi" nil t)
-;;(setq jedi:complete-on-dot t)
-
-(add-hook 'python-mode-hook 'projectile-mode)
-
-(add-hook 'python-mode-hook 'company-mode)
-(defun my-python-hooks()
-    ;; pythom mode keybindings
-    (define-key python-mode-map (kbd "M-.") 'jedi:goto-definition)
-    (define-key python-mode-map (kbd "M-,") 'jedi:goto-definition-pop-marker)
-    (define-key python-mode-map (kbd "M-/") 'jedi:show-doc)
-    (define-key python-mode-map (kbd "M-?") 'helm-jedi-related-names)
-    ;; end python mode keybindings
-
-    (eval-after-load "company"
-        '(progn
-            (unless (member 'company-jedi (car company-backends))
-                (setq comp-back (car company-backends))
-                (push 'company-jedi comp-back)
-                (setq company-backends (list comp-back)))
-            )))
-
-(add-hook 'python-mode-hook 'my-python-hooks)
-;(add-hook 'python-mode-hook 'anaconda-mode)
-;(add-hook 'python-mode-hook 'eldoc-mode)
-
-;; enable server for integration with ipython
-;;
-(defvar server-buffer-clients)
-(when (and (fboundp 'server-start) (string-equal (getenv "TERM") 'xterm))
-  (server-start)
-  (defun fp-kill-server-with-buffer-routine ()
-    (and server-buffer-clients (server-done)))
-  (add-hook 'kill-buffer-hook 'fp-kill-server-with-buffer-routine))
-
-;; set ipython3 as the interpreter
-;;
-(setq
- python-shell-interpreter "ipython"
- python-shell-interpreter-args "--simple-prompt -i")
+(use-package pyvenv
+  :ensure t
+  :after python)
 
 (setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
@@ -119,17 +91,46 @@
 (add-hook 'taskjuggler-mode-hook (lambda () (show-parent-mode 1)))
 (add-hook 'taskjuggler-mode-hook (lambda () (highlight-blocks-mode 1)))
 
-(autoload 'markdown-mode "markdown-mode" 
-          "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.mdown$" . markdown-mode))
-(add-hook 'markdown-mode-hook
-          (lambda ()
-            (visual-line-mode t)
-            (writegood-mode t)
-            (flyspell-mode t)))
+(use-package markdown-mode
+  :ensure  markdown-mode
+  :defer   t
+  :mode    ("\\.\\(markdown\\|mdown\\|md\\)$" . markdown-mode)
+  :config  (add-hook 'markdown-mode-hook
+             (lambda ()
+               (visual-line-mode t)
+               (writegood-mode t)
+               (flyspell-mode t))))
+
 (setq markdown-command "pandoc --smart -f markdown -t html")
+
+(use-package slime
+  :ensure t
+  :after list
+  :config
+  (progn
+    (add-hook
+     'slime-load-hook
+     #'(lambda ()
+	 (slime-setup 
+	  '(slime-fancy
+	    slime-repl
+	    slime-fuzzy))))
+    (setq slime-net-coding-system 'utf-8-unix)
+    (add-hook 'lisp-mode-hook (lambda () (linum-mode 1)))
+
+    ;; Slime and Auto-Complete
+    (use-package ac-slime
+      :load-path (expand-site-lisp "ac-slime")
+      :init
+      (progn
+	(add-hook 'slime-mode-hook 'set-up-slime-ac)
+	(add-hook 'slime-repl-mode-hook 'set-up-slime-ac))
+      :config
+      (progn
+	(eval-after-load "auto-complete"
+	  '(add-to-list 'ac-modes 'slime-repl-mode))))))
+
+
 
 (autoload 'enable-paredit-mode "paredit"
   "Turn on pseudo-structural editing of Lisp code."
@@ -141,19 +142,21 @@
 ;; slime
 
 
+
+;;(load (expand-file-name "~/quicklisp/slime-helper.el"))
+
 (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
 
-(add-to-list 'load-path "~/.emacs/elpa/slime-2.17/")
+
 (setq inferior-lisp-program "sbcl")
-(require 'slime)
-(slime-setup)
+
 ;; Stop SLIME's REPL from grabbing DEL,
 ;; which is annoying when backspacing over a '('
-(defun override-slime-repl-bindings-with-paredit ()
-  (define-key slime-repl-mode-map
-    (read-kbd-macro paredit-backward-delete-key)
-    nil))
-(add-hook 'slime-repl-mode-hook 'override-slime-repl-bindings-with-paredit)
+;;(defun override-slime-repl-bindings-with-paredit ()
+;;  (define-key slime-repl-mode-map
+;;    (read-kbd-macro paredit-backward-delete-key)
+;;    nil))
+;;(add-hook 'slime-repl-mode-hook 'override-slime-repl-bindings-with-paredit)
 
 
-(add-hook 'lisp-mode-hook (lambda () (linum-mode 1)))
+;;(add-hook 'lisp-mode-hook (lambda () (linum-mode 1)))

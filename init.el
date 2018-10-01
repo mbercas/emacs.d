@@ -1,16 +1,23 @@
-
+;; update package-archive list
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 ;;(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
-
 (package-initialize)
 
 ;; Bootstrap `use-package'
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
+
+;; Enable use-package
+(eval-when-compile
+  (require 'use-package))
+(require 'diminish)                ;; if you use :diminish
+(require 'bind-key)                ;; if you use any :bind variant
+
+;;; init-use-package.el ends here
 
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
@@ -45,18 +52,6 @@
                         (hl-paren-color-update)))))))
 
 
-(require 'ido)
-(ido-mode t)
-
-
-
-
-
-
-(load (expand-file-name "~/quicklisp/slime-helper.el"))
-
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (custom-set-variables
@@ -79,7 +74,7 @@
      ("\\.pdf\\'" . xdg-open))))
  '(package-selected-packages
    (quote
-    (pynt ess-smart-underscore ess magit-svn helm-etags-plus helm-git-grep helm-gitlab org-alert org-projectile-helm paredit-everywhere spaceline spaceline-all-the-icons treemacs-evil treemacs treemacs-projectile counsel-gtags gtags marmalade anything-exuberant-ctags helm-gtags mode-icons helm-projectile spacemacs-theme org-ac org-agenda-property org-autolist org-beautify-theme org-clock-csv org-gcal org-gnome org-journal org-pdfview org-projectile org-table-comment org-table-sticky-header org-transform-tree-table org-vcard aggressive-indent projectile-variable projectile-git-autofetch projectile python-x qml-mode pyvenv csv-mode puml-mode graphviz-dot-mode zenburn-theme writegood-mode which-key vhdl-tools use-package try slime-company pycomplete pungi paredit org-tree-slide org-bullets magit ical-pull highlight-blocks git flycheck fill-column-indicator elpy elisp-slime-nav eink-theme ein ecb doctags desktop-registry counsel company-jedi color-theme autopair anaconda-mode ace-window ac-slime ac-python)))
+    (pyenv pynt ess-smart-underscore ess magit-svn helm-etags-plus helm-git-grep helm-gitlab org-alert org-projectile-helm paredit-everywhere spaceline spaceline-all-the-icons treemacs-evil treemacs treemacs-projectile counsel-gtags gtags marmalade anything-exuberant-ctags helm-gtags mode-icons helm-projectile spacemacs-theme org-ac org-agenda-property org-autolist org-beautify-theme org-clock-csv org-gcal org-gnome org-journal org-pdfview org-projectile org-table-comment org-table-sticky-header org-transform-tree-table org-vcard aggressive-indent projectile-variable projectile-git-autofetch projectile python-x qml-mode pyvenv csv-mode puml-mode graphviz-dot-mode zenburn-theme writegood-mode which-key vhdl-tools use-package try slime-company pycomplete pungi paredit org-tree-slide org-bullets magit ical-pull highlight-blocks git flycheck fill-column-indicator elpy elisp-slime-nav eink-theme ein ecb doctags desktop-registry counsel company-jedi color-theme autopair anaconda-mode ace-window ac-slime ac-python)))
  '(send-mail-function (quote sendmail-send-it))
  '(spice-output-local "Gnucap")
  '(spice-simulator "Gnucap")

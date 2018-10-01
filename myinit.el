@@ -4,6 +4,13 @@
 (set-variable 'confirm-kill-emacs 'yes-or-no-p)
 (global-set-key (kbd "<f5>") 'revert-buffer)
 
+(use-package ido
+  :ensure t
+  :config
+  (setq ido-enable-flex-matching t)
+  (ido-everywhere t)
+  (ido-mode 1))
+
 (use-package try
 	:ensure t)
 
@@ -75,7 +82,7 @@
   ))
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-
+  
 ;;  (use-package color-theme
 ;;  :ensure t)
 
@@ -88,7 +95,7 @@
 (mode-icons-mode)
 
 ;; spacemacs look
-   (use-package spacemacs-theme
+(use-package spacemacs-theme
   :defer t
   :init
   (load-theme 'spacemacs-dark t)

@@ -34,40 +34,45 @@
 	(which-key-mode))
   #+END_SRC
 * Org mode
-  Org bullets makes things look pretty
+  - Org bullets makes things look pretty
+  - Add Working week to the calendar and starting on Monday
+  - org babel load languages
   #+BEGIN_SRC emacs-lisp
-  (use-package org-bullets
-  :ensure t
-  :config
-  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
-  (add-hook 'org-mode-hook (lambda () (flyspell-mode t)))
-  (add-hook 'org-mode-hook (lambda () (linum-mode 1)))
+    (use-package org-bullets
+      :ensure t
+      :config
+      (progn
+        (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+        (add-hook 'org-mode-hook (lambda () (flyspell-mode t)))
+        (add-hook 'org-mode-hook (lambda () (linum-mode 1)))
+        (setq calendar-week-start-day 1)
+        (setq calendar-intermonth-text
+           '(propertize
+            (format "%2d"
+                   (car
+                   (calendar-iso-from-absolute
+                   (calendar-absolute-from-gregorian (list month day year)))))
+          'font-lock-face 'font-lock-warning-face))
+
+        (setq calendar-intermonth-header
+          (propertize "Wk"                  ; or e.g. "KW" in Germany
+                    'font-lock-face 'font-lock-keyword-face))
+
+        ;; (org-babel-do-l
+      )
+    )
   #+END_SRC
 
+  #+RESULTS:
+  : t
 
-  Add week number to calendar and start week on Monday
-  #+BEGIN_SRC
-  (setq calendar-week-start-day 1)
-
-  (setq calendar-intermonth-text
-      '(propertize
-        (format "%2d"
-                (car
-                 (calendar-iso-from-absolute
-                  (calendar-absolute-from-gregorian (list month day year)))))
-        'font-lock-face 'font-lock-warning-face))
-
-  (setq calendar-intermonth-header
-      (propertize "Wk"                  ; or e.g. "KW" in Germany
-                  'font-lock-face 'font-lock-keyword-face))
- #+END_SRC
-
-  Add org-babel support for languages
   #+BEGIN_SRC emacs-lisp
-  (org-babel-do-load-languages
-    'org-babel-load-languages
-    '((python .t)))
+      (org-babel-do-load-languages
+        'org-babel-load-languages
+        '((python .t))
+        '((lisp .t))))
   #+END_SRC
+
 * Ace windows for easy window switching
   #+BEGIN_SRC emacs-lisp
   (use-package ace-window
@@ -134,10 +139,20 @@
     ))
   #+END_SRC
 
+* Magit
+#+BEGIN_SRC emacs-lisp
+(use-package magit
+  :ensure t
+  :commands magit-status
+  :bind ("C-x g" . magit-status))
+#+END_SRC
+
+#+RESULTS:
+
 * Themes
   #+BEGIN_SRC emacs-lisp
 
-  (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+  ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
   
 ;;  (use-package color-theme
 ;;  :ensure t)
@@ -154,17 +169,18 @@
 (use-package spacemacs-theme
   :defer t
   :init
+  (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
   (load-theme 'spacemacs-dark t)
   (setq spacemacs-theme-org-agenda-height nil)
-  (setq spacemacs-theme-org-height nil))
-
-;; set sizes here to stop spacemacs theme resizing these
-(set-face-attribute 'org-level-1 nil :height 1.0)
-(set-face-attribute 'org-level-2 nil :height 1.0)
-(set-face-attribute 'org-level-3 nil :height 1.0)
-(set-face-attribute 'org-scheduled-today nil :height 1.0)
-(set-face-attribute 'org-agenda-date-today nil :height 1.1)
-(set-face-attribute 'org-table nil :foreground "#008787")
+  (setq spacemacs-theme-org-height nil)
+  :config
+  ;; set sizes here to stop spacemacs theme resizing these
+    (set-face-attribute 'org-level-1 nil :height 1.0)
+    (set-face-attribute 'org-level-2 nil :height 1.0)
+    (set-face-attribute 'org-level-3 nil :height 1.0)
+    (set-face-attribute 'org-scheduled-today nil :height 1.0)
+    (set-face-attribute 'org-agenda-date-today nil :height 1.1)
+    (set-face-attribute 'org-table nil :foreground "#008787"))
 
 
 (use-package spaceline
@@ -178,3 +194,6 @@
 
 
   #+END_SRC
+
+  #+RESULTS:
+  : t

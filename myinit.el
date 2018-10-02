@@ -19,17 +19,6 @@
       :config
       (which-key-mode))
 
-(use-package org-bullets
-:ensure t
-:config
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
-(add-hook 'org-mode-hook (lambda () (flyspell-mode t)))
-(add-hook 'org-mode-hook (lambda () (linum-mode 1)))
-
-(org-babel-do-load-languages
-  'org-babel-load-languages
-  '((python .t)))
-
 (use-package ace-window
 :ensure t
 :init
@@ -81,7 +70,7 @@
   (global-auto-complete-mode t)
   ))
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
   
 ;;  (use-package color-theme
 ;;  :ensure t)
@@ -98,17 +87,18 @@
 (use-package spacemacs-theme
   :defer t
   :init
+  (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
   (load-theme 'spacemacs-dark t)
   (setq spacemacs-theme-org-agenda-height nil)
-  (setq spacemacs-theme-org-height nil))
-
-;; set sizes here to stop spacemacs theme resizing these
-(set-face-attribute 'org-level-1 nil :height 1.0)
-(set-face-attribute 'org-level-2 nil :height 1.0)
-(set-face-attribute 'org-level-3 nil :height 1.0)
-(set-face-attribute 'org-scheduled-today nil :height 1.0)
-(set-face-attribute 'org-agenda-date-today nil :height 1.1)
-(set-face-attribute 'org-table nil :foreground "#008787")
+  (setq spacemacs-theme-org-height nil)
+  :config
+  ;; set sizes here to stop spacemacs theme resizing these
+    (set-face-attribute 'org-level-1 nil :height 1.0)
+    (set-face-attribute 'org-level-2 nil :height 1.0)
+    (set-face-attribute 'org-level-3 nil :height 1.0)
+    (set-face-attribute 'org-scheduled-today nil :height 1.0)
+    (set-face-attribute 'org-agenda-date-today nil :height 1.1)
+    (set-face-attribute 'org-table nil :foreground "#008787"))
 
 
 (use-package spaceline

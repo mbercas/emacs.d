@@ -130,11 +130,11 @@
 (setq markdown-command "pandoc --smart -f markdown -t html")
 #+END_SRC
 
-* Lisp - disabled!!- enable slime
+* Lisp - enable slime
 #+BEGIN_SRC emacs-lisp
 (use-package slime
   :ensure t
-  :after list
+  :after lisp
   :config
   (progn
     (add-hook
@@ -149,7 +149,7 @@
 
     ;; Slime and Auto-Complete
     (use-package ac-slime
-      :load-path (expand-site-lisp "ac-slime")
+      :ensure t
       :init
       (progn
 	(add-hook 'slime-mode-hook 'set-up-slime-ac)
@@ -190,3 +190,6 @@
 
 ;;(add-hook 'lisp-mode-hook (lambda () (linum-mode 1)))
 #+END_SRC
+
+#+RESULTS:
+: sbcl

@@ -3,10 +3,10 @@
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
          "* TODO %?\n  %i\n  %a")
-        ("n" "Note" entry (file+headline "~/org/notes.org")
+        ("n" "Note" entry (file "~/org/notes.org")
          "* NOTE %?\n  %i\n %a")
-        ("p" "Proj" entry (file+headline "~/org/projects.org")
-         "* PROJ %?\n  %i\n %a")
+        ("p" "Proj" entry (file "~/org/projects.org")
+         "** TODO %?\n  %i\n %a")
         ("j" "Journal" entry (file+datetree "~/org/journal.org")
          "* %?\nEntered on %U\n  %i\n  %a")))
 
@@ -125,8 +125,8 @@ Callers of this function already widen the buffer view."
 (setq org-use-fast-todo-selection t)
 
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "STARTED(s)" "NEXT(n)" "|" "DONE(d)")
-	(sequence "WAITING(w@/!)" "INACTIVE(i)" "|" "CANCELLED(c@/!)" "MEETING")))
+      '((sequence "TODO(t)" "STARTED(s)" "NEXT(n)" "MEETING(m)" "NOTE(o)" "|" "DONE(d)")
+	(sequence "WAITING(w@/!)" "INACTIVE(i)" "|" "CANCELLED(c@/!)" )))
 
 ;; Custom colors for the keywords
 (setq org-todo-keyword-faces

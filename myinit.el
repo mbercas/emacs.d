@@ -1,4 +1,9 @@
 (setq inhibit-startup-message t)
+;; Enable line numbers and column numbers.
+;; 
+(line-number-mode 1)
+(column-number-mode 1)
+(setq fill-column 90) ;; M-q should fill at 90 chars, not 75
 (tool-bar-mode -1)
 (fset 'yes-or-no-p 'y-or-n-p)
 (set-variable 'confirm-kill-emacs 'yes-or-no-p)
@@ -18,6 +23,46 @@
       :ensure t 
       :config
       (which-key-mode))
+
+(use-package org-bullets
+  :ensure t
+  :config
+  (progn
+    (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+    ;;(add-hook 'org-mode-hook (lambda () (flyspell-mode t)))
+    (add-hook 'org-mode-hook (lambda () (linum-mode 1)))
+    (add-hook 'org-mode-hook (lambda () (show-paren-mode 1)))
+
+    ;; configure the calendar
+    (setq calendar-week-start-day 1)
+    (setq calendar-intermonth-text
+       '(propertize
+        (format "%2d"
+               (car
+               (calendar-iso-from-absolute
+               (calendar-absolute-from-gregorian (list month day year)))))
+      'font-lock-face 'font-lock-warning-face))
+
+    (setq calendar-intermonth-header
+      (propertize "Wk"                  ; or e.g. "KW" in Germany
+                'font-lock-face 'font-lock-keyword-face))
+
+    ;; 
+    (use-package flyspell
+       :ensure t
+       :config
+         (progn
+           (flyspell-mode 1)
+           (add-hook 'org-mode-hook (lambda () (flyspell-mode t)))
+         )
+    )
+
+  )
+)
+
+(org-babel-do-load-languages
+  'org-babel-load-languages
+  '((python .t)))
 
 (use-package ace-window
 :ensure t
@@ -69,6 +114,11 @@
   (ac-config-default)
   (global-auto-complete-mode t)
   ))
+
+(use-package magit
+  :ensure t
+  :commands magit-status
+  :bind ("C-x g" . magit-status))
 
 ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
   

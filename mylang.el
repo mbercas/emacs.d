@@ -105,7 +105,7 @@
 
 (use-package slime
   :ensure t
-  :after list
+  :after lisp
   :config
   (progn
     (add-hook
@@ -120,7 +120,7 @@
 
     ;; Slime and Auto-Complete
     (use-package ac-slime
-      :load-path (expand-site-lisp "ac-slime")
+      :ensure t
       :init
       (progn
 	(add-hook 'slime-mode-hook 'set-up-slime-ac)

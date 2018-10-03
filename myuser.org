@@ -1,0 +1,5 @@
+* User information
+#+BEGIN_SRC emacs-lisp
+(setq user-full-name "Manuel Berrocal")
+(setq user-mail-address "manuel@ezono.com")
+#+END_SRC

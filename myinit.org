@@ -4,6 +4,11 @@
 * interface tweaks
 #+BEGIN_SRC emacs-lisp
 (setq inhibit-startup-message t)
+;; Enable line numbers and column numbers.
+;; 
+(line-number-mode 1)
+(column-number-mode 1)
+(setq fill-column 90) ;; M-q should fill at 90 chars, not 75
 (tool-bar-mode -1)
 (fset 'yes-or-no-p 'y-or-n-p)
 (set-variable 'confirm-kill-emacs 'yes-or-no-p)
@@ -37,14 +42,18 @@
   - Org bullets makes things look pretty
   - Add Working week to the calendar and starting on Monday
   - org babel load languages
+  - load flyspell for syntax check
   #+BEGIN_SRC emacs-lisp
     (use-package org-bullets
       :ensure t
       :config
       (progn
         (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
-        (add-hook 'org-mode-hook (lambda () (flyspell-mode t)))
+        ;;(add-hook 'org-mode-hook (lambda () (flyspell-mode t)))
         (add-hook 'org-mode-hook (lambda () (linum-mode 1)))
+        (add-hook 'org-mode-hook (lambda () (show-paren-mode 1)))
+
+        ;; configure the calendar
         (setq calendar-week-start-day 1)
         (setq calendar-intermonth-text
            '(propertize
@@ -58,7 +67,16 @@
           (propertize "Wk"                  ; or e.g. "KW" in Germany
                     'font-lock-face 'font-lock-keyword-face))
 
-        ;; (org-babel-do-l
+        ;; 
+        (use-package flyspell
+           :ensure t
+           :config
+             (progn
+               (flyspell-mode 1)
+               (add-hook 'org-mode-hook (lambda () (flyspell-mode t)))
+             )
+        )
+
       )
     )
   #+END_SRC
@@ -66,11 +84,11 @@
   #+RESULTS:
   : t
 
+** Highlight syntax in SRC blocks
   #+BEGIN_SRC emacs-lisp
       (org-babel-do-load-languages
         'org-babel-load-languages
-        '((python .t))
-        '((lisp .t))))
+        '((python .t)))
   #+END_SRC
 
 * Ace windows for easy window switching
@@ -138,7 +156,6 @@
     (global-auto-complete-mode t)
     ))
   #+END_SRC
-
 * Magit
 #+BEGIN_SRC emacs-lisp
 (use-package magit

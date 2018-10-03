@@ -28,16 +28,10 @@
                                         ; Configuration files
 
 (org-babel-load-file (expand-file-name "~/.emacs.d/myinit.org"))
+(org-babel-load-file (expand-file-name "~/.emacs.d/myuser.org"))
 (org-babel-load-file (expand-file-name "~/.emacs.d/mygtg.org"))
 (org-babel-load-file (expand-file-name "~/.emacs.d/mylang.org"))
 (org-babel-load-file (expand-file-name "~/.emacs.d/myprojectile.org"))
-
-
-;; Enable line numbers and column numbers.
-;; 
-(line-number-mode 1)
-(column-number-mode 1)
-(setq fill-column 90) ;; M-q should fill at 90 chars, not 75
 
 
 ;; integrate highlight-parentheses with autopair mode:

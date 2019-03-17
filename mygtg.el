@@ -1,3 +1,4 @@
+
 (setq org-default-notes-file (concat org-directory "~/org/notes.org"))
 
 (setq org-capture-templates
@@ -126,38 +127,38 @@ Callers of this function already widen the buffer view."
 
 (setq org-todo-keywords
       '((sequence "TODO(t)" "STARTED(s)" "NEXT(n)" "MEETING(m)" "NOTE(o)" "|" "DONE(d)")
-	(sequence "WAITING(w@/!)" "INACTIVE(i)" "|" "CANCELLED(c@/!)" )))
+        (sequence "WAITING(w@/!)" "INACTIVE(i)" "|" "CANCELLED(c@/!)" )))
 
 ;; Custom colors for the keywords
 (setq org-todo-keyword-faces
       '(("TODO" :foreground "red" :weight bold)
-	("NEXT" :foreground "blue" :weight bold)
-	("DONE" :foreground "forest green" :weight bold)
-	("WAITING" :foreground "orange" :weight bold)
-	("INACTIVE" :foreground "magenta" :weight bold)
-	("CANCELLED" :foreground "forest green" :weight bold)
-	("MEETING" :foreground "forest green" :weight bold)
+        ("NEXT" :foreground "blue" :weight bold)
+        ("DONE" :foreground "forest green" :weight bold)
+        ("WAITING" :foreground "orange" :weight bold)
+        ("INACTIVE" :foreground "magenta" :weight bold)
+        ("CANCELLED" :foreground "forest green" :weight bold)
+        ("MEETING" :foreground "forest green" :weight bold)
         ("NOTE" :foreground "dark violet" :weight bold)
         ("STARTED" :foreground "dark orange" :weight bold)))
 
 ;; Auto-update tags whenever the state is changed
 (setq org-todo-state-tags-triggers
       '(("CANCELLED" ("CANCELLED" . t))
-	("WAITING" ("WAITING" . t))
-	("INACTIVE" ("WAITING") ("INACTIVE" . t))
-	(done ("WAITING") ("INACTIVE"))
-	("TODO" ("WAITING") ("CANCELLED") ("INACTIVE"))
-	("NEXT" ("WAITING") ("CANCELLED") ("INACTIVE"))
-	("DONE" ("WAITING") ("CANCELLED") ("INACTIVE"))))
+        ("WAITING" ("WAITING" . t))
+        ("INACTIVE" ("WAITING") ("INACTIVE" . t))
+        (done ("WAITING") ("INACTIVE"))
+        ("TODO" ("WAITING") ("CANCELLED") ("INACTIVE"))
+        ("NEXT" ("WAITING") ("CANCELLED") ("INACTIVE"))
+        ("DONE" ("WAITING") ("CANCELLED") ("INACTIVE"))))
 
 (defun gs/mark-next-done-parent-tasks-todo ()
   "Visit each parent task and change NEXT (or DONE) states to TODO."
   ;; Don't change the value if new state is "DONE"
   (let ((mystate (or (and (fboundp 'org-state)
                           (member state
-				  (list "NEXT" "TODO")))
+                                  (list "NEXT" "TODO")))
                      (member (nth 2 (org-heading-components))
-			     (list "NEXT" "TODO")))))
+                             (list "NEXT" "TODO")))))
     (when mystate
       (save-excursion
         (while (org-up-heading-safe)

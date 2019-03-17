@@ -1,17 +1,26 @@
+
 ;;(projectile-global-mode)
 
 ;; helm autocompletion mode and integration with projectile
-(require 'helm-config)
-(require 'helm-projectile)
-(setq projectile-completion-system 'helm)
-(helm-projectile-on)
+;;(use-package helm-config
+;;  :ensure t
+;;  :defer t)
 
-(setq projectile-switch-project-action 'helm-projectile)
-(setq projectile-enable-idle-timer t)
-(setq projectile-globally-unignored-files (quote ("*.o" "*.pyc" "*~")))
-(setq projectile-tags-backend (quote find-tag))
+;;;(require 'helm-config)
+;;;(require 'helm-projectile)
 
-(setq projectile-enable-caching t)
+(use-package helm-projectile
+  :ensure t
+  :defer t
+  :config
+  (progn
+     (setq projectile-completion-system 'helm)
+     (helm-projectile-on)
+     (setq projectile-switch-project-action 'helm-projectile)
+     (setq projectile-enable-idle-timer t)
+     (setq projectile-globally-unignored-files (quote ("*.o" "*.pyc" "*~")))
+     (setq projectile-tags-backend (quote find-tag))
+     (setq projectile-enable-caching t))
 
 (use-package treemacs
   :ensure t

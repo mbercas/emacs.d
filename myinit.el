@@ -1,3 +1,4 @@
+
 (setq inhibit-startup-message t)
 ;; Enable line numbers and column numbers.
 ;; 
@@ -17,7 +18,7 @@
   (ido-mode 1))
 
 (use-package try
-	:ensure t)
+        :ensure t)
 
 (use-package which-key
       :ensure t 
@@ -129,9 +130,9 @@
 ;;  :ensure t
 ;;  :config (load-theme 'zenburn t))
 
-
-(require 'mode-icons)
-(mode-icons-mode)
+(use-package mode-icons
+  :ensure t
+  :init (mode-icons-mode))
 
 ;; spacemacs look
 (use-package spacemacs-theme

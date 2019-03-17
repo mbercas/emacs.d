@@ -1,3 +1,4 @@
+
 ;; Default offset in all languages is 4 spaces
 ;;
 (setq c-basic-offset 4)
@@ -111,10 +112,10 @@
     (add-hook
      'slime-load-hook
      #'(lambda ()
-	 (slime-setup 
-	  '(slime-fancy
-	    slime-repl
-	    slime-fuzzy))))
+         (slime-setup 
+          '(slime-fancy
+            slime-repl
+            slime-fuzzy))))
     (setq slime-net-coding-system 'utf-8-unix)
     (add-hook 'lisp-mode-hook (lambda () (linum-mode 1)))
 
@@ -123,12 +124,12 @@
       :ensure t
       :init
       (progn
-	(add-hook 'slime-mode-hook 'set-up-slime-ac)
-	(add-hook 'slime-repl-mode-hook 'set-up-slime-ac))
+        (add-hook 'slime-mode-hook 'set-up-slime-ac)
+        (add-hook 'slime-repl-mode-hook 'set-up-slime-ac))
       :config
       (progn
-	(eval-after-load "auto-complete"
-	  '(add-to-list 'ac-modes 'slime-repl-mode))))))
+        (eval-after-load "auto-complete"
+          '(add-to-list 'ac-modes 'slime-repl-mode))))))
 
 
 

@@ -178,9 +178,9 @@
 ;;  :ensure t
 ;;  :config (load-theme 'zenburn t))
 
-
-(require 'mode-icons)
-(mode-icons-mode)
+(use-package mode-icons
+  :ensure t
+  :init (mode-icons-mode))
 
 ;; spacemacs look
 (use-package spacemacs-theme
@@ -211,6 +211,6 @@
 
 
   #+END_SRC
-
+  
   #+RESULTS:
   : t

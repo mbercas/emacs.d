@@ -11,11 +11,19 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+
+
 ;; Enable use-package
 (eval-when-compile
   (require 'use-package))
-(require 'diminish)                ;; if you use :diminish
-(require 'bind-key)                ;; if you use any :bind variant
+
+(use-package diminish
+  :ensure t
+  )
+(use-package bind-key
+  :ensure t)
+;;;;(require 'diminish)                ;; if you use :diminish
+;;;;(require 'bind-key)                ;; if you use any :bind variant
 
 ;;; init-use-package.el ends here
 

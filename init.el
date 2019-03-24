@@ -39,7 +39,7 @@
 (org-babel-load-file (expand-file-name "~/.emacs.d/myuser.org"))
 (org-babel-load-file (expand-file-name "~/.emacs.d/mygtg.org"))
 (org-babel-load-file (expand-file-name "~/.emacs.d/mylang.org"))
-(org-babel-load-file (expand-file-name "~/.emacs.d/myprojectile.org"))
+;;(org-babel-load-file (expand-file-name "~/.emacs.d/myprojectile.org"))
 
 
 ;; integrate highlight-parentheses with autopair mode:

@@ -151,6 +151,8 @@
     (set-face-attribute 'org-agenda-date-today nil :height 1.1)
     (set-face-attribute 'org-table nil :foreground "#008787"))
 
+(use-package spaceline-all-the-icons
+  :demand t)
 
 (use-package spaceline
   :demand t

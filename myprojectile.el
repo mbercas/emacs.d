@@ -1,5 +1,5 @@
 
-;;(projectile-global-mode)
+(projectile-global-mode)
 
 ;; helm autocompletion mode and integration with projectile
 ;;(use-package helm-config
@@ -11,6 +11,7 @@
 
 (use-package helm-projectile
   :ensure t
+  :after helm
   :defer t
   :config
   (progn
@@ -20,7 +21,7 @@
      (setq projectile-enable-idle-timer t)
      (setq projectile-globally-unignored-files (quote ("*.o" "*.pyc" "*~")))
      (setq projectile-tags-backend (quote find-tag))
-     (setq projectile-enable-caching t))
+     (setq projectile-enable-caching t)))
 
 (use-package treemacs
   :ensure t

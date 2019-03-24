@@ -54,7 +54,7 @@
   :config
   (progn 
     (setq
-      python-shell-interpreter "ipython"
+      python-shell-interpreter "ipython3"
       python-shell-interpreter-args "--simple-prompt -i")
     (when (fboundp 'flycheck-mode)
       (setq elpy-modules (delete 'elpy-module-flymake elpy-modules)))

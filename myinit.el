@@ -9,6 +9,14 @@
 (set-variable 'confirm-kill-emacs 'yes-or-no-p)
 (global-set-key (kbd "<f5>") 'revert-buffer)
 
+(use-package recentf
+  :ensure t
+  :config
+    (progn
+       (recentf-mode 1)
+       (setq recentf-max-menu-items 25)
+       (global-set-key "\C-x\ \C-r" 'recentf-open-files)))
+
 (use-package ido
   :ensure t
   :config

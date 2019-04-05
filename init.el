@@ -3,7 +3,8 @@
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
-;;(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
+;; (add-to-list 'package-archives
+;;              '("gnu" . "http://elpa.gnu.org/packages/") t)
 (package-initialize)
 
 ;; Bootstrap `use-package'
@@ -57,9 +58,10 @@
    (quote
     ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
  '(inhibit-startup-screen t)
+ '(markdown-command "pandoc -f markdown+smart -t html" t)
  '(org-agenda-files
    (quote
-    ("~/org/milestones.org" "~/org/projects.org" "~/org/gtd.org" "~/org/journal.org")))
+    ("~/org/mbo.org" "~/org/milestones.org" "~/org/projects.org" "~/org/gtd.org" "~/org/journal.org")))
  '(org-file-apps
    (quote
     ((auto-mode . emacs)
@@ -68,7 +70,7 @@
      ("\\.pdf\\'" . xdg-open))))
  '(package-selected-packages
    (quote
-    (pyenv pynt ess-smart-underscore ess magit-svn helm-etags-plus helm-git-grep helm-gitlab org-alert org-projectile-helm paredit-everywhere spaceline spaceline-all-the-icons treemacs-evil treemacs treemacs-projectile counsel-gtags gtags marmalade anything-exuberant-ctags helm-gtags mode-icons helm-projectile spacemacs-theme org-ac org-agenda-property org-autolist org-beautify-theme org-clock-csv org-gcal org-gnome org-journal org-pdfview org-projectile org-table-comment org-table-sticky-header org-transform-tree-table org-vcard aggressive-indent projectile-variable projectile-git-autofetch projectile python-x qml-mode pyvenv csv-mode puml-mode graphviz-dot-mode zenburn-theme writegood-mode which-key vhdl-tools use-package try slime-company pycomplete pungi paredit org-tree-slide org-bullets magit ical-pull highlight-blocks git flycheck fill-column-indicator elpy elisp-slime-nav eink-theme ein ecb doctags desktop-registry counsel company-jedi color-theme autopair anaconda-mode ace-window ac-slime ac-python)))
+    (shell-toggle cdargs recentf-ext emacs-setup org-timeline mu4e-maildirs-extension mu4e pyenv pynt ess-smart-underscore ess magit-svn helm-etags-plus helm-git-grep helm-gitlab org-alert org-projectile-helm paredit-everywhere spaceline spaceline-all-the-icons treemacs-evil treemacs treemacs-projectile counsel-gtags gtags marmalade anything-exuberant-ctags helm-gtags mode-icons helm-projectile spacemacs-theme org-ac org-agenda-property org-autolist org-beautify-theme org-clock-csv org-gcal org-gnome org-journal org-pdfview org-projectile org-table-comment org-table-sticky-header org-transform-tree-table org-vcard aggressive-indent projectile-variable projectile-git-autofetch projectile python-x qml-mode pyvenv csv-mode puml-mode graphviz-dot-mode zenburn-theme writegood-mode which-key vhdl-tools use-package try slime-company pycomplete pungi paredit org-tree-slide org-bullets magit ical-pull highlight-blocks git flycheck fill-column-indicator elpy elisp-slime-nav eink-theme ein ecb doctags desktop-registry counsel company-jedi color-theme autopair anaconda-mode ace-window ac-slime ac-python)))
  '(send-mail-function (quote sendmail-send-it))
  '(spice-output-local "Gnucap")
  '(spice-simulator "Gnucap")

@@ -1,3 +1,4 @@
+
 (setq inhibit-startup-message t)
 ;; Enable line numbers and column numbers.
 ;; 
@@ -25,7 +26,7 @@
   (ido-mode 1))
 
 (use-package try
-	:ensure t)
+        :ensure t)
 
 (use-package which-key
       :ensure t 
@@ -137,9 +138,9 @@
 ;;  :ensure t
 ;;  :config (load-theme 'zenburn t))
 
-
-(require 'mode-icons)
-(mode-icons-mode)
+(use-package mode-icons
+  :ensure t
+  :init (mode-icons-mode))
 
 ;; spacemacs look
 (use-package spacemacs-theme
@@ -158,6 +159,8 @@
     (set-face-attribute 'org-agenda-date-today nil :height 1.1)
     (set-face-attribute 'org-table nil :foreground "#008787"))
 
+(use-package spaceline-all-the-icons
+  :demand t)
 
 (use-package spaceline
   :demand t

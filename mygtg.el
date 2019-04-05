@@ -1,3 +1,4 @@
+
 (setq org-default-notes-file (concat org-directory "~/org/notes.org"))
 
 (setq org-capture-templates
@@ -154,21 +155,21 @@ Callers of this function already widen the buffer view."
 ;; Auto-update tags whenever the state is changed
 (setq org-todo-state-tags-triggers
       '(("CANCELLED" ("CANCELLED" . t))
-	("WAITING" ("WAITING" . t))
-	("INACTIVE" ("WAITING") ("INACTIVE" . t))
-	(done ("WAITING") ("INACTIVE"))
-	("TODO" ("WAITING") ("CANCELLED") ("INACTIVE"))
-	("NEXT" ("WAITING") ("CANCELLED") ("INACTIVE"))
-	("DONE" ("WAITING") ("CANCELLED") ("INACTIVE"))))
+        ("WAITING" ("WAITING" . t))
+        ("INACTIVE" ("WAITING") ("INACTIVE" . t))
+        (done ("WAITING") ("INACTIVE"))
+        ("TODO" ("WAITING") ("CANCELLED") ("INACTIVE"))
+        ("NEXT" ("WAITING") ("CANCELLED") ("INACTIVE"))
+        ("DONE" ("WAITING") ("CANCELLED") ("INACTIVE"))))
 
 (defun gs/mark-next-done-parent-tasks-todo ()
   "Visit each parent task and change NEXT (or DONE) states to TODO."
   ;; Don't change the value if new state is "DONE"
   (let ((mystate (or (and (fboundp 'org-state)
                           (member state
-				  (list "NEXT" "TODO")))
+                                  (list "NEXT" "TODO")))
                      (member (nth 2 (org-heading-components))
-			     (list "NEXT" "TODO")))))
+                             (list "NEXT" "TODO")))))
     (when mystate
       (save-excursion
         (while (org-up-heading-safe)

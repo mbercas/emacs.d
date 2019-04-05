@@ -119,6 +119,15 @@
 
   #+RESULTS:
 
+* Shell-toggle 
+  #+BEGIN_SRC emacs-lisp
+    (use-package shell-toggle
+      :ensure t
+      :bind (("M-<f1>" . shell-toggle)
+             ("C-<f1>" . shell-toggle-cd))
+             )
+  #+END_SRC
+
 * Ace windows for easy window switching
   #+BEGIN_SRC emacs-lisp
   (use-package ace-window
@@ -195,7 +204,8 @@
 (use-package magit
   :ensure t
   :commands magit-status
-  :bind ("C-x g" . magit-status))
+  :bind (("C-x g" . magit-status))
+  )
 #+END_SRC
 
 #+RESULTS:

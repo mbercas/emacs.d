@@ -1,4 +1,3 @@
-
 (setq inhibit-startup-message t)
 ;; Enable line numbers and column numbers.
 ;; 
@@ -26,7 +25,7 @@
   (ido-mode 1))
 
 (use-package try
-        :ensure t)
+	:ensure t)
 
 (use-package which-key
       :ensure t 
@@ -72,6 +71,12 @@
 (org-babel-do-load-languages
   'org-babel-load-languages
   '((python .t)))
+
+(use-package shell-toggle
+  :ensure t
+  :bind (("M-<f1>" . shell-toggle)
+         ("C-<f1>" . shell-toggle-cd))
+         )
 
 (use-package ace-window
 :ensure t
@@ -127,7 +132,8 @@
 (use-package magit
   :ensure t
   :commands magit-status
-  :bind ("C-x g" . magit-status))
+  :bind (("C-x g" . magit-status))
+  )
 
 ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
   

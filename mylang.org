@@ -59,6 +59,7 @@
 
 (use-package elpy
   :ensure t
+  :defer t
   :after python
   :init  (elpy-enable)
   :config
@@ -66,6 +67,7 @@
     (setq
       python-shell-interpreter "ipython3"
       python-shell-interpreter-args "--simple-prompt -i")
+    (setq elpy-rpc-backend "jedi")
     (when (fboundp 'flycheck-mode)
       (setq elpy-modules (delete 'elpy-module-flymake elpy-modules)))
     (add-hook 'elpy-mode-hook
@@ -92,7 +94,6 @@
 #+END_SRC
 
 #+RESULTS:
-: pyvenv
 
 * Lua configuration - lua mode
 #+BEGIN_SRC emacs-lisp
@@ -192,4 +193,4 @@
 #+END_SRC
 
 #+RESULTS:
-: sbcl
+: sbcl  

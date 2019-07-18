@@ -16,6 +16,8 @@
 ;; This speeds up indenting a lot.
 (setq c-recognize-knr-p nil)
 
+(add-to-list 'auto-mode-alist '("\\.tpp\\'" . c++-mode))
+
 ;; Change the indentation amount to 4 spaces instead of 2.
 ;; You have to do it in this complicated way because of the
 ;; strange way the cc-mode initializes the value of `c-basic-offset'.
@@ -38,6 +40,9 @@
 
 
 #+END_SRC
+
+#+RESULTS:
+| projectile-mode | (lambda nil (show-paren-mode 1)) | (lambda nil (linum-mode 1)) | (lambda nil (highlight-lines-matching-regexp .{91} hi-green-b)) | (lambda nil (setq c-basic-offset 4)) |
 
 * Python language configuration
  - elpy mode 

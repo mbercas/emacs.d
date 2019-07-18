@@ -17,6 +17,46 @@
 
 #+RESULTS:
 : revert-buffer
+* Calendar tweaks
+   - German / Thuringen holidays
+   - Disable undesired calendars
+   - Mark holidays in calendar when displayed
+#+BEGIN_SRC emacs-lisp
+  (setq holiday-general-holidays
+       '((holiday-fixed 1   1 "New Year")
+         (holiday-fixed 5   1 "1. May")
+         (holiday-easter-etc   -2 "Karfreitag")
+         (holiday-easter-etc   +1 "Ostermontag")
+         (holiday-easter-etc  +39 "Himmelfahrt")
+         (holiday-easter-etc  +50 "Pfingstmontag")
+         (holiday-fixed 10  3 "Tag der Deutschen Einheit")
+         (holiday-fixed 10 31 "Reformation day")
+         (holiday-fixed 12 25 "1. Weihnachtstag")
+         (holiday-fixed 12 26 "2. Weihnachtstag")
+         (holiday-fixed 12 31 "Silvester")))
+
+   (setq european-calendar-style 't)
+
+   (setq holiday-bahai-holidays nil)
+   (setq holiday-hebrew-holidays nil)
+   (setq holiday-islamic-holidays nil)
+   (setq holiday-coptic-holidays nil)
+   (setq holiday-french-holidays nil)
+   (setq holiday-china-holidays nil)
+   (setq holiday-islam-holidays nil)
+   (setq holiday-mayan-holidays nil)
+   (setq holiday-lunar-holidays nil)
+   (setq holiday-solar-holidays nil)
+
+   (setq calendar-view-holidays-initially-flag 't)
+
+   (setq calendar-latitude 50.9)
+   (setq calendar-longitude 11.6)
+   (setq calendar-location-name "Jena, DE")
+#+END_SRC
+
+#+RESULTS:
+: Jena, DE
 
 * Recent files
 #+BEGIN_SRC emacs-lisp

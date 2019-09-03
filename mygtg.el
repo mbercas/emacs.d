@@ -1,14 +1,13 @@
-
-(setq org-default-notes-file (concat org-directory "~/org/notes.org"))
+(setq org-default-notes-file (concat org-directory "c:\\Users\\manuel\\Google Drive\\gtd\\notes.org"))
 
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+      '(("t" "Todo" entry (file+headline "c:\\Users\\manuel\\Google Drive\\gtd\\gtd.org" "Tasks")
          "* TODO %?\n  %i\n  %a")
-        ("n" "Note" entry (file "~/org/notes.org")
+        ("n" "Note" entry (file "c:\\Users\\manuel\\Google Drive\\gtd\\notes.org")
          "* NOTE %?\n  %i\n %a")
-        ("p" "Proj" entry (file "~/org/projects.org")
+        ("p" "Proj" entry (file "c:\\Users\\manuel\\Google Drive\\gtd\\projects.org")
          "** TODO %?\n  %i\n %a")
-        ("j" "Journal" entry (file+olp+datetree "~/org/journal.org")
+        ("j" "Journal" entry (file+olp+datetree "c:\\Users\\manuel\\Google Drive\\gtd\\journal.org")
          "* %?\nEntered on %U\n  %i\n  %a")))
 
 ; Refile on top of file max
@@ -18,7 +17,7 @@
       '((org-agenda-files . (:maxlevel . 2))))
 (setq org-outline-path-complete-in-steps nil)
 
-(setq org-mobile-directory "/sandbox/Dropbox/MobileOrg")
+(setq org-mobile-directory "c:\\Users\\manuel\\Dropbox\\MobileOrg")
 
 (setq org-log-done 'time)
 
@@ -155,21 +154,21 @@ Callers of this function already widen the buffer view."
 ;; Auto-update tags whenever the state is changed
 (setq org-todo-state-tags-triggers
       '(("CANCELLED" ("CANCELLED" . t))
-        ("WAITING" ("WAITING" . t))
-        ("INACTIVE" ("WAITING") ("INACTIVE" . t))
-        (done ("WAITING") ("INACTIVE"))
-        ("TODO" ("WAITING") ("CANCELLED") ("INACTIVE"))
-        ("NEXT" ("WAITING") ("CANCELLED") ("INACTIVE"))
-        ("DONE" ("WAITING") ("CANCELLED") ("INACTIVE"))))
+	("WAITING" ("WAITING" . t))
+	("INACTIVE" ("WAITING") ("INACTIVE" . t))
+	(done ("WAITING") ("INACTIVE"))
+	("TODO" ("WAITING") ("CANCELLED") ("INACTIVE"))
+	("NEXT" ("WAITING") ("CANCELLED") ("INACTIVE"))
+	("DONE" ("WAITING") ("CANCELLED") ("INACTIVE"))))
 
 (defun gs/mark-next-done-parent-tasks-todo ()
   "Visit each parent task and change NEXT (or DONE) states to TODO."
   ;; Don't change the value if new state is "DONE"
   (let ((mystate (or (and (fboundp 'org-state)
                           (member state
-                                  (list "NEXT" "TODO")))
+				  (list "NEXT" "TODO")))
                      (member (nth 2 (org-heading-components))
-                             (list "NEXT" "TODO")))))
+			     (list "NEXT" "TODO")))))
     (when mystate
       (save-excursion
         (while (org-up-heading-safe)

@@ -6,16 +6,16 @@
    - Org files locations and mobileorg stagger area (Dropbox)
    - Refiling to all agenda files
 #+BEGIN_SRC emacs-lisp
-(setq org-default-notes-file (concat org-directory "~/org/notes.org"))
+(setq org-default-notes-file (concat org-directory "c:\\Users\\manuel\\Google Drive\\gtd\\notes.org"))
 
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+      '(("t" "Todo" entry (file+headline "c:\\Users\\manuel\\Google Drive\\gtd\\gtd.org" "Tasks")
          "* TODO %?\n  %i\n  %a")
-        ("n" "Note" entry (file "~/org/notes.org")
+        ("n" "Note" entry (file "c:\\Users\\manuel\\Google Drive\\gtd\\notes.org")
          "* NOTE %?\n  %i\n %a")
-        ("p" "Proj" entry (file "~/org/projects.org")
+        ("p" "Proj" entry (file "c:\\Users\\manuel\\Google Drive\\gtd\\projects.org")
          "** TODO %?\n  %i\n %a")
-        ("j" "Journal" entry (file+olp+datetree "~/org/journal.org")
+        ("j" "Journal" entry (file+olp+datetree "c:\\Users\\manuel\\Google Drive\\gtd\\journal.org")
          "* %?\nEntered on %U\n  %i\n  %a")))
 
 ; Refile on top of file max
@@ -25,7 +25,7 @@
       '((org-agenda-files . (:maxlevel . 2))))
 (setq org-outline-path-complete-in-steps nil)
 
-(setq org-mobile-directory "/sandbox/Dropbox/MobileOrg")
+(setq org-mobile-directory "c:\\Users\\manuel\\Dropbox\\MobileOrg")
 #+END_SRC
 
 #+RESULTS:
@@ -255,7 +255,7 @@ Callers of this function already widen the buffer view."
 
 #+RESULTS:
 : org-archive-done-tasks-agenda
-
+  
 * Simple org-presentation mode lisp/org-present:
 #+BEGIN_SRC emacs-lisp
 

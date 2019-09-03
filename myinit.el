@@ -9,6 +9,11 @@
 (set-variable 'confirm-kill-emacs 'yes-or-no-p)
 (global-set-key (kbd "<f5>") 'revert-buffer)
 
+(add-to-list 'exec-path "C:\\Apps\\bin\\")
+
+(setq ispell-program-name (locate-file "hunspell"
+      exec-path exec-suffixes 'file-executable-p))
+
 (use-package recentf
   :ensure t
   :config

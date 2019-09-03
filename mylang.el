@@ -52,9 +52,10 @@
   :init  (elpy-enable)
   :config
   (progn 
+    (add-to-list 'exec-path "C:\\Users\\manuel\\AppData\\Local\\Continuum\\anaconda3\\")
     (setq
-      python-shell-interpreter "ipython3"
-      python-shell-interpreter-args "--simple-prompt -i")
+      python-shell-interpreter "python.exe")
+    ;;  python-shell-interpreter-args "--simple-prompt -i")
     (when (fboundp 'flycheck-mode)
       (setq elpy-modules (delete 'elpy-module-flymake elpy-modules)))
     (add-hook 'elpy-mode-hook

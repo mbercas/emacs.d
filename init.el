@@ -23,8 +23,6 @@
   )
 (use-package bind-key
   :ensure t)
-;;;;(require 'diminish)                ;; if you use :diminish
-;;;;(require 'bind-key)                ;; if you use any :bind variant
 
 ;;; init-use-package.el ends here
 
@@ -34,6 +32,8 @@
 (let ((default-directory "~/.emacs.d/elpa/"))
   (normal-top-level-add-subdirs-to-load-path))
 
+
+(autoload 'notmuch "notmuch" "notmuch mail" t)
                                         ; Configuration files
 
 (org-babel-load-file (expand-file-name "~/.emacs.d/myinit.org"))
@@ -69,7 +69,7 @@
  '(markdown-command "pandoc -f markdown+smart -t html" t)
  '(org-agenda-files
    (quote
-    ("~/org/mbo.org" "~/org/milestones.org" "~/org/projects.org" "~/org/gtd.org" "~/org/journal.org")))
+    ("c:/Users/manuel/Dropbox/Apps/org/mbo.org" "c:/Users/manuel/Dropbox/Apps/org/projects.org" "c:/Users/manuel/Dropbox/Apps/org/gtd.org")))
  '(org-file-apps
    (quote
     ((auto-mode . emacs)

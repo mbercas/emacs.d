@@ -42,6 +42,7 @@
 
 * Python language configuration
  - elpy mode 
+ - for windows Python or ipython must be in the path
 #+BEGIN_SRC emacs-lisp
 ;;; ********************
 ;;; Sets the Python mode
@@ -60,14 +61,15 @@
 
 (use-package elpy
   :ensure t
+  :defer t
   :after python
   :init  (elpy-enable)
   :config
   (progn 
-    (add-to-list 'exec-path "C:\\Users\\manuel\\AppData\\Local\\Continuum\\anaconda3\\")
     (setq
-      python-shell-interpreter "python.exe")
-    ;;  python-shell-interpreter-args "--simple-prompt -i")
+      python-shell-interpreter "ipython3"
+      python-shell-interpreter-args "--simple-prompt -i")
+    (setq elpy-rpc-backend "jedi")
     (when (fboundp 'flycheck-mode)
       (setq elpy-modules (delete 'elpy-module-flymake elpy-modules)))
     (add-hook 'elpy-mode-hook
@@ -142,7 +144,3 @@
 )
 
 #+END_SRC
-
-#+RESULTS:
-
-

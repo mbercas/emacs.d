@@ -33,3 +33,7 @@ Packages: projectile, dired-plus
  ((string-equal system-type "gnu/linux") ; linux
   (progn
     (message "Linux"))))
+* Git tweaks
+For broken file systems like windows do
+  - git config core.fileMode false
+to avoid problems with file permissions

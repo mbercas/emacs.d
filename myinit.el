@@ -65,6 +65,10 @@
        :ensure t
        :config
          (progn
+           (cond
+             ((string-equal system-type "windows-nt") ;; Microsoft Windows - install hunspell
+               (add-to-list 'exec-path "C:/Apps/bin/")
+               (setq ispell-program-name "hunspell")))
            (flyspell-mode 1)
            (add-hook 'org-mode-hook (lambda () (flyspell-mode t)))
          )

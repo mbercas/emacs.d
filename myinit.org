@@ -85,7 +85,7 @@ Set path, foce ispell checker to hunspell and initilize English dictionaries
   - Org bullets makes things look pretty
   - Add Working week to the calendar and starting on Monday
   - org babel load languages
-  - load flyspell for syntax check
+  - load flyspell for syntax check - for windows add path to hunspell
   #+BEGIN_SRC emacs-lisp
     (use-package org-bullets
       :ensure t
@@ -115,6 +115,10 @@ Set path, foce ispell checker to hunspell and initilize English dictionaries
            :ensure t
            :config
              (progn
+               (cond
+                 ((string-equal system-type "windows-nt") ;; Microsoft Windows - install hunspell
+                   (add-to-list 'exec-path "C:/Apps/bin/")
+                   (setq ispell-program-name "hunspell")))
                (flyspell-mode 1)
                (add-hook 'org-mode-hook (lambda () (flyspell-mode t)))
              )

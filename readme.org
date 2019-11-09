@@ -1,6 +1,24 @@
 #+TITLE: Read Me file for my configuration
 #+STARTUP: overview
 
+This project contains the configuration for my emacs init files.
+
+I clone this repository in the .emacs.d directory.
+
+I tried to get these files to work for;
+
+   - linux
+   - win10 - native win10 emacs
+   - win10 - WSL
+
+The configuration is organized in several org files that contain
+elisp source blocks and with and a minimal init.el. The init.el 
+will load the org files and lisp files will be generated 
+automatically.
+
+Below there is a small cheat-sheet for the typical things that
+I forget to use...
+
 * Python 
 Loads with the configuration in mylang.org
 ** Docs

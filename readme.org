@@ -1,0 +1,32 @@
+#+TITLE: Read Me file for my configuration
+#+STARTUP: overview
+
+* Python 
+Loads with the configuration in mylang.org
+** Docs
+Shows function signature
+***  Get docs
+  - C-c C-d  ;; elpy-doc
+*** Code Navigation.
+Navigate code by treating them as hyperlinks.
+   - M-.  ;; elpy-goto-definition
+   - M-*  ;; pop-tag-mark
+
+
+* Files/Projects
+
+Explore system all files in system. Explore files related to particular project.
+
+Packages: projectile, dired-plus
+
+   - C-c p p  ;; switch projects
+   - C-c p f  ;; list project files
+   - C-c p g  ;; grep project
+              
+
+
+
+              
+* Source control integration
+** Magit - GIT
+   - C-x g ;; starts magit

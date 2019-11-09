@@ -11,22 +11,25 @@ Shows function signature
 Navigate code by treating them as hyperlinks.
    - M-.  ;; elpy-goto-definition
    - M-*  ;; pop-tag-mark
-
-
 * Files/Projects
-
 Explore system all files in system. Explore files related to particular project.
-
 Packages: projectile, dired-plus
 
    - C-c p p  ;; switch projects
    - C-c p f  ;; list project files
    - C-c p g  ;; grep project
-              
-
-
-
-              
 * Source control integration
 ** Magit - GIT
    - C-x g ;; starts magit
+* Initialization
+** check OS type [[http://ergoemacs.org/emacs/elisp_determine_OS_version.html][link]]
+(cond
+ ((string-equal system-type "windows-nt") ; Microsoft Windows
+  (progn
+    (message "Microsoft Windows")))
+ ((string-equal system-type "darwin") ; Mac OS X
+  (progn
+    (message "Mac OS X")))
+ ((string-equal system-type "gnu/linux") ; linux
+  (progn
+    (message "Linux"))))

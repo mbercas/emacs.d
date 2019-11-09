@@ -1,3 +1,4 @@
+
 #+STARTUP: overview
 
  
@@ -118,78 +119,30 @@
 * Mark-down mode and enable auto-correction
 #+BEGIN_SRC emacs-lisp
 (use-package markdown-mode
-  :ensure  markdown-mode
-  :defer   t
-  :mode    ("\\.\\(markdown\\|mdown\\|md\\)$" . markdown-mode)
-  :config  (add-hook 'markdown-mode-hook
-             (lambda ()
-               (visual-line-mode t)
-               (writegood-mode t)
-               (flyspell-mode t))))
+   :ensure markdown-mode
+   :defer t
+   :mode ("\\.\\(markdown\\|mdown\\|md\\)$" . markdown-mode)
+   :config
+   (progn
+     (add-hook 'markdown-mode-hook
+       (lambda ()
+           (visual-line-mode t)
+           (writegood-mode t)
+           (flyspell-mode t)))
+     
+       (cond 
+         ((string-equal system-type "windows-nt") ; windows
+           (setq markdown-command "pandoc.exe -f markdown+smart -t html"))
+         ((string-equal system-type "gnu/linux") ; linux
+           (setq markdown-command "pandoc --smart -f markdown -t html"))))
+)
+(use-package markdown-preview-mode
+    :ensure markdown-preview-mode
+    :defer t
+)
 
-(setq markdown-command "pandoc --smart -f markdown -t html")
-#+END_SRC
-
-* Lisp - enable slime
-#+BEGIN_SRC emacs-lisp
-(use-package slime
-  :ensure t
-  :after lisp
-  :config
-  (progn
-    (add-hook
-     'slime-load-hook
-     #'(lambda ()
-	 (slime-setup 
-	  '(slime-fancy
-	    slime-repl
-	    slime-fuzzy))))
-    (setq slime-net-coding-system 'utf-8-unix)
-    (add-hook 'lisp-mode-hook (lambda () (linum-mode 1)))
-
-    ;; Slime and Auto-Complete
-    (use-package ac-slime
-      :ensure t
-      :init
-      (progn
-	(add-hook 'slime-mode-hook 'set-up-slime-ac)
-	(add-hook 'slime-repl-mode-hook 'set-up-slime-ac))
-      :config
-      (progn
-	(eval-after-load "auto-complete"
-	  '(add-to-list 'ac-modes 'slime-repl-mode))))))
-
-
-
-(autoload 'enable-paredit-mode "paredit"
-  "Turn on pseudo-structural editing of Lisp code."
-  t)
-(add-hook 'emacs-lisp-mode-hook       'enable-paredit-mode)
-(add-hook 'lisp-mode-hook             'enable-paredit-mode)
-(add-hook 'lisp-interaction-mode-hook 'enable-paredit-mode)
-(add-hook 'scheme-mode-hook           'enable-paredit-mode)
-;; slime
-
-
-
-;;(load (expand-file-name "~/quicklisp/slime-helper.el"))
-
-(add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
-
-
-(setq inferior-lisp-program "sbcl")
-
-;; Stop SLIME's REPL from grabbing DEL,
-;; which is annoying when backspacing over a '('
-;;(defun override-slime-repl-bindings-with-paredit ()
-;;  (define-key slime-repl-mode-map
-;;    (read-kbd-macro paredit-backward-delete-key)
-;;    nil))
-;;(add-hook 'slime-repl-mode-hook 'override-slime-repl-bindings-with-paredit)
-
-
-;;(add-hook 'lisp-mode-hook (lambda () (linum-mode 1)))
 #+END_SRC
 
 #+RESULTS:
-: sbcl
+
+

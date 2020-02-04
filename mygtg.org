@@ -25,7 +25,7 @@
       '((org-agenda-files . (:maxlevel . 2))))
 (setq org-outline-path-complete-in-steps nil)
 
-(setq org-mobile-directory "/sandbox/Dropbox/MobileOrg")
+(setq org-mobile-directory "/mnt/c/Users/manuel/Dropbox/MobileOrg")
 #+END_SRC
 
 #+RESULTS:
@@ -255,7 +255,7 @@ Callers of this function already widen the buffer view."
 
 #+RESULTS:
 : org-archive-done-tasks-agenda
-
+  
 * Simple org-presentation mode lisp/org-present:
 #+BEGIN_SRC emacs-lisp
 
@@ -285,3 +285,4 @@ Callers of this function already widen the buffer view."
                                     (interactive)
                                     (find-file "~/org/journal.org")))
 #+END_SRC
+  

@@ -18,7 +18,7 @@
       '((org-agenda-files . (:maxlevel . 2))))
 (setq org-outline-path-complete-in-steps nil)
 
-(setq org-mobile-directory "/sandbox/Dropbox/MobileOrg")
+(setq org-mobile-directory "/mnt/c/Users/manuel/Dropbox/MobileOrg")
 
 (setq org-log-done 'time)
 
@@ -136,18 +136,18 @@ Callers of this function already widen the buffer view."
 
 (setq org-todo-keywords
       '((sequence "TODO(t)" "PROJ(p)" "STARTED(s)" "NEXT(n)" "DELEGATED(g)" "MEETING(m)" "NOTE(o)" "|" "DONE(d)")
-	(sequence "WAITING(w@/!)" "INACTIVE(i)" "|" "CANCELLED(c@/!)" )))
+        (sequence "WAITING(w@/!)" "INACTIVE(i)" "|" "CANCELLED(c@/!)" )))
 
 ;; Custom colors for the keywords
 (setq org-todo-keyword-faces
       '(("TODO" :foreground "red" :weight bold)
-	("PROJ" :foreground "blue" :weight bold)
-	("NEXT" :foreground "blue" :weight bold)
-	("DONE" :foreground "forest green" :weight bold)
-	("WAITING" :foreground "orange" :weight bold)
-	("INACTIVE" :foreground "magenta" :weight bold)
-	("CANCELLED" :foreground "forest green" :weight bold)
-	("MEETING" :foreground "forest green" :weight bold)
+        ("PROJ" :foreground "blue" :weight bold)
+        ("NEXT" :foreground "blue" :weight bold)
+        ("DONE" :foreground "forest green" :weight bold)
+        ("WAITING" :foreground "orange" :weight bold)
+        ("INACTIVE" :foreground "magenta" :weight bold)
+        ("CANCELLED" :foreground "forest green" :weight bold)
+        ("MEETING" :foreground "forest green" :weight bold)
         ("NOTE" :foreground "dark violet" :weight bold)
         ("DELEGATED" :foreground "dark orange" :weight bold)
         ("STARTED" :foreground "dark orange" :weight bold)))

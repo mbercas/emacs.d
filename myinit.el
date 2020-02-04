@@ -1,3 +1,4 @@
+
 (setq inhibit-startup-message t)
 ;; Enable line numbers and column numbers.
 ;; 
@@ -25,7 +26,7 @@
   (ido-mode 1))
 
 (use-package try
-	:ensure t)
+        :ensure t)
 
 (use-package which-key
       :ensure t 
@@ -88,34 +89,131 @@
      ((t (:inherit ace-jump-face-foreground :height 3.0))))) 
   ))
 
+(use-package flx
+  :ensure)
+
 (use-package counsel
-:ensure t
-)
+  :diminish
+  :hook (ivy-mode . counsel-mode)
+  :config
+  (global-set-key (kbd "s-P") #'counsel-M-x)
+  (global-set-key (kbd "s-f") #'counsel-grep-or-swiper)
+  (setq counsel-rg-base-command "rg --vimgrep %s"))
+
+(use-package counsel-projectile
+  :ensure
+  :config (counsel-projectile-mode +1))
 
 (use-package ivy
-:ensure t
-:diminish (ivy-mode)
-:bind (("C-x b" . ivy-switch-buffer))
-:config
-(ivy-mode 1)
-(setq ivy-use-virtual-buffers t)
-(setq ivy-display-style 'fancy))
-(define-key ivy-minibuffer-map (kbd "C-w") 'ivy-yank-word)
+  :diminish
+  :hook (after-init . ivy-mode)
+  :config
+  (setq ivy-display-style nil)
+  (define-key ivy-minibuffer-map (kbd "RET") #'ivy-alt-done)
+  (define-key ivy-minibuffer-map (kbd "<escape>") #'minibuffer-keyboard-quit)
+  (setq ivy-re-builders-alist
+        '((counsel-rg . ivy--regex-plus)
+          (counsel-projectile-rg . ivy--regex-plus)
+          (counsel-ag . ivy--regex-plus)
+          (counsel-projectile-ag . ivy--regex-plus)
+          (swiper . ivy--regex-plus)
+          (t . ivy--regex-fuzzy)))
+  (setq ivy-use-virtual-buffers t
+        ivy-count-format "(%d/%d) "
+        ivy-initial-inputs-alist nil))
 
 (use-package swiper
-:ensure try
-:bind (("C-s" . swiper)
-       ("C-r" . swiper)
-       ("C-c C-r" . ivy-resume)
-       ("M-x" . counsel-M-x)
-       ("C-x C-f" . counsel-find-file))
-:config
-(progn
-  (ivy-mode 1)
-  (setq ivy-use-virtual-buffers t)
-  (setq ivy-display-style 'fancy)
-  (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
-  ))
+  :after ivy
+  :custom-face (swiper-line-face ((t (:foreground "#ffffff" :background "#60648E"))))
+  :config
+  (setq swiper-action-recenter t)
+  (setq swiper-goto-start-of-match t))
+
+;(use-package ivy-posframe
+;  :after ivy
+;  :diminish
+;  :config
+;  (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-top-center))
+;        ivy-posframe-height-alist '((t . 20))
+;        ivy-posframe-parameters '((internal-border-width . 10)))
+;  (setq ivy-posframe-width 70)
+;  (ivy-posframe-mode +1))
+
+;(use-package ivy-rich
+;  :preface
+;  :ensure
+;  (defun ivy-rich-switch-buffer-icon (candidate)
+;    (with-current-buffer
+;        (get-buffer candidate)
+;      (all-the-icons-icon-for-mode major-mode)))
+;  :init
+;  (setq ivy-rich-display-transformers-list ; max column width sum = (ivy-poframe-width - 1)
+;        '(ivy-switch-buffer
+;          (:columns
+;           ((ivy-rich-switch-buffer-icon (:width 2))
+;            (ivy-rich-candidate (:width 35))
+;            (ivy-rich-switch-buffer-project (:width 15 :face success))
+;            (ivy-rich-switch-buffer-major-mode (:width 13 :face warning)))
+;           :predicate
+;           #'(lambda (cand) (get-buffer cand)))
+;          counsel-M-x
+;          (:columns
+;           ((counsel-M-x-transformer (:width 35))
+;            (ivy-rich-counsel-function-docstring (:width 34 :face font-lock-doc-face))))
+;          counsel-describe-function
+;          (:columns
+;           ((counsel-describe-function-transformer (:width 35))
+;            (ivy-rich-counsel-function-docstring (:width 34 :face font-lock-doc-face))))
+;          counsel-describe-variable
+;          (:columns
+;           ((counsel-describe-variable-transformer (:width 35))
+;            (ivy-rich-counsel-variable-docstring (:width 34 :face font-lock-doc-face))))
+;          package-install
+;          (:columns
+;           ((ivy-rich-candidate (:width 25))
+;            (ivy-rich-package-version (:width 12 :face font-lock-comment-face))
+;            (ivy-rich-package-archive-summary (:width 7 :face font-lock-builtin-face))
+;            (ivy-rich-package-install-summary (:width 23 :face font-lock-doc-face))))))
+;  :config
+;  (ivy-rich-mode +1)
+;  (setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line))
+
+(use-package projectile
+  :ensure
+  :diminish
+  :config
+  (projectile-mode +1)
+  (define-key projectile-mode-map (kbd "C-c p") #'projectile-command-map)
+  (define-key projectile-mode-map (kbd "s-p") #'projectile-find-file) ; counsel
+  (define-key projectile-mode-map (kbd "s-F") #'projectile-ripgrep) ; counsel
+  (setq projectile-sort-order 'recentf
+        projectile-indexing-method 'hybrid
+        projectile-completion-system 'ivy))
+
+(use-package wgrep
+  :ensure
+  :config
+  (setq wgrep-enable-key (kbd "C-c C-w")) ; change to wgrep mode
+  (setq wgrep-auto-save-buffer t))
+
+(use-package prescient
+  :ensure
+  :config
+  (setq prescient-filter-method '(literal regexp initialism fuzzy))
+  (prescient-persist-mode +1))
+
+(use-package ivy-prescient
+  :ensure
+  :after (prescient ivy)
+  :config
+  (setq ivy-prescient-sort-commands
+        '(:not swiper counsel-grep ivy-switch-buffer))
+  (setq ivy-prescient-retain-classic-highlighting t)
+  (ivy-prescient-mode +1))
+
+(use-package company-prescient
+  :after (prescient company)
+  :config (company-prescient-mode +1))
 
 (use-package avy
 :ensure t
@@ -166,9 +264,11 @@
     (set-face-attribute 'org-table nil :foreground "#008787"))
 
 (use-package spaceline-all-the-icons
+  :ensure
   :demand t)
 
 (use-package spaceline
+  :ensure
   :demand t
   :init
   (setq powerline-default-separator 'arrow-fade)

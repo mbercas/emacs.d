@@ -1,3 +1,4 @@
+
 ;; Default offset in all languages is 4 spaces
 ;;
 (setq c-basic-offset 4)
@@ -48,13 +49,17 @@
 
 (use-package elpy
   :ensure t
+  :defer t
   :after python
-  :init  (elpy-enable)
+  :init (advice-add 'python-mode :before 'elpy-enable)
+  :hook (linum-mode)
   :config
   (progn 
     (setq
       python-shell-interpreter "ipython3"
-      python-shell-interpreter-args "--simple-prompt -i")
+      python-shell-interpreter-args "--simple-prompt -i"
+      elpy-rpc-backend "jedi"
+      elpy-rpc-project-specfic 't)
     (when (fboundp 'flycheck-mode)
       (setq elpy-modules (delete 'elpy-module-flymake elpy-modules)))
     (add-hook 'elpy-mode-hook
@@ -85,78 +90,18 @@
 ;(add-hook 'lua-mode-hook 'hs-minor-mode)
 (add-hook 'lua-mode-hook (lambda () (linum-mode 1)))
 
-(require 'taskjuggler-mode)
-(add-hook 'taskjuggler-mode-hook (lambda () (linum-mode 1)))
-(add-hook 'taskjuggler-mode-hook (lambda () (setq tab-width 4)))
-(add-hook 'taskjuggler-mode-hook (lambda () (show-parent-mode 1)))
-(add-hook 'taskjuggler-mode-hook (lambda () (highlight-blocks-mode 1)))
-
 (use-package markdown-mode
   :ensure  markdown-mode
   :defer   t
   :mode    ("\\.\\(markdown\\|mdown\\|md\\)$" . markdown-mode)
-  :config  (add-hook 'markdown-mode-hook
+  :config  
+  (progn
+    (add-hook 'markdown-mode-hook
              (lambda ()
                (visual-line-mode t)
                (writegood-mode t)
-               (flyspell-mode t))))
+               (flyspell-mode t)))
 
-(setq markdown-command "pandoc --smart -f markdown -t html")
-
-(use-package slime
-  :ensure t
-  :after lisp
-  :config
-  (progn
-    (add-hook
-     'slime-load-hook
-     #'(lambda ()
-	 (slime-setup 
-	  '(slime-fancy
-	    slime-repl
-	    slime-fuzzy))))
-    (setq slime-net-coding-system 'utf-8-unix)
-    (add-hook 'lisp-mode-hook (lambda () (linum-mode 1)))
-
-    ;; Slime and Auto-Complete
-    (use-package ac-slime
-      :ensure t
-      :init
-      (progn
-	(add-hook 'slime-mode-hook 'set-up-slime-ac)
-	(add-hook 'slime-repl-mode-hook 'set-up-slime-ac))
-      :config
-      (progn
-	(eval-after-load "auto-complete"
-	  '(add-to-list 'ac-modes 'slime-repl-mode))))))
-
-
-
-(autoload 'enable-paredit-mode "paredit"
-  "Turn on pseudo-structural editing of Lisp code."
-  t)
-(add-hook 'emacs-lisp-mode-hook       'enable-paredit-mode)
-(add-hook 'lisp-mode-hook             'enable-paredit-mode)
-(add-hook 'lisp-interaction-mode-hook 'enable-paredit-mode)
-(add-hook 'scheme-mode-hook           'enable-paredit-mode)
-;; slime
-
-
-
-;;(load (expand-file-name "~/quicklisp/slime-helper.el"))
-
-(add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
-
-
-(setq inferior-lisp-program "sbcl")
-
-;; Stop SLIME's REPL from grabbing DEL,
-;; which is annoying when backspacing over a '('
-;;(defun override-slime-repl-bindings-with-paredit ()
-;;  (define-key slime-repl-mode-map
-;;    (read-kbd-macro paredit-backward-delete-key)
-;;    nil))
-;;(add-hook 'slime-repl-mode-hook 'override-slime-repl-bindings-with-paredit)
-
-
-;;(add-hook 'lisp-mode-hook (lambda () (linum-mode 1)))
+    (setq markdown-command "pandoc --smart -f markdown -t html")
+  )
+)

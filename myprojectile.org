@@ -6,13 +6,6 @@
 (projectile-global-mode)
 
 ;; helm autocompletion mode and integration with projectile
-;;(use-package helm-config
-;;  :ensure t
-;;  :defer t)
-
-;;;(require 'helm-config)
-;;;(require 'helm-projectile)
-
 (use-package helm-projectile
   :ensure t
   :after helm
@@ -28,6 +21,9 @@
      (setq projectile-enable-caching t)))
 
 #+END_SRC
+
+#+RESULTS:
+: t
 
 ** Treemacs
 #+BEGIN_SRC emacs-lisp
@@ -71,4 +67,7 @@
               ("M-n fP" . treemacs-projectile)
               ("M-n fp" . treemacs-projectile-toggle)))
 #+END_SRC
+
+#+RESULTS:
+: treemacs-projectile-toggle
 

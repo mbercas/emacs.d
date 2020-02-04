@@ -82,14 +82,12 @@
   )
 )
 
-(use-package flycheck
-  :init
-  :after elpy
-  :config
-  ;;(setq elpy-default-minor-modes (delete 'flymake-mode elpy-default-minor-modes))
-  ;;(add-to-list 'elpy-default-minor-modes 'flycheck-mode) 
-  ;;(setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-  (add-hook 'elpy-mode-hook 'flycheck-mode))
+;;; Disable takes too much CPU on this computer
+;;(use-package flycheck
+;;  :init
+;;  :after elpy
+;;  :config
+;;  (add-hook 'elpy-mode-hook 'flycheck-mode))
 
 (use-package pyvenv
   :ensure t

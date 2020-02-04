@@ -55,9 +55,19 @@
    (setq calendar-location-name "Jena, DE")
 #+END_SRC
 
-#+RESULTS:
-: Jena, DE
-
+* Parent mode
+Integrate highlight-parentheses with autopair mode:
+#+BEGIN_SRC emacs-lisp
+(add-hook 'highlight-parentheses-mode-hook
+          '(lambda ()
+             (setq autopair-handle-action-fns
+                   (append
+                    (if autopair-handle-action-fns
+                        autopair-handle-action-fns
+                      '(autopair-default-handle-action))
+                    '((lambda (action pair pos-before)
+                        (hl-paren-color-update)))))))
+#+END_SRC
 * Recent files
 #+BEGIN_SRC emacs-lisp
 (use-package recentf
@@ -133,6 +143,11 @@
           (propertize "Wk"                  ; or e.g. "KW" in Germany
                     'font-lock-face 'font-lock-keyword-face))
 
+        (org-babel-do-load-languages 'org-babel-load-languages
+            '(
+                (shell . t)
+                )
+        )
         ;; 
         (use-package flyspell
            :ensure t
@@ -180,9 +195,6 @@
        ((t (:inherit ace-jump-face-foreground :height 3.0))))) 
     ))
   #+END_SRC
-
-  #+RESULTS:
-
 * Swiper / Ivy / Counsel
   Swiper gives us a really efficient incremental search with regular expressions
   and Ivy / Counsel replace a lot of ido or helms completion functionality
@@ -297,6 +309,4 @@
 
 
   #+END_SRC
-  
-  #+RESULTS:
-  : t
+ 

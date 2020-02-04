@@ -1,0 +1,57 @@
+#+TITLE: Read Me file for my configuration
+#+STARTUP: overview
+
+This project contains the configuration for my emacs init files.
+
+I clone this repository in the .emacs.d directory.
+
+I tried to get these files to work for;
+
+   - linux
+   - win10 - native win10 emacs
+   - win10 - WSL
+
+The configuration is organized in several org files that contain
+elisp source blocks and with and a minimal init.el. The init.el 
+will load the org files and lisp files will be generated 
+automatically.
+
+Below there is a small cheat-sheet for the typical things that
+I forget to use...
+
+* Python 
+Loads with the configuration in mylang.org
+** Docs
+Shows function signature
+***  Get docs
+  - C-c C-d  ;; elpy-doc
+*** Code Navigation.
+Navigate code by treating them as hyperlinks.
+   - M-.  ;; elpy-goto-definition
+   - M-*  ;; pop-tag-mark
+* Files/Projects
+Explore system all files in system. Explore files related to particular project.
+Packages: projectile, dired-plus
+
+   - C-c p p  ;; switch projects
+   - C-c p f  ;; list project files
+   - C-c p g  ;; grep project
+* Source control integration
+** Magit - GIT
+   - C-x g ;; starts magit
+* Initialization
+** check OS type [[http://ergoemacs.org/emacs/elisp_determine_OS_version.html][link]]
+(cond
+ ((string-equal system-type "windows-nt") ; Microsoft Windows
+  (progn
+    (message "Microsoft Windows")))
+ ((string-equal system-type "darwin") ; Mac OS X
+  (progn
+    (message "Mac OS X")))
+ ((string-equal system-type "gnu/linux") ; linux
+  (progn
+    (message "Linux"))))
+* Git tweaks
+For broken file systems like windows do
+  - git config core.fileMode false
+to avoid problems with file permissions

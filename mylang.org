@@ -1,3 +1,4 @@
+
 #+STARTUP: overview
 
  
@@ -46,6 +47,7 @@
 
 * Python language configuration
  - elpy mode 
+ - for windows Python or ipython must be in the path
 #+BEGIN_SRC emacs-lisp
 ;;; ********************
 ;;; Sets the Python mode
@@ -66,13 +68,15 @@
   :ensure t
   :defer t
   :after python
-  :init  (elpy-enable)
+  :init (advice-add 'python-mode :before 'elpy-enable)
+  :hook (linum-mode)
   :config
   (progn 
     (setq
       python-shell-interpreter "ipython3"
-      python-shell-interpreter-args "--simple-prompt -i")
-    (setq elpy-rpc-backend "jedi")
+      python-shell-interpreter-args "--simple-prompt -i"
+      elpy-rpc-backend "jedi"
+      elpy-rpc-project-specfic 't)
     (when (fboundp 'flycheck-mode)
       (setq elpy-modules (delete 'elpy-module-flymake elpy-modules)))
     (add-hook 'elpy-mode-hook
@@ -109,33 +113,28 @@
 (add-hook 'lua-mode-hook (lambda () (linum-mode 1)))
 
 #+END_SRC
-
-* Taskjuggler
-#+BEGIN_SRC emacs-lisp
-(require 'taskjuggler-mode)
-(add-hook 'taskjuggler-mode-hook (lambda () (linum-mode 1)))
-(add-hook 'taskjuggler-mode-hook (lambda () (setq tab-width 4)))
-(add-hook 'taskjuggler-mode-hook (lambda () (show-parent-mode 1)))
-(add-hook 'taskjuggler-mode-hook (lambda () (highlight-blocks-mode 1)))
-#+END_SRC
-
+  
 * Mark-down mode and enable auto-correction
 #+BEGIN_SRC emacs-lisp
 (use-package markdown-mode
   :ensure  markdown-mode
   :defer   t
   :mode    ("\\.\\(markdown\\|mdown\\|md\\)$" . markdown-mode)
-  :config  (add-hook 'markdown-mode-hook
+  :config  
+  (progn
+    (add-hook 'markdown-mode-hook
              (lambda ()
                (visual-line-mode t)
                (writegood-mode t)
-               (flyspell-mode t))))
+               (flyspell-mode t)))
 
-(setq markdown-command "pandoc --smart -f markdown -t html")
+    (setq markdown-command "pandoc --smart -f markdown -t html")
+  )
+)
 #+END_SRC
 
-* Lisp - enable slime
-#+BEGIN_SRC emacs-lisp
+* Lisp - enable slime (disabled)
+;#+BEGIN_SRC emacs-lisp
 (use-package slime
   :ensure t
   :after lisp
@@ -193,7 +192,32 @@
 
 
 ;;(add-hook 'lisp-mode-hook (lambda () (linum-mode 1)))
-#+END_SRC
+;#+END_SRC
 
 #+RESULTS:
 : sbcl  
+=======
+   :ensure markdown-mode
+   :defer t
+   :mode ("\\.\\(markdown\\|mdown\\|md\\)$" . markdown-mode)
+   :config
+   (progn
+     (add-hook 'markdown-mode-hook
+       (lambda ()
+           (visual-line-mode t)
+           (writegood-mode t)
+           (flyspell-mode t)))
+     
+       (cond 
+         ((string-equal system-type "windows-nt") ; windows
+           (setq markdown-command "pandoc.exe -f markdown+smart -t html"))
+         ((string-equal system-type "gnu/linux") ; linux
+           (setq markdown-command "pandoc --smart -f markdown -t html"))))
+)
+(use-package markdown-preview-mode
+    :ensure markdown-preview-mode
+    :defer t
+)
+
+#+END_SRC
+>>>>>>> 8c0d6c285d7e6ce67aea3aac0ef584cb2b3fc72c

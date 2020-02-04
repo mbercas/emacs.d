@@ -17,6 +17,7 @@
          "** TODO %?\n  %i\n %a")
         ("j" "Journal" entry (file+olp+datetree "~/org/journal.org")
          "* %?\nEntered on %U\n  %i\n  %a")))
+
 ; Refile on top of file max
 (setq org-refile-use-outline-path 'file)
 ; use a depth level of 6 max
@@ -24,49 +25,15 @@
       '((org-agenda-files . (:maxlevel . 5))))
 (setq org-outline-path-complete-in-steps nil)
 
-(setq org-mobile-directory "/sandbox/Dropbox/MobileOrg")
 
 #+END_SRC
-
-#+RESULTS:
-: /sandbox/Dropbox/MobileOrg
 
 ** Other org settings:
    - Add time when a TODO is closed 
-   - load holidays from calendar into agenda
 #+BEGIN_SRC emacs-lisp
 (setq org-log-done 'time)
-(setq org-agenda-include-diary 't)
 #+END_SRC
 
-* Embbed screenshots into org documents
-#+BEGIN_SRC emacs-lisp
-(defun my-org-screenshot ()
-  "Take a screenshot into a time stamped unique-named file in the
-same directory as the org-buffer and insert a link to this file."
-  (interactive)
-  (org-display-inline-images)
-  (setq filename
-        (concat
-         (make-temp-name
-          (concat (file-name-nondirectory (buffer-file-name))
-                  "_imgs/"
-                  (format-time-string "%Y%m%d_%H%M%S_")) ) ".png"))
-  (unless (file-exists-p (file-name-directory filename))
-    (make-directory (file-name-directory filename)))
-  ; take screenshot
-  (if (eq system-type 'darwin)
-      (call-process "screencapture" nil nil nil "-i" filename))
-  (if (eq system-type 'gnu/linux)
-      (call-process "import" nil nil nil filename))
-  ; insert into file if correctly taken
-  (if (file-exists-p filename)
-    (insert (concat "[[file:" filename "]]"))))
-
-#+END_SRC
-
-#+RESULTS:
-: my-org-screenshot
 
 * GTD orgranization
   - Agenda columns format
@@ -74,6 +41,7 @@ same directory as the org-buffer and insert a link to this file."
   - Agenda custom commands
 #+BEGIN_SRC emacs-lisp
 (setq org-agenda-overriding-columns-format "%58ITEM(Details) %PRIORITY(P) %TAGS(Context) %7TODO(To Do) %5Effort(Time){:} %6CLOCKSUM{Total}")
+
 (setq org-tags-match-list-sublevels 'indented)
 
 ;; == bh/helper-functions ==
@@ -119,16 +87,19 @@ Callers of this function already widen the buffer view."
 (setq org-use-fast-todo-selection t)
 
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "NEXT(n)" "STARTED(s)" "DELEGATED(g)" "|" "DONE(d)")
-	(sequence "WAITING(w@/!)" "|" "CANCELLED(c@/!)" )))
+      '((sequence "TODO(t)" "PROJ(p)" "STARTED(s)" "NEXT(n)" "DELEGATED(g)" "MEETING(m)" "NOTE(o)" "|" "DONE(d)")
+	(sequence "WAITING(w@/!)" "INACTIVE(i)" "|" "CANCELLED(c@/!)" )))
 
 ;; Custom colors for the keywords
 (setq org-todo-keyword-faces
       '(("TODO" :foreground "red" :weight bold)
+	("PROJ" :foreground "blue" :weight bold)
 	("NEXT" :foreground "blue" :weight bold)
 	("DONE" :foreground "forest green" :weight bold)
 	("WAITING" :foreground "orange" :weight bold)
+	("INACTIVE" :foreground "magenta" :weight bold)
 	("CANCELLED" :foreground "forest green" :weight bold)
+	("MEETING" :foreground "forest green" :weight bold)
         ("NOTE" :foreground "dark violet" :weight bold)
         ("DELEGATED" :foreground "dark orange" :weight bold)
         ("STARTED" :foreground "dark orange" :weight bold)))

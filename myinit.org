@@ -1,6 +1,5 @@
 #+STARTUP: overview
 
- 
 * interface tweaks
 #+BEGIN_SRC emacs-lisp
 (setq inhibit-startup-message t)
@@ -17,6 +16,24 @@
 
 #+RESULTS:
 : revert-buffer
+* Back-up files
+#+BEGIN_SRC emacs_lisp
+(setq backup-by-copying t
+      backup-directory-alist '(("." . ,temporary-file-directory))
+      auto-save-file-name-transforms '(("." . ,temporary-file-directory))
+      delete-old-versions t
+      kept-new-versions 6
+      kept-old-versions 2
+      version-control t)
+#+END_SRC
+* Hunspell - spell checker 
+Set path, foce ispell checker to hunspell and initilize English dictionaries
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'exec-path "C:\\Apps\\bin\\")
+
+(setq ispell-program-name (locate-file "hunspell"
+      exec-path exec-suffixes 'file-executable-p))
+#+END_SRC
 
 * Recent files
 #+BEGIN_SRC emacs-lisp
@@ -72,7 +89,7 @@
   - Org bullets makes things look pretty
   - Add Working week to the calendar and starting on Monday
   - org babel load languages
-  - load flyspell for syntax check
+  - load flyspell for syntax check - for windows add path to hunspell
   #+BEGIN_SRC emacs-lisp
     (use-package org-bullets
       :ensure t
@@ -102,6 +119,10 @@
            :ensure t
            :config
              (progn
+               (cond
+                 ((string-equal system-type "windows-nt") ;; Microsoft Windows - install hunspell
+                   (add-to-list 'exec-path "C:/Apps/bin/")
+                   (setq ispell-program-name "hunspell")))
                (flyspell-mode 1)
                (add-hook 'org-mode-hook (lambda () (flyspell-mode t)))
              )

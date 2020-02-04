@@ -20,8 +20,6 @@
 ;(use-package diminish
 ;  :ensure t
 ;  )
-(use-package bind-key
-  :ensure t)
 
 ;;; init-use-package.el ends here
 
@@ -32,13 +30,12 @@
   (normal-top-level-add-subdirs-to-load-path))
 
 
-;;(autoload 'notmuch "notmuch" "notmuch mail" t)
                                         ; Configuration files
 (require 'org)
 
 (org-babel-load-file (expand-file-name "~/.emacs.d/myinit.org"))
 (org-babel-load-file (expand-file-name "~/.emacs.d/mylang.org"))
-;;(org-babel-load-file (expand-file-name "~/.emacs.d/myprojectile.org"))
+(org-babel-load-file (expand-file-name "~/.emacs.d/myprojectile.org"))
 (org-babel-load-file (expand-file-name "~/.emacs.d/myuser.org"))
 (org-babel-load-file (expand-file-name "~/.emacs.d/mygtg.org"))
 

@@ -1,3 +1,4 @@
+
 #+STARTUP: overview
 
  
@@ -41,6 +42,7 @@
 
 * Python language configuration
  - elpy mode 
+ - for windows Python or ipython must be in the path
 #+BEGIN_SRC emacs-lisp
 ;;; ********************
 ;;; Sets the Python mode
@@ -191,3 +193,28 @@
 
 #+RESULTS:
 : sbcl  
+=======
+   :ensure markdown-mode
+   :defer t
+   :mode ("\\.\\(markdown\\|mdown\\|md\\)$" . markdown-mode)
+   :config
+   (progn
+     (add-hook 'markdown-mode-hook
+       (lambda ()
+           (visual-line-mode t)
+           (writegood-mode t)
+           (flyspell-mode t)))
+     
+       (cond 
+         ((string-equal system-type "windows-nt") ; windows
+           (setq markdown-command "pandoc.exe -f markdown+smart -t html"))
+         ((string-equal system-type "gnu/linux") ; linux
+           (setq markdown-command "pandoc --smart -f markdown -t html"))))
+)
+(use-package markdown-preview-mode
+    :ensure markdown-preview-mode
+    :defer t
+)
+
+#+END_SRC
+>>>>>>> 8c0d6c285d7e6ce67aea3aac0ef584cb2b3fc72c

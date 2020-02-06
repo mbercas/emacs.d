@@ -29,7 +29,18 @@
 (defvar my-mu4e-account-alist
   '(("eZono"
      (user-full-name  "Manuel Berrocal")
-     (mu4e-compose-signature "eZono AG\nDevelopment Manager\neZono AG\n\nSpitzweidenweg 32           Tel:    +49 (0) 3641 876 1734\nD-07743 Jena                Fax:    +49 (0) 3641 876 1759\nGermany                     Mobile: +49 (0) 176 1876 1740\n\n-\n\n")
+     (mu4e-compose-signature 
+        (concat
+          "Manuel Berrocal"
+          "Development Manager\n"
+          "eZono AG\n\n"
+          "Spitzweidenweg 32           Tel:    +49 (0) 3641 876 1734\n"
+          "D-07743 Jena                Fax:    +49 (0) 3641 876 1759\n"
+          "Germany                     Mobile: +49 (0) 176 1876 1740\n\n---\n\n"
+          "CONFIDENTIALITY NOTICE: This message and any attachments are the property of eZono AG. This message may be of a confidential nature or may require protection for other reasons. If you do not wish to receive this message, you must first register or log in. If you are not yet registered, you can unsubscribe at any time the sender and delete the message along with the enclosures.\n\n"
+          "NOTE: This message or its attachments are the property of eZono AG. They may be confidential, or may be protected in any other way. If you are not the intended recipient of the message, or have received this message in error, you are not allowed to forward, copy, or distribute the content in any other way. If you have received this message by mistake, please notify the sender and delete the message together with the attachments.\n\n" 
+          "ezono AG / Headquarters of the company: Jena / Amtsgericht - Jena, HRB 501391 / Management Board: Sungmo Lee / Chairman of the Supervisory Board: Prof. Timothy Norris Irish" 
+        ))
      (mu4e-compose-signature-auto-include t)
      (mu4e-sent-folder "/eZono/Sent")
      (mu4e-drafts-folder "/eZono/Drafts")

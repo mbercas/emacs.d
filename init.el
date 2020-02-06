@@ -66,7 +66,7 @@
  '(markdown-command "pandoc -f markdown+smart -t html")
  '(org-agenda-files
    (quote
-    ("~/org/mbo.org" "~/org/milestones.org" "~/org/projects.org" "~/org/gtd.org" "~/org/journal.org")))
+    ("~/org/mbo.org" "~/org/projects.org" "~/org/gtd.org" "~/org/journal.org")))
  '(org-file-apps
    (quote
     ((auto-mode . emacs)

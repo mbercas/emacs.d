@@ -166,7 +166,7 @@
 (add-hook 'mu4e-compose-mode-hook 'flyspell-mode)
 
 (setq
-  mu4e-get-mail-command "offlineimap -o"  ;; or fetchmail, or ...
+  mu4e-get-mail-command "offlineimap -qo"  ;; or fetchmail, or ...
   mu4e-update-interval 300             ;; update every 5 minutes
   mu4e-index-update-in-background t)   ;; update in the background
 #+END_SRC

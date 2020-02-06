@@ -211,7 +211,7 @@ Integrate highlight-parentheses with autopair mode:
   #+BEGIN_SRC emacs-lisp
 
 (use-package flx
-  :ensure)
+  :ensure t)
 
 (use-package counsel
   :diminish
@@ -222,7 +222,7 @@ Integrate highlight-parentheses with autopair mode:
   (setq counsel-rg-base-command "rg --vimgrep %s"))
 
 (use-package counsel-projectile
-  :ensure
+  :ensure t
   :config (counsel-projectile-mode +1))
 
 (use-package ivy
@@ -300,7 +300,7 @@ Integrate highlight-parentheses with autopair mode:
 ;  (setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line))
 
 (use-package projectile
-  :ensure
+  :ensure t
   :diminish
   :config
   (projectile-mode +1)
@@ -318,13 +318,13 @@ Integrate highlight-parentheses with autopair mode:
   (setq wgrep-auto-save-buffer t))
 
 (use-package prescient
-  :ensure
+  :ensure t
   :config
   (setq prescient-filter-method '(literal regexp initialism fuzzy))
   (prescient-persist-mode +1))
 
 (use-package ivy-prescient
-  :ensure
+  :ensure t
   :after (prescient ivy)
   :config
   (setq ivy-prescient-sort-commands
@@ -437,11 +437,11 @@ Integrate highlight-parentheses with autopair mode:
     (set-face-attribute 'org-table nil :foreground "#008787"))
 
 (use-package spaceline-all-the-icons
-  :ensure
+  :ensure t
   :demand t)
 
 (use-package spaceline
-  :ensure
+  :ensure t
   :demand t
   :init
   (setq powerline-default-separator 'arrow-fade)

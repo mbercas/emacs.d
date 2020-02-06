@@ -7,8 +7,6 @@
 
 (require 'mu4e)
 
-(setq send-mail-function 'smtpmail-send-it)
-
 (setq mu4e-maildir "~/Maildir")
 
 ;; show full addresses in view message (instead of just names)
@@ -53,6 +51,8 @@
      (smtpmail-stream-type starttls)
      (smtpmail-smtp-service 587)) ;;; 25 / 587
 ))
+
+(setq send-mail-function 'smtpmail-send-it)
 
 ;; Whenever a new mail is to be composed, change all relevant
 ;; configuration variables to the respective account. This method is
@@ -166,9 +166,9 @@
 (add-hook 'mu4e-compose-mode-hook 'flyspell-mode)
 
 (setq
-  mu4e-get-mail-command "offlineimap -qo"  ;; or fetchmail, or ...
-  mu4e-update-interval 300             ;; update every 5 minutes
-  mu4e-index-update-in-background t)   ;; update in the background
+  mu4e-get-mail-command "offlineimap -qo" ;; quick sync / run only once
+  mu4e-update-interval 300                ;; update every 5 minutes
+  mu4e-index-update-in-background t)      ;; update in the background
 #+END_SRC
 
 #+RESULTS:
@@ -188,15 +188,17 @@
      "flag:unread maildir:/eZono/INBOX "
      ))
   (mu4e-alert-enable-mode-line-display)
-  (defun gjstein-refresh-mu4e-alert-mode-line ()
+  (defun my-refresh-mu4e-alert-mode-line ()
     (interactive)
     (mu4e~proc-kill)
     (mu4e-alert-enable-mode-line-display)
     )
-  (run-with-timer 0 60 'gjstein-refresh-mu4e-alert-mode-line)
+  (run-with-timer 0 60 'my-refresh-mu4e-alert-mode-line)
   )
 
 #+END_SRC
+
+#+RESULTS:
 
 * store org mode links to emails
 #+BEGIN_SRC emacs-lisp

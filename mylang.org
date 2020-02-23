@@ -52,10 +52,10 @@
 ;;; ********************
 ;;; Sets the Python mode
 ;;;
-(use-package python
-  :ensure t
-  :defer t
-  :mode ("\\.py\\'" . python-mode))
+;;(use-package python
+;;  :ensure t
+;;  :defer t
+;;  :mode ("\\.py\\'" . python-mode))
 
 ;; ensure:
 ;;; pip install jedi
@@ -67,9 +67,8 @@
 (use-package elpy
   :ensure t
   :defer t
-  :after python
+  :mode "\\.py\\'"
   :init (advice-add 'python-mode :before 'elpy-enable)
-  :hook (linum-mode)
   :config
   (progn 
     (setq

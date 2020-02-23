@@ -333,12 +333,14 @@ Integrate highlight-parentheses with autopair mode:
   (ivy-prescient-mode +1))
 
 (use-package company-prescient
+  :ensure t
   :after (prescient company)
   :config (company-prescient-mode +1))
 
   #+END_SRC
 
   #+RESULTS:
+  : t
 
 ** My config  
   (use-package counsel

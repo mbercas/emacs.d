@@ -82,6 +82,7 @@
       (lambda ()
         (set (make-local-variable 'company-backends)
           (append company-backends '(company-yasnippet)))))
+    (add-hook 'elpy-mode-hook (lambda () (linum-mode 1)))
   )
 )
 

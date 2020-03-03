@@ -48,14 +48,18 @@
 * Python language configuration
  - elpy mode 
  - for windows Python or ipython must be in the path
+ - sets automatic guess of the python offset but silences the warnings
 #+BEGIN_SRC emacs-lisp
 ;;; ********************
 ;;; Sets the Python mode
 ;;;
-;;(use-package python
-;;  :ensure t
-;;  :defer t
-;;  :mode ("\\.py\\'" . python-mode))
+(use-package python
+  :ensure t
+  :defer t
+  :mode ("\\.py\\'" . python-mode)
+  :config
+  (setq python-indent-guess-indent-offset t)
+  (setq python-indent-guess-indent-offset-verbose t))
 
 ;; ensure:
 ;;; pip install jedi

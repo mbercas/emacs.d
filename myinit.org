@@ -176,7 +176,9 @@ Integrate highlight-parentheses with autopair mode:
   #+BEGIN_SRC emacs-lisp
       (org-babel-do-load-languages
         'org-babel-load-languages
-        '((python .t)))
+        '((python .t)
+         (R . t)
+         (emacs-lisp . t)))
   #+END_SRC
 
   #+RESULTS:

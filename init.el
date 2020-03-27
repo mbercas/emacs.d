@@ -75,12 +75,12 @@
      ("\\.pdf\\'" . xdg-open))))
  '(package-selected-packages
    (quote
-    (spaceline-all-the-icons ivy-prescient prescient wgrep counsel-projectile flx which-key use-package try shell-toggle org-bullets mu4e-alert mode-icons markdown-mode magit elpy auto-complete ace-window)))
+    (ess-smart-equals ess-smart-underscore ess org-pdfview pdf-tools spaceline-all-the-icons ivy-prescient prescient wgrep counsel-projectile flx which-key use-package try shell-toggle org-bullets mu4e-alert mode-icons markdown-mode magit elpy auto-complete ace-window)))
  '(send-mail-function (quote sendmail-send-it))
  '(spice-output-local "Gnucap")
  '(spice-simulator "Gnucap")
  '(spice-waveform-viewer "Gwave")
- '(treemacs-git-integration t))
+ '(treemacs-git-integration t t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

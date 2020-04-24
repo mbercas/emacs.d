@@ -61,7 +61,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
+    ("dcf7154867ba67b250fe2c5cdc15a7d170acd9cbe6707cc36d9dd1462282224d" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
  '(inhibit-startup-screen t)
  '(markdown-command "pandoc -f markdown+smart -t html")
  '(org-agenda-files
@@ -75,12 +75,12 @@
      ("\\.pdf\\'" . xdg-open))))
  '(package-selected-packages
    (quote
-    (company-prescient spaceline-all-the-icons ivy-prescient prescient wgrep counsel-projectile flx which-key use-package try shell-toggle org-bullets mu4e-alert mode-icons markdown-mode magit elpy auto-complete ace-window)))
+    (ess-smart-equals ess-smart-underscore ess org-pdfview pdf-tools company-prescient spaceline-all-the-icons ivy-prescient prescient wgrep counsel-projectile flx which-key use-package try shell-toggle org-bullets mu4e-alert mode-icons markdown-mode magit elpy auto-complete ace-window)))
  '(send-mail-function (quote sendmail-send-it))
  '(spice-output-local "Gnucap")
  '(spice-simulator "Gnucap")
  '(spice-waveform-viewer "Gwave")
- '(treemacs-git-integration t))
+ '(treemacs-git-integration t t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

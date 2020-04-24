@@ -120,7 +120,7 @@
 * Mark-down mode and enable auto-correction
 #+BEGIN_SRC emacs-lisp
 (use-package markdown-mode
-  :ensure  markdown-mode
+  :ensure  t
   :defer   t
   :mode    ("\\.\\(markdown\\|mdown\\|md\\)$" . markdown-mode)
   :config  
@@ -224,3 +224,65 @@
 
 #+END_SRC
 >>>>>>> 8c0d6c285d7e6ce67aea3aac0ef584cb2b3fc72c
+* ESS - R
+#+BEGIN_SRC emacs-lisp
+  (defun japhir/insert-r-pipe ()
+    "Insert the pipe operator in R, %>%"
+    (interactive)
+    (just-one-space 1)
+    (insert "%>%")
+    (reindent-then-newline-and-indent))
+
+  (use-package ess
+    ;; :load-path "/usr/share/emacs/site-lisp/ess/"
+    :ensure t
+    ;; :init (require 'ess-site)  ;; seems like this is needed to load the minor modes as well keybindings don't work without it
+    ;; :hook ((ess-r-mode inferior-ess-r-mode) . electric-layout-mode)  ;; commented out since new curly-curly operator for rlang
+    :commands R
+    ;; :bind (:map ess-r-mode-map
+    ;;        (";" . ess-insert-assign)
+    ;;        ;; RStudio equivalents
+    ;;        ("M--" . ess-insert-assign)
+    ;;        ("C-S-m" . japhir/insert-r-pipe)
+    ;;        :map inferior-ess-r-mode-map
+    ;;        (";" . ess-insert-assign)
+    ;;        ("M--" . ess-insert-assign)
+    ;;        ("C-S-m" . japhir/insert-r-pipe))
+    :config
+    (defun my-org-confirm-babel-evaluate (lang body)
+      (not (or (string= lang "R")
+               (string= lang "elisp")
+               (string= lang "emacs-lisp")
+               (string= lang "latex"))))
+    (setq display-buffer-alist
+          '(("*R"
+             (display-buffer-reuse-window display-buffer-pop-up-frame)
+             (reusable-frames . 0)))
+          ess-help-own-frame 'one
+          ess-auto-width 'frame
+          org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate
+          ess-style 'RStudio
+          ess-use-auto-complete nil
+          ess-use-company t
+          ess-indent-with-fancy-comments nil
+          ess-pdf-viewer-pref 'emacsclient
+          inferior-R-args "--no-restore-history --no-save"
+          ess-ask-for-ess-directory nil
+          ess-R-font-lock-keywords
+          (quote
+           ((ess-R-fl-keyword:modifiers)
+            (ess-R-fl-keyword:fun-defs . t)
+            (ess-R-fl-keyword:keywords . t)
+            (ess-R-fl-keyword:assign-ops . t)
+            (ess-R-fl-keyword:constants . t)
+            (ess-R-fl-keyword:fun-cals . t)
+            (ess-R-fl-keyword:numbers)
+            (ess-R-fl-keyword:operators . t)
+            (ess-R-fl-keyword:delimiters)
+            (ess-R-fl-keyword:=)
+            (ess-R-fl-keyword:F&T)))))
+
+#+END_SRC
+
+#+RESULTS:
+: t

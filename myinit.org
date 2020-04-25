@@ -3,6 +3,9 @@
  
 * interface tweaks
 #+BEGIN_SRC emacs-lisp
+(setq frame-resize-pixelwise t)
+(when window-system (set-frame-size (selected-frame) 90 34))
+
 (setq inhibit-startup-message t)
 ;; Enable line numbers and column numbers.
 ;; 
@@ -473,3 +476,17 @@ Integrate highlight-parentheses with autopair mode:
   
   #+RESULTS:
   : t
+* Web browsing
+ - set EWW as default browser
+ - see http://pragmaticemacs.com/emacs/to-eww-or-not-to-eww/ on how
+   to customize to open external browser
+#+BEGIN_SRC emacs-lisp
+(use-package eww
+  :ensure t
+  :init
+  (setq browse-url-browser-function 'eww-browse-url)
+)
+
+#+END_SRC
+
+#+RESULTS:

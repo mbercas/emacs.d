@@ -195,6 +195,7 @@
 
 #+RESULTS:
 
+* email icon in bottom bar when there are unread emails
 #+BEGIN_SRC emacs-lisp
 
   (use-package mu4e-alert

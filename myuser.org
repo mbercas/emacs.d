@@ -21,12 +21,6 @@
       (setq mu4e-headers-include-related nil)
 
 
-      (setq user-full-name  "Manuel Berrocal"
-            mu4e-sent-folder "/eZono/Sent"
-            mu4e-drafts-folder "/eZono/Drafts"
-            mu4e-trash-folder "/eZono/Junk")
-
-
       (defvar my-mu4e-account-alist
         '(("eZono"
            (user-full-name  "Manuel Berrocal")
@@ -43,10 +37,11 @@
              "NOTE: This message or its attachments are the property of eZono AG. They may be confidential, or may be protected in any other way. If you are not the intended recipient of the message, or have received this message in error, you are not allowed to forward, copy, or distribute the content in any other way. If you have received this message by mistake, please notify the sender and delete the message together with the attachments.\n\n" 
              "ezono AG / Headquarters of the company: Jena / Amtsgericht - Jena, HRB 501391 / Management Board: Sungmo Lee / Chairman of the Supervisory Board: Prof. Timothy Norris Irish" 
              ))
-           (mu4e-compose-signature-auto-include t)
+           (mu4e-compose-signature-auto-include nil)
            (mu4e-sent-folder "/eZono/Sent")
            (mu4e-drafts-folder "/eZono/Drafts")
            (mu4e-trash-folder "/eZono/Trash")
+           (mu4e-archive-folder "/eZono/Archive")
            (user-mail-address "manuel@ezono.com")
            (smtpmail-default-smtp-server "mail.ezono.com")
            (smtpmail-local-domain "ezono.com")
@@ -89,7 +84,7 @@
               (cond
                ((string-match "^/eZono.*"
                               (mu4e-message-field msg :maildir))
-                "/eZono/INBOX.Archive")
+                "/eZono/Archive")
                ;; everything else goes to /archive
                (t  "/archive"))))
 
@@ -159,25 +154,78 @@
 
       (setq mu4e-view-html-plaintext-ratio-heuristic  most-positive-fixnum)
       (setq mu4e-compose-format-flowed t)
-      (add-hook 'mu4e-compose-mode-hook 'visual-clean)
+      ;;(add-hook 'mu4e-compose-mode-hook 'visual-clean)
       (add-hook 'mu4e-compose-mode-hook 'flyspell-mode)
 
+
+      ;; to avoid saving drafts 
+      (add-hook 'mu4e-compose-mode-hook #'(lambda () (autosave-mode -1))) 
+      ;; don't save messages to the Sent folder; server does that
+      (setq mu4e-sent-messages-behavior 'delete)
 
       (setq
        mu4e-get-mail-command "offlineimap -qo" ;; quick sync / run only once
        mu4e-update-interval 300                ;; update every 5 minutes
        mu4e-index-update-in-background t)      ;; update in the background
       )
-    )
+
+  )
 #+END_SRC
 
 #+RESULTS:
 : mu4e
 
+* compose with org-msg
+#+BEGIN_SRC emacs-lisp
+
+(use-package htmlize
+   :ensure t)
+
+
+;; Jump past org preamble in reply
+(defun obar/org-msg-if-reply-goto-body (&rest _args)
+  (when (org-msg-message-fetch-field "subject")
+  (search-forward org-msg-separator nil t)
+  (previous-line 2)))
+ 
+(advice-add 'org-msg-post-setup :after 'obar/org-msg-if-reply-goto-body)
+ 
+;; Double-check before sending a message
+(defun obar/org-msg-confirm-send ()
+   (interactive)
+   (when (yes-or-no-p "Do you want to send this message? ")
+   (org-ctrl-c-ctrl-c)))
+
+
+(use-package org-msg
+   :ensure t
+   :demand t
+   ;;:load-path "lisp/"
+   :bind
+   (:map org-msg-edit-mode-map
+   ("C-c C-c" . obar/org-msg-confirm-send))
+   :config
+   (setq org-msg-text-plain-alternative t))
+
+
+   (setq org-msg-options "html-postamble:nil H:5 num:nil ^:{} toc:nil")
+   (setq org-msg-startup "hidestars indent inlineimages")
+   (setq org-msg-greeting-fmt "\nHi %s,\n\n")
+   (setq org-msg-greeting-fmt-mailto t)
+
+   (setq mail-user-agent 'mu4e-user-agent)
+   (org-msg-mode)
+
+#+END_SRC
+
+#+RESULTS:
+: t
+
 * Set up a default email server
  - uses mail.ezono.com as the default mail server
-#+BEGIN_SRC emacs-lisp
+##+BEGIN_SRC emacs-lisp
 (use-package smtpmail
+  :demand t
   :init
   (setq 
      user-mail-address "manuel@ezono.com"
@@ -186,13 +234,36 @@
      smtpmail-local-domain "ezono.com"
      smtpmail-smtp-user "manuel"
      smtpmail-smtp-server "mail.ezono.com"
-     smtpmail-stream-type 'starttls
+     smtpmail-stream-type starttls
      smtpmail-smtp-service 587) 
+
+
+
 
   (setq send-mail-function 'smtpmail-send-it))
 
-#+END_SRC
+##+END_SRC
+#+BEGIN_SRC emacs-lisp
+(require 'smtpmail)
+(setq message-send-mail-function 'smtpmail-send-it
+   starttls-use-gnutls t
+   smtpmail-starttls-credentials '(("mail.ezono.com" 587 nil nil))
+   smtpmail-auth-credentials
+     '(("mail.ezono.com" 587 "manuel@ezono.com" nil))
+   smtpmail-default-smtp-server "smtp.gmail.com"
+   smtpmail-smtp-server "smtp.gmail.com"
+   smtpmail-smtp-service 587)
 
+;; alternatively, for emacs-24 you can use:
+;;(setq message-send-mail-function 'smtpmail-send-it
+;;     smtpmail-stream-type 'starttls
+;;     smtpmail-default-smtp-server "smtp.gmail.com"
+;;     smtpmail-smtp-server "smtp.gmail.com"
+;;     smtpmail-smtp-service 587)
+
+;; don't keep message buffers around
+(setq message-kill-buffer-on-exit t)
+#+END_SRC
 #+RESULTS:
 
 * email icon in bottom bar when there are unread emails
@@ -228,3 +299,5 @@
 #+END_SRC
 
 #+RESULTS:
+#+RESULTS:
+: obar/org-msg-confirm-send

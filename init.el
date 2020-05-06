@@ -1,10 +1,27 @@
 ;; update package-archive list
 (require 'package)
 (setq package-enable-at-startup nil)
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+;;(add-to-list 'package-archives
+;;             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 ;; (add-to-list 'package-archives
 ;;              '("gnu" . "http://elpa.gnu.org/packages/") t)
+
+(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
+                    (not (gnutls-available-p))))
+       (proto (if no-ssl "http" "https")))
+  (when no-ssl (warn "\
+Your version of Emacs does not support SSL connections,
+which is unsafe because it allows man-in-the-middle attacks.
+There are two things you can do about this warning:
+1. Install an Emacs version that does support SSL and be safe.
+2. Remove this warning from your init file so you won't see it again."))
+  (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
+  ;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
+  ;; and `package-pinned-packages`. Most users will not need or want to do this.
+  (add-to-list 'package-archives (cons "melpa-stable" (concat proto "://stable.melpa.org/packages/")) t)
+  )
+
+
 (package-initialize)
 
 ;; Bootstrap `use-package'
@@ -17,6 +34,14 @@
 ;; Enable use-package
 (eval-when-compile
   (require 'use-package))
+
+
+(use-package auto-package-update
+  :ensure t
+  :config
+  (setq auto-package-update-delete-old-versions t)
+  (setq auto-package-update-hide-results t)
+    (auto-package-update-maybe))
 
 ;(use-package diminish
 ;  :ensure t
@@ -61,7 +86,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("dcf7154867ba67b250fe2c5cdc15a7d170acd9cbe6707cc36d9dd1462282224d" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
+    ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
  '(inhibit-startup-screen t)
  '(markdown-command "pandoc -f markdown+smart -t html")
  '(org-agenda-files
@@ -75,7 +100,7 @@
      ("\\.pdf\\'" . xdg-open))))
  '(package-selected-packages
    (quote
-    (flycheck-rust cargo treemacs-icons-dired treemacs-magit treemacs-projectile treemacs rust-mode ess-smart-equals ess-smart-underscore ess org-pdfview pdf-tools company-prescient spaceline-all-the-icons ivy-prescient prescient wgrep counsel-projectile flx which-key use-package try shell-toggle org-bullets mu4e-alert mode-icons markdown-mode magit elpy auto-complete ace-window)))
+    (htmlize lsp-rust flycheck-rust company-lsp company-backends cargo rust-mode ess-smart-equals ess-smart-underscore ess org-pdfview pdf-tools spaceline-all-the-icons ivy-prescient prescient wgrep counsel-projectile flx which-key use-package try shell-toggle org-bullets mu4e-alert mode-icons markdown-mode magit elpy auto-complete ace-window)))
  '(send-mail-function (quote sendmail-send-it))
  '(spice-output-local "Gnucap")
  '(spice-simulator "Gnucap")

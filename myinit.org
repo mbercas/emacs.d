@@ -415,6 +415,14 @@ Integrate highlight-parentheses with autopair mode:
 
 * Magit
 #+BEGIN_SRC emacs-lisp
+
+(use-package transient
+  :ensure t)
+
+(use-package git-commit
+  :ensure t)
+
+
 (use-package magit
   :ensure t
   :commands magit-status

@@ -159,7 +159,7 @@
 
 
       ;; to avoid saving drafts 
-      (add-hook 'mu4e-compose-mode-hook #'(lambda () (autosave-mode -1))) 
+      (add-hook 'mu4e-compose-mode-hook #'(lambda () (auto-save-mode -1))) 
       ;; don't save messages to the Sent folder; server does that
       (setq mu4e-sent-messages-behavior 'delete)
 

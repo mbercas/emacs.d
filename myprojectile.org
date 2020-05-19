@@ -32,9 +32,6 @@
   :defer t
   :config
   (progn
-    ;(use-package treemacs-evil
-    ;  :ensure t
-    ;  :demand t)
     (setq treemacs-follow-after-init          t
           treemacs-width                      35
           treemacs-indentation                2
@@ -59,6 +56,7 @@
         ("M-n fT"    . treemacs)
         ("M-n f C-t" . treemacs-find-file)))
 (use-package treemacs-projectile
+  :after treemacs
   :defer t
   :ensure t
   :config
@@ -66,8 +64,13 @@
   :bind (:map global-map
               ("M-n fP" . treemacs-projectile)
               ("M-n fp" . treemacs-projectile-toggle)))
+
+(use-package treemacs-magit
+  :after treemacs magit
+  :defer t
+  :ensure t)
+
 #+END_SRC
 
 #+RESULTS:
-: treemacs-projectile-toggle
 

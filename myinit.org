@@ -130,6 +130,7 @@ Integrate highlight-parentheses with autopair mode:
   - Add Working week to the calendar and starting on Monday
   - org babel load languages
   - load flyspell for syntax check
+  - check this [[https://github.com/yiufung/dot-emacs/blob/master/init.el][link]] to improve configuration
   #+BEGIN_SRC emacs-lisp
     (use-package org-bullets
       :ensure t
@@ -406,7 +407,7 @@ Integrate highlight-parentheses with autopair mode:
     :config
     (pdf-tools-install))
 
-  (use-package org-pdfview
+  (use-package org-pdftools
     :ensure t)
 
 #+END_SRC
@@ -496,5 +497,3 @@ Integrate highlight-parentheses with autopair mode:
 )
 
 #+END_SRC
-
-#+RESULTS:

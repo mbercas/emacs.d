@@ -196,10 +196,9 @@
 
 ;;(add-hook 'lisp-mode-hook (lambda () (linum-mode 1)))
 ;#+END_SRC
-
-#+RESULTS:
-: sbcl  
-=======
+* Markdown
+#+BEGIN_SRC emacs-lisp
+(use-package markdown-mode
    :ensure markdown-mode
    :defer t
    :mode ("\\.\\(markdown\\|mdown\\|md\\)$" . markdown-mode)
@@ -223,7 +222,7 @@
 )
 
 #+END_SRC
->>>>>>> 8c0d6c285d7e6ce67aea3aac0ef584cb2b3fc72c
+
 * ESS - R
 #+BEGIN_SRC emacs-lisp
   (defun japhir/insert-r-pipe ()
@@ -236,6 +235,7 @@
   (use-package ess
     ;; :load-path "/usr/share/emacs/site-lisp/ess/"
     :ensure t
+    :pin melpa-stable
     ;; :init (require 'ess-site)  ;; seems like this is needed to load the minor modes as well keybindings don't work without it
     ;; :hook ((ess-r-mode inferior-ess-r-mode) . electric-layout-mode)  ;; commented out since new curly-curly operator for rlang
     :commands R
@@ -291,8 +291,32 @@
   pre-requisites
     - rustup default nightly
     - cargo component add rust-src
-    - cargo +nightly install racer
+    - cargo xtask install rust-analyzer
+     git clone https://github.com/rust-analyzer/rust-analyzer.git && cd rust-analyzer
+     cargo xtask install
 #+BEGIN_SRC emacs-lisp
+
+(use-package lsp-mode
+   :ensure t
+   :commands lsp
+)
+
+(use-package lsp-rust
+   :load-path "lisp/lsp-rust.el"
+)
+
+
+(use-package company
+   :ensure t)
+
+(use-package company-lsp
+   :ensure t)
+
+
+(use-package flycheck-rust
+   :ensure t)
+
+
 (use-package rust-mode
    :ensure t
    :mode ("\\.rs\\'" . rust-mode)
@@ -300,7 +324,17 @@
             ("C-c C-c" . 'rust-compile)
             ("C-c C-r" . 'rust-run-clippy))
    :config
-   (setq rust-format-on-save t)
+   (progn
+     (setq rust-format-on-save t)
+     (setq lsp-rust-server 'rust-analyzer)
+     (setq lsp-rust-analyzer-server-command '("~/.cargo/bin/rust-analyzer"))
+
+     (add-hook 'rust-mode-hook 'lsp)
+     (add-hook 'rust-mode-hook 'company-mode)
+     (add-hook 'flycheck-mode-hook 'flycheck-rust-setup)
+     (push 'company-lsp company-backends)
+     )
+
 )
 
 (use-package cargo
@@ -308,8 +342,12 @@
    :config
    (progn
      (add-hook 'rust-mode-hook 'cargo-minor-mode)
-     (add-hook 'toml-mode-hook 'cargo-minor-mode))
+     (add-hook 'toml-mode-hook 'cargo-minor-mode)
+   )
 )
 
 #+END_SRC
+
+#+RESULTS:
+: t
 

@@ -426,12 +426,8 @@ Integrate highlight-parentheses with autopair mode:
   :commands magit-status
   :bind (("C-x g" . magit-status))
   :config
-  (use-package magit-commit
-     :ensure t
-     :config 
-     (use-package git-commit
-         :ensure t)
-  )
+  (use-package git-commit
+    :ensure t)
 )
 
 

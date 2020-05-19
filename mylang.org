@@ -86,6 +86,7 @@
         (set (make-local-variable 'company-backends)
           (append company-backends '(company-yasnippet)))))
     (add-hook 'elpy-mode-hook (lambda () (linum-mode 1)))
+    (add-hook 'before-save-hook 'delete-trailing-whitespace)
   )
 )
 
@@ -104,6 +105,16 @@
 #+END_SRC
 
 #+RESULTS:
+
+** EIN-  emacs ipython notebooks 
+#+BEGIN_SRC emacs-lisp
+(use-package anaphora
+  :ensure t)
+
+(use-package ein
+  :ensure t
+  :commands (ein:notebooklist-open))
+#+END_SRC
 
 * Lua configuration - lua mode
 #+BEGIN_SRC emacs-lisp

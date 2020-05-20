@@ -160,8 +160,8 @@
 
       ;; to avoid saving drafts 
       (add-hook 'mu4e-compose-mode-hook #'(lambda () (auto-save-mode -1))) 
-      ;; don't save messages to the Sent folder; server does that
-      (setq mu4e-sent-messages-behavior 'delete)
+      ;; save messages to the Sent folder; zimbra server doesn't do that
+      (setq mu4e-sent-messages-behavior 'sent)
 
       (setq
        mu4e-get-mail-command "offlineimap -o"  ;; -q quick sync / -o run only once
@@ -213,7 +213,7 @@
    ;;(setq org-msg-greeting-fmt-mailto t)
 
    (setq org-msg-signature  (concat
-             "  Regards,\n\n"
+             "\n\n  Regards,\n\n"
              "#+begin_signature\n"
              " --\n"
              "*Manuel Berrocal - Development Manager -  eZono AG*\n\n"
@@ -232,31 +232,6 @@
    (org-msg-mode)
 
 #+END_SRC
-
-#+RESULTS:
-: t
-   (setq org-msg-signature "
-
-   Regards,
-
-   Manuel
-
-#+begin_signature
-  -- 
-  \n
-  Manuel Berrocal\r
-  Development Manager\r
-  eZono AG\r
-
-  Spitzweidenweg 32\t\tTel:    +49 (0) 3641 876 1734\
-  D-07743 Jena\t\t\tFax:    +49 (0) 3641 876 1759\r
-  Germany\t\t\tMobile: +49 (0) 176 1876 1740\r
-
-  -- \n
-CONFIDENTIALITY NOTICE: This message and any attachments are the property of eZono AG. This message may be of a confidential nature or may require protection for other reasons. If you do not wish to receive this message, you must first register or log in. If you are not yet registered, you can unsubscribe at any time the sender and delete the message along with the enclosures.\
-NOTE: This message or its attachments are the property of eZono AG. They may be confidential, or may be protected in any other way. If you are not the intended recipient of the message, or have received this message in error, you are not allowed to forward, copy, or distribute the content in any other way. If you have received this message by mistake, please notify the sender and delete the message together with the attachments.
-ezono AG / Headquarters of the company: Jena / Amtsgericht - Jena, HRB 501391 / Management Board: Sungmo Lee / Chairman of the Supervisory Board: Prof. Timothy Norris Irish
-#+end_signature")
 
 
 * Set up a default email server

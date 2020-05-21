@@ -19,6 +19,9 @@ There are two things you can do about this warning:
   ;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
   ;; and `package-pinned-packages`. Most users will not need or want to do this.
   (add-to-list 'package-archives (cons "melpa-stable" (concat proto "://stable.melpa.org/packages/")) t)
+  (setq package-archive-priorities
+  '(("melpa-stable" . 10)
+    ("melpa"        .  0)))
   )
 
 
@@ -100,7 +103,7 @@ There are two things you can do about this warning:
      ("\\.pdf\\'" . xdg-open))))
  '(package-selected-packages
    (quote
-    (htmlize lsp-rust flycheck-rust company-lsp company-backends cargo rust-mode ess-smart-equals ess-smart-underscore ess org-pdfview pdf-tools spaceline-all-the-icons ivy-prescient prescient wgrep counsel-projectile flx which-key use-package try shell-toggle org-bullets mu4e-alert mode-icons markdown-mode magit elpy auto-complete ace-window)))
+    (treemacs-magit ein htmlize lsp-rust flycheck-rust company-lsp company-backends cargo rust-mode ess-smart-equals ess-smart-underscore ess org-pdfview pdf-tools spaceline-all-the-icons ivy-prescient prescient wgrep counsel-projectile flx which-key use-package try shell-toggle org-bullets mu4e-alert mode-icons markdown-mode elpy auto-complete ace-window)))
  '(send-mail-function (quote sendmail-send-it))
  '(spice-output-local "Gnucap")
  '(spice-simulator "Gnucap")

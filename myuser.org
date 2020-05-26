@@ -288,7 +288,9 @@
     (progn 
       (setq mu4e-alert-interesting-mail-query
             (concat
-             "flag:unread maildir:/eZono/INBOX "
+             "flag:unread "
+             " AND NOT flag:trashed"
+             " AND NOT maildir:/eZono/Junk"
              ))
       (mu4e-alert-enable-mode-line-display)
       (defun my-refresh-mu4e-alert-mode-line ()

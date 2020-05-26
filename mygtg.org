@@ -34,8 +34,7 @@
 (setq org-log-done 'time)
 #+END_SRC
 
-
-* GTD orgranization
+* GTD organization
   - Agenda columns format
   - Agenda indentation
   - Agenda custom commands
@@ -180,7 +179,7 @@ Callers of this function already widen the buffer view."
    (lambda ()
      (org-archive-subtree)
      (setq org-map-continue-from (outline-previous-heading)))
-   "/DONE" 'agenda))
+     "/DONE" 'agenda))
 #+END_SRC
 
 #+RESULTS:

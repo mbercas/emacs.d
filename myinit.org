@@ -167,7 +167,7 @@ Integrate highlight-parentheses with autopair mode:
                (flyspell-mode 1)
                (add-hook 'org-mode-hook (lambda () (flyspell-mode t)))
              )
-        )
+             )
 
       )
     )
@@ -214,12 +214,21 @@ Integrate highlight-parentheses with autopair mode:
 * Swiper / Ivy / Counsel
   Swiper gives us a really efficient incremental search with regular expressions
   and Ivy / Counsel replace a lot of ido or helms completion functionality
+
+   - [[https://oremacs.com/swiper][[[reference documentation]]]]
+   - *C-M-j (ivy-immediate-done)* Exits with the current input instead of the 
+     current candidate (like other commands).  This is useful e.g. when you call 
+     find-file to create a new file, but the desired name matches an existing file. 
+     In that case, using C-j would select that existing file, which isn't 
+     what you want - use this command instead.
   #+BEGIN_SRC emacs-lisp
 
 (use-package flx
   :ensure t)
 
 (use-package counsel
+  :ensure t
+  :pin melpa
   :diminish
   :hook (ivy-mode . counsel-mode)
   :config
@@ -229,9 +238,14 @@ Integrate highlight-parentheses with autopair mode:
 
 (use-package counsel-projectile
   :ensure t
-  :config (counsel-projectile-mode +1))
+  :pin melpa
+  :config (counsel-projectile-mode +1)
+  :bind (("C-c p SPC" . counsel-projectile))
+  )
 
 (use-package ivy
+  :ensure t
+  :pin melpa
   :diminish
   :hook (after-init . ivy-mode)
   :config
@@ -250,60 +264,70 @@ Integrate highlight-parentheses with autopair mode:
         ivy-initial-inputs-alist nil))
 
 (use-package swiper
+  :ensure t
   :after ivy
   :custom-face (swiper-line-face ((t (:foreground "#ffffff" :background "#60648E"))))
   :config
   (setq swiper-action-recenter t)
   (setq swiper-goto-start-of-match t))
 
-;(use-package ivy-posframe
-;  :after ivy
-;  :diminish
-;  :config
-;  (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-top-center))
-;        ivy-posframe-height-alist '((t . 20))
-;        ivy-posframe-parameters '((internal-border-width . 10)))
-;  (setq ivy-posframe-width 70)
-;  (ivy-posframe-mode +1))
 
-;(use-package ivy-rich
-;  :preface
-;  :ensure
-;  (defun ivy-rich-switch-buffer-icon (candidate)
-;    (with-current-buffer
-;        (get-buffer candidate)
-;      (all-the-icons-icon-for-mode major-mode)))
-;  :init
-;  (setq ivy-rich-display-transformers-list ; max column width sum = (ivy-poframe-width - 1)
-;        '(ivy-switch-buffer
-;          (:columns
-;           ((ivy-rich-switch-buffer-icon (:width 2))
-;            (ivy-rich-candidate (:width 35))
-;            (ivy-rich-switch-buffer-project (:width 15 :face success))
-;            (ivy-rich-switch-buffer-major-mode (:width 13 :face warning)))
-;           :predicate
-;           #'(lambda (cand) (get-buffer cand)))
-;          counsel-M-x
-;          (:columns
-;           ((counsel-M-x-transformer (:width 35))
-;            (ivy-rich-counsel-function-docstring (:width 34 :face font-lock-doc-face))))
-;          counsel-describe-function
-;          (:columns
-;           ((counsel-describe-function-transformer (:width 35))
-;            (ivy-rich-counsel-function-docstring (:width 34 :face font-lock-doc-face))))
-;          counsel-describe-variable
-;          (:columns
-;           ((counsel-describe-variable-transformer (:width 35))
-;            (ivy-rich-counsel-variable-docstring (:width 34 :face font-lock-doc-face))))
-;          package-install
-;          (:columns
-;           ((ivy-rich-candidate (:width 25))
-;            (ivy-rich-package-version (:width 12 :face font-lock-comment-face))
-;            (ivy-rich-package-archive-summary (:width 7 :face font-lock-builtin-face))
-;            (ivy-rich-package-install-summary (:width 23 :face font-lock-doc-face))))))
-;  :config
-;  (ivy-rich-mode +1)
-;  (setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line))
+(use-package ivy-posframe
+  :ensure t
+  :pin melpa
+  :after ivy
+  :diminish
+  :config
+  (setq ivy-posframe-display-functions-alist
+      '((swiper          . ivy-posframe-display-at-point)
+        (complete-symbol . ivy-posframe-display-at-point)
+        (counsel-M-x     . ivy-posframe-display-at-window-bottom-left)
+        (t               . ivy-posframe-display))
+        ivy-posframe-height-alist '((t . 20))
+        ivy-posframe-parameters '((internal-border-width . 5)))
+  (setq ivy-posframe-width 120)
+  (ivy-posframe-mode +1))
+
+(use-package ivy-rich
+  :ensure t
+  :pin melpa
+  :preface
+  (defun ivy-rich-switch-buffer-icon (candidate)
+    (with-current-buffer
+        (get-buffer candidate)
+       (all-the-icons-icon-for-mode major-mode)))
+   :init
+  (setq ivy-rich-display-transformers-list ; max column width sum = (ivy-poframe-width - 1)
+        '(ivy-switch-buffer
+          (:columns
+           ((ivy-rich-switch-buffer-icon (:width 2))
+            (ivy-rich-candidate (:width 35))
+            (ivy-rich-switch-buffer-project (:width 15 :face success))
+            (ivy-rich-switch-buffer-major-mode (:width 13 :face warning)))
+           :predicate
+           #'(lambda (cand) (get-buffer cand)))
+          counsel-M-x
+          (:columns
+           ((counsel-M-x-transformer (:width 35))
+            (ivy-rich-counsel-function-docstring (:width 34 :face font-lock-doc-face))))
+          counsel-describe-function
+          (:columns
+           ((counsel-describe-function-transformer (:width 35))
+            (ivy-rich-counsel-function-docstring (:width 34 :face font-lock-doc-face))))
+          counsel-describe-variable
+          (:columns
+           ((counsel-describe-variable-transformer (:width 35))
+            (ivy-rich-counsel-variable-docstring (:width 34 :face font-lock-doc-face))))
+          package-install
+          (:columns
+           ((ivy-rich-candidate (:width 25))
+            (ivy-rich-package-version (:width 12 :face font-lock-comment-face))
+            (ivy-rich-package-archive-summary (:width 7 :face font-lock-builtin-face))
+            (ivy-rich-package-install-summary (:width 23 :face font-lock-doc-face))))))
+  :config
+  (ivy-rich-mode +1)
+  ;(setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line)
+  )
 
 (use-package projectile
   :ensure t
@@ -318,7 +342,7 @@ Integrate highlight-parentheses with autopair mode:
         projectile-completion-system 'ivy))
 
 (use-package wgrep
-  :ensure
+  :ensure t
   :config
   (setq wgrep-enable-key (kbd "C-c C-w")) ; change to wgrep mode
   (setq wgrep-auto-save-buffer t))

@@ -233,7 +233,6 @@
 
 #+END_SRC
 
-
 * Set up a default email server
  - uses mail.ezono.com as the default mail server
 ##+BEGIN_SRC emacs-lisp

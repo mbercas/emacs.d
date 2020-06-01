@@ -1,7 +1,65 @@
 
 #+STARTUP: overview
 
- 
+* LSP
+#+BEGIN_SRC emacs-lisp
+(use-package lsp-mode
+   :ensure t
+   :commands lsp
+   :config
+
+   (use-package lsp-treemacs
+      :ensure t
+      :after (lsp-mode treemacs))
+
+   (use-package lsp-ui
+      :ensure t
+      :config
+      (setq lsp-ui-sideline-ignore-duplicate t)
+      (add-hook 'lsp-mode-hook 'lsp-ui-mode))
+
+
+   (use-package company
+      :ensure t)
+
+   (use-package company-lsp
+      :ensure t
+      :after (company lsp-mode)
+      :config
+      (push 'company-lsp company-backends))
+)
+
+#+END_SRC
+
+#+RESULTS:
+: t
+* Flycheck
+#+begin_src emacs-lisp
+(use-package flycheck
+  :init
+  :after elpy
+  :config
+  ;(add-hook 'elpy-mode-hook 'flycheck-mode)
+)
+
+#+end_src
+* Yasnippets
+#+BEGIN_SRC emacs-lisp
+(use-package yasnippet
+   :ensure t
+   :hook (prog-mode . yas-minor-mode)
+   :hook (org-mode . yas-minor-mode)
+   :config
+   (use-package yasnippet-snippets
+       :ensure t
+       :pin melpa)
+
+   (yas-reload-all))
+#+END_SRC
+
+#+RESULTS:
+| yas-minor-mode |
+
 * C / C++ language configuration
 #+BEGIN_SRC emacs-lisp
 ;; Default offset in all languages is 4 spaces
@@ -46,9 +104,9 @@
 | projectile-mode | (lambda nil (show-paren-mode 1)) | (lambda nil (linum-mode 1)) | (lambda nil (highlight-lines-matching-regexp .{91} hi-green-b)) | (lambda nil (setq c-basic-offset 4)) |
 
 * Python language configuration
- - elpy mode 
- - for windows Python or ipython must be in the path
+ - elpy mode
  - sets automatic guess of the python offset but silences the warnings
+ - for windows Python or ipython must be in the path
 #+BEGIN_SRC emacs-lisp
 ;;; ********************
 ;;; Sets the Python mode
@@ -61,19 +119,30 @@
   (setq python-indent-guess-indent-offset t)
   (setq python-indent-guess-indent-offset-verbose t))
 
+
+(use-package lsp-python-ms
+  :ensure t
+  :init
+     (setq lsp-pyhton-ms-auto-install-server t)
+  :hook (python-mode . (lambda ()
+                         (require 'lsp-python-ms)
+                         (lsp))))  ; or lsp-deferred
+
 ;; ensure:
 ;;; pip install jedi
 ;;  pip install flake8
 ;;  pip install importmagic
 ;;  pip install autopep8
 ;;  pip install yapf
+;;  pip install python-language-sever[all]
 
 (use-package elpy
   :ensure t
   :defer t
   :init (advice-add 'python-mode :before 'elpy-enable)
+  :hook (elpy-mode . flycheck-mode)
   :config
-  (progn 
+  (progn
     (setq
       python-shell-interpreter "ipython3"
       python-shell-interpreter-args "--simple-prompt -i"
@@ -84,18 +153,14 @@
     (add-hook 'elpy-mode-hook
       (lambda ()
         (set (make-local-variable 'company-backends)
-          (append company-backends '(company-yasnippet)))))
+         (append company-backends '(company-yasnippet)))))
+
     (add-hook 'elpy-mode-hook (lambda () (linum-mode 1)))
     (add-hook 'before-save-hook 'delete-trailing-whitespace)
-  )
+    )
 )
 
 ;;; Disable takes too much CPU on this computer
-;;(use-package flycheck
-;;  :init
-;;  :after elpy
-;;  :config
-;;  (add-hook 'elpy-mode-hook 'flycheck-mode))
 
 (use-package pyvenv
   :ensure t
@@ -106,7 +171,7 @@
 
 #+RESULTS:
 
-** EIN-  emacs ipython notebooks 
+** EIN-  emacs ipython notebooks
 #+BEGIN_SRC emacs-lisp
 (use-package anaphora
   :ensure t)
@@ -127,14 +192,14 @@
 (add-hook 'lua-mode-hook (lambda () (linum-mode 1)))
 
 #+END_SRC
-  
+
 * Mark-down mode and enable auto-correction
 #+BEGIN_SRC emacs-lisp
 (use-package markdown-mode
   :ensure  t
   :defer   t
   :mode    ("\\.\\(markdown\\|mdown\\|md\\)$" . markdown-mode)
-  :config  
+  :config
   (progn
     (add-hook 'markdown-mode-hook
              (lambda ()
@@ -157,7 +222,7 @@
     (add-hook
      'slime-load-hook
      #'(lambda ()
-	 (slime-setup 
+	 (slime-setup
 	  '(slime-fancy
 	    slime-repl
 	    slime-fuzzy))))
@@ -220,8 +285,8 @@
            (visual-line-mode t)
            (writegood-mode t)
            (flyspell-mode t)))
-     
-       (cond 
+
+       (cond
          ((string-equal system-type "windows-nt") ; windows
            (setq markdown-command "pandoc.exe -f markdown+smart -t html"))
          ((string-equal system-type "gnu/linux") ; linux
@@ -304,28 +369,8 @@
     - cargo component add rust-src
     - cargo xtask install rust-analyzer
      git clone https://github.com/rust-analyzer/rust-analyzer.git && cd rust-analyzer
-     cargo xtask install
+     cargo xtask install --server
 #+BEGIN_SRC emacs-lisp
-
-(use-package lsp-mode
-   :ensure t
-   :commands lsp
-)
-
-(use-package lsp-rust
-   :load-path "lisp/lsp-rust.el"
-)
-
-
-(use-package company
-   :ensure t)
-
-(use-package company-lsp
-   :ensure t)
-
-
-(use-package flycheck-rust
-   :ensure t)
 
 
 (use-package rust-mode
@@ -334,15 +379,30 @@
    :bind (:map rust-mode-map
             ("C-c C-c" . 'rust-compile)
             ("C-c C-r" . 'rust-run-clippy))
+   :hook ((rust-mode . lsp)
+          (rust-mode . company-mode))
+
    :config
    (progn
+
+
+   (use-package lsp-rust
+      ;;:ensure t
+      :load-path "lisp/lsp-rust.el")
+
+   (use-package flycheck-rust
+      :ensure t
+      :after rust-mode)
+
+
      (setq rust-format-on-save t)
      (setq lsp-rust-server 'rust-analyzer)
      (setq lsp-rust-analyzer-server-command '("~/.cargo/bin/rust-analyzer"))
 
-     (add-hook 'rust-mode-hook 'lsp)
-     (add-hook 'rust-mode-hook 'company-mode)
+     ;;(add-hook 'rust-mode-hook 'lsp)
+     ;;(add-hook 'rust-mode-hook 'company-mode)
      (add-hook 'flycheck-mode-hook 'flycheck-rust-setup)
+     (add-hook 'rust-mode-hook (lambda () (linum-mode 1)))
      (push 'company-lsp company-backends)
      )
 
@@ -361,4 +421,3 @@
 
 #+RESULTS:
 : t
-

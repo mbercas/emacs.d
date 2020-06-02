@@ -1,6 +1,6 @@
 #+STARTUP: overview
 
- 
+
 * interface tweaks
 #+BEGIN_SRC emacs-lisp
 (setq frame-resize-pixelwise t)
@@ -8,7 +8,7 @@
 
 (setq inhibit-startup-message t)
 ;; Enable line numbers and column numbers.
-;; 
+;;
 (line-number-mode 1)
 (column-number-mode 1)
 (setq fill-column 90) ;; M-q should fill at 90 chars, not 75
@@ -30,7 +30,7 @@
       kept-old-versions 2
       version-control t)
 #+END_SRC
-* Hunspell - spell checker 
+* Hunspell - spell checker
 Set path, foce ispell checker to hunspell and initilize English dictionaries
 #+BEGIN_SRC emacs-lisp
   (setq holiday-general-holidays
@@ -88,7 +88,7 @@ Integrate highlight-parentheses with autopair mode:
        (recentf-mode 1)
        (setq recentf-max-menu-items 25)
        (global-set-key "\C-x\ \C-r" 'recentf-open-files)))
-  
+
 #+END_SRC
 
 #+RESULTS:
@@ -121,7 +121,7 @@ Integrate highlight-parentheses with autopair mode:
   Brings up some help
   #+BEGIN_SRC emacs-lisp
   (use-package which-key
-	:ensure t 
+	:ensure t
 	:config
 	(which-key-mode))
   #+END_SRC
@@ -155,7 +155,7 @@ Integrate highlight-parentheses with autopair mode:
           (propertize "Wk"                  ; or e.g. "KW" in Germany
                     'font-lock-face 'font-lock-keyword-face))
 
-        ;; 
+        ;;
         (use-package flyspell
            :ensure t
            :config
@@ -187,7 +187,7 @@ Integrate highlight-parentheses with autopair mode:
 
   #+RESULTS:
 
-* Shell-toggle 
+* Shell-toggle
   #+BEGIN_SRC emacs-lisp
     (use-package shell-toggle
       :ensure t
@@ -205,7 +205,7 @@ Integrate highlight-parentheses with autopair mode:
     (global-set-key [remap other-window] 'ace-window)
     (custom-set-faces
      '(aw-leading-char-face
-       ((t (:inherit ace-jump-face-foreground :height 3.0))))) 
+       ((t (:inherit ace-jump-face-foreground :height 3.0)))))
     ))
   #+END_SRC
 
@@ -216,10 +216,10 @@ Integrate highlight-parentheses with autopair mode:
   and Ivy / Counsel replace a lot of ido or helms completion functionality
 
    - [[https://oremacs.com/swiper][[[reference documentation]]]]
-   - *C-M-j (ivy-immediate-done)* Exits with the current input instead of the 
-     current candidate (like other commands).  This is useful e.g. when you call 
-     find-file to create a new file, but the desired name matches an existing file. 
-     In that case, using C-j would select that existing file, which isn't 
+   - *C-M-j (ivy-immediate-done)* Exits with the current input instead of the
+     current candidate (like other commands).  This is useful e.g. when you call
+     find-file to create a new file, but the desired name matches an existing file.
+     In that case, using C-j would select that existing file, which isn't
      what you want - use this command instead.
   #+BEGIN_SRC emacs-lisp
 
@@ -372,7 +372,7 @@ Integrate highlight-parentheses with autopair mode:
   #+RESULTS:
   : t
 
-** My config  
+** My config
   (use-package counsel
   :ensure t
   )
@@ -464,7 +464,7 @@ Integrate highlight-parentheses with autopair mode:
   #+BEGIN_SRC emacs-lisp
 
   ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-  
+
 ;;  (use-package color-theme
 ;;  :ensure t)
 
@@ -509,7 +509,7 @@ Integrate highlight-parentheses with autopair mode:
 
 
   #+END_SRC
-  
+
   #+RESULTS:
   : t
 * Web browsing
@@ -524,3 +524,11 @@ Integrate highlight-parentheses with autopair mode:
 )
 
 #+END_SRC
+* Pandoc mode
+#+BEGIN_SRC emacs-lisp
+(use-package pandoc-mode
+   :ensure t
+)
+#+END_SRC
+
+#+RESULTS:

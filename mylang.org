@@ -59,7 +59,8 @@
   :mode ("\\.py\\'" . python-mode)
   :config
   (setq python-indent-guess-indent-offset t)
-  (setq python-indent-guess-indent-offset-verbose t))
+  (setq python-indent-guess-indent-offset-verbose t)
+)
 
 ;; ensure:
 ;;; pip install jedi
@@ -85,8 +86,8 @@
       (lambda ()
         (set (make-local-variable 'company-backends)
           (append company-backends '(company-yasnippet)))))
-    (add-hook 'elpy-mode-hook (lambda () (linum-mode 1)))
     (add-hook 'before-save-hook 'delete-trailing-whitespace)
+    (add-hook 'elpy-mode-hook (lambda () (linum-mode 1)))
   )
 )
 
@@ -342,6 +343,7 @@
 
      (add-hook 'rust-mode-hook 'lsp)
      (add-hook 'rust-mode-hook 'company-mode)
+     (add-hook 'rust-mode-hook (lambda () (linum-mode 1)))
      (add-hook 'flycheck-mode-hook 'flycheck-rust-setup)
      (push 'company-lsp company-backends)
      )

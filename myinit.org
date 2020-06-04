@@ -1,6 +1,5 @@
 #+STARTUP: overview
 
-
 * interface tweaks
 #+BEGIN_SRC emacs-lisp
 (setq frame-resize-pixelwise t)
@@ -32,6 +31,27 @@
 #+END_SRC
 * Hunspell - spell checker
 Set path, foce ispell checker to hunspell and initilize English dictionaries
+#+begin_src emacs-lisp :tangle yes
+;; 
+(use-package flyspell
+   :ensure t
+   :config
+      (progn
+         (cond
+            ((string-equal system-type "windows-nt") ;; Microsoft Windows - install hunspell
+                    (add-to-list 'exec-path "C:/Apps/bin/")
+                    (setq ispell-program-name "hunspell")))
+                (flyspell-mode 1)
+                (add-hook 'org-mode-hook (lambda () (flyspell-mode t)))
+      ) 
+ ) 
+
+#+end_src
+
+#+RESULTS:
+: t
+
+* Set calendar
 #+BEGIN_SRC emacs-lisp
   (setq holiday-general-holidays
        '((holiday-fixed 1   1 "New Year")
@@ -154,21 +174,6 @@ Integrate highlight-parentheses with autopair mode:
         (setq calendar-intermonth-header
           (propertize "Wk"                  ; or e.g. "KW" in Germany
                     'font-lock-face 'font-lock-keyword-face))
-
-        ;;
-        (use-package flyspell
-           :ensure t
-           :config
-             (progn
-               (cond
-                 ((string-equal system-type "windows-nt") ;; Microsoft Windows - install hunspell
-                   (add-to-list 'exec-path "C:/Apps/bin/")
-                   (setq ispell-program-name "hunspell")))
-               (flyspell-mode 1)
-               (add-hook 'org-mode-hook (lambda () (flyspell-mode t)))
-             )
-             )
-
       )
     )
   #+END_SRC
@@ -181,13 +186,43 @@ Integrate highlight-parentheses with autopair mode:
       (org-babel-do-load-languages
         'org-babel-load-languages
         '((python .t)
-         (R . t)
-         (emacs-lisp . t)))
+          (rust . t)
+          (R . t)
+          (emacs-lisp . t)))
   #+END_SRC
 
   #+RESULTS:
 
-* Shell-toggle
+* Org Roam
+#+begin_src emacs-lisp
+(use-package org-roam
+   :ensure t
+   :hook (after-init . org-roam-mode)
+   :custom (org-roam-directory "~/org-roam")
+     :bind (:map org-roam-mode-map
+              (("C-c n l" . org-roam)
+               ("C-c n f" . org-roam-find-file)
+               ("C-c n j" . org-roam-jump-to-index)
+               ("C-c n b" . org-roam-switch-to-buffer)
+               ("C-c n g" . org-roam-graph))
+            :map org-mode-map
+              (("C-c n i" . org-roam-insert))))
+
+(use-package deft
+  :after org
+  :bind
+  ("C-c n d" . deft)
+  :custom
+  (deft-recursive t)
+  (deft-use-filter-string-for-filename t)
+  (deft-default-extension "org")
+  (deft-directory "~/org-roam"))
+#+end_src
+
+#+RESULTS:
+: t
+
+* Shell-toggle 
   #+BEGIN_SRC emacs-lisp
     (use-package shell-toggle
       :ensure t

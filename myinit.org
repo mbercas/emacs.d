@@ -186,7 +186,6 @@ Integrate highlight-parentheses with autopair mode:
       (org-babel-do-load-languages
         'org-babel-load-languages
         '((python .t)
-          (rust . t)
           (R . t)
           (emacs-lisp . t)))
   #+END_SRC

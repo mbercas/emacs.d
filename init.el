@@ -90,6 +90,10 @@ There are two things you can do about this warning:
  '(custom-safe-themes
    (quote
     ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
+ '(deft-default-extension "org" t)
+ '(deft-directory "~/org-roam" t)
+ '(deft-recursive t t)
+ '(deft-use-filter-string-for-filename t t)
  '(inhibit-startup-screen t)
  '(markdown-command "pandoc -f markdown+smart -t html")
  '(org-agenda-files
@@ -101,9 +105,10 @@ There are two things you can do about this warning:
      ("\\.mm\\'" . default)
      ("\\.x?html?\\'" . "browse-url %s")
      ("\\.pdf\\'" . xdg-open))))
+ '(org-roam-directory "~/org-roam")
  '(package-selected-packages
    (quote
-    (treemacs-magit ein htmlize lsp-rust flycheck-rust company-lsp company-backends cargo rust-mode ess-smart-equals ess-smart-underscore ess org-pdfview pdf-tools spaceline-all-the-icons ivy-prescient prescient wgrep counsel-projectile flx which-key use-package try shell-toggle org-bullets mu4e-alert mode-icons markdown-mode elpy auto-complete ace-window)))
+    (pandoc-mode ivy-rich ivy-posframe git-commit treemacs-magit ein htmlize lsp-rust flycheck-rust company-lsp company-backends cargo rust-mode ess-smart-equals ess-smart-underscore ess org-pdfview pdf-tools spaceline-all-the-icons ivy-prescient prescient wgrep counsel-projectile flx which-key use-package try shell-toggle org-bullets mu4e-alert mode-icons markdown-mode elpy auto-complete ace-window)))
  '(send-mail-function (quote sendmail-send-it))
  '(spice-output-local "Gnucap")
  '(spice-simulator "Gnucap")

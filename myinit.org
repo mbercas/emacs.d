@@ -178,9 +178,6 @@ Integrate highlight-parentheses with autopair mode:
     )
   #+END_SRC
 
-  #+RESULTS:
-  : t
-
 ** Highlight syntax in SRC blocks
   #+BEGIN_SRC emacs-lisp
       (org-babel-do-load-languages
@@ -218,8 +215,6 @@ Integrate highlight-parentheses with autopair mode:
   (deft-directory "~/org-roam"))
 #+end_src
 
-#+RESULTS:
-: t
 
 * Shell-toggle 
   #+BEGIN_SRC emacs-lisp

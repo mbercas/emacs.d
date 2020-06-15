@@ -191,6 +191,10 @@ Integrate highlight-parentheses with autopair mode:
 
 * Org Roam
 #+begin_src emacs-lisp
+
+(use-package emacsql-sqlite3
+   :ensure t)
+
 (use-package org-roam
    :ensure t
    :hook (after-init . org-roam-mode)
@@ -214,6 +218,9 @@ Integrate highlight-parentheses with autopair mode:
   (deft-default-extension "org")
   (deft-directory "~/org-roam"))
 #+end_src
+
+#+RESULTS:
+: deft
 
 
 * Shell-toggle 

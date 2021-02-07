@@ -3,13 +3,16 @@
 
 * Basic configuration for org - destination files
 ** Org files:
+   :PROPERTIES:
+   :ID:       c09c9917-2b6b-4842-954b-78865810c179
+   :END:
    - Org files locations and mobileorg stagger area (Dropbox)
    - Refiling to all agenda files
 #+BEGIN_SRC emacs-lisp
 (setq org-default-notes-file (concat org-directory "~/org/notes.org"))
 
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Capture")
          "* TODO %?\n  %i\n  %a")
         ("n" "Note" entry (file "~/org/notes.org")
          "* NOTE %?\n  %i\n %a")
@@ -17,7 +20,6 @@
          "** TODO %?\n  %i\n %a")
         ("j" "Journal" entry (file+olp+datetree "~/org/journal.org")
          "* %?\nEntered on %U\n  %i\n  %a")))
-
 ; Refile on top of file max
 (setq org-refile-use-outline-path 'file)
 ; use a depth level of 6 max
@@ -28,164 +30,183 @@
 
 #+END_SRC
 
+#+RESULTS:
+
 ** Other org settings:
+   :PROPERTIES:
+   :ID:       96a4eb70-2f65-4a80-925b-3a22803dec76
+   :END:
    - Add time when a TODO is closed 
 #+BEGIN_SRC emacs-lisp
 (setq org-log-done 'time)
 #+END_SRC
 
 * GTD organization
+  :PROPERTIES:
+  :ID:       a22f10bc-c08d-4f29-8ad3-ff6ec2c24760
+  :END:
   - Agenda columns format
   - Agenda indentation
   - Agenda custom commands
 #+BEGIN_SRC emacs-lisp
-(setq org-agenda-overriding-columns-format "%58ITEM(Details) %PRIORITY(P) %TAGS(Context) %7TODO(To Do) %5Effort(Time){:} %6CLOCKSUM{Total}")
+    (setq org-agenda-overriding-columns-format "%58ITEM(Details) %PRIORITY(P) %TAGS(Context) %7TODO(To Do) %5Effort(Time){:} %6CLOCKSUM{Total}")
 
-(setq org-tags-match-list-sublevels 'indented)
+    (setq org-tags-match-list-sublevels 'indented)
 
-;; == bh/helper-functions ==
-(defun bh/is-project-p ()
-  "Any task with a todo keyword subtask."
-  (save-restriction
-    (widen)
-    (let ((has-subtask)
-          (subtree-end (save-excursion (org-end-of-subtree t)))
-          (is-a-task (member (nth 2 (org-heading-components)) org-todo-keywords-1)))
+(setq org-agenda-prefix-format '(
+  (agenda  . " %i %-12:c%?-12t %s") ;; file name + org-agenda-entry-type
+  ;;(agenda  . " ->  ")
+  (timeline  . "  % s")
+  (todo  . " %i%l %-12:c")
+  (tags  . " %i %-12:c")
+  (search . " %i %-12:c")))
+
+    ;; == bh/helper-functions ==
+    (defun bh/is-project-p ()
+      "Any task with a todo keyword subtask."
+      (save-restriction
+        (widen)
+        (let ((has-subtask)
+              (subtree-end (save-excursion (org-end-of-subtree t)))
+              (is-a-task (member (nth 2 (org-heading-components)) org-todo-keywords-1)))
+          (save-excursion
+            (forward-line 1)
+            (while (and (not has-subtask)
+                        (< (point) subtree-end)
+                        (re-search-forward "^\*+ " subtree-end t))
+              (when (member (org-get-todo-state) org-todo-keywords-1)
+                (setq has-subtask t))))
+          (and is-a-task has-subtask))))
+    (defun bh/find-project-task ()
+      "Move point to the parent (project) task if any."
+      (save-restriction
+        (widen)
+        (let ((parent-task (save-excursion (org-back-to-heading 'invisible-ok) (point))))
+          (while (org-up-heading-safe)
+            (when (member (nth 2 (org-heading-components)) org-todo-keywords-1)
+              (setq parent-task (point))))
+          (goto-char parent-task)
+          parent-task)))
+    (defun bh/is-project-subtree-p ()
+      "Any task with a todo keyword that is in a project subtree.
+    Callers of this function already widen the buffer view."
+      (let ((task (save-excursion (org-back-to-heading 'invisible-ok)
+                                  (point))))
+        (save-excursion
+          (bh/find-project-task)
+          (if (equal (point) task)
+              nil
+            t))))
+
+
+
+    ;; == Custom State Keywords ==
+    (setq org-use-fast-todo-selection t)
+
+    (setq org-todo-keywords
+          '((sequence "TODO(t)" "PROJ(p)" "STARTED(s)" "NEXT(n)" "DELEGATED(g)" "MEETING(m)" "NOTE(o)" "|" "DONE(d)")
+            (sequence "WAITING(w@/!)" "INACTIVE(i)" "|" "CANCELLED(c@/!)" )))
+
+    ;; Custom colors for the keywords
+    (setq org-todo-keyword-faces
+          '(("TODO" :foreground "red" :weight bold)
+            ("PROJ" :foreground "light blue" :weight bold)
+            ("NEXT" :foreground "light blue" :weight bold)
+            ("DONE" :foreground "forest green" :weight bold)
+            ("WAITING" :foreground "orange" :weight bold)
+            ("INACTIVE" :foreground "magenta" :weight bold)
+            ("CANCELLED" :foreground "forest green" :weight bold)
+            ("MEETING" :foreground "forest green" :weight bold)
+            ("NOTE" :foreground "dark violet" :weight bold)
+            ("DELEGATED" :foreground "dark orange" :weight bold)
+            ("STARTED" :foreground "dark orange" :weight bold)))
+
+    ;; Auto-update tags whenever the state is changed
+    (setq org-todo-state-tags-triggers
+          '(("CANCELLED" ("CANCELLED" . t))
+            ("WAITING" ("WAITING" . t))
+            ("INACTIVE" ("WAITING") ("INACTIVE" . t))
+            (done ("WAITING") ("INACTIVE"))
+            ("TODO" ("WAITING") ("CANCELLED") ("INACTIVE"))
+            ("NEXT" ("WAITING") ("CANCELLED") ("INACTIVE"))
+            ("DONE" ("WAITING") ("CANCELLED") ("INACTIVE"))))
+
+    (defun gs/mark-next-done-parent-tasks-todo ()
+      "Visit each parent task and change NEXT (or DONE) states to TODO."
+      ;; Don't change the value if new state is "DONE"
+      (let ((mystate (or (and (fboundp 'org-state)
+                              (member state
+                                      (list "NEXT" "TODO")))
+                         (member (nth 2 (org-heading-components))
+                                 (list "NEXT" "TODO")))))
+        (when mystate
+          (save-excursion
+            (while (org-up-heading-safe)
+              (when (member (nth 2 (org-heading-components)) (list "NEXT" "DONE"))
+                (org-todo "TODO")))))))
+    (add-hook 'org-after-todo-state-change-hook 'gs/mark-next-done-parent-tasks-todo 'append)
+
+
+    (defvar org-my-archive-expiry-days 4.0
+      "The number of days after which a completed task should be auto-archived.
+       This can be 0 for immediate, or a floating point value.")
+
+    (defun org-my-archive-done-tasks ()
+      (interactive)
       (save-excursion
-        (forward-line 1)
-        (while (and (not has-subtask)
-                    (< (point) subtree-end)
-                    (re-search-forward "^\*+ " subtree-end t))
-          (when (member (org-get-todo-state) org-todo-keywords-1)
-            (setq has-subtask t))))
-      (and is-a-task has-subtask))))
-(defun bh/find-project-task ()
-  "Move point to the parent (project) task if any."
-  (save-restriction
-    (widen)
-    (let ((parent-task (save-excursion (org-back-to-heading 'invisible-ok) (point))))
-      (while (org-up-heading-safe)
-        (when (member (nth 2 (org-heading-components)) org-todo-keywords-1)
-          (setq parent-task (point))))
-      (goto-char parent-task)
-      parent-task)))
-(defun bh/is-project-subtree-p ()
-  "Any task with a todo keyword that is in a project subtree.
-Callers of this function already widen the buffer view."
-  (let ((task (save-excursion (org-back-to-heading 'invisible-ok)
-                              (point))))
-    (save-excursion
-      (bh/find-project-task)
-      (if (equal (point) task)
-          nil
-        t))))
+        (goto-char (point-min))
+        (let ((done-regexp
+               (concat "\\* \\(" (regexp-opt org-done-keywords) "\\) "))
+              (state-regexp
+               (concat "- State \"\\(" (regexp-opt org-done-keywords)
+                       "\\)\"\\s-*\\[\\([^]\n]+\\)\\]")))
+          (while (re-search-forward done-regexp nil t)
+            (let ((end (save-excursion
+                         (outline-next-heading)
+                         (point)))
+                  begin)
+              (goto-char (line-beginning-position))
+              (setq begin (point))
+              (if (re-search-forward state-regexp end t)
+                  (let* ((time-string (match-string 2))
+                         (when-closed (org-parse-time-string time-string)))
+                    (if (>= (time-to-number-of-days
+                             (time-subtract (current-time)
+                                            (apply #'encode-time when-closed)))
+                            org-my-archive-expiry-days)
+                        (org-archive-subtree)))
+                (goto-char end)))))
+        (save-buffer)))
+
+    (setq safe-local-variable-values (quote ((after-save-hook archive-done-tasks))))
+
+    (defalias 'archive-done-tasks 'org-my-archive-done-tasks)
+
+    (defun org-archive-done-tasks-file ()
+      (interactive)
+      (org-map-entries
+       (lambda ()
+         (org-archive-subtree)
+         (setq org-map-continue-from (outline-previous-heading)))
+       "/DONE" 'file))
 
 
-
-;; == Custom State Keywords ==
-(setq org-use-fast-todo-selection t)
-
-(setq org-todo-keywords
-      '((sequence "TODO(t)" "PROJ(p)" "STARTED(s)" "NEXT(n)" "DELEGATED(g)" "MEETING(m)" "NOTE(o)" "|" "DONE(d)")
-	(sequence "WAITING(w@/!)" "INACTIVE(i)" "|" "CANCELLED(c@/!)" )))
-
-;; Custom colors for the keywords
-(setq org-todo-keyword-faces
-      '(("TODO" :foreground "red" :weight bold)
-	("PROJ" :foreground "blue" :weight bold)
-	("NEXT" :foreground "blue" :weight bold)
-	("DONE" :foreground "forest green" :weight bold)
-	("WAITING" :foreground "orange" :weight bold)
-	("INACTIVE" :foreground "magenta" :weight bold)
-	("CANCELLED" :foreground "forest green" :weight bold)
-	("MEETING" :foreground "forest green" :weight bold)
-        ("NOTE" :foreground "dark violet" :weight bold)
-        ("DELEGATED" :foreground "dark orange" :weight bold)
-        ("STARTED" :foreground "dark orange" :weight bold)))
-
-;; Auto-update tags whenever the state is changed
-(setq org-todo-state-tags-triggers
-      '(("CANCELLED" ("CANCELLED" . t))
-	("WAITING" ("WAITING" . t))
-	("INACTIVE" ("WAITING") ("INACTIVE" . t))
-	(done ("WAITING") ("INACTIVE"))
-	("TODO" ("WAITING") ("CANCELLED") ("INACTIVE"))
-	("NEXT" ("WAITING") ("CANCELLED") ("INACTIVE"))
-	("DONE" ("WAITING") ("CANCELLED") ("INACTIVE"))))
-
-(defun gs/mark-next-done-parent-tasks-todo ()
-  "Visit each parent task and change NEXT (or DONE) states to TODO."
-  ;; Don't change the value if new state is "DONE"
-  (let ((mystate (or (and (fboundp 'org-state)
-                          (member state
-				  (list "NEXT" "TODO")))
-                     (member (nth 2 (org-heading-components))
-			     (list "NEXT" "TODO")))))
-    (when mystate
-      (save-excursion
-        (while (org-up-heading-safe)
-          (when (member (nth 2 (org-heading-components)) (list "NEXT" "DONE"))
-            (org-todo "TODO")))))))
-(add-hook 'org-after-todo-state-change-hook 'gs/mark-next-done-parent-tasks-todo 'append)
-
-
-(defvar org-my-archive-expiry-days 4.0
-  "The number of days after which a completed task should be auto-archived.
-   This can be 0 for immediate, or a floating point value.")
-
-(defun org-my-archive-done-tasks ()
-  (interactive)
-  (save-excursion
-    (goto-char (point-min))
-    (let ((done-regexp
-           (concat "\\* \\(" (regexp-opt org-done-keywords) "\\) "))
-          (state-regexp
-           (concat "- State \"\\(" (regexp-opt org-done-keywords)
-                   "\\)\"\\s-*\\[\\([^]\n]+\\)\\]")))
-      (while (re-search-forward done-regexp nil t)
-        (let ((end (save-excursion
-                     (outline-next-heading)
-                     (point)))
-              begin)
-          (goto-char (line-beginning-position))
-          (setq begin (point))
-          (if (re-search-forward state-regexp end t)
-              (let* ((time-string (match-string 2))
-                     (when-closed (org-parse-time-string time-string)))
-                (if (>= (time-to-number-of-days
-                         (time-subtract (current-time)
-                                        (apply #'encode-time when-closed)))
-                        org-my-archive-expiry-days)
-                    (org-archive-subtree)))
-            (goto-char end)))))
-    (save-buffer)))
-
-(setq safe-local-variable-values (quote ((after-save-hook archive-done-tasks))))
-
-(defalias 'archive-done-tasks 'org-my-archive-done-tasks)
-
-(defun org-archive-done-tasks-file ()
-  (interactive)
-  (org-map-entries
-   (lambda ()
-     (org-archive-subtree)
-     (setq org-map-continue-from (outline-previous-heading)))
-   "/DONE" 'file))
-
-
-(defun org-archive-done-tasks-agenda ()
-  (interactive)
-  (org-map-entries
-   (lambda ()
-     (org-archive-subtree)
-     (setq org-map-continue-from (outline-previous-heading)))
-     "/DONE" 'agenda))
+    (defun org-archive-done-tasks-agenda ()
+      (interactive)
+      (org-map-entries
+       (lambda ()
+         (org-archive-subtree)
+         (setq org-map-continue-from (outline-previous-heading)))
+         "/DONE" 'agenda))
 #+END_SRC
 
 #+RESULTS:
 : org-archive-done-tasks-agenda
 
 * Simple org-presentation mode lisp/org-present:
+  :PROPERTIES:
+  :ID:       43863b33-56f7-4707-b5b3-6584e619cd24
+  :END:
 #+BEGIN_SRC emacs-lisp
 
 (autoload 'org-present "org-present" nil t)
@@ -202,6 +223,9 @@ Callers of this function already widen the buffer view."
 #+END_SRC
 
 * Keymap definitions
+  :PROPERTIES:
+  :ID:       dcd4537f-9c3f-4250-8802-a9fedd0926a0
+  :END:
 #+BEGIN_SRC emacs-lisp
 (define-key global-map "\C-cc" 'org-capture)
 (define-key global-map "\C-cl" 'org-store-link)

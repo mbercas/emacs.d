@@ -1,38 +1,9 @@
 #+STARTUP: overview
 
-* interface tweaks
-#+BEGIN_SRC emacs-lisp
-(setq frame-resize-pixelwise t)
-(when window-system (set-frame-size (selected-frame) 90 34))
-
-(setq inhibit-startup-message t)
-;; Enable line numbers and column numbers.
-;;
-(line-number-mode 1)
-(column-number-mode 1)
-(setq fill-column 90) ;; M-q should fill at 90 chars, not 75
-(tool-bar-mode -1)
-(fset 'yes-or-no-p 'y-or-n-p)
-(set-variable 'confirm-kill-emacs 'yes-or-no-p)
-(global-set-key (kbd "<f5>") 'revert-buffer)
-#+END_SRC
-
-#+RESULTS:
-: revert-buffer
-* Back-up files
-#+BEGIN_SRC emacs_lisp
-(setq backup-by-copying t
-      backup-directory-alist '(("." . ,temporary-file-directory))
-      auto-save-file-name-transforms '(("." . ,temporary-file-directory))
-      delete-old-versions t
-      kept-new-versions 6
-      kept-old-versions 2
-      version-control t)
-#+END_SRC
 * Hunspell - spell checker
 Set path, foce ispell checker to hunspell and initilize English dictionaries
 #+begin_src emacs-lisp :tangle yes
-;; 
+;;
 (use-package flyspell
    :ensure t
    :config
@@ -43,8 +14,8 @@ Set path, foce ispell checker to hunspell and initilize English dictionaries
                     (setq ispell-program-name "hunspell")))
                 (flyspell-mode 1)
                 (add-hook 'org-mode-hook (lambda () (flyspell-mode t)))
-      ) 
- ) 
+      )
+ )
 
 #+end_src
 
@@ -86,18 +57,176 @@ Set path, foce ispell checker to hunspell and initilize English dictionaries
    (setq calendar-location-name "Jena, DE")
 #+END_SRC
 
+* Interface tweaks
+- For some reason this gets not executed on start-up
+#+BEGIN_SRC emacs-lisp
+    ;; is this comment being picked
+  (progn
+
+    (setq user-full-name "Manuel Berrocal")  
+
+    ;; Use spaces instead of tabs
+    (setq-default indent-tabs-mode nil)
+
+    ;; Set default fill column to 78
+    (setq-default fill-column 90)
+
+    (setq frame-resize-pixelwise t)
+    (when window-system (set-frame-size (selected-frame) 90 34))
+    ;;(set-face-background 'hl-line "#3e4446")
+    ;;(set-face-background 'fringe "red")
+    ;;(set-frame-parameter (selected-frame) 'internal-border-width 15)
+
+    ;; Turn off background when Emacs is run with -nt
+    (defun on-after-init ()
+      "Turn off background."
+      (unless (display-graphic-p (selected-frame))
+          (set-face-background 'default "unspecified-bg" (selected-frame))))
+    (add-hook 'window-setup-hook 'on-after-init)
+
+    (setq inhibit-startup-message t)
+    ;; Enable line numbers and column numbers.
+    ;;
+    ;;----------------------------------------------------------------------------
+    ;; Cosmetics
+    ;;----------------------------------------------------------------------------
+    (tool-bar-mode -1)
+    ;;(menu-bar-mode -1)
+    (scroll-bar-mode -1)
+    (blink-cursor-mode -1)
+    (show-paren-mode 1)
+    (line-number-mode 1)
+    (column-number-mode 1)
+
+    ;; Set fringe sizes
+    (fringe-mode 20)
+
+
+    (fset 'yes-or-no-p 'y-or-n-p)
+    (set-variable 'confirm-kill-emacs 'yes-or-no-p)
+    (global-set-key (kbd "<f5>") 'revert-buffer)
+
+    ;; Disable mouse focus
+    (setq focus-follows-mouse nil)
+    (setq mouse-autoselect-window nil)
+
+    ;; Use a subtle visible bell
+    (defun mb/subtle-visible-bell ()
+      "A more subtle visual bell effect."
+      (invert-face 'mode-line)
+      (run-with-timer 0.1 nil #'invert-face 'mode-line))
+
+    (setq visible-bell nil
+          ring-bell-function #'mb/subtle-visible-bell)
+
+    ;; Suppress bells for reaching beginning and end of buffer
+    ;; Source: https://emacs.stackexchange.com/questions/10932/how-do-you-disable-the-buffer-end-beginning-warnings-in-the-minibuffer/20039
+    (defun mb/command-error-function (data context signal)
+      "Ignore some errors.
+  Ignore the `buffer-read-only', `beginning-of-buffer',
+  `end-of-buffer' signals; pass the rest to the default handler.
+  For details on DATA, CONTEXT, and SIGNAL, see
+  `command-error-function'."
+      (when (not (memq (car data) '(buffer-read-only
+                                    beginning-of-buffer
+                                    end-of-buffer)))
+        (command-error-default-function data context signal)))
+
+    (setq command-error-function #'mb/command-error-function)
+
+    )
+#+END_SRC
+
+#+RESULTS:
+: revert-buffer
+
+* DOOM Modeline
+  #+begin_src emacs-lisp :tangle yes
+    (use-package doom-modeline
+      :ensure t
+      :init (doom-modeline-mode 1)
+      :config
+  
+      )
+  #+end_src
+
+  #+RESULTS:
+
+* DISABLED - Use delight to manage minor modes in the mode-line
+  - adding :delight to the package prevents it from appearing in mode-line
+#+BEGIN_SRC emacs-lisp
+  (use-package delight
+  :disabled t
+  :ensure t)
+#+END_SRC
+
+* Volatile highlights
+- adds a flash to highlight some operations
+  #+BEGIN_SRC emacs-lisp
+    (use-package volatile-highlights
+        :ensure t
+        :config
+        (volatile-highlights-mode))
+
+    (use-package beacon
+      :ensure t
+      :custom
+      (beacon-push-mark 10)
+      (beacon-color "#cc342b")
+      (beacon-blink-delay 0.3)
+      (beacon-blink-duration 0.3)
+      :config
+      (beacon-mode)
+      (global-hl-line-mode 1))
+#+END_SRC
+
+#+RESULTS:
+: t
+
+#+RESULTS:
+: t
+
+#+RESULTS:
+: t
+
+* Back-up files
+- puts backup files in /tmp
+- automatically removes them if not accessed in one week
+
+#+begin_src emacs-lisp
+(setq backup-by-copying t
+      backup-directory-alist `((".*" . ,temporary-file-directory))
+      auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
+      delete-old-versions t
+      kept-new-versions 6
+      kept-old-versions 2
+      version-control t)
+
+(message "Deleting old backup files...")
+(let ((week (* 60 60 24 7))
+      (current (float-time (current-time))))
+  (dolist (file (directory-files temporary-file-directory t))
+    (when (and (backup-file-name-p file)
+               (> (- current (float-time (nth 5 (file-attributes file))))
+                  week))
+      (message "%s" file)
+      (delete-file file))))
+#+END_SRC
+
+#+RESULTS:
+
 * Parent mode
 Integrate highlight-parentheses with autopair mode:
 #+BEGIN_SRC emacs-lisp
-(add-hook 'highlight-parentheses-mode-hook
-          '(lambda ()
-             (setq autopair-handle-action-fns
-                   (append
-                    (if autopair-handle-action-fns
-                        autopair-handle-action-fns
-                      '(autopair-default-handle-action))
-                    '((lambda (action pair pos-before)
-                        (hl-paren-color-update)))))))
+  (add-hook 'highlight-parentheses-mode-hook
+            '(lambda ()
+               (setq autopair-handle-action-fns
+                     (append
+                      (if autopair-handle-action-fns
+                          autopair-handle-action-fns
+                        '(autopair-default-handle-action))
+                      '((lambda (action pair pos-before)
+                          (hl-paren-color-update)))))))
 #+END_SRC
 * Recent files
 #+BEGIN_SRC emacs-lisp
@@ -117,12 +246,12 @@ Integrate highlight-parentheses with autopair mode:
 * IDO - Interactive Do Things
  - https://www.masteringemacs.org/article/introduction-to-ido-mode
 #+BEGIN_SRC emacs-lisp
-(use-package ido
-  :ensure t
-  :config
-  (setq ido-enable-flex-matching t)
-  (ido-everywhere t)
-  (ido-mode 1))
+  (use-package ido
+    :ensure t
+    :config
+    (setq ido-enable-flex-matching t)
+    (ido-everywhere t)
+    (ido-mode 1))
 #+END_SRC
 
 #+RESULTS:
@@ -140,12 +269,46 @@ Integrate highlight-parentheses with autopair mode:
 * which key
   Brings up some help
   #+BEGIN_SRC emacs-lisp
-  (use-package which-key
-	:ensure t
-	:config
-	(which-key-mode))
+    (use-package which-key
+          :ensure t
+          :config
+          (which-key-mode))
   #+END_SRC
+
+  #+RESULTS:
+  : t
+
+* Autocomplete - disabled - using Company instead
+  #+BEGIN_SRC emacs-lisp
+    (use-package auto-complete
+    :disabled t
+    :ensure t
+    :init
+    (progn
+      (ac-config-default)
+      (global-auto-complete-mode t)
+      ))
+
+    (use-package company
+      :ensure t
+      :init
+      (global-company-mode)
+      :bind (("<backtab>" . company-complete-common-or-cycle))
+      :config
+      (setq company-dabbrev-other-buffers t
+            company-dabbrev-code-other-buffers t)
+      :hook ((text-mode . company-mode)
+             (prog-mode . company-mode)))
+
+
+  #+END_SRC
+
+  #+RESULTS:
+
 * Org mode
+  :PROPERTIES:
+  :ID:       5fd8260c-6187-4b23-ba46-6c89e95c2135
+  :END:
   - Org bullets makes things look pretty
   - Add Working week to the calendar and starting on Monday
   - org babel load languages
@@ -154,76 +317,159 @@ Integrate highlight-parentheses with autopair mode:
   #+BEGIN_SRC emacs-lisp
     (use-package org-bullets
       :ensure t
+      :hook ((org-mode . org-bullets-mode)
+             (org-mode . flyspell-mode)
+             (org-mode . linum-mode)
+             (org-mode . show-paren-mode))
       :config
       (progn
-        (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
-        ;;(add-hook 'org-mode-hook (lambda () (flyspell-mode t)))
-        (add-hook 'org-mode-hook (lambda () (linum-mode 1)))
-        (add-hook 'org-mode-hook (lambda () (show-paren-mode 1)))
+
+    ;;; add autocompletion 
+        (defun org-easy-template--completion-table (str pred action)
+          (pcase action
+            (`nil (try-completion  str org-structure-template-alist pred))
+            (`t   (all-completions str org-structure-template-alist pred))))
+
+        (defun org-easy-template--annotation-function (s)
+          (format " -> %s" (cadr (assoc s org-structure-template-alist))))
+
+        (defun org-easy-template-completion-function ()
+          (when (looking-back "^[ \t]*<\\([^ \t]*\\)" (point-at-bol))
+            (list
+             (match-beginning 1) (point)
+             'org-easy-template--completion-table
+             :annotation-function 'org-easy-template--annotation-function
+             :exclusive 'no)))
+
+        (defun add-easy-templates-to-capf ()
+          (add-hook 'completion-at-point-functions
+                    'org-easy-template-completion-function nil t))
+
+        (add-hook 'org-mode-hook #'add-easy-templates-to-capf)
 
         ;; configure the calendar
         (setq calendar-week-start-day 1)
         (setq calendar-intermonth-text
-           '(propertize
-            (format "%2d"
-                   (car
-                   (calendar-iso-from-absolute
-                   (calendar-absolute-from-gregorian (list month day year)))))
-          'font-lock-face 'font-lock-warning-face))
+              '(propertize
+                (format "%2d"
+                        (car
+                         (calendar-iso-from-absolute
+                          (calendar-absolute-from-gregorian (list month day year)))))
+                'font-lock-face 'font-lock-warning-face))
 
         (setq calendar-intermonth-header
-          (propertize "Wk"                  ; or e.g. "KW" in Germany
-                    'font-lock-face 'font-lock-keyword-face))
+              (propertize "Wk"                  ; or e.g. "KW" in Germany
+                          'font-lock-face 'font-lock-keyword-face))
+        )
       )
-    )
   #+END_SRC
+
+  #+RESULTS:
 
 ** Highlight syntax in SRC blocks
   #+BEGIN_SRC emacs-lisp
-      (org-babel-do-load-languages
-        'org-babel-load-languages
-        '((python .t)
-          (R . t)
-          (emacs-lisp . t)))
+    (org-babel-do-load-languages
+      'org-babel-load-languages
+      '((python .t)
+        (R . t)
+        (shell . t)
+        (emacs-lisp . t)))
   #+END_SRC
 
   #+RESULTS:
 
 * Org Roam
+  :PROPERTIES:
+  :ID:       99f8b018-caa9-49f3-9423-80da0201bde5
+  :END:
 #+begin_src emacs-lisp
 
-(use-package emacsql-sqlite3
-   :ensure t)
+  (use-package emacsql-sqlite3
+     :ensure t)
 
-(use-package org-roam
-   :ensure t
-   :hook (after-init . org-roam-mode)
-   :custom (org-roam-directory "~/org-roam")
+  (use-package org-roam
+     :ensure t
+     :commands (org-roam-insert org-roam-find-file org-roam-switch-to-buffer org-roam)
+     :hook (after-init . org-roam-mode)
      :bind (:map org-roam-mode-map
-              (("C-c n l" . org-roam)
-               ("C-c n f" . org-roam-find-file)
-               ("C-c n j" . org-roam-jump-to-index)
-               ("C-c n b" . org-roam-switch-to-buffer)
-               ("C-c n g" . org-roam-graph))
-            :map org-mode-map
-              (("C-c n i" . org-roam-insert))))
+                (("C-c n l" . org-roam)
+                 ("C-c n f" . org-roam-find-file)
+                 ("C-c n g" . org-roam-graph-show)))
+     :init 
+     (setq org-roam-directory (file-truename "~/org-roam")
+           org-roam-db-gc-threshold most-positive-fixnum
+           org-roam-graph-exclude-matcher "private"
+           org-roam-tag-sources '(prop last-directory)
+           org-id-link-to-org-use-id t)
+     :config
+    (setq org-roam-capture-templates
+          '(("l" "lit" plain (function org-roam--capture-get-point)
+             "%?"
+             :file-name "lit/${slug}"
+             :head "#+setupfile:./hugo_setup.org
+  ,#+hugo_slug: ${slug}
+  ,#+title: ${title}
+  ,#+roam_alias:\n"
+             :unnarrowed t)
+            ("w" "work" plain (function org-roam--capture-get-point)
+             "%?"
+             :file-name "work/${slug}"
+             :head "#+title: ${title}\n"
+             :unnarrowed t)
+            ("c" "concept" plain (function org-roam--capture-get-point)
+             "%?"
+             :file-name "concepts/${slug}"
+             :head "#+setupfile:./hugo_setup.org
+  ,#+hugo_slug: ${slug}
+  ,#+title: ${title}
+  ,#+roam_alias:\n"
+             :unnarrowed t)
+            ("p" "private" plain (function org-roam-capture--get-point)
+             "%?"
+             :file-name "private/${slug}"
+             :head "#+title: ${title}\n"
+             :unnarrowed t)))
+    (setq org-roam-capture-ref-templates
+          '(("r" "ref" plain (function org-roam-capture--get-point)
+             "%?"
+             :file-name "lit/${slug}"
+             :head "#+setupfile:./hugo_setup.org
+  ,#+roam_key: ${ref}
+  ,#+hugo_slug: ${slug}
+  ,#+roam_tags: website
+  ,#+title: ${title}
+  - source :: ${ref}"
+             :unnarrowed t)))
+    )
 
-(use-package deft
-  :after org
-  :bind
-  ("C-c n d" . deft)
-  :custom
-  (deft-recursive t)
-  (deft-use-filter-string-for-filename t)
-  (deft-default-extension "org")
-  (deft-directory "~/org-roam"))
+
+  ;; (use-package company-org-roam
+  ;;   :ensure t
+  ;;   :disabled
+  ;;   ;; You may want to pin in case the version from stable.melpa.org is not working 
+  ;;   :pin melpa
+  ;;   :config
+  ;;   (push 'company-org-roam company-backends))
+
+  (use-package 
+    deft
+    :ensure t
+    :after (org org-roam)
+    :bind
+    ("C-c n d" . deft)
+    :custom
+    (deft-recursive t)
+    (deft-use-filter-string-for-filename t)
+    (deft-default-extension "org")
+    (deft-directory "~/org-roam"))
+
+
 #+end_src
 
 #+RESULTS:
 : deft
 
-
-* Shell-toggle 
+* Shell-toggle
   #+BEGIN_SRC emacs-lisp
     (use-package shell-toggle
       :ensure t
@@ -259,149 +505,152 @@ Integrate highlight-parentheses with autopair mode:
      what you want - use this command instead.
   #+BEGIN_SRC emacs-lisp
 
-(use-package flx
-  :ensure t)
+    (use-package flx
+      :ensure t)
 
-(use-package counsel
-  :ensure t
-  :pin melpa
-  :diminish
-  :hook (ivy-mode . counsel-mode)
-  :config
-  (global-set-key (kbd "s-P") #'counsel-M-x)
-  (global-set-key (kbd "s-f") #'counsel-grep-or-swiper)
-  (setq counsel-rg-base-command "rg --vimgrep %s"))
+    (use-package counsel
+      :ensure t
+      :pin melpa
+      :diminish
+      :hook (ivy-mode . counsel-mode)
+      :config
+      (global-set-key (kbd "s-P") #'counsel-M-x)
+      (global-set-key (kbd "s-f") #'counsel-grep-or-swiper)
+      (setq counsel-rg-base-command "rg --vimgrep %s"))
 
-(use-package counsel-projectile
-  :ensure t
-  :pin melpa
-  :config (counsel-projectile-mode +1)
-  :bind (("C-c p SPC" . counsel-projectile))
-  )
+    (use-package counsel-projectile
+      :ensure t
+      :pin melpa
+      :config (counsel-projectile-mode +1)
+      :bind (("C-c p SPC" . counsel-projectile))
+      )
 
-(use-package ivy
-  :ensure t
-  :pin melpa
-  :diminish
-  :hook (after-init . ivy-mode)
-  :config
-  (setq ivy-display-style nil)
-  (define-key ivy-minibuffer-map (kbd "RET") #'ivy-alt-done)
-  (define-key ivy-minibuffer-map (kbd "<escape>") #'minibuffer-keyboard-quit)
-  (setq ivy-re-builders-alist
-        '((counsel-rg . ivy--regex-plus)
-          (counsel-projectile-rg . ivy--regex-plus)
-          (counsel-ag . ivy--regex-plus)
-          (counsel-projectile-ag . ivy--regex-plus)
-          (swiper . ivy--regex-plus)
-          (t . ivy--regex-fuzzy)))
-  (setq ivy-use-virtual-buffers t
-        ivy-count-format "(%d/%d) "
-        ivy-initial-inputs-alist nil))
+    (use-package ivy
+      :ensure t
+      :pin melpa
+      :diminish
+      :hook (after-init . ivy-mode)
+      :config
+      (setq ivy-display-style nil)
+      (define-key ivy-minibuffer-map (kbd "RET") #'ivy-alt-done)
+      (define-key ivy-minibuffer-map (kbd "<escape>") #'minibuffer-keyboard-quit)
+      (setq ivy-use-selectable-prompt t)   ;; make prompt line selectagle
+      (setq ivy-re-builders-alist
+            '((counsel-rg . ivy--regex-plus)
+              (counsel-projectile-rg . ivy--regex-plus)
+              (counsel-ag . ivy--regex-plus)
+              (counsel-projectile-ag . ivy--regex-plus)
+              (swiper . ivy--regex-plus)
+              (t . ivy--regex-fuzzy)))
+      (setq ivy-use-virtual-buffers t
+            ivy-count-format "(%d/%d) "
+            ivy-initial-inputs-alist nil))
 
-(use-package swiper
-  :ensure t
-  :after ivy
-  :custom-face (swiper-line-face ((t (:foreground "#ffffff" :background "#60648E"))))
-  :config
-  (setq swiper-action-recenter t)
-  (setq swiper-goto-start-of-match t))
+    (use-package swiper
+      :ensure t
+      :after ivy
+      :diminish
+    ;;  :custom-face (swiper-line-face ((t (:foreground "#ffffff" :background "#60648E"))))
+      :config
+      (setq swiper-action-recenter t)
+      (setq swiper-goto-start-of-match t))
 
 
-(use-package ivy-posframe
-  :ensure t
-  :pin melpa
-  :after ivy
-  :diminish
-  :config
-  (setq ivy-posframe-display-functions-alist
-      '((swiper          . ivy-posframe-display-at-point)
-        (complete-symbol . ivy-posframe-display-at-point)
-        (counsel-M-x     . ivy-posframe-display-at-window-bottom-left)
-        (t               . ivy-posframe-display))
-        ivy-posframe-height-alist '((t . 20))
-        ivy-posframe-parameters '((internal-border-width . 5)))
-  (setq ivy-posframe-width 120)
-  (ivy-posframe-mode +1))
+    (use-package ivy-posframe
+      :ensure t
+      :pin melpa
+      :after ivy
+      :config
+      (setq ivy-posframe-display-functions-alist
+          '((swiper          . ivy-posframe-display-at-point)
+            (complete-symbol . ivy-posframe-display-at-point)
+            (counsel-M-x     . ivy-posframe-display-at-window-bottom-left)
+            (t               . ivy-posframe-display))
+            ivy-posframe-height-alist '((t . 20))
+            ivy-posframe-parameters '((internal-border-width . 5)))
+      (setq ivy-posframe-width 120)
+      (ivy-posframe-mode +1))
 
-(use-package ivy-rich
-  :ensure t
-  :pin melpa
-  :preface
-  (defun ivy-rich-switch-buffer-icon (candidate)
-    (with-current-buffer
-        (get-buffer candidate)
-       (all-the-icons-icon-for-mode major-mode)))
-   :init
-  (setq ivy-rich-display-transformers-list ; max column width sum = (ivy-poframe-width - 1)
-        '(ivy-switch-buffer
-          (:columns
-           ((ivy-rich-switch-buffer-icon (:width 2))
-            (ivy-rich-candidate (:width 35))
-            (ivy-rich-switch-buffer-project (:width 15 :face success))
-            (ivy-rich-switch-buffer-major-mode (:width 13 :face warning)))
-           :predicate
-           #'(lambda (cand) (get-buffer cand)))
-          counsel-M-x
-          (:columns
-           ((counsel-M-x-transformer (:width 35))
-            (ivy-rich-counsel-function-docstring (:width 34 :face font-lock-doc-face))))
-          counsel-describe-function
-          (:columns
-           ((counsel-describe-function-transformer (:width 35))
-            (ivy-rich-counsel-function-docstring (:width 34 :face font-lock-doc-face))))
-          counsel-describe-variable
-          (:columns
-           ((counsel-describe-variable-transformer (:width 35))
-            (ivy-rich-counsel-variable-docstring (:width 34 :face font-lock-doc-face))))
-          package-install
-          (:columns
-           ((ivy-rich-candidate (:width 25))
-            (ivy-rich-package-version (:width 12 :face font-lock-comment-face))
-            (ivy-rich-package-archive-summary (:width 7 :face font-lock-builtin-face))
-            (ivy-rich-package-install-summary (:width 23 :face font-lock-doc-face))))))
-  :config
-  (ivy-rich-mode +1)
-  ;(setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line)
-  )
+    (use-package ivy-rich
+      :ensure t
+      :after (ivy ivy-postframe)
+      :pin melpa
+      :preface
+      (defun ivy-rich-switch-buffer-icon (candidate)
+        (with-current-buffer
+            (get-buffer candidate)
+           (all-the-icons-icon-for-mode major-mode)))
+       :init
+      (setq ivy-rich-display-transformers-list ; max column width sum = (ivy-poframe-width - 1)
+            '(ivy-switch-buffer
+              (:columns
+               ((ivy-rich-switch-buffer-icon (:width 2))
+                (ivy-rich-candidate (:width 35))
+                (ivy-rich-switch-buffer-project (:width 15 :face success))
+                (ivy-rich-switch-buffer-major-mode (:width 13 :face warning)))
+               :predicate
+               #'(lambda (cand) (get-buffer cand)))
+              counsel-M-x
+              (:columns
+               ((counsel-M-x-transformer (:width 35))
+                (ivy-rich-counsel-function-docstring (:width 34 :face font-lock-doc-face))))
+              counsel-describe-function
+              (:columns
+               ((counsel-describe-function-transformer (:width 35))
+                (ivy-rich-counsel-function-docstring (:width 34 :face font-lock-doc-face))))
+              counsel-describe-variable
+              (:columns
+               ((counsel-describe-variable-transformer (:width 35))
+                (ivy-rich-counsel-variable-docstring (:width 34 :face font-lock-doc-face))))
+              package-install
+              (:columns
+               ((ivy-rich-candidate (:width 25))
+                (ivy-rich-package-version (:width 12 :face font-lock-comment-face))
+                (ivy-rich-package-archive-summary (:width 7 :face font-lock-builtin-face))
+                (ivy-rich-package-install-summary (:width 23 :face font-lock-doc-face))))))
+      :config
+      (ivy-rich-mode +1)
+      ;(setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line)
+      )
 
-(use-package projectile
-  :ensure t
-  :diminish
-  :config
-  (projectile-mode +1)
-  (define-key projectile-mode-map (kbd "C-c p") #'projectile-command-map)
-  (define-key projectile-mode-map (kbd "s-p") #'projectile-find-file) ; counsel
-  (define-key projectile-mode-map (kbd "s-F") #'projectile-ripgrep) ; counsel
-  (setq projectile-sort-order 'recentf
-        projectile-indexing-method 'hybrid
-        projectile-completion-system 'ivy))
+    (use-package projectile
+      :ensure t
+      ;;:delight '(:eval (concat " " (projectile-project-name)))
+      :diminish
+      :config
+      (projectile-mode +1)
+      (define-key projectile-mode-map (kbd "C-c p") #'projectile-command-map)
+      (define-key projectile-mode-map (kbd "s-p") #'projectile-find-file) ; counsel
+      (define-key projectile-mode-map (kbd "s-F") #'projectile-ripgrep) ; counsel
+      (setq projectile-sort-order 'recentf
+            projectile-indexing-method 'hybrid
+            projectile-completion-system 'ivy))
 
-(use-package wgrep
-  :ensure t
-  :config
-  (setq wgrep-enable-key (kbd "C-c C-w")) ; change to wgrep mode
-  (setq wgrep-auto-save-buffer t))
+    (use-package wgrep
+      :ensure t
+      :config
+      (setq wgrep-enable-key (kbd "C-c C-w")) ; change to wgrep mode
+      (setq wgrep-auto-save-buffer t))
 
-(use-package prescient
-  :ensure t
-  :config
-  (setq prescient-filter-method '(literal regexp initialism fuzzy))
-  (prescient-persist-mode +1))
+    (use-package prescient
+      :ensure t
+      :config
+      (setq prescient-filter-method '(literal regexp initialism fuzzy))
+      (prescient-persist-mode +1))
 
-(use-package ivy-prescient
-  :ensure t
-  :after (prescient ivy)
-  :config
-  (setq ivy-prescient-sort-commands
-        '(:not swiper counsel-grep ivy-switch-buffer))
-  (setq ivy-prescient-retain-classic-highlighting t)
-  (ivy-prescient-mode +1))
+    (use-package ivy-prescient
+      :ensure t
+      :after (prescient ivy)
+      :config
+      (setq ivy-prescient-sort-commands
+            '(:not swiper counsel-grep ivy-switch-buffer))
+      (setq ivy-prescient-retain-classic-highlighting t)
+      (ivy-prescient-mode +1))
 
-(use-package company-prescient
-  :ensure t
-  :after (prescient company)
-  :config (company-prescient-mode +1))
+    (use-package company-prescient
+      :ensure t
+      :after (prescient company)
+      :config (company-prescient-mode +1))
 
   #+END_SRC
 
@@ -409,6 +658,7 @@ Integrate highlight-parentheses with autopair mode:
   : t
 
 ** My config
+#+BEGIN_SRC emacs-lisp
   (use-package counsel
   :ensure t
   )
@@ -449,17 +699,6 @@ Integrate highlight-parentheses with autopair mode:
   :bind ("M-s" . avy-goto-word-1)) ;; changed from char as per jcs
   #+END_SRC
 
-* Autocomplete
-  #+BEGIN_SRC emacs-lisp
-  (use-package auto-complete
-  :ensure t
-  :init
-  (progn
-    (ac-config-default)
-    (global-auto-complete-mode t)
-    ))
-  #+END_SRC
-
 * PDF tools
 #+BEGIN_SRC emacs-lisp
   (use-package pdf-tools
@@ -497,50 +736,53 @@ Integrate highlight-parentheses with autopair mode:
 : magit-status
 
 * Themes
-  #+BEGIN_SRC emacs-lisp
+  - using spacemacs theme but spaceline is disabled
+#+BEGIN_SRC emacs-lisp
 
-  ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+    ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
-;;  (use-package color-theme
-;;  :ensure t)
+  ;;  (use-package color-theme
+  ;;  :ensure t)
 
-;;  (use-package zenburn-theme
-;;  :ensure t
-;;  :config (load-theme 'zenburn t))
+  ;;  (use-package zenburn-theme
+  ;;  :ensure t
+  ;;  :config (load-theme 'zenburn t))
 
-(use-package mode-icons
-  :ensure t
-  :init (mode-icons-mode))
+  (use-package mode-icons
+    :ensure t
+    :init (mode-icons-mode))
 
-;; spacemacs look
-(use-package spacemacs-theme
-  :defer t
-  :init
-  (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-  (load-theme 'spacemacs-dark t)
-  (setq spacemacs-theme-org-agenda-height nil)
-  (setq spacemacs-theme-org-height nil)
-  :config
-  ;; set sizes here to stop spacemacs theme resizing these
-    (set-face-attribute 'org-level-1 nil :height 1.0)
-    (set-face-attribute 'org-level-2 nil :height 1.0)
-    (set-face-attribute 'org-level-3 nil :height 1.0)
-    (set-face-attribute 'org-scheduled-today nil :height 1.0)
-    (set-face-attribute 'org-agenda-date-today nil :height 1.1)
-    (set-face-attribute 'org-table nil :foreground "#008787"))
+  ;; spacemacs look
+  (use-package spacemacs-theme
+    :defer t
+    :init
+    (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+    (load-theme 'spacemacs-dark t)
+    (setq spacemacs-theme-org-agenda-height nil)
+    (setq spacemacs-theme-org-height nil)
+    :config
+    ;; set sizes here to stop spacemacs theme resizing these
+      (set-face-attribute 'org-level-1 nil :height 1.0)
+      (set-face-attribute 'org-level-2 nil :height 1.0)
+      (set-face-attribute 'org-level-3 nil :height 1.0)
+      (set-face-attribute 'org-scheduled-today nil :height 1.0)
+      (set-face-attribute 'org-agenda-date-today nil :height 1.1)
+      (set-face-attribute 'org-table nil :foreground "#008787"))
 
-(use-package spaceline-all-the-icons
-  :ensure t
-  :demand t)
+  (use-package spaceline-all-the-icons
+    :disabled t
+    :ensure t
+    :demand t)
 
-(use-package spaceline
-  :ensure t
-  :demand t
-  :init
-  (setq powerline-default-separator 'arrow-fade)
-  :config
-  (require 'spaceline-config)
-  (spaceline-emacs-theme))
+  (use-package spaceline
+    :disabled t
+    :ensure t
+    :demand t
+    :init
+    (setq powerline-default-separator 'arrow-fade)
+    :config
+    (require 'spaceline-config)
+    (spaceline-emacs-theme))
 
 
 
@@ -568,3 +810,4 @@ Integrate highlight-parentheses with autopair mode:
 #+END_SRC
 
 #+RESULTS:
+

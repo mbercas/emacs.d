@@ -25,7 +25,8 @@ There are two things you can do about this warning:
   )
 
 
-(package-initialize)
+;; Package initialized is not required in emacs-27
+;; (package-initialize)
 
 ;; Bootstrap `use-package'
 (unless (package-installed-p 'use-package)
@@ -64,7 +65,7 @@ There are two things you can do about this warning:
 (org-babel-load-file (expand-file-name "~/.emacs.d/myinit.org"))
 (org-babel-load-file (expand-file-name "~/.emacs.d/mylang.org"))
 (org-babel-load-file (expand-file-name "~/.emacs.d/myprojectile.org"))
-(org-babel-load-file (expand-file-name "~/.emacs.d/myuser.org"))
+;(org-babel-load-file (expand-file-name "~/.emacs.d/myuser.org"))
 (org-babel-load-file (expand-file-name "~/.emacs.d/mygtg.org"))
 
 
@@ -87,9 +88,12 @@ There are two things you can do about this warning:
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(beacon-blink-delay 0.3)
+ '(beacon-blink-duration 0.3)
+ '(beacon-color "#cc342b")
+ '(beacon-push-mark 10)
  '(custom-safe-themes
-   (quote
-    ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
+   '("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default))
  '(deft-default-extension "org" t)
  '(deft-directory "~/org-roam" t)
  '(deft-recursive t t)
@@ -97,19 +101,16 @@ There are two things you can do about this warning:
  '(inhibit-startup-screen t)
  '(markdown-command "pandoc -f markdown+smart -t html")
  '(org-agenda-files
-   (quote
-    ("~/org/mbo.org" "~/org/projects.org" "~/org/gtd.org" "~/org/journal.org")))
+   '("~/org/mbo.org" "~/org/projects.org" "~/org/gtd.org" "~/org/journal.org"))
  '(org-file-apps
-   (quote
-    ((auto-mode . emacs)
+   '((auto-mode . emacs)
      ("\\.mm\\'" . default)
      ("\\.x?html?\\'" . "browse-url %s")
-     ("\\.pdf\\'" . xdg-open))))
+     ("\\.pdf\\'" . xdg-open)))
  '(org-roam-directory "~/org-roam")
  '(package-selected-packages
-   (quote
-    (pandoc-mode ivy-rich ivy-posframe git-commit treemacs-magit ein htmlize lsp-rust flycheck-rust company-lsp company-backends cargo rust-mode ess-smart-equals ess-smart-underscore ess org-pdfview pdf-tools spaceline-all-the-icons ivy-prescient prescient wgrep counsel-projectile flx which-key use-package try shell-toggle org-bullets mu4e-alert mode-icons markdown-mode elpy auto-complete ace-window)))
- '(send-mail-function (quote sendmail-send-it))
+   '(doom-modeline delight minions google-this csv-mode jedi company-jedi lsp-jedi beacon volatile-highlights company-org-roam irony deft slime pandoc-mode ivy-rich ivy-posframe git-commit treemacs-magit ein htmlize lsp-rust flycheck-rust company-backends cargo rust-mode ess-smart-equals ess-smart-underscore ess org-pdfview pdf-tools spaceline-all-the-icons ivy-prescient prescient wgrep counsel-projectile flx which-key use-package try shell-toggle org-bullets mu4e-alert mode-icons markdown-mode elpy auto-complete ace-window))
+ '(send-mail-function 'sendmail-send-it)
  '(spice-output-local "Gnucap")
  '(spice-simulator "Gnucap")
  '(spice-waveform-viewer "Gwave")

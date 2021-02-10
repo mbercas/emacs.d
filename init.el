@@ -99,6 +99,7 @@ There are two things you can do about this warning:
  '(deft-recursive t t)
  '(deft-use-filter-string-for-filename t t)
  '(inhibit-startup-screen t)
+ '(lsp-auto-guess-root t)
  '(markdown-command "pandoc -f markdown+smart -t html")
  '(org-agenda-files
    '("~/org/mbo.org" "~/org/projects.org" "~/org/gtd.org" "~/org/journal.org"))
@@ -109,7 +110,7 @@ There are two things you can do about this warning:
      ("\\.pdf\\'" . xdg-open)))
  '(org-roam-directory "~/org-roam")
  '(package-selected-packages
-   '(doom-modeline delight minions google-this csv-mode jedi company-jedi lsp-jedi beacon volatile-highlights company-org-roam irony deft slime pandoc-mode ivy-rich ivy-posframe git-commit treemacs-magit ein htmlize lsp-rust flycheck-rust company-backends cargo rust-mode ess-smart-equals ess-smart-underscore ess org-pdfview pdf-tools spaceline-all-the-icons ivy-prescient prescient wgrep counsel-projectile flx which-key use-package try shell-toggle org-bullets mu4e-alert mode-icons markdown-mode elpy auto-complete ace-window))
+   '(flycheck-inline iedit rainbow-delimiters rainbow-delimeters doom-modeline delight minions google-this csv-mode jedi company-jedi lsp-jedi beacon volatile-highlights company-org-roam irony deft slime pandoc-mode ivy-rich ivy-posframe git-commit treemacs-magit ein htmlize lsp-rust flycheck-rust company-backends cargo rust-mode ess-smart-equals ess-smart-underscore ess org-pdfview pdf-tools spaceline-all-the-icons ivy-prescient prescient wgrep counsel-projectile flx which-key use-package try shell-toggle org-bullets mu4e-alert mode-icons markdown-mode elpy auto-complete ace-window))
  '(send-mail-function 'sendmail-send-it)
  '(spice-output-local "Gnucap")
  '(spice-simulator "Gnucap")

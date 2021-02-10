@@ -4,7 +4,8 @@
   :PROPERTIES:
   :ID:       8e26d8fe-474b-44be-aa9d-64001fa1d240
   :END:
-#+BEGIN_SRC emacs-lisp  
+#+BEGIN_SRC emacs-lisp
+
   (use-package prog-mode
     ;; Force fringe indicators
     :hook (prog-mode . mb/enable-visual-line-fringe-indicators)
@@ -12,10 +13,51 @@
     (defun mb/enable-visual-line-fringe-indicators ()
       "Enable visual-line fringe-indicators."
       (setq-local visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))) )
+
 #+END_SRC
 
 #+RESULTS:
-| mb/enable-visual-line-fringe-indicators | yas-minor-mode |
+| rainbow-delimiters-mode | rainbow-delimeters-mode | mb/enable-visual-line-fringe-indicators | yas-minor-mode | company-mode |
+* iedit
+  - Idiom for automatically deploying multiple cursors for edit all occurrences of a particular word
+
+    #+begin_src emacs-lisp :tangle yes
+      (use-package iedit
+        :ensure t)
+    #+end_src
+
+    #+RESULTS:
+    
+* Flycheck
+  - disable the documentation checking in org-src
+  - add proselint checker
+#+begin_src emacs-lisp :tangle yes
+  (use-package flycheck
+    :ensure t
+    :hook (org-src-mode . disable-flycheck-for-elisp)
+    :init  ;; (global-flycheck-mode)
+    :config
+
+    (defun disable-flycheck-for-elisp ()
+      (setq-local flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
+
+    (add-to-list 'flycheck-checkers 'proselint)
+
+    (setq flycheck-check-syntax-automatically '(save idle-change mode-enabled)
+          flycheck-idle-change-delay 0.8)
+                                          ;(add-hook 'after-init-hook #'global-flycheck-mode)
+    (setq flycheck-highlighting-mode 'lines)
+    (setq flycheck-indication-mode 'left-margin)
+    (setq flycheck-checker-error-threshold 2000))
+
+  (use-package flycheck-inline
+    :ensure t
+    :config (global-flycheck-inline-mode))
+
+#+end_src
+
+#+RESULTS:
+: t
 
 * LSP
   :PROPERTIES:
@@ -26,8 +68,18 @@
     :ensure t
     :commands (lsp lsp-deferred)
     :init (setq lsp-keymap-prefix "C-c l")
-    :hook (python-mode . lsp-deferred)
+    :hook (
+          (c-mode . lsp-deferred)
+          (ess-r-mode . lsp-deferred)
+          (c++-mode . lsp-deferred)
+          (python-mode . lsp-deferred)
+          )
+    :custom
+    (lsp-enable-snippet t)
+    (lsp-prefer-flymake nil)
+    :bind (:map lsp-mode-map("C-C C-f" . lsp-format-buffer))
     :config
+      (setq lsp-prefer-flymake nil)
       (setq lsp-diagnostics-provider :flycheck)
       (setq lsp-diagnostics-flycheck-default-level 'warning)
       )
@@ -51,16 +103,25 @@
 
     (use-package lsp-ui
       :ensure t
+      :requires lsp-mode flymode flycheck
+      :commands lsp-ui-mode
       :defer t
       :config
       (setq lsp-ui-doc-delay 2)
-      (setq lsp-ui-sideline-enable t)
+      (setq lsp-ui-sideline-enable nil)
       (setq lsp-ui-sideline-show-hover t)
       (setq lsp-ui-doc-position 'bottom)
       ;(lsp-ui-doc-show)
-      :hook (lsp-mode . lsp-ui-mode)
+      :hook (
+            (lsp-mode . lsp-ui-mode)
+            (c-mode . flycheck-mode)
+            (c++mode . flycheck-mode)
+            (python-mode . flycheck-mode)
+            )
       :bind (:map lsp-ui-mode-map
-                  ("C-c i" . lsp-ui-imenu))
+                ([remap xref-find-definitions] . lsp-ui-peek-find-definitions)
+                ([remap xref-find-references] . lsp-ui-peek-find-references)
+                ("C-c i" . lsp-ui-imenu))
       :config
       (setq lsp-ui-doc-enable nil)
       (setq lsp-ui-doc-header t)
@@ -80,30 +141,13 @@
                     (setq-local truncate-partial-width-windows t)))
       (define-key lsp-ui-imenu-mode-map (kbd "C-c C-n") 'lsp-ui-imenu--next-kind)
       (define-key lsp-ui-imenu-mode-map (kbd "C-c C-p") 'lsp-ui-imenu--prev-kind)
-      (setq lsp-ui-sideline-enable t)
-      (setq lsp-ui-sideline-show-hover t)
-      (setq lsp-ui-sideline-show-diagnostics t)
-      (setq lsp-ui-sideline-show-symbol t)
-      (setq lsp-ui-sideline-update-mode 'line)
-      (setq lsp-ui-sideline-delay 0.2)
       (define-key lsp-ui-mode-map [remap xref-find-definitions] #'lsp-ui-peek-find-definitions)
       (define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references))
 
 
-    ;;(delete 'company-backends 'company-clang)
-
-
-    ;; (use-package company-lsp
-    ;;    :ensure t
-    ;;    :commands company-lsp
-    ;;    :after (company lsp-mode))
-    ;;    :config
-    ;;    (push 'company-lsp company-backends))
-
 #+END_SRC
 
 #+RESULTS:
-: t
 * Debug server
   :PROPERTIES:
   :ID:       6857b5d9-b720-4431-8eb7-eca2f4b2568a
@@ -216,7 +260,7 @@
  - sets automatic guess of the python offset but silences the warnings
  - for windows Python or ipython must be in the path
 #+BEGIN_SRC emacs-lisp
-  (use-package python-mode
+  (use-package python
     :ensure nil          ; use internal python-mode
     :hook  ((python-mode . linum-mode)
             (python-mode . show-paren-mode))
@@ -278,9 +322,14 @@
      :ensure t
      :init
         (setq lsp-pyhton-ms-auto-install-server t)
-     :hook (python-mode . (lambda ()
-                            (require 'lsp-python-ms)
-                            (lsp-deferred))))  ; lsp or lsp-deferred
+     :hook
+     (python-mode . (lambda ()
+                      (require 'lsp-python-ms)
+                      (lsp-deferred)))   ; lsp or lsp-deferred
+     (flycheck-mode . (lambda ()
+                      (flycheck-add-next-checker 'lsp 'python-flake8)
+                      (message "Added flycheck checkers."))))
+   
 
       ;; ensure:
       ;;; pip install jedi
@@ -324,6 +373,9 @@
 
 
 #+END_SRC
+
+#+RESULTS:
+| (lambda nil (flycheck-add-next-checker 'lsp 'python-flake8) (flycheck-add-next-checker 'python-flake8 'python-mypy) (message Added flycheck checkers.)) | flycheck-rust-setup | flycheck-mode-set-explicitly | doom-modeline-update-flycheck-text | doom-modeline-update-flycheck-icon |
 
 
 ** EIN-  emacs ipython notebooks

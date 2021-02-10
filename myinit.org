@@ -94,12 +94,9 @@ Set path, foce ispell checker to hunspell and initilize English dictionaries
     ;;(menu-bar-mode -1)
     (scroll-bar-mode -1)
     (blink-cursor-mode -1)
-    (show-paren-mode 1)
     (line-number-mode 1)
     (column-number-mode 1)
-
-    ;; Set fringe sizes
-    (fringe-mode 20)
+    (show-paren-mode 1)
 
 
     (fset 'yes-or-no-p 'y-or-n-p)
@@ -138,7 +135,7 @@ Set path, foce ispell checker to hunspell and initilize English dictionaries
 #+END_SRC
 
 #+RESULTS:
-: revert-buffer
+: mb/command-error-function
 
 * DOOM Modeline
   #+begin_src emacs-lisp :tangle yes

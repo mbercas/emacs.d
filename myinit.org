@@ -22,6 +22,25 @@ Set path, foce ispell checker to hunspell and initilize English dictionaries
 #+RESULTS:
 : t
 
+* Launch processes in bash
+#+BEGIN_SRC emacs-lisp
+      ;; Run asyncronous processes on the bash
+    (defun mb/async-process (command &optional name filter)
+    "Start an async process by running the COMMAND string with bash.
+     Return the process object for it
+
+
+    NAME is name for the process. Default is \"async-process\".
+
+    FILTER is function that runs after the process is finished, its args should be
+    \"(process output)\". Default is just messages the output."
+   (make-process
+     :command `("bash" "-c" ,command)
+     :name (if name name
+	      "async-process")
+     :filter (if filter filter
+	       (lambda (process output) (message (s-trim output))))))
+#+END_SRC
 * Set calendar
 #+BEGIN_SRC emacs-lisp
   (setq holiday-general-holidays
@@ -63,12 +82,12 @@ Set path, foce ispell checker to hunspell and initilize English dictionaries
     ;; is this comment being picked
   (progn
 
-    (setq user-full-name "Manuel Berrocal")  
+    (setq user-full-name "Manuel Berrocal")
 
     ;; Use spaces instead of tabs
     (setq-default indent-tabs-mode nil)
 
-    ;; Set default fill column to 78
+    ;; Set default fill column to 90
     (setq-default fill-column 90)
 
     (setq frame-resize-pixelwise t)
@@ -81,7 +100,7 @@ Set path, foce ispell checker to hunspell and initilize English dictionaries
     (defun on-after-init ()
       "Turn off background."
       (unless (display-graphic-p (selected-frame))
-          (set-face-background 'default "unspecified-bg" (selected-frame))))
+	  (set-face-background 'default "unspecified-bg" (selected-frame))))
     (add-hook 'window-setup-hook 'on-after-init)
 
     (setq inhibit-startup-message t)
@@ -114,7 +133,7 @@ Set path, foce ispell checker to hunspell and initilize English dictionaries
       (run-with-timer 0.1 nil #'invert-face 'mode-line))
 
     (setq visible-bell nil
-          ring-bell-function #'mb/subtle-visible-bell)
+	  ring-bell-function #'mb/subtle-visible-bell)
 
     ;; Suppress bells for reaching beginning and end of buffer
     ;; Source: https://emacs.stackexchange.com/questions/10932/how-do-you-disable-the-buffer-end-beginning-warnings-in-the-minibuffer/20039
@@ -125,9 +144,9 @@ Set path, foce ispell checker to hunspell and initilize English dictionaries
   For details on DATA, CONTEXT, and SIGNAL, see
   `command-error-function'."
       (when (not (memq (car data) '(buffer-read-only
-                                    beginning-of-buffer
-                                    end-of-buffer)))
-        (command-error-default-function data context signal)))
+				    beginning-of-buffer
+				    end-of-buffer)))
+	(command-error-default-function data context signal)))
 
     (setq command-error-function #'mb/command-error-function)
 
@@ -143,7 +162,7 @@ Set path, foce ispell checker to hunspell and initilize English dictionaries
       :ensure t
       :init (doom-modeline-mode 1)
       :config
-  
+
       )
   #+end_src
 
@@ -321,7 +340,7 @@ Integrate highlight-parentheses with autopair mode:
       :config
       (progn
 
-    ;;; add autocompletion 
+    ;;; add autocompletion
         (defun org-easy-template--completion-table (str pred action)
           (pcase action
             (`nil (try-completion  str org-structure-template-alist pred))
@@ -392,7 +411,7 @@ Integrate highlight-parentheses with autopair mode:
                 (("C-c n l" . org-roam)
                  ("C-c n f" . org-roam-find-file)
                  ("C-c n g" . org-roam-graph-show)))
-     :init 
+     :init
      (setq org-roam-directory (file-truename "~/org-roam")
            org-roam-db-gc-threshold most-positive-fixnum
            org-roam-graph-exclude-matcher "private"
@@ -443,12 +462,12 @@ Integrate highlight-parentheses with autopair mode:
   ;; (use-package company-org-roam
   ;;   :ensure t
   ;;   :disabled
-  ;;   ;; You may want to pin in case the version from stable.melpa.org is not working 
+  ;;   ;; You may want to pin in case the version from stable.melpa.org is not working
   ;;   :pin melpa
   ;;   :config
   ;;   (push 'company-org-roam company-backends))
 
-  (use-package 
+  (use-package
     deft
     :ensure t
     :after (org org-roam)
@@ -736,57 +755,97 @@ Integrate highlight-parentheses with autopair mode:
   - using spacemacs theme but spaceline is disabled
 #+BEGIN_SRC emacs-lisp
 
-    ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+   (use-package nlinum-hl
+      :ensure t)
 
-  ;;  (use-package color-theme
-  ;;  :ensure t)
+   (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
-  ;;  (use-package zenburn-theme
-  ;;  :ensure t
-  ;;  :config (load-theme 'zenburn t))
+    (use-package mode-icons
+      :ensure t
+      :init (mode-icons-mode))
 
-  (use-package mode-icons
-    :ensure t
-    :init (mode-icons-mode))
+   (use-package doom-themes
+      :ensure t
+      :defer
+      :hook
+  ;; brighter source buffers (that represent files)
+       (
+  ;; And you can brighten other buffers (unconditionally) with:
+        (ediff-prepare-buffer . doom-buffer-mode)
+  ;; brighter minibuffer when active
+        ;;(minibuffer-setup . doom-brighten-minibuffer)
+        )
 
-  ;; spacemacs look
-  (use-package spacemacs-theme
-    :defer t
-    :init
-    (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-    (load-theme 'spacemacs-dark t)
-    (setq spacemacs-theme-org-agenda-height nil)
-    (setq spacemacs-theme-org-height nil)
-    :config
-    ;; set sizes here to stop spacemacs theme resizing these
+      :config
+  ;;; Settings (defaults)
+      (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+            doom-themes-enable-italic t  ; if nil, italics is universally disabled
+
+        ;; doom-one specific settings
+            doom-one-brighter-modeline nil
+            doom-one-brighter-comments nil)
+      (add-to-list 'load-path "~/.emacs.d/elpa/doom-themes-2.1.6/")
+      ;; Load the theme (doom-one, doom-dark, etc.)
+      (load-theme 'doom-one-light t)
+
+      ;; set sizes here to stop spacemacs theme resizing these
       (set-face-attribute 'org-level-1 nil :height 1.0)
       (set-face-attribute 'org-level-2 nil :height 1.0)
       (set-face-attribute 'org-level-3 nil :height 1.0)
       (set-face-attribute 'org-scheduled-today nil :height 1.0)
       (set-face-attribute 'org-agenda-date-today nil :height 1.1)
-      (set-face-attribute 'org-table nil :foreground "#008787"))
 
-  (use-package spaceline-all-the-icons
-    :disabled t
-    :ensure t
-    :demand t)
+      ;; Enable flashing mode-line on errors
+      (doom-themes-visual-bell-config)
 
-  (use-package spaceline
-    :disabled t
-    :ensure t
-    :demand t
-    :init
-    (setq powerline-default-separator 'arrow-fade)
-    :config
-    (require 'spaceline-config)
-    (spaceline-emacs-theme))
+      ;; Enable custom neotree theme (all-the-icons must be installed!)
+      (doom-themes-neotree-config)
+      ;; or for treemacs users
+      (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
+      (doom-themes-treemacs-config)
+
+      ;; Corrects (and improves) org-mode's native fontification.
+      (doom-themes-org-config))
+
+    ;; spacemacs look
+    ;; (use-package spacemacs-theme
+    ;;   :disabled t
+    ;;   :defer t
+    ;;   :init
+    ;;   (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+    ;;   (load-theme 'spacemacs-dark t)
+    ;;   (setq spacemacs-theme-org-agenda-height nil)
+    ;;   (setq spacemacs-theme-org-height nil)
+    ;;   :config
+    ;;   ;; set sizes here to stop spacemacs theme resizing these
+    ;;     (set-face-attribute 'org-level-1 nil :height 1.0)
+    ;;     (set-face-attribute 'org-level-2 nil :height 1.0)
+    ;;     (set-face-attribute 'org-level-3 nil :height 1.0)
+    ;;     (set-face-attribute 'org-scheduled-today nil :height 1.0)
+    ;;     (set-face-attribute 'org-agenda-date-today nil :height 1.1)
+    ;;     (set-face-attribute 'org-table nil :foreground "#008787"))
+
+    ;; (use-package spaceline-all-the-icons
+    ;;   :disabled t
+    ;;   :ensure t
+    ;;   :demand t)
+
+    ;; (use-package spaceline
+    ;;   :disabled t
+    ;;   :ensure t
+    ;;   :demand t
+    ;;   :init
+    ;;   (setq powerline-default-separator 'arrow-fade)
+    ;;   :config
+    ;;   (require 'spaceline-config)
+    ;;   (spaceline-emacs-theme))
 
 
 
   #+END_SRC
 
   #+RESULTS:
-  : t
+  | doom-buffer-mode |
 * Web browsing
  - set EWW as default browser
  - see http://pragmaticemacs.com/emacs/to-eww-or-not-to-eww/ on how
@@ -807,4 +866,3 @@ Integrate highlight-parentheses with autopair mode:
 #+END_SRC
 
 #+RESULTS:
-

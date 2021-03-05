@@ -1,64 +1,24 @@
 #+STARTUP: overview
-
 * Prog mode
-  :PROPERTIES:
-  :ID:       8e26d8fe-474b-44be-aa9d-64001fa1d240
-  :END:
 #+BEGIN_SRC emacs-lisp
 
-  (use-package prog-mode
-    ;; Force fringe indicators
-    :hook (prog-mode . mb/enable-visual-line-fringe-indicators)
-    :config
-    (defun mb/enable-visual-line-fringe-indicators ()
-      "Enable visual-line fringe-indicators."
-      (setq-local visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))) )
+  (when window-system
+    (use-package prog-mode
+      ;; Force fringe indicators
+      :hook (prog-mode . mb/enable-visual-line-fringe-indicators)
+      :config
+      (defun mb/enable-visual-line-fringe-indicators ()
+        "Enable visual-line fringe-indicators."
+        (setq-local visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))) )
+  )
 
 #+END_SRC
-
-#+RESULTS:
-| rainbow-delimiters-mode | rainbow-delimeters-mode | mb/enable-visual-line-fringe-indicators | yas-minor-mode | company-mode |
 * iedit
   - Idiom for automatically deploying multiple cursors for edit all occurrences of a particular word
-
     #+begin_src emacs-lisp :tangle yes
       (use-package iedit
         :ensure t)
     #+end_src
-
-    #+RESULTS:
-    
-* Flycheck
-  - disable the documentation checking in org-src
-  - add proselint checker
-#+begin_src emacs-lisp :tangle yes
-  (use-package flycheck
-    :ensure t
-    :hook (org-src-mode . disable-flycheck-for-elisp)
-    :init  ;; (global-flycheck-mode)
-    :config
-
-    (defun disable-flycheck-for-elisp ()
-      (setq-local flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
-
-    (add-to-list 'flycheck-checkers 'proselint)
-
-    (setq flycheck-check-syntax-automatically '(save idle-change mode-enabled)
-          flycheck-idle-change-delay 0.8)
-                                          ;(add-hook 'after-init-hook #'global-flycheck-mode)
-    (setq flycheck-highlighting-mode 'lines)
-    (setq flycheck-indication-mode 'left-margin)
-    (setq flycheck-checker-error-threshold 2000))
-
-  (use-package flycheck-inline
-    :ensure t
-    :config (global-flycheck-inline-mode))
-
-#+end_src
-
-#+RESULTS:
-: t
-
 * LSP
   :PROPERTIES:
   :ID:       9d2cdcfe-5831-432f-b0a4-603c1f1a8f2e
@@ -161,26 +121,6 @@
     :config
     (dap-auto-configure-mode))
 #+END_SRC
-* Yasnippets
-  :PROPERTIES:
-  :ID:       28ce112d-6e7b-4aa1-bf97-f20b94388b0d
-  :END:
-#+BEGIN_SRC emacs-lisp
-(use-package yasnippet
-   :ensure t
-   :hook (prog-mode . yas-minor-mode)
-   :hook (org-mode . yas-minor-mode)
-   :config
-   (use-package yasnippet-snippets
-       :ensure t
-       :pin melpa)
-
-   (yas-reload-all))
-#+END_SRC
-
-#+RESULTS:
-| yas-minor-mode |
-
 * C / C++ language configuration
   :PROPERTIES:
   :ID:       b3bfae62-1193-45d4-a698-48a886e8bd09
@@ -252,7 +192,25 @@
 
 
 #+END_SRC
+* Yasnippets
+  :PROPERTIES:
+  :ID:       28ce112d-6e7b-4aa1-bf97-f20b94388b0d
+  :END:
+#+BEGIN_SRC emacs-lisp
+(use-package yasnippet
+   :ensure t
+   :hook (prog-mode . yas-minor-mode)
+   :hook (org-mode . yas-minor-mode)
+   :config
+   (use-package yasnippet-snippets
+       :ensure t
+       :pin melpa)
 
+   (yas-reload-all))
+#+END_SRC
+
+#+RESULTS:
+| yas-minor-mode |
 * Python language configuration
   :PROPERTIES:
   :ID:       5566bb11-5568-45af-92ff-31ffad6b8b81
@@ -260,136 +218,159 @@
  - sets automatic guess of the python offset but silences the warnings
  - for windows Python or ipython must be in the path
 #+BEGIN_SRC emacs-lisp
-  (use-package python
-    :ensure nil          ; use internal python-mode
-    :hook  ((python-mode . linum-mode)
-            (python-mode . show-paren-mode))
-    :config
-    ;; Remove guess indent python message
-    (setq python-indent-guess-indent-offset-verbose nil)
-    ;; Use IPython when available or fall back to regular Python 
-    (cond
-     ((executable-find "ipython")
-      (progn
-        (setq python-shell-buffer-name "IPython")
-        (setq python-shell-interpreter "ipython")
-        (setq python-shell-interpreter-args "-i --simple-prompt")))
-     ((executable-find "python3")
-      (setq python-shell-interpreter "python3"))
-     ((executable-find "python2")
-      (setq python-shell-interpreter "python2"))
-     (t
-      (setq python-shell-interpreter "python"))))
-
-  ;; Hide the modeline for inferior python processes
-  (use-package inferior-python-mode
-    :ensure nil
-    :hook (inferior-python-mode . hide-mode-line-mode))
-
-  ;; Required to hide the modeline 
-  (use-package hide-mode-line
-    :ensure t
-    :defer t)
-
-  ;; Required to easily switch virtual envs 
-  ;; via the menu bar or with `pyvenv-workon` 
-  ;; Setting the `WORKON_HOME` environment variable points 
-  ;; at where the envs are located. I use miniconda. 
-  (use-package pyvenv
-    :ensure t
-    :defer t
-    :config
-    ;; Setting work on to easily switch between environments
-    (setenv "WORKON_HOME" (expand-file-name "~/.virtualenvs/"))
-    ;; Display virtual envs in the menu bar
-    (setq pyvenv-menu t)
-    ;; Restart the python process when switching environments
-    (add-hook 'pyvenv-post-activate-hooks (lambda ()
-                                            (pyvenv-restart-python)))
-    :hook (python-mode . pyvenv-mode))
+    (use-package python
+      :ensure nil          ; use internal python-mode
+      :hook  ((python-mode . linum-mode)
+              (python-mode . show-paren-mode)
+              (python-mode . lsp-deferred)
+              )
+      :config
+      ;; dap mode for debugging
+      (require 'dap-python)
 
 
+      ;; Remove guess indent python message
+      (setq python-indent-guess-indent-offset-verbose nil)
 
-    ;; Format the python buffer following YAPF rules
-    ;; There's also blacken if you like it better.
-    (use-package yapfify
+      ;; remove trailing white space before saving
+      (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+      ;; Use IPython when available or fall back to regular Python
+      (cond
+       ((executable-find "ipython")
+        (progn
+          (setq python-shell-buffer-name "IPython")
+          (setq python-shell-interpreter "ipython")
+          (setq python-shell-interpreter-args "-i --simple-prompt")))
+       ((executable-find "python3")
+        (setq python-shell-interpreter "python3"))
+       ((executable-find "python2")
+        (setq python-shell-interpreter "python2"))
+       (t
+        (setq python-shell-interpreter "python"))))
+
+    ;; Hide the modeline for inferior python processes
+    (use-package inferior-python-mode
+      :ensure nil
+      :hook (inferior-python-mode . hide-mode-line-mode))
+
+    ;; Required to hide the modeline
+    (use-package hide-mode-line
+      :ensure t
+      :defer t)
+
+    ;; Required to easily switch virtual envs
+    ;; via the menu bar or with `pyvenv-workon`
+    ;; Setting the `WORKON_HOME` environment variable points
+    ;; at where the envs are located. I use miniconda.
+    (use-package pyvenv
       :ensure t
       :defer t
-      :hook (python-mode . yapf-mode))
+      :after python
+      :config
+      ;; Setting work on to easily switch between environments
+      (setenv "WORKON_HOME" (expand-file-name "~/.virtualenvs/"))
+      ;; Display virtual envs in the menu bar
+      (setq pyvenv-menu t)
+      ;; Restart the python process when switching environments
+      (add-hook 'pyvenv-post-activate-hooks (lambda ()
+                                              (pyvenv-restart-python)))
+      :hook (python-mode . pyvenv-mode))
 
 
-   (use-package lsp-python-ms
-     :ensure t
-     :init
-        (setq lsp-pyhton-ms-auto-install-server t)
-     :hook
-     (python-mode . (lambda ()
-                      (require 'lsp-python-ms)
-                      (lsp-deferred)))   ; lsp or lsp-deferred
-     (flycheck-mode . (lambda ()
-                      (flycheck-add-next-checker 'lsp 'python-flake8)
-                      (message "Added flycheck checkers."))))
-   
 
-      ;; ensure:
-      ;;; pip install jedi
-      ;;  pip install flake8
-      ;;  pip install importmagic
-      ;;  pip install autopep8
-      ;;  pip install yapf
-      ;;  pip install python-language-sever[all]
+  ;; Format the python buffer following YAPF rules
+  ;; There's also blacken if you like it better.
+  (use-package yapfify
+    :ensure t
+    :defer t
+    :hook (python-mode . yapf-mode))
 
-      ;; (use-package elpy
-      ;;   :ensure nil
-      ;;   :init (advice-add 'python-mode :before 'elpy-enable)
-      ;;   :hook (elpy-mode . flycheck-mode)
-      ;;   :hook (elpy-mode . show-paren-mode)
-      ;;   :hook (elpy-mode . linum-mode)
-      ;;   :config
-      ;;   (progn
-      ;;     (setq
-      ;;       python-shell-interpreter "ipython3"
-      ;;       python-shell-interpreter-args "--simple-prompt -i"
-      ;;       elpy-rpc-backend "jedi"
-      ;;       elpy-rpc-project-specfic 't)
-      ;;     (when (fboundp 'flycheck-mode)
-      ;;       (setq elpy-modules (delete 'elpy-module-flymake elpy-modules)))
-      ;;     (add-hook 'elpy-mode-hook
-      ;;       (lambda ()
-      ;;         (set (make-local-variable 'company-backends)
-      ;;          (append company-backends '(company-yasnippet)))))
 
-      ;;     ;;;(add-hook 'elpy-mode-hook (lambda () (linum-mode 1)))
-      ;;     (add-hook 'before-save-hook 'delete-trailing-whitespace)
-      ;;     (add-hook 'python-mode-hook (lambda() (auto-complete-mode -1)))
-      ;;     )
-      ;; )
+  (use-package lsp-pyright
+    :ensure t
+    :after lsp-mode
+    :hook (python-mode . (lambda ()
+                         (require 'lsp-pyright)
+                       (lsp-deferred)))
+    :custom
+    (lsp-pyright-auto-import-completions nil)
+    (lsp-pyright-typechecking-mode "off")
+    :config
+    (mb/async-process
+     "npm outdated -g | grep pyright | wc -l" nil
+     (lambda (process output)
+       (pcase output
+         ("0\n" (message "Pyright is up to date."))
+         ("1\n" (message "A pyright update is available."))))))
 
-      ;; ;;; Disable takes too much CPU on this computer
 
-      ;; (use-package pyvenv
-      ;;   :ensure t
-      ;;   :after python)
+   ;; (use-package lsp-python-ms
+   ;;     :disabled t
+   ;;     :ensure t
+   ;;     :init
+   ;;        (setq lsp-pyhton-ms-auto-install-server t)
+   ;;     :hook
+   ;;     (python-mode . (lambda ()
+   ;;                      (require 'lsp-python-ms)
+   ;;                      (lsp-deferred)))   ; lsp or lsp-deferred
+   ;;     (flycheck-mode . (lambda ()
+   ;;                      (flycheck-add-next-checker 'lsp 'python-flake8)
+   ;;                      (message "Added flycheck checkers."))))
+
+
+   ;;      ;; ensure:
+        ;;; pip install jedi
+        ;;  pip install flake8
+        ;;  pip install importmagic
+        ;;  pip install autopep8
+        ;;  pip install yapf
+        ;;  pip install python-language-sever[all]
+
+        ;; (use-package elpy
+        ;;   :ensure nil
+        ;;   :init (advice-add 'python-mode :before 'elpy-enable)
+        ;;   :hook (elpy-mode . flycheck-mode)
+        ;;   :hook (elpy-mode . show-paren-mode)
+        ;;   :hook (elpy-mode . linum-mode)
+        ;;   :config
+        ;;   (progn
+        ;;     (setq
+        ;;       python-shell-interpreter "ipython3"
+        ;;       python-shell-interpreter-args "--simple-prompt -i"
+        ;;       elpy-rpc-backend "jedi"
+        ;;       elpy-rpc-project-specfic 't)
+        ;;     (when (fboundp 'flycheck-mode)
+        ;;       (setq elpy-modules (delete 'elpy-module-flymake elpy-modules)))
+        ;;     (add-hook 'elpy-mode-hook
+        ;;       (lambda ()
+        ;;         (set (make-local-variable 'company-backends)
+        ;;          (append company-backends '(company-yasnippet)))))
+
+        ;;     ;;;(add-hook 'elpy-mode-hook (lambda () (linum-mode 1)))
+        ;;     (add-hook 'before-save-hook 'delete-trailing-whitespace)
+        ;;     (add-hook 'python-mode-hook (lambda() (auto-complete-mode -1)))
+        ;;     )
+        ;; )
 
 
 #+END_SRC
 
-#+RESULTS:
-| (lambda nil (flycheck-add-next-checker 'lsp 'python-flake8) (flycheck-add-next-checker 'python-flake8 'python-mypy) (message Added flycheck checkers.)) | flycheck-rust-setup | flycheck-mode-set-explicitly | doom-modeline-update-flycheck-text | doom-modeline-update-flycheck-icon |
-
-
-** EIN-  emacs ipython notebooks
+* EIN-  emacs Jupiter notebooks
    :PROPERTIES:
    :ID:       f1de85a7-c17b-40d7-acad-bbacb217f6f8
    :END:
 #+BEGIN_SRC emacs-lisp
-(use-package anaphora
-  :ensure t)
+  (use-package anaphora
+    :ensure t)
 
-(use-package ein
-  :ensure t
-  :commands (ein:notebooklist-open))
+  (use-package ein
+    :ensure t
+    :commands (ein:notebooklist-open ein:run)
+    )
 #+END_SRC
+
+#+RESULTS:
 
 * Lua configuration - lua mode
   :PROPERTIES:
@@ -405,7 +386,6 @@
 (add-hook 'lua-mode-hook (lambda () (linum-mode 1)))
 
 #+END_SRC
-
 * Mark-down mode and enable auto-correction
   :PROPERTIES:
   :ID:       17d2b23e-8266-4539-b057-f98b649b5fb8
@@ -424,7 +404,6 @@
     )
   )
 #+END_SRC
-
 * Lisp - enable slime (disabled)
   :PROPERTIES:
   :ID:       c9adce4f-27f5-4e6b-be19-76f5a0cf16dd
@@ -491,7 +470,6 @@
 
 #+RESULTS:
 : sbcl
-
 * Markdown
   :PROPERTIES:
   :ID:       521070f8-9e10-4eed-b326-b2af63426333
@@ -521,75 +499,80 @@
 )
 
 #+END_SRC
-
 * ESS - R
   :PROPERTIES:
   :ID:       0fabfe30-20dd-4648-8f52-ab492f0e0301
   :END:
 #+BEGIN_SRC emacs-lisp
-  (defun japhir/insert-r-pipe ()
-    "Insert the pipe operator in R, %>%"
-    (interactive)
-    (just-one-space 1)
-    (insert "%>%")
-    (reindent-then-newline-and-indent))
+    (defun japhir/insert-r-pipe ()
+      "Insert the pipe operator in R, %>%"
+      (interactive)
+      (just-one-space 1)
+      (insert "%>%")
+      (reindent-then-newline-and-indent))
 
-  (use-package ess
-    ;; :load-path "/usr/share/emacs/site-lisp/ess/"
-    :ensure t
-    :pin melpa-stable
-    ;; :init (require 'ess-site)  ;; seems like this is needed to load the minor modes as well keybindings don't work without it
-    ;; :hook ((ess-r-mode inferior-ess-r-mode) . electric-layout-mode)  ;; commented out since new curly-curly operator for rlang
-    :commands R
-    ;; :bind (:map ess-r-mode-map
-    ;;        (";" . ess-insert-assign)
-    ;;        ;; RStudio equivalents
-    ;;        ("M--" . ess-insert-assign)
-    ;;        ("C-S-m" . japhir/insert-r-pipe)
-    ;;        :map inferior-ess-r-mode-map
-    ;;        (";" . ess-insert-assign)
-    ;;        ("M--" . ess-insert-assign)
-    ;;        ("C-S-m" . japhir/insert-r-pipe))
-    :config
-    (defun my-org-confirm-babel-evaluate (lang body)
-      (not (or (string= lang "R")
-               (string= lang "elisp")
-               (string= lang "emacs-lisp")
-               (string= lang "latex"))))
-    (setq display-buffer-alist
-          '(("*R"
-             (display-buffer-reuse-window display-buffer-pop-up-frame)
-             (reusable-frames . 0)))
-          ess-help-own-frame 'one
-          ess-auto-width 'frame
-          org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate
-          ess-style 'RStudio
-          ess-use-auto-complete nil
-          ess-use-company t
-          ess-indent-with-fancy-comments nil
-          ess-pdf-viewer-pref 'emacsclient
-          inferior-R-args "--no-restore-history --no-save"
-          ess-ask-for-ess-directory nil
-          ess-R-font-lock-keywords
-          (quote
-           ((ess-R-fl-keyword:modifiers)
-            (ess-R-fl-keyword:fun-defs . t)
-            (ess-R-fl-keyword:keywords . t)
-            (ess-R-fl-keyword:assign-ops . t)
-            (ess-R-fl-keyword:constants . t)
-            (ess-R-fl-keyword:fun-cals . t)
-            (ess-R-fl-keyword:numbers)
-            (ess-R-fl-keyword:operators . t)
-            (ess-R-fl-keyword:delimiters)
-            (ess-R-fl-keyword:=)
-            (ess-R-fl-keyword:F&T))))
-    (add-hook 'ess-r-mode-hook (lambda () (linum-mode 1)))
-)
+    (use-package ess
+      ;; :load-path "/usr/share/emacs/site-lisp/ess/"
+      :ensure t
+      :pin melpa-stable
+      ;; :init (require 'ess-site)  ;; seems like this is needed to load the minor modes as well keybindings don't work without it
+      ;; :hook ((ess-r-mode inferior-ess-r-mode) . electric-layout-mode)  ;; commented out since new curly-curly operator for rlang
+      :hook  ((ess-mode . linum-mode)
+              (ess-mode . show-paren-mode)
+              (ess-mode . flycheck-mode)
+            )
+
+      :commands R
+      ;; :bind (:map ess-r-mode-map
+      ;;        (";" . ess-insert-assign)
+      ;;        ;; RStudio equivalents
+      ;;        ("M--" . ess-insert-assign)
+      ;;        ("C-S-m" . japhir/insert-r-pipe)
+      ;;        :map inferior-ess-r-mode-map
+      ;;        (";" . ess-insert-assign)
+      ;;        ("M--" . ess-insert-assign)
+      ;;        ("C-S-m" . japhir/insert-r-pipe))
+      :config
+      (defun my-org-confirm-babel-evaluate (lang body)
+        (not (or (string= lang "R")
+                 (string= lang "elisp")
+                 (string= lang "emacs-lisp")
+                 (string= lang "latex"))))
+      (add-hook 'before-save-hook 'delete-trailing-whitespace)
+      (setq display-buffer-alist
+            '(("*R"
+               (display-buffer-reuse-window display-buffer-pop-up-frame)
+               (reusable-frames . 0)))
+            ess-help-own-frame 'one
+            ess-auto-width 'frame
+            org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate
+            ess-style 'RStudio
+            ess-use-auto-complete nil
+            ess-use-company t
+            ess-indent-with-fancy-comments nil
+            ess-pdf-viewer-pref 'emacsclient
+            inferior-R-args "--no-restore-history --no-save"
+            ess-ask-for-ess-directory nil
+            ess-R-font-lock-keywords
+            (quote
+             ((ess-R-fl-keyword:modifiers)
+              (ess-R-fl-keyword:fun-defs . t)
+              (ess-R-fl-keyword:keywords . t)
+              (ess-R-fl-keyword:assign-ops . t)
+              (ess-R-fl-keyword:constants . t)
+              (ess-R-fl-keyword:fun-cals . t)
+              (ess-R-fl-keyword:numbers)
+              (ess-R-fl-keyword:operators . t)
+              (ess-R-fl-keyword:delimiters)
+              (ess-R-fl-keyword:=)
+              (ess-R-fl-keyword:F&T))))
+      (add-hook 'ess-r-mode-hook (lambda () (linum-mode 1)))
+  )
 
 #+END_SRC
 
 #+RESULTS:
-: t
+| flycheck-mode | show-paren-mode | linum-mode | ess-r-setup-flymake |
 * Rust
   :PROPERTIES:
   :ID:       fd711fc9-8529-4b29-bab9-ea32b44371eb

@@ -33,10 +33,13 @@
           (ess-r-mode . lsp-deferred)
           (c++-mode . lsp-deferred)
           (python-mode . lsp-deferred)
+          (rust-mode . lsp-deferred)
           )
     :custom
+    (lsp-idle-delay 0.6)
+    (lsp-eldoc-render-all t)
     (lsp-enable-snippet t)
-    (lsp-prefer-flymake nil)
+    (lsp-rust-analyzer-server-display-inlay-hints t)
     :bind (:map lsp-mode-map("C-C C-f" . lsp-format-buffer))
     :config
       (setq lsp-prefer-flymake nil)
@@ -66,12 +69,6 @@
       :requires lsp-mode flymode flycheck
       :commands lsp-ui-mode
       :defer t
-      :config
-      (setq lsp-ui-doc-delay 2)
-      (setq lsp-ui-sideline-enable nil)
-      (setq lsp-ui-sideline-show-hover t)
-      (setq lsp-ui-doc-position 'bottom)
-      ;(lsp-ui-doc-show)
       :hook (
             (lsp-mode . lsp-ui-mode)
             (c-mode . flycheck-mode)
@@ -80,16 +77,20 @@
             )
       :bind (:map lsp-ui-mode-map
                 ([remap xref-find-definitions] . lsp-ui-peek-find-definitions)
-                ([remap xref-find-references] . lsp-ui-peek-find-references)
-                ("C-c i" . lsp-ui-imenu))
+                ([remap xref-find-references] . lsp-ui-peek-find-references))
       :config
-      (setq lsp-ui-doc-enable nil)
+      (setq lsp-ui-doc-enable t)
       (setq lsp-ui-doc-header t)
       (setq lsp-ui-doc-include-signature t)
       (setq lsp-ui-doc-max-width 120)
       (setq lsp-ui-doc-max-height 20)
-      (setq lsp-ui-doc-delay 0.5)
+      (setq lsp-ui-doc-delay 2)
+      (setq lsp-ui-doc-position 'top)
+      (setq lsp-ui-doc-alignment 'frame)
       (setq lsp-ui-doc-use-childframe t)
+      (setq lsp-ui-sideline-enable nil)
+      (setq lsp-ui-sideline-delay 4)
+      (setq lsp-ui-sideline-show-hover t)
       (setq lsp-ui-peek-enable t)
       (setq lsp-ui-peek-peek-height 20)
       (setq lsp-ui-peek-fontify 'on-demand)
@@ -218,143 +219,152 @@
  - sets automatic guess of the python offset but silences the warnings
  - for windows Python or ipython must be in the path
 #+BEGIN_SRC emacs-lisp
-    (use-package python
-      :ensure nil          ; use internal python-mode
-      :hook  ((python-mode . linum-mode)
-              (python-mode . show-paren-mode)
-              (python-mode . lsp-deferred)
-              )
-      :config
-      ;; dap mode for debugging
-      (require 'dap-python)
+            (use-package python
+              :ensure nil          ; use internal python-mode
+              :hook  ((python-mode . linum-mode)
+                      (python-mode . show-paren-mode)
+                      (python-mode . lsp-deferred)
+                      )
+              :config
+              ;; dap mode for debugging
+              (require 'dap-python)
 
 
-      ;; Remove guess indent python message
-      (setq python-indent-guess-indent-offset-verbose nil)
+              ;; Remove guess indent python message
+              (setq python-indent-guess-indent-offset-verbose nil)
 
-      ;; remove trailing white space before saving
-      (add-hook 'before-save-hook 'delete-trailing-whitespace)
+              ;; remove trailing white space before saving
+              (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-      ;; Use IPython when available or fall back to regular Python
-      (cond
-       ((executable-find "ipython")
-        (progn
-          (setq python-shell-buffer-name "IPython")
-          (setq python-shell-interpreter "ipython")
-          (setq python-shell-interpreter-args "-i --simple-prompt")))
-       ((executable-find "python3")
-        (setq python-shell-interpreter "python3"))
-       ((executable-find "python2")
-        (setq python-shell-interpreter "python2"))
-       (t
-        (setq python-shell-interpreter "python"))))
+              ;; Use IPython when available or fall back to regular Python
+              (cond
+               ((executable-find "ipython")
+                (progn
+                  (setq python-shell-buffer-name "IPython")
+                  (setq python-shell-interpreter "ipython")
+                  (setq python-shell-interpreter-args "-i --simple-prompt")))
+               ((executable-find "python3")
+                (setq python-shell-interpreter "python3"))
+               ((executable-find "python2")
+                (setq python-shell-interpreter "python2"))
+               (t
+                (setq python-shell-interpreter "python"))))
 
-    ;; Hide the modeline for inferior python processes
-    (use-package inferior-python-mode
-      :ensure nil
-      :hook (inferior-python-mode . hide-mode-line-mode))
+            ;; Hide the modeline for inferior python processes
+            (use-package inferior-python-mode
+              :ensure nil
+              :hook (inferior-python-mode . hide-mode-line-mode))
 
-    ;; Required to hide the modeline
-    (use-package hide-mode-line
-      :ensure t
-      :defer t)
+            ;; Required to hide the modeline
+            (use-package hide-mode-line
+              :ensure t
+              :defer t)
 
-    ;; Required to easily switch virtual envs
-    ;; via the menu bar or with `pyvenv-workon`
-    ;; Setting the `WORKON_HOME` environment variable points
-    ;; at where the envs are located. I use miniconda.
-    (use-package pyvenv
-      :ensure t
-      :defer t
-      :after python
-      :config
-      ;; Setting work on to easily switch between environments
-      (setenv "WORKON_HOME" (expand-file-name "~/.virtualenvs/"))
-      ;; Display virtual envs in the menu bar
-      (setq pyvenv-menu t)
-      ;; Restart the python process when switching environments
-      (add-hook 'pyvenv-post-activate-hooks (lambda ()
-                                              (pyvenv-restart-python)))
-      :hook (python-mode . pyvenv-mode))
-
-
-
-  ;; Format the python buffer following YAPF rules
-  ;; There's also blacken if you like it better.
-  (use-package yapfify
-    :ensure t
-    :defer t
-    :hook (python-mode . yapf-mode))
+            ;; Required to easily switch virtual envs
+            ;; via the menu bar or with `pyvenv-workon`
+            ;; Setting the `WORKON_HOME` environment variable points
+            ;; at where the envs are located. I use miniconda.
+            (use-package pyvenv
+              :ensure t
+              :defer t
+              :after python
+              :config
+              ;; Setting work on to easily switch between environments
+              (setenv "WORKON_HOME" (expand-file-name "~/.virtualenvs/"))
+              ;; Display virtual envs in the menu bar
+              (setq pyvenv-menu t)
+              ;; Restart the python process when switching environments
+              (add-hook 'pyvenv-post-activate-hooks (lambda ()
+                                                      (pyvenv-restart-python)))
+              :hook (python-mode . pyvenv-mode))
 
 
-  (use-package lsp-pyright
-    :ensure t
-    :after lsp-mode
-    :hook (python-mode . (lambda ()
-                         (require 'lsp-pyright)
-                       (lsp-deferred)))
-    :custom
-    (lsp-pyright-auto-import-completions nil)
-    (lsp-pyright-typechecking-mode "off")
-    :config
-    (mb/async-process
-     "npm outdated -g | grep pyright | wc -l" nil
-     (lambda (process output)
-       (pcase output
-         ("0\n" (message "Pyright is up to date."))
-         ("1\n" (message "A pyright update is available."))))))
+
+          ;; Format the python buffer following YAPF rules
+          ;; There's also blacken if you like it better.
+          (use-package yapfify
+            :ensure t
+            :defer t
+            :hook (python-mode . yapf-mode))
 
 
-   ;; (use-package lsp-python-ms
-   ;;     :disabled t
-   ;;     :ensure t
-   ;;     :init
-   ;;        (setq lsp-pyhton-ms-auto-install-server t)
-   ;;     :hook
-   ;;     (python-mode . (lambda ()
-   ;;                      (require 'lsp-python-ms)
-   ;;                      (lsp-deferred)))   ; lsp or lsp-deferred
-   ;;     (flycheck-mode . (lambda ()
-   ;;                      (flycheck-add-next-checker 'lsp 'python-flake8)
-   ;;                      (message "Added flycheck checkers."))))
+          (use-package lsp-pyright
+            :ensure t
+            :after lsp-mode
+            :hook (python-mode . (lambda ()
+                                 (require 'lsp-pyright)
+                               (lsp-deferred)))
+            :custom
+            (lsp-pyright-auto-import-completions nil)
+            (lsp-pyright-typechecking-mode "off")
+            :config
+            (mb/async-process
+             "npm outdated -g | grep pyright | wc -l" nil
+             (lambda (process output)
+               (pcase output
+                 ("0\n" (message "Pyright is up to date."))
+                 ("1\n" (message "A pyright update is available.")))))
+
+            ;; uncomment for less flashiness
+            ;;(setq lsp-eldoc-hook nil)
+            ;;(setq lsp-enable-symbol-highlighting nil)
+            ;;(setq lsp-signature-auto-activate nil)
+            )
 
 
-   ;;      ;; ensure:
-        ;;; pip install jedi
-        ;;  pip install flake8
-        ;;  pip install importmagic
-        ;;  pip install autopep8
-        ;;  pip install yapf
-        ;;  pip install python-language-sever[all]
+           ;; (use-package lsp-python-ms
+           ;;     :disabled t
+           ;;     :ensure t
+           ;;     :init
+           ;;        (setq lsp-pyhton-ms-auto-install-server t)
+           ;;     :hook
+           ;;     (python-mode . (lambda ()
+           ;;                      (require 'lsp-python-ms)
+           ;;                      (lsp-deferred)))   ; lsp or lsp-deferred
+           ;;     (flycheck-mode . (lambda ()
+           ;;                      (flycheck-add-next-checker 'lsp 'python-flake8)
+           ;;                      (message "Added flycheck checkers."))))
 
-        ;; (use-package elpy
-        ;;   :ensure nil
-        ;;   :init (advice-add 'python-mode :before 'elpy-enable)
-        ;;   :hook (elpy-mode . flycheck-mode)
-        ;;   :hook (elpy-mode . show-paren-mode)
-        ;;   :hook (elpy-mode . linum-mode)
-        ;;   :config
-        ;;   (progn
-        ;;     (setq
-        ;;       python-shell-interpreter "ipython3"
-        ;;       python-shell-interpreter-args "--simple-prompt -i"
-        ;;       elpy-rpc-backend "jedi"
-        ;;       elpy-rpc-project-specfic 't)
-        ;;     (when (fboundp 'flycheck-mode)
-        ;;       (setq elpy-modules (delete 'elpy-module-flymake elpy-modules)))
-        ;;     (add-hook 'elpy-mode-hook
-        ;;       (lambda ()
-        ;;         (set (make-local-variable 'company-backends)
-        ;;          (append company-backends '(company-yasnippet)))))
 
-        ;;     ;;;(add-hook 'elpy-mode-hook (lambda () (linum-mode 1)))
-        ;;     (add-hook 'before-save-hook 'delete-trailing-whitespace)
-        ;;     (add-hook 'python-mode-hook (lambda() (auto-complete-mode -1)))
-        ;;     )
-        ;; )
+           ;;      ;; ensure:
+                ;;; pip install jedi
+                ;;  pip install flake8
+                ;;  pip install importmagic
+                ;;  pip install autopep8
+                ;;  pip install yapf
+                ;;  pip install python-language-sever[all]
+
+                ;; (use-package elpy
+                ;;   :ensure nil
+                ;;   :init (advice-add 'python-mode :before 'elpy-enable)
+                ;;   :hook (elpy-mode . flycheck-mode)
+                ;;   :hook (elpy-mode . show-paren-mode)
+                ;;   :hook (elpy-mode . linum-mode)
+                ;;   :config
+                ;;   (progn
+                ;;     (setq
+                ;;       python-shell-interpreter "ipython3"
+                ;;       python-shell-interpreter-args "--simple-prompt -i"
+                ;;       elpy-rpc-backend "jedi"
+                ;;       elpy-rpc-project-specfic 't)
+                ;;     (when (fboundp 'flycheck-mode)
+                ;;       (setq elpy-modules (delete 'elpy-module-flymake elpy-modules)))
+                ;;     (add-hook 'elpy-mode-hook
+                ;;       (lambda ()
+                ;;         (set (make-local-variable 'company-backends)
+                ;;          (append company-backends '(company-yasnippet)))))
+
+                ;;     ;;;(add-hook 'elpy-mode-hook (lambda () (linum-mode 1)))
+                ;;     (add-hook 'before-save-hook 'delete-trailing-whitespace)
+                ;;     (add-hook 'python-mode-hook (lambda() (auto-complete-mode -1)))
+                ;;     )
+                ;; )
 
 
 #+END_SRC
+
+#+RESULTS:
+| yasnippet-snippets--fixed-indent | (lambda nil (require 'lsp-pyright) (lsp-deferred)) | yapf-mode | pyvenv-mode | show-paren-mode | linum-mode | lsp-deferred | doom-modeline-env-setup-python |
 
 * EIN-  emacs Jupiter notebooks
    :PROPERTIES:
@@ -587,50 +597,80 @@
 #+BEGIN_SRC emacs-lisp
 
 
-  (use-package rust-mode
-     :ensure t
-     :mode ("\\.rs\\'" . rust-mode)
-     :bind (:map rust-mode-map
-              ("C-c C-c" . 'rust-compile)
-              ("C-c C-r" . 'rust-run-clippy))
-     :hook ((rust-mode . lsp)
-            (rust-mode . company-mode))
+    ;; (use-package rust-mode
+    ;;    :ensure t
+    ;;    :mode ("\\.rs\\'" . rust-mode)
+    ;;    :bind (:map rust-mode-map
+    ;;             ("C-c C-c" . 'rust-compile)
+    ;;             ("C-c C-r" . 'rust-run-clippy))
+    ;;    :hook ((rust-mode . lsp)
+    ;;           (rust-mode . company-mode))
 
-     :config
-     (progn
+    ;;    :config
+    ;;    (progn
 
 
-  ;;   (use-package lsp-rust
-  ;;      :ensure t)
+    ;; ;;   (use-package lsp-rust
+    ;; ;;      :ensure t)
 
-     (use-package flycheck-rust
-        :ensure t
-        :after rust-mode)
-        :config
-        (setq rust-format-on-save t)
-        (setq lsp-rust-server 'rust-analyzer)
-        (setq lsp-rust-analyzer-server-command '("/home/manuel/projects/rust/rust-analyzer/target/release/rust-analyzer"))
+    ;;    (use-package flycheck-rust
+    ;;       :ensure t
+    ;;       :after rust-mode)
+    ;;       :config
+    ;;       (setq rust-format-on-save t)
+    ;;       ;;(setq lsp-rust-server 'rls)
+    ;;       (setq lsp-rust-server 'rust-analyzer)
+    ;;       (setq lsp-rust-analyzer-server-command '("/home/manuel/.cargo/bin/rust-analyzer"))
 
-        (add-hook 'rust-mode-hook 'lsp)
-        (add-hook 'rust-mode-hook 'company-mode)
-        (add-hook 'rust-mode-hook (lambda () (linum-mode 1)))
-        (add-hook 'flycheck-mode-hook 'flycheck-rust-setup)
-        (add-hook 'rust-mode-hook (lambda () (linum-mode 1)))
-        ;;(push 'company-lsp company-backends)
+    ;;       (add-hook 'rust-mode-hook 'lsp)
+    ;;       (add-hook 'rust-mode-hook 'company-mode)
+    ;;       (add-hook 'rust-mode-hook (lambda () (linum-mode 1)))
+    ;;       (add-hook 'flycheck-mode-hook 'flycheck-rust-setup)
+    ;;       (add-hook 'rust-mode-hook (lambda () (linum-mode 1)))
+    ;;       (push 'company-capf company-backends)
+    ;;      )
+
+    ;; )
+
+    (use-package cargo
+       :ensure t
+       :config
+       (progn
+         (add-hook 'rust-mode-hook 'cargo-minor-mode)
+         (add-hook 'toml-mode-hook 'cargo-minor-mode)
        )
+    )
 
-  )
+  (use-package rustic
+    :ensure
+    :bind (:map rustic-mode-map
+                ("M-j" . lsp-ui-imenu)
+                ("M-?" . lsp-find-references)
+                ("C-c C-c l" . flycheck-list-errors)
+                ("C-c C-c a" . lsp-execute-code-action)
+                ("C-c C-c r" . lsp-rename)
+                ("C-c C-c q" . lsp-workspace-restart)
+                ("C-c C-c Q" . lsp-workspace-shutdown)
+                ("C-c C-c s" . lsp-rust-analyzer-status))
+    :hook (rust-mode . linum-mode)
+    :config
+    ;; uncomment for less flashiness
+    (setq lsp-eldoc-hook nil)
+    (setq lsp-enable-symbol-highlighting nil)
+    (setq lsp-signature-auto-activate nil)
 
-  (use-package cargo
-     :ensure t
-     :config
-     (progn
-       (add-hook 'rust-mode-hook 'cargo-minor-mode)
-       (add-hook 'toml-mode-hook 'cargo-minor-mode)
-     )
-  )
+    (push 'company-capf company-backends)
+    ;; comment to disable rustfmt on save
+    (setq rustic-format-on-save t)
+    (add-hook 'rustic-mode-hook 'rk/rustic-mode-hook))
+
+  (defun rk/rustic-mode-hook ()
+    ;; so that run C-c C-c C-r works without having to confirm
+    (setq-local buffer-save-without-query t))
+
+
 
 #+END_SRC
 
 #+RESULTS:
-: t
+: rk/rustic-mode-hook

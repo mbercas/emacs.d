@@ -90,8 +90,8 @@ Set path, foce ispell checker to hunspell and initilize English dictionaries
     ;; Set default fill column to 90
     (setq-default fill-column 90)
 
-    (setq frame-resize-pixelwise t)
-    (when window-system (set-frame-size (selected-frame) 90 34))
+    ;;(setq frame-resize-pixelwise t)
+    ;;(when window-system (set-frame-size (selected-frame) 90 34))
     ;;(set-face-background 'hl-line "#3e4446")
     ;;(set-face-background 'fringe "red")
     ;;(set-frame-parameter (selected-frame) 'internal-border-width 15)
@@ -100,7 +100,7 @@ Set path, foce ispell checker to hunspell and initilize English dictionaries
     (defun on-after-init ()
       "Turn off background."
       (unless (display-graphic-p (selected-frame))
-	  (set-face-background 'default "unspecified-bg" (selected-frame))))
+          (set-face-background 'default "unspecified-bg" (selected-frame))))
     (add-hook 'window-setup-hook 'on-after-init)
 
     (setq inhibit-startup-message t)
@@ -133,7 +133,7 @@ Set path, foce ispell checker to hunspell and initilize English dictionaries
       (run-with-timer 0.1 nil #'invert-face 'mode-line))
 
     (setq visible-bell nil
-	  ring-bell-function #'mb/subtle-visible-bell)
+          ring-bell-function #'mb/subtle-visible-bell)
 
     ;; Suppress bells for reaching beginning and end of buffer
     ;; Source: https://emacs.stackexchange.com/questions/10932/how-do-you-disable-the-buffer-end-beginning-warnings-in-the-minibuffer/20039
@@ -144,17 +144,20 @@ Set path, foce ispell checker to hunspell and initilize English dictionaries
   For details on DATA, CONTEXT, and SIGNAL, see
   `command-error-function'."
       (when (not (memq (car data) '(buffer-read-only
-				    beginning-of-buffer
-				    end-of-buffer)))
-	(command-error-default-function data context signal)))
+                                    beginning-of-buffer
+                                    end-of-buffer)))
+        (command-error-default-function data context signal)))
 
     (setq command-error-function #'mb/command-error-function)
+
+  ;; control tooltip behaviour - by default uses frames in GTK+
+    (setq x-gtk-use-system-tooltips nil)    ;; disable frames, show tooltips TTY bufer
+
 
     )
 #+END_SRC
 
 #+RESULTS:
-: mb/command-error-function
 
 * DOOM Modeline
   #+begin_src emacs-lisp :tangle yes
@@ -167,14 +170,6 @@ Set path, foce ispell checker to hunspell and initilize English dictionaries
   #+end_src
 
   #+RESULTS:
-
-* DISABLED - Use delight to manage minor modes in the mode-line
-  - adding :delight to the package prevents it from appearing in mode-line
-#+BEGIN_SRC emacs-lisp
-  (use-package delight
-  :disabled t
-  :ensure t)
-#+END_SRC
 
 * Volatile highlights
 - adds a flash to highlight some operations
@@ -294,28 +289,85 @@ Integrate highlight-parentheses with autopair mode:
   #+RESULTS:
   : t
 
-* Autocomplete - disabled - using Company instead
+* Autocompletion - using Company instead + Company box for icons on completion buffer
   #+BEGIN_SRC emacs-lisp
-    (use-package auto-complete
-    :disabled t
-    :ensure t
-    :init
-    (progn
-      (ac-config-default)
-      (global-auto-complete-mode t)
-      ))
 
     (use-package company
       :ensure t
       :init
       (global-company-mode)
+      :custom
+      (company-idle-delay 0.5)
       :bind (("<backtab>" . company-complete-common-or-cycle))
       :config
       (setq company-dabbrev-other-buffers t
             company-dabbrev-code-other-buffers t)
+      (setq company-minimum-prefix-length 2)
+      (setq company-selection-wrap-around t)
       :hook ((text-mode . company-mode)
              (prog-mode . company-mode)))
 
+    (use-package company-posframe
+      :ensure t
+      :if window-system
+      :after company)
+
+    (use-package company-box
+      :ensure t
+      :disabled
+      :if (display-graphic-p)
+      :defines company-box-icons-all-the-icons
+      :hook (company-mode . company-box-mode)
+      :custom
+      (company-box-backends-colors nil)
+      :config
+      (with-no-warnings
+        ;; Prettify icons
+        (defun my-company-box-icons--elisp (candidate)
+          (when (derived-mode-p 'emacs-lisp-mode)
+            (let ((sym (intern candidate)))
+              (cond ((fboundp sym) 'Function)
+                    ((featurep sym) 'Module)
+                    ((facep sym) 'Color)
+                    ((boundp sym) 'Variable)
+                    ((symbolp sym) 'Text)
+                    (t . nil)))))
+        (advice-add #'company-box-icons--elisp :override #'my-company-box-icons--elisp))
+
+      (when (and (display-graphic-p)
+                 (require 'all-the-icons nil t))
+        (declare-function all-the-icons-faicon 'all-the-icons)
+        (declare-function all-the-icons-material 'all-the-icons)
+        (declare-function all-the-icons-octicon 'all-the-icons)
+        (setq company-box-icons-all-the-icons
+              `((Unknown . ,(all-the-icons-material "find_in_page" :height 0.8 :v-adjust -0.15))
+                (Text . ,(all-the-icons-faicon "text-width" :height 0.8 :v-adjust -0.02))
+                (Method . ,(all-the-icons-faicon "cube" :height 0.8 :v-adjust -0.02 :face 'all-the-icons-purple))
+                (Function . ,(all-the-icons-faicon "cube" :height 0.8 :v-adjust -0.02 :face 'all-the-icons-purple))
+                (Constructor . ,(all-the-icons-faicon "cube" :height 0.8 :v-adjust -0.02 :face 'all-the-icons-purple))
+                (Field . ,(all-the-icons-octicon "tag" :height 0.85 :v-adjust 0 :face 'all-the-icons-lblue))
+                (Variable . ,(all-the-icons-octicon "tag" :height 0.85 :v-adjust 0 :face 'all-the-icons-lblue))
+                (Class . ,(all-the-icons-material "settings_input_component" :height 0.8 :v-adjust -0.15 :face 'all-the-icons-orange))
+                (Interface . ,(all-the-icons-material "share" :height 0.8 :v-adjust -0.15 :face 'all-the-icons-lblue))
+                (Module . ,(all-the-icons-material "view_module" :height 0.8 :v-adjust -0.15 :face 'all-the-icons-lblue))
+                (Property . ,(all-the-icons-faicon "wrench" :height 0.8 :v-adjust -0.02))
+                (Unit . ,(all-the-icons-material "settings_system_daydream" :height 0.8 :v-adjust -0.15))
+                (Value . ,(all-the-icons-material "format_align_right" :height 0.8 :v-adjust -0.15 :face 'all-the-icons-lblue))
+                (Enum . ,(all-the-icons-material "storage" :height 0.8 :v-adjust -0.15 :face 'all-the-icons-orange))
+                (Keyword . ,(all-the-icons-material "filter_center_focus" :height 0.8 :v-adjust -0.15))
+                (Snippet . ,(all-the-icons-material "format_align_center" :height 0.8 :v-adjust -0.15))
+                (Color . ,(all-the-icons-material "palette" :height 0.8 :v-adjust -0.15))
+                (File . ,(all-the-icons-faicon "file-o" :height 0.8 :v-adjust -0.02))
+                (Reference . ,(all-the-icons-material "collections_bookmark" :height 0.8 :v-adjust -0.15))
+                (Folder . ,(all-the-icons-faicon "folder-open" :height 0.8 :v-adjust -0.02))
+                (EnumMember . ,(all-the-icons-material "format_align_right" :height 0.8 :v-adjust -0.15))
+                (Constant . ,(all-the-icons-faicon "square-o" :height 0.8 :v-adjust -0.1))
+                (Struct . ,(all-the-icons-material "settings_input_component" :height 0.8 :v-adjust -0.15 :face 'all-the-icons-orange))
+                (Event . ,(all-the-icons-octicon "zap" :height 0.8 :v-adjust 0 :face 'all-the-icons-orange))
+                (Operator . ,(all-the-icons-material "control_point" :height 0.8 :v-adjust -0.15))
+                (TypeParameter . ,(all-the-icons-faicon "arrows" :height 0.8 :v-adjust -0.02))
+                (Template . ,(all-the-icons-material "format_align_left" :height 0.8 :v-adjust -0.15)))
+              company-box-icons-alist 'company-box-icons-all-the-icons)))
 
   #+END_SRC
 
@@ -384,15 +436,30 @@ Integrate highlight-parentheses with autopair mode:
 
 ** Highlight syntax in SRC blocks
   #+BEGIN_SRC emacs-lisp
+    (setq org-plantuml-jar-path "/usr/share/plantuml/plantuml.jar")
     (org-babel-do-load-languages
       'org-babel-load-languages
       '((python .t)
         (R . t)
+        (plantuml . t)
+        (latex . t)
         (shell . t)
+        (org . t)
         (emacs-lisp . t)))
   #+END_SRC
 
   #+RESULTS:
+** PlantUML
+#+BEGIN_SRC emacs-lisp
+  (use-package plantuml-mode
+    :ensure t
+    :custom
+    (plantuml-jar-path "/usr/share/plantuml/plantuml.jar"))
+
+
+#+END_SRC
+
+#+RESULTS:
 
 * Org Roam
   :PROPERTIES:
@@ -410,7 +477,11 @@ Integrate highlight-parentheses with autopair mode:
      :bind (:map org-roam-mode-map
                 (("C-c n l" . org-roam)
                  ("C-c n f" . org-roam-find-file)
-                 ("C-c n g" . org-roam-graph-show)))
+                 ("C-c n g" . org-roam-graph)
+                 ("C-c n r" . org-roam-db-build-cache)
+                 ("C-c n b" . org-roam-switch-to-buffer))
+             :map org-mode-map
+                 (("C-c n i" . org-roam-insert)))
      :init
      (setq org-roam-directory (file-truename "~/org-roam")
            org-roam-db-gc-threshold most-positive-fixnum
@@ -422,9 +493,7 @@ Integrate highlight-parentheses with autopair mode:
           '(("l" "lit" plain (function org-roam--capture-get-point)
              "%?"
              :file-name "lit/${slug}"
-             :head "#+setupfile:./hugo_setup.org
-  ,#+hugo_slug: ${slug}
-  ,#+title: ${title}
+             :head "#+title: ${title}
   ,#+roam_alias:\n"
              :unnarrowed t)
             ("w" "work" plain (function org-roam--capture-get-point)
@@ -435,9 +504,7 @@ Integrate highlight-parentheses with autopair mode:
             ("c" "concept" plain (function org-roam--capture-get-point)
              "%?"
              :file-name "concepts/${slug}"
-             :head "#+setupfile:./hugo_setup.org
-  ,#+hugo_slug: ${slug}
-  ,#+title: ${title}
+             :head "#+title: ${title}
   ,#+roam_alias:\n"
              :unnarrowed t)
             ("p" "private" plain (function org-roam-capture--get-point)
@@ -474,16 +541,16 @@ Integrate highlight-parentheses with autopair mode:
     :bind
     ("C-c n d" . deft)
     :custom
-    (deft-recursive t)
-    (deft-use-filter-string-for-filename t)
-    (deft-default-extension "org")
-    (deft-directory "~/org-roam"))
-
+    (
+      (deft-use-filter-string-for-filename t)
+      (deft-default-extension "org")
+      (deft-directory "~/org-roam")
+      (deft-recursive t))
+    )
 
 #+end_src
 
 #+RESULTS:
-: deft
 
 * Shell-toggle
   #+BEGIN_SRC emacs-lisp
@@ -509,7 +576,16 @@ Integrate highlight-parentheses with autopair mode:
 
   #+RESULTS:
 
-* Swiper / Ivy / Counsel
+* Swiper / Ivy / Counsel / Posframe / Prescient
+
+  - Ivy is an interface for completion in Emacs.
+  - Swipper is an Ivy enhanced alternative to I-search
+  - Counsel is a collection of Ivy enhanced versions of common Emacs commands
+  - Posframe is an Ivy extension which lets ivy use post frame to show the
+    candidate menu.
+  - Prescient sorts choices in an intelligent way, remembers recent selections
+    and putting those on top of the list.
+
   Swiper gives us a really efficient incremental search with regular expressions
   and Ivy / Counsel replace a lot of ido or helms completion functionality
 
@@ -585,7 +661,7 @@ Integrate highlight-parentheses with autopair mode:
             ivy-posframe-height-alist '((t . 20))
             ivy-posframe-parameters '((internal-border-width . 5)))
       (setq ivy-posframe-width 120)
-      (ivy-posframe-mode +1))
+      (ivy-posframe-mode 1))
 
     (use-package ivy-rich
       :ensure t
@@ -625,7 +701,7 @@ Integrate highlight-parentheses with autopair mode:
                 (ivy-rich-package-archive-summary (:width 7 :face font-lock-builtin-face))
                 (ivy-rich-package-install-summary (:width 23 :face font-lock-doc-face))))))
       :config
-      (ivy-rich-mode +1)
+      (ivy-rich-mode 1)
       ;(setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line)
       )
 
@@ -752,7 +828,9 @@ Integrate highlight-parentheses with autopair mode:
 : magit-status
 
 * Themes
-  - using spacemacs theme but spaceline is disabled
+  - using doom-themes and doom-modeline
+  - there is some issue switching between dark and bright modes
+    + using default bright for better compatbility with windows terminal
 #+BEGIN_SRC emacs-lisp
 
    (use-package nlinum-hl
@@ -786,14 +864,7 @@ Integrate highlight-parentheses with autopair mode:
             doom-one-brighter-comments nil)
       (add-to-list 'load-path "~/.emacs.d/elpa/doom-themes-2.1.6/")
       ;; Load the theme (doom-one, doom-dark, etc.)
-      (load-theme 'doom-one-light t)
-
-      ;; set sizes here to stop spacemacs theme resizing these
-      (set-face-attribute 'org-level-1 nil :height 1.0)
-      (set-face-attribute 'org-level-2 nil :height 1.0)
-      (set-face-attribute 'org-level-3 nil :height 1.0)
-      (set-face-attribute 'org-scheduled-today nil :height 1.0)
-      (set-face-attribute 'org-agenda-date-today nil :height 1.1)
+      (load-theme 'misterioso t)
 
       ;; Enable flashing mode-line on errors
       (doom-themes-visual-bell-config)
@@ -804,65 +875,35 @@ Integrate highlight-parentheses with autopair mode:
       (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
       (doom-themes-treemacs-config)
 
+      ;; brighten minibuffer when active
+      (aad-hook 'minibuffer-setup-hook 'doom-brighten-minibuffer)
+
       ;; Corrects (and improves) org-mode's native fontification.
       (doom-themes-org-config))
 
-    ;; spacemacs look
-    ;; (use-package spacemacs-theme
-    ;;   :disabled t
-    ;;   :defer t
-    ;;   :init
-    ;;   (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-    ;;   (load-theme 'spacemacs-dark t)
-    ;;   (setq spacemacs-theme-org-agenda-height nil)
-    ;;   (setq spacemacs-theme-org-height nil)
-    ;;   :config
-    ;;   ;; set sizes here to stop spacemacs theme resizing these
-    ;;     (set-face-attribute 'org-level-1 nil :height 1.0)
-    ;;     (set-face-attribute 'org-level-2 nil :height 1.0)
-    ;;     (set-face-attribute 'org-level-3 nil :height 1.0)
-    ;;     (set-face-attribute 'org-scheduled-today nil :height 1.0)
-    ;;     (set-face-attribute 'org-agenda-date-today nil :height 1.1)
-    ;;     (set-face-attribute 'org-table nil :foreground "#008787"))
-
-    ;; (use-package spaceline-all-the-icons
-    ;;   :disabled t
-    ;;   :ensure t
-    ;;   :demand t)
-
-    ;; (use-package spaceline
-    ;;   :disabled t
-    ;;   :ensure t
-    ;;   :demand t
-    ;;   :init
-    ;;   (setq powerline-default-separator 'arrow-fade)
-    ;;   :config
-    ;;   (require 'spaceline-config)
-    ;;   (spaceline-emacs-theme))
-
-
-
   #+END_SRC
 
-  #+RESULTS:
-  | doom-buffer-mode |
 * Web browsing
  - set EWW as default browser
  - see http://pragmaticemacs.com/emacs/to-eww-or-not-to-eww/ on how
    to customize to open external browser
+ - google-this to google selected text
 #+BEGIN_SRC emacs-lisp
-(use-package eww
-  :ensure t
-  :init
-  (setq browse-url-browser-function 'eww-browse-url)
-)
+  (use-package eww
+    :ensure t
+       :init
+       (setq browse-url-browser-function 'eww-browse-url)
+     )
 
+ (use-package google-this
+    :ensure t)
 #+END_SRC
+
+#+RESULTS:
+
 * Pandoc mode
 #+BEGIN_SRC emacs-lisp
 (use-package pandoc-mode
    :ensure t
 )
 #+END_SRC
-
-#+RESULTS:

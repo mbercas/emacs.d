@@ -588,6 +588,7 @@
   :ID:       fd711fc9-8529-4b29-bab9-ea32b44371eb
   :END:
   Look at this [[https://www.reddit.com/r/emacs/comments/cw96wp/my_emacs26_setup_for_rust/][link]]
+  https://www.reddit.com/r/emacs/comments/cw96wp/my_emacs26_setup_for_rust/
   pre-requisites
     - rustup default nightly
     - cargo component add rust-src
@@ -668,9 +669,12 @@
     ;; so that run C-c C-c C-r works without having to confirm
     (setq-local buffer-save-without-query t))
 
+(use-package company
+   :ensure t)
+
+
+(use-package flycheck-rust
+   :ensure t)
 
 
 #+END_SRC
-
-#+RESULTS:
-: rk/rustic-mode-hook

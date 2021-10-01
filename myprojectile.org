@@ -1,7 +1,9 @@
 #+STARTUP: overview
 
 * Project related tools, projectile, helm, treemacs,...
-** Basic configuration for projectile 
+** Basic configuration for projectile
+   - projectile in global mode
+   - using helm projectile for auto-completion
 #+BEGIN_SRC emacs-lisp
 (projectile-global-mode)
 
@@ -19,58 +21,69 @@
      (setq projectile-globally-unignored-files (quote ("*.o" "*.pyc" "*~")))
      (setq projectile-tags-backend (quote find-tag))
      (setq projectile-enable-caching t)))
-
 #+END_SRC
 
-#+RESULTS:
-: t
-
+** Org-projectile for integration of TODOs with projects
+#+BEGIN_SRC emacs-lisp
+  (use-package org-projectile
+    :ensure t
+    :bind (("C-c n p" . org-projectile-project-todo-completing-read)
+           ("C-c c" . org-capture))
+    :config
+    (progn
+      (org-projectile-per-project)
+      (setq org-projectile-per-project-filepath "working_projects.org")
+      (setq org-agenda-files (append org-agenda-files (org-projectile-todo-files)))
+      (push (org-projectile-project-todo-entry) org-capture-templates))
+  )
+#+END_SRC
 ** Treemacs
 #+BEGIN_SRC emacs-lisp
-(use-package treemacs
-  :ensure t
-  :defer t
-  :config
-  (progn
-    (setq treemacs-follow-after-init          t
-          treemacs-width                      35
-          treemacs-indentation                2
-          treemacs-git-integration            t
-          treemacs-collapse-dirs              3
-          treemacs-silent-refresh             nil
-          treemacs-change-root-without-asking nil
-          treemacs-sorting                    'alphabetic-desc
-          treemacs-show-hidden-files          t
-          treemacs-never-persist              nil
-          treemacs-is-never-other-window      nil
-          treemacs-goto-tag-strategy          'refetch-index)
+  (use-package treemacs
+    :ensure t
+    :defer t
+    :config
+    (progn
+      (setq treemacs-follow-after-init          t
+            treemacs-width                      35
+            treemacs-indentation                2
+            treemacs-git-integration            t
+            treemacs-collapse-dirs              3
+            treemacs-silent-refresh             nil
+            treemacs-change-root-without-asking nil
+            treemacs-sorting                    'alphabetic-desc
+            treemacs-show-hidden-files          t
+            treemacs-never-persist              nil
+            treemacs-is-never-other-window      nil
+            treemacs-goto-tag-strategy          'refetch-index)
 
-    (treemacs-follow-mode t)
-    (treemacs-filewatch-mode t))
-  :bind
-  (:map global-map
-        ([f8]        . treemacs-toggle)
-        ("M-0"       . treemacs-select-window)
-        ("C-c 1"     . treemacs-delete-other-windows)
-        ("M-n ft"    . treemacs-toggle)
-        ("M-n fT"    . treemacs)
-        ("M-n f C-t" . treemacs-find-file)))
-(use-package treemacs-projectile
-  :after treemacs
-  :defer t
-  :ensure t
-  :config
-  (setq treemacs-header-function #'treemacs-projectile-create-header)
-  :bind (:map global-map
-              ("M-n fP" . treemacs-projectile)
-              ("M-n fp" . treemacs-projectile-toggle)))
+      (treemacs-follow-mode t)
+      (treemacs-filewatch-mode t))
+    :bind
+    (:map global-map
+          ([f8]        . treemacs-toggle)
+          ("M-0"       . treemacs-select-window)
+          ("C-c 1"     . treemacs-delete-other-windows)
+          ("M-n ft"    . treemacs-toggle)
+          ("M-n fT"    . treemacs)
+          ("M-n f C-t" . treemacs-find-file)))
 
-(use-package treemacs-magit
-  :after treemacs magit
-  :defer t
-  :ensure t)
+
+  (use-package treemacs-projectile
+    :after treemacs
+    :defer t
+    :ensure t
+    :config
+    (setq treemacs-header-function #'treemacs-projectile-create-header)
+    :bind (:map global-map
+                ("M-n fP" . treemacs-projectile)
+                ("M-n fp" . treemacs-projectile-toggle)))
+
+  (use-package treemacs-magit
+    :after treemacs magit
+    :defer t
+    :ensure t)
 
 #+END_SRC
 
 #+RESULTS:
-

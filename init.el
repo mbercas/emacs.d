@@ -1,3 +1,5 @@
+
+
 ;; update package-archive list
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -39,6 +41,8 @@ There are two things you can do about this warning:
 (eval-when-compile
   (require 'use-package))
 
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
 
 (use-package auto-package-update
   :ensure t
@@ -108,9 +112,9 @@ There are two things you can do about this warning:
      ("\\.mm\\'" . default)
      ("\\.x?html?\\'" . "browse-url %s")
      ("\\.pdf\\'" . xdg-open)))
- '(org-roam-directory "~/org-roam")
+ '(org-roam-directory "~/org-roam" t)
  '(package-selected-packages
-   '(ein color-theme treemacs-all-the-icons hl-line-mode nlinum-hl doom-themes flycheck-inline iedit rainbow-delimiters rainbow-delimeters doom-modeline delight minions google-this csv-mode jedi company-jedi lsp-jedi beacon volatile-highlights company-org-roam irony deft slime pandoc-mode ivy-rich ivy-posframe git-commit treemacs-magit htmlize lsp-rust flycheck-rust company-backends cargo rust-mode ess-smart-equals ess-smart-underscore ess org-pdfview pdf-tools spaceline-all-the-icons ivy-prescient prescient wgrep counsel-projectile flx which-key use-package try shell-toggle org-bullets mode-icons markdown-mode auto-complete ace-window))
+   '(dap-mode emacsql-sqlite sqlite3 popwin ob-plantuml plantuml-mode company-box rustic ein color-theme treemacs-all-the-icons hl-line-mode nlinum-hl doom-themes flycheck-inline iedit rainbow-delimiters rainbow-delimeters doom-modeline delight minions google-this csv-mode jedi company-jedi lsp-jedi beacon volatile-highlights company-org-roam irony deft slime pandoc-mode ivy-rich ivy-posframe git-commit treemacs-magit htmlize lsp-rust flycheck-rust company-backends cargo rust-mode ess-smart-equals ess-smart-underscore ess org-pdfview pdf-tools spaceline-all-the-icons ivy-prescient prescient wgrep counsel-projectile flx which-key use-package try shell-toggle org-bullets mode-icons markdown-mode auto-complete ace-window))
  '(send-mail-function 'sendmail-send-it)
  '(spice-output-local "Gnucap")
  '(spice-simulator "Gnucap")

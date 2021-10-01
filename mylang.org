@@ -114,14 +114,30 @@
   :ID:       6857b5d9-b720-4431-8eb7-eca2f4b2568a
   :END:
 #+BEGIN_SRC emacs-lisp
+  (use-package dash
+    :ensure t)
+  (use-package dash-functional
+    :ensure t)
+  (use-package cfrs
+    :ensure t)
+
   (use-package dap-mode
     :ensure t
-    :defer t
     :after lsp-mode
     :commands (dap-debug dap-debug-edit-template)
     :config
-    (dap-auto-configure-mode))
+    (dap-auto-configure-mode)
+    (require 'dap-python)
+    (require 'dap-ui)
+    (dap-mode t)
+    (dap-ui-mode t)
+    (dap-tooltip-mode t)
+    (tooltip-mode t)
+    )
 #+END_SRC
+
+#+RESULTS:
+
 * C / C++ language configuration
   :PROPERTIES:
   :ID:       b3bfae62-1193-45d4-a698-48a886e8bd09

@@ -292,6 +292,11 @@ Integrate highlight-parentheses with autopair mode:
 * Autocompletion - using Company instead + Company box for icons on completion buffer
   #+BEGIN_SRC emacs-lisp
 
+    (use-package posframe
+      :ensure t
+      :if window-system)
+
+
     (use-package company
       :ensure t
       :init
@@ -467,8 +472,10 @@ Integrate highlight-parentheses with autopair mode:
   :END:
 #+begin_src emacs-lisp
 
-  (use-package emacsql-sqlite3
+  (use-package emacsql-sqlite
      :ensure t)
+
+  (setq org-roam-v2-ack t)
 
   (use-package org-roam
      :ensure t
@@ -479,49 +486,44 @@ Integrate highlight-parentheses with autopair mode:
                  ("C-c n f" . org-roam-find-file)
                  ("C-c n g" . org-roam-graph)
                  ("C-c n r" . org-roam-db-build-cache)
-                 ("C-c n b" . org-roam-switch-to-buffer))
-             :map org-mode-map
-                 (("C-c n i" . org-roam-insert)))
+                 ("C-c n b" . org-roam-switch-to-buffer)
+                 ("C-c n i" . org-roam-insert)))
      :init
      (setq org-roam-directory (file-truename "~/org-roam")
            org-roam-db-gc-threshold most-positive-fixnum
            org-roam-graph-exclude-matcher "private"
            org-roam-tag-sources '(prop last-directory)
            org-id-link-to-org-use-id t)
+
+     (add-to-list 'display-buffer-alist
+               '(("\\*org-roam\\*"
+                  (display-buffer-in-direction)
+                  (direction . right)
+                  (window-width . 0.33)
+                  (window-height . fit-window-to-buffer))))
+
      :config
+    (org-roam-setup)
     (setq org-roam-capture-templates
-          '(("l" "lit" plain (function org-roam--capture-get-point)
+          '(("l" "lit" plain
              "%?"
-             :file-name "lit/${slug}"
-             :head "#+title: ${title}
-  ,#+roam_alias:\n"
+             :if-new (file+head "lit/${slug}.org"
+                                "#+title: ${title}\n")
              :unnarrowed t)
-            ("w" "work" plain (function org-roam--capture-get-point)
+            ("w" "work" plain
              "%?"
-             :file-name "work/${slug}"
-             :head "#+title: ${title}\n"
+             :if-new (file+head "work/${slug}.org"
+                                "#+title: ${title}\n#+headline: ${title}\n#+filetags: \n")
              :unnarrowed t)
-            ("c" "concept" plain (function org-roam--capture-get-point)
+            ("c" "concept" plain
              "%?"
-             :file-name "concepts/${slug}"
-             :head "#+title: ${title}
-  ,#+roam_alias:\n"
+             :if-new (file+head "concepts/${slug}.org"
+                                "#+title: ${title}\n#+headline: ${title}\n#+filetags: \n")
              :unnarrowed t)
-            ("p" "private" plain (function org-roam-capture--get-point)
+            ("p" "private" plain
              "%?"
-             :file-name "private/${slug}"
-             :head "#+title: ${title}\n"
-             :unnarrowed t)))
-    (setq org-roam-capture-ref-templates
-          '(("r" "ref" plain (function org-roam-capture--get-point)
-             "%?"
-             :file-name "lit/${slug}"
-             :head "#+setupfile:./hugo_setup.org
-  ,#+roam_key: ${ref}
-  ,#+hugo_slug: ${slug}
-  ,#+roam_tags: website
-  ,#+title: ${title}
-  - source :: ${ref}"
+             :if-new (file+head "private/${slug}.org"
+                                "#+title: ${title}\n")
              :unnarrowed t)))
     )
 
@@ -542,15 +544,17 @@ Integrate highlight-parentheses with autopair mode:
     ("C-c n d" . deft)
     :custom
     (
-      (deft-use-filter-string-for-filename t)
+      (setq deft-use-filter-string-for-filename t)
       (deft-default-extension "org")
       (deft-directory "~/org-roam")
+      (deft-strip-summary-regexp ":PROPERTIES:\n\\(.+\n\\)+:END:\n")
       (deft-recursive t))
     )
 
 #+end_src
 
 #+RESULTS:
+: deft
 
 * Shell-toggle
   #+BEGIN_SRC emacs-lisp
@@ -575,6 +579,18 @@ Integrate highlight-parentheses with autopair mode:
   #+END_SRC
 
   #+RESULTS:
+
+* Popwin
+  Don't let temporal buffers mess with layouts
+#+BEGIN_SRC emacs-lisp
+ (use-package popwin
+   :ensure t
+   :config
+   (popwin-mode 1))
+#+END_SRC
+
+#+RESULTS:
+: t
 
 * Swiper / Ivy / Counsel / Posframe / Prescient
 
@@ -660,7 +676,7 @@ Integrate highlight-parentheses with autopair mode:
             (t               . ivy-posframe-display))
             ivy-posframe-height-alist '((t . 20))
             ivy-posframe-parameters '((internal-border-width . 5)))
-      (setq ivy-posframe-width 120)
+      ;(setq ivy-posframe-width 120)
       (ivy-posframe-mode 1))
 
     (use-package ivy-rich
@@ -844,27 +860,19 @@ Integrate highlight-parentheses with autopair mode:
 
    (use-package doom-themes
       :ensure t
-      :defer
-      :hook
-  ;; brighter source buffers (that represent files)
-       (
-  ;; And you can brighten other buffers (unconditionally) with:
-        (ediff-prepare-buffer . doom-buffer-mode)
-  ;; brighter minibuffer when active
-        ;;(minibuffer-setup . doom-brighten-minibuffer)
-        )
-
       :config
   ;;; Settings (defaults)
       (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
             doom-themes-enable-italic t  ; if nil, italics is universally disabled
-
-        ;; doom-one specific settings
+            ;; doom-one specific settings
             doom-one-brighter-modeline nil
             doom-one-brighter-comments nil)
-      (add-to-list 'load-path "~/.emacs.d/elpa/doom-themes-2.1.6/")
+      (add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/doom-themes-2.1.6/")
       ;; Load the theme (doom-one, doom-dark, etc.)
-      (load-theme 'misterioso t)
+      (load-theme 'doom-one t)
+     ;; by default doom nord does not provide different colot for line number
+      (set-face-attribute 'line-number-current-line nil :background "#3B4252")
+      (set-face-attribute 'line-number-current-line nil :foreground "#81A1C1")
 
       ;; Enable flashing mode-line on errors
       (doom-themes-visual-bell-config)
@@ -876,12 +884,16 @@ Integrate highlight-parentheses with autopair mode:
       (doom-themes-treemacs-config)
 
       ;; brighten minibuffer when active
-      (aad-hook 'minibuffer-setup-hook 'doom-brighten-minibuffer)
+      ;; (add-hook 'minibuffer-setup-hook 'doom-brighten-minibuffer)
 
       ;; Corrects (and improves) org-mode's native fontification.
-      (doom-themes-org-config))
+      (doom-themes-org-config)
+      )
 
   #+END_SRC
+
+  #+RESULTS:
+  : t
 
 * Web browsing
  - set EWW as default browser
